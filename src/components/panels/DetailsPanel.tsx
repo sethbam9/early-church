@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useAppStore } from "../../stores/appStore";
-import { dataStore } from "../../data/runtimeData";
+import { dataStore, empireRepo, denominationRepo } from "../../data/runtimeData";
 import { Badge } from "../shared/Badge";
 import { CitationList } from "../shared/CitationList";
 import type { ChurchRow } from "../../domain/types";
@@ -114,7 +114,17 @@ export function DetailsPanel({ visibleRows }: DetailsPanelProps) {
             No exact entry at AD {activeDecade}. Showing closest available record.
           </p>
         )}
-        <p><strong>Ruling polity:</strong> {selectedRow.ruling_empire_polity} ({selectedRow.ruling_subdivision || "n/a"})</p>
+        <p><strong>Ruling polity:</strong>{" "}
+          {(() => {
+            const emp = empireRepo.findByName(selectedRow.ruling_empire_polity);
+            return emp ? (
+              <button type="button" className="entity-chip" onClick={() => { setSelection({ kind: "empire", id: emp.id }); setActiveRightPanel("empires"); }}>
+                {selectedRow.ruling_empire_polity}
+              </button>
+            ) : selectedRow.ruling_empire_polity;
+          })()}
+          {selectedRow.ruling_subdivision ? ` (${selectedRow.ruling_subdivision})` : ""}
+        </p>
         <p><strong>Planted by:</strong> {selectedRow.church_planted_by || "unknown"}</p>
         <p><strong>Apostolic thread:</strong> {selectedRow.apostolic_origin_thread || "unknown"}</p>
 
@@ -135,7 +145,22 @@ export function DetailsPanel({ visibleRows }: DetailsPanelProps) {
           )}
         </div>
 
-        <p><strong>Historic denomination:</strong> {selectedRow.denomination_label_historic || "n/a"}</p>
+        <p><strong>Historic denomination:</strong>{" "}
+          {selectedRow.denomination_label_historic_values.map((val, i) => {
+            const denom = denominationRepo.findByName(val);
+            return (
+              <span key={val}>
+                {i > 0 && "; "}
+                {denom ? (
+                  <button type="button" className="entity-chip" onClick={() => { setSelection({ kind: "denomination", id: denom.id }); setActiveRightPanel("denominations"); }}>
+                    {val}
+                  </button>
+                ) : val}
+              </span>
+            );
+          })}
+          {selectedRow.denomination_label_historic_values.length === 0 && "n/a"}
+        </p>
         <p><strong>Modern mapping:</strong> {selectedRow.modern_denom_mapping || "n/a"}</p>
         <p><strong>Council context:</strong> {selectedRow.council_context || "n/a"}</p>
 
