@@ -1,130 +1,115 @@
-# UI Design Rules — Early Christianity Atlas
+# UI Rules — Early Christianity Atlas
 
-## 1. Two Visual Chip Types
+Canonical patterns for UI consistency across the codebase.
 
-### Info Badge (`.badge`)
-- **Purpose**: Display-only metadata (event type, location, date range, status).
-- **Style**: Solid 1px border `#ccb093`, background `#fff6ec`, text `var(--ink)`. No cursor change, no hover effect, no arrow.
-- **Never** make a badge look clickable.
+---
 
-### Entity Chip (`.entity-chip`)
-- **Purpose**: Clickable navigation to another entity (person, event, doctrine, city, work).
-- **Style**: Dashed 1px border `var(--accent)`, text `var(--accent-strong)`, trailing `→` arrow, `cursor: pointer`.
-- **On hover**: border becomes solid, background darkens.
-- **Selected state**: filled accent background, white text.
+## Layout
 
-**Rule**: If it navigates somewhere, use `.entity-chip`. If it's just labeling, use `.badge`.
+- **App shell**: `NavBar` (fixed top) + `page-container` (fills remaining height).
+- **Map page**: flex row — `map-left` (left panel) | `map-center` (Leaflet map) | `map-right` (right sidebar).
+- **Expanded sidebar**: `.map-layout.sidebar-expanded` sets `map-center` to `width: 0` (NOT `display:none`) so Leaflet doesn't break. `map-right` gets `flex: 1`.
+- **Panel visibility**: toggled via `leftPanelVisible` / `rightPanelVisible` in `appStore`. When hidden, the container is conditionally rendered (`{visible && <div>…</div>}`), not CSS-hidden.
+- **Show-panel hints**: `.map-overlays` is `position:absolute; pointer-events:none` spanning the full map width. Left hint is left-aligned; right hint uses `margin-left: auto`. Buttons must have `pointer-events: all`.
 
-## 2. Right Panel — Master-Detail Pattern
+---
 
-Every tab in the right panel follows the same interaction pattern:
+## Navigation / Selection History
 
-1. **List view** (default): Scrollable list of items with search/filter bar at top.
-2. **Detail view**: Clicking any item expands detail **inline below the list** within the same tab. A "← Back to list" or collapse affordance returns to list-only view.
-3. **Never** auto-switch to the Details tab from another tab. Cross-entity chips open the target's own tab.
+- `appStore` holds `selection: Selection | null` and `selectionHistory: Selection[]`.
+- **Navigate to entity**: call `pushSelection({ kind, id })` — saves current selection to history.
+- **Back**: call `popSelection()` — restores previous selection. If history is empty, call `setSelection(null)`.
+- **Hard reset** (e.g. closing a panel): call `setSelection(null)` — clears history too.
+- **Essay → entity**: store the essay in `prevEssay` local state before calling `pushSelection`; back restores `prevEssay`.
+- Never navigate using `setSidebarTab` as a back mechanism — tabs are independent of entity history.
 
-### Tab State Rules
-- Each tab maintains its own selection state.
-- Selecting a city on the map opens the **Details** tab and clears any selection on other tabs.
-- Clicking an entity-chip within a tab opens that entity's tab and clears the originating tab's selection.
-- Switching tabs manually does NOT clear state — tabs remember their last selection.
+---
 
-## 3. Right Panel Width Modes
+## Sidebar Tabs
 
-- **Normal**: `390px` fixed width alongside the map.
-- **Wide**: Panel expands to `60%` of the viewport, overlapping the map. Toggle via a `⬌` button in the tab bar.
-- The map remains rendered underneath (for arc/highlight context) but is partially covered.
+- Tabs are defined in `TABS` array in `RightSidebar.tsx` with `id | icon | label`.
+- Tab buttons use `.sidebar-tab` class — `flex-direction: column`, icon on top, label below.
+- **No border, no background** — only a `border-bottom: 2px solid` underline for the active state.
+- Active tab: `border-bottom-color: var(--accent-bright)`, `color: var(--accent-bright)`.
+- Tab scroll: `overflow-x: auto` on `.sidebar-tabs`, scrollbar hidden via `::-webkit-scrollbar { display: none }`.
 
-## 4. Map Markers
+---
 
-### City Circles
-- Default: `radius: 6`, presence-status color, `weight: 2`.
-- Highlighted (via HighlightService): `radius: 7`, highlight color, `weight: 2.5`.
-- **Selected**: `radius: 9`, accent border `#9f4e1f`, `weight: 3`. PLUS an outer pulsing ring (`radius: 16`, dashed, CSS animation `selected-pulse`).
+## Entity Detail Panels
 
-### Archaeology Stars
-- Default: `★` icon, gold background.
-- Selected: red background, white text.
+- All entity detail views use the same shell: back bar → header → filter banner (if applicable) → sub-tabs → body.
+- **Back bar**: `.detail-back-bar` with `.back-btn` (← Back) and `.detail-crumb` (entity kind label).
+- **Header**: kind badge (`kindIcon kind`), title, subtitle, tags (`.tag` chips).
+- **Sub-tabs**: `.detail-sub-tabs` / `.detail-sub-tab` — horizontal pills, not icons.
+- **Body**: `.detail-body` — scrollable.
+- City detail uses its own `CityDetail` component (different tab set: Info, Timeline, People, Doctrines, Events, Works).
 
-### Tooltips
-- Format: `Ancient Name · Modern Name, Country (date range)`
-- English-only tile layer (CartoDB Voyager).
+---
 
-## 5. City Chronicle Timeline
+## Clickable Mentions (MarkdownRenderer)
 
-- **Vertical timeline** with left border line and dots.
-- Each decade is a **compact row**, NOT a card.
-- Only show fields that **changed** from the previous decade (diff-only).
-- "No changes" rows show a single muted line.
-- Each diff field gets its own line with a label prefix (e.g., `Figures:`, `Polity:`, `Denom:`).
-- The **active decade** row is highlighted with accent left-border and auto-scrolled into view.
+- Syntax: `[[kind:id|label]]` or `[[kind:id]]` (bare — label derived from id).
+- Supported kinds: `city`, `person`, `work`, `doctrine`, `event`, `persuasion`, `polity`, `archaeology`.
+- Rendered by `MarkdownRenderer` component (`src/components/shared/MarkdownRenderer.tsx`).
+- Mention buttons use `.mention-link` class: no border/background, dashed underline in `var(--accent-bright)`.
+- Use `MarkdownRenderer` everywhere notes/evidence/essay body text is displayed. Do **not** write custom inline renderers.
 
-## 6. Lists Are Always Searchable
+---
 
-Every list of 5+ items must have a search input at the top. This applies to:
-- Events list
-- People list
-- Doctrines list
-- Quotes list
-- Works list
-- Archaeology sites list
-- Essays list
-- City chronicle people/events chips (if >8)
+## Markdown Rendering
 
-## 7. Typography & Spacing
+- `MarkdownRenderer` supports: `#`/`##`/`###` headings, `>` blockquotes, `**bold**`, `*italic*`, blank-line paragraphs, `[[mention]]` links, literal `\n` sequences from TSV data.
+- CSS classes: `.md-p`, `.md-h1/2/3`, `.md-blockquote`, `.markdown-renderer`.
+- Essays live as `.md` files in `public/data/essays/` and are fetched at runtime via `essayLoader.ts`. The `Essay` interface is defined in `essayLoader.ts` (not `essays.ts`).
 
-- **Panel headers**: `h2`, margin `0 0 6px`.
-- **Section headers**: `h3`, margin `14px 0 6px`.
-- **Sub-headers** (within detail): `h4`, margin `8px 0 4px`, `0.88rem`.
-- **Body text**: `0.9rem`, `line-height: 1.42`.
-- **Muted text**: `color: var(--muted)`, `0.86rem`.
-- **Card padding**: `8px`, border-radius `8px`.
-- **Section gaps**: `8px` between cards, `10px` between sections.
+---
 
-## 8. Color Vocabulary
+## Tags / Chips
 
-| Purpose | Color |
-|---|---|
-| Accent / Interactive | `#9f4e1f` (--accent) |
-| Strong accent | `#7c3710` (--accent-strong) |
-| Muted text | `#6f6657` (--muted) |
-| Panel background | `#fffdf8` (--panel) |
-| Card background | `#fff` |
-| Active/highlight bg | `#fff7ee` |
-| Hover bg | `#fdf4e9` |
-| Selected bg | `#fff7ee` + accent border |
-| Direct highlight (map) | `#e67e22` |
-| Event highlight (map) | `#8e44ad` |
-| Doctrine highlight (map) | `#2980b9` |
-| Archaeology highlight (map) | `#27ae60` |
+- `.tag` — read-only info chip (solid border, neutral bg).
+- `.tag.accent` — highlighted variant (accent color).
+- `.tag-clickable` — interactive chip (dashed border, hover effect). Use `<button>` element.
+- `.tag-persuasion` — persuasion-specific color (amber/accent bg).
+- `.mention-link` — inline entity link in text (button, dashed underline only).
 
-## 9. Relationship Label Inversion
+---
 
-When displaying edges from entity X's perspective:
-- If the edge is `X → Y` with relationship `R`: display as `R → Y`.
-- If the edge is `Y → X` with relationship `R`: display the **inverse** label.
+## CSS Variables (key tokens)
 
-Inverse labels:
-| Forward | Inverse |
-|---|---|
-| `disciple_of` | `teacher_of` |
-| `bishop_of` | `had_bishop` |
-| `authored` | `authored_by` |
-| `sent_to` | `received_from` |
-| `attended` | `attended_by` |
-| `led` | `led_by` |
-| `affirms` | `affirmed_by` |
-| `condemned_by` | `condemned` |
-| `ordained_by` | `ordained` |
-| `martyred_at` | `site_of_martyrdom` |
-| `located_in` | `contains` |
-| `held_in` | `hosted` |
+```css
+--surface        /* panel backgrounds */
+--surface-2      /* hover/active backgrounds */
+--surface-3      /* deeper nesting */
+--border         /* main borders */
+--border-subtle  /* dividers within panels */
+--text           /* primary text */
+--text-muted     /* secondary text */
+--text-faint     /* tertiary / labels */
+--accent         /* primary brand color (amber) */
+--accent-bright  /* brighter accent for links/active */
+--accent-dim     /* very light accent background */
+--accent-strong  /* darkest accent for hover */
+--shadow         /* card shadow */
+--shadow-md      /* modal/popup shadow */
+--radius         /* standard border-radius */
+--radius-sm      /* small border-radius */
+```
 
-## 10. Correspondence Arcs
+---
 
-Arcs are rendered for ANY edge where both endpoints resolve to city coordinates:
-- `person → city` (bishop_of, visited, wrote_from, active_in, martyred_in)
-- `person → person` where both have city edges (corresponded_with, disciple_of)
-- `work → city` (sent_to, written_in)
+## Graph Page
 
-Arc style: dashed polyline, color by relationship type, weight = edge weight.
+- Full-width layout: `graph-sidebar` (260px) | `graph-canvas-area` (flex 1) | optional detail panel (300px, only when node selected).
+- **Return to map**: button at top of sidebar calling `navigate("/")`.
+- Node labels shown always when `nodes.length < 50`, otherwise only on selected node.
+- Edge labels shown on hover or when either endpoint is selected.
+- Places (`city` kind) included via person→city connections from `people.city_of_origin_id`.
+
+---
+
+## Data Flow Rules
+
+- All data access goes through `dataStore` singleton (`src/data/dataStore.ts`).
+- Map filter (persuasion/polity/person) stored in `appStore.mapFilterType` + `mapFilterId`.
+- `showArcs: true` by default (set in store initial state).
+- Decade-based data: always use `getAtDecade(decade)` / `getCitiesAtDecade(decade)` — never filter raw arrays by year outside dataStore.

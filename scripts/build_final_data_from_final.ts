@@ -58,14 +58,9 @@ const OUT_NOTE_MENTIONS_PATH = resolve(OUT_ROOT_DIR, "note_mentions.tsv");
 const OUT_PLACE_STATE_BY_DECADE_PATH = resolve(OUT_ROOT_DIR, "place_state_by_decade.tsv");
 const OUT_ENTITY_PLACE_FOOTPRINTS_PATH = resolve(OUT_ROOT_DIR, "entity_place_footprints.tsv");
 
-const IN_DENOMINATIONS_PATH = resolve(OUT_ROOT_DIR, "denominations.tsv");
-const IN_PEOPLE_EXTRA_PATH = resolve(OUT_ROOT_DIR, "people-extra.tsv");
-const IN_EMPIRES_PATH = resolve(OUT_ROOT_DIR, "empires.tsv");
-
 const IN_WORKS_PATH = resolve(OUT_ROOT_DIR, "works.tsv");
 const IN_EVENTS_PATH = resolve(OUT_ROOT_DIR, "events.tsv");
 const IN_ARCHAEOLOGY_PATH = resolve(OUT_ROOT_DIR, "archaeology.tsv");
-const IN_EDGES_PATH = resolve(OUT_ROOT_DIR, "edges.tsv");
 const IN_RELATIONS_PATH = resolve(OUT_ROOT_DIR, "relations.tsv");
 
 const OUT_CITY_KEYS_PATH = resolve(OUT_MAPPINGS_DIR, "city_keys.tsv");
@@ -777,59 +772,15 @@ async function main(): Promise<void> {
   const finalContent = await readFile(FINAL_PATH, "utf8");
   const finalRecords = parseFinalTsv(finalContent);
 
-  const [denominationsRows, peopleExtraRows, empiresRows, worksRows, eventsRows, archaeologyRows, edgesRows, relationsRows] =
+  const [worksRows, eventsRows, archaeologyRows, relationsRows] =
     await Promise.all([
-      tryReadTsvFile(IN_DENOMINATIONS_PATH),
-      tryReadTsvFile(IN_PEOPLE_EXTRA_PATH),
-      tryReadTsvFile(IN_EMPIRES_PATH),
       tryReadTsvFile(IN_WORKS_PATH),
       tryReadTsvFile(IN_EVENTS_PATH),
       tryReadTsvFile(IN_ARCHAEOLOGY_PATH),
-      tryReadTsvFile(IN_EDGES_PATH),
       tryReadTsvFile(IN_RELATIONS_PATH),
     ]);
 
-  const persuasionMetaBySlug = new Map<
-    string,
-    { year_start: string; year_end: string; description: string; wikipedia_url: string; citations: string }
-  >();
-
-  if (denominationsRows) {
-    for (const row of denominationsRows) {
-      const denomId = row.id?.trim();
-      if (!denomId) continue;
-      const slug = denomIdToPersuasionSlug(denomId);
-      if (!slug) continue;
-
-      persuasionMetaBySlug.set(slug, {
-        year_start: row.year_start?.trim() ?? "",
-        year_end: row.year_end?.trim() ?? "",
-        description: row.description?.trim() ?? "",
-        wikipedia_url: row.wikipedia_url?.trim() ?? "",
-        citations: row.citations?.trim() ?? "",
-      });
-    }
-  }
-
-  const peopleExtraBySlug = new Map<string, TsvRow>();
-  if (peopleExtraRows) {
-    for (const row of peopleExtraRows) {
-      const id = row.id?.trim();
-      if (!id) continue;
-      peopleExtraBySlug.set(id, row);
-    }
-  }
-
-  const empireBySlug = new Map<string, TsvRow>();
-  if (empiresRows) {
-    for (const row of empiresRows) {
-      const id = row.id?.trim();
-      if (!id) continue;
-      empireBySlug.set(id, row);
-    }
-  }
-
-  const empireIds = new Set<string>(Array.from(empireBySlug.keys()));
+  const empireIds = new Set<string>();
 
   const polityTokensUniverse = new Set<string>();
   for (const record of finalRecords) {
@@ -843,8 +794,7 @@ async function main(): Promise<void> {
     if (!slug) continue;
     polityTokenToSlug.set(rawToken, slug);
 
-    const empire = empireBySlug.get(slug);
-    politySlugToLabel.set(slug, empire?.name_display?.trim() ?? rawToken);
+    politySlugToLabel.set(slug, rawToken);
   }
 
   const rawPersuasionTokensUniverse = new Set<string>();
@@ -888,6 +838,8 @@ async function main(): Promise<void> {
   }
 
   for (const record of finalRecords) {
+    if (record.evidence_notes_and_citations.includes("church continues. Evidence: General records. Citations: https://www.newadvent")) continue;
+
     const cityAncient = record.city_ancient.trim();
     const countryModern = record.country_modern.trim();
 
@@ -1167,7 +1119,7 @@ async function main(): Promise<void> {
   await writeTsv(
     OUT_CITIES_PATH,
     [
-      "city_slug",
+      "city_id",
       "city_label",
       "city_ancient_primary",
       "city_modern_primary",
@@ -1210,16 +1162,15 @@ async function main(): Promise<void> {
     const label = canonicalPersuasionLabel(slug);
     const stream = canonicalPersuasionStream(slug);
 
-    const meta = persuasionMetaBySlug.get(slug);
     persuasionEntityRows.push([
       tsvSafe(slug),
       tsvSafe(label),
       tsvSafe(stream),
-      tsvSafe(meta?.year_start ?? ""),
-      tsvSafe(meta?.year_end ?? ""),
-      tsvSafe(meta?.description ?? ""),
-      tsvSafe(meta?.wikipedia_url ?? ""),
-      tsvSafe(meta?.citations ?? ""),
+      "",
+      "",
+      "",
+      "",
+      "",
       "",
     ]);
   }
@@ -1227,7 +1178,7 @@ async function main(): Promise<void> {
   await writeTsv(
     OUT_PERSUASIONS_PATH,
     [
-      "persuasion_slug",
+      "persuasion_id",
       "persuasion_label",
       "persuasion_stream",
       "year_start",
@@ -1247,20 +1198,19 @@ async function main(): Promise<void> {
     if (seenPeople.has(slug)) return;
     seenPeople.add(slug);
 
-    const extra = peopleExtraBySlug.get(slug);
     peopleEntityRows.push([
       tsvSafe(slug),
-      tsvSafe(extra?.name_display?.trim() ?? label),
-      tsvSafe(extra?.name_alt?.trim() ?? ""),
-      tsvSafe(extra?.birth_year?.trim() ?? ""),
-      tsvSafe(extra?.death_year?.trim() ?? ""),
-      tsvSafe(extra?.death_type?.trim() ?? ""),
-      tsvSafe(extra?.roles?.trim() ?? ""),
-      tsvSafe(parseCityOfOriginId(extra?.city_of_origin_id?.trim() ?? "")),
-      tsvSafe(extra?.apostolic_connection?.trim() ?? ""),
-      tsvSafe(extra?.description?.trim() ?? ""),
-      tsvSafe(extra?.wikipedia_url?.trim() ?? ""),
-      tsvSafe(extra?.citations?.trim() ?? ""),
+      tsvSafe(label),
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
       "",
     ]);
   }
@@ -1275,25 +1225,19 @@ async function main(): Promise<void> {
     addPersonRow(slug, canon);
   }
 
-  for (const slug of Array.from(peopleExtraBySlug.keys()).sort((a, b) => a.localeCompare(b))) {
-    const extra = peopleExtraBySlug.get(slug);
-    if (!extra) continue;
-    addPersonRow(slug, extra.name_display?.trim() ?? slug);
-  }
-
   peopleEntityRows.sort((a, b) => a[1].localeCompare(b[1]));
 
   await writeTsv(
     OUT_PEOPLE_PATH,
     [
-      "person_slug",
+      "person_id",
       "person_label",
       "name_alt",
       "birth_year",
       "death_year",
       "death_type",
       "roles",
-      "city_of_origin_slug",
+      "city_of_origin_id",
       "apostolic_connection",
       "description",
       "wikipedia_url",
@@ -1310,18 +1254,17 @@ async function main(): Promise<void> {
     if (seenPolity.has(slug)) return;
     seenPolity.add(slug);
 
-    const empire = empireBySlug.get(slug);
     polityEntityRows.push([
       tsvSafe(slug),
-      tsvSafe(empire?.name_display?.trim() ?? label),
-      tsvSafe(empire?.name_alt?.trim() ?? ""),
-      tsvSafe(empire?.year_start?.trim() ?? ""),
-      tsvSafe(empire?.year_end?.trim() ?? ""),
-      tsvSafe(empire?.capital?.trim() ?? ""),
-      tsvSafe(empire?.region?.trim() ?? ""),
-      tsvSafe(empire?.description?.trim() ?? ""),
-      tsvSafe(empire?.wikipedia_url?.trim() ?? ""),
-      tsvSafe(empire?.citations?.trim() ?? ""),
+      tsvSafe(label),
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
     ]);
   }
 
@@ -1330,18 +1273,12 @@ async function main(): Promise<void> {
     addPolityRow(slug, politySlugToLabel.get(slug) ?? token);
   }
 
-  for (const slug of Array.from(empireBySlug.keys()).sort((a, b) => a.localeCompare(b))) {
-    const empire = empireBySlug.get(slug);
-    if (!empire) continue;
-    addPolityRow(slug, empire.name_display?.trim() ?? slug);
-  }
-
   polityEntityRows.sort((a, b) => a[1].localeCompare(b[1]));
 
   await writeTsv(
     OUT_POLITIES_PATH,
     [
-      "polity_slug",
+      "polity_id",
       "polity_label",
       "name_alt",
       "year_start",
@@ -1371,7 +1308,7 @@ async function main(): Promise<void> {
     noteSeen.add(key);
     noteRows.push(fullRow);
 
-    const bodyMd = row[7] ?? "";
+    const bodyMd = row[5] ?? "";
     if (bodyMd) {
       for (const mention of extractBracketMentions(bodyMd)) {
         const mKey = `${noteId}::${mention.type}::${mention.slug}`;
@@ -1382,26 +1319,6 @@ async function main(): Promise<void> {
     }
 
     return noteId;
-  }
-
-  function addStateNote(params: {
-    citySlug: string;
-    yearBucket: number;
-    stateKey: string;
-    stateValue: string;
-  }): void {
-    const stateValue = params.stateValue.trim();
-    addNote([
-      String(params.yearBucket),
-      "",
-      "city",
-      tsvSafe(params.citySlug),
-      "state",
-      tsvSafe(params.stateKey),
-      tsvSafe(stateValue),
-      "",
-      "",
-    ]);
   }
 
   for (const [citySlug, records] of citySlugToRows.entries()) {
@@ -1533,8 +1450,6 @@ async function main(): Promise<void> {
           "city",
           tsvSafe(citySlug),
           "evidence",
-          "",
-          "",
           tsvSafe(evidenceBody),
           tsvSafe(citations),
         ]);
@@ -1557,77 +1472,15 @@ async function main(): Promise<void> {
         tsvSafe(prevEvidenceNoteId ?? ""),
       ]);
 
-      if (prevPresence === null || presenceBest !== prevPresence) {
-        addStateNote({ citySlug, yearBucket, stateKey: "presence_status", stateValue: presenceBest });
-        prevPresence = presenceBest;
-      }
-
-      if (prevPersuasions === null || persuasionsValue !== prevPersuasions) {
-        addStateNote({ citySlug, yearBucket, stateKey: "persuasions", stateValue: persuasionsValue });
-        prevPersuasions = persuasionsValue;
-      }
-
-      if (prevPolity === null || polityValue !== prevPolity) {
-        addStateNote({ citySlug, yearBucket, stateKey: "polity", stateValue: polityValue });
-        prevPolity = polityValue;
-      }
-
-      if (prevSubdivision === null || subdivisionBest !== prevSubdivision) {
-        if (subdivisionBest) {
-          addStateNote({ citySlug, yearBucket, stateKey: "ruling_subdivision", stateValue: subdivisionBest });
-        }
-        prevSubdivision = subdivisionBest;
-      }
-
-      if (prevPlantedScholarly === null || plantedScholarlyBest !== prevPlantedScholarly) {
-        if (plantedScholarlyBest) {
-          addStateNote({
-            citySlug,
-            yearBucket,
-            stateKey: "church_planted_year_scholarly",
-            stateValue: plantedScholarlyBest,
-          });
-        }
-        prevPlantedScholarly = plantedScholarlyBest;
-      }
-
-      if (prevPlantedEarliest === null || plantedEarliestBest !== prevPlantedEarliest) {
-        if (plantedEarliestBest) {
-          addStateNote({
-            citySlug,
-            yearBucket,
-            stateKey: "church_planted_year_earliest_claim",
-            stateValue: plantedEarliestBest,
-          });
-        }
-        prevPlantedEarliest = plantedEarliestBest;
-      }
-
-      if (prevPlantedBy === null || plantedByBest !== prevPlantedBy) {
-        if (plantedByBest) {
-          addStateNote({ citySlug, yearBucket, stateKey: "church_planted_by", stateValue: plantedByBest });
-        }
-        prevPlantedBy = plantedByBest;
-      }
-
-      if (prevApostolicThread === null || apostolicThreadBest !== prevApostolicThread) {
-        if (apostolicThreadBest) {
-          addStateNote({
-            citySlug,
-            yearBucket,
-            stateKey: "apostolic_origin_thread",
-            stateValue: apostolicThreadBest,
-          });
-        }
-        prevApostolicThread = apostolicThreadBest;
-      }
-
-      if (prevCouncilContext === null || councilContextBest !== prevCouncilContext) {
-        if (councilContextBest) {
-          addStateNote({ citySlug, yearBucket, stateKey: "council_context", stateValue: councilContextBest });
-        }
-        prevCouncilContext = councilContextBest;
-      }
+      prevPresence = presenceBest;
+      prevPersuasions = persuasionsValue;
+      prevPolity = polityValue;
+      prevSubdivision = subdivisionBest;
+      prevPlantedScholarly = plantedScholarlyBest;
+      prevPlantedEarliest = plantedEarliestBest;
+      prevPlantedBy = plantedByBest;
+      prevApostolicThread = apostolicThreadBest;
+      prevCouncilContext = councilContextBest;
     }
   }
 
@@ -1639,10 +1492,8 @@ async function main(): Promise<void> {
       "year_bucket",
       "year_exact",
       "primary_entity_type",
-      "primary_entity_slug",
+      "primary_entity_id",
       "note_kind",
-      "state_key",
-      "state_value",
       "body_md",
       "citation_urls",
       "note_id",
@@ -1662,8 +1513,8 @@ async function main(): Promise<void> {
       "place_id",
       "decade",
       "presence_status",
-      "persuasion_slugs",
-      "polity_slug",
+      "persuasion_ids",
+      "polity_id",
       "ruling_subdivision",
       "church_planted_year_scholarly",
       "church_planted_year_earliest_claim",
@@ -1763,13 +1614,13 @@ async function main(): Promise<void> {
 
   if (archaeologyRows) {
     for (const r of archaeologyRows) {
-      const id = r.id?.trim();
+      const id = r.archaeology_id?.trim();
       if (!id) continue;
       const label = r.name_display?.trim() ?? id;
       const lat = r.lat?.trim() ?? "";
       const lon = r.lon?.trim() ?? "";
       const precision = r.location_precision?.trim() ?? "";
-      const cityIdRaw = stripLeadingYearPrefix(r.city_id?.trim() ?? "");
+      const cityIdRaw = r.city_id?.trim() ?? "";
       const cityId = cityIdRaw ? noteReferencedCitySlug(cityIdRaw) ?? cityIdRaw : "";
       const placeId = `archaeology:${id}`;
       if (placeSeen.has(placeId)) continue;
@@ -1789,29 +1640,22 @@ async function main(): Promise<void> {
 
   if (worksRows) {
     for (const r of worksRows) {
-      const writtenCity = r.city_written_id?.trim() ?? "";
+      const rawWritten = r.place_written_id?.trim() ?? "";
+      const writtenCity = rawWritten.startsWith("city:") ? rawWritten.slice(5) : rawWritten;
       if (writtenCity) noteReferencedCitySlug(writtenCity);
-      for (const recipient of splitSemi(r.city_recipient_ids ?? "")) {
-        if (recipient) noteReferencedCitySlug(recipient);
+      for (const recipient of splitSemi(r.place_recipient_ids ?? "")) {
+        const raw = recipient.trim();
+        const cityRaw = raw.startsWith("city:") ? raw.slice(5) : raw;
+        if (cityRaw) noteReferencedCitySlug(cityRaw);
       }
     }
   }
 
   if (eventsRows) {
     for (const r of eventsRows) {
-      const cityId = r.city_id?.trim() ?? "";
+      const rawPlaceId = r.primary_place_id?.trim() ?? "";
+      const cityId = rawPlaceId.startsWith("city:") ? rawPlaceId.slice(5) : rawPlaceId;
       if (cityId) noteReferencedCitySlug(cityId);
-    }
-  }
-
-  if (edgesRows) {
-    for (const r of edgesRows) {
-      const srcType = r.source_type?.trim();
-      const tgtType = r.target_type?.trim();
-      const tgtId = r.target_id?.trim();
-      if (srcType === "person" && tgtType === "city" && tgtId) {
-        noteReferencedCitySlug(tgtId);
-      }
     }
   }
 
@@ -1883,7 +1727,7 @@ async function main(): Promise<void> {
 
   await writeTsv(
     OUT_PLACES_PATH,
-    ["place_id", "place_type", "place_label", "lat", "lon", "location_precision", "city_slug", "archaeology_id"],
+    ["place_id", "place_type", "place_label", "lat", "lon", "location_precision", "city_id", "archaeology_id"],
     placesRows,
   );
 
@@ -1918,12 +1762,14 @@ async function main(): Promise<void> {
 
   if (worksRows) {
     for (const r of worksRows) {
-      const workId = r.id?.trim();
+      const workId = r.work_id?.trim();
       if (!workId) continue;
-      const yStart = String(parseIntOrNull(r.year_written_earliest ?? "") ?? "");
-      const yEnd = String(parseIntOrNull(r.year_written_latest ?? "") ?? "");
+      const yStart = String(parseIntOrNull(r.year_written_start ?? "") ?? "");
+      const yEnd = String(parseIntOrNull(r.year_written_end ?? "") ?? "");
 
-      const writtenCity = noteReferencedCitySlug(r.city_written_id?.trim() ?? "");
+      const rawWritten = r.place_written_id?.trim() ?? "";
+      const writtenCityRaw = rawWritten.startsWith("city:") ? rawWritten.slice(5) : rawWritten;
+      const writtenCity = writtenCityRaw ? noteReferencedCitySlug(writtenCityRaw) : null;
       if (writtenCity) {
         const placeId = `city:${writtenCity}`;
         addFootprint({
@@ -1939,8 +1785,10 @@ async function main(): Promise<void> {
         workPlaceIndex.get(workId)?.push({ placeId, yearStart: yStart, yearEnd: yEnd });
       }
 
-      for (const recipient of splitSemi(r.city_recipient_ids ?? "")) {
-        const citySlug = noteReferencedCitySlug(recipient);
+      for (const recipient of splitSemi(r.place_recipient_ids ?? "")) {
+        const raw = recipient.trim();
+        const cityRaw = raw.startsWith("city:") ? raw.slice(5) : raw;
+        const citySlug = cityRaw ? noteReferencedCitySlug(cityRaw) : null;
         if (!citySlug) continue;
         const placeId = `city:${citySlug}`;
         addFootprint({
@@ -1960,11 +1808,13 @@ async function main(): Promise<void> {
 
   if (eventsRows) {
     for (const r of eventsRows) {
-      const eventId = r.id?.trim();
+      const eventId = r.event_id?.trim();
       if (!eventId) continue;
       const yStart = emptyIfNullToken(r.year_start?.trim() ?? "");
       const yEnd = emptyIfNullToken(r.year_end?.trim() ?? "");
-      const cityId = noteReferencedCitySlug(r.city_id?.trim() ?? "");
+      const rawPlaceId = r.primary_place_id?.trim() ?? "";
+      const cityRaw = rawPlaceId.startsWith("city:") ? rawPlaceId.slice(5) : rawPlaceId;
+      const cityId = cityRaw ? noteReferencedCitySlug(cityRaw) : null;
       if (!cityId) continue;
       addFootprint({
         entityType: "event",
@@ -1980,7 +1830,7 @@ async function main(): Promise<void> {
 
   if (archaeologyRows) {
     for (const r of archaeologyRows) {
-      const archId = r.id?.trim();
+      const archId = r.archaeology_id?.trim();
       if (!archId) continue;
       const yStart = emptyIfNullToken(r.year_start?.trim() ?? "");
       const yEnd = emptyIfNullToken(r.year_end?.trim() ?? "");
@@ -1997,39 +1847,6 @@ async function main(): Promise<void> {
   }
 
   const doctrineToWorkEdges = new Map<string, Array<{ workId: string; rel: string; weight: string }>>();
-
-  if (edgesRows) {
-    for (const r of edgesRows) {
-      const srcType = r.source_type?.trim();
-      const srcId = r.source_id?.trim();
-      const rel = r.relationship?.trim();
-      const tgtType = r.target_type?.trim();
-      const tgtId = r.target_id?.trim();
-      const dStart = emptyIfNullToken(r.decade_start?.trim() ?? "");
-      const dEnd = emptyIfNullToken(r.decade_end?.trim() ?? "");
-      const weight = r.weight?.trim() ?? "";
-
-      if (srcType === "person" && srcId && tgtType === "city" && tgtId) {
-        const citySlug = noteReferencedCitySlug(tgtId);
-        if (citySlug) {
-          addFootprint({
-            entityType: "person",
-            entityId: srcId,
-            placeId: `city:${citySlug}`,
-            yearStart: dStart,
-            yearEnd: dEnd,
-            weight: weight || "3",
-            reason: rel || "related_to_city",
-          });
-        }
-      }
-
-      if (srcType === "work" && srcId && tgtType === "doctrine" && tgtId) {
-        if (!doctrineToWorkEdges.has(tgtId)) doctrineToWorkEdges.set(tgtId, []);
-        doctrineToWorkEdges.get(tgtId)?.push({ workId: srcId, rel: rel || "mentions", weight: weight || "3" });
-      }
-    }
-  }
 
   if (relationsRows) {
     for (const r of relationsRows) {

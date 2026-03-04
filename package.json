@@ -8,7 +8,7 @@
     "dev": "vite",
     "data:final": "tsx scripts/build_final_data_from_final.ts",
     "data:validate": "tsx scripts/validate_data.ts",
-    "data:rebuild": "npm run data:final && npm run data:validate && tsx scripts/tsv_to_json.ts && tsx scripts/build_entities.ts",
+    "data:rebuild": "npm run data:final && npm run data:validate",
     "build:data": "npm run data:rebuild",
     "prebuild": "npm run build:data",
     "build": "tsc -b && vite build",
@@ -19,6 +19,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
+    "react-router-dom": "^7.13.1",
     "zustand": "^5.0.11"
   },
   "devDependencies": {
@@ -26,6 +27,7 @@
     "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^4.3.3",
     "d3-dsv": "^3.0.1",
     "tsx": "^4.19.2",

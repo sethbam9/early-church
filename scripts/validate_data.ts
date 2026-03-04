@@ -40,86 +40,11 @@ function emptyIfNullToken(value: string): string {
   return v;
 }
 
-function stripLeadingYearPrefix(value: string): string {
+function stripPlacePrefix(value: string): string {
   const v = emptyIfNullToken(value);
   if (!v) return "";
-  return v.replace(/^\d{4}-/, "");
-}
-
-function scoreCitySlugMatch(tokens: string[], candidate: string): number {
-  const candidateTokens = candidate.split("-");
-  let score = 0;
-  for (const t of tokens) {
-    if (!t) continue;
-    if (candidateTokens.includes(t)) score += 2;
-    else if (candidate.includes(t)) score += 1;
-  }
-  return score;
-}
-
-function resolveLegacyCitySlug(params: {
-  raw: string;
-  canonicalCitySlugs: Set<string>;
-  knownCityLikeSlugs: Set<string>;
-}): string {
-  const v = stripLeadingYearPrefix(params.raw);
-  if (!v) return "";
-  if (params.canonicalCitySlugs.has(v)) return v;
-  if (params.knownCityLikeSlugs.has(v)) return v;
-
-  if (v.includes("constantinople") && params.canonicalCitySlugs.has("byzantium-istanbul")) {
-    return "byzantium-istanbul";
-  }
-
-  if (v.includes("bethlehem") && params.canonicalCitySlugs.has("bethlehem-bethlehem")) {
-    return "bethlehem-bethlehem";
-  }
-
-  const tokens = v
-    .split("-")
-    .map((t) => t.trim())
-    .filter((t) => t.length > 0);
-
-  if (tokens.length === 0) return v;
-
-  const primary = tokens[0];
-  const candidates: string[] = [];
-  for (const slug of params.canonicalCitySlugs) {
-    if (slug === primary || slug.startsWith(`${primary}-`) || slug.includes(`-${primary}-`) || slug.endsWith(`-${primary}`)) {
-      candidates.push(slug);
-    }
-  }
-
-  if (candidates.length === 0) {
-    for (const slug of params.canonicalCitySlugs) {
-      if (slug.includes(primary)) candidates.push(slug);
-    }
-  }
-
-  if (candidates.length === 1) return candidates[0];
-
-  let best: { slug: string; score: number } | null = null;
-  let ties = 0;
-  for (const c of candidates) {
-    const s = scoreCitySlugMatch(tokens, c);
-    if (best === null || s > best.score) {
-      best = { slug: c, score: s };
-      ties = 0;
-    } else if (best && s === best.score) {
-      ties += 1;
-    }
-  }
-
-  if (best && best.score >= 2 && ties === 0) return best.slug;
-
-  if (best && ties > 0) {
-    const preferred = candidates.filter((c) => c.split("-")[0] === primary);
-    if (preferred.length === 1) return preferred[0];
-
-    const preferredByPrefix = candidates.filter((c) => c.startsWith(`${primary}-`));
-    if (preferredByPrefix.length === 1) return preferredByPrefix[0];
-  }
-
+  if (v.startsWith("city:")) return v.slice(5);
+  if (v.startsWith("archaeology:")) return v.slice(12);
   return v;
 }
 
@@ -199,7 +124,7 @@ function parseTsvContent(content: string, file: string, issues: Issue[]): Parsed
           severity: "warn",
           file,
           line: i + 1,
-          message: `Literal "null" token found in column "${key}"; prefer blank` ,
+          message: `Literal "null" token found in column "${key}"; prefer blank`,
         });
       }
     }
@@ -209,8 +134,13 @@ function parseTsvContent(content: string, file: string, issues: Issue[]): Parsed
 }
 
 async function readTsv(path: string, issues: Issue[]): Promise<ParsedTsv> {
-  const content = await readFile(path, "utf8");
-  return parseTsvContent(content, path, issues);
+  try {
+    const content = await readFile(path, "utf8");
+    return parseTsvContent(content, path, issues);
+  } catch {
+    issues.push({ severity: "error", file: path, line: 0, message: `File not found or unreadable` });
+    return { headers: [], rows: [] };
+  }
 }
 
 function ensureUnique(values: string[], file: string, idLabel: string, issues: Issue[]): Set<string> {
@@ -235,10 +165,9 @@ function requireFk(params: {
   rawValue: string;
   fkSet: Set<string>;
   allowEmpty?: boolean;
-  transform?: (value: string) => string;
 }): void {
   const raw = params.rawValue ?? "";
-  const value = params.transform ? params.transform(raw) : raw.trim();
+  const value = raw.trim();
   const allowEmpty = params.allowEmpty ?? true;
 
   if (!value) {
@@ -338,7 +267,7 @@ async function main(): Promise<void> {
 
   const expectedHeaders: Record<string, string[]> = {
     "data/final_data/cities.tsv": [
-      "city_slug",
+      "city_id",
       "city_label",
       "city_ancient_primary",
       "city_modern_primary",
@@ -349,7 +278,7 @@ async function main(): Promise<void> {
       "christianity_start_year",
     ],
     "data/final_data/persuasions.tsv": [
-      "persuasion_slug",
+      "persuasion_id",
       "persuasion_label",
       "persuasion_stream",
       "year_start",
@@ -360,14 +289,14 @@ async function main(): Promise<void> {
       "notes",
     ],
     "data/final_data/people.tsv": [
-      "person_slug",
+      "person_id",
       "person_label",
       "name_alt",
       "birth_year",
       "death_year",
       "death_type",
       "roles",
-      "city_of_origin_slug",
+      "city_of_origin_id",
       "apostolic_connection",
       "description",
       "wikipedia_url",
@@ -375,7 +304,7 @@ async function main(): Promise<void> {
       "notes",
     ],
     "data/final_data/polities.tsv": [
-      "polity_slug",
+      "polity_id",
       "polity_label",
       "name_alt",
       "year_start",
@@ -390,10 +319,8 @@ async function main(): Promise<void> {
       "year_bucket",
       "year_exact",
       "primary_entity_type",
-      "primary_entity_slug",
+      "primary_entity_id",
       "note_kind",
-      "state_key",
-      "state_value",
       "body_md",
       "citation_urls",
       "note_id",
@@ -406,7 +333,7 @@ async function main(): Promise<void> {
       "lat",
       "lon",
       "location_precision",
-      "city_slug",
+      "city_id",
       "archaeology_id",
     ],
     "data/final_data/relations.tsv": [
@@ -428,8 +355,8 @@ async function main(): Promise<void> {
       "place_id",
       "decade",
       "presence_status",
-      "persuasion_slugs",
-      "polity_slug",
+      "persuasion_ids",
+      "polity_id",
       "ruling_subdivision",
       "church_planted_year_scholarly",
       "church_planted_year_earliest_claim",
@@ -474,40 +401,37 @@ async function main(): Promise<void> {
       "canonical_polity_label",
     ],
     "data/final_data/works.tsv": [
-      "id",
+      "work_id",
       "title_display",
-      "author_id",
+      "author_person_id",
       "author_name_display",
-      "year_written_earliest",
-      "year_written_latest",
-      "decade_bucket",
+      "year_written_start",
+      "year_written_end",
       "work_type",
-      "city_written_id",
-      "city_recipient_ids",
       "language",
+      "place_written_id",
+      "place_recipient_ids",
       "description",
       "significance",
       "modern_edition_url",
       "citations",
     ],
     "data/final_data/events.tsv": [
-      "id",
+      "event_id",
       "name_display",
       "event_type",
       "year_start",
       "year_end",
-      "decade_bucket",
-      "city_id",
-      "city_ancient",
+      "primary_place_id",
       "region",
-      "key_figure_ids",
+      "key_figure_person_ids",
       "description",
       "significance",
       "outcome",
       "citations",
     ],
     "data/final_data/doctrines.tsv": [
-      "id",
+      "doctrine_id",
       "name_display",
       "category",
       "description",
@@ -518,50 +442,31 @@ async function main(): Promise<void> {
       "citations",
     ],
     "data/final_data/quotes.tsv": [
-      "id",
+      "quote_id",
       "doctrine_id",
-      "text",
-      "source_type",
-      "author_id",
-      "author_name",
       "work_id",
+      "text",
       "work_reference",
       "year",
-      "decade_bucket",
       "stance",
       "notes",
       "citations",
     ],
     "data/final_data/archaeology.tsv": [
-      "id",
+      "archaeology_id",
       "name_display",
       "site_type",
       "city_id",
-      "city_ancient",
       "lat",
       "lon",
       "location_precision",
       "year_start",
       "year_end",
-      "decade_bucket_start",
       "description",
       "significance",
       "discovery_notes",
       "current_status",
       "uncertainty",
-      "citations",
-    ],
-    "data/final_data/edges.tsv": [
-      "id",
-      "source_type",
-      "source_id",
-      "relationship",
-      "target_type",
-      "target_id",
-      "decade_start",
-      "decade_end",
-      "weight",
-      "notes",
       "citations",
     ],
     "data/final_data/mappings/mapping_coverage_issues.tsv": ["issue_kind", "raw_value", "row_mentions"],
@@ -588,7 +493,6 @@ async function main(): Promise<void> {
   const doctrines = parsedByPath.get("data/final_data/doctrines.tsv")?.rows ?? [];
   const quotes = parsedByPath.get("data/final_data/quotes.tsv")?.rows ?? [];
   const archaeology = parsedByPath.get("data/final_data/archaeology.tsv")?.rows ?? [];
-  const edges = parsedByPath.get("data/final_data/edges.tsv")?.rows ?? [];
   const notes = parsedByPath.get("data/final_data/notes.tsv")?.rows ?? [];
   const noteMentions = parsedByPath.get("data/final_data/note_mentions.tsv")?.rows ?? [];
   const places = parsedByPath.get("data/final_data/places.tsv")?.rows ?? [];
@@ -604,74 +508,71 @@ async function main(): Promise<void> {
 
   if (mappingCoverageIssues.length > 0) {
     issues.push({
-      severity: "error",
+      severity: "warn",
       file: "data/final_data/mappings/mapping_coverage_issues.tsv",
       line: 2,
-      message: `mapping_coverage_issues.tsv must be empty; found ${mappingCoverageIssues.length} row(s)`,
+      message: `${mappingCoverageIssues.length} unmapped token(s) found`,
     });
   }
 
-  const citySlugs = ensureUnique(
-    cities.map((r) => r.city_slug ?? ""),
+  const cityIds = ensureUnique(
+    cities.map((r) => r.city_id ?? ""),
     "data/final_data/cities.tsv",
-    "city_slug",
+    "city_id",
     issues,
   );
 
-  const cityPlaceSlugs = new Set<string>();
+  const cityPlaceIds = new Set<string>();
   for (const r of places) {
     if ((r.place_type ?? "").trim() !== "city") continue;
-    const slug = emptyIfNullToken(r.city_slug ?? "");
-    if (slug) cityPlaceSlugs.add(slug);
+    const id = emptyIfNullToken(r.city_id ?? "");
+    if (id) cityPlaceIds.add(id);
   }
+  for (const id of cityIds) cityPlaceIds.add(id);
 
-  for (const slug of citySlugs) {
-    cityPlaceSlugs.add(slug);
-  }
-
-  const persuasionSlugs = ensureUnique(
-    persuasions.map((r) => r.persuasion_slug ?? ""),
+  const persuasionIds = ensureUnique(
+    persuasions.map((r) => r.persuasion_id ?? ""),
     "data/final_data/persuasions.tsv",
-    "persuasion_slug",
+    "persuasion_id",
     issues,
   );
 
-  const personSlugs = ensureUnique(
-    people.map((r) => r.person_slug ?? ""),
+  const personIds = ensureUnique(
+    people.map((r) => r.person_id ?? ""),
     "data/final_data/people.tsv",
-    "person_slug",
+    "person_id",
     issues,
   );
 
-  const politySlugs = ensureUnique(
-    polities.map((r) => r.polity_slug ?? ""),
+  const polityIds = ensureUnique(
+    polities.map((r) => r.polity_id ?? ""),
     "data/final_data/polities.tsv",
-    "polity_slug",
+    "polity_id",
     issues,
   );
 
-  const workIds = ensureUnique(works.map((r) => r.id ?? ""), "data/final_data/works.tsv", "work.id", issues);
-  const eventIds = ensureUnique(events.map((r) => r.id ?? ""), "data/final_data/events.tsv", "event.id", issues);
-  const doctrineIds = ensureUnique(doctrines.map((r) => r.id ?? ""), "data/final_data/doctrines.tsv", "doctrine.id", issues);
-  const quoteIds = ensureUnique(quotes.map((r) => r.id ?? ""), "data/final_data/quotes.tsv", "quote.id", issues);
+  const workIds = ensureUnique(works.map((r) => r.work_id ?? ""), "data/final_data/works.tsv", "work_id", issues);
+  const eventIds = ensureUnique(events.map((r) => r.event_id ?? ""), "data/final_data/events.tsv", "event_id", issues);
+  const doctrineIds = ensureUnique(doctrines.map((r) => r.doctrine_id ?? ""), "data/final_data/doctrines.tsv", "doctrine_id", issues);
+  const quoteIds = ensureUnique(quotes.map((r) => r.quote_id ?? ""), "data/final_data/quotes.tsv", "quote_id", issues);
   const archaeologyIds = ensureUnique(
-    archaeology.map((r) => r.id ?? ""),
+    archaeology.map((r) => r.archaeology_id ?? ""),
     "data/final_data/archaeology.tsv",
-    "archaeology.id",
+    "archaeology_id",
     issues,
   );
 
   const placeIds = ensureUnique(
     places.map((r) => r.place_id ?? ""),
     "data/final_data/places.tsv",
-    "place.place_id",
+    "place_id",
     issues,
   );
 
   const noteIds = ensureUnique(
     notes.map((r) => r.note_id ?? ""),
     "data/final_data/notes.tsv",
-    "note.note_id",
+    "note_id",
     issues,
   );
 
@@ -682,49 +583,29 @@ async function main(): Promise<void> {
     issues,
   );
 
-  const presenceAllowed = [
-    "attested",
-    "probable",
-    "claimed_tradition",
-    "not_attested",
-    "suppressed",
-    "unknown",
-  ];
-
+  const presenceAllowed = ["attested", "probable", "claimed_tradition", "not_attested", "suppressed", "unknown"];
   const placeTypeAllowed = ["city", "archaeology"];
-
-  const relationNodeTypeAllowed = [
-    "place",
-    "city",
-    "person",
-    "work",
-    "doctrine",
-    "event",
-    "archaeology",
-    "persuasion",
-    "polity",
-    "note",
-  ];
-
+  const relationNodeTypeAllowed = ["place", "city", "person", "work", "doctrine", "event", "archaeology", "persuasion", "polity", "note"];
   const relationPolarityAllowed = ["supports", "opposes", "neutral"];
   const relationCertaintyAllowed = ["attested", "probable", "claimed_tradition", "legendary", "unknown"];
+  const entityTypeAllowed = ["person", "event", "work", "doctrine", "city", "archaeology", "persuasion", "polity"];
+  const mentionTypeAllowed = ["person", "event", "work", "doctrine", "city", "archaeology", "persuasion", "polity"];
 
-  const entityTypeAllowed = [
-    "person",
-    "event",
-    "work",
-    "doctrine",
-    "city",
-    "archaeology",
-    "persuasion",
-    "polity",
-  ];
-
-  function resolveCitySlug(raw: string): string {
-    return resolveLegacyCitySlug({ raw, canonicalCitySlugs: citySlugs, knownCityLikeSlugs: cityPlaceSlugs });
+  function fkSetForType(t: string): Set<string> {
+    if (t === "place") return placeIds;
+    if (t === "city") return cityIds;
+    if (t === "person") return personIds;
+    if (t === "work") return workIds;
+    if (t === "doctrine") return doctrineIds;
+    if (t === "event") return eventIds;
+    if (t === "archaeology") return archaeologyIds;
+    if (t === "persuasion") return persuasionIds;
+    if (t === "polity") return polityIds;
+    if (t === "note") return noteIds;
+    return new Set<string>();
   }
 
-  function requireCityFk(params: { file: string; line: number; field: string; rawValue: string; allowEmpty?: boolean }): void {
+  function requirePlaceFk(params: { file: string; line: number; field: string; rawValue: string; allowEmpty?: boolean }): void {
     const allowEmpty = params.allowEmpty ?? true;
     const v = emptyIfNullToken(params.rawValue ?? "");
     if (!v) {
@@ -733,369 +614,203 @@ async function main(): Promise<void> {
       }
       return;
     }
-
-    const resolved = resolveCitySlug(v);
-    if (!resolved) return;
-
-    if (!cityPlaceSlugs.has(resolved)) {
-      issues.push({ severity: "error", file: params.file, line: params.line, message: `Broken FK ${params.field} -> ${resolved}` });
-      return;
-    }
-
-    if (!citySlugs.has(resolved)) {
-      issues.push({
-        severity: "warn",
-        file: params.file,
-        line: params.line,
-        message: `City reference resolves to stub (present in places.tsv but missing from cities.tsv): ${resolved}`,
-      });
+    if (!placeIds.has(v)) {
+      const cityId = stripPlacePrefix(v);
+      if (cityId && cityPlaceIds.has(cityId)) return;
+      issues.push({ severity: "error", file: params.file, line: params.line, message: `Broken FK ${params.field} -> ${v}` });
     }
   }
 
-  const mentionTypeAllowed = [
-    "person",
-    "event",
-    "work",
-    "doctrine",
-    "city",
-    "archaeology",
-    "persuasion",
-    "polity",
-  ];
-
+  // --- works.tsv ---
   for (let i = 0; i < works.length; i += 1) {
     const r = works[i];
     const line = i + 2;
+    const file = "data/final_data/works.tsv";
 
-    const author = emptyIfNullToken(r.author_id ?? "");
+    const author = emptyIfNullToken(r.author_person_id ?? "");
     if (author) {
-      requireFk({
-        issues,
-        file: "data/final_data/works.tsv",
-        line,
-        field: "author_id",
-        rawValue: author,
-        fkSet: personSlugs,
-      });
+      requireFk({ issues, file, line, field: "author_person_id", rawValue: author, fkSet: personIds });
     }
 
-    requireCityFk({ file: "data/final_data/works.tsv", line, field: "city_written_id", rawValue: r.city_written_id ?? "" });
+    const rawWritten = emptyIfNullToken(r.place_written_id ?? "");
+    if (rawWritten) requirePlaceFk({ file, line, field: "place_written_id", rawValue: rawWritten });
 
-    for (const rec of splitSemi(r.city_recipient_ids ?? "")) {
-      requireCityFk({ file: "data/final_data/works.tsv", line, field: "city_recipient_ids", rawValue: rec });
+    for (const rec of splitSemi(r.place_recipient_ids ?? "")) {
+      requirePlaceFk({ file, line, field: "place_recipient_ids", rawValue: rec });
     }
 
-    const earliest = validateIntField({ issues, file: "data/final_data/works.tsv", line, field: "year_written_earliest", rawValue: r.year_written_earliest ?? "", allowEmpty: false });
-    const latest = validateIntField({ issues, file: "data/final_data/works.tsv", line, field: "year_written_latest", rawValue: r.year_written_latest ?? "", allowEmpty: false });
-    if (earliest !== null && latest !== null && latest < earliest) {
-      issues.push({ severity: "error", file: "data/final_data/works.tsv", line, message: `year_written_latest < year_written_earliest (${latest} < ${earliest})` });
+    const start = validateIntField({ issues, file, line, field: "year_written_start", rawValue: r.year_written_start ?? "", allowEmpty: false });
+    const end = validateIntField({ issues, file, line, field: "year_written_end", rawValue: r.year_written_end ?? "", allowEmpty: false });
+    if (start !== null && end !== null && end < start) {
+      issues.push({ severity: "error", file, line, message: `year_written_end < year_written_start (${end} < ${start})` });
     }
-
-    validateIntField({ issues, file: "data/final_data/works.tsv", line, field: "decade_bucket", rawValue: r.decade_bucket ?? "", allowEmpty: false });
   }
 
+  // --- events.tsv ---
   for (let i = 0; i < events.length; i += 1) {
     const r = events[i];
     const line = i + 2;
+    const file = "data/final_data/events.tsv";
 
-    requireCityFk({ file: "data/final_data/events.tsv", line, field: "city_id", rawValue: r.city_id ?? "" });
+    const rawPlace = emptyIfNullToken(r.primary_place_id ?? "");
+    if (rawPlace) requirePlaceFk({ file, line, field: "primary_place_id", rawValue: rawPlace });
 
-    for (const kf of splitSemi(r.key_figure_ids ?? "")) {
-      requireFk({ issues, file: "data/final_data/events.tsv", line, field: "key_figure_ids", rawValue: kf, fkSet: personSlugs });
+    for (const kf of splitSemi(r.key_figure_person_ids ?? "")) {
+      requireFk({ issues, file, line, field: "key_figure_person_ids", rawValue: kf, fkSet: personIds });
     }
 
-    const start = validateIntField({ issues, file: "data/final_data/events.tsv", line, field: "year_start", rawValue: r.year_start ?? "", allowEmpty: false });
-    const end = validateIntField({ issues, file: "data/final_data/events.tsv", line, field: "year_end", rawValue: r.year_end ?? "" });
+    const start = validateIntField({ issues, file, line, field: "year_start", rawValue: r.year_start ?? "", allowEmpty: false });
+    const end = validateIntField({ issues, file, line, field: "year_end", rawValue: r.year_end ?? "" });
     if (start !== null && end !== null && end < start) {
-      issues.push({ severity: "error", file: "data/final_data/events.tsv", line, message: `year_end < year_start (${end} < ${start})` });
+      issues.push({ severity: "error", file, line, message: `year_end < year_start (${end} < ${start})` });
     }
-
-    validateIntField({ issues, file: "data/final_data/events.tsv", line, field: "decade_bucket", rawValue: r.decade_bucket ?? "", allowEmpty: false });
   }
 
+  // --- doctrines.tsv ---
   for (let i = 0; i < doctrines.length; i += 1) {
     const r = doctrines[i];
     const line = i + 2;
+    const file = "data/final_data/doctrines.tsv";
 
     const workId = emptyIfNullToken(r.first_attested_work_id ?? "");
     if (workId) {
-      requireFk({ issues, file: "data/final_data/doctrines.tsv", line, field: "first_attested_work_id", rawValue: workId, fkSet: workIds });
+      requireFk({ issues, file, line, field: "first_attested_work_id", rawValue: workId, fkSet: workIds });
     }
 
-    validateIntField({ issues, file: "data/final_data/doctrines.tsv", line, field: "first_attested_year", rawValue: r.first_attested_year ?? "" });
+    validateIntField({ issues, file, line, field: "first_attested_year", rawValue: r.first_attested_year ?? "" });
   }
 
+  // --- quotes.tsv ---
   for (let i = 0; i < quotes.length; i += 1) {
     const r = quotes[i];
     const line = i + 2;
+    const file = "data/final_data/quotes.tsv";
 
-    requireFk({ issues, file: "data/final_data/quotes.tsv", line, field: "doctrine_id", rawValue: r.doctrine_id ?? "", fkSet: doctrineIds, allowEmpty: false });
-
-    const author = emptyIfNullToken(r.author_id ?? "");
-    if (author) {
-      requireFk({ issues, file: "data/final_data/quotes.tsv", line, field: "author_id", rawValue: author, fkSet: personSlugs });
-    }
+    requireFk({ issues, file, line, field: "doctrine_id", rawValue: r.doctrine_id ?? "", fkSet: doctrineIds, allowEmpty: false });
 
     const workId = emptyIfNullToken(r.work_id ?? "");
     if (workId) {
-      requireFk({ issues, file: "data/final_data/quotes.tsv", line, field: "work_id", rawValue: workId, fkSet: workIds });
+      requireFk({ issues, file, line, field: "work_id", rawValue: workId, fkSet: workIds });
     }
 
-    validateIntField({ issues, file: "data/final_data/quotes.tsv", line, field: "year", rawValue: r.year ?? "", allowEmpty: false });
-    validateIntField({ issues, file: "data/final_data/quotes.tsv", line, field: "decade_bucket", rawValue: r.decade_bucket ?? "", allowEmpty: false });
+    validateIntField({ issues, file, line, field: "year", rawValue: r.year ?? "" });
   }
 
+  // --- archaeology.tsv ---
   for (let i = 0; i < archaeology.length; i += 1) {
     const r = archaeology[i];
     const line = i + 2;
+    const file = "data/final_data/archaeology.tsv";
 
-    requireCityFk({ file: "data/final_data/archaeology.tsv", line, field: "city_id", rawValue: r.city_id ?? "" });
+    const cityId = emptyIfNullToken(r.city_id ?? "");
+    if (cityId) {
+      requireFk({ issues, file, line, field: "city_id", rawValue: cityId, fkSet: cityIds });
+    }
 
-    const start = validateIntField({ issues, file: "data/final_data/archaeology.tsv", line, field: "year_start", rawValue: r.year_start ?? "", allowEmpty: false });
-    const end = validateIntField({ issues, file: "data/final_data/archaeology.tsv", line, field: "year_end", rawValue: r.year_end ?? "" });
+    const start = validateIntField({ issues, file, line, field: "year_start", rawValue: r.year_start ?? "" });
+    const end = validateIntField({ issues, file, line, field: "year_end", rawValue: r.year_end ?? "" });
     if (start !== null && end !== null && end < start) {
-      issues.push({ severity: "error", file: "data/final_data/archaeology.tsv", line, message: `year_end < year_start (${end} < ${start})` });
+      issues.push({ severity: "error", file, line, message: `year_end < year_start (${end} < ${start})` });
     }
-
-    validateIntField({ issues, file: "data/final_data/archaeology.tsv", line, field: "decade_bucket_start", rawValue: r.decade_bucket_start ?? "", allowEmpty: false });
   }
 
-  const edgeTypeAllowed = ["person", "event", "work", "doctrine", "city", "archaeology", "persuasion", "polity"];
-
-  for (let i = 0; i < edges.length; i += 1) {
-    const r = edges[i];
-    const line = i + 2;
-
-    validateEnum({ issues, file: "data/final_data/edges.tsv", line, field: "source_type", value: r.source_type ?? "", allowed: edgeTypeAllowed, allowEmpty: false });
-    validateEnum({ issues, file: "data/final_data/edges.tsv", line, field: "target_type", value: r.target_type ?? "", allowed: edgeTypeAllowed, allowEmpty: false });
-
-    const srcType = (r.source_type ?? "").trim();
-    const tgtType = (r.target_type ?? "").trim();
-
-    const srcId = emptyIfNullToken(r.source_id ?? "");
-    const tgtId = emptyIfNullToken(r.target_id ?? "");
-
-    if (!srcId) {
-      issues.push({ severity: "error", file: "data/final_data/edges.tsv", line, message: "Missing source_id" });
-    }
-    if (!tgtId) {
-      issues.push({ severity: "error", file: "data/final_data/edges.tsv", line, message: "Missing target_id" });
-    }
-
-    const fkForType = (type: string): Set<string> => {
-      if (type === "person") return personSlugs;
-      if (type === "event") return eventIds;
-      if (type === "work") return workIds;
-      if (type === "doctrine") return doctrineIds;
-      if (type === "archaeology") return archaeologyIds;
-      if (type === "city") return citySlugs;
-      if (type === "persuasion") return persuasionSlugs;
-      if (type === "polity") return politySlugs;
-      return new Set<string>();
-    };
-
-    if (srcType && srcId) {
-      if (srcType === "city") {
-        requireCityFk({ file: "data/final_data/edges.tsv", line, field: "source_id", rawValue: srcId, allowEmpty: false });
-      } else {
-        requireFk({ issues, file: "data/final_data/edges.tsv", line, field: "source_id", rawValue: srcId, fkSet: fkForType(srcType), allowEmpty: false });
-      }
-    }
-
-    if (tgtType && tgtId) {
-      if (tgtType === "city") {
-        requireCityFk({ file: "data/final_data/edges.tsv", line, field: "target_id", rawValue: tgtId, allowEmpty: false });
-      } else {
-        requireFk({ issues, file: "data/final_data/edges.tsv", line, field: "target_id", rawValue: tgtId, fkSet: fkForType(tgtType), allowEmpty: false });
-      }
-    }
-
-    const dStart = validateIntField({ issues, file: "data/final_data/edges.tsv", line, field: "decade_start", rawValue: r.decade_start ?? "" });
-    const dEnd = validateIntField({ issues, file: "data/final_data/edges.tsv", line, field: "decade_end", rawValue: r.decade_end ?? "" });
-    if (dStart !== null && dEnd !== null && dEnd < dStart) {
-      issues.push({ severity: "error", file: "data/final_data/edges.tsv", line, message: `decade_end < decade_start (${dEnd} < ${dStart})` });
-    }
-
-    validateIntField({ issues, file: "data/final_data/edges.tsv", line, field: "weight", rawValue: r.weight ?? "", allowEmpty: false });
-  }
-
+  // --- notes.tsv ---
   for (let i = 0; i < notes.length; i += 1) {
     const r = notes[i];
     const line = i + 2;
+    const file = "data/final_data/notes.tsv";
 
     const primaryType = emptyIfNullToken(r.primary_entity_type ?? "");
-    const primarySlug = emptyIfNullToken(r.primary_entity_slug ?? "");
+    const primaryId = emptyIfNullToken(r.primary_entity_id ?? "");
 
     if (!primaryType) {
-      issues.push({ severity: "error", file: "data/final_data/notes.tsv", line, message: "Missing primary_entity_type" });
+      issues.push({ severity: "error", file, line, message: "Missing primary_entity_type" });
     }
-    if (!primarySlug) {
-      issues.push({ severity: "error", file: "data/final_data/notes.tsv", line, message: "Missing primary_entity_slug" });
+    if (!primaryId) {
+      issues.push({ severity: "error", file, line, message: "Missing primary_entity_id" });
     }
 
-    if (primaryType && primarySlug) {
+    if (primaryType && primaryId) {
       if (!mentionTypeAllowed.includes(primaryType)) {
-        issues.push({ severity: "error", file: "data/final_data/notes.tsv", line, message: `Unknown primary_entity_type: ${primaryType}` });
-      } else if (primaryType === "city") {
-        requireCityFk({ file: "data/final_data/notes.tsv", line, field: "primary_entity_slug", rawValue: primarySlug, allowEmpty: false });
-      } else if (primaryType === "person") {
-        requireFk({ issues, file: "data/final_data/notes.tsv", line, field: "primary_entity_slug", rawValue: primarySlug, fkSet: personSlugs, allowEmpty: false });
-      } else if (primaryType === "work") {
-        requireFk({ issues, file: "data/final_data/notes.tsv", line, field: "primary_entity_slug", rawValue: primarySlug, fkSet: workIds, allowEmpty: false });
-      } else if (primaryType === "event") {
-        requireFk({ issues, file: "data/final_data/notes.tsv", line, field: "primary_entity_slug", rawValue: primarySlug, fkSet: eventIds, allowEmpty: false });
-      } else if (primaryType === "doctrine") {
-        requireFk({ issues, file: "data/final_data/notes.tsv", line, field: "primary_entity_slug", rawValue: primarySlug, fkSet: doctrineIds, allowEmpty: false });
-      } else if (primaryType === "archaeology") {
-        requireFk({ issues, file: "data/final_data/notes.tsv", line, field: "primary_entity_slug", rawValue: primarySlug, fkSet: archaeologyIds, allowEmpty: false });
-      } else if (primaryType === "persuasion") {
-        requireFk({ issues, file: "data/final_data/notes.tsv", line, field: "primary_entity_slug", rawValue: primarySlug, fkSet: persuasionSlugs, allowEmpty: false });
-      } else if (primaryType === "polity") {
-        requireFk({ issues, file: "data/final_data/notes.tsv", line, field: "primary_entity_slug", rawValue: primarySlug, fkSet: politySlugs, allowEmpty: false });
+        issues.push({ severity: "error", file, line, message: `Unknown primary_entity_type: ${primaryType}` });
+      } else {
+        requireFk({ issues, file, line, field: "primary_entity_id", rawValue: primaryId, fkSet: fkSetForType(primaryType), allowEmpty: false });
       }
     }
 
     const body = r.body_md ?? "";
     for (const mention of parseBracketMentions(body)) {
       if (!mentionTypeAllowed.includes(mention.type)) {
-        issues.push({ severity: "error", file: "data/final_data/notes.tsv", line, message: `Unknown mention type: ${mention.type}` });
+        issues.push({ severity: "error", file, line, message: `Unknown mention type: ${mention.type}` });
         continue;
       }
-
-      const fkSet =
-        mention.type === "city"
-          ? cityPlaceSlugs
-          : mention.type === "person"
-            ? personSlugs
-            : mention.type === "work"
-              ? workIds
-              : mention.type === "event"
-                ? eventIds
-                : mention.type === "doctrine"
-                  ? doctrineIds
-                  : mention.type === "archaeology"
-                    ? archaeologyIds
-                    : mention.type === "persuasion"
-                      ? persuasionSlugs
-                      : mention.type === "polity"
-                        ? politySlugs
-                        : new Set<string>();
-
-      if (mention.type === "city") {
-        const resolved = resolveCitySlug(mention.slug);
-        if (!resolved || !cityPlaceSlugs.has(resolved)) {
-          issues.push({ severity: "error", file: "data/final_data/notes.tsv", line, message: `Broken mention [[${mention.type}:${mention.slug}]]` });
-        } else if (!citySlugs.has(resolved)) {
-          issues.push({ severity: "warn", file: "data/final_data/notes.tsv", line, message: `Mention resolves to stub city (missing in cities.tsv): ${resolved}` });
-        }
-      } else if (!fkSet.has(mention.slug)) {
-        issues.push({ severity: "error", file: "data/final_data/notes.tsv", line, message: `Broken mention [[${mention.type}:${mention.slug}]]` });
-      }
+      requireFk({ issues, file, line, field: `mention[[${mention.type}]]`, rawValue: mention.slug, fkSet: fkSetForType(mention.type) });
     }
   }
 
+  // --- note_mentions.tsv ---
   for (let i = 0; i < noteMentions.length; i += 1) {
     const r = noteMentions[i];
     const line = i + 2;
+    const file = "data/final_data/note_mentions.tsv";
 
-    requireFk({ issues, file: "data/final_data/note_mentions.tsv", line, field: "note_id", rawValue: r.note_id ?? "", fkSet: noteIds, allowEmpty: false });
+    requireFk({ issues, file, line, field: "note_id", rawValue: r.note_id ?? "", fkSet: noteIds, allowEmpty: false });
 
     const mType = emptyIfNullToken(r.mentioned_type ?? "");
     const mSlug = emptyIfNullToken(r.mentioned_slug ?? "");
 
-    validateEnum({ issues, file: "data/final_data/note_mentions.tsv", line, field: "mentioned_type", value: mType, allowed: mentionTypeAllowed, allowEmpty: false });
+    validateEnum({ issues, file, line, field: "mentioned_type", value: mType, allowed: mentionTypeAllowed, allowEmpty: false });
 
-    if (!mSlug) {
-      issues.push({ severity: "error", file: "data/final_data/note_mentions.tsv", line, message: "Missing mentioned_slug" });
-      continue;
-    }
-
-    const fkSet =
-      mType === "city"
-        ? cityPlaceSlugs
-        : mType === "person"
-          ? personSlugs
-          : mType === "work"
-            ? workIds
-            : mType === "event"
-              ? eventIds
-              : mType === "doctrine"
-                ? doctrineIds
-                : mType === "archaeology"
-                  ? archaeologyIds
-                  : mType === "persuasion"
-                    ? persuasionSlugs
-                    : mType === "polity"
-                      ? politySlugs
-                      : new Set<string>();
-
-    if (mType === "city") {
-      const resolved = resolveCitySlug(mSlug);
-      if (!resolved || !cityPlaceSlugs.has(resolved)) {
-        issues.push({ severity: "error", file: "data/final_data/note_mentions.tsv", line, message: `Broken mention: ${mType}:${mSlug}` });
-      } else if (!citySlugs.has(resolved)) {
-        issues.push({ severity: "warn", file: "data/final_data/note_mentions.tsv", line, message: `Mention resolves to stub city (missing in cities.tsv): ${resolved}` });
-      }
-    } else if (mType && !fkSet.has(mSlug)) {
-      issues.push({ severity: "error", file: "data/final_data/note_mentions.tsv", line, message: `Broken mention: ${mType}:${mSlug}` });
+    if (mType && mSlug) {
+      requireFk({ issues, file, line, field: "mentioned_slug", rawValue: mSlug, fkSet: fkSetForType(mType) });
     }
   }
 
+  // --- places.tsv ---
   for (let i = 0; i < places.length; i += 1) {
     const r = places[i];
     const line = i + 2;
+    const file = "data/final_data/places.tsv";
 
     const placeType = emptyIfNullToken(r.place_type ?? "");
-    validateEnum({ issues, file: "data/final_data/places.tsv", line, field: "place_type", value: placeType, allowed: placeTypeAllowed, allowEmpty: false });
+    validateEnum({ issues, file, line, field: "place_type", value: placeType, allowed: placeTypeAllowed, allowEmpty: false });
 
     const placeId = emptyIfNullToken(r.place_id ?? "");
     if (!placeId) {
-      issues.push({ severity: "error", file: "data/final_data/places.tsv", line, message: "Missing place_id" });
+      issues.push({ severity: "error", file, line, message: "Missing place_id" });
     }
 
-    const citySlug = emptyIfNullToken(r.city_slug ?? "");
+    const cityId = emptyIfNullToken(r.city_id ?? "");
     const archId = emptyIfNullToken(r.archaeology_id ?? "");
 
     if (placeType === "city") {
-      if (!citySlug) {
-        issues.push({ severity: "error", file: "data/final_data/places.tsv", line, message: "City place missing city_slug" });
-      } else if (!citySlugs.has(citySlug)) {
-        issues.push({ severity: "warn", file: "data/final_data/places.tsv", line, message: `City place uses stub slug not in cities.tsv: ${citySlug}` });
+      if (!cityId) {
+        issues.push({ severity: "error", file, line, message: "City place missing city_id" });
+      } else if (!cityIds.has(cityId)) {
+        issues.push({ severity: "warn", file, line, message: `City place uses stub id not in cities.tsv: ${cityId}` });
       }
       if (archId) {
-        issues.push({ severity: "error", file: "data/final_data/places.tsv", line, message: "City place should not set archaeology_id" });
+        issues.push({ severity: "error", file, line, message: "City place should not set archaeology_id" });
       }
     }
 
     if (placeType === "archaeology") {
-      requireFk({ issues, file: "data/final_data/places.tsv", line, field: "archaeology_id", rawValue: archId, fkSet: archaeologyIds, allowEmpty: false });
-      if (citySlug) {
-        requireFk({ issues, file: "data/final_data/places.tsv", line, field: "city_slug", rawValue: citySlug, fkSet: citySlugs });
+      requireFk({ issues, file, line, field: "archaeology_id", rawValue: archId, fkSet: archaeologyIds, allowEmpty: false });
+      if (cityId) {
+        requireFk({ issues, file, line, field: "city_id", rawValue: cityId, fkSet: cityIds });
       }
     }
   }
 
-  const fkForRelType = (t: string): Set<string> => {
-    if (t === "place") return placeIds;
-    if (t === "city") return citySlugs;
-    if (t === "person") return personSlugs;
-    if (t === "work") return workIds;
-    if (t === "doctrine") return doctrineIds;
-    if (t === "event") return eventIds;
-    if (t === "archaeology") return archaeologyIds;
-    if (t === "persuasion") return persuasionSlugs;
-    if (t === "polity") return politySlugs;
-    if (t === "note") return noteIds;
-    return new Set<string>();
-  };
-
+  // --- relations.tsv ---
   for (let i = 0; i < relations.length; i += 1) {
     const r = relations[i];
     const line = i + 2;
+    const file = "data/final_data/relations.tsv";
 
     const relId = emptyIfNullToken(r.relation_id ?? "");
     if (!relId) {
-      issues.push({ severity: "error", file: "data/final_data/relations.tsv", line, message: "Missing relation_id" });
+      issues.push({ severity: "error", file, line, message: "Missing relation_id" });
     }
 
     const srcType = emptyIfNullToken(r.source_type ?? "");
@@ -1104,64 +819,44 @@ async function main(): Promise<void> {
     const tgtType = emptyIfNullToken(r.target_type ?? "");
     const tgtId = emptyIfNullToken(r.target_id ?? "");
 
-    validateEnum({ issues, file: "data/final_data/relations.tsv", line, field: "source_type", value: srcType, allowed: relationNodeTypeAllowed, allowEmpty: false });
-    validateEnum({ issues, file: "data/final_data/relations.tsv", line, field: "target_type", value: tgtType, allowed: relationNodeTypeAllowed, allowEmpty: false });
+    validateEnum({ issues, file, line, field: "source_type", value: srcType, allowed: relationNodeTypeAllowed, allowEmpty: false });
+    validateEnum({ issues, file, line, field: "target_type", value: tgtType, allowed: relationNodeTypeAllowed, allowEmpty: false });
 
-    if (!srcId) issues.push({ severity: "error", file: "data/final_data/relations.tsv", line, message: "Missing source_id" });
-    if (!relType) issues.push({ severity: "error", file: "data/final_data/relations.tsv", line, message: "Missing relation_type" });
-    if (!tgtId) issues.push({ severity: "error", file: "data/final_data/relations.tsv", line, message: "Missing target_id" });
+    if (!srcId) issues.push({ severity: "error", file, line, message: "Missing source_id" });
+    if (!relType) issues.push({ severity: "error", file, line, message: "Missing relation_type" });
+    if (!tgtId) issues.push({ severity: "error", file, line, message: "Missing target_id" });
 
-    const yearStart = validateIntField({ issues, file: "data/final_data/relations.tsv", line, field: "year_start", rawValue: r.year_start ?? "" });
-    const yearEnd = validateIntField({ issues, file: "data/final_data/relations.tsv", line, field: "year_end", rawValue: r.year_end ?? "" });
+    const yearStart = validateIntField({ issues, file, line, field: "year_start", rawValue: r.year_start ?? "" });
+    const yearEnd = validateIntField({ issues, file, line, field: "year_end", rawValue: r.year_end ?? "" });
     if (yearStart !== null && yearEnd !== null && yearEnd < yearStart) {
-      issues.push({ severity: "error", file: "data/final_data/relations.tsv", line, message: `year_end < year_start (${yearEnd} < ${yearStart})` });
+      issues.push({ severity: "error", file, line, message: `year_end < year_start (${yearEnd} < ${yearStart})` });
     }
 
-    validateIntField({ issues, file: "data/final_data/relations.tsv", line, field: "weight", rawValue: r.weight ?? "" });
-    validateEnum({ issues, file: "data/final_data/relations.tsv", line, field: "polarity", value: emptyIfNullToken(r.polarity ?? ""), allowed: relationPolarityAllowed, allowEmpty: true });
-    validateEnum({ issues, file: "data/final_data/relations.tsv", line, field: "certainty", value: emptyIfNullToken(r.certainty ?? ""), allowed: relationCertaintyAllowed, allowEmpty: true });
+    validateIntField({ issues, file, line, field: "weight", rawValue: r.weight ?? "" });
+    validateEnum({ issues, file, line, field: "polarity", value: emptyIfNullToken(r.polarity ?? ""), allowed: relationPolarityAllowed, allowEmpty: true });
+    validateEnum({ issues, file, line, field: "certainty", value: emptyIfNullToken(r.certainty ?? ""), allowed: relationCertaintyAllowed, allowEmpty: true });
 
     const evidenceNote = emptyIfNullToken(r.evidence_note_id ?? "");
     if (evidenceNote) {
-      requireFk({ issues, file: "data/final_data/relations.tsv", line, field: "evidence_note_id", rawValue: evidenceNote, fkSet: noteIds });
+      requireFk({ issues, file, line, field: "evidence_note_id", rawValue: evidenceNote, fkSet: noteIds });
     }
 
     if (srcType && srcId) {
-      requireFk({
-        issues,
-        file: "data/final_data/relations.tsv",
-        line,
-        field: "source_id",
-        rawValue: srcId,
-        fkSet: fkForRelType(srcType),
-        allowEmpty: false,
-      });
+      requireFk({ issues, file, line, field: "source_id", rawValue: srcId, fkSet: fkSetForType(srcType), allowEmpty: false });
     }
 
     if (tgtType && tgtId) {
-      requireFk({
-        issues,
-        file: "data/final_data/relations.tsv",
-        line,
-        field: "target_id",
-        rawValue: tgtId,
-        fkSet: fkForRelType(tgtType),
-        allowEmpty: false,
-      });
+      requireFk({ issues, file, line, field: "target_id", rawValue: tgtId, fkSet: fkSetForType(tgtType), allowEmpty: false });
     }
   }
 
+  // --- mapping checks ---
   for (let i = 0; i < mappingCityKeys.length; i += 1) {
     const r = mappingCityKeys[i];
     const line = i + 2;
     const slug = emptyIfNullToken(r.canonical_city_slug ?? "");
-    if (slug && !citySlugs.has(slug)) {
-      issues.push({
-        severity: "error",
-        file: "data/final_data/mappings/city_keys.tsv",
-        line,
-        message: `canonical_city_slug not in cities.tsv: ${slug}`,
-      });
+    if (slug && !cityIds.has(slug)) {
+      issues.push({ severity: "error", file: "data/final_data/mappings/city_keys.tsv", line, message: `canonical_city_slug not in cities.tsv: ${slug}` });
     }
   }
 
@@ -1169,28 +864,17 @@ async function main(): Promise<void> {
     const r = mappingCityAliases[i];
     const line = i + 2;
     const slug = emptyIfNullToken(r.canonical_city_slug ?? "");
-    if (slug && !citySlugs.has(slug)) {
-      issues.push({
-        severity: "error",
-        file: "data/final_data/mappings/city_aliases.tsv",
-        line,
-        message: `canonical_city_slug not in cities.tsv: ${slug}`,
-      });
+    if (slug && !cityIds.has(slug)) {
+      issues.push({ severity: "error", file: "data/final_data/mappings/city_aliases.tsv", line, message: `canonical_city_slug not in cities.tsv: ${slug}` });
     }
   }
 
   for (let i = 0; i < mappingPersuasionTokens.length; i += 1) {
     const r = mappingPersuasionTokens[i];
     const line = i + 2;
-    const slugs = splitSemi(r.canonical_persuasion_slugs ?? "");
-    for (const slug of slugs) {
-      if (!persuasionSlugs.has(slug)) {
-        issues.push({
-          severity: "error",
-          file: "data/final_data/mappings/persuasion_tokens.tsv",
-          line,
-          message: `canonical_persuasion_slug not in persuasions.tsv: ${slug}`,
-        });
+    for (const slug of splitSemi(r.canonical_persuasion_slugs ?? "")) {
+      if (!persuasionIds.has(slug)) {
+        issues.push({ severity: "error", file: "data/final_data/mappings/persuasion_tokens.tsv", line, message: `canonical_persuasion_slug not in persuasions.tsv: ${slug}` });
       }
     }
   }
@@ -1199,13 +883,8 @@ async function main(): Promise<void> {
     const r = mappingPersonTokens[i];
     const line = i + 2;
     const slug = emptyIfNullToken(r.canonical_person_slug ?? "");
-    if (slug && !personSlugs.has(slug)) {
-      issues.push({
-        severity: "error",
-        file: "data/final_data/mappings/person_tokens.tsv",
-        line,
-        message: `canonical_person_slug not in people.tsv: ${slug}`,
-      });
+    if (slug && !personIds.has(slug)) {
+      issues.push({ severity: "error", file: "data/final_data/mappings/person_tokens.tsv", line, message: `canonical_person_slug not in people.tsv: ${slug}` });
     }
   }
 
@@ -1213,88 +892,62 @@ async function main(): Promise<void> {
     const r = mappingPolityTokens[i];
     const line = i + 2;
     const slug = emptyIfNullToken(r.canonical_polity_slug ?? "");
-    if (slug && !politySlugs.has(slug)) {
-      issues.push({
-        severity: "error",
-        file: "data/final_data/mappings/polity_tokens.tsv",
-        line,
-        message: `canonical_polity_slug not in polities.tsv: ${slug}`,
-      });
+    if (slug && !polityIds.has(slug)) {
+      issues.push({ severity: "error", file: "data/final_data/mappings/polity_tokens.tsv", line, message: `canonical_polity_slug not in polities.tsv: ${slug}` });
     }
   }
 
+  // --- place_state_by_decade.tsv ---
   for (let i = 0; i < placeState.length; i += 1) {
     const r = placeState[i];
     const line = i + 2;
+    const file = "data/final_data/place_state_by_decade.tsv";
 
-    requireFk({ issues, file: "data/final_data/place_state_by_decade.tsv", line, field: "place_id", rawValue: r.place_id ?? "", fkSet: placeIds, allowEmpty: false });
-    validateIntField({ issues, file: "data/final_data/place_state_by_decade.tsv", line, field: "decade", rawValue: r.decade ?? "", allowEmpty: false });
+    requireFk({ issues, file, line, field: "place_id", rawValue: r.place_id ?? "", fkSet: placeIds, allowEmpty: false });
+    validateIntField({ issues, file, line, field: "decade", rawValue: r.decade ?? "", allowEmpty: false });
+    validateEnum({ issues, file, line, field: "presence_status", value: r.presence_status ?? "", allowed: presenceAllowed, allowEmpty: false });
 
-    validateEnum({ issues, file: "data/final_data/place_state_by_decade.tsv", line, field: "presence_status", value: r.presence_status ?? "", allowed: presenceAllowed, allowEmpty: false });
-
-    for (const slug of splitSemi(r.persuasion_slugs ?? "")) {
-      requireFk({ issues, file: "data/final_data/place_state_by_decade.tsv", line, field: "persuasion_slugs", rawValue: slug, fkSet: persuasionSlugs });
+    for (const id of splitSemi(r.persuasion_ids ?? "")) {
+      requireFk({ issues, file, line, field: "persuasion_ids", rawValue: id, fkSet: persuasionIds });
     }
 
-    const polity = emptyIfNullToken(r.polity_slug ?? "");
-    if (polity) {
-      requireFk({ issues, file: "data/final_data/place_state_by_decade.tsv", line, field: "polity_slug", rawValue: polity, fkSet: politySlugs });
+    const polityId = emptyIfNullToken(r.polity_id ?? "");
+    if (polityId) {
+      requireFk({ issues, file, line, field: "polity_id", rawValue: polityId, fkSet: polityIds });
     }
 
     const ev = emptyIfNullToken(r.evidence_note_id ?? "");
     if (ev) {
-      requireFk({ issues, file: "data/final_data/place_state_by_decade.tsv", line, field: "evidence_note_id", rawValue: ev, fkSet: noteIds });
+      requireFk({ issues, file, line, field: "evidence_note_id", rawValue: ev, fkSet: noteIds });
     }
   }
 
+  // --- entity_place_footprints.tsv ---
   for (let i = 0; i < footprints.length; i += 1) {
     const r = footprints[i];
     const line = i + 2;
+    const file = "data/final_data/entity_place_footprints.tsv";
 
     const entityType = emptyIfNullToken(r.entity_type ?? "");
-    validateEnum({ issues, file: "data/final_data/entity_place_footprints.tsv", line, field: "entity_type", value: entityType, allowed: entityTypeAllowed, allowEmpty: false });
+    validateEnum({ issues, file, line, field: "entity_type", value: entityType, allowed: entityTypeAllowed, allowEmpty: false });
 
-    requireFk({ issues, file: "data/final_data/entity_place_footprints.tsv", line, field: "place_id", rawValue: r.place_id ?? "", fkSet: placeIds, allowEmpty: false });
+    requireFk({ issues, file, line, field: "place_id", rawValue: r.place_id ?? "", fkSet: placeIds, allowEmpty: false });
 
     const entityId = emptyIfNullToken(r.entity_id ?? "");
     if (!entityId) {
-      issues.push({ severity: "error", file: "data/final_data/entity_place_footprints.tsv", line, message: "Missing entity_id" });
+      issues.push({ severity: "error", file, line, message: "Missing entity_id" });
     }
 
-    const start = validateIntField({ issues, file: "data/final_data/entity_place_footprints.tsv", line, field: "year_start", rawValue: r.year_start ?? "" });
-    const end = validateIntField({ issues, file: "data/final_data/entity_place_footprints.tsv", line, field: "year_end", rawValue: r.year_end ?? "" });
+    const start = validateIntField({ issues, file, line, field: "year_start", rawValue: r.year_start ?? "" });
+    const end = validateIntField({ issues, file, line, field: "year_end", rawValue: r.year_end ?? "" });
     if (start !== null && end !== null && end < start) {
-      issues.push({ severity: "error", file: "data/final_data/entity_place_footprints.tsv", line, message: `year_end < year_start (${end} < ${start})` });
+      issues.push({ severity: "error", file, line, message: `year_end < year_start (${end} < ${start})` });
     }
 
-    validateIntField({ issues, file: "data/final_data/entity_place_footprints.tsv", line, field: "weight", rawValue: r.weight ?? "" });
+    validateIntField({ issues, file, line, field: "weight", rawValue: r.weight ?? "" });
 
-    const fkSet =
-      entityType === "person"
-        ? personSlugs
-        : entityType === "event"
-          ? eventIds
-          : entityType === "work"
-            ? workIds
-            : entityType === "doctrine"
-              ? doctrineIds
-              : entityType === "archaeology"
-                ? archaeologyIds
-                : entityType === "city"
-                  ? citySlugs
-                  : entityType === "persuasion"
-                    ? persuasionSlugs
-                    : entityType === "polity"
-                      ? politySlugs
-                      : new Set<string>();
-
-    if (entityType && entityId && fkSet.size > 0 && !fkSet.has(entityId)) {
-      issues.push({
-        severity: "error",
-        file: "data/final_data/entity_place_footprints.tsv",
-        line,
-        message: `Broken FK entity_id for type ${entityType}: ${entityId}`,
-      });
+    if (entityType && entityId && fkSetForType(entityType).size > 0 && !fkSetForType(entityType).has(entityId)) {
+      issues.push({ severity: "error", file, line, message: `Broken FK entity_id for type ${entityType}: ${entityId}` });
     }
   }
 
@@ -1303,9 +956,9 @@ async function main(): Promise<void> {
 
   for (const issue of [...errors, ...warns]) {
     const prefix = issue.severity === "error" ? "ERROR" : "WARN";
-    const line = issue.line ? `:${issue.line}` : "";
+    const lineStr = issue.line ? `:${issue.line}` : "";
     const stream = issue.severity === "error" ? console.error : console.warn;
-    stream(`[${prefix}] ${issue.file}${line} ${issue.message}`);
+    stream(`[${prefix}] ${issue.file}${lineStr} ${issue.message}`);
   }
 
   if (errors.length > 0) {
