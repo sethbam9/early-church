@@ -129,11 +129,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT = resolve(__dirname, "..");
 const DATASET_PATH = resolve(ROOT, "final.tsv");
-const STARRED_POIS_PATH = resolve(ROOT, "data", "starred_pois.json");
 const ESSAYS_DIR = resolve(ROOT, "essays");
 const GENERATED_DIR = resolve(ROOT, "src", "data", "generated");
 const INDEXED_DATA_PATH = resolve(GENERATED_DIR, "indexedData.json");
-const STARRED_POIS_OUT_PATH = resolve(GENERATED_DIR, "starredPois.json");
 const ESSAYS_OUT_PATH = resolve(GENERATED_DIR, "essays.json");
 
 function buildYearBuckets(): number[] {
@@ -603,14 +601,6 @@ function parsePoi(value: unknown): FeaturedPoi {
   };
 }
 
-async function buildFeaturedPois(): Promise<FeaturedPoi[]> {
-  const raw = await readFile(STARRED_POIS_PATH, "utf8");
-  const parsed = JSON.parse(raw) as unknown[];
-  const pois = parsed.map(parsePoi);
-  pois.sort((a, b) => a.name.localeCompare(b.name));
-  return pois;
-}
-
 function extractEssayTitle(content: string, fallback: string): string {
   const heading = content.match(/^#\s+(.+)$/m);
   if (heading?.[1]) {
@@ -652,20 +642,17 @@ async function main(): Promise<void> {
   const rawTsv = await readFile(DATASET_PATH, "utf8");
   const records = parseTsv(rawTsv);
   const indexedData = buildIndexedData(records);
-  const featuredPois = await buildFeaturedPois();
   const essays = await buildEssays();
 
   await mkdir(GENERATED_DIR, { recursive: true });
 
   await writeFile(INDEXED_DATA_PATH, `${JSON.stringify(indexedData, null, 2)}\n`, "utf8");
-  await writeFile(STARRED_POIS_OUT_PATH, `${JSON.stringify(featuredPois, null, 2)}\n`, "utf8");
   await writeFile(ESSAYS_OUT_PATH, `${JSON.stringify(essays, null, 2)}\n`, "utf8");
 
   console.log(`[build:data] Wrote ${INDEXED_DATA_PATH}`);
-  console.log(`[build:data] Wrote ${STARRED_POIS_OUT_PATH}`);
   console.log(`[build:data] Wrote ${ESSAYS_OUT_PATH}`);
   console.log(
-    `[build:data] Rows=${indexedData.rows.length}, mapped=${indexedData.rows.filter((row) => row.hasValidCoordinates).length}, POIs=${featuredPois.length}, essays=${essays.length}`,
+    `[build:data] Rows=${indexedData.rows.length}, mapped=${indexedData.rows.filter((row) => row.hasValidCoordinates).length}, essays=${essays.length}`,
   );
 }
 
