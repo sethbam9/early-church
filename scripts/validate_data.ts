@@ -261,12 +261,10 @@ async function main(): Promise<void> {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = dirname(__filename);
   const ROOT = resolve(__dirname, "..");
-  const FINAL_DATA_DIR = resolve(ROOT, "data", "final_data");
-
   const issues: Issue[] = [];
 
   const expectedHeaders: Record<string, string[]> = {
-    "data/final_data/cities.tsv": [
+    "data/cities.tsv": [
       "city_id",
       "city_label",
       "city_ancient_primary",
@@ -277,7 +275,7 @@ async function main(): Promise<void> {
       "location_precision",
       "christianity_start_year",
     ],
-    "data/final_data/persuasions.tsv": [
+    "data/persuasions.tsv": [
       "persuasion_id",
       "persuasion_label",
       "persuasion_stream",
@@ -288,7 +286,7 @@ async function main(): Promise<void> {
       "citations",
       "notes",
     ],
-    "data/final_data/people.tsv": [
+    "data/people.tsv": [
       "person_id",
       "person_label",
       "name_alt",
@@ -303,7 +301,7 @@ async function main(): Promise<void> {
       "citations",
       "notes",
     ],
-    "data/final_data/polities.tsv": [
+    "data/polities.tsv": [
       "polity_id",
       "polity_label",
       "name_alt",
@@ -314,8 +312,9 @@ async function main(): Promise<void> {
       "description",
       "wikipedia_url",
       "citations",
+      "notes",
     ],
-    "data/final_data/notes.tsv": [
+    "data/notes.tsv": [
       "year_bucket",
       "year_exact",
       "primary_entity_type",
@@ -325,8 +324,8 @@ async function main(): Promise<void> {
       "citation_urls",
       "note_id",
     ],
-    "data/final_data/note_mentions.tsv": ["note_id", "mentioned_type", "mentioned_slug"],
-    "data/final_data/places.tsv": [
+    "data/note_mentions.tsv": ["note_id", "mentioned_type", "mentioned_slug"],
+    "data/places.tsv": [
       "place_id",
       "place_type",
       "place_label",
@@ -336,7 +335,7 @@ async function main(): Promise<void> {
       "city_id",
       "archaeology_id",
     ],
-    "data/final_data/relations.tsv": [
+    "data/relations.tsv": [
       "relation_id",
       "source_type",
       "source_id",
@@ -351,7 +350,7 @@ async function main(): Promise<void> {
       "evidence_note_id",
       "citations",
     ],
-    "data/final_data/place_state_by_decade.tsv": [
+    "data/place_state_by_decade.tsv": [
       "place_id",
       "decade",
       "presence_status",
@@ -365,7 +364,7 @@ async function main(): Promise<void> {
       "council_context",
       "evidence_note_id",
     ],
-    "data/final_data/entity_place_footprints.tsv": [
+    "data/entity_place_footprints.tsv": [
       "entity_type",
       "entity_id",
       "place_id",
@@ -374,33 +373,7 @@ async function main(): Promise<void> {
       "weight",
       "reason",
     ],
-    "data/final_data/mappings/city_keys.tsv": [
-      "raw_city_ancient",
-      "raw_country_modern",
-      "raw_city_modern",
-      "canonical_city_slug",
-      "canonical_city_label",
-      "notes",
-    ],
-    "data/final_data/mappings/city_aliases.tsv": ["alias", "canonical_city_slug", "alias_kind"],
-    "data/final_data/mappings/persuasion_tokens.tsv": [
-      "raw_persuasion_token",
-      "canonical_persuasion_slugs",
-      "canonical_persuasion_label",
-      "notes",
-    ],
-    "data/final_data/mappings/person_tokens.tsv": [
-      "raw_person_token",
-      "canonical_person_slug",
-      "canonical_person_label",
-      "disambiguation_note",
-    ],
-    "data/final_data/mappings/polity_tokens.tsv": [
-      "raw_polity_token",
-      "canonical_polity_slug",
-      "canonical_polity_label",
-    ],
-    "data/final_data/works.tsv": [
+    "data/works.tsv": [
       "work_id",
       "title_display",
       "author_person_id",
@@ -416,7 +389,7 @@ async function main(): Promise<void> {
       "modern_edition_url",
       "citations",
     ],
-    "data/final_data/events.tsv": [
+    "data/events.tsv": [
       "event_id",
       "name_display",
       "event_type",
@@ -430,7 +403,7 @@ async function main(): Promise<void> {
       "outcome",
       "citations",
     ],
-    "data/final_data/doctrines.tsv": [
+    "data/doctrines.tsv": [
       "doctrine_id",
       "name_display",
       "category",
@@ -441,7 +414,7 @@ async function main(): Promise<void> {
       "resolution",
       "citations",
     ],
-    "data/final_data/quotes.tsv": [
+    "data/quotes.tsv": [
       "quote_id",
       "doctrine_id",
       "work_id",
@@ -452,7 +425,7 @@ async function main(): Promise<void> {
       "notes",
       "citations",
     ],
-    "data/final_data/archaeology.tsv": [
+    "data/archaeology.tsv": [
       "archaeology_id",
       "name_display",
       "site_type",
@@ -469,7 +442,6 @@ async function main(): Promise<void> {
       "uncertainty",
       "citations",
     ],
-    "data/final_data/mappings/mapping_coverage_issues.tsv": ["issue_kind", "raw_value", "row_mentions"],
   };
 
   const paths = Object.keys(expectedHeaders).map((p) => resolve(ROOT, p));
@@ -484,40 +456,25 @@ async function main(): Promise<void> {
     if (expected) validateHeaders(parsed.headers, expected, relKey, issues);
   }
 
-  const cities = parsedByPath.get("data/final_data/cities.tsv")?.rows ?? [];
-  const persuasions = parsedByPath.get("data/final_data/persuasions.tsv")?.rows ?? [];
-  const people = parsedByPath.get("data/final_data/people.tsv")?.rows ?? [];
-  const polities = parsedByPath.get("data/final_data/polities.tsv")?.rows ?? [];
-  const works = parsedByPath.get("data/final_data/works.tsv")?.rows ?? [];
-  const events = parsedByPath.get("data/final_data/events.tsv")?.rows ?? [];
-  const doctrines = parsedByPath.get("data/final_data/doctrines.tsv")?.rows ?? [];
-  const quotes = parsedByPath.get("data/final_data/quotes.tsv")?.rows ?? [];
-  const archaeology = parsedByPath.get("data/final_data/archaeology.tsv")?.rows ?? [];
-  const notes = parsedByPath.get("data/final_data/notes.tsv")?.rows ?? [];
-  const noteMentions = parsedByPath.get("data/final_data/note_mentions.tsv")?.rows ?? [];
-  const places = parsedByPath.get("data/final_data/places.tsv")?.rows ?? [];
-  const relations = parsedByPath.get("data/final_data/relations.tsv")?.rows ?? [];
-  const placeState = parsedByPath.get("data/final_data/place_state_by_decade.tsv")?.rows ?? [];
-  const footprints = parsedByPath.get("data/final_data/entity_place_footprints.tsv")?.rows ?? [];
-  const mappingCityKeys = parsedByPath.get("data/final_data/mappings/city_keys.tsv")?.rows ?? [];
-  const mappingCityAliases = parsedByPath.get("data/final_data/mappings/city_aliases.tsv")?.rows ?? [];
-  const mappingPersuasionTokens = parsedByPath.get("data/final_data/mappings/persuasion_tokens.tsv")?.rows ?? [];
-  const mappingPersonTokens = parsedByPath.get("data/final_data/mappings/person_tokens.tsv")?.rows ?? [];
-  const mappingPolityTokens = parsedByPath.get("data/final_data/mappings/polity_tokens.tsv")?.rows ?? [];
-  const mappingCoverageIssues = parsedByPath.get("data/final_data/mappings/mapping_coverage_issues.tsv")?.rows ?? [];
-
-  if (mappingCoverageIssues.length > 0) {
-    issues.push({
-      severity: "warn",
-      file: "data/final_data/mappings/mapping_coverage_issues.tsv",
-      line: 2,
-      message: `${mappingCoverageIssues.length} unmapped token(s) found`,
-    });
-  }
+  const cities = parsedByPath.get("data/cities.tsv")?.rows ?? [];
+  const persuasions = parsedByPath.get("data/persuasions.tsv")?.rows ?? [];
+  const people = parsedByPath.get("data/people.tsv")?.rows ?? [];
+  const polities = parsedByPath.get("data/polities.tsv")?.rows ?? [];
+  const works = parsedByPath.get("data/works.tsv")?.rows ?? [];
+  const events = parsedByPath.get("data/events.tsv")?.rows ?? [];
+  const doctrines = parsedByPath.get("data/doctrines.tsv")?.rows ?? [];
+  const quotes = parsedByPath.get("data/quotes.tsv")?.rows ?? [];
+  const archaeology = parsedByPath.get("data/archaeology.tsv")?.rows ?? [];
+  const notes = parsedByPath.get("data/notes.tsv")?.rows ?? [];
+  const noteMentions = parsedByPath.get("data/note_mentions.tsv")?.rows ?? [];
+  const places = parsedByPath.get("data/places.tsv")?.rows ?? [];
+  const relations = parsedByPath.get("data/relations.tsv")?.rows ?? [];
+  const placeState = parsedByPath.get("data/place_state_by_decade.tsv")?.rows ?? [];
+  const footprints = parsedByPath.get("data/entity_place_footprints.tsv")?.rows ?? [];
 
   const cityIds = ensureUnique(
     cities.map((r) => r.city_id ?? ""),
-    "data/final_data/cities.tsv",
+    "data/cities.tsv",
     "city_id",
     issues,
   );
@@ -532,53 +489,53 @@ async function main(): Promise<void> {
 
   const persuasionIds = ensureUnique(
     persuasions.map((r) => r.persuasion_id ?? ""),
-    "data/final_data/persuasions.tsv",
+    "data/persuasions.tsv",
     "persuasion_id",
     issues,
   );
 
   const personIds = ensureUnique(
     people.map((r) => r.person_id ?? ""),
-    "data/final_data/people.tsv",
+    "data/people.tsv",
     "person_id",
     issues,
   );
 
   const polityIds = ensureUnique(
     polities.map((r) => r.polity_id ?? ""),
-    "data/final_data/polities.tsv",
+    "data/polities.tsv",
     "polity_id",
     issues,
   );
 
-  const workIds = ensureUnique(works.map((r) => r.work_id ?? ""), "data/final_data/works.tsv", "work_id", issues);
-  const eventIds = ensureUnique(events.map((r) => r.event_id ?? ""), "data/final_data/events.tsv", "event_id", issues);
-  const doctrineIds = ensureUnique(doctrines.map((r) => r.doctrine_id ?? ""), "data/final_data/doctrines.tsv", "doctrine_id", issues);
-  const quoteIds = ensureUnique(quotes.map((r) => r.quote_id ?? ""), "data/final_data/quotes.tsv", "quote_id", issues);
+  const workIds = ensureUnique(works.map((r) => r.work_id ?? ""), "data/works.tsv", "work_id", issues);
+  const eventIds = ensureUnique(events.map((r) => r.event_id ?? ""), "data/events.tsv", "event_id", issues);
+  const doctrineIds = ensureUnique(doctrines.map((r) => r.doctrine_id ?? ""), "data/doctrines.tsv", "doctrine_id", issues);
+  const quoteIds = ensureUnique(quotes.map((r) => r.quote_id ?? ""), "data/quotes.tsv", "quote_id", issues);
   const archaeologyIds = ensureUnique(
     archaeology.map((r) => r.archaeology_id ?? ""),
-    "data/final_data/archaeology.tsv",
+    "data/archaeology.tsv",
     "archaeology_id",
     issues,
   );
 
   const placeIds = ensureUnique(
     places.map((r) => r.place_id ?? ""),
-    "data/final_data/places.tsv",
+    "data/places.tsv",
     "place_id",
     issues,
   );
 
   const noteIds = ensureUnique(
     notes.map((r) => r.note_id ?? ""),
-    "data/final_data/notes.tsv",
+    "data/notes.tsv",
     "note_id",
     issues,
   );
 
   const relationIds = ensureUnique(
     relations.map((r) => r.relation_id ?? ""),
-    "data/final_data/relations.tsv",
+    "data/relations.tsv",
     "relation_id",
     issues,
   );
@@ -589,43 +546,36 @@ async function main(): Promise<void> {
   const relationPolarityAllowed = ["supports", "opposes", "neutral"];
   const relationCertaintyAllowed = ["attested", "probable", "claimed_tradition", "legendary", "unknown"];
   const entityTypeAllowed = ["person", "event", "work", "doctrine", "city", "archaeology", "persuasion", "polity"];
-  const mentionTypeAllowed = ["person", "event", "work", "doctrine", "city", "archaeology", "persuasion", "polity"];
+  const mentionTypeAllowed = ["person", "persuasion", "polity", "city", "work", "doctrine", "event", "archaeology"];
 
-  function fkSetForType(t: string): Set<string> {
-    if (t === "place") return placeIds;
-    if (t === "city") return cityIds;
-    if (t === "person") return personIds;
-    if (t === "work") return workIds;
-    if (t === "doctrine") return doctrineIds;
-    if (t === "event") return eventIds;
-    if (t === "archaeology") return archaeologyIds;
-    if (t === "persuasion") return persuasionIds;
-    if (t === "polity") return polityIds;
-    if (t === "note") return noteIds;
-    return new Set<string>();
+  function fkSetForType(type: string): Set<string> {
+    switch (type) {
+      case "person": return personIds;
+      case "persuasion": return persuasionIds;
+      case "polity": return polityIds;
+      case "city": return cityIds;
+      case "work": return workIds;
+      case "doctrine": return doctrineIds;
+      case "event": return eventIds;
+      case "archaeology": return archaeologyIds;
+      default: return new Set<string>();
+    }
   }
 
-  function requirePlaceFk(params: { file: string; line: number; field: string; rawValue: string; allowEmpty?: boolean }): void {
-    const allowEmpty = params.allowEmpty ?? true;
-    const v = emptyIfNullToken(params.rawValue ?? "");
-    if (!v) {
-      if (!allowEmpty) {
-        issues.push({ severity: "error", file: params.file, line: params.line, message: `Missing required FK in ${params.field}` });
-      }
-      return;
-    }
-    if (!placeIds.has(v)) {
-      const cityId = stripPlacePrefix(v);
-      if (cityId && cityPlaceIds.has(cityId)) return;
-      issues.push({ severity: "error", file: params.file, line: params.line, message: `Broken FK ${params.field} -> ${v}` });
-    }
+  function requirePlaceFk(params: { file: string; line: number; field: string; rawValue: string }): void {
+    const v = emptyIfNullToken(params.rawValue);
+    if (!v) return;
+    if (placeIds.has(v)) return;
+    const cityId = stripPlacePrefix(v);
+    if (cityId && cityPlaceIds.has(cityId)) return;
+    issues.push({ severity: "error", file: params.file, line: params.line, message: `Broken FK ${params.field} -> ${v}` });
   }
 
   // --- works.tsv ---
   for (let i = 0; i < works.length; i += 1) {
     const r = works[i];
     const line = i + 2;
-    const file = "data/final_data/works.tsv";
+    const file = "data/works.tsv";
 
     const author = emptyIfNullToken(r.author_person_id ?? "");
     if (author) {
@@ -650,7 +600,7 @@ async function main(): Promise<void> {
   for (let i = 0; i < events.length; i += 1) {
     const r = events[i];
     const line = i + 2;
-    const file = "data/final_data/events.tsv";
+    const file = "data/events.tsv";
 
     const rawPlace = emptyIfNullToken(r.primary_place_id ?? "");
     if (rawPlace) requirePlaceFk({ file, line, field: "primary_place_id", rawValue: rawPlace });
@@ -670,7 +620,7 @@ async function main(): Promise<void> {
   for (let i = 0; i < doctrines.length; i += 1) {
     const r = doctrines[i];
     const line = i + 2;
-    const file = "data/final_data/doctrines.tsv";
+    const file = "data/doctrines.tsv";
 
     const workId = emptyIfNullToken(r.first_attested_work_id ?? "");
     if (workId) {
@@ -684,7 +634,7 @@ async function main(): Promise<void> {
   for (let i = 0; i < quotes.length; i += 1) {
     const r = quotes[i];
     const line = i + 2;
-    const file = "data/final_data/quotes.tsv";
+    const file = "data/quotes.tsv";
 
     requireFk({ issues, file, line, field: "doctrine_id", rawValue: r.doctrine_id ?? "", fkSet: doctrineIds, allowEmpty: false });
 
@@ -700,7 +650,7 @@ async function main(): Promise<void> {
   for (let i = 0; i < archaeology.length; i += 1) {
     const r = archaeology[i];
     const line = i + 2;
-    const file = "data/final_data/archaeology.tsv";
+    const file = "data/archaeology.tsv";
 
     const cityId = emptyIfNullToken(r.city_id ?? "");
     if (cityId) {
@@ -718,7 +668,7 @@ async function main(): Promise<void> {
   for (let i = 0; i < notes.length; i += 1) {
     const r = notes[i];
     const line = i + 2;
-    const file = "data/final_data/notes.tsv";
+    const file = "data/notes.tsv";
 
     const primaryType = emptyIfNullToken(r.primary_entity_type ?? "");
     const primaryId = emptyIfNullToken(r.primary_entity_id ?? "");
@@ -752,7 +702,7 @@ async function main(): Promise<void> {
   for (let i = 0; i < noteMentions.length; i += 1) {
     const r = noteMentions[i];
     const line = i + 2;
-    const file = "data/final_data/note_mentions.tsv";
+    const file = "data/note_mentions.tsv";
 
     requireFk({ issues, file, line, field: "note_id", rawValue: r.note_id ?? "", fkSet: noteIds, allowEmpty: false });
 
@@ -770,7 +720,7 @@ async function main(): Promise<void> {
   for (let i = 0; i < places.length; i += 1) {
     const r = places[i];
     const line = i + 2;
-    const file = "data/final_data/places.tsv";
+    const file = "data/places.tsv";
 
     const placeType = emptyIfNullToken(r.place_type ?? "");
     validateEnum({ issues, file, line, field: "place_type", value: placeType, allowed: placeTypeAllowed, allowEmpty: false });
@@ -806,7 +756,7 @@ async function main(): Promise<void> {
   for (let i = 0; i < relations.length; i += 1) {
     const r = relations[i];
     const line = i + 2;
-    const file = "data/final_data/relations.tsv";
+    const file = "data/relations.tsv";
 
     const relId = emptyIfNullToken(r.relation_id ?? "");
     if (!relId) {
@@ -850,58 +800,11 @@ async function main(): Promise<void> {
     }
   }
 
-  // --- mapping checks ---
-  for (let i = 0; i < mappingCityKeys.length; i += 1) {
-    const r = mappingCityKeys[i];
-    const line = i + 2;
-    const slug = emptyIfNullToken(r.canonical_city_slug ?? "");
-    if (slug && !cityIds.has(slug)) {
-      issues.push({ severity: "error", file: "data/final_data/mappings/city_keys.tsv", line, message: `canonical_city_slug not in cities.tsv: ${slug}` });
-    }
-  }
-
-  for (let i = 0; i < mappingCityAliases.length; i += 1) {
-    const r = mappingCityAliases[i];
-    const line = i + 2;
-    const slug = emptyIfNullToken(r.canonical_city_slug ?? "");
-    if (slug && !cityIds.has(slug)) {
-      issues.push({ severity: "error", file: "data/final_data/mappings/city_aliases.tsv", line, message: `canonical_city_slug not in cities.tsv: ${slug}` });
-    }
-  }
-
-  for (let i = 0; i < mappingPersuasionTokens.length; i += 1) {
-    const r = mappingPersuasionTokens[i];
-    const line = i + 2;
-    for (const slug of splitSemi(r.canonical_persuasion_slugs ?? "")) {
-      if (!persuasionIds.has(slug)) {
-        issues.push({ severity: "error", file: "data/final_data/mappings/persuasion_tokens.tsv", line, message: `canonical_persuasion_slug not in persuasions.tsv: ${slug}` });
-      }
-    }
-  }
-
-  for (let i = 0; i < mappingPersonTokens.length; i += 1) {
-    const r = mappingPersonTokens[i];
-    const line = i + 2;
-    const slug = emptyIfNullToken(r.canonical_person_slug ?? "");
-    if (slug && !personIds.has(slug)) {
-      issues.push({ severity: "error", file: "data/final_data/mappings/person_tokens.tsv", line, message: `canonical_person_slug not in people.tsv: ${slug}` });
-    }
-  }
-
-  for (let i = 0; i < mappingPolityTokens.length; i += 1) {
-    const r = mappingPolityTokens[i];
-    const line = i + 2;
-    const slug = emptyIfNullToken(r.canonical_polity_slug ?? "");
-    if (slug && !polityIds.has(slug)) {
-      issues.push({ severity: "error", file: "data/final_data/mappings/polity_tokens.tsv", line, message: `canonical_polity_slug not in polities.tsv: ${slug}` });
-    }
-  }
-
   // --- place_state_by_decade.tsv ---
   for (let i = 0; i < placeState.length; i += 1) {
     const r = placeState[i];
     const line = i + 2;
-    const file = "data/final_data/place_state_by_decade.tsv";
+    const file = "data/place_state_by_decade.tsv";
 
     requireFk({ issues, file, line, field: "place_id", rawValue: r.place_id ?? "", fkSet: placeIds, allowEmpty: false });
     validateIntField({ issues, file, line, field: "decade", rawValue: r.decade ?? "", allowEmpty: false });
@@ -926,7 +829,7 @@ async function main(): Promise<void> {
   for (let i = 0; i < footprints.length; i += 1) {
     const r = footprints[i];
     const line = i + 2;
-    const file = "data/final_data/entity_place_footprints.tsv";
+    const file = "data/entity_place_footprints.tsv";
 
     const entityType = emptyIfNullToken(r.entity_type ?? "");
     validateEnum({ issues, file, line, field: "entity_type", value: entityType, allowed: entityTypeAllowed, allowEmpty: false });
@@ -950,6 +853,11 @@ async function main(): Promise<void> {
       issues.push({ severity: "error", file, line, message: `Broken FK entity_id for type ${entityType}: ${entityId}` });
     }
   }
+
+  // Suppress unused variable warnings for IDs only used in FK checks above
+  void eventIds;
+  void quoteIds;
+  void relationIds;
 
   const errors = issues.filter((i) => i.severity === "error");
   const warns = issues.filter((i) => i.severity === "warn");

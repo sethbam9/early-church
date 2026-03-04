@@ -60,7 +60,7 @@ Canonical patterns for UI consistency across the codebase.
 
 - `MarkdownRenderer` supports: `#`/`##`/`###` headings, `>` blockquotes, `**bold**`, `*italic*`, blank-line paragraphs, `[[mention]]` links, literal `\n` sequences from TSV data.
 - CSS classes: `.md-p`, `.md-h1/2/3`, `.md-blockquote`, `.markdown-renderer`.
-- Essays live as `.md` files in `public/data/essays/` and are fetched at runtime via `essayLoader.ts`. The `Essay` interface is defined in `essayLoader.ts` (not `essays.ts`).
+- Essays live as `.md` files in `data/essays/` and are fetched at runtime via `essayLoader.ts`. The `Essay` interface is defined in `essayLoader.ts` (not `essays.ts`).
 
 ---
 

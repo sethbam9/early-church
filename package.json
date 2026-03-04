@@ -4,13 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "predev": "npm run build:data",
+    "predev": "npm run data:validate",
     "dev": "vite",
-    "data:final": "tsx scripts/build_final_data_from_final.ts",
     "data:validate": "tsx scripts/validate_data.ts",
-    "data:rebuild": "npm run data:final && npm run data:validate",
-    "build:data": "npm run data:rebuild",
-    "prebuild": "npm run build:data",
+    "prebuild": "npm run data:validate",
     "build": "tsc -b && vite build",
     "preview": "vite preview"
   },

@@ -179,6 +179,7 @@ export function GraphPage() {
   const svgSizeRef = useRef({ width: 800, height: 600 });
 
   const [filter, setFilter] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [hoveredEdge, setHoveredEdge] = useState<number | null>(null);
   const [tick, setTick] = useState(0);
@@ -194,6 +195,16 @@ export function GraphPage() {
     setSelectedKey(null);
   }, [filter]);
 
+  // Search handler: select first matching node
+  const handleSearchSelect = () => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return;
+    const match = nodesRef.current.find(
+      (n) => n.label.toLowerCase().includes(q) || n.kind.toLowerCase().includes(q)
+    );
+    if (match) setSelectedKey(match.id);
+  };
+
   useEffect(() => {
     let frameCount = 0;
     function animate() {
@@ -201,7 +212,12 @@ export function GraphPage() {
       runForce(nodesRef.current, edgesRef.current, width, height);
       frameCount++;
       if (frameCount % 2 === 0) setTick((t) => t + 1);
-      animRef.current = requestAnimationFrame(animate);
+      // Stop early for large graphs to prevent bounce
+      if (frameCount > 120 && nodesRef.current.length > 100) {
+        if (animRef.current) cancelAnimationFrame(animRef.current);
+      } else {
+        animRef.current = requestAnimationFrame(animate);
+      }
     }
     animRef.current = requestAnimationFrame(animate);
     return () => { if (animRef.current) cancelAnimationFrame(animRef.current); };
@@ -314,6 +330,62 @@ export function GraphPage() {
                 {label}
               </button>
             ))}
+          </div>
+        </div>
+
+        {/* Search */}
+        <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)" }}>
+          <div className="filter-label" style={{ marginBottom: 6 }}>Search nodes</div>
+          <div style={{ display: "flex", gap: 6 }}>
+            <input
+              type="text"
+              placeholder="Name or kind…"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => { if (e.key === "Enter") handleSearchSelect(); }}
+              style={{
+                flex: 1,
+                padding: "6px 9px",
+                fontSize: "0.82rem",
+                border: "1px solid var(--border)",
+                borderRadius: "var(--radius-sm)",
+                background: "var(--surface-2)",
+                color: "var(--text)",
+              }}
+            />
+            <button
+              type="button"
+              onClick={handleSearchSelect}
+              disabled={!searchQuery.trim()}
+              style={{
+                padding: "6px 12px",
+                fontSize: "0.82rem",
+                border: "1px solid var(--border)",
+                borderRadius: "var(--radius-sm)",
+                background: searchQuery.trim() ? "var(--accent)" : "var(--surface-3)",
+                color: searchQuery.trim() ? "var(--surface)" : "var(--text-faint)",
+                cursor: searchQuery.trim() ? "pointer" : "not-allowed",
+              }}
+            >
+              🔍
+            </button>
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => { setSearchQuery(""); setSelectedKey(null); }}
+                style={{
+                  padding: "6px 9px",
+                  fontSize: "0.82rem",
+                  border: "1px solid var(--border)",
+                  borderRadius: "var(--radius-sm)",
+                  background: "var(--surface-3)",
+                  color: "var(--text-faint)",
+                  cursor: "pointer",
+                }}
+              >
+                ✕
+              </button>
+            )}
           </div>
         </div>
 
