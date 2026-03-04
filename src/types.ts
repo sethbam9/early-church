@@ -2,13 +2,6 @@
 export type {
   LocationPrecision,
   PresenceStatus,
-  CitationToken,
-  EvidenceSections,
-  ChurchRow,
-  FilterFacets,
-  IndexedDataArtifact,
-  FeaturedPoi,
-  EssayDocument,
   FilterState,
   Person,
   HistoricalEvent,
@@ -16,13 +9,10 @@ export type {
   Doctrine,
   Quote,
   ArchaeologySite,
-  Edge,
   Selection,
   HighlightEntry,
   CorrespondenceArc,
   EntityRef,
-  EntityType,
-  RightPanel,
   PlaybackSpeed,
 } from "./domain/types";
 
