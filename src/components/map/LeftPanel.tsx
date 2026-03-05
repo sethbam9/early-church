@@ -2,15 +2,7 @@ import { useCallback } from "react";
 import { useAppStore } from "../../stores/appStore";
 import { dataStore } from "../../data/dataStore";
 import type { PresenceStatus } from "../../data/dataStore";
-
-const PRESENCE_LABELS: Record<string, string> = {
-  attested:         "Attested",
-  probable:         "Probable",
-  claimed_tradition:"Claimed",
-  suppressed:       "Suppressed",
-  unknown:          "Unknown",
-  not_attested:     "Not attested",
-};
+import { PRESENCE_LABELS } from "../shared/entityConstants";
 
 interface LeftPanelProps {
   visibleCityCount: number;

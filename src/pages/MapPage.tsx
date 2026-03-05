@@ -5,17 +5,8 @@ import { dataStore } from "../data/dataStore";
 import type { CityAtDecade } from "../data/dataStore";
 import { LeftPanel } from "../components/map/LeftPanel";
 import { RightSidebar } from "../components/map/RightSidebar";
-
-// ─── Presence colors ──────────────────────────────────────────────────────────
-
-const PRESENCE_COLORS: Record<string, string> = {
-  attested:          "#1a7a5c",
-  probable:          "#b07e10",
-  claimed_tradition: "#c47d2a",
-  suppressed:        "#c0392b",
-  unknown:           "#8e8070",
-  not_attested:      "#8e8070",
-};
+import { PRESENCE_COLORS, KIND_ICONS } from "../components/shared/entityConstants";
+import { Hl } from "../components/shared/Hl";
 
 // ─── City-search index: maps city_id → searchable text blob ─────────────────
 // Indexes city names, associated people (all routes), works, doctrines,
@@ -808,29 +799,10 @@ function SearchResultsPanel({
   const totalPages = Math.ceil(matches.length / PAGE_SIZE);
   const pageItems  = matches.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
-  const KIND_ICONS: Record<string, string> = {
-    city: "🏛", person: "👤", work: "📜", doctrine: "📖",
-    event: "⚡", archaeology: "★", persuasion: "✦", polity: "⚔",
-  };
-
   const handleSelect = (kind: string, id: string) => {
     setSelection({ kind: kind as import("../data/dataStore").Selection["kind"], id });
     if (kind === "city") setSidebarTab("places");
     if (!rightVisible) toggleRight();
-  };
-
-  const highlightText = (text: string): React.ReactNode => {
-    const idx = text.toLowerCase().indexOf(q);
-    if (idx < 0) return text;
-    return (
-      <>
-        {text.slice(0, idx)}
-        <mark style={{ background: "rgba(26,122,92,0.25)", color: "inherit", borderRadius: 2, padding: "0 1px" }}>
-          {text.slice(idx, idx + q.length)}
-        </mark>
-        {text.slice(idx + q.length)}
-      </>
-    );
   };
 
   if (matches.length === 0) return null;
@@ -858,8 +830,8 @@ function SearchResultsPanel({
           >
             <span className="search-result-icon">{KIND_ICONS[m.kind] ?? "•"}</span>
             <div className="search-result-body">
-              <div className="search-result-label">{highlightText(m.label)}</div>
-              {m.sub && <div className="search-result-sub">{highlightText(m.sub)}</div>}
+              <div className="search-result-label"><Hl text={m.label} query={q} /></div>
+              {m.sub && <div className="search-result-sub"><Hl text={m.sub} query={q} /></div>}
             </div>
             {m.decade && (
               <span className="search-result-decade">AD {m.decade}</span>

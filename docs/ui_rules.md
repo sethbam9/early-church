@@ -1,80 +1,126 @@
 # UI Rules — Early Christianity Atlas
 
 Canonical patterns for UI consistency across the codebase.
+Every contributor must follow these rules. When in doubt, check this file first.
 
 ---
 
-## Layout
+## 1. Project Structure
 
-- **App shell**: `NavBar` (fixed top) + `page-container` (fills remaining height).
-- **Map page**: flex row — `map-left` (left panel) | `map-center` (Leaflet map) | `map-right` (right sidebar).
-- **Expanded sidebar**: `.map-layout.sidebar-expanded` sets `map-center` to `width: 0` (NOT `display:none`) so Leaflet doesn't break. `map-right` gets `flex: 1`.
-- **Panel visibility**: toggled via `leftPanelVisible` / `rightPanelVisible` in `appStore`. When hidden, the container is conditionally rendered (`{visible && <div>…</div>}`), not CSS-hidden.
-- **Show-panel hints**: `.map-overlays` is `position:absolute; pointer-events:none` spanning the full map width. Left hint is left-aligned; right hint uses `margin-left: auto`. Buttons must have `pointer-events: all`.
-
----
-
-## Navigation / Selection History
-
-- `appStore` holds `selection: Selection | null` and `selectionHistory: Selection[]`.
-- **Navigate to entity**: call `pushSelection({ kind, id })` — saves current selection to history.
-- **Back**: call `popSelection()` — restores previous selection. If history is empty, call `setSelection(null)`.
-- **Hard reset** (e.g. closing a panel): call `setSelection(null)` — clears history too.
-- **Essay → entity**: store the essay in `prevEssay` local state before calling `pushSelection`; back restores `prevEssay`.
-- Never navigate using `setSidebarTab` as a back mechanism — tabs are independent of entity history.
-
----
-
-## Sidebar Tabs
-
-- Tabs are defined in `TABS` array in `RightSidebar.tsx` with `id | icon | label`.
-- Tab buttons use `.sidebar-tab` class — `flex-direction: column`, icon on top, label below.
-- **No border, no background** — only a `border-bottom: 2px solid` underline for the active state.
-- Active tab: `border-bottom-color: var(--accent-bright)`, `color: var(--accent-bright)`.
-- Tab scroll: `overflow-x: auto` on `.sidebar-tabs`, scrollbar hidden via `::-webkit-scrollbar { display: none }`.
-
----
-
-## Entity Detail Panels
-
-- All entity detail views use the same shell: back bar → header → filter banner (if applicable) → sub-tabs → body.
-- **Back bar**: `.detail-back-bar` with `.back-btn` (← Back) and `.detail-crumb` (entity kind label).
-- **Header**: kind badge (`kindIcon kind`), title, subtitle, tags (`.tag` chips).
-- **Sub-tabs**: `.detail-sub-tabs` / `.detail-sub-tab` — horizontal pills, not icons.
-- **Body**: `.detail-body` — scrollable.
-- City detail uses its own `CityDetail` component (different tab set: Info, Timeline, People, Doctrines, Events, Works).
-
----
-
-## Clickable Mentions (MarkdownRenderer)
-
-- Syntax: `[[kind:id|label]]` or `[[kind:id]]` (bare — label derived from id).
-- Supported kinds: `city`, `person`, `work`, `doctrine`, `event`, `persuasion`, `polity`, `archaeology`.
-- Rendered by `MarkdownRenderer` component (`src/components/shared/MarkdownRenderer.tsx`).
-- Mention buttons use `.mention-link` class: no border/background, dashed underline in `var(--accent-bright)`.
-- Use `MarkdownRenderer` everywhere notes/evidence/essay body text is displayed. Do **not** write custom inline renderers.
+```
+src/
+  components/
+    shared/         # Reusable primitives (import from here, never redefine)
+      Hl.tsx              – Search highlight for plain text
+      MarkdownRenderer.tsx – Markdown + [[mention]] renderer
+      NoteCard.tsx         – Canonical evidence note (body_md + citation_urls)
+      Pagination.tsx       – Page controls (uses .pagination CSS)
+      entityConstants.ts   – KIND_ICONS, KIND_LABELS, PRESENCE_COLORS/LABELS,
+                             kindIcon(), kindLabel(), presenceColor()
+    sidebar/        # Sidebar sub-modules (extracted from RightSidebar)
+      SidebarShell.tsx     – Expand/collapse/dismiss wrapper
+      SidebarLists.tsx     – All 9 sidebar list components
+      EntityDetail.tsx     – Generic entity detail + 7 sub-tab components
+    map/            # Map-specific components
+      RightSidebar.tsx     – Routing layer (delegates to sidebar/ modules)
+      CityDetail.tsx       – City-specific detail panel with sub-tabs
+      LeftPanel.tsx        – Timeline controls, search, filters
+    entity/
+      EntityDetailPanel.tsx – Entity detail for graph page (uses NoteCard)
+    layout/
+      NavBar.tsx
+  data/
+    types.ts        # ALL domain type definitions (single source of truth)
+    dataStore.ts    # Parsing, indexing, query API (re-exports types)
+    essays.ts       # Essay metadata + body loading
+    parseTsv.ts     # TSV parser utilities
+  domain/
+    relationLabels.ts  # Relation type → human label registry
+  hooks/
+    useSearchQuery.ts    – Trimmed global search query from appStore
+    usePaginatedList.ts  – Generic pagination with auto-reset
+    useFilteredList.ts   – Generic search + filter
+  stores/
+    appStore.ts     # Zustand store (decade, selection, filters, UI state)
+  utils/
+    forceLayout.ts  # Force-directed graph physics (pure computation)
+    formatYear.ts   # Year range formatting
+  pages/
+    MapPage.tsx     # Map + left panel + right sidebar
+    GraphPage.tsx   # Force-directed network graph
+```
 
 ---
 
-## Markdown Rendering
+## 2. DRY Rules (CRITICAL)
 
-- `MarkdownRenderer` supports: `#`/`##`/`###` headings, `>` blockquotes, `**bold**`, `*italic*`, blank-line paragraphs, `[[mention]]` links, literal `\n` sequences from TSV data.
-- CSS classes: `.md-p`, `.md-h1/2/3`, `.md-blockquote`, `.markdown-renderer`.
-- Essays live as `.md` files in `data/essays/` and are fetched at runtime via `essayLoader.ts`. The `Essay` interface is defined in `essayLoader.ts` (not `essays.ts`).
+### Never redefine — always import from shared
+
+| Need | Import from |
+|------|-------------|
+| Entity icons (🏛👤📜…) | `entityConstants.ts` → `KIND_ICONS`, `kindIcon()` |
+| Entity labels (Person, Work…) | `entityConstants.ts` → `KIND_LABELS`, `kindLabel()` |
+| Presence colors (#1a7a5c…) | `entityConstants.ts` → `PRESENCE_COLORS`, `presenceColor()` |
+| Presence labels (Attested…) | `entityConstants.ts` → `PRESENCE_LABELS` |
+| Search highlight | `Hl.tsx` → `<Hl text={…} query={…} />` |
+| Note rendering | `NoteCard.tsx` → `<NoteCard note={…} />` |
+| Pagination | `Pagination.tsx` → `<Pagination page={…} total={…} onChange={…} />` |
+| Markdown/mentions | `MarkdownRenderer.tsx` → `<MarkdownRenderer>` |
+| Relation labels | `relationLabels.ts` → `getRelationLabel()` |
+| Entity label lookup | `dataStore.ts` → `getEntityLabel()` |
+| Year formatting | `formatYear.ts` → `formatYearRange()` |
+| Domain types | `data/types.ts` (or re-exported from `dataStore.ts`) |
+
+### Never:
+- Define a local `KIND_ICONS`, `PRESENCE_COLORS`, `Hl`, or `presenceColor` function in a component file.
+- Write inline note rendering (body + citations). Use `<NoteCard>`.
+- Write inline pagination UI. Use `<Pagination>`.
+- Define types that already exist in `data/types.ts`.
 
 ---
 
-## Tags / Chips
+## 3. Styling Rules
 
-- `.tag` — read-only info chip (solid border, neutral bg).
-- `.tag.accent` — highlighted variant (accent color).
-- `.tag-clickable` — interactive chip (dashed border, hover effect). Use `<button>` element.
-- `.tag-persuasion` — persuasion-specific color (amber/accent bg).
-- `.mention-link` — inline entity link in text (button, dashed underline only).
+### Use CSS classes, not inline styles
+
+All visual styling belongs in `src/styles.css`. Inline `style={{…}}` is only acceptable for:
+- **Dynamic values** that depend on runtime data (e.g., `style={{ background: someComputedColor }}`).
+- **One-off layout tweaks** that are truly unique (e.g., `style={{ flex: 1 }}`).
+
+For everything else, use or create a CSS class. Common utility classes available:
+
+```css
+.flex-col          /* display:flex; flex-direction:column */
+.flex-col-8        /* + gap:8px */
+.flex-col-12       /* + gap:12px */
+.flex-col-14       /* + gap:14px */
+.flex-wrap-4       /* display:flex; flex-wrap:wrap; gap:4px */
+.flex-center       /* display:flex; align-items:center */
+.entity-desc       /* Standard entity description paragraph */
+.entity-desc--italic  /* Italic variant (significance, resolution) */
+.search-input-icon /* 🔍 icon in search inputs */
+.close-btn         /* ✕ dismiss button */
+.faint             /* color: var(--text-faint) */
+.muted             /* color: var(--text-muted) */
+```
+
+### Component-specific CSS class families:
+- `.note-card` / `.note-year` — evidence notes
+- `.conn-list` / `.conn-card` / `.conn-icon` / `.conn-name` / `.conn-rel` — connection lists
+- `.fact-grid` / `.fact-label` / `.fact-value` — key-value fact display
+- `.tag` / `.tag.accent` / `.tag-clickable` / `.tag-persuasion` — chips
+- `.mention-link` — inline entity link in text
+- `.citation-link` — source URL link
+- `.mini-card-*` — essay popup entity mini card
+- `.pagination` / `.pagination-btn` — page controls
+- `.timeline-*` — timeline row components
+- `.sidebar-*` — sidebar tabs, search, list items
+- `.detail-*` — detail panel shell (back bar, header, sub-tabs, body)
+- `.graph-*` — graph page specific elements
 
 ---
 
-## CSS Variables (key tokens)
+## 4. CSS Variables (design tokens)
 
 ```css
 --surface        /* panel backgrounds */
@@ -89,27 +135,142 @@ Canonical patterns for UI consistency across the codebase.
 --accent-bright  /* brighter accent for links/active */
 --accent-dim     /* very light accent background */
 --accent-strong  /* darkest accent for hover */
---shadow         /* card shadow */
---shadow-md      /* modal/popup shadow */
---radius         /* standard border-radius */
---radius-sm      /* small border-radius */
+
+/* Presence status (also in entityConstants.ts) */
+--attested       /* #1a7a5c */
+--probable       /* #b07e10 */
+--claimed        /* #c47d2a */
+--suppressed     /* #c0392b */
+--unknown        /* #8e8070 */
+
+--shadow / --shadow-md / --shadow-lg
+--radius / --radius-sm / --radius-lg
+--nav-h / --left-w / --right-w
 ```
 
 ---
 
-## Graph Page
+## 5. Layout
 
-- Full-width layout: `graph-sidebar` (260px) | `graph-canvas-area` (flex 1) | optional detail panel (300px, only when node selected).
-- **Return to map**: button at top of sidebar calling `navigate("/")`.
-- Node labels shown always when `nodes.length < 50`, otherwise only on selected node.
-- Edge labels shown on hover or when either endpoint is selected.
-- Places (`city` kind) included via person→city connections from `people.city_of_origin_id`.
+- **App shell**: `NavBar` (fixed top, 44px) + `.page-container` (fills remaining height).
+- **Map page**: flex row — `.map-left` | `.map-center` (Leaflet) | `.map-right` (sidebar).
+- **Expanded sidebar**: `.sidebar-expanded` sets `.map-center` to `width:0` (NOT `display:none` — Leaflet breaks). `.map-right` gets `flex:1`.
+- **Panel visibility**: toggled via `leftPanelVisible` / `rightPanelVisible` in `appStore`. When hidden, the container is conditionally rendered, not CSS-hidden.
+- **Show-panel hints**: `.map-overlays` is `position:absolute; pointer-events:none`. Buttons must have `pointer-events:all`.
 
 ---
 
-## Data Flow Rules
+## 6. Navigation / Selection History
 
-- All data access goes through `dataStore` singleton (`src/data/dataStore.ts`).
-- Map filter (persuasion/polity/person) stored in `appStore.mapFilterType` + `mapFilterId`.
-- `showArcs: true` by default (set in store initial state).
-- Decade-based data: always use `getAtDecade(decade)` / `getCitiesAtDecade(decade)` — never filter raw arrays by year outside dataStore.
+- `appStore` holds `selection: Selection | null` and `selectionHistory: Selection[]`.
+- **Navigate to entity**: call `pushSelection({ kind, id })`.
+- **Back**: call `popSelection()`. If history empty, call `setSelection(null)`.
+- **Hard reset**: call `setSelection(null)` — clears history.
+- **Essay → entity**: store essay in `prevEssay` local state before `pushSelection`; back restores it.
+- Never navigate using `setSidebarTab` as a back mechanism.
+
+---
+
+## 7. Sidebar
+
+- **Tab bar**: defined in `TABS` array in `RightSidebar.tsx`. Icon on top, label below.
+- **Active tab**: `border-bottom-color: var(--accent-bright)`, no background change.
+- **Routing**: RightSidebar checks `selection.kind` and renders CityDetail, EntityDetail, QuoteDetail, or EssayView accordingly. List views are the default.
+- **Lists**: all 9 list components live in `SidebarLists.tsx`. All have pagination via `<Pagination>`.
+- **Search**: each list filters locally from `sidebarSearch` in appStore. Page resets on search change via `useEffect`.
+- **"Show All" for archaeology**: REMOVED. Use the left panel "Include earlier decades" checkbox instead.
+
+---
+
+## 8. Entity Detail Panels
+
+- Shell: back bar → header → filter banner (optional) → sub-tabs → body.
+- **Back bar**: `.detail-back-bar` with `.back-btn` and `.detail-crumb`.
+- **Header**: kind badge (`kindIcon() + kindLabel()`), title, subtitle, tags.
+- **Sub-tabs**: `.detail-sub-tabs` / `.detail-sub-tab`.
+- **Body**: `.detail-body` — scrollable, `flex-col` with gap.
+- **All entity sub-tabs must have pagination** via `<Pagination>`.
+- **City detail**: own component (`CityDetail.tsx`) with tabs: Info, Timeline, People, Doctrines, Events, Works, Archaeology, Relations.
+
+---
+
+## 9. Evidence Notes
+
+- **Always use `<NoteCard>`** wherever evidence is displayed — InfoTab, TimelineTab, EntityEvidenceTab, EntityDetailPanel.
+- NoteCard renders: `body_md` via `<MarkdownRenderer>` + `citation_urls` as clickable links.
+- Optional `yearLabel` prop for the `.note-year` header.
+- **Citations must always be visible.** Never render `body_md` without also rendering `citation_urls`.
+
+---
+
+## 10. Clickable Mentions (MarkdownRenderer)
+
+- Syntax: `[[kind:id|label]]` or `[[kind:id]]`.
+- Supported kinds: `city`, `person`, `work`, `doctrine`, `event`, `persuasion`, `polity`, `archaeology`.
+- Mention buttons use `.mention-link` class: dashed underline, no background.
+- Use `<MarkdownRenderer>` everywhere note/essay body text is displayed.
+
+---
+
+## 11. Markdown Rendering
+
+- Supports: `#`/`##`/`###`, `>` blockquotes, `**bold**`, `*italic*`, blank-line paragraphs, `[[mention]]` links, literal `\n` from TSV.
+- CSS: `.md-p`, `.md-h1/2/3`, `.md-blockquote`, `.markdown-renderer`.
+- Essays: `.md` files in `data/essays/`, loaded eagerly via Vite glob in `essays.ts`. `Essay` type is defined in `essays.ts`.
+
+---
+
+## 12. Tags / Chips
+
+- `.tag` — read-only info chip.
+- `.tag.accent` — highlighted variant.
+- `.tag-clickable` — interactive chip (dashed border, use `<button>`).
+- `.tag-persuasion` — persuasion-specific color.
+
+---
+
+## 13. Graph Page
+
+- Layout: `.graph-sidebar` (260px) | `.graph-canvas-area` (flex 1) | optional detail panel (300px).
+- Force layout: pure computation in `src/utils/forceLayout.ts` — `runForceSync()`.
+- Node labels: shown always when `nodes.length < 60`, otherwise only on selected/high-connection nodes.
+- Edge labels: shown on hover or when either endpoint is selected.
+
+---
+
+## 14. Data Flow Rules
+
+- **All data access** goes through `dataStore` singleton.
+- **All domain types** defined in `src/data/types.ts`.
+- Map filter: `appStore.mapFilterType` + `mapFilterId`.
+- `showArcs: true` by default.
+- Decade data: always use `getCitiesAtDecade()` / `getCumulativeCitiesAtDecade()`.
+- Default decade: `0` AD (set in appStore).
+- `includeCumulative: true` by default.
+
+---
+
+## 15. Custom Hooks
+
+| Hook | Purpose |
+|------|---------|
+| `useSearchQuery()` | Returns trimmed global search query from appStore |
+| `usePaginatedList(items, pageSize?)` | Returns `{ page, setPage, pageItems, total, pageSize }` with auto-reset |
+| `useFilteredList(items, searchFn)` | Returns `{ search, setSearch, filtered }` |
+
+Use these hooks to avoid duplicating pagination/search state management across components.
+
+---
+
+## 16. Forbidden Patterns
+
+1. **No local `KIND_ICONS` / `PRESENCE_COLORS` maps** — import from `entityConstants.ts`.
+2. **No inline note rendering** — use `<NoteCard>`.
+3. **No inline pagination UI** — use `<Pagination>`.
+4. **No `async` wrappers around sync data** — essays are loaded eagerly.
+5. **No unused re-export shim files** (the old `types.ts`, `constants.ts`, `repositories.ts` pattern).
+6. **No `style={{…}}` for static visual properties** — use CSS classes.
+7. **No `@deprecated` compat objects** — delete dead code immediately.
+8. **No unrouted page components** — if a page has no route, delete it.
+9. **No entity list tabs without pagination** — all lists must paginate.
+10. **No evidence display without citations** — always render `citation_urls`.

@@ -4,27 +4,8 @@ import { dataStore, getEntityLabel } from "../data/dataStore";
 import type { Selection } from "../data/dataStore";
 import { useAppStore } from "../stores/appStore";
 import { getRelationLabel } from "../domain/relationLabels";
-
-// ─── Types ────────────────────────────────────────────────────────────────────
-
-interface GraphNode {
-  id: string;
-  kind: string;
-  label: string;
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  r: number;
-  connections: number;
-}
-
-interface GraphEdge {
-  source: string;
-  target: string;
-  label: string;
-  weight: number;
-}
+import { type GraphNode, type GraphEdge, runForceSync } from "../utils/forceLayout";
+import { KIND_ICONS } from "../components/shared/entityConstants";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -37,11 +18,6 @@ const KIND_COLORS: Record<string, string> = {
   city:        "#e9a84a",
   persuasion:  "#e63946",
   polity:      "#6c757d",
-};
-
-const KIND_ICONS: Record<string, string> = {
-  person: "👤", work: "📜", doctrine: "📖", event: "⚡",
-  archaeology: "★", city: "🏛", persuasion: "✦", polity: "⚔",
 };
 
 // ─── Graph builder ────────────────────────────────────────────────────────────
@@ -125,63 +101,7 @@ function buildGraph(filter: string) {
   return { nodes, edges };
 }
 
-// ─── Force layout ─────────────────────────────────────────────────────────────
-
-function runForce(nodes: GraphNode[], edges: GraphEdge[], width: number, height: number) {
-  const k = 110;
-  const gravity = 0.035;
-  const damping = 0.82;
-  const repulsion = 9000;
-
-  for (let i = 0; i < nodes.length; i++) {
-    for (let j = i + 1; j < nodes.length; j++) {
-      const a = nodes[i]!;
-      const b = nodes[j]!;
-      const dx = b.x - a.x;
-      const dy = b.y - a.y;
-      const dist = Math.max(Math.sqrt(dx * dx + dy * dy), 1);
-      const force = repulsion / (dist * dist);
-      const fx = (dx / dist) * force;
-      const fy = (dy / dist) * force;
-      a.vx -= fx; a.vy -= fy;
-      b.vx += fx; b.vy += fy;
-    }
-  }
-
-  for (const edge of edges) {
-    const src = nodes.find((n) => n.id === edge.source);
-    const tgt = nodes.find((n) => n.id === edge.target);
-    if (!src || !tgt) continue;
-    const dx = tgt.x - src.x;
-    const dy = tgt.y - src.y;
-    const dist = Math.max(Math.sqrt(dx * dx + dy * dy), 1);
-    const idealDist = k * (6 - Math.min(edge.weight, 5));
-    const force = (dist - idealDist) * 0.04;
-    const fx = (dx / dist) * force;
-    const fy = (dy / dist) * force;
-    src.vx += fx; src.vy += fy;
-    tgt.vx -= fx; tgt.vy -= fy;
-  }
-
-  const cx = width / 2;
-  const cy = height / 2;
-  for (const n of nodes) {
-    n.vx += (cx - n.x) * gravity;
-    n.vy += (cy - n.y) * gravity;
-    n.vx *= damping;
-    n.vy *= damping;
-    n.x += n.vx;
-    n.y += n.vy;
-  }
-}
-
-// Run force layout synchronously (no animation loop)
-function runForceSync(nodes: GraphNode[], edges: GraphEdge[], width: number, height: number) {
-  const ticks = nodes.length > 150 ? 100 : nodes.length > 80 ? 160 : 220;
-  for (let i = 0; i < ticks; i++) {
-    runForce(nodes, edges, width, height);
-  }
-}
+// Force layout imported from utils/forceLayout.ts
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -396,28 +316,23 @@ export function GraphPage() {
   return (
     <div className="graph-page">
       {/* ── Left sidebar ── */}
-      <div className="graph-sidebar" style={{ overflowY: "auto", display: "flex", flexDirection: "column" }}>
-        <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", flexShrink: 0 }}>
-          <button
-            type="button"
-            className="map-overlay-btn"
-            style={{ width: "100%", textAlign: "left", boxShadow: "none" }}
-            onClick={() => navigate("/")}
-          >
+      <div className="graph-sidebar">
+        <div className="graph-sidebar-section">
+          <button type="button" className="map-overlay-btn" style={{ width: "100%", textAlign: "left", boxShadow: "none" }} onClick={() => navigate("/")}>
             ← Map
           </button>
         </div>
 
-        <div className="panel-header" style={{ flexShrink: 0 }}>
+        <div className="panel-header">
           <div className="panel-eyebrow">Network</div>
           <div className="panel-title">Connection Graph</div>
           <div className="panel-subtitle">{nodes.length} nodes · {edges.length} edges</div>
         </div>
 
         {/* Filter */}
-        <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", flexShrink: 0 }}>
+        <div className="graph-sidebar-section">
           <div className="filter-label" style={{ marginBottom: 6 }}>Filter by type</div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
+          <div className="flex-col" style={{ gap: 3 }}>
             {FILTER_OPTIONS.map(({ value, label }) => (
               <button
                 key={value}
@@ -433,11 +348,12 @@ export function GraphPage() {
         </div>
 
         {/* Search with live dropdown */}
-        <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", position: "relative", flexShrink: 0 }}>
+        <div className="graph-sidebar-section" style={{ position: "relative" }}>
           <div className="filter-label" style={{ marginBottom: 6 }}>Search nodes</div>
           <div style={{ display: "flex", gap: 6 }}>
             <input
               type="text"
+              className="graph-search-input"
               placeholder="Name or kind…"
               value={searchQuery}
               onChange={(e) => { setSearchQuery(e.target.value); setShowDropdown(true); }}
@@ -447,45 +363,29 @@ export function GraphPage() {
               }}
               onFocus={() => setShowDropdown(true)}
               onBlur={() => setTimeout(() => setShowDropdown(false), 180)}
-              style={{
-                flex: 1, padding: "6px 9px", fontSize: "0.82rem",
-                border: "1px solid var(--border)", borderRadius: "var(--radius-sm)",
-                background: "var(--surface-2)", color: "var(--text)",
-              }}
             />
             {searchQuery && (
               <button
                 type="button"
+                className="graph-clear-btn"
                 onClick={() => { setSearchQuery(""); setSelectedKey(null); setShowDropdown(false); }}
-                style={{ padding: "6px 9px", fontSize: "0.82rem", border: "1px solid var(--border)", borderRadius: "var(--radius-sm)", background: "var(--surface-3)", color: "var(--text-faint)", cursor: "pointer" }}
               >
                 ✕
               </button>
             )}
           </div>
-          {/* Dropdown suggestions */}
           {showDropdown && searchSuggestions.length > 0 && (
-            <div style={{
-              position: "absolute", top: "calc(100% - 2px)", left: 12, right: 12, zIndex: 200,
-              background: "var(--surface)", border: "1px solid var(--border)",
-              borderRadius: "var(--radius-sm)", boxShadow: "0 4px 14px rgba(0,0,0,.35)",
-              maxHeight: 240, overflowY: "auto",
-            }}>
+            <div className="graph-search-dropdown">
               {searchSuggestions.map((n) => (
                 <button
                   key={n.id}
                   type="button"
+                  className="graph-search-suggestion"
                   onMouseDown={() => handleSearchDropdownSelect(n.id)}
-                  style={{
-                    display: "flex", alignItems: "center", gap: 8, width: "100%",
-                    textAlign: "left", padding: "7px 10px", border: "none",
-                    background: "none", cursor: "pointer", borderBottom: "1px solid var(--border-subtle)",
-                    color: "var(--text)", fontSize: "0.82rem",
-                  }}
                 >
-                  <span style={{ width: 8, height: 8, borderRadius: "50%", background: KIND_COLORS[n.kind] ?? "#666", flexShrink: 0, display: "inline-block" }} />
+                  <span className="graph-node-badge" style={{ background: KIND_COLORS[n.kind] ?? "#666" }} />
                   <span style={{ flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{n.label}</span>
-                  <span style={{ fontSize: "0.7rem", color: "var(--text-faint)", flexShrink: 0 }}>{n.connections} conn</span>
+                  <span className="faint" style={{ fontSize: "0.7rem" }}>{n.connections} conn</span>
                 </button>
               ))}
             </div>
@@ -493,24 +393,24 @@ export function GraphPage() {
         </div>
 
         {/* Legend */}
-        <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", flexShrink: 0 }}>
+        <div className="graph-sidebar-section">
           <div className="filter-label" style={{ marginBottom: 6 }}>Node types</div>
           {Object.entries(KIND_COLORS).map(([kind, color]) => (
-            <div key={kind} style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: 5, fontSize: "0.8rem" }}>
-              <span style={{ width: 10, height: 10, borderRadius: "50%", background: color, flexShrink: 0, display: "inline-block" }} />
-              <span style={{ color: "var(--text-muted)" }}>{KIND_ICONS[kind]} {kind}</span>
+            <div key={kind} className="graph-legend-item">
+              <span className="graph-node-badge" style={{ width: 10, height: 10, background: color }} />
+              <span className="muted">{KIND_ICONS[kind]} {kind}</span>
             </div>
           ))}
-          <div style={{ marginTop: 8, fontSize: "0.74rem", color: "var(--text-faint)", lineHeight: 1.4 }}>
+          <div className="faint" style={{ marginTop: 8, fontSize: "0.74rem", lineHeight: 1.4 }}>
             Node size ∝ connections
           </div>
         </div>
 
         {/* Selected node info */}
         {selectedKey && (
-          <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", flexShrink: 0 }}>
+          <div className="graph-sidebar-section">
             <div className="filter-label" style={{ marginBottom: 5 }}>Selected</div>
-            <div style={{ fontSize: "0.88rem", color: "var(--text)", fontWeight: 600, marginBottom: 8 }}>
+            <div className="bold" style={{ fontSize: "0.88rem", marginBottom: 8 }}>
               {nodes.find((n) => n.id === selectedKey)?.label ?? selectedKey}
             </div>
             <button type="button" className="view-on-map-btn" style={{ width: "100%" }} onClick={handleGoToMap}>
@@ -521,32 +421,18 @@ export function GraphPage() {
 
         {/* Selected edge info */}
         {selectedEdgeInfo && (
-          <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", flexShrink: 0 }}>
+          <div className="graph-sidebar-section">
             <div className="filter-label" style={{ marginBottom: 5 }}>Connection</div>
             <div style={{ fontSize: "0.8rem", lineHeight: 1.6 }}>
-              <div style={{ fontWeight: 600, color: "var(--text)" }}>{getNodeLabel(selectedEdgeInfo.source, nodes)}</div>
-              <div style={{ color: "var(--accent)", fontStyle: "italic", margin: "2px 0" }}>— {selectedEdgeInfo.label} →</div>
-              <div style={{ fontWeight: 600, color: "var(--text)" }}>{getNodeLabel(selectedEdgeInfo.target, nodes)}</div>
+              <div className="bold">{getNodeLabel(selectedEdgeInfo.source, nodes)}</div>
+              <div className="accent-text italic" style={{ margin: "2px 0" }}>— {selectedEdgeInfo.label} →</div>
+              <div className="bold">{getNodeLabel(selectedEdgeInfo.target, nodes)}</div>
             </div>
-            <div style={{ display: "flex", gap: 6, marginTop: 6 }}>
-              <button
-                type="button"
-                className="filter-tab"
-                style={{ fontSize: "0.75rem", padding: "3px 8px" }}
-                onClick={() => setSelectedKey(selectedEdgeInfo.source)}
-              >
-                Go to source
-              </button>
-              <button
-                type="button"
-                className="filter-tab"
-                style={{ fontSize: "0.75rem", padding: "3px 8px" }}
-                onClick={() => setSelectedKey(selectedEdgeInfo.target)}
-              >
-                Go to target
-              </button>
+            <div className="flex-center" style={{ gap: 6, marginTop: 6 }}>
+              <button type="button" className="filter-tab" onClick={() => setSelectedKey(selectedEdgeInfo.source)}>Go to source</button>
+              <button type="button" className="filter-tab" onClick={() => setSelectedKey(selectedEdgeInfo.target)}>Go to target</button>
             </div>
-            <button type="button" onClick={() => setSelectedEdge(null)} style={{ marginTop: 4, background: "none", border: "none", color: "var(--text-faint)", cursor: "pointer", fontSize: "0.75rem" }}>
+            <button type="button" className="close-btn" style={{ marginTop: 4, fontSize: "0.75rem" }} onClick={() => setSelectedEdge(null)}>
               ✕ dismiss
             </button>
           </div>
@@ -554,14 +440,13 @@ export function GraphPage() {
       </div>
 
       {/* ── Graph canvas ── */}
-      <div className="graph-canvas-area" style={{ position: "relative", overflow: "hidden" }}>
-        {/* Zoom controls */}
-        <div style={{ position: "absolute", top: 12, right: 12, zIndex: 10, display: "flex", flexDirection: "column", gap: 4 }}>
-          <button type="button" className="map-overlay-btn" style={{ width: 32, height: 32, padding: 0, textAlign: "center", fontSize: "1.2rem", lineHeight: 1 }} onClick={zoomIn} title="Zoom in">+</button>
-          <button type="button" className="map-overlay-btn" style={{ width: 32, height: 32, padding: 0, textAlign: "center", fontSize: "1.4rem", lineHeight: 1 }} onClick={zoomOut} title="Zoom out">−</button>
-          <button type="button" className="map-overlay-btn" style={{ width: 32, height: 18, padding: 0, fontSize: "0.68rem", textAlign: "center", lineHeight: "18px" }} onClick={resetView} title="Reset view">fit</button>
+      <div className="graph-canvas-area">
+        <div className="graph-zoom-controls">
+          <button type="button" className="map-overlay-btn graph-zoom-btn" onClick={zoomIn} title="Zoom in" style={{ fontSize: "1.2rem" }}>+</button>
+          <button type="button" className="map-overlay-btn graph-zoom-btn" onClick={zoomOut} title="Zoom out" style={{ fontSize: "1.4rem" }}>−</button>
+          <button type="button" className="map-overlay-btn graph-zoom-btn--fit" onClick={resetView} title="Reset view">fit</button>
         </div>
-        <div style={{ position: "absolute", bottom: 10, left: "50%", transform: "translateX(-50%)", zIndex: 10, fontSize: "0.72rem", color: "var(--text-faint)", pointerEvents: "none", background: "rgba(0,0,0,.3)", padding: "3px 8px", borderRadius: 4 }}>
+        <div className="graph-hint">
           Scroll to zoom · Drag canvas to pan · Click node or edge
         </div>
 
@@ -690,7 +575,7 @@ export function GraphPage() {
 
       {/* ── Right detail panel ── */}
       {selection && (
-        <div style={{ width: 300, flexShrink: 0, borderLeft: "1px solid var(--border)", background: "var(--surface)", display: "flex", flexDirection: "column", overflow: "hidden" }}>
+        <div className="graph-right">
           <GraphDetailPanel
             selection={selection}
             onClose={() => setSelectedKey(null)}
@@ -778,51 +663,34 @@ function GraphDetailPanel({ selection, onClose, onGoToMap, onSelectNode }: {
   }, [kind, id]);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }}>
-      {/* Header */}
-      <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", display: "flex", alignItems: "flex-start", gap: 6, flexShrink: 0 }}>
+    <div className="mini-card">
+      <div className="graph-detail-header">
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 2 }}>
-            {KIND_ICONS[kind]} {kind}
-          </div>
-          <div style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text)", lineHeight: 1.2 }}>{label}</div>
-          {subtitle && <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginTop: 2 }}>{subtitle}</div>}
+          <div className="mini-card-kind">{KIND_ICONS[kind]} {kind}</div>
+          <div className="mini-card-title" style={{ fontSize: "1rem" }}>{label}</div>
+          {subtitle && <div className="mini-card-subtitle">{subtitle}</div>}
         </div>
-        <button type="button" onClick={onClose} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-faint)", fontSize: "1rem", padding: "2px 4px", flexShrink: 0 }}>✕</button>
+        <button type="button" className="close-btn" onClick={onClose}>✕</button>
       </div>
 
-      {/* Scrollable body */}
-      <div style={{ flex: 1, overflowY: "auto", padding: "10px 12px", display: "flex", flexDirection: "column", gap: 12 }}>
-        {description && (
-          <p style={{ fontSize: "0.83rem", color: "var(--text-muted)", lineHeight: 1.55, margin: 0 }}>{description}</p>
-        )}
+      <div className="graph-detail-body">
+        {description && <p className="entity-desc">{description}</p>}
 
         {connections.length > 0 && (
           <div>
-            <div style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.09em", textTransform: "uppercase", color: "var(--text-faint)", marginBottom: 6 }}>
-              Connections ({connections.length})
-            </div>
+            <div className="mini-card-section-title">Connections ({connections.length})</div>
             {connections.map(({ othKind, othId, label: relLabel, isOut }, i) => (
               <button
                 key={i}
                 type="button"
+                className="mini-card-conn"
                 onClick={() => onSelectNode(othKind, othId)}
-                style={{
-                  display: "flex", gap: 7, padding: "5px 6px", borderRadius: 4, fontSize: "0.81rem",
-                  width: "100%", textAlign: "left", background: "none", border: "none",
-                  borderBottom: "1px solid var(--border-subtle)",
-                  cursor: "pointer", alignItems: "flex-start",
-                }}
                 title={`Select ${othKind}: ${getEntityLabel(othKind, othId)}`}
               >
-                <span style={{ color: "var(--text-faint)", flexShrink: 0 }}>{KIND_ICONS[othKind]}</span>
+                <span className="faint">{KIND_ICONS[othKind]}</span>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ color: "var(--text)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                    {getEntityLabel(othKind, othId)}
-                  </div>
-                  <div style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}>
-                    {isOut ? "→" : "←"} {relLabel}
-                  </div>
+                  <div className="mini-card-conn-label">{getEntityLabel(othKind, othId)}</div>
+                  <div className="mini-card-conn-rel">{isOut ? "→" : "←"} {relLabel}</div>
                 </div>
               </button>
             ))}
