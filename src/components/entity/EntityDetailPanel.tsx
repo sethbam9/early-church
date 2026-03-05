@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import type { Selection } from "../../data/dataStore";
+import { useAppStore } from "../../stores/appStore";
+import { MarkdownRenderer } from "../shared/MarkdownRenderer";
 
 const KIND_ICONS: Record<string, string> = {
   person: "👤",
@@ -73,6 +75,7 @@ interface Props {
 
 export function EntityDetailPanel({ selection, onClose, onNavigateToMap }: Props) {
   const navigate = useNavigate();
+  const searchQuery = useAppStore((s) => s.searchQuery).trim();
 
   function navigateTo(kind: string, id: string) {
     const routes: Record<string, string> = {
@@ -439,7 +442,7 @@ export function EntityDetailPanel({ selection, onClose, onNavigateToMap }: Props
               {notes.slice(0, 3).map((n) => (
                 <div key={n.note_id} className="note-card" style={{ marginBottom: 6 }}>
                   <div style={{ fontSize: "0.78rem", color: "var(--text-faint)", marginBottom: 4 }}>AD {n.year_bucket}</div>
-                  {n.body_md}
+                  <MarkdownRenderer onSelectEntity={handleConnectionClick} searchQuery={searchQuery}>{n.body_md}</MarkdownRenderer>
                 </div>
               ))}
             </div>
@@ -469,7 +472,7 @@ export function EntityDetailPanel({ selection, onClose, onNavigateToMap }: Props
           <div className="entity-section-title">Evidence notes</div>
           {notes.slice(0, 2).map((n) => (
             <div key={n.note_id} className="note-card" style={{ marginBottom: 6 }}>
-              {n.body_md.slice(0, 300)}{n.body_md.length > 300 ? "…" : ""}
+              <MarkdownRenderer onSelectEntity={handleConnectionClick} searchQuery={searchQuery}>{n.body_md}</MarkdownRenderer>
             </div>
           ))}
         </div>

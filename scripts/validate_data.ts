@@ -54,7 +54,7 @@ function parseBracketMentions(bodyMd: string): Array<{ type: string; slug: strin
   let match: RegExpExecArray | null;
   while ((match = re.exec(bodyMd)) !== null) {
     const type = (match[1] ?? "").trim();
-    const slug = (match[2] ?? "").trim();
+    const slug = (match[2] ?? "").split("|")[0].trim();
     if (!type || !slug) continue;
     out.push({ type, slug });
   }

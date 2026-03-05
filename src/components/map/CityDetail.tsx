@@ -328,7 +328,7 @@ function InfoTab({ city, currentState, notes, onSelectEntity }: {
         <div>
           <div className="detail-section-title">Evidence for AD {currentState?.decade}</div>
           <div className="note-card">
-            <MarkdownRenderer onSelectEntity={onSelectEntity}>{evidenceNote.body_md}</MarkdownRenderer>
+            <MarkdownRenderer onSelectEntity={onSelectEntity} searchQuery={q}>{evidenceNote.body_md}</MarkdownRenderer>
           </div>
         </div>
       )}
@@ -344,6 +344,7 @@ function TimelineTab({ placeStates, activeDecade, notes, onSelectEntity }: {
   notes: ReturnType<typeof dataStore.notes.getForEntity>;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
+  const q = useAppStore((s) => s.searchQuery).trim();
   const [expandedDecades, setExpandedDecades] = useState<Set<number>>(new Set());
   const activeRowRef = useRef<HTMLDivElement | null>(null);
 
@@ -422,7 +423,7 @@ function TimelineTab({ placeStates, activeDecade, notes, onSelectEntity }: {
             {isExpanded && note && (
               <div className="timeline-evidence">
                 <div className="note-year">{note.note_kind}</div>
-                <MarkdownRenderer onSelectEntity={onSelectEntity}>{note.body_md}</MarkdownRenderer>
+                <MarkdownRenderer onSelectEntity={onSelectEntity} searchQuery={q}>{note.body_md}</MarkdownRenderer>
               </div>
             )}
           </div>

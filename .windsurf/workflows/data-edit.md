@@ -38,6 +38,7 @@ Use this process whenever adding, updating, or removing records across the data 
 ## Commit-sized batch process
 
 1. **Identify the change set** — e.g. "add 3 new people", "populate persuasion descriptions", "rename polity ID".
+1.1 Before adding a new record, check the records with a similar slug first to make sure you are not duplicating. For example don't add "paul" if there is already "paul-apostle".
 2. **Edit the TSV files** using the Edit or multi_edit tools. Keep each batch ≤ 20 rows to stay reviewable.
 3. **Validate** — run the validator to catch broken FKs or header mismatches:
    ```

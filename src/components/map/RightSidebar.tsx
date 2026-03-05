@@ -776,6 +776,7 @@ function EssayView({ essay, onBack, onSelectEntity }: {
   onBack: () => void;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
+  const searchQuery = useAppStore((s) => s.searchQuery).trim();
   return (
     <div className="detail-panel">
       <div className="detail-back-bar">
@@ -788,7 +789,7 @@ function EssayView({ essay, onBack, onSelectEntity }: {
         {essay.summary && <div className="detail-subtitle">{essay.summary}</div>}
       </div>
       <div className="detail-body">
-        <MarkdownRenderer onSelectEntity={onSelectEntity}>
+        <MarkdownRenderer onSelectEntity={onSelectEntity} searchQuery={searchQuery}>
           {essay.body}
         </MarkdownRenderer>
       </div>
@@ -1574,6 +1575,7 @@ function EntityEvidenceTab({ notes, onSelectEntity }: {
   notes: ReturnType<typeof dataStore.notes.getForEntity>;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
+  const searchQuery = useAppStore((s) => s.searchQuery).trim();
   if (notes.length === 0) return <div className="empty-state">No evidence notes.</div>;
 
   return (
@@ -1581,7 +1583,7 @@ function EntityEvidenceTab({ notes, onSelectEntity }: {
       {notes.map((n) => (
         <div key={n.note_id} className="note-card">
           <div className="note-year">AD {n.year_bucket ?? n.year_exact ?? "?"} · {n.note_kind}</div>
-          <MarkdownRenderer onSelectEntity={onSelectEntity}>
+          <MarkdownRenderer onSelectEntity={onSelectEntity} searchQuery={searchQuery}>
             {n.body_md}
           </MarkdownRenderer>
         </div>
