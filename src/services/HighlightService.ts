@@ -66,19 +66,19 @@ function highlightByPerson(
 
   for (const edge of [...edgesFrom, ...edgesTo]) {
     if (edge.target_type === "city") {
-      const intensity = edge.relationship === "bishop_of" ? 3 : 2;
-      addCityHighlight(highlights, edge.target_id, COLORS.direct, edge.relationship, intensity as 1 | 2 | 3);
+      const intensity = edge.relation_type === "bishop_of" ? 3 : 2;
+      addCityHighlight(highlights, edge.target_id, COLORS.direct, edge.relation_type, intensity as 1 | 2 | 3);
     }
 
     if (edge.target_type === "person" || edge.source_type === "person") {
       const otherId = edge.source_id === personId ? edge.target_id : edge.source_id;
-      if (edge.relationship === "corresponded_with" || edge.relationship === "disciple_of" || edge.relationship === "discipled") {
+      if (edge.relation_type === "corresponded_with" || edge.relation_type === "disciple_of" || edge.relation_type === "discipled") {
         const otherPerson = store.people.getById(otherId);
         if (otherPerson) {
           const personEdges = store.edges.getEdgesFrom(otherId, "person");
           for (const pe of personEdges) {
             if (pe.target_type === "city") {
-              addCityHighlight(highlights, pe.target_id, COLORS.secondary, `via ${otherPerson.name_display}`, 1);
+              addCityHighlight(highlights, pe.target_id, COLORS.secondary, `via ${otherPerson.person_label}`, 1);
 
               const person = store.people.getById(personId);
               const personCityEdges = store.edges.getEdgesFrom(personId, "person").filter(
@@ -94,9 +94,9 @@ function highlightByPerson(
                     fromLon: fromRow.lon,
                     toLat: toRow.lat,
                     toLon: toRow.lon,
-                    relationship: edge.relationship,
-                    weight: edge.weight,
-                    label: `${person?.name_display ?? personId} → ${otherPerson.name_display}`,
+                    relationship: edge.relation_type,
+                    weight: edge.weight || 0,
+                    label: `${person?.person_label ?? personId} → ${otherPerson.person_label}`,
                   });
                 }
               }
@@ -124,10 +124,10 @@ function highlightByDoctrine(
     if (edge.source_type === "work") {
       const work = store.works.getById(edge.source_id);
       if (work) {
-        if (work.city_written_id) {
-          addCityHighlight(highlights, work.city_written_id, COLORS.doctrine, `Written: ${work.title_display}`, 3);
+        if (work.place_written_id) {
+          addCityHighlight(highlights, work.place_written_id, COLORS.doctrine, `Written: ${work.title_display}`, 3);
         }
-        for (const recipientId of work.city_recipient_ids) {
+        for (const recipientId of work.place_recipient_ids) {
           addCityHighlight(highlights, recipientId, COLORS.doctrine, `Sent to: ${work.title_display}`, 2);
         }
       }
@@ -135,8 +135,8 @@ function highlightByDoctrine(
 
     if (edge.source_type === "event") {
       const event = store.events.getById(edge.source_id);
-      if (event?.city_id) {
-        addCityHighlight(highlights, event.city_id, COLORS.event, event.name_display, 3);
+      if (event?.primary_place_id) {
+        addCityHighlight(highlights, event.primary_place_id, COLORS.event, event.name_display, 3);
       }
     }
   }
@@ -152,19 +152,19 @@ function highlightByEvent(
   const highlights: Record<string, HighlightEntry> = {};
 
   const event = store.events.getById(eventId);
-  if (event?.city_id) {
-    addCityHighlight(highlights, event.city_id, COLORS.event, event.name_display, 3);
+  if (event?.primary_place_id) {
+    addCityHighlight(highlights, event.primary_place_id, COLORS.event, event.name_display, 3);
   }
 
   const edgesFrom = store.edges.getEdgesFrom(eventId, "event");
   for (const edge of edgesFrom) {
     if (edge.target_type === "city") {
-      addCityHighlight(highlights, edge.target_id, COLORS.event, edge.relationship, 2);
+      addCityHighlight(highlights, edge.target_id, COLORS.event, edge.relation_type, 2);
     }
   }
 
   const attendees = store.edges.getEdgesTo(eventId, "event").filter(
-    (e) => e.source_type === "person" && (e.relationship === "attended" || e.relationship === "led"),
+    (e) => e.source_type === "person" && (e.relation_type === "attended" || e.relation_type === "led"),
   );
   for (const att of attendees) {
     const personCities = store.edges.getEdgesFrom(att.source_id, "person").filter(
@@ -187,10 +187,10 @@ function highlightByWork(
   const work = store.works.getById(workId);
   if (!work) return { cityHighlights: highlights, arcs: [] };
 
-  if (work.city_written_id) {
-    addCityHighlight(highlights, work.city_written_id, COLORS.direct, `Written in`, 3);
+  if (work.place_written_id) {
+    addCityHighlight(highlights, work.place_written_id, COLORS.direct, `Written in`, 3);
   }
-  for (const recipientId of work.city_recipient_ids) {
+  for (const recipientId of work.place_recipient_ids) {
     addCityHighlight(highlights, recipientId, COLORS.secondary, `Sent to`, 2);
   }
 
@@ -224,7 +224,7 @@ function highlightByCity(
         (e) => e.target_type === "city" && e.target_id !== cityId,
       );
       for (const pc of personCities) {
-        addCityHighlight(highlights, pc.target_id, COLORS.secondary, edge.relationship, 1);
+        addCityHighlight(highlights, pc.target_id, COLORS.secondary, edge.relation_type, 1);
       }
     }
   }

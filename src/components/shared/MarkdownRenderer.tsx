@@ -30,7 +30,7 @@ export function MarkdownRenderer({ children, onSelectEntity, className }: Props)
     if (text) {
       blocks.push(
         <p key={key++} className="md-p">
-          {renderInline(text, onSelectEntity, key)}
+          {renderInline(text || '', onSelectEntity, key)}
         </p>
       );
     }
@@ -51,7 +51,7 @@ export function MarkdownRenderer({ children, onSelectEntity, className }: Props)
       const Tag = `h${level}` as "h1" | "h2" | "h3";
       blocks.push(
         <Tag key={key++} className={`md-h${level}`}>
-          {renderInline(text, onSelectEntity, key)}
+          {renderInline(text || '', onSelectEntity, key)}
         </Tag>
       );
       continue;
@@ -63,7 +63,7 @@ export function MarkdownRenderer({ children, onSelectEntity, className }: Props)
       flushPara();
       blocks.push(
         <blockquote key={key++} className="md-blockquote">
-          {renderInline(bq[1], onSelectEntity, key)}
+          {renderInline(bq[1] || '', onSelectEntity, key)}
         </blockquote>
       );
       continue;
@@ -103,8 +103,8 @@ function renderInline(
           key={`${baseKey}-m-${i}`}
           type="button"
           className="mention-link"
-          onClick={() => onSelectEntity?.(kind, id)}
-          title={`View ${kind}: ${label}`}
+          onClick={() => onSelectEntity?.(kind || '', id || '')}
+          title={`View ${kind || ''}: ${label || ''}`}
         >
           {label}
         </button>
@@ -124,7 +124,7 @@ function renderInline(
           type="button"
           className="mention-link"
           onClick={() => onSelectEntity?.(kind, id)}
-          title={`View ${kind}`}
+          title={`View ${kind || ''}`}
         >
           {label}
         </button>

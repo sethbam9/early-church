@@ -24,6 +24,14 @@ export type {
   Selection,
 } from "../data/dataStore";
 
+// Import types for aliases
+import type { CityAtDecade, Relation, EntityKind } from "../data/dataStore";
+
+// Export aliases for repositories
+export type ChurchRow = CityAtDecade;
+export type Edge = Relation;
+export type EntityType = EntityKind;
+
 // ─── UI-only types ────────────────────────────────────────────────────────────
 
 export type PlaybackSpeed = 1 | 2 | 5;
