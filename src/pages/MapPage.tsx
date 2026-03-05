@@ -616,6 +616,32 @@ export function MapPage() {
       bounds.push([city.lat, city.lon]);
     }
 
+    // Ghost marker: selected city not in visibleCities (e.g. from essay mention, different decade)
+    if (selCityId && !visibleCities.some((c) => c.city_id === selCityId)) {
+      const ghost = dataStore.cities.getById(selCityId);
+      if (ghost && ghost.lat != null && ghost.lon != null) {
+        L.circleMarker([ghost.lat, ghost.lon], {
+          radius: 17, color: "#c47c3a", weight: 2.5,
+          fillColor: "transparent", fillOpacity: 0, dashArray: "5 4",
+        }).addTo(rowLyr);
+        const gm = L.circleMarker([ghost.lat, ghost.lon], {
+          radius: 9, color: "#c47c3a", weight: 2.5,
+          fillColor: "#c47c3a", fillOpacity: 0.45,
+        });
+        const ancientName = ghost.city_ancient || ghost.city_label;
+        const modernPart  = ghost.city_modern && ghost.city_modern !== ancientName
+          ? ` (${ghost.city_modern})` : "";
+        gm.bindTooltip(`${ancientName}${modernPart}, ${ghost.country_modern} (not in this decade)`,
+          { direction: "top", offset: [0, -4], className: "city-tooltip" });
+        gm.on("click", () => {
+          setSelection({ kind: "city", id: selCityId });
+          setSidebarTab("places");
+          if (!rightPanelVisible) toggleRightPanel();
+        });
+        gm.addTo(rowLyr);
+      }
+    }
+
     for (const site of visibleArchSites) {
       if (site.lat == null || site.lon == null) continue;
       const isSelected = selection?.kind === "archaeology" && selection.id === site.archaeology_id;

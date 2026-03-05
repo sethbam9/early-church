@@ -282,8 +282,13 @@ for (const ps of placeStates) {
   placeStatesByPlaceId.set(ps.place_id, arr);
 }
 
-// sorted decade list
-const decades: number[] = Array.from(placeStatesByDecade.keys()).sort((a, b) => a - b);
+// sorted decade list — always spans 0–800 AD in steps of 10, regardless of data coverage
+const dataDecades = Array.from(placeStatesByDecade.keys());
+const MIN_DECADE = 0;
+const MAX_DECADE = 800;
+const fullDecadeSet = new Set<number>(dataDecades);
+for (let d = MIN_DECADE; d <= MAX_DECADE; d += 10) fullDecadeSet.add(d);
+const decades: number[] = Array.from(fullDecadeSet).sort((a, b) => a - b);
 
 // relations indexed by (source_type:source_id) and (target_type:target_id)
 const relationsBySource = new Map<string, Relation[]>();
@@ -535,6 +540,7 @@ export const dataStore = {
   // ── Relations ──
   relations: {
     getAll: () => relations,
+    getById: (id: string) => relations.find((r) => r.relation_id === id) ?? null,
     getFromEntity: (type: string, id: string) => relationsBySource.get(`${type}:${id}`) ?? [],
     getToEntity: (type: string, id: string) => relationsByTarget.get(`${type}:${id}`) ?? [],
     getForEntity: (type: string, id: string) => [

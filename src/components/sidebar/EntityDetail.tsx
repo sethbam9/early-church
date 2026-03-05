@@ -661,11 +661,11 @@ function EntityQuotesTab({ kind, id, onSelectEntity }: {
   const hlQuery = quoteSearch.trim() || globalQuery.trim();
 
   const quotes = useMemo(() => {
-    const all = kind === "doctrine"
+    const all = (kind === "doctrine"
       ? dataStore.quotes.getByDoctrine(id)
       : kind === "work"
         ? dataStore.quotes.getByWork(id)
-        : [];
+        : []).slice().sort((a, b) => (a.year ?? 9999) - (b.year ?? 9999));
     if (!quoteSearch.trim()) return all;
     const q = quoteSearch.trim().toLowerCase();
     return all.filter((qt) => qt.text.toLowerCase().includes(q) || qt.work_reference.toLowerCase().includes(q));
@@ -740,8 +740,9 @@ function EntityEvidenceTab({ notes, onSelectEntity }: {
 }) {
   const searchQuery = useAppStore((s) => s.searchQuery).trim();
   const [page, setPage] = useState(0);
-  if (notes.length === 0) return <div className="empty-state">No evidence notes.</div>;
-  const pageItems = notes.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  const sorted = useMemo(() => notes.slice().sort((a, b) => (a.year_exact ?? a.year_bucket ?? 9999) - (b.year_exact ?? b.year_bucket ?? 9999)), [notes]);
+  if (sorted.length === 0) return <div className="empty-state">No evidence notes.</div>;
+  const pageItems = sorted.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <div className="flex-col-8">
@@ -754,7 +755,7 @@ function EntityEvidenceTab({ notes, onSelectEntity }: {
           yearLabel={`AD ${n.year_bucket ?? n.year_exact ?? "?"} · ${n.note_kind}`}
         />
       ))}
-      <Pagination page={page} total={notes.length} pageSize={PAGE_SIZE} onChange={setPage} />
+      <Pagination page={page} total={sorted.length} pageSize={PAGE_SIZE} onChange={setPage} />
     </div>
   );
 }
@@ -776,12 +777,11 @@ function EntityMentionedInTab({ kind, id, onSelectEntity }: {
     for (const m of mentions) {
       if (seen.has(m.note_id)) continue;
       seen.add(m.note_id);
-      // Find the note — it could be primary to any entity; look up by note_id
       const allNotes = dataStore.notes.getAll ? dataStore.notes.getAll() : [];
       const note = allNotes.find((n) => n.note_id === m.note_id);
       if (note) out.push(note);
     }
-    return out;
+    return out.slice().sort((a, b) => (a.year_exact ?? a.year_bucket ?? 9999) - (b.year_exact ?? b.year_bucket ?? 9999));
   }, [mentions]);
 
   if (notes.length === 0) return <div className="empty-state">No notes mention this entity.</div>;

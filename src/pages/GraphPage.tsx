@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { dataStore, getEntityLabel } from "../data/dataStore";
 import type { Selection } from "../data/dataStore";
 import { useAppStore } from "../stores/appStore";
-import { getRelationLabel } from "../domain/relationLabels";
 import { type GraphNode, type GraphEdge, runForceSync } from "../utils/forceLayout";
 import { KIND_ICONS } from "../components/shared/entityConstants";
+import { RelationCard } from "../components/shared/RelationCard";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -41,11 +41,12 @@ function buildGraph(filter: string) {
     }
   }
 
-  function addEdge(source: string, target: string, label: string, weight: number) {
+  // relation_id stored so edge panel can show full evidence
+  function addEdge(source: string, target: string, label: string, weight: number, relationId?: string) {
     const key = `${source}→${target}→${label}`;
     if (edgeSet.has(key)) return;
     edgeSet.add(key);
-    edges.push({ source, target, label, weight });
+    edges.push({ source, target, label, weight, relationId });
     connCounts.set(source, (connCounts.get(source) ?? 0) + 1);
     connCounts.set(target, (connCounts.get(target) ?? 0) + 1);
   }
@@ -61,6 +62,7 @@ function buildGraph(filter: string) {
       `${tgtKind}:${r.target_id}`,
       r.relation_type.replace(/_/g, " "),
       r.weight ?? 2,
+      r.relation_id,
     );
   }
 
@@ -332,13 +334,12 @@ export function GraphPage() {
         {/* Filter */}
         <div className="graph-sidebar-section">
           <div className="filter-label" style={{ marginBottom: 6 }}>Filter by type</div>
-          <div className="flex-col" style={{ gap: 3 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
             {FILTER_OPTIONS.map(({ value, label }) => (
               <button
                 key={value}
                 type="button"
-                className={`filter-tab${filter === value ? " active" : ""}`}
-                style={{ textAlign: "left" }}
+                className={`pchip${filter === value ? " active" : ""}`}
                 onClick={() => setFilter(value)}
               >
                 {label}
@@ -421,21 +422,13 @@ export function GraphPage() {
 
         {/* Selected edge info */}
         {selectedEdgeInfo && (
-          <div className="graph-sidebar-section">
-            <div className="filter-label" style={{ marginBottom: 5 }}>Connection</div>
-            <div style={{ fontSize: "0.8rem", lineHeight: 1.6 }}>
-              <div className="bold">{getNodeLabel(selectedEdgeInfo.source, nodes)}</div>
-              <div className="accent-text italic" style={{ margin: "2px 0" }}>— {selectedEdgeInfo.label} →</div>
-              <div className="bold">{getNodeLabel(selectedEdgeInfo.target, nodes)}</div>
-            </div>
-            <div className="flex-center" style={{ gap: 6, marginTop: 6 }}>
-              <button type="button" className="filter-tab" onClick={() => setSelectedKey(selectedEdgeInfo.source)}>Go to source</button>
-              <button type="button" className="filter-tab" onClick={() => setSelectedKey(selectedEdgeInfo.target)}>Go to target</button>
-            </div>
-            <button type="button" className="close-btn" style={{ marginTop: 4, fontSize: "0.75rem" }} onClick={() => setSelectedEdge(null)}>
-              ✕ dismiss
-            </button>
-          </div>
+          <GraphEdgePanel
+            edgeInfo={selectedEdgeInfo}
+            nodes={nodes}
+            onGoToSource={() => setSelectedKey(selectedEdgeInfo.source)}
+            onGoToTarget={() => setSelectedKey(selectedEdgeInfo.target)}
+            onDismiss={() => setSelectedEdge(null)}
+          />
         )}
       </div>
 
@@ -631,36 +624,34 @@ function GraphDetailPanel({ selection, onClose, onGoToMap, onSelectNode }: {
     return "";
   }, [kind, id]);
 
-  // Build connections list
-  const connections = useMemo(() => {
-    type Conn = { othKind: string; othId: string; label: string; isOut: boolean };
-    const seen = new Set<string>();
-    const list: Conn[] = [];
-    const add = (othKind: string, othId: string, label: string, isOut: boolean) => {
-      const key = `${othKind}:${othId}:${label}`;
-      if (!seen.has(key)) { seen.add(key); list.push({ othKind, othId, label, isOut }); }
-    };
+  // Relations with full Relation objects (for RelationCard)
+  const relations = useMemo(() => dataStore.relations.getForEntity(kind, id), [kind, id]);
 
-    for (const r of dataStore.relations.getForEntity(kind, id)) {
-      const isOut   = r.source_id === id && r.source_type === kind;
-      const othId   = isOut ? r.target_id   : r.source_id;
+  // Supplementary connections without a Relation object (work authorship, quotes)
+  const extraConns = useMemo(() => {
+    type Conn = { othKind: string; othId: string; label: string };
+    const seen = new Set(relations.map((r) => {
+      const isOut = r.source_id === id && r.source_type === kind;
+      const othId = isOut ? r.target_id : r.source_id;
       const othKind = isOut ? r.target_type : r.source_type;
-      add(othKind, othId, getRelationLabel(r.relation_type, isOut), isOut);
-    }
-
+      return `${othKind}:${othId}`;
+    }));
+    const list: Conn[] = [];
     if (kind === "work") {
       const w = dataStore.works.getById(id);
-      if (w?.author_person_id) add("person", w.author_person_id, "authored by", false);
-      for (const q of dataStore.quotes.getByWork(id)) add("doctrine", q.doctrine_id, "addresses", true);
+      if (w?.author_person_id && !seen.has(`person:${w.author_person_id}`)) {
+        list.push({ othKind: "person", othId: w.author_person_id, label: "authored by" });
+      }
     }
     if (kind === "person") {
       for (const w of dataStore.works.getAll()) {
-        if (w.author_person_id === id) add("work", w.work_id, "authored", true);
+        if (w.author_person_id === id && !seen.has(`work:${w.work_id}`)) {
+          list.push({ othKind: "work", othId: w.work_id, label: "authored" });
+        }
       }
     }
-
     return list;
-  }, [kind, id]);
+  }, [kind, id, relations]);
 
   return (
     <div className="mini-card">
@@ -676,21 +667,29 @@ function GraphDetailPanel({ selection, onClose, onGoToMap, onSelectNode }: {
       <div className="graph-detail-body">
         {description && <p className="entity-desc">{description}</p>}
 
-        {connections.length > 0 && (
+        {(relations.length > 0 || extraConns.length > 0) && (
           <div>
-            <div className="mini-card-section-title">Connections ({connections.length})</div>
-            {connections.map(({ othKind, othId, label: relLabel, isOut }, i) => (
+            <div className="mini-card-section-title">Connections ({relations.length + extraConns.length})</div>
+            {relations.map((r) => (
+              <RelationCard
+                key={r.relation_id}
+                relation={r}
+                entityId={id}
+                entityType={kind}
+                onSelectEntity={onSelectNode}
+              />
+            ))}
+            {extraConns.map(({ othKind, othId, label: relLabel }, i) => (
               <button
-                key={i}
+                key={`extra-${i}`}
                 type="button"
                 className="mini-card-conn"
                 onClick={() => onSelectNode(othKind, othId)}
-                title={`Select ${othKind}: ${getEntityLabel(othKind, othId)}`}
               >
                 <span className="faint">{KIND_ICONS[othKind]}</span>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div className="mini-card-conn-label">{getEntityLabel(othKind, othId)}</div>
-                  <div className="mini-card-conn-rel">{isOut ? "→" : "←"} {relLabel}</div>
+                  <div className="mini-card-conn-rel">{relLabel}</div>
                 </div>
               </button>
             ))}
@@ -701,6 +700,65 @@ function GraphDetailPanel({ selection, onClose, onGoToMap, onSelectNode }: {
           🗺 View on map
         </button>
       </div>
+    </div>
+  );
+}
+
+// ─── GraphEdgePanel ───────────────────────────────────────────────────────────
+
+function GraphEdgePanel({ edgeInfo, nodes, onGoToSource, onGoToTarget, onDismiss }: {
+  edgeInfo: GraphEdge;
+  nodes: GraphNode[];
+  onGoToSource: () => void;
+  onGoToTarget: () => void;
+  onDismiss: () => void;
+}) {
+  const relation = edgeInfo.relationId
+    ? dataStore.relations.getById(edgeInfo.relationId)
+    : null;
+
+  const srcLabel = getNodeLabel(edgeInfo.source, nodes);
+  const tgtLabel = getNodeLabel(edgeInfo.target, nodes);
+
+  const [srcKind, srcId] = edgeInfo.source.split(":") as [string, string];
+  const [tgtKind, tgtId] = edgeInfo.target.split(":") as [string, string];
+
+  return (
+    <div className="graph-sidebar-section">
+      <div className="filter-label" style={{ marginBottom: 5 }}>Connection</div>
+      <div style={{ fontSize: "0.8rem", lineHeight: 1.6 }}>
+        <div className="bold">{srcLabel}</div>
+        <div className="accent-text italic" style={{ margin: "2px 0" }}>— {edgeInfo.label} →</div>
+        <div className="bold">{tgtLabel}</div>
+      </div>
+
+      {relation && (
+        <div style={{ marginTop: 8 }}>
+          <RelationCard
+            relation={relation}
+            entityId={srcId}
+            entityType={srcKind}
+            onSelectEntity={(kind, id) => {
+              if (kind === srcKind && id === srcId) onGoToSource();
+              else if (kind === tgtKind && id === tgtId) onGoToTarget();
+            }}
+          />
+        </div>
+      )}
+
+      {!relation && (
+        <div className="faint" style={{ fontSize: "0.74rem", marginTop: 6 }}>
+          {edgeInfo.label} · weight {edgeInfo.weight}
+        </div>
+      )}
+
+      <div className="flex-center" style={{ gap: 6, marginTop: 6 }}>
+        <button type="button" className="filter-tab" onClick={onGoToSource}>Source</button>
+        <button type="button" className="filter-tab" onClick={onGoToTarget}>Target</button>
+      </div>
+      <button type="button" className="close-btn" style={{ marginTop: 4, fontSize: "0.75rem" }} onClick={onDismiss}>
+        ✕ dismiss
+      </button>
     </div>
   );
 }

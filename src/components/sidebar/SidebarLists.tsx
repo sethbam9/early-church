@@ -21,7 +21,7 @@ export function CitiesList({ search, currentDecade, onSelectCity, onFlyToCity }:
 
   useEffect(() => { setPage(0); }, [search, currentDecade, includeCumulative, mapVisibleOnly]);
 
-  // Decade-presence index for dot colors even in "all" mode
+  // Decade-presence index for dot colors
   const decadePresence = useMemo(() => {
     const m = new Map<string, string>();
     for (const c of dataStore.map.getCumulativeCitiesAtDecade(currentDecade)) {
@@ -50,19 +50,22 @@ export function CitiesList({ search, currentDecade, onSelectCity, onFlyToCity }:
   }, [search, currentDecade, includeCumulative, mapVisibleOnly, decadePresence]);
 
   const pageItems = cities.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  const mapVisibleCount = decadePresence.size;
 
   return (
     <>
-      {/* Map-visible toggle */}
+      {/* Toggle: show all (default) vs map-visible only */}
       <div className="list-filter-bar">
-        <span className="faint" style={{ fontSize: "0.72rem" }}>{cities.length} cities</span>
+        <span className="faint" style={{ fontSize: "0.72rem" }}>
+          {mapVisibleOnly ? `${cities.length} on map` : `${cities.length} total · ${mapVisibleCount} on map`}
+        </span>
         <button
           type="button"
           className={`list-filter-toggle${mapVisibleOnly ? " active" : ""}`}
           onClick={() => setMapVisibleOnly((v) => !v)}
-          title={mapVisibleOnly ? "Showing map-visible only — click for all" : "Showing all cities — click to filter to map"}
+          title={mapVisibleOnly ? "Showing map-visible only — click for all" : "Showing all cities — click to filter to map-visible"}
         >
-          {mapVisibleOnly ? "🗺 Map only" : "🌍 All cities"}
+          {mapVisibleOnly ? "🗺 Map only" : "🌍 Show all"}
         </button>
       </div>
 
@@ -109,21 +112,39 @@ export function ArchaeologyList({ search, currentDecade, onSelect, onFlyToSite }
 }) {
   const includeCumulative = useAppStore((s) => s.includeCumulative);
   const [page, setPage] = useState(0);
-  useEffect(() => { setPage(0); }, [search, currentDecade, includeCumulative]);
+  const [mapVisibleOnly, setMapVisibleOnly] = useState(false);
+  useEffect(() => { setPage(0); }, [search, currentDecade, includeCumulative, mapVisibleOnly]);
 
-  const sites = useMemo(() => {
-    const all = includeCumulative
+  const mapVisibleSites = useMemo(() => {
+    return includeCumulative
       ? dataStore.archaeology.getCumulativeAtDecade(currentDecade)
       : dataStore.archaeology.getActiveAtDecade(currentDecade);
+  }, [currentDecade, includeCumulative]);
+
+  const sites = useMemo(() => {
+    const base = mapVisibleOnly ? mapVisibleSites : dataStore.archaeology.getAll();
     const q = search.trim().toLowerCase();
-    if (!q) return all;
-    return all.filter((a) => `${a.name_display} ${a.site_type}`.toLowerCase().includes(q));
-  }, [search, currentDecade, includeCumulative]);
+    if (!q) return base;
+    return base.filter((a) => `${a.name_display} ${a.site_type} ${a.description ?? ""}`.toLowerCase().includes(q));
+  }, [search, mapVisibleOnly, mapVisibleSites]);
 
   const pageItems = sites.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <>
+      <div className="list-filter-bar">
+        <span className="faint" style={{ fontSize: "0.72rem" }}>
+          {mapVisibleOnly ? `${sites.length} on map` : `${sites.length} total · ${mapVisibleSites.length} on map`}
+        </span>
+        <button
+          type="button"
+          className={`list-filter-toggle${mapVisibleOnly ? " active" : ""}`}
+          onClick={() => setMapVisibleOnly((v) => !v)}
+          title={mapVisibleOnly ? "Showing map-visible only — click for all" : "Showing all sites — click to filter to map-visible"}
+        >
+          {mapVisibleOnly ? "🗺 Map only" : "🌍 Show all"}
+        </button>
+      </div>
       {sites.length === 0
         ? <div className="empty-state">No archaeology sites found.</div>
         : <>
@@ -325,7 +346,7 @@ export function DoctrinesList({ search, subTab, onSubTabChange, onSelect, onSele
 
   const allQuotes = useMemo(() => {
     const q = hl.toLowerCase();
-    const all = dataStore.quotes.getAll();
+    const all = dataStore.quotes.getAll().slice().sort((a, b) => (a.year ?? 9999) - (b.year ?? 9999));
     if (!q) return all;
     return all.filter((qt) =>
       qt.text.toLowerCase().includes(q) ||

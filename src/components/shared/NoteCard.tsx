@@ -21,7 +21,19 @@ export function NoteCard({ note, onSelectEntity, searchQuery = "", yearLabel, st
   return (
     <div className="note-card" style={style}>
       {yearLabel !== undefined && yearLabel !== "" && (
-        <div className="note-year">{yearLabel}</div>
+        <div className="note-year" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <span>{yearLabel}</span>
+          {onSelectEntity && (
+            <button
+              type="button"
+              className="note-open-btn"
+              onClick={() => onSelectEntity("note", note.note_id)}
+              title="Open note detail"
+            >
+              open →
+            </button>
+          )}
+        </div>
       )}
       <MarkdownRenderer onSelectEntity={onSelectEntity} searchQuery={searchQuery}>
         {note.body_md}

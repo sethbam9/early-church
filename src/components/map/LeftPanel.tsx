@@ -96,6 +96,13 @@ function EntityContextBanner() {
       return cityIds.size > 0 ? { kind: "event", cities: cityIds.size } : null;
     }
 
+    if (activeKind === "archaeology") {
+      const site = dataStore.archaeology.getById(activeId);
+      if (!site) return null;
+      const relCount = dataStore.relations.getForEntity("archaeology", activeId).length;
+      return { kind: "archaeology", siteType: site.site_type, yearStart: site.year_start, yearEnd: site.year_end, relCount };
+    }
+
     return null;
   }, [activeKind, activeId, activeDecade]);
 
@@ -115,13 +122,26 @@ function EntityContextBanner() {
         <div className="entity-context-stats">
           <span className="ecs-affirm">✓ {stats.affirms} affirm</span>
           <span className="ecs-condemn">✗ {stats.condemns} condemn</span>
-          {stats.mixed > 0 && <span className="ecs-mixed">~ {stats.mixed} mixed</span>}
+          {(stats.mixed ?? 0) > 0 && <span className="ecs-mixed">~ {stats.mixed} mixed</span>}
           <span className="ecs-total faint">{stats.total} cities</span>
         </div>
       )}
       {(stats.kind === "person" || stats.kind === "persuasion" || stats.kind === "polity" || stats.kind === "work" || stats.kind === "event") && (
         <div className="entity-context-stats">
           <span className="ecs-cities">🏛 {stats.cities} cit{stats.cities === 1 ? "y" : "ies"}</span>
+        </div>
+      )}
+      {stats.kind === "archaeology" && (
+        <div className="entity-context-stats">
+          <span className="ecs-cities">★ {stats.siteType}</span>
+          {stats.yearStart != null && (
+            <span className="faint">
+              AD {stats.yearStart}{stats.yearEnd && stats.yearEnd !== stats.yearStart ? `–${stats.yearEnd}` : ""}
+            </span>
+          )}
+          {(stats.relCount ?? 0) > 0 && (
+            <span className="faint">{stats.relCount} relation{stats.relCount === 1 ? "" : "s"}</span>
+          )}
         </div>
       )}
     </div>

@@ -20,6 +20,7 @@ export interface GraphEdge {
   target: string;
   label: string;
   weight: number;
+  relationId?: string;
 }
 
 /** One tick of the force simulation. Mutates nodes in-place. */

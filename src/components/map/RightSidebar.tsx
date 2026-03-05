@@ -64,29 +64,25 @@ export function RightSidebar({ onFlyToCity, onFlyToArch, currentDecade }: RightS
 
   // Selected essay for the Essays tab
   const [selectedEssay, setSelectedEssay] = useState<Essay | null>(null);
-  // Essay we navigated away from (to restore on back)
-  const [prevEssay, setPrevEssay] = useState<Essay | null>(null);
+  // Entity overlay shown on top of essay (city, note, etc. clicked from within essay)
+  const [essayOverlay, setEssayOverlay] = useState<Selection | null>(null);
   const essays = ESSAYS;
 
+  // Called when an entity is selected from within an essay — show overlay, fly map, don't close essay
+  const handleEssayEntitySelect = (kind: string, id: string) => {
+    if (kind === "city") onFlyToCity(id);
+    else if (kind === "archaeology") onFlyToArch(id);
+    setEssayOverlay({ kind: kind as Selection["kind"], id });
+  };
+
+  // Called from non-essay contexts (lists, entity detail panels)
   const handleEntitySelect = (kind: string, id: string) => {
-    if (selectedEssay) {
-      setPrevEssay(selectedEssay);
-      setSelectedEssay(null);
-    }
-    // Fly map to city/arch whenever selected from sidebar
     if (kind === "city") onFlyToCity(id);
     else if (kind === "archaeology") onFlyToArch(id);
     pushSelection({ kind: kind as Selection["kind"], id });
   };
 
   const handleBack = () => {
-    // If we came from an essay, restore it
-    if (prevEssay) {
-      setSelectedEssay(prevEssay);
-      setPrevEssay(null);
-      setSelection(null);
-      return;
-    }
     if (selectionHistory.length > 0) {
       popSelection();
     } else {
@@ -142,11 +138,45 @@ export function RightSidebar({ onFlyToCity, onFlyToArch, currentDecade }: RightS
   if (selectedEssay) {
     return (
       <SidebarShell expanded={sidebarExpanded} onToggleExpand={toggleExpanded} onDismiss={toggleRightPanel}>
+        {/* Essay content — always visible */}
         <EssayView
           essay={selectedEssay}
-          onBack={() => setSelectedEssay(null)}
-          onSelectEntity={handleEntitySelect}
+          onBack={() => { setSelectedEssay(null); setEssayOverlay(null); }}
+          onSelectEntity={handleEssayEntitySelect}
         />
+        {/* Overlay panel: entity/note/city selected from within essay */}
+        {essayOverlay && (
+          <div className="essay-entity-overlay">
+            {essayOverlay.kind === "note" && (
+              <NoteDetail
+                noteId={essayOverlay.id}
+                onBack={() => setEssayOverlay(null)}
+                onSelectEntity={handleEssayEntitySelect}
+              />
+            )}
+            {essayOverlay.kind === "city" && (
+              <CityDetail
+                cityId={essayOverlay.id}
+                onBack={() => setEssayOverlay(null)}
+                onSelectEntity={handleEssayEntitySelect}
+              />
+            )}
+            {essayOverlay.kind !== "note" && essayOverlay.kind !== "city" && (
+              <EntityDetail
+                key={`${essayOverlay.kind}:${essayOverlay.id}`}
+                kind={essayOverlay.kind}
+                id={essayOverlay.id}
+                onBack={() => setEssayOverlay(null)}
+                onSelectEntity={handleEssayEntitySelect}
+                mapFilterType={mapFilterType}
+                mapFilterId={mapFilterId}
+                setMapFilter={setMapFilter}
+                clearMapFilter={clearMapFilter}
+                currentDecade={currentDecade}
+              />
+            )}
+          </div>
+        )}
       </SidebarShell>
     );
   }
