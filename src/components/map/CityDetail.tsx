@@ -1,8 +1,9 @@
 import { useState, useMemo, useEffect, useRef } from "react";
-import { dataStore } from "../../data/dataStore";
+import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { useAppStore } from "../../stores/appStore";
 import type { PlaceState } from "../../data/dataStore";
 import { MarkdownRenderer } from "../shared/MarkdownRenderer";
+import { getRelationLabel } from "../../domain/relationLabels";
 
 function Hl({ text, query }: { text: string; query: string }) {
   if (!query || !text) return <>{text}</>;
@@ -21,7 +22,7 @@ function Hl({ text, query }: { text: string; query: string }) {
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type SubTab = "info" | "timeline" | "people" | "doctrines" | "events" | "works" | "archaeology";
+type SubTab = "info" | "timeline" | "people" | "doctrines" | "events" | "works" | "archaeology" | "relations";
 
 const SUB_TABS: { id: SubTab; label: string }[] = [
   { id: "info",        label: "Info" },
@@ -31,6 +32,7 @@ const SUB_TABS: { id: SubTab; label: string }[] = [
   { id: "events",      label: "Events" },
   { id: "works",       label: "Works" },
   { id: "archaeology", label: "Archaeology" },
+  { id: "relations",   label: "Relations" },
 ];
 
 const PRESENCE_LABELS: Record<string, string> = {
@@ -115,6 +117,12 @@ export function CityDetail({ cityId, onBack, onSelectEntity }: CityDetailProps) 
   // Archaeology sites at this city
   const cityArchaeology = useMemo(() =>
     dataStore.archaeology.getAll().filter((a) => a.city_id === cityId),
+    [cityId],
+  );
+
+  // Relations for this city
+  const cityRelations = useMemo(() =>
+    dataStore.relations.getForEntity("city", cityId),
     [cityId],
   );
 
@@ -215,6 +223,7 @@ export function CityDetail({ cityId, onBack, onSelectEntity }: CityDetailProps) 
       <div className="detail-sub-tabs">
         {SUB_TABS.filter((t) => {
           if (t.id === "archaeology") return cityArchaeology.length > 0;
+          if (t.id === "relations") return cityRelations.length > 0;
           return true;
         }).map((t) => {
           const counts: Partial<Record<SubTab, number>> = {
@@ -223,6 +232,7 @@ export function CityDetail({ cityId, onBack, onSelectEntity }: CityDetailProps) 
             events: cityEvents.length,
             works: cityWorks.length,
             archaeology: cityArchaeology.length,
+            relations: cityRelations.length,
           };
           const c = counts[t.id];
           return (
@@ -247,6 +257,7 @@ export function CityDetail({ cityId, onBack, onSelectEntity }: CityDetailProps) 
         {subTab === "events"      && <EventsTab events={cityEvents} onSelectEntity={onSelectEntity} />}
         {subTab === "works"       && <WorksTab works={cityWorks} onSelectEntity={onSelectEntity} />}
         {subTab === "archaeology" && <ArchaeologyTab sites={cityArchaeology} onSelectEntity={onSelectEntity} />}
+        {subTab === "relations"   && <RelationsTab relations={cityRelations} cityId={cityId} onSelectEntity={onSelectEntity} />}
       </div>
     </div>
   );
@@ -329,6 +340,13 @@ function InfoTab({ city, currentState, notes, onSelectEntity }: {
           <div className="detail-section-title">Evidence for AD {currentState?.decade}</div>
           <div className="note-card">
             <MarkdownRenderer onSelectEntity={onSelectEntity} searchQuery={q}>{evidenceNote.body_md}</MarkdownRenderer>
+            {evidenceNote.citation_urls.length > 0 && (
+              <div style={{ marginTop: 6, display: "flex", flexWrap: "wrap", gap: 4 }}>
+                {evidenceNote.citation_urls.map((url, i) => (
+                  <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="citation-link">{url}</a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -582,3 +600,38 @@ function WorksTab({ works, onSelectEntity }: {
 }
 
 // MarkdownNote replaced by shared MarkdownRenderer
+
+// ─── Relations tab ────────────────────────────────────────────────────────────
+
+const KIND_ICONS: Record<string, string> = {
+  city: "🏛", person: "👤", work: "📜", doctrine: "📖",
+  event: "⚡", archaeology: "★", persuasion: "✦", polity: "⚔",
+};
+
+function RelationsTab({ relations, cityId, onSelectEntity }: {
+  relations: ReturnType<typeof dataStore.relations.getForEntity>;
+  cityId: string;
+  onSelectEntity: (kind: string, id: string) => void;
+}) {
+  if (relations.length === 0) return <div className="empty-state">No relations found.</div>;
+
+  return (
+    <div className="conn-list">
+      {relations.map((r) => {
+        const isOut   = r.source_id === cityId && r.source_type === "city";
+        const otherId = isOut ? r.target_id   : r.source_id;
+        const othKind = isOut ? r.target_type : r.source_type;
+        const lbl     = getEntityLabel(othKind, otherId);
+        return (
+          <div key={r.relation_id} className="conn-card" onClick={() => onSelectEntity(othKind, otherId)}>
+            <span className="conn-icon">{KIND_ICONS[othKind] ?? "•"}</span>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div className="conn-name">{lbl}</div>
+              <div className="conn-rel">{getRelationLabel(r.relation_type, isOut)}</div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}

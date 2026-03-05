@@ -6,6 +6,7 @@ import type { SidebarTab, PlacesSubTab } from "../../stores/appStore";
 import { CityDetail } from "./CityDetail";
 import { MarkdownRenderer } from "../shared/MarkdownRenderer";
 import { getAllEssays, type Essay } from "../../data/essayLoader";
+import { getRelationLabel } from "../../domain/relationLabels";
 
 // ─── Shared search highlight utility ─────────────────────────────────────────
 
@@ -21,6 +22,38 @@ function Hl({ text, query }: { text: string; query: string }) {
       </mark>
       {text.slice(idx + query.length)}
     </>
+  );
+}
+
+// ─── Pagination ──────────────────────────────────────────────────────────────
+
+const SIDEBAR_PAGE_SIZE = 30;
+
+function Pagination({ page, total, pageSize, onChange }: {
+  page: number; total: number; pageSize: number; onChange: (p: number) => void;
+}) {
+  if (total <= pageSize) return null;
+  const pages = Math.ceil(total / pageSize);
+  return (
+    <div style={{
+      display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+      padding: "6px 8px", borderTop: "1px solid var(--border-subtle)",
+      fontSize: "0.78rem", color: "var(--text-muted)", flexShrink: 0,
+    }}>
+      <button
+        type="button"
+        disabled={page === 0}
+        style={{ background: "none", border: "none", cursor: page === 0 ? "default" : "pointer", color: page === 0 ? "var(--text-faint)" : "var(--accent)", padding: "2px 6px", fontSize: "0.9rem" }}
+        onClick={() => onChange(page - 1)}
+      >◀</button>
+      <span>{page + 1} / {pages}</span>
+      <button
+        type="button"
+        disabled={page >= pages - 1}
+        style={{ background: "none", border: "none", cursor: page >= pages - 1 ? "default" : "pointer", color: page >= pages - 1 ? "var(--text-faint)" : "var(--accent)", padding: "2px 6px", fontSize: "0.9rem" }}
+        onClick={() => onChange(page + 1)}
+      >▶</button>
+    </div>
   );
 }
 
@@ -41,10 +74,11 @@ const TABS: { id: SidebarTab; icon: string; label: string }[] = [
 
 interface RightSidebarProps {
   onFlyToCity: (cityId: string) => void;
+  onFlyToArch: (archId: string) => void;
   currentDecade: number;
 }
 
-export function RightSidebar({ onFlyToCity, currentDecade }: RightSidebarProps) {
+export function RightSidebar({ onFlyToCity, onFlyToArch, currentDecade }: RightSidebarProps) {
   const sidebarTab       = useAppStore((s) => s.sidebarTab);
   const sidebarPlacesSub = useAppStore((s) => s.sidebarPlacesSubTab);
   const sidebarExpanded  = useAppStore((s) => s.sidebarExpanded);
@@ -253,6 +287,7 @@ export function RightSidebar({ onFlyToCity, currentDecade }: RightSidebarProps) 
             search={sidebarSearch}
             currentDecade={currentDecade}
             onSelect={(id) => handleEntitySelect("archaeology", id)}
+            onFlyToSite={onFlyToArch}
           />
         )}
         {sidebarTab === "persuasions" && (
@@ -357,20 +392,28 @@ function CitiesList({ search, currentDecade, onSelectCity, onFlyToCity }: {
   onSelectCity: (id: string) => void;
   onFlyToCity: (id: string) => void;
 }) {
+  const includeCumulative = useAppStore((s) => s.includeCumulative);
+  const [page, setPage] = useState(0);
+  useEffect(() => { setPage(0); }, [search, currentDecade, includeCumulative]);
+
   const cities = useMemo(() => {
-    const all = dataStore.map.getCitiesAtDecade(currentDecade);
+    const all = includeCumulative
+      ? dataStore.map.getCumulativeCitiesAtDecade(currentDecade)
+      : dataStore.map.getCitiesAtDecade(currentDecade);
     const q = search.trim().toLowerCase();
     if (!q) return all;
     return all.filter((c) =>
       `${c.city_ancient} ${c.city_label} ${c.city_modern} ${c.country_modern}`.toLowerCase().includes(q),
     );
-  }, [search, currentDecade]);
+  }, [search, currentDecade, includeCumulative]);
 
   if (cities.length === 0) return <div className="empty-state">No cities found.</div>;
 
+  const pageItems = cities.slice(page * SIDEBAR_PAGE_SIZE, (page + 1) * SIDEBAR_PAGE_SIZE);
+
   return (
     <>
-      {cities.map((c) => (
+      {pageItems.map((c) => (
         <div key={c.city_id} className="sidebar-list-item" onClick={() => onSelectCity(c.city_id)}>
           <span className="sli-dot" style={{ background: presenceColor(c.presence_status) }} />
           <div className="sli-main">
@@ -390,37 +433,75 @@ function CitiesList({ search, currentDecade, onSelectCity, onFlyToCity }: {
           </button>
         </div>
       ))}
+      <Pagination page={page} total={cities.length} pageSize={SIDEBAR_PAGE_SIZE} onChange={setPage} />
     </>
   );
 }
 
 // ─── Archaeology list ─────────────────────────────────────────────────────────
 
-function ArchaeologyList({ search, currentDecade, onSelect }: {
+function ArchaeologyList({ search, currentDecade, onSelect, onFlyToSite }: {
   search: string;
   currentDecade: number;
   onSelect: (id: string) => void;
+  onFlyToSite: (id: string) => void;
 }) {
+  const includeCumulative = useAppStore((s) => s.includeCumulative);
+  const [showAll, setShowAll] = useState(false);
+  const [page, setPage] = useState(0);
+  useEffect(() => { setPage(0); }, [search, currentDecade, includeCumulative, showAll]);
+
   const sites = useMemo(() => {
-    const all = dataStore.archaeology.getActiveAtDecade(currentDecade);
+    let all: ReturnType<typeof dataStore.archaeology.getAll>;
+    if (includeCumulative) {
+      all = dataStore.archaeology.getCumulativeAtDecade(currentDecade);
+    } else if (showAll) {
+      all = dataStore.archaeology.getAll();
+    } else {
+      all = dataStore.archaeology.getActiveAtDecade(currentDecade);
+    }
     const q = search.trim().toLowerCase();
     if (!q) return all;
     return all.filter((a) => `${a.name_display} ${a.site_type}`.toLowerCase().includes(q));
-  }, [search, currentDecade]);
+  }, [search, currentDecade, includeCumulative, showAll]);
 
-  if (sites.length === 0) return <div className="empty-state">No archaeology sites found.</div>;
+  const pageItems = sites.slice(page * SIDEBAR_PAGE_SIZE, (page + 1) * SIDEBAR_PAGE_SIZE);
 
   return (
     <>
-      {sites.map((a) => (
-        <div key={a.archaeology_id} className="sidebar-list-item" onClick={() => onSelect(a.archaeology_id)}>
-          <span className="sli-icon">★</span>
-          <div className="sli-main">
-            <div className="sli-name">{a.name_display}</div>
-            <div className="sli-meta">{a.site_type}{a.year_start ? ` · AD ${a.year_start}` : ""}</div>
-          </div>
+      {!includeCumulative && (
+        <div style={{ padding: "4px 8px 0", display: "flex", alignItems: "center" }}>
+          <label style={{ fontSize: "0.73rem", color: "var(--text-muted)", display: "flex", alignItems: "center", gap: 4, cursor: "pointer" }}>
+            <input type="checkbox" checked={showAll} onChange={(e) => setShowAll(e.target.checked)} />
+            Show all sites
+          </label>
         </div>
-      ))}
+      )}
+      {sites.length === 0
+        ? <div className="empty-state">No archaeology sites found.</div>
+        : <>
+            {pageItems.map((a) => (
+              <div key={a.archaeology_id} className="sidebar-list-item" onClick={() => onSelect(a.archaeology_id)}>
+                <span className="sli-icon">★</span>
+                <div className="sli-main">
+                  <div className="sli-name">{a.name_display}</div>
+                  <div className="sli-meta">{a.site_type}{a.year_start ? ` · AD ${a.year_start}` : ""}</div>
+                </div>
+                {a.lat != null && a.lon != null && (
+                  <button
+                    type="button"
+                    className="sli-fly-btn"
+                    title="Fly to"
+                    onClick={(e) => { e.stopPropagation(); onFlyToSite(a.archaeology_id); }}
+                  >
+                    ⌖
+                  </button>
+                )}
+              </div>
+            ))}
+            <Pagination page={page} total={sites.length} pageSize={SIDEBAR_PAGE_SIZE} onChange={setPage} />
+          </>
+      }
     </>
   );
 }
@@ -434,6 +515,9 @@ function PersuasionsList({ search, currentDecade, onSelect, mapFilterId, mapFilt
   mapFilterId: string | null;
   mapFilterType: string | null;
 }) {
+  const [page, setPage] = useState(0);
+  useEffect(() => { setPage(0); }, [search, currentDecade]);
+
   const rows = useMemo(() => {
     const statesAtDecade = dataStore.map.getCitiesAtDecade(currentDecade);
     const countByPersuasion: Record<string, number> = {};
@@ -452,9 +536,11 @@ function PersuasionsList({ search, currentDecade, onSelect, mapFilterId, mapFilt
 
   if (rows.length === 0) return <div className="empty-state">No persuasions found.</div>;
 
+  const pageItems = rows.slice(page * SIDEBAR_PAGE_SIZE, (page + 1) * SIDEBAR_PAGE_SIZE);
+
   return (
     <>
-      {rows.map((p) => {
+      {pageItems.map((p) => {
         const isFiltered = mapFilterType === "persuasion" && mapFilterId === p.persuasion_id;
         return (
           <div
@@ -462,7 +548,7 @@ function PersuasionsList({ search, currentDecade, onSelect, mapFilterId, mapFilt
             className={`sidebar-list-item${isFiltered ? " selected" : ""}`}
             onClick={() => onSelect(p.persuasion_id)}
           >
-            <span className="sli-icon">✦</span>
+            <span className="sli-icon">❆</span>
             <div className="sli-main">
               <div className="sli-name">{p.persuasion_label}</div>
               {p.count > 0 && <div className="sli-meta">{p.count} cities at AD {currentDecade}</div>}
@@ -471,6 +557,7 @@ function PersuasionsList({ search, currentDecade, onSelect, mapFilterId, mapFilt
           </div>
         );
       })}
+      <Pagination page={page} total={rows.length} pageSize={SIDEBAR_PAGE_SIZE} onChange={setPage} />
     </>
   );
 }
@@ -484,6 +571,9 @@ function PolitiesList({ search, currentDecade, onSelect, mapFilterId, mapFilterT
   mapFilterId: string | null;
   mapFilterType: string | null;
 }) {
+  const [page, setPage] = useState(0);
+  useEffect(() => { setPage(0); }, [search, currentDecade]);
+
   const rows = useMemo(() => {
     const statesAtDecade = dataStore.map.getCitiesAtDecade(currentDecade);
     const countByPolity: Record<string, number> = {};
@@ -500,9 +590,11 @@ function PolitiesList({ search, currentDecade, onSelect, mapFilterId, mapFilterT
 
   if (rows.length === 0) return <div className="empty-state">No polities found.</div>;
 
+  const pageItems = rows.slice(page * SIDEBAR_PAGE_SIZE, (page + 1) * SIDEBAR_PAGE_SIZE);
+
   return (
     <>
-      {rows.map((p) => {
+      {pageItems.map((p) => {
         const isFiltered = mapFilterType === "polity" && mapFilterId === p.polity_id;
         return (
           <div
@@ -519,6 +611,7 @@ function PolitiesList({ search, currentDecade, onSelect, mapFilterId, mapFilterT
           </div>
         );
       })}
+      <Pagination page={page} total={rows.length} pageSize={SIDEBAR_PAGE_SIZE} onChange={setPage} />
     </>
   );
 }
@@ -526,20 +619,23 @@ function PolitiesList({ search, currentDecade, onSelect, mapFilterId, mapFilterT
 // ─── People list ──────────────────────────────────────────────────────────────
 
 function PeopleList({ search, onSelect }: { search: string; onSelect: (id: string) => void }) {
+  const [page, setPage] = useState(0);
+  useEffect(() => { setPage(0); }, [search]);
+
   const people = useMemo(() => {
     const q = search.trim().toLowerCase();
     const all = dataStore.people.getAll();
-    if (!q) return all.slice(0, 80);
-    return all
-      .filter((p) => `${p.person_label} ${p.name_alt.join(" ")} ${p.roles.join(" ")} ${p.description}`.toLowerCase().includes(q))
-      .slice(0, 100);
+    if (!q) return all;
+    return all.filter((p) => `${p.person_label} ${p.name_alt.join(" ")} ${p.roles.join(" ")} ${p.description}`.toLowerCase().includes(q));
   }, [search]);
 
   if (people.length === 0) return <div className="empty-state">No people found.</div>;
 
+  const pageItems = people.slice(page * SIDEBAR_PAGE_SIZE, (page + 1) * SIDEBAR_PAGE_SIZE);
+
   return (
     <>
-      {people.map((p) => (
+      {pageItems.map((p) => (
         <div key={p.person_id} className="sidebar-list-item" onClick={() => onSelect(p.person_id)}>
           <span className="sli-icon">👤</span>
           <div className="sli-main">
@@ -551,6 +647,7 @@ function PeopleList({ search, onSelect }: { search: string; onSelect: (id: strin
           </div>
         </div>
       ))}
+      <Pagination page={page} total={people.length} pageSize={SIDEBAR_PAGE_SIZE} onChange={setPage} />
     </>
   );
 }
@@ -565,8 +662,10 @@ function DoctrinesList({ search, subTab, onSubTabChange, onSelect, onSelectEntit
   onSelectEntity: (kind: string, id: string) => void;
 }) {
   const hl = search.trim();
+  const [dPage, setDPage] = useState(0);
+  const [qPage, setQPage] = useState(0);
+  useEffect(() => { setDPage(0); setQPage(0); }, [hl, subTab]);
 
-  // ── Doctrines sub-tab ────────────────────────────────────────────────────
   const doctrines = useMemo(() => {
     const q = hl.toLowerCase();
     const all = dataStore.doctrines.getAll();
@@ -577,11 +676,10 @@ function DoctrinesList({ search, subTab, onSubTabChange, onSelect, onSelectEntit
     );
   }, [hl]);
 
-  // ── Global quotes sub-tab ────────────────────────────────────────────────
   const allQuotes = useMemo(() => {
     const q = hl.toLowerCase();
     const all = dataStore.quotes.getAll();
-    if (!q) return all.slice(0, 60);
+    if (!q) return all;
     return all.filter((qt) =>
       qt.text.toLowerCase().includes(q) ||
       qt.work_reference.toLowerCase().includes(q) ||
@@ -589,9 +687,11 @@ function DoctrinesList({ search, subTab, onSubTabChange, onSelect, onSelectEntit
     );
   }, [hl]);
 
+  const docPage = doctrines.slice(dPage * SIDEBAR_PAGE_SIZE, (dPage + 1) * SIDEBAR_PAGE_SIZE);
+  const quotePage = allQuotes.slice(qPage * SIDEBAR_PAGE_SIZE, (qPage + 1) * SIDEBAR_PAGE_SIZE);
+
   return (
     <>
-      {/* Sub-tab switcher — sits above the shared search bar */}
       <div className="sub-tabs" style={{ padding: "0 8px" }}>
         <button type="button" className={`sub-tab${subTab === "doctrines" ? " active" : ""}`} onClick={() => onSubTabChange("doctrines")}>
           Doctrines ({doctrines.length})
@@ -605,7 +705,7 @@ function DoctrinesList({ search, subTab, onSubTabChange, onSelect, onSelectEntit
         doctrines.length === 0
           ? <div className="empty-state">No doctrines found.</div>
           : <>
-              {doctrines.map((d) => (
+              {docPage.map((d) => (
                 <div key={d.doctrine_id} className="sidebar-list-item" onClick={() => onSelect(d.doctrine_id)}>
                   <span className="sli-icon">📖</span>
                   <div className="sli-main">
@@ -617,6 +717,7 @@ function DoctrinesList({ search, subTab, onSubTabChange, onSelect, onSelectEntit
                   </div>
                 </div>
               ))}
+              <Pagination page={dPage} total={doctrines.length} pageSize={SIDEBAR_PAGE_SIZE} onChange={setDPage} />
             </>
       )}
 
@@ -624,7 +725,7 @@ function DoctrinesList({ search, subTab, onSubTabChange, onSelect, onSelectEntit
         allQuotes.length === 0
           ? <div className="empty-state">No quotes found.</div>
           : <>
-              {allQuotes.map((qt) => {
+              {quotePage.map((qt) => {
                 const doctrine = qt.doctrine_id ? dataStore.doctrines.getById(qt.doctrine_id) : null;
                 const work     = qt.work_id     ? dataStore.works.getById(qt.work_id)         : null;
                 return (
@@ -661,6 +762,7 @@ function DoctrinesList({ search, subTab, onSubTabChange, onSelect, onSelectEntit
                   </div>
                 );
               })}
+              <Pagination page={qPage} total={allQuotes.length} pageSize={SIDEBAR_PAGE_SIZE} onChange={setQPage} />
             </>
       )}
     </>
@@ -674,6 +776,9 @@ function EventsList({ search, currentDecade, onSelect }: {
   currentDecade: number;
   onSelect: (id: string) => void;
 }) {
+  const [page, setPage] = useState(0);
+  useEffect(() => { setPage(0); }, [search, currentDecade]);
+
   const events = useMemo(() => {
     const q = search.trim().toLowerCase();
     const all = dataStore.events.getAll()
@@ -685,9 +790,11 @@ function EventsList({ search, currentDecade, onSelect }: {
 
   if (events.length === 0) return <div className="empty-state">No events found.</div>;
 
+  const pageItems = events.slice(page * SIDEBAR_PAGE_SIZE, (page + 1) * SIDEBAR_PAGE_SIZE);
+
   return (
     <>
-      {events.map((e) => (
+      {pageItems.map((e) => (
         <div key={e.event_id} className="sidebar-list-item" onClick={() => onSelect(e.event_id)}>
           <span className="sli-icon">⚡</span>
           <div className="sli-main">
@@ -699,6 +806,7 @@ function EventsList({ search, currentDecade, onSelect }: {
           </div>
         </div>
       ))}
+      <Pagination page={page} total={events.length} pageSize={SIDEBAR_PAGE_SIZE} onChange={setPage} />
     </>
   );
 }
@@ -706,6 +814,9 @@ function EventsList({ search, currentDecade, onSelect }: {
 // ─── Works list ───────────────────────────────────────────────────────────────
 
 function WorksList({ search, onSelect }: { search: string; onSelect: (id: string) => void }) {
+  const [page, setPage] = useState(0);
+  useEffect(() => { setPage(0); }, [search]);
+
   const works = useMemo(() => {
     const q = search.trim().toLowerCase();
     const all = dataStore.works.getAll().sort((a, b) => (a.year_written_start ?? 0) - (b.year_written_start ?? 0));
@@ -717,9 +828,11 @@ function WorksList({ search, onSelect }: { search: string; onSelect: (id: string
 
   if (works.length === 0) return <div className="empty-state">No works found.</div>;
 
+  const pageItems = works.slice(page * SIDEBAR_PAGE_SIZE, (page + 1) * SIDEBAR_PAGE_SIZE);
+
   return (
     <>
-      {works.map((w) => (
+      {pageItems.map((w) => (
         <div key={w.work_id} className="sidebar-list-item" onClick={() => onSelect(w.work_id)}>
           <span className="sli-icon">📜</span>
           <div className="sli-main">
@@ -731,6 +844,7 @@ function WorksList({ search, onSelect }: { search: string; onSelect: (id: string
           </div>
         </div>
       ))}
+      <Pagination page={page} total={works.length} pageSize={SIDEBAR_PAGE_SIZE} onChange={setPage} />
     </>
   );
 }
@@ -743,6 +857,8 @@ function EssaysList({ search, essays, loading, onSelect }: {
   loading: boolean;
   onSelect: (essay: Essay) => void;
 }) {
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     if (!q) return essays;
@@ -757,19 +873,51 @@ function EssaysList({ search, essays, loading, onSelect }: {
   return (
     <>
       {filtered.map((e) => (
-        <div key={e.id} className="sidebar-list-item" onClick={() => onSelect(e)}>
-          <span className="sli-icon">✍</span>
-          <div className="sli-main">
-            <div className="sli-name">{e.title}</div>
-            <div className="sli-meta">{e.summary}</div>
+        <div key={e.id}>
+          <div
+            className="sidebar-list-item"
+            style={{ alignItems: "center" }}
+            onClick={() => onSelect(e)}
+          >
+            <span className="sli-icon">✍</span>
+            <div className="sli-main">
+              <div className="sli-name">{e.title}</div>
+            </div>
+            {e.summary && (
+              <button
+                type="button"
+                onClick={(evt) => {
+                  evt.stopPropagation();
+                  setExpandedId(expandedId === e.id ? null : e.id);
+                }}
+                title={expandedId === e.id ? "Hide summary" : "Show summary"}
+                style={{
+                  background: "none", border: "none", cursor: "pointer",
+                  color: "var(--text-faint)", fontSize: "0.7rem", padding: "2px 4px",
+                  flexShrink: 0,
+                }}
+              >
+                {expandedId === e.id ? "▲" : "▼"}
+              </button>
+            )}
           </div>
+          {expandedId === e.id && e.summary && (
+            <div style={{
+              padding: "6px 12px 8px 36px",
+              fontSize: "0.8rem", color: "var(--text-muted)",
+              lineHeight: 1.5, borderBottom: "1px solid var(--border-subtle)",
+              background: "var(--surface-2)",
+            }}>
+              {e.summary}
+            </div>
+          )}
         </div>
       ))}
     </>
   );
 }
 
-// ─── Essay view ───────────────────────────────────────────────────────────────
+// ─── Essay view ───────────────────────────────────────────────────────────────────
 
 function EssayView({ essay, onBack, onSelectEntity }: {
   essay: Essay;
@@ -777,21 +925,212 @@ function EssayView({ essay, onBack, onSelectEntity }: {
   onSelectEntity: (kind: string, id: string) => void;
 }) {
   const searchQuery = useAppStore((s) => s.searchQuery).trim();
+  const [popup, setPopup] = useState<{ kind: string; id: string } | null>(null);
+
   return (
-    <div className="detail-panel">
-      <div className="detail-back-bar">
+    <div className="detail-panel" style={{ position: "relative" }}>
+      <div className="detail-back-bar" style={{ flexShrink: 0 }}>
         <button type="button" className="back-btn" onClick={onBack}>← Back</button>
         <span className="detail-crumb">Essays</span>
       </div>
-      <div className="detail-header">
+      <div className="detail-header" style={{ flexShrink: 0 }}>
         <div className="detail-kind-badge">✍ Essay</div>
         <div className="detail-title">{essay.title}</div>
-        {essay.summary && <div className="detail-subtitle">{essay.summary}</div>}
       </div>
       <div className="detail-body">
-        <MarkdownRenderer onSelectEntity={onSelectEntity} searchQuery={searchQuery}>
+        <MarkdownRenderer
+          onSelectEntity={(kind, id) => setPopup({ kind, id })}
+          searchQuery={searchQuery}
+        >
           {essay.body}
         </MarkdownRenderer>
+      </div>
+
+      {/* Entity popup — slides up over the essay without losing scroll position */}
+      {popup && (
+        <div style={{
+          position: "absolute", bottom: 0, left: 0, right: 0, top: "30%",
+          background: "var(--surface)",
+          borderTop: "2px solid var(--accent-bright)",
+          boxShadow: "0 -6px 24px rgba(0,0,0,0.45)",
+          zIndex: 20, display: "flex", flexDirection: "column", overflow: "hidden",
+        }}>
+          <EntityMiniCard
+            kind={popup.kind}
+            id={popup.id}
+            onClose={() => setPopup(null)}
+            onNavigate={(k, i) => setPopup({ kind: k, id: i })}
+            onOpenInSidebar={(k, i) => { setPopup(null); onSelectEntity(k, i); }}
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── EntityMiniCard (popup inside essay view) ──────────────────────────────────
+
+const MINI_KIND_ICONS: Record<string, string> = {
+  person: "👤", work: "📜", doctrine: "📖", event: "⚡",
+  archaeology: "★", city: "🏙", persuasion: "✦", polity: "⚔",
+};
+
+function EntityMiniCard({ kind, id, onClose, onNavigate, onOpenInSidebar }: {
+  kind: string;
+  id: string;
+  onClose: () => void;
+  onNavigate: (kind: string, id: string) => void;
+  onOpenInSidebar: (kind: string, id: string) => void;
+}) {
+  const label = getEntityLabel(kind, id);
+
+  const { description, subtitle, tags } = useMemo(() => {
+    if (kind === "person") {
+      const p = dataStore.people.getById(id);
+      return {
+        description: p?.description ?? "",
+        subtitle: p ? [p.birth_year && `b. AD ${p.birth_year}`, p.death_year && `d. AD ${p.death_year}`].filter(Boolean).join(" · ") : "",
+        tags: p?.roles?.slice(0, 3) ?? [],
+      };
+    }
+    if (kind === "work") {
+      const w = dataStore.works.getById(id);
+      return {
+        description: w?.description ?? "",
+        subtitle: w ? `${w.author_name_display}${w.year_written_start ? ` · AD ${w.year_written_start}` : ""}` : "",
+        tags: [w?.work_type, w?.language].filter(Boolean) as string[],
+      };
+    }
+    if (kind === "doctrine") {
+      const d = dataStore.doctrines.getById(id);
+      return { description: d?.description ?? "", subtitle: d?.category ?? "", tags: [] };
+    }
+    if (kind === "event") {
+      const e = dataStore.events.getById(id);
+      return {
+        description: e?.description ?? "",
+        subtitle: [e?.year_start && `AD ${e.year_start}`, e?.region].filter(Boolean).join(" · "),
+        tags: [e?.event_type].filter(Boolean) as string[],
+      };
+    }
+    if (kind === "city") {
+      const c = dataStore.cities.getById(id);
+      return { description: "", subtitle: c?.country_modern ?? "", tags: [] };
+    }
+    if (kind === "persuasion") {
+      const p = dataStore.persuasions.getById(id);
+      return { description: p?.description ?? "", subtitle: p?.persuasion_stream ?? "", tags: [] };
+    }
+    if (kind === "polity") {
+      const p = dataStore.polities.getById(id);
+      return { description: p?.description ?? "", subtitle: [p?.region, p?.capital].filter(Boolean).join(" · "), tags: [] };
+    }
+    return { description: "", subtitle: "", tags: [] };
+  }, [kind, id]);
+
+  // Up to 6 connections
+  const connections = useMemo(() => {
+    const seen = new Set<string>();
+    const list: { othKind: string; othId: string; label: string }[] = [];
+    const add = (othKind: string, othId: string, label: string) => {
+      const key = `${othKind}:${othId}`;
+      if (!seen.has(key)) { seen.add(key); list.push({ othKind, othId, label }); }
+    };
+    for (const r of dataStore.relations.getForEntity(kind, id)) {
+      const isOut   = r.source_id === id && r.source_type === kind;
+      const othId   = isOut ? r.target_id : r.source_id;
+      const othKind = isOut ? r.target_type : r.source_type;
+      add(othKind, othId, getRelationLabel(r.relation_type, isOut));
+    }
+    if (kind === "person") {
+      for (const w of dataStore.works.getAll()) {
+        if (w.author_person_id === id) add("work", w.work_id, "authored");
+      }
+    }
+    if (kind === "work") {
+      const w = dataStore.works.getById(id);
+      if (w?.author_person_id) add("person", w.author_person_id, "by");
+    }
+    return list.slice(0, 6);
+  }, [kind, id]);
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }}>
+      {/* Header */}
+      <div style={{
+        padding: "8px 10px", borderBottom: "1px solid var(--border-subtle)",
+        display: "flex", alignItems: "flex-start", gap: 6, flexShrink: 0,
+        background: "var(--surface-2)",
+      }}>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 1 }}>
+            {MINI_KIND_ICONS[kind]} {kind}
+          </div>
+          <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text)", lineHeight: 1.2 }}>{label}</div>
+          {subtitle && <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginTop: 2 }}>{subtitle}</div>}
+          {tags.length > 0 && (
+            <div style={{ display: "flex", gap: 4, flexWrap: "wrap", marginTop: 4 }}>
+              {tags.map((t, i) => <span key={i} className="tag accent" style={{ fontSize: "0.68rem" }}>{t}</span>)}
+            </div>
+          )}
+        </div>
+        <button type="button" onClick={onClose} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-faint)", fontSize: "1rem", padding: "2px 4px", flexShrink: 0 }}>✕</button>
+      </div>
+
+      {/* Scrollable body */}
+      <div style={{ flex: 1, overflowY: "auto", padding: "8px 10px", display: "flex", flexDirection: "column", gap: 8 }}>
+        {description && (
+          <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", lineHeight: 1.5, margin: 0 }}>
+            {description.length > 240 ? description.slice(0, 239) + "…" : description}
+          </p>
+        )}
+
+        {connections.length > 0 && (
+          <div>
+            <div style={{ fontSize: "0.66rem", fontWeight: 700, letterSpacing: "0.09em", textTransform: "uppercase", color: "var(--text-faint)", marginBottom: 4 }}>
+              Connections
+            </div>
+            {connections.map(({ othKind, othId, label: relLabel }, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => onNavigate(othKind, othId)}
+                style={{
+                  display: "flex", gap: 6, padding: "4px 5px", borderRadius: 3, fontSize: "0.78rem",
+                  width: "100%", textAlign: "left", background: "none", border: "none",
+                  borderBottom: "1px solid var(--border-subtle)",
+                  cursor: "pointer", alignItems: "center",
+                }}
+              >
+                <span style={{ color: "var(--text-faint)", flexShrink: 0 }}>{MINI_KIND_ICONS[othKind]}</span>
+                <span style={{ flex: 1, color: "var(--text)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                  {getEntityLabel(othKind, othId)}
+                </span>
+                <span style={{ fontSize: "0.68rem", color: "var(--text-faint)", flexShrink: 0 }}>{relLabel}</span>
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Footer actions */}
+      <div style={{ padding: "6px 10px", borderTop: "1px solid var(--border-subtle)", display: "flex", gap: 6, flexShrink: 0 }}>
+        <button
+          type="button"
+          className="view-on-map-btn"
+          style={{ flex: 1, fontSize: "0.78rem" }}
+          onClick={() => onOpenInSidebar(kind, id)}
+        >
+          View full details →
+        </button>
+        <button
+          type="button"
+          className="map-overlay-btn"
+          style={{ fontSize: "0.78rem", padding: "4px 10px" }}
+          onClick={onClose}
+        >
+          ✕ Close
+        </button>
       </div>
     </div>
   );
@@ -1004,7 +1343,7 @@ function EntityDetail({
     if (notes.length > 0) {
       tabs.push({ id: "evidence", label: `Evidence (${notes.length})` });
     }
-    if (relations.length > 0) {
+    if (relations.length > 0 || kind === "archaeology") {
       tabs.push({ id: "related", label: `Related (${relations.length})` });
     }
     return tabs;
@@ -1586,6 +1925,13 @@ function EntityEvidenceTab({ notes, onSelectEntity }: {
           <MarkdownRenderer onSelectEntity={onSelectEntity} searchQuery={searchQuery}>
             {n.body_md}
           </MarkdownRenderer>
+          {n.citation_urls.length > 0 && (
+            <div style={{ marginTop: 6, display: "flex", flexWrap: "wrap", gap: 4 }}>
+              {n.citation_urls.map((url, i) => (
+                <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="citation-link">{url}</a>
+              ))}
+            </div>
+          )}
         </div>
       ))}
     </div>
@@ -1598,25 +1944,33 @@ function EntityRelatedTab({ relations, entityId, entityType, onSelectEntity }: {
   entityType: string;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
+  const [page, setPage] = useState(0);
+  useEffect(() => { setPage(0); }, [entityId]);
+
   if (relations.length === 0) return <div className="empty-state">No related entities.</div>;
 
+  const pageItems = relations.slice(page * SIDEBAR_PAGE_SIZE, (page + 1) * SIDEBAR_PAGE_SIZE);
+
   return (
-    <div className="conn-list">
-      {relations.slice(0, 20).map((r) => {
-        const isOut   = r.source_id === entityId && r.source_type === entityType;
-        const otherId = isOut ? r.target_id   : r.source_id;
-        const othKind = isOut ? r.target_type : r.source_type;
-        const lbl     = getEntityLabel(othKind, otherId);
-        return (
-          <div key={r.relation_id} className="conn-card" onClick={() => onSelectEntity(othKind, otherId)}>
-            <span className="conn-icon">{kindIcon(othKind)}</span>
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div className="conn-name">{lbl}</div>
-              <div className="conn-rel">{r.relation_type?.replace(/_/g, " ")}</div>
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <div className="conn-list">
+        {pageItems.map((r) => {
+          const isOut   = r.source_id === entityId && r.source_type === entityType;
+          const otherId = isOut ? r.target_id   : r.source_id;
+          const othKind = isOut ? r.target_type : r.source_type;
+          const lbl     = getEntityLabel(othKind, otherId);
+          return (
+            <div key={r.relation_id} className="conn-card" onClick={() => onSelectEntity(othKind, otherId)}>
+              <span className="conn-icon">{kindIcon(othKind)}</span>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div className="conn-name">{lbl}</div>
+                <div className="conn-rel">{getRelationLabel(r.relation_type, isOut)}</div>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
+      <Pagination page={page} total={relations.length} pageSize={SIDEBAR_PAGE_SIZE} onChange={setPage} />
     </div>
   );
 }

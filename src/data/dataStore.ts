@@ -578,21 +578,26 @@ function getCitiesAtDecade(decade: number): CityAtDecade[] {
 }
 
 function getCumulativeCitiesAtDecade(decade: number): CityAtDecade[] {
-  const result: CityAtDecade[] = [];
-  const seen = new Set<string>();
+  // Keep the LATEST known state for each city (overwrite on each newer decade)
+  const latestByPlace = new Map<string, CityAtDecade>();
   for (const d of decades) {
     if (d > decade) break;
     for (const ps of placeStatesByDecade.get(d) ?? []) {
       if (!ps.place_id.startsWith("city:")) continue;
-      if (seen.has(ps.place_id)) continue;
       const cityId = ps.place_id.slice(5);
       const city = cityById.get(cityId);
       if (!city) continue;
-      seen.add(ps.place_id);
-      result.push({ ...city, ...ps });
+      latestByPlace.set(ps.place_id, { ...city, ...ps });
     }
   }
-  return result;
+  return Array.from(latestByPlace.values());
+}
+
+function getCumulativeArchAtDecade(decade: number) {
+  return archaeology.filter((a) => {
+    const start = a.year_start ?? -9999;
+    return start <= decade + 10;
+  });
 }
 
 // ─── Search helpers ───────────────────────────────────────────────────────────
@@ -708,6 +713,7 @@ export const dataStore = {
         const end = a.year_end ?? 9999;
         return start <= decade + 10 && end >= decade;
       }),
+    getCumulativeAtDecade: (decade: number) => getCumulativeArchAtDecade(decade),
     getAllTypes: () => Array.from(new Set(archaeology.map((a) => a.site_type))).sort(),
   },
 

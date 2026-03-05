@@ -166,6 +166,67 @@ function getCityIdsForPerson(personId: string): Set<string> {
   return cityIds;
 }
 
+// ─── Get city IDs connected to any entity type ───────────────────────────────
+
+function getConnectedCityIds(selection: { kind: string; id: string } | null): Set<string> {
+  if (!selection) return new Set();
+
+  if (selection.kind === "person") return getCityIdsForPerson(selection.id);
+
+  if (selection.kind === "event") {
+    const e = dataStore.events.getById(selection.id);
+    const ids = new Set<string>();
+    if (e?.primary_place_id?.startsWith("city:")) ids.add(e.primary_place_id.slice(5));
+    for (const r of dataStore.relations.getForEntity("event", selection.id)) {
+      if (r.source_type === "city") ids.add(r.source_id);
+      if (r.target_type === "city") ids.add(r.target_id);
+    }
+    return ids;
+  }
+
+  if (selection.kind === "work") {
+    const w = dataStore.works.getById(selection.id);
+    const ids = new Set<string>();
+    if (w?.place_written_id?.startsWith("city:")) ids.add(w.place_written_id.slice(5));
+    for (const rid of w?.place_recipient_ids ?? []) {
+      if (rid.startsWith("city:")) ids.add(rid.slice(5));
+    }
+    for (const r of dataStore.relations.getForEntity("work", selection.id)) {
+      if (r.source_type === "city") ids.add(r.source_id);
+      if (r.target_type === "city") ids.add(r.target_id);
+    }
+    return ids;
+  }
+
+  if (selection.kind === "doctrine") {
+    const fps = dataStore.footprints.getForEntity("doctrine", selection.id);
+    const ids = new Set(fps.filter((f) => f.place_id.startsWith("city:")).map((f) => f.place_id.slice(5)));
+    for (const r of dataStore.relations.getForEntity("doctrine", selection.id)) {
+      if (r.source_type === "city") ids.add(r.source_id);
+      if (r.target_type === "city") ids.add(r.target_id);
+    }
+    return ids;
+  }
+
+  if (selection.kind === "persuasion") {
+    return new Set(
+      dataStore.map.getAllPlaceStates()
+        .filter((ps) => ps.place_id.startsWith("city:") && (ps.persuasion_ids ?? []).includes(selection.id))
+        .map((ps) => ps.place_id.slice(5)),
+    );
+  }
+
+  if (selection.kind === "polity") {
+    return new Set(
+      dataStore.map.getAllPlaceStates()
+        .filter((ps) => ps.place_id.startsWith("city:") && ps.polity_id === selection.id)
+        .map((ps) => ps.place_id.slice(5)),
+    );
+  }
+
+  return new Set();
+}
+
 // ─── MapPage ──────────────────────────────────────────────────────────────────
 
 export function MapPage() {
@@ -271,8 +332,9 @@ export function MapPage() {
 
   const visibleArchSites = useMemo(() => {
     if (!archaeologyVisible) return [];
+    if (includeCumulative) return dataStore.archaeology.getCumulativeAtDecade(activeDecade);
     return dataStore.archaeology.getActiveAtDecade(activeDecade);
-  }, [activeDecade, archaeologyVisible]);
+  }, [activeDecade, archaeologyVisible, includeCumulative]);
 
   // ── Arc data ──────────────────────────────────────────────────────────────
 
@@ -414,11 +476,17 @@ export function MapPage() {
     const bounds: L.LatLngExpression[] = [];
     const selCityId = selection?.kind === "city" ? selection.id : null;
 
+    // Compute connected city IDs for non-city selections
+    const connectedCityIds = selection?.kind !== "city" ? getConnectedCityIds(selection) : new Set<string>();
+    const hasEntityHighlight = connectedCityIds.size > 0;
+
     for (const city of visibleCities) {
       if (city.lat == null || city.lon == null) continue;
-      const isSelected = city.city_id === selCityId;
-      const color      = PRESENCE_COLORS[city.presence_status] ?? "#8e8070";
-      const r          = isSelected ? 9 : 6;
+      const isSelected  = city.city_id === selCityId;
+      const isConnected = connectedCityIds.has(city.city_id);
+      const isDimmed    = hasEntityHighlight && !isConnected;
+      const color       = PRESENCE_COLORS[city.presence_status] ?? "#8e8070";
+      const r           = isSelected ? 9 : isConnected ? 8 : 6;
 
       if (isSelected) {
         L.circleMarker([city.lat, city.lon], {
@@ -428,12 +496,20 @@ export function MapPage() {
         }).addTo(rowLyr);
       }
 
+      // Highlight ring for connected cities
+      if (isConnected) {
+        L.circleMarker([city.lat, city.lon], {
+          radius: 14, color: "#c47c3a", weight: 2,
+          fillColor: "transparent", fillOpacity: 0,
+        }).addTo(rowLyr);
+      }
+
       const m = L.circleMarker([city.lat, city.lon], {
         radius: r,
-        color: isSelected ? "#c47c3a" : color,
-        weight: isSelected ? 2.5 : 1.2,
-        fillColor: color,
-        fillOpacity: isSelected ? 1 : 0.78,
+        color: isSelected ? "#c47c3a" : isConnected ? "#e8943a" : color,
+        weight: isSelected ? 2.5 : isConnected ? 2 : 1.2,
+        fillColor: isConnected ? "#e8943a" : color,
+        fillOpacity: isSelected ? 1 : isDimmed ? 0.22 : isConnected ? 0.92 : 0.78,
       });
 
       const ancientName = city.city_ancient || city.city_label;
@@ -541,6 +617,14 @@ export function MapPage() {
     }
   }, []);
 
+  const handleFlyToArch = useCallback((archId: string) => {
+    const map = mapRef.current;
+    const site = dataStore.archaeology.getById(archId);
+    if (map && site?.lat != null && site?.lon != null) {
+      map.setView([site.lat, site.lon], 9, { animate: true });
+    }
+  }, []);
+
   // ── Render ────────────────────────────────────────────────────────────────
 
   return (
@@ -591,6 +675,7 @@ export function MapPage() {
         <div className={`map-right${sidebarExpanded ? " expanded" : ""}`}>
           <RightSidebar
             onFlyToCity={handleFlyToCity}
+            onFlyToArch={handleFlyToArch}
             currentDecade={activeDecade}
           />
         </div>

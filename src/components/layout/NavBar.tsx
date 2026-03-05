@@ -9,7 +9,6 @@ export function NavBar() {
       </div>
 
       <div className="nav-spacer" />
-
       <NavLink to="/graph" className={({ isActive }) => `nav-btn${isActive ? " active" : ""}`}>
         ✦ Graph
       </NavLink>

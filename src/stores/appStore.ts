@@ -89,7 +89,7 @@ export interface AppState {
 // ─── Defaults ────────────────────────────────────────────────────────────────
 
 const decades = dataStore.map.getDecades();
-const defaultDecade = decades[0] ?? 33;
+const defaultDecade = decades.find((d) => d >= 0) ?? decades[0] ?? 0;
 
 // ─── Store ───────────────────────────────────────────────────────────────────
 

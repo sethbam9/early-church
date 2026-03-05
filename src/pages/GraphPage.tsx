@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState, useMemo } from "react";
+import { useEffect, useRef, useState, useMemo, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { dataStore, getEntityLabel } from "../data/dataStore";
 import type { Selection } from "../data/dataStore";
 import { useAppStore } from "../stores/appStore";
+import { getRelationLabel } from "../domain/relationLabels";
 
-// ─── Force simulation (no D3 dependency) ─────────────────────────────────────
+// ─── Types ────────────────────────────────────────────────────────────────────
 
 interface GraphNode {
   id: string;
@@ -15,6 +16,7 @@ interface GraphNode {
   vx: number;
   vy: number;
   r: number;
+  connections: number;
 }
 
 interface GraphEdge {
@@ -23,6 +25,8 @@ interface GraphEdge {
   label: string;
   weight: number;
 }
+
+// ─── Constants ────────────────────────────────────────────────────────────────
 
 const KIND_COLORS: Record<string, string> = {
   person:      "#c47c3a",
@@ -40,11 +44,14 @@ const KIND_ICONS: Record<string, string> = {
   archaeology: "★", city: "🏛", persuasion: "✦", polity: "⚔",
 };
 
+// ─── Graph builder ────────────────────────────────────────────────────────────
+
 function buildGraph(filter: string) {
   const relations = dataStore.relations.getAll();
   const nodeMap = new Map<string, GraphNode>();
   const edgeSet = new Set<string>();
   const edges: GraphEdge[] = [];
+  const connCounts = new Map<string, number>();
 
   function addNode(kind: string, id: string) {
     const key = `${kind}:${id}`;
@@ -53,7 +60,7 @@ function buildGraph(filter: string) {
         id: key, kind, label: getEntityLabel(kind, id),
         x: (Math.random() - 0.5) * 600,
         y: (Math.random() - 0.5) * 400,
-        vx: 0, vy: 0, r: 18,
+        vx: 0, vy: 0, r: 12, connections: 0,
       });
     }
   }
@@ -63,6 +70,8 @@ function buildGraph(filter: string) {
     if (edgeSet.has(key)) return;
     edgeSet.add(key);
     edges.push({ source, target, label, weight });
+    connCounts.set(source, (connCounts.get(source) ?? 0) + 1);
+    connCounts.set(target, (connCounts.get(target) ?? 0) + 1);
   }
 
   for (const r of relations) {
@@ -79,7 +88,6 @@ function buildGraph(filter: string) {
     );
   }
 
-  // person → work (authored)
   for (const w of dataStore.works.getAll()) {
     if (!w.author_person_id) continue;
     if (filter !== "all" && filter !== "person" && filter !== "work") continue;
@@ -88,7 +96,6 @@ function buildGraph(filter: string) {
     addEdge(`person:${w.author_person_id}`, `work:${w.work_id}`, "authored", 3);
   }
 
-  // work → doctrine (via quotes)
   for (const q of dataStore.quotes.getAll()) {
     if (!q.work_id) continue;
     if (filter !== "all" && filter !== "work" && filter !== "doctrine") continue;
@@ -97,7 +104,6 @@ function buildGraph(filter: string) {
     addEdge(`work:${q.work_id}`, `doctrine:${q.doctrine_id}`, "addresses", 2);
   }
 
-  // city connections via footprints
   if (filter === "all" || filter === "city" || filter === "person") {
     for (const p of dataStore.people.getAll()) {
       if (p.city_of_origin_id) {
@@ -108,8 +114,18 @@ function buildGraph(filter: string) {
     }
   }
 
-  return { nodes: Array.from(nodeMap.values()), edges };
+  // Apply connection counts → node radius (larger = more connected)
+  const nodes = Array.from(nodeMap.values());
+  for (const node of nodes) {
+    const count = connCounts.get(node.id) ?? 0;
+    node.connections = count;
+    node.r = Math.max(8, Math.min(28, 8 + count * 1.6));
+  }
+
+  return { nodes, edges };
 }
+
+// ─── Force layout ─────────────────────────────────────────────────────────────
 
 function runForce(nodes: GraphNode[], edges: GraphEdge[], width: number, height: number) {
   const k = 110;
@@ -159,7 +175,43 @@ function runForce(nodes: GraphNode[], edges: GraphEdge[], width: number, height:
   }
 }
 
-// ─── Component ────────────────────────────────────────────────────────────────
+// Run force layout synchronously (no animation loop)
+function runForceSync(nodes: GraphNode[], edges: GraphEdge[], width: number, height: number) {
+  const ticks = nodes.length > 150 ? 100 : nodes.length > 80 ? 160 : 220;
+  for (let i = 0; i < ticks; i++) {
+    runForce(nodes, edges, width, height);
+  }
+}
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+function getEntityYear(kind: string, id: string): number | null {
+  if (kind === "person") {
+    const p = dataStore.people.getById(id);
+    return p?.birth_year ?? p?.death_year ?? null;
+  }
+  if (kind === "work") {
+    const w = dataStore.works.getById(id);
+    return w?.year_written_start ?? null;
+  }
+  if (kind === "event") {
+    const e = dataStore.events.getById(id);
+    return e?.year_start ?? null;
+  }
+  return null;
+}
+
+function snapToDecade(year: number, decades: number[]): number {
+  if (!decades.length) return year;
+  return decades.reduce((best, d) =>
+    Math.abs(d - year) < Math.abs(best - year) ? d : best, decades[0]!);
+}
+
+function getNodeLabel(nodeId: string, nodes: GraphNode[]): string {
+  return nodes.find((n) => n.id === nodeId)?.label ?? nodeId;
+}
+
+// ─── Filter options ───────────────────────────────────────────────────────────
 
 const FILTER_OPTIONS = [
   { value: "all",       label: "All" },
@@ -170,59 +222,43 @@ const FILTER_OPTIONS = [
   { value: "city",      label: "🏛 Places" },
 ];
 
+// ─── GraphPage ────────────────────────────────────────────────────────────────
+
 export function GraphPage() {
   const navigate = useNavigate();
   const svgRef = useRef<SVGSVGElement | null>(null);
-  const animRef = useRef<number | null>(null);
   const nodesRef = useRef<GraphNode[]>([]);
   const edgesRef = useRef<GraphEdge[]>([]);
   const svgSizeRef = useRef({ width: 800, height: 600 });
+  const panRef = useRef({ lastX: 0, lastY: 0, active: false });
+  const zoomRef = useRef(1.0);
 
   const [filter, setFilter] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [hoveredEdge, setHoveredEdge] = useState<number | null>(null);
-  const [tick, setTick] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const dragNodeRef = useRef<string | null>(null);
-  const panRef = useRef({ lastX: 0, lastY: 0, active: false });
+  const [selectedEdge, setSelectedEdge] = useState<number | null>(null);
   const [pan, setPan] = useState({ x: 0, y: 0 });
+  const [zoom, setZoom] = useState(1.0);
+  const [, forceRender] = useState(0);
 
+  // Build and layout graph synchronously when filter changes
   useEffect(() => {
     const { nodes, edges } = buildGraph(filter);
+    const { width, height } = svgSizeRef.current;
+    runForceSync(nodes, edges, width, height);
     nodesRef.current = nodes;
     edgesRef.current = edges;
     setSelectedKey(null);
+    setSelectedEdge(null);
+    setPan({ x: 0, y: 0 });
+    setZoom(1.0);
+    zoomRef.current = 1.0;
+    forceRender((n) => n + 1);
   }, [filter]);
 
-  // Search handler: select first matching node
-  const handleSearchSelect = () => {
-    const q = searchQuery.trim().toLowerCase();
-    if (!q) return;
-    const match = nodesRef.current.find(
-      (n) => n.label.toLowerCase().includes(q) || n.kind.toLowerCase().includes(q)
-    );
-    if (match) setSelectedKey(match.id);
-  };
-
-  useEffect(() => {
-    let frameCount = 0;
-    function animate() {
-      const { width, height } = svgSizeRef.current;
-      runForce(nodesRef.current, edgesRef.current, width, height);
-      frameCount++;
-      if (frameCount % 2 === 0) setTick((t) => t + 1);
-      // Stop early for large graphs to prevent bounce
-      if (frameCount > 120 && nodesRef.current.length > 100) {
-        if (animRef.current) cancelAnimationFrame(animRef.current);
-      } else {
-        animRef.current = requestAnimationFrame(animate);
-      }
-    }
-    animRef.current = requestAnimationFrame(animate);
-    return () => { if (animRef.current) cancelAnimationFrame(animRef.current); };
-  }, []);
-
+  // Observe SVG size
   useEffect(() => {
     const el = svgRef.current;
     if (!el) return;
@@ -234,25 +270,34 @@ export function GraphPage() {
     return () => obs.disconnect();
   }, []);
 
-  // Tick used only to trigger re-render
-  void tick;
+  // Non-passive wheel zoom (must use addEventListener to call preventDefault)
+  useEffect(() => {
+    const el = svgRef.current;
+    if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      const scaleFactor = e.deltaY < 0 ? 1.12 : 0.89;
+      const rect = el.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+      setZoom((prevZoom) => {
+        const newZoom = Math.max(0.15, Math.min(6, prevZoom * scaleFactor));
+        zoomRef.current = newZoom;
+        setPan((prevPan) => {
+          const gx = (mouseX - prevPan.x) / prevZoom;
+          const gy = (mouseY - prevPan.y) / prevZoom;
+          return { x: mouseX - gx * newZoom, y: mouseY - gy * newZoom };
+        });
+        return newZoom;
+      });
+    };
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, []);
 
-  function handleNodeMouseDown(e: React.MouseEvent, nodeId: string) {
-    e.stopPropagation();
-    dragNodeRef.current = nodeId;
-    setIsDragging(true);
-  }
-
+  // Pan handlers (no node dragging)
   function handleSvgMouseMove(e: React.MouseEvent<SVGSVGElement>) {
-    const svgEl = svgRef.current;
-    if (!svgEl) return;
-    const rect = svgEl.getBoundingClientRect();
-    const x = e.clientX - rect.left - pan.x;
-    const y = e.clientY - rect.top - pan.y;
-    if (dragNodeRef.current) {
-      const node = nodesRef.current.find((n) => n.id === dragNodeRef.current);
-      if (node) { node.x = x; node.y = y; node.vx = 0; node.vy = 0; }
-    } else if (panRef.current.active) {
+    if (panRef.current.active) {
       const dx = e.clientX - panRef.current.lastX;
       const dy = e.clientY - panRef.current.lastY;
       panRef.current.lastX = e.clientX;
@@ -261,21 +306,67 @@ export function GraphPage() {
     }
   }
 
-  function handleSvgMouseUp() {
-    dragNodeRef.current = null;
-    setIsDragging(false);
-    panRef.current.active = false;
-  }
+  function handleSvgMouseUp() { panRef.current.active = false; }
 
   function handleSvgMouseDown(e: React.MouseEvent<SVGSVGElement>) {
     const tag = (e.target as Element).tagName;
-    if (tag === "svg" || tag === "line") {
+    if (tag === "svg" || tag === "g") {
       panRef.current.active = true;
       panRef.current.lastX = e.clientX;
       panRef.current.lastY = e.clientY;
     }
   }
 
+  // Zoom button handlers
+  const zoomIn  = useCallback(() => {
+    const nz = Math.min(6, zoomRef.current * 1.25);
+    zoomRef.current = nz;
+    setZoom(nz);
+  }, []);
+  const zoomOut = useCallback(() => {
+    const nz = Math.max(0.15, zoomRef.current * 0.8);
+    zoomRef.current = nz;
+    setZoom(nz);
+  }, []);
+  const resetView = useCallback(() => {
+    setZoom(1); setZoom(1); zoomRef.current = 1; setPan({ x: 0, y: 0 });
+  }, []);
+
+  // Search: live dropdown, pan to selected node on pick
+  const searchSuggestions = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (q.length < 1) return [];
+    return nodesRef.current
+      .filter((n) => n.label.toLowerCase().includes(q) || n.kind.toLowerCase().includes(q))
+      .sort((a, b) => b.connections - a.connections)
+      .slice(0, 10);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchQuery, filter]);
+
+  const panToNode = useCallback((node: GraphNode) => {
+    const { width, height } = svgSizeRef.current;
+    const z = zoomRef.current;
+    setPan({ x: width / 2 - node.x * z, y: height / 2 - node.y * z });
+  }, []);
+
+  function handleSearchDropdownSelect(nodeId: string) {
+    setSelectedKey(nodeId);
+    setShowDropdown(false);
+    const node = nodesRef.current.find((n) => n.id === nodeId);
+    if (node) panToNode(node);
+  }
+
+  function handleSearchEnter() {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return;
+    const match = nodesRef.current
+      .filter((n) => n.label.toLowerCase().includes(q) || n.kind.toLowerCase().includes(q))
+      .sort((a, b) => b.connections - a.connections)[0];
+    if (match) { setSelectedKey(match.id); panToNode(match); }
+    setShowDropdown(false);
+  }
+
+  // Selection → entity object
   const selection: Selection | null = useMemo(() => {
     if (!selectedKey) return null;
     const colon = selectedKey.indexOf(":");
@@ -285,38 +376,46 @@ export function GraphPage() {
     return { kind: kind as Selection["kind"], id };
   }, [selectedKey]);
 
+  // "View on map" — navigate and set decade
   function handleGoToMap() {
-    if (selection) useAppStore.getState().setSelection(selection);
+    if (selection) {
+      useAppStore.getState().setSelection(selection);
+      const year = getEntityYear(selection.kind, selection.id);
+      if (year) {
+        const decades = dataStore.map.getDecades();
+        useAppStore.getState().setDecade(snapToDecade(year, decades));
+      }
+    }
     navigate("/");
   }
 
   const nodes = nodesRef.current;
   const edges = edgesRef.current;
+  const selectedEdgeInfo = selectedEdge != null ? edges[selectedEdge] ?? null : null;
 
   return (
     <div className="graph-page">
-      {/* Left sidebar */}
-      <div className="graph-sidebar">
-        {/* Return to map */}
-        <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)" }}>
+      {/* ── Left sidebar ── */}
+      <div className="graph-sidebar" style={{ overflowY: "auto", display: "flex", flexDirection: "column" }}>
+        <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", flexShrink: 0 }}>
           <button
             type="button"
             className="map-overlay-btn"
             style={{ width: "100%", textAlign: "left", boxShadow: "none" }}
-            onClick={handleGoToMap}
+            onClick={() => navigate("/")}
           >
             ← Map
           </button>
         </div>
 
-        <div className="panel-header">
+        <div className="panel-header" style={{ flexShrink: 0 }}>
           <div className="panel-eyebrow">Network</div>
           <div className="panel-title">Connection Graph</div>
           <div className="panel-subtitle">{nodes.length} nodes · {edges.length} edges</div>
         </div>
 
         {/* Filter */}
-        <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)" }}>
+        <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", flexShrink: 0 }}>
           <div className="filter-label" style={{ marginBottom: 6 }}>Filter by type</div>
           <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
             {FILTER_OPTIONS.map(({ value, label }) => (
@@ -333,64 +432,68 @@ export function GraphPage() {
           </div>
         </div>
 
-        {/* Search */}
-        <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)" }}>
+        {/* Search with live dropdown */}
+        <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", position: "relative", flexShrink: 0 }}>
           <div className="filter-label" style={{ marginBottom: 6 }}>Search nodes</div>
           <div style={{ display: "flex", gap: 6 }}>
             <input
               type="text"
               placeholder="Name or kind…"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyDown={(e) => { if (e.key === "Enter") handleSearchSelect(); }}
+              onChange={(e) => { setSearchQuery(e.target.value); setShowDropdown(true); }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") handleSearchEnter();
+                if (e.key === "Escape") setShowDropdown(false);
+              }}
+              onFocus={() => setShowDropdown(true)}
+              onBlur={() => setTimeout(() => setShowDropdown(false), 180)}
               style={{
-                flex: 1,
-                padding: "6px 9px",
-                fontSize: "0.82rem",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius-sm)",
-                background: "var(--surface-2)",
-                color: "var(--text)",
+                flex: 1, padding: "6px 9px", fontSize: "0.82rem",
+                border: "1px solid var(--border)", borderRadius: "var(--radius-sm)",
+                background: "var(--surface-2)", color: "var(--text)",
               }}
             />
-            <button
-              type="button"
-              onClick={handleSearchSelect}
-              disabled={!searchQuery.trim()}
-              style={{
-                padding: "6px 12px",
-                fontSize: "0.82rem",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius-sm)",
-                background: searchQuery.trim() ? "var(--accent)" : "var(--surface-3)",
-                color: searchQuery.trim() ? "var(--surface)" : "var(--text-faint)",
-                cursor: searchQuery.trim() ? "pointer" : "not-allowed",
-              }}
-            >
-              🔍
-            </button>
             {searchQuery && (
               <button
                 type="button"
-                onClick={() => { setSearchQuery(""); setSelectedKey(null); }}
-                style={{
-                  padding: "6px 9px",
-                  fontSize: "0.82rem",
-                  border: "1px solid var(--border)",
-                  borderRadius: "var(--radius-sm)",
-                  background: "var(--surface-3)",
-                  color: "var(--text-faint)",
-                  cursor: "pointer",
-                }}
+                onClick={() => { setSearchQuery(""); setSelectedKey(null); setShowDropdown(false); }}
+                style={{ padding: "6px 9px", fontSize: "0.82rem", border: "1px solid var(--border)", borderRadius: "var(--radius-sm)", background: "var(--surface-3)", color: "var(--text-faint)", cursor: "pointer" }}
               >
                 ✕
               </button>
             )}
           </div>
+          {/* Dropdown suggestions */}
+          {showDropdown && searchSuggestions.length > 0 && (
+            <div style={{
+              position: "absolute", top: "calc(100% - 2px)", left: 12, right: 12, zIndex: 200,
+              background: "var(--surface)", border: "1px solid var(--border)",
+              borderRadius: "var(--radius-sm)", boxShadow: "0 4px 14px rgba(0,0,0,.35)",
+              maxHeight: 240, overflowY: "auto",
+            }}>
+              {searchSuggestions.map((n) => (
+                <button
+                  key={n.id}
+                  type="button"
+                  onMouseDown={() => handleSearchDropdownSelect(n.id)}
+                  style={{
+                    display: "flex", alignItems: "center", gap: 8, width: "100%",
+                    textAlign: "left", padding: "7px 10px", border: "none",
+                    background: "none", cursor: "pointer", borderBottom: "1px solid var(--border-subtle)",
+                    color: "var(--text)", fontSize: "0.82rem",
+                  }}
+                >
+                  <span style={{ width: 8, height: 8, borderRadius: "50%", background: KIND_COLORS[n.kind] ?? "#666", flexShrink: 0, display: "inline-block" }} />
+                  <span style={{ flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{n.label}</span>
+                  <span style={{ fontSize: "0.7rem", color: "var(--text-faint)", flexShrink: 0 }}>{n.connections} conn</span>
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Legend */}
-        <div style={{ padding: "10px 12px" }}>
+        <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", flexShrink: 0 }}>
           <div className="filter-label" style={{ marginBottom: 6 }}>Node types</div>
           {Object.entries(KIND_COLORS).map(([kind, color]) => (
             <div key={kind} style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: 5, fontSize: "0.8rem" }}>
@@ -398,11 +501,14 @@ export function GraphPage() {
               <span style={{ color: "var(--text-muted)" }}>{KIND_ICONS[kind]} {kind}</span>
             </div>
           ))}
+          <div style={{ marginTop: 8, fontSize: "0.74rem", color: "var(--text-faint)", lineHeight: 1.4 }}>
+            Node size ∝ connections
+          </div>
         </div>
 
         {/* Selected node info */}
         {selectedKey && (
-          <div style={{ padding: "10px 12px", borderTop: "1px solid var(--border-subtle)", marginTop: "auto" }}>
+          <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", flexShrink: 0 }}>
             <div className="filter-label" style={{ marginBottom: 5 }}>Selected</div>
             <div style={{ fontSize: "0.88rem", color: "var(--text)", fontWeight: 600, marginBottom: 8 }}>
               {nodes.find((n) => n.id === selectedKey)?.label ?? selectedKey}
@@ -412,48 +518,113 @@ export function GraphPage() {
             </button>
           </div>
         )}
+
+        {/* Selected edge info */}
+        {selectedEdgeInfo && (
+          <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", flexShrink: 0 }}>
+            <div className="filter-label" style={{ marginBottom: 5 }}>Connection</div>
+            <div style={{ fontSize: "0.8rem", lineHeight: 1.6 }}>
+              <div style={{ fontWeight: 600, color: "var(--text)" }}>{getNodeLabel(selectedEdgeInfo.source, nodes)}</div>
+              <div style={{ color: "var(--accent)", fontStyle: "italic", margin: "2px 0" }}>— {selectedEdgeInfo.label} →</div>
+              <div style={{ fontWeight: 600, color: "var(--text)" }}>{getNodeLabel(selectedEdgeInfo.target, nodes)}</div>
+            </div>
+            <div style={{ display: "flex", gap: 6, marginTop: 6 }}>
+              <button
+                type="button"
+                className="filter-tab"
+                style={{ fontSize: "0.75rem", padding: "3px 8px" }}
+                onClick={() => setSelectedKey(selectedEdgeInfo.source)}
+              >
+                Go to source
+              </button>
+              <button
+                type="button"
+                className="filter-tab"
+                style={{ fontSize: "0.75rem", padding: "3px 8px" }}
+                onClick={() => setSelectedKey(selectedEdgeInfo.target)}
+              >
+                Go to target
+              </button>
+            </div>
+            <button type="button" onClick={() => setSelectedEdge(null)} style={{ marginTop: 4, background: "none", border: "none", color: "var(--text-faint)", cursor: "pointer", fontSize: "0.75rem" }}>
+              ✕ dismiss
+            </button>
+          </div>
+        )}
       </div>
 
-      {/* Graph canvas */}
-      <div className="graph-canvas-area">
+      {/* ── Graph canvas ── */}
+      <div className="graph-canvas-area" style={{ position: "relative", overflow: "hidden" }}>
+        {/* Zoom controls */}
+        <div style={{ position: "absolute", top: 12, right: 12, zIndex: 10, display: "flex", flexDirection: "column", gap: 4 }}>
+          <button type="button" className="map-overlay-btn" style={{ width: 32, height: 32, padding: 0, textAlign: "center", fontSize: "1.2rem", lineHeight: 1 }} onClick={zoomIn} title="Zoom in">+</button>
+          <button type="button" className="map-overlay-btn" style={{ width: 32, height: 32, padding: 0, textAlign: "center", fontSize: "1.4rem", lineHeight: 1 }} onClick={zoomOut} title="Zoom out">−</button>
+          <button type="button" className="map-overlay-btn" style={{ width: 32, height: 18, padding: 0, fontSize: "0.68rem", textAlign: "center", lineHeight: "18px" }} onClick={resetView} title="Reset view">fit</button>
+        </div>
+        <div style={{ position: "absolute", bottom: 10, left: "50%", transform: "translateX(-50%)", zIndex: 10, fontSize: "0.72rem", color: "var(--text-faint)", pointerEvents: "none", background: "rgba(0,0,0,.3)", padding: "3px 8px", borderRadius: 4 }}>
+          Scroll to zoom · Drag canvas to pan · Click node or edge
+        </div>
+
         <svg
           ref={svgRef}
           className="graph-svg"
+          style={{ cursor: "grab" }}
           onMouseMove={handleSvgMouseMove}
           onMouseUp={handleSvgMouseUp}
           onMouseLeave={handleSvgMouseUp}
           onMouseDown={handleSvgMouseDown}
         >
-          <g transform={`translate(${pan.x},${pan.y})`}>
+          <g transform={`translate(${pan.x},${pan.y}) scale(${zoom})`}>
             {/* Edges */}
             {edges.map((e, i) => {
               const src = nodes.find((n) => n.id === e.source);
               const tgt = nodes.find((n) => n.id === e.target);
               if (!src || !tgt) return null;
-              const isSelected  = selectedKey === e.source || selectedKey === e.target;
-              const isHoveredE  = hoveredEdge === i;
+              const isNodeSelected = selectedKey === e.source || selectedKey === e.target;
+              const isEdgeSel = selectedEdge === i;
+              const isHovered = hoveredEdge === i;
+              const mx = (src.x + tgt.x) / 2;
+              const my = (src.y + tgt.y) / 2;
+              const strokeColor = isEdgeSel
+                ? "var(--accent)"
+                : isNodeSelected
+                  ? "var(--accent-bright)"
+                  : "var(--border)";
+              const strokeW = isEdgeSel ? 2.5 : isNodeSelected ? Math.max(1.5, e.weight * 0.4) : 0.8;
+              const strokeOp = isEdgeSel ? 0.95 : isNodeSelected ? 0.75 : 0.28;
               return (
                 <g key={i}>
+                  {/* Wide invisible hit area */}
                   <line
                     x1={src.x} y1={src.y} x2={tgt.x} y2={tgt.y}
-                    stroke={isSelected ? "var(--accent-bright)" : "var(--border)"}
-                    strokeWidth={isSelected ? Math.max(1.5, e.weight * 0.5) : 1}
-                    strokeOpacity={isSelected ? 0.75 : 0.3}
+                    stroke="transparent" strokeWidth={10}
+                    style={{ cursor: "pointer" }}
                     onMouseEnter={() => setHoveredEdge(i)}
                     onMouseLeave={() => setHoveredEdge(null)}
-                    style={{ cursor: "default" }}
+                    onClick={(ev) => {
+                      ev.stopPropagation();
+                      setSelectedEdge(selectedEdge === i ? null : i);
+                      setSelectedKey(null);
+                    }}
                   />
-                  {(isHoveredE || isSelected) && (
-                    <text
-                      x={(src.x + tgt.x) / 2}
-                      y={(src.y + tgt.y) / 2 - 4}
-                      textAnchor="middle"
-                      fill="var(--text-faint)"
-                      fontSize="9"
-                      style={{ pointerEvents: "none" }}
-                    >
-                      {e.label}
-                    </text>
+                  <line
+                    x1={src.x} y1={src.y} x2={tgt.x} y2={tgt.y}
+                    stroke={strokeColor}
+                    strokeWidth={strokeW}
+                    strokeOpacity={strokeOp}
+                    style={{ pointerEvents: "none" }}
+                  />
+                  {/* Label on hover or selected */}
+                  {(isHovered || isEdgeSel) && (
+                    <g style={{ pointerEvents: "none" }}>
+                      <rect
+                        x={mx - 42} y={my - 17} width={84} height={17}
+                        rx={4} fill="var(--surface)" stroke="var(--border)" strokeWidth={0.5} fillOpacity={0.93}
+                      />
+                      <text x={mx} y={my - 5} textAnchor="middle" fill="var(--text-muted)" fontSize="9">
+                        {e.label}
+                      </text>
+                    </g>
                   )}
                 </g>
               );
@@ -463,27 +634,41 @@ export function GraphPage() {
             {nodes.map((n) => {
               const color      = KIND_COLORS[n.kind] ?? "#6c757d";
               const isSelected = n.id === selectedKey;
+              // Show label if: selected, high-connection, or small graph
+              const showLabel  = isSelected || n.connections >= 3 || nodes.length < 60;
               return (
                 <g
                   key={n.id}
                   transform={`translate(${n.x},${n.y})`}
-                  style={{ cursor: isDragging && dragNodeRef.current === n.id ? "grabbing" : "pointer" }}
-                  onMouseDown={(e) => handleNodeMouseDown(e, n.id)}
-                  onClick={(e) => { e.stopPropagation(); setSelectedKey(n.id === selectedKey ? null : n.id); }}
+                  style={{ cursor: "pointer" }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedKey(n.id === selectedKey ? null : n.id);
+                    setSelectedEdge(null);
+                  }}
                 >
+                  {isSelected && (
+                    <circle r={n.r + 7} fill="none" stroke="#fff" strokeWidth={2} strokeOpacity={0.4} />
+                  )}
                   <circle
-                    r={isSelected ? n.r + 4 : n.r}
+                    r={isSelected ? n.r + 3 : n.r}
                     fill={color}
-                    fillOpacity={isSelected ? 0.9 : 0.65}
+                    fillOpacity={isSelected ? 0.95 : 0.72}
                     stroke={isSelected ? "#fff" : color}
-                    strokeWidth={isSelected ? 2.5 : 1}
+                    strokeWidth={isSelected ? 2.5 : 0.8}
                   />
-                  {(isSelected || nodes.length < 50) && (
+                  {/* Connection count badge for highly-connected nodes */}
+                  {n.connections >= 5 && !isSelected && (
+                    <text y={3} textAnchor="middle" fill="#fff" fontSize="8" fontWeight="700" style={{ pointerEvents: "none" }}>
+                      {n.connections}
+                    </text>
+                  )}
+                  {showLabel && (
                     <text
-                      y={n.r + 12}
+                      y={n.r + 11}
                       textAnchor="middle"
                       fill="var(--text)"
-                      fontSize={isSelected ? "11" : "9"}
+                      fontSize={isSelected ? "10" : "8"}
                       fontWeight={isSelected ? "700" : "400"}
                       style={{ pointerEvents: "none" }}
                     >
@@ -503,13 +688,18 @@ export function GraphPage() {
         )}
       </div>
 
-      {/* Detail panel */}
+      {/* ── Right detail panel ── */}
       {selection && (
         <div style={{ width: 300, flexShrink: 0, borderLeft: "1px solid var(--border)", background: "var(--surface)", display: "flex", flexDirection: "column", overflow: "hidden" }}>
           <GraphDetailPanel
             selection={selection}
             onClose={() => setSelectedKey(null)}
             onGoToMap={handleGoToMap}
+            onSelectNode={(kind, id) => {
+              setSelectedKey(`${kind}:${id}`);
+              const node = nodesRef.current.find((n) => n.id === `${kind}:${id}`);
+              if (node) panToNode(node);
+            }}
           />
         </div>
       )}
@@ -517,12 +707,13 @@ export function GraphPage() {
   );
 }
 
-// ─── Simple inline detail panel for graph page ────────────────────────────────
+// ─── GraphDetailPanel ─────────────────────────────────────────────────────────
 
-function GraphDetailPanel({ selection, onClose, onGoToMap }: {
+function GraphDetailPanel({ selection, onClose, onGoToMap, onSelectNode }: {
   selection: Selection;
   onClose: () => void;
   onGoToMap: () => void;
+  onSelectNode: (kind: string, id: string) => void;
 }) {
   const { kind, id } = selection;
   const label = getEntityLabel(kind, id);
@@ -532,7 +723,6 @@ function GraphDetailPanel({ selection, onClose, onGoToMap }: {
     if (kind === "work")      return dataStore.works.getById(id)?.description ?? "";
     if (kind === "doctrine")  return dataStore.doctrines.getById(id)?.description ?? "";
     if (kind === "event")     return dataStore.events.getById(id)?.description ?? "";
-    if (kind === "city")      return "";
     if (kind === "persuasion")return dataStore.persuasions.getById(id)?.description ?? "";
     if (kind === "polity")    return dataStore.polities.getById(id)?.description ?? "";
     return "";
@@ -547,58 +737,50 @@ function GraphDetailPanel({ selection, onClose, onGoToMap }: {
       const w = dataStore.works.getById(id);
       return w ? `${w.author_name_display}${w.year_written_start ? ` · AD ${w.year_written_start}` : ""}` : "";
     }
-    if (kind === "doctrine") {
-      const d = dataStore.doctrines.getById(id);
-      return d?.category ?? "";
-    }
+    if (kind === "doctrine") return dataStore.doctrines.getById(id)?.category ?? "";
     if (kind === "event") {
       const e = dataStore.events.getById(id);
       return e ? [e.year_start && `AD ${e.year_start}`, e.event_type].filter(Boolean).join(" · ") : "";
     }
-    if (kind === "city") {
-      const c = dataStore.cities.getById(id);
-      return c?.country_modern ?? "";
-    }
+    if (kind === "city") return dataStore.cities.getById(id)?.country_modern ?? "";
     return "";
   }, [kind, id]);
 
-  // Build connections: relations + synthetic edges (authored, addresses)
+  // Build connections list
   const connections = useMemo(() => {
-    type Conn = { othKind: string; othId: string; label: string };
+    type Conn = { othKind: string; othId: string; label: string; isOut: boolean };
     const seen = new Set<string>();
     const list: Conn[] = [];
-    const add = (othKind: string, othId: string, label: string) => {
-      const key = `${othKind}:${othId}`;
-      if (!seen.has(key)) { seen.add(key); list.push({ othKind, othId, label }); }
+    const add = (othKind: string, othId: string, label: string, isOut: boolean) => {
+      const key = `${othKind}:${othId}:${label}`;
+      if (!seen.has(key)) { seen.add(key); list.push({ othKind, othId, label, isOut }); }
     };
 
     for (const r of dataStore.relations.getForEntity(kind, id)) {
       const isOut   = r.source_id === id && r.source_type === kind;
       const othId   = isOut ? r.target_id   : r.source_id;
       const othKind = isOut ? r.target_type : r.source_type;
-      add(othKind, othId, r.relation_type.replace(/_/g, " "));
+      add(othKind, othId, getRelationLabel(r.relation_type, isOut), isOut);
     }
 
     if (kind === "work") {
       const w = dataStore.works.getById(id);
-      if (w?.author_person_id) add("person", w.author_person_id, "authored by");
-      for (const q of dataStore.quotes.getByWork(id)) {
-        add("doctrine", q.doctrine_id, "addresses");
-      }
+      if (w?.author_person_id) add("person", w.author_person_id, "authored by", false);
+      for (const q of dataStore.quotes.getByWork(id)) add("doctrine", q.doctrine_id, "addresses", true);
     }
     if (kind === "person") {
       for (const w of dataStore.works.getAll()) {
-        if (w.author_person_id === id) add("work", w.work_id, "authored");
+        if (w.author_person_id === id) add("work", w.work_id, "authored", true);
       }
     }
 
-    return list.slice(0, 16);
+    return list;
   }, [kind, id]);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }}>
       {/* Header */}
-      <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", display: "flex", alignItems: "flex-start", gap: 6 }}>
+      <div style={{ padding: "10px 12px", borderBottom: "1px solid var(--border-subtle)", display: "flex", alignItems: "flex-start", gap: 6, flexShrink: 0 }}>
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 2 }}>
             {KIND_ICONS[kind]} {kind}
@@ -609,6 +791,7 @@ function GraphDetailPanel({ selection, onClose, onGoToMap }: {
         <button type="button" onClick={onClose} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-faint)", fontSize: "1rem", padding: "2px 4px", flexShrink: 0 }}>✕</button>
       </div>
 
+      {/* Scrollable body */}
       <div style={{ flex: 1, overflowY: "auto", padding: "10px 12px", display: "flex", flexDirection: "column", gap: 12 }}>
         {description && (
           <p style={{ fontSize: "0.83rem", color: "var(--text-muted)", lineHeight: 1.55, margin: 0 }}>{description}</p>
@@ -617,16 +800,31 @@ function GraphDetailPanel({ selection, onClose, onGoToMap }: {
         {connections.length > 0 && (
           <div>
             <div style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.09em", textTransform: "uppercase", color: "var(--text-faint)", marginBottom: 6 }}>
-              Connections
+              Connections ({connections.length})
             </div>
-            {connections.map(({ othKind, othId, label: relLabel }, i) => (
-              <div key={i} style={{ display: "flex", gap: 7, padding: "4px 6px", borderRadius: 4, fontSize: "0.81rem", borderBottom: "1px solid var(--border-subtle)" }}>
+            {connections.map(({ othKind, othId, label: relLabel, isOut }, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => onSelectNode(othKind, othId)}
+                style={{
+                  display: "flex", gap: 7, padding: "5px 6px", borderRadius: 4, fontSize: "0.81rem",
+                  width: "100%", textAlign: "left", background: "none", border: "none",
+                  borderBottom: "1px solid var(--border-subtle)",
+                  cursor: "pointer", alignItems: "flex-start",
+                }}
+                title={`Select ${othKind}: ${getEntityLabel(othKind, othId)}`}
+              >
                 <span style={{ color: "var(--text-faint)", flexShrink: 0 }}>{KIND_ICONS[othKind]}</span>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ color: "var(--text)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{getEntityLabel(othKind, othId)}</div>
-                  <div style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}>{relLabel}</div>
+                  <div style={{ color: "var(--text)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                    {getEntityLabel(othKind, othId)}
+                  </div>
+                  <div style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}>
+                    {isOut ? "→" : "←"} {relLabel}
+                  </div>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
         )}

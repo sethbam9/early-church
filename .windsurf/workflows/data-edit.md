@@ -68,6 +68,35 @@ When renaming a primary key (e.g. `polity_id`, `person_id`):
 3. Optionally add rows to `data/place_state_by_decade.tsv` and `data/entity_place_footprints.tsv`
 4. Run validator
 
+## Adding a new relation_type
+
+Whenever you introduce a **new `relation_type` slug** in `data/relations.tsv`, you **must** add a matching entry to `src/domain/relationLabels.ts`:
+
+```ts
+// in RELATION_LABELS:
+my_new_type: { forward: "human forward label", inverse: "human inverse label" },
+```
+
+- `forward` — shown when the current entity is the **source** of the relation
+- `inverse` — shown when the current entity is the **target** of the relation
+
+If no entry exists for a slug the UI falls back to `slug.replace(/_/g, ' ')`, which is acceptable but not ideal.
+
+**Examples of correct label pairs:**
+| relation_type | forward | inverse |
+|---|---|---|
+| `disciple_of` | disciple of | teacher of |
+| `teacher_of` | teacher of | student of |
+| `bishop_of` | bishop of | had bishop |
+| `participated_in` | participated in | included |
+| `ordained` | ordained | ordained by |
+| `affirms` | affirms | affirmed by |
+
+After updating the file run the TypeScript build to catch any type errors:
+```
+npm run build
+```
+
 ## Adding a new person
 
 1. Add row to `data/people.tsv`

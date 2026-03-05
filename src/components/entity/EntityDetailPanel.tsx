@@ -3,6 +3,7 @@ import { dataStore, getEntityLabel } from "../../data/dataStore";
 import type { Selection } from "../../data/dataStore";
 import { useAppStore } from "../../stores/appStore";
 import { MarkdownRenderer } from "../shared/MarkdownRenderer";
+import { getRelationLabel } from "../../domain/relationLabels";
 
 const KIND_ICONS: Record<string, string> = {
   person: "👤",
@@ -26,27 +27,7 @@ const KIND_LABELS: Record<string, string> = {
   polity: "Polity",
 };
 
-const RELATION_INVERSES: Record<string, string> = {
-  disciple_of: "teacher of",
-  bishop_of: "had bishop",
-  authored: "authored by",
-  sent_to: "received from",
-  attended: "attended by",
-  led: "led by",
-  affirms: "affirmed by",
-  condemned_by: "condemned",
-  ordained_by: "ordained",
-  martyred_at: "site of martyrdom",
-  located_in: "contains",
-  held_in: "hosted",
-  first_mentions: "first attested in",
-  wrote: "written by",
-};
-
-function relLabel(relType: string, isOutgoing: boolean): string {
-  if (isOutgoing) return relType.replace(/_/g, " ");
-  return (RELATION_INVERSES[relType] ?? relType.replace(/_/g, " "));
-}
+const relLabel = getRelationLabel;
 
 function yearRange(start: number | null, end: number | null): string {
   if (!start) return "";
@@ -443,6 +424,13 @@ export function EntityDetailPanel({ selection, onClose, onNavigateToMap }: Props
                 <div key={n.note_id} className="note-card" style={{ marginBottom: 6 }}>
                   <div style={{ fontSize: "0.78rem", color: "var(--text-faint)", marginBottom: 4 }}>AD {n.year_bucket}</div>
                   <MarkdownRenderer onSelectEntity={handleConnectionClick} searchQuery={searchQuery}>{n.body_md}</MarkdownRenderer>
+                  {n.citation_urls.length > 0 && (
+                    <div style={{ marginTop: 6, display: "flex", flexWrap: "wrap", gap: 4 }}>
+                      {n.citation_urls.map((url, i) => (
+                        <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="citation-link">{url}</a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -473,6 +461,13 @@ export function EntityDetailPanel({ selection, onClose, onNavigateToMap }: Props
           {notes.slice(0, 2).map((n) => (
             <div key={n.note_id} className="note-card" style={{ marginBottom: 6 }}>
               <MarkdownRenderer onSelectEntity={handleConnectionClick} searchQuery={searchQuery}>{n.body_md}</MarkdownRenderer>
+              {n.citation_urls.length > 0 && (
+                <div style={{ marginTop: 6, display: "flex", flexWrap: "wrap", gap: 4 }}>
+                  {n.citation_urls.map((url, i) => (
+                    <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="citation-link">{url}</a>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
