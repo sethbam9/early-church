@@ -2,30 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import type { Selection } from "../../data/dataStore";
 import { useAppStore } from "../../stores/appStore";
-import { MarkdownRenderer } from "../shared/MarkdownRenderer";
+import { NoteCard } from "../shared/NoteCard";
+import { KIND_ICONS, KIND_LABELS } from "../shared/entityConstants";
 import { getRelationLabel } from "../../domain/relationLabels";
-
-const KIND_ICONS: Record<string, string> = {
-  person: "👤",
-  work: "📜",
-  doctrine: "✝",
-  event: "⚡",
-  archaeology: "🏛",
-  city: "🏙",
-  persuasion: "⛪",
-  polity: "⚔",
-};
-
-const KIND_LABELS: Record<string, string> = {
-  person: "Person",
-  work: "Work",
-  doctrine: "Doctrine",
-  event: "Event",
-  archaeology: "Archaeology",
-  city: "City",
-  persuasion: "Persuasion",
-  polity: "Polity",
-};
 
 const relLabel = getRelationLabel;
 
@@ -173,7 +152,7 @@ export function EntityDetailPanel({ selection, onClose, onNavigateToMap }: Props
           </div>
 
           {work.description && <p className="entity-description">{work.description}</p>}
-          {work.significance && <p className="entity-description" style={{ fontStyle: "italic" }}>{work.significance}</p>}
+          {work.significance && <p className="entity-description entity-desc--italic">{work.significance}</p>}
 
           <div className="fact-grid">
             {work.work_type && <><span className="fact-label">Type</span><span className="fact-value">{work.work_type}</span></>}
@@ -243,7 +222,7 @@ export function EntityDetailPanel({ selection, onClose, onNavigateToMap }: Props
           </div>
 
           {doctrine.description && <p className="entity-description">{doctrine.description}</p>}
-          {doctrine.resolution && <p className="entity-description" style={{ fontStyle: "italic" }}>{doctrine.resolution}</p>}
+          {doctrine.resolution && <p className="entity-description entity-desc--italic">{doctrine.resolution}</p>}
 
           <div className="fact-grid">
             {doctrine.first_attested_year && <><span className="fact-label">First attested</span><span className="fact-value">AD {doctrine.first_attested_year}</span></>}
@@ -295,7 +274,7 @@ export function EntityDetailPanel({ selection, onClose, onNavigateToMap }: Props
           </div>
 
           {event.description && <p className="entity-description">{event.description}</p>}
-          {event.significance && <p className="entity-description" style={{ fontStyle: "italic" }}>{event.significance}</p>}
+          {event.significance && <p className="entity-description entity-desc--italic">{event.significance}</p>}
           {event.outcome && (
             <div className="fact-grid">
               <span className="fact-label">Outcome</span>
@@ -348,7 +327,7 @@ export function EntityDetailPanel({ selection, onClose, onNavigateToMap }: Props
           </div>
 
           {site.description && <p className="entity-description">{site.description}</p>}
-          {site.significance && <p className="entity-description" style={{ fontStyle: "italic" }}>{site.significance}</p>}
+          {site.significance && <p className="entity-description entity-desc--italic">{site.significance}</p>}
 
           <div className="fact-grid">
             {site.city_id && <><span className="fact-label">Near</span><span className="fact-value">{dataStore.cities.getById(site.city_id)?.city_label ?? site.city_id}</span></>}
@@ -421,17 +400,14 @@ export function EntityDetailPanel({ selection, onClose, onNavigateToMap }: Props
             <div>
               <div className="entity-section-title">Evidence notes</div>
               {notes.slice(0, 3).map((n) => (
-                <div key={n.note_id} className="note-card" style={{ marginBottom: 6 }}>
-                  <div style={{ fontSize: "0.78rem", color: "var(--text-faint)", marginBottom: 4 }}>AD {n.year_bucket}</div>
-                  <MarkdownRenderer onSelectEntity={handleConnectionClick} searchQuery={searchQuery}>{n.body_md}</MarkdownRenderer>
-                  {n.citation_urls.length > 0 && (
-                    <div style={{ marginTop: 6, display: "flex", flexWrap: "wrap", gap: 4 }}>
-                      {n.citation_urls.map((url, i) => (
-                        <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="citation-link">{url}</a>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                <NoteCard
+                  key={n.note_id}
+                  note={n}
+                  onSelectEntity={handleConnectionClick}
+                  searchQuery={searchQuery}
+                  yearLabel={n.year_bucket ? `AD ${n.year_bucket}` : undefined}
+                  style={{ marginBottom: 6 }}
+                />
               ))}
             </div>
           )}
@@ -459,23 +435,20 @@ export function EntityDetailPanel({ selection, onClose, onNavigateToMap }: Props
         <div>
           <div className="entity-section-title">Evidence notes</div>
           {notes.slice(0, 2).map((n) => (
-            <div key={n.note_id} className="note-card" style={{ marginBottom: 6 }}>
-              <MarkdownRenderer onSelectEntity={handleConnectionClick} searchQuery={searchQuery}>{n.body_md}</MarkdownRenderer>
-              {n.citation_urls.length > 0 && (
-                <div style={{ marginTop: 6, display: "flex", flexWrap: "wrap", gap: 4 }}>
-                  {n.citation_urls.map((url, i) => (
-                    <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="citation-link">{url}</a>
-                  ))}
-                </div>
-              )}
-            </div>
+            <NoteCard
+              key={n.note_id}
+              note={n}
+              onSelectEntity={handleConnectionClick}
+              searchQuery={searchQuery}
+              style={{ marginBottom: 6 }}
+            />
           ))}
         </div>
       )}
       {citations(kind, id).length > 0 && (
         <div>
           <div className="entity-section-title">Sources</div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+          <div className="flex-col" style={{ gap: 4 }}>
             {citations(kind, id).map((url, i) => (
               <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="citation-link">{url}</a>
             ))}

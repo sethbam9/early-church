@@ -2,23 +2,12 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { useAppStore } from "../../stores/appStore";
 import type { PlaceState } from "../../data/dataStore";
-import { MarkdownRenderer } from "../shared/MarkdownRenderer";
+import { Hl } from "../shared/Hl";
+import { NoteCard } from "../shared/NoteCard";
+import { Pagination, PAGE_SIZE } from "../shared/Pagination";
 import { getRelationLabel } from "../../domain/relationLabels";
-
-function Hl({ text, query }: { text: string; query: string }) {
-  if (!query || !text) return <>{text}</>;
-  const idx = text.toLowerCase().indexOf(query.toLowerCase());
-  if (idx < 0) return <>{text}</>;
-  return (
-    <>
-      {text.slice(0, idx)}
-      <mark style={{ background: "rgba(26,122,92,0.25)", color: "inherit", borderRadius: 2, padding: "0 1px" }}>
-        {text.slice(idx, idx + query.length)}
-      </mark>
-      {text.slice(idx + query.length)}
-    </>
-  );
-}
+import { KIND_ICONS, PRESENCE_LABELS, PRESENCE_COLORS } from "../shared/entityConstants";
+import { RelationCard } from "../shared/RelationCard";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -35,23 +24,6 @@ const SUB_TABS: { id: SubTab; label: string }[] = [
   { id: "relations",   label: "Relations" },
 ];
 
-const PRESENCE_LABELS: Record<string, string> = {
-  attested:          "Attested",
-  probable:          "Probable",
-  claimed_tradition: "Claimed tradition",
-  suppressed:        "Suppressed",
-  unknown:           "Unknown",
-  not_attested:      "Not attested",
-};
-
-const PRESENCE_COLORS: Record<string, string> = {
-  attested:          "#1a7a5c",
-  probable:          "#b07e10",
-  claimed_tradition: "#c47d2a",
-  suppressed:        "#c0392b",
-  unknown:           "#8e8070",
-  not_attested:      "#8e8070",
-};
 
 // ─── Props ────────────────────────────────────────────────────────────────────
 
@@ -297,16 +269,16 @@ function InfoTab({ city, currentState, notes, onSelectEntity }: {
             <span className="fact-value">{city.lat.toFixed(4)}, {city.lon.toFixed(4)}</span>
           </>
         )}
-        {currentState?.church_planted_by && (
+        {city.church_planted_by && (
           <>
             <span className="fact-label">Planted by</span>
-            <span className="fact-value"><Hl text={currentState.church_planted_by} query={q} /></span>
+            <span className="fact-value"><Hl text={city.church_planted_by} query={q} /></span>
           </>
         )}
-        {currentState?.apostolic_origin_thread && (
+        {city.apostolic_origin_thread && (
           <>
             <span className="fact-label">Apostolic thread</span>
-            <span className="fact-value"><Hl text={currentState.apostolic_origin_thread} query={q} /></span>
+            <span className="fact-value"><Hl text={city.apostolic_origin_thread} query={q} /></span>
           </>
         )}
         {currentState?.ruling_subdivision && (
@@ -321,16 +293,16 @@ function InfoTab({ city, currentState, notes, onSelectEntity }: {
             <span className="fact-value">{currentState.council_context}</span>
           </>
         )}
-        {currentState?.church_planted_year_scholarly != null && (
+        {city.church_planted_year_scholarly != null && (
           <>
             <span className="fact-label">Planted (scholarly)</span>
-            <span className="fact-value">AD {currentState.church_planted_year_scholarly}</span>
+            <span className="fact-value">AD {city.church_planted_year_scholarly}</span>
           </>
         )}
-        {currentState?.church_planted_year_earliest_claim != null && (
+        {city.church_planted_year_earliest_claim != null && (
           <>
             <span className="fact-label">Planted (earliest claim)</span>
-            <span className="fact-value">AD {currentState.church_planted_year_earliest_claim}</span>
+            <span className="fact-value">AD {city.church_planted_year_earliest_claim}</span>
           </>
         )}
       </div>
@@ -338,16 +310,7 @@ function InfoTab({ city, currentState, notes, onSelectEntity }: {
       {evidenceNote && (
         <div>
           <div className="detail-section-title">Evidence for AD {currentState?.decade}</div>
-          <div className="note-card">
-            <MarkdownRenderer onSelectEntity={onSelectEntity} searchQuery={q}>{evidenceNote.body_md}</MarkdownRenderer>
-            {evidenceNote.citation_urls.length > 0 && (
-              <div style={{ marginTop: 6, display: "flex", flexWrap: "wrap", gap: 4 }}>
-                {evidenceNote.citation_urls.map((url, i) => (
-                  <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="citation-link">{url}</a>
-                ))}
-              </div>
-            )}
-          </div>
+          <NoteCard note={evidenceNote} onSelectEntity={onSelectEntity} searchQuery={q} />
         </div>
       )}
     </div>
@@ -363,22 +326,11 @@ function TimelineTab({ placeStates, activeDecade, notes, onSelectEntity }: {
   onSelectEntity: (kind: string, id: string) => void;
 }) {
   const q = useAppStore((s) => s.searchQuery).trim();
-  const [expandedDecades, setExpandedDecades] = useState<Set<number>>(new Set());
   const activeRowRef = useRef<HTMLDivElement | null>(null);
 
-  // Auto-scroll to active decade whenever it changes
   useEffect(() => {
     activeRowRef.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
   }, [activeDecade]);
-
-  const toggleDecade = (decade: number) => {
-    setExpandedDecades((prev) => {
-      const next = new Set(prev);
-      if (next.has(decade)) next.delete(decade);
-      else next.add(decade);
-      return next;
-    });
-  };
 
   const noteById = useMemo(() => {
     const m = new Map<string, (typeof notes)[0]>();
@@ -389,61 +341,78 @@ function TimelineTab({ placeStates, activeDecade, notes, onSelectEntity }: {
   if (placeStates.length === 0) return <div className="empty-state">No timeline data.</div>;
 
   return (
-    <div className="timeline-list">
-      {placeStates.map((ps) => {
-        const isActive   = ps.decade === activeDecade;
-        const hasNote    = !!ps.evidence_note_id;
-        const note       = ps.evidence_note_id ? noteById.get(ps.evidence_note_id) : null;
-        const isExpanded = expandedDecades.has(ps.decade);
-        const polity     = ps.polity_id ? dataStore.polities.getById(ps.polity_id) : null;
+    <div className="tl-v-list">
+      {placeStates.map((ps, idx) => {
+        const isActive = ps.decade === activeDecade;
+        const note     = ps.evidence_note_id ? noteById.get(ps.evidence_note_id) : null;
+        const polity   = ps.polity_id ? dataStore.polities.getById(ps.polity_id) : null;
+        const isLast   = idx === placeStates.length - 1;
+        const dotColor = PRESENCE_COLORS[ps.presence_status] ?? "#8e8070";
+        const statusLabel = PRESENCE_LABELS[ps.presence_status] ?? ps.presence_status;
 
         return (
           <div
             key={ps.decade}
             ref={isActive ? activeRowRef : null}
-            className={`timeline-row${isActive ? " active" : ""}`}
+            className={`tl-v-row${isActive ? " tl-v-row--active" : ""}`}
           >
-            <div className="timeline-row-header" onClick={() => hasNote && toggleDecade(ps.decade)}>
-              <span className="timeline-year">AD {ps.decade}</span>
-              <span className={`status-dot ${ps.presence_status}`} />
-              <span className="timeline-status">
-                {PRESENCE_LABELS[ps.presence_status] ?? ps.presence_status}
-              </span>
-              {polity && (
-                <button
-                  type="button"
-                  className="timeline-polity-btn"
-                  onClick={(e) => { e.stopPropagation(); onSelectEntity("polity", ps.polity_id!); }}
-                >
-                  {polity.polity_label}
-                </button>
-              )}
-              {ps.persuasion_ids?.map((pid) => {
-                const p = dataStore.persuasions.getById(pid);
-                return p ? (
-                  <button
-                    key={pid}
-                    type="button"
-                    className="timeline-persuasion-btn"
-                    onClick={(e) => { e.stopPropagation(); onSelectEntity("persuasion", pid); }}
-                  >
-                    {p.persuasion_label}
-                  </button>
-                ) : null;
-              })}
-              {hasNote && (
-                <span className="timeline-expand-icon" style={{ marginLeft: "auto" }}>
-                  {isExpanded ? "▲" : "▼"}
-                </span>
-              )}
+            {/* Left gutter */}
+            <div className={`tl-v-gutter${isLast ? " tl-v-gutter--last" : ""}`}>
+              <span
+                className={`tl-v-dot${isActive ? " tl-v-dot--active" : ""}`}
+                style={{
+                  borderColor: dotColor,
+                  background: isActive ? dotColor : "transparent",
+                  boxShadow: isActive ? `0 0 0 4px ${dotColor}22` : undefined,
+                }}
+              />
             </div>
 
-            {isExpanded && note && (
-              <div className="timeline-evidence">
-                <div className="note-year">{note.note_kind}</div>
-                <MarkdownRenderer onSelectEntity={onSelectEntity} searchQuery={q}>{note.body_md}</MarkdownRenderer>
+            {/* Content */}
+            <div className="tl-v-content">
+              {/* Primary: status label (bold, colored) */}
+              <div className="tl-v-status" style={{ color: dotColor }}>
+                {statusLabel}
               </div>
-            )}
+
+              {/* Secondary: year + chips */}
+              <div className="tl-v-meta">
+                <span className="tl-v-year">{isActive ? `▶ AD ${ps.decade}` : `AD ${ps.decade}`}</span>
+                {polity && (
+                  <button
+                    type="button"
+                    className="timeline-polity-btn"
+                    onClick={() => onSelectEntity("polity", ps.polity_id!)}
+                  >
+                    {polity.polity_label}
+                  </button>
+                )}
+                {ps.persuasion_ids?.map((pid) => {
+                  const p = dataStore.persuasions.getById(pid);
+                  return p ? (
+                    <button
+                      key={pid}
+                      type="button"
+                      className="timeline-persuasion-btn"
+                      onClick={() => onSelectEntity("persuasion", pid)}
+                    >
+                      {p.persuasion_label}
+                    </button>
+                  ) : null;
+                })}
+              </div>
+
+              {ps.council_context && (
+                <div className="tl-council">{ps.council_context}</div>
+              )}
+
+              {/* Evidence note — always shown when present */}
+              {note && (
+                <div className="tl-v-evidence">
+                  <NoteCard note={note} onSelectEntity={onSelectEntity} searchQuery={q} />
+                </div>
+              )}
+            </div>
           </div>
         );
       })}
@@ -458,20 +427,25 @@ function PeopleTab({ people, onSelectEntity }: {
   onSelectEntity: (kind: string, id: string) => void;
 }) {
   const q = useAppStore((s) => s.searchQuery).trim();
+  const [page, setPage] = useState(0);
   if (people.length === 0) return <div className="empty-state">No associated people.</div>;
+  const pageItems = people.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
-    <div className="conn-list">
-      {people.map((p) => (
-        <div key={p.person_id} className="conn-card" onClick={() => onSelectEntity("person", p.person_id)}>
-          <span className="conn-icon">👤</span>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div className="conn-name"><Hl text={p.person_label} query={q} /></div>
-            <div className="conn-rel">{p.roles.slice(0, 2).join(", ")}</div>
+    <>
+      <div className="conn-list">
+        {pageItems.map((p) => (
+          <div key={p.person_id} className="conn-card" onClick={() => onSelectEntity("person", p.person_id)}>
+            <span className="conn-icon">👤</span>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div className="conn-name"><Hl text={p.person_label} query={q} /></div>
+              <div className="conn-rel">{p.roles.slice(0, 2).join(", ")}</div>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+      <Pagination page={page} total={people.length} onChange={setPage} />
+    </>
   );
 }
 
@@ -481,44 +455,49 @@ function DoctrinesTab({ rows, onSelectEntity }: {
   rows: { doctrine: ReturnType<typeof dataStore.doctrines.getAll>[0]; attested: boolean }[];
   onSelectEntity: (kind: string, id: string) => void;
 }) {
+  const [page, setPage] = useState(0);
   if (rows.length === 0) return <div className="empty-state">No doctrines recorded for this period.</div>;
+  const pageItems = rows.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
-      <div className="detail-section-title" style={{ marginBottom: 4 }}>
-        <span style={{ color: "#1a7a5c" }}>■ Attested locally</span>
-        {" · "}
-        <span style={{ color: "#b07e10" }}>■ Traditionally assumed</span>
-      </div>
-      {rows.map(({ doctrine: d, attested }) => (
-        <div
-          key={d.doctrine_id}
-          className="conn-card"
-          style={{ borderLeft: `3px solid ${attested ? "#1a7a5c" : "#b07e10"}` }}
-          onClick={() => onSelectEntity("doctrine", d.doctrine_id)}
-        >
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div className="conn-name">{d.name_display}</div>
-            <div className="conn-rel">
-              {d.category}
-              {d.first_attested_year ? ` · AD ${d.first_attested_year}` : ""}
-            </div>
-          </div>
-          <span
-            className="tag"
-            style={{
-              fontSize: "0.68rem",
-              background: attested ? "#1a7a5c18" : "#b07e1018",
-              borderColor: attested ? "#1a7a5c55" : "#b07e1055",
-              color: attested ? "#1a7a5c" : "#b07e10",
-              flexShrink: 0,
-            }}
-          >
-            {attested ? "Attested" : "Assumed"}
-          </span>
+    <>
+      <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
+        <div className="detail-section-title" style={{ marginBottom: 4 }}>
+          <span style={{ color: "#1a7a5c" }}>■ Attested locally</span>
+          {" · "}
+          <span style={{ color: "#b07e10" }}>■ Traditionally assumed</span>
         </div>
-      ))}
-    </div>
+        {pageItems.map(({ doctrine: d, attested }) => (
+          <div
+            key={d.doctrine_id}
+            className="conn-card"
+            style={{ borderLeft: `3px solid ${attested ? "#1a7a5c" : "#b07e10"}` }}
+            onClick={() => onSelectEntity("doctrine", d.doctrine_id)}
+          >
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div className="conn-name">{d.name_display}</div>
+              <div className="conn-rel">
+                {d.category}
+                {d.first_attested_year ? ` · AD ${d.first_attested_year}` : ""}
+              </div>
+            </div>
+            <span
+              className="tag"
+              style={{
+                fontSize: "0.68rem",
+                background: attested ? "#1a7a5c18" : "#b07e1018",
+                borderColor: attested ? "#1a7a5c55" : "#b07e1055",
+                color: attested ? "#1a7a5c" : "#b07e10",
+                flexShrink: 0,
+              }}
+            >
+              {attested ? "Attested" : "Assumed"}
+            </span>
+          </div>
+        ))}
+      </div>
+      <Pagination page={page} total={rows.length} onChange={setPage} />
+    </>
   );
 }
 
@@ -528,22 +507,28 @@ function ArchaeologyTab({ sites, onSelectEntity }: {
   sites: ReturnType<typeof dataStore.archaeology.getAll>;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
+  const [page, setPage] = useState(0);
   if (sites.length === 0) return <div className="empty-state">No archaeology sites here.</div>;
+  const pageItems = sites.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+
   return (
-    <div className="conn-list">
-      {sites.map((a) => (
-        <div key={a.archaeology_id} className="conn-card" onClick={() => onSelectEntity("archaeology", a.archaeology_id)}>
-          <span className="conn-icon">★</span>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div className="conn-name">{a.name_display}</div>
-            <div className="conn-rel">
-              {a.site_type}
-              {a.year_start ? ` · AD ${a.year_start}` : ""}
+    <>
+      <div className="conn-list">
+        {pageItems.map((a) => (
+          <div key={a.archaeology_id} className="conn-card" onClick={() => onSelectEntity("archaeology", a.archaeology_id)}>
+            <span className="conn-icon">★</span>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div className="conn-name">{a.name_display}</div>
+              <div className="conn-rel">
+                {a.site_type}
+                {a.year_start ? ` · AD ${a.year_start}` : ""}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+      <Pagination page={page} total={sites.length} onChange={setPage} />
+    </>
   );
 }
 
@@ -553,23 +538,28 @@ function EventsTab({ events, onSelectEntity }: {
   events: ReturnType<typeof dataStore.events.getAll>;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
+  const [page, setPage] = useState(0);
   if (events.length === 0) return <div className="empty-state">No events recorded here.</div>;
+  const pageItems = events.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
-    <div className="conn-list">
-      {events.map((e) => (
-        <div key={e.event_id} className="conn-card" onClick={() => onSelectEntity("event", e.event_id)}>
-          <span className="conn-icon">⚡</span>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div className="conn-name">{e.name_display}</div>
-            <div className="conn-rel">
-              {e.year_start ? `AD ${e.year_start}` : ""}
-              {e.event_type ? ` · ${e.event_type}` : ""}
+    <>
+      <div className="conn-list">
+        {pageItems.map((e) => (
+          <div key={e.event_id} className="conn-card" onClick={() => onSelectEntity("event", e.event_id)}>
+            <span className="conn-icon">⚡</span>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div className="conn-name">{e.name_display}</div>
+              <div className="conn-rel">
+                {e.year_start ? `AD ${e.year_start}` : ""}
+                {e.event_type ? ` · ${e.event_type}` : ""}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+      <Pagination page={page} total={events.length} onChange={setPage} />
+    </>
   );
 }
 
@@ -579,59 +569,56 @@ function WorksTab({ works, onSelectEntity }: {
   works: NonNullable<ReturnType<typeof dataStore.works.getById>>[];
   onSelectEntity: (kind: string, id: string) => void;
 }) {
+  const [page, setPage] = useState(0);
   if (works.length === 0) return <div className="empty-state">No associated works.</div>;
+  const pageItems = works.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
-    <div className="conn-list">
-      {works.map((w) => (
-        <div key={w.work_id} className="conn-card" onClick={() => onSelectEntity("work", w.work_id)}>
-          <span className="conn-icon">📜</span>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div className="conn-name">{w.title_display}</div>
-            <div className="conn-rel">
-              {w.author_name_display}
-              {w.year_written_start ? ` · AD ${w.year_written_start}` : ""}
+    <>
+      <div className="conn-list">
+        {pageItems.map((w) => (
+          <div key={w.work_id} className="conn-card" onClick={() => onSelectEntity("work", w.work_id)}>
+            <span className="conn-icon">📜</span>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div className="conn-name">{w.title_display}</div>
+              <div className="conn-rel">
+                {w.author_name_display}
+                {w.year_written_start ? ` · AD ${w.year_written_start}` : ""}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+      <Pagination page={page} total={works.length} onChange={setPage} />
+    </>
   );
 }
 
-// MarkdownNote replaced by shared MarkdownRenderer
-
-// ─── Relations tab ────────────────────────────────────────────────────────────
-
-const KIND_ICONS: Record<string, string> = {
-  city: "🏛", person: "👤", work: "📜", doctrine: "📖",
-  event: "⚡", archaeology: "★", persuasion: "✦", polity: "⚔",
-};
+// ─── Relations tab ─────────────────────────────────────────────────────────────
 
 function RelationsTab({ relations, cityId, onSelectEntity }: {
   relations: ReturnType<typeof dataStore.relations.getForEntity>;
   cityId: string;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
+  const q = useAppStore((s) => s.searchQuery).trim();
+  const [page, setPage] = useState(0);
   if (relations.length === 0) return <div className="empty-state">No relations found.</div>;
+  const pageItems = relations.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
-    <div className="conn-list">
-      {relations.map((r) => {
-        const isOut   = r.source_id === cityId && r.source_type === "city";
-        const otherId = isOut ? r.target_id   : r.source_id;
-        const othKind = isOut ? r.target_type : r.source_type;
-        const lbl     = getEntityLabel(othKind, otherId);
-        return (
-          <div key={r.relation_id} className="conn-card" onClick={() => onSelectEntity(othKind, otherId)}>
-            <span className="conn-icon">{KIND_ICONS[othKind] ?? "•"}</span>
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div className="conn-name">{lbl}</div>
-              <div className="conn-rel">{getRelationLabel(r.relation_type, isOut)}</div>
-            </div>
-          </div>
-        );
-      })}
+    <div className="flex-col">
+      {pageItems.map((r) => (
+        <RelationCard
+          key={r.relation_id}
+          relation={r}
+          entityId={cityId}
+          entityType="city"
+          onSelectEntity={onSelectEntity}
+          searchQuery={q}
+        />
+      ))}
+      <Pagination page={page} total={relations.length} onChange={setPage} />
     </div>
   );
 }
