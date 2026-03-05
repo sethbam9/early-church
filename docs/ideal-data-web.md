@@ -1,419 +1,262 @@
 ---
-description: Ideal data web / table schema for an interactive Early Christianity map UI
+description: Data web / table schema for the interactive Early Christianity map UI
 ---
 
-# Ideal Data Web (Proposed) — Interactive Map + Temporal + Network Cross‑Reference
+# Data Web — Interactive Map + Temporal + Network Cross‑Reference
+
+## Goals (what the UI makes easy)
 
-## Goals (what the UI should make easy)
+- **Global search that maps to geography** — search any `work`, `doctrine`, `person`, `persuasion`, `event`, or `archaeology` site and immediately highlight where it is represented on the map (and in what decades).
+- **Temporal exploration** — a decade slider that changes which places are active, which persuasions are present, and which networks are relevant.
+- **Graph exploration** — click an entity and traverse to related entities; show network overlays.
+- **Evidence-first UX** — any displayed claim has citations and/or a note.
+- **Doctrine city map** — click a doctrine and see which cities had people/works that affirmed or condemned it, color-coded on the map.
+
+
+## Manual vs. Derived (authoritative rules)
+
+| Category | File | Edited by |
+|---|---|---|
+| Source | `cities.tsv` | Human |
+| Source | `people.tsv` | Human |
+| Source | `persuasions.tsv` | Human |
+| Source | `polities.tsv` | Human |
+| Source | `works.tsv` | Human |
+| Source | `doctrines.tsv` | Human |
+| Source | `quotes.tsv` | Human |
+| Source | `events.tsv` | Human |
+| Source | `archaeology.tsv` | Human |
+| Source | `relations.tsv` | Human |
+| Source | `notes.tsv` | Human |
+| Derived | `places.tsv` | `scripts/derive_places.ts` |
+| Derived | `entity_place_footprints.tsv` | `scripts/derive_footprints.ts` |
+| Derived | `note_mentions.tsv` | `scripts/derive_mentions.ts` |
+
+Run `npm run data:validate` to regenerate all derived files and validate FKs.
+
+
+## Design Principles
+
+1. **Stable IDs** — every entity has a slug PK that never encodes time or location.
+2. **Relations are the universal graph** — all cross-entity connections live in `relations.tsv`.
+3. **Geography is a join** — entities don't own coordinates; they reference a `place_id`.
+4. **Static data lives once** — city-planting metadata is in `cities.tsv`, not repeated per decade in `place_state_by_decade.tsv`.
+5. **Derived files are always regenerated** — `places.tsv`, `entity_place_footprints.tsv`, and `note_mentions.tsv` are outputs, never edited manually.
+6. **Stance is first-class** — `affirms`/`condemns`/`neutral` is a queryable column on footprints, not a freeform string.
+
+
+## Table Schemas
+
+### 1. `places.tsv` (DERIVED)
+
+Map-visible things. A city, or an archaeology site with its own coordinates.
 
-- **Global search that maps to geography**
-  - Search a `work`, `doctrine`, `quote`, `person`, `persuasion`, `event`, or `archaeology` site.
-  - Immediately highlight **where** it is represented on the map (and in what decades).
+| Column | Type |
+|---|---|
+| `place_id` | string PK (`city:CITY_ID` or `archaeology:ARCH_ID`) |
+| `place_type` | enum: `city` \| `archaeology` |
+| `place_label` | string |
+| `lat` | float nullable |
+| `lon` | float nullable |
+| `location_precision` | enum: `exact` \| `approx_city` \| `region_only` \| `unknown` |
+| `city_id` | string nullable FK→cities |
+| `archaeology_id` | string nullable FK→archaeology |
+
+Derived from `cities.tsv` + `archaeology.tsv` by `scripts/derive_places.ts`.
+
+
+### 2. `cities.tsv` (SOURCE)
+
+Canonical city identity, geography, and static church-planting metadata.
+
+| Column | Type |
+|---|---|
+| `city_id` | string PK |
+| `city_label` | string |
+| `city_ancient_primary` | string |
+| `city_modern_primary` | string |
+| `country_modern_primary` | string |
+| `lat` | float nullable |
+| `lon` | float nullable |
+| `location_precision` | enum |
+| `christianity_start_year` | int nullable |
+| `church_planted_year_scholarly` | int nullable |
+| `church_planted_year_earliest_claim` | int nullable |
+| `church_planted_by` | string (e.g. `Paul; Silas`) |
+| `apostolic_origin_thread` | string (e.g. `Pauline/Petrine`) |
+
+
+### 3. `place_state_by_decade.tsv` (SOURCE)
+
+Temporal map state per place per decade. Only fields that genuinely change decade-to-decade.
+
+| Column | Type |
+|---|---|
+| `place_id` | string FK→places |
+| `decade` | int (e.g. 110, 120) |
+| `presence_status` | enum: `attested` \| `probable` \| `claimed_tradition` \| `not_attested` \| `suppressed` \| `unknown` |
+| `persuasion_ids` | string semi-sep FK→persuasions |
+| `polity_id` | string nullable FK→polities |
+| `ruling_subdivision` | string |
+| `council_context` | string |
+| `evidence_note_id` | string nullable FK→notes |
+
+
+### 4. `entity_place_footprints.tsv` (DERIVED)
+
+Precomputed index mapping any entity to places. Powers the doctrine city map and entity→map highlight UX.
+
+| Column | Type |
+|---|---|
+| `entity_type` | enum |
+| `entity_id` | string |
+| `place_id` | string FK→places |
+| `year_start` | int nullable |
+| `year_end` | int nullable |
+| `weight` | int nullable (1–5) |
+| `reason` | string: `bishop_of`, `written_in`, `sent_to`, `held_in`, `located_at`, `via_work_affirms`, `via_person_affirms`, … |
+| `stance` | enum: `affirms` \| `condemns` \| `neutral` \| `` (empty for non-doctrine) |
 
-- **Temporal exploration**
-  - A decade slider/time scrubber that changes:
-    - which places are “active”
-    - which persuasions are present
-    - which networks (e.g., bishop correspondence) are relevant
+Derived from all source files by `scripts/derive_footprints.ts`. **Derivation chains:**
 
-- **Graph exploration**
-  - Click an entity and traverse to related entities.
-  - Show a network overlay (people-to-people, people-to-city, work-to-doctrine, etc.).
+| entity_type | Source | reason | stance |
+|---|---|---|---|
+| person | relations (bishop_of, active_in, visited, …) → city | relation_type | `` |
+| work | works.place_written_id | written_in | `` |
+| work | works.place_recipient_ids | sent_to | `` |
+| event | events.primary_place_id | held_in | `` |
+| archaeology | archaeology (self) | located_at | `` |
+| doctrine | work→affirms + work.place_written_id | via_work_affirms | affirms |
+| doctrine | work→condemns + work.place_written_id | via_work_condemns | condemns |
+| doctrine | person→affirms + person→city | via_person_affirms | affirms |
+| doctrine | person→condemns + person→city | via_person_condemns | condemns |
+| doctrine | quotes(supports) + work.place_written_id | via_quote_affirms | affirms |
+| doctrine | quotes(opposes) + work.place_written_id | via_quote_condemns | condemns |
+| persuasion | place_state_by_decade.persuasion_ids | presence | `` |
 
-- **Evidence-first UX**
-  - Any displayed claim should have citations and/or a note with a Mentions footer.
 
-This document proposes an **ideal** set of tables and fields (no coding changes yet).
+### 5. `note_mentions.tsv` (DERIVED)
 
+Pre-parsed `[[type:id]]` mention joins from `notes.tsv:body_md`.
 
-## What is manual vs derived (authoritative rules)
+| Column | Type |
+|---|---|
+| `note_id` | string FK→notes |
+| `mentioned_type` | enum |
+| `mentioned_slug` | string |
 
-All TSVs live under:
-- `data/`
+Derived by `scripts/derive_mentions.ts`. Enables `dataStore.noteMentions.getMentioning(type, id)`.
 
-**Manual TSVs (edited by hand)**
-- `archaeology.tsv`
-- `doctrines.tsv`
-- `works.tsv`
-- `events.tsv`
-- `quotes.tsv`
-- `relations.tsv`
+
+### 6. `relations.tsv` (SOURCE)
 
-**Derived TSVs (written by `scripts/build_final_data_from_final.ts`)**
-- `cities.tsv`
-- `people.tsv`
-- `persuasions.tsv`
-- `polities.tsv`
-- `places.tsv`
-- `place_state_by_decade.tsv`
-- `entity_place_footprints.tsv`
-- `notes.tsv`
-- `note_mentions.tsv`
-- `mappings/*` (token/canonicalization helpers)
+Universal graph edge table. All cross-entity connections.
 
-`final.tsv` is currently a temporary upstream source used only by build scripts.
+| Column | Type |
+|---|---|
+| `relation_id` | string PK |
+| `source_type` | enum |
+| `source_id` | string |
+| `relation_type` | string (see `enum-schema.md`) |
+| `target_type` | enum |
+| `target_id` | string |
+| `year_start` | int nullable |
+| `year_end` | int nullable |
+| `weight` | int nullable (1–5) |
+| `polarity` | enum: `supports` \| `opposes` \| `neutral` |
+| `certainty` | enum: `attested` \| `probable` \| `claimed_tradition` \| `legendary` \| `unknown` |
+| `evidence_note_id` | string nullable FK→notes |
+| `citations` | string semi-sep URLs |
 
+The `polarity` field on `person→affirms→doctrine` and `work→affirms→doctrine` relations drives footprint `stance` derivation. **This is the critical upstream data for the doctrine city map.**
 
-## Design principles
 
-### Stable IDs + typed references
+### 7. `notes.tsv` (SOURCE)
 
-- Every “node” row has a stable string ID (slug) that **never encodes time**.
-- Cross references use either:
-  - **typed refs** in values: `person:ambrose-of-milan`
-  - or explicit columns: `person_id`, `work_id`, etc.
+Human-readable evidence and commentary. **Not for temporal state** — that lives in `place_state_by_decade.tsv`.
 
-### Time is always separate from identity
+| Column | Type |
+|---|---|
+| `note_id` | string PK (10-char SHA-1 hash) |
+| `year_bucket` | int |
+| `year_exact` | int nullable |
+| `primary_entity_type` | enum |
+| `primary_entity_id` | string |
+| `note_kind` | enum: `evidence` \| `commentary` |
+| `body_md` | string (may contain `[[type:id\|label]]` mention tags) |
+| `citation_urls` | string semi-sep URLs |
 
-- Represent time with:
-  - `year_start` / `year_end` (integers, inclusive)
-  - `decade_start` / `decade_end` (integers, derived)
 
-### Hybrid model: one universal relations table + a few “fact” tables
+### 8. `quotes.tsv` (SOURCE)
 
-- Keep **one canonical relationships table** (`relations.tsv`) for *all* graph edges.
-- Add **specialized fact tables** for the “hot-path” queries in an interactive map:
-  - place state by decade (presence, persuasions, polity)
-  - entity ↔ place footprints (precomputed where an entity shows up on the map)
+Verbatim evidence quotes tied to a doctrine and a work.
 
-### Notes remain human-readable, but mentions become queryable
+| Column | Type |
+|---|---|
+| `quote_id` | string PK |
+| `doctrine_id` | string FK→doctrines |
+| `work_id` | string nullable FK→works |
+| `text` | string |
+| `work_reference` | string |
+| `year` | int nullable |
+| `stance` | enum: `supports` \| `opposes` \| `neutral` \| `developing` |
+| `notes` | string |
+| `citations` | string semi-sep URLs |
 
-- Keep your existing `notes.tsv` **Mentions footer convention**.
-- Add `note_mentions.tsv` so the UI can query “which notes mention X” without parsing markdown at runtime.
 
-**Important**: `notes.tsv` no longer stores temporal “state rows” (e.g. presence/persuasion/polity by decade).
-- Temporal state is written directly to `place_state_by_decade.tsv`.
-- Notes are for evidence/commentary and are referenced via `evidence_note_id`.
+### 9–11. Core entity tables (SOURCE)
 
+`people.tsv`, `works.tsv`, `doctrines.tsv`, `events.tsv`, `archaeology.tsv`, `polities.tsv`, `persuasions.tsv` — see `docs/domain-models.md` for full column specs.
 
-## Current reality (what exists today)
 
-The current `data/*.tsv` schema already includes:
+## How Queries Work
 
-- Nodes:
-  - `cities.tsv`
-  - `people.tsv`
-  - `persuasions.tsv`
-  - `polities.tsv`
-  - `works.tsv`
-  - `doctrines.tsv`
-  - `quotes.tsv`
-  - `events.tsv`
-  - `archaeology.tsv`
+### "Show doctrine X on the map (affirming/opposing cities)"
 
+```
+entity_place_footprints
+  WHERE entity_type='doctrine' AND entity_id='infant-baptism'
+  GROUP BY place_id
+  → stance per city → color on map
+```
 
-- Evidence:
-  - `notes.tsv` (freeform evidence/commentary; temporal state is stored in `place_state_by_decade.tsv`)
+Green = affirms, Red = condemns, Yellow = contested, Grey = unknown.
 
-This proposal keeps the spirit of that model, but makes IDs/time/join-keys more consistent and adds a few tables that dramatically improve map + search behavior.
+### "Show me where gnosticism is present in 180–220"
 
-
-## Proposed tables (ideal)
-
-### 1) `places.tsv` (NEW: unify map-visible things)
+```
+place_state_by_decade
+  WHERE decade IN [180..220] AND persuasion_ids CONTAINS 'gnostic'
+  JOIN evidence_note_id → notes.tsv
+```
 
-**Purpose**: The map wants a single list of “things with coordinates.” Cities and archaeology sites both qualify.
+### "Correspondence network of bishops in decade 110"
 
-- `place_id` (string, PK)
-- `place_type` (enum: `city`, `archaeology`, `region_marker`)
-- `label` (string)
-- `lat` (float)
-- `lon` (float)
-- `location_precision` (enum: `exact`, `approx_city`, `region_only`, `unknown`)
-- `city_id` (string, nullable; FK -> `cities.city_id`)
-- `archaeology_id` (string, nullable; FK -> `archaeology.archaeology_id`)
-- `notes` (string, optional)
+```
+relations
+  WHERE relation_type='corresponded_with' AND year overlaps 110s
+  JOIN each person → their bishop_of city (active in that decade)
+  → render arcs between cities
+```
 
-**Notes**
-- `cities.tsv` and `archaeology.tsv` remain the “detail tables.” `places.tsv` is the “map table.”
+### "City detail: people, works, doctrines"
 
+```
+CityDetail queries:
+  people  → footprints(entity_type=person, place_id=city:X) + relations(→city)
+  works   → works by city's people (via author_person_id)
+  docs    → doctrines WHERE first_attested_year ≤ decade,
+            attested = city's works have quotes for that doctrine
+```
 
-### 2) `cities.tsv` (node)
 
-**Purpose**: Canonical city identity and geography.
+## Data-entry Mental Model
 
-Recommended fields:
-- `city_id` (string, PK)  
-- `city_label` (string)
-- `city_ancient_primary` (string)
-- `city_modern_primary` (string)
-- `country_modern_primary` (string)
-- `lat` (float)
-- `lon` (float)
-- `location_precision` (enum)
-- `christianity_start_year` (int, nullable)
+> **"If it's a connection between entities, put it in `relations.tsv`. Everything else derives automatically."**
 
-(Your current table is already close; main “ideal” change is standardizing the ID name.)
-
-
-### 3) `persuasions.tsv` (node)
-
-**Purpose**: Denomination/sect layer unified into one.
-
-- `persuasion_id` (string, PK)
-- `persuasion_label` (string)
-- `persuasion_stream` (enum-ish string; e.g. `apostolic`, `gnostic`, `theological_party`, `jewish_christian`, `schism`, `practice`, `ascetic`, `prophetic`)
-- `year_start` (int, nullable)
-- `year_end` (int, nullable)
-- `description` (string)
-- `wikipedia_url` (string)
-- `citations` (string; `;`-separated URLs)
-- `notes` (string)
-
-
-### 4) `people.tsv` (node)
-
-- `person_id` (string, PK)
-- `person_label` (string)
-- `name_alt` (string)
-- `birth_year` (int, nullable)
-- `death_year` (int, nullable)
-- `death_type` (enum-ish string; e.g. `martyrdom`, `natural`, `unknown`)
-- `roles` (set of enums in a `;`-separated string; e.g. `bishop;theologian`)
-- `city_of_origin_id` (string, nullable; FK -> `cities.city_id`)
-- `apostolic_connection` (string)
-- `description` (string)
-- `wikipedia_url` (string)
-- `citations` (string)
-- `notes` (string)
-
-
-### 5) `works.tsv` (node)
-
-**Key principle**: `work_id` is stable; place/time are separate.
-
-- `work_id` (string, PK)
-- `title_display` (string)
-- `author_person_id` (string, nullable; FK -> `people.person_id`)
-- `author_name_display` (string; allow anonymous)
-- `year_written_start` (int, nullable)
-- `year_written_end` (int, nullable)
-- `work_type` (enum-ish: `letter`, `treatise`, `canon`, `creed`, `homily`, `chronicle`, `rule`, `other`)
-- `language` (string)
-- `place_written_id` (string, nullable; FK -> `places.place_id`)
-- `place_recipient_ids` (string, nullable; `;`-separated FK -> `places.place_id`) 
-- `description` (string)
-- `significance` (string)
-- `modern_edition_url` (string)
-- `citations` (string)
-
-
-### 6) `doctrines.tsv` (node)
-
-- `doctrine_id` (string, PK)
-- `name_display` (string)
-- `category` (enum-ish string)
-- `description` (string)
-- `first_attested_year` (int, nullable)
-- `first_attested_work_id` (string, nullable; FK -> `works.work_id`)
-- `controversy_level` (enum: `low`, `medium`, `high`)
-- `resolution` (string)
-- `citations` (string)
-
-
-### 6b) `quotes.tsv` (node)
-
-Quotes are a first-class entity used for doctrine exploration.
-
-**Rule**: A quote ties to a doctrine and a work.
-
-- `quote_id` (string, PK)
-- `doctrine_id` (string, FK -> `doctrines.doctrine_id`)
-- `work_id` (string, FK -> `works.work_id`)
-- `text` (string)
-- `work_reference` (string)
-- `year` (int, nullable)
-- `stance` (enum-ish: `affirming`, `condemning`, `neutral`, `questioning`, `developing`)
-- `notes` (string)
-- `citations` (string; `;`-separated URLs)
-
-
-### 7) `events.tsv` (node)
-
-Events are important because they provide time anchors.
-
-- `event_id` (string, PK)
-- `name_display` (string)
-- `event_type` (enum-ish: `council`, `persecution`, `political`, `martyrdom`, `missionary`, `liturgical`, `schism`, `other`)
-- `year_start` (int)
-- `year_end` (int)
-- `primary_place_id` (string, nullable; FK -> `places.place_id`)
-- `region` (string)
-- `key_figure_person_ids` (string; `;`-separated FK -> `people.person_id`)
-- `description` (string)
-- `significance` (string)
-- `outcome` (string)
-- `citations` (string)
-
-
-### 8) `archaeology.tsv` (node)
-
-- `archaeology_id` (string, PK)
-- `name_display` (string)
-- `site_type` (enum-ish: `house-church`, `basilica`, `catacomb`, `inscription`, `monastery`, `other`)
-- `city_id` (string, nullable; FK -> `cities.city_id`)
-- `lat` (float, nullable)
-- `lon` (float, nullable)
-- `location_precision` (enum: `exact`, `approx_city`, `region_only`, `unknown`)
-- `year_start` (int, nullable)
-- `year_end` (int, nullable)
-- `description` (string)
-- `significance` (string)
-- `discovery_notes` (string)
-- `current_status` (enum-ish: `extant`, `destroyed`, `partially_preserved`, `unknown`)
-- `uncertainty` (string)
-- `citations` (string)
-
-
-### 9) `polities.tsv` (node)
-
-- `polity_id` (string, PK)
-- `polity_label` (string)
-- `name_alt` (string)
-- `year_start` (int, nullable)
-- `year_end` (int, nullable)
-- `capital` (string)
-- `region` (string)
-- `description` (string)
-- `wikipedia_url` (string)
-- `citations` (string)
-
-
-## Relationship model
-
-### 10) `relations.tsv`
-
-This is the universal graph edge table.
-
-- `relation_id` (string, PK)
-- `source_type` (enum: `place`, `city`, `person`, `work`, `doctrine`, `event`, `archaeology`, `persuasion`, `polity`, `note`)
-- `source_id` (string)
-- `relation_type` (string enum; examples below)
-- `target_type` (same enum)
-- `target_id` (string)
-- `year_start` (int, nullable)
-- `year_end` (int, nullable)
-- `weight` (int, nullable; UI intensity)
-- `polarity` (enum: `supports`, `opposes`, `neutral`, nullable)
-- `certainty` (enum: `attested`, `probable`, `claimed_tradition`, `legendary`, `unknown`, nullable)
-- `evidence_note_id` (string, nullable; FK -> `notes.note_id`)
-- `citations` (string; `;`-separated URLs)
-
-**Examples of `relation_type`**
-
-- People ↔ places
-  - `bishop_of`, `active_in`, `visited`, `martyred_in`, `born_in`
-- People ↔ people
-  - `disciple_of`, `corresponded_with`, `opposed`, `taught`, `consecrated_by`
-- Works ↔ doctrines
-  - `affirms`, `denies`, `develops`, `first_mentions`
-- Works ↔ places
-  - `written_in`, `sent_to`
-- Events ↔ doctrines
-  - `defined`, `condemned`, `affirmed`
-- Archaeology ↔ doctrines/persuasions
-  - `attests`, `associated_with`
-
-
-## Evidence model
-
-### 11) `notes.tsv` (evidence/commentary only)
-
-Notes store human-readable evidence and commentary. **Temporal state is NOT stored here** — it lives in `place_state_by_decade.tsv`.
-
-- `year_bucket` (int; decade-rounded year)
-- `year_exact` (int, nullable)
-- `primary_entity_type` (enum)
-- `primary_entity_id` (string)
-- `note_kind` (enum: `evidence`, `commentary`)
-- `body_md` (markdown string; may contain `[[type:id]]` mention tags)
-- `citation_urls` (`;`-separated URLs)
-- `note_id` (string, PK; stable hash of content)
-
-
-### 12) `note_mentions.tsv` (NEW)
-
-Pre-parsed mention join table.
-
-- `note_id` (string, FK -> `notes.note_id`)
-- `mentioned_type` (enum)
-- `mentioned_id` (string)
-
-
-## Map-specific “fact” tables (hot-path for interactivity)
-
-### 13) `place_state_by_decade.tsv` (NEW)
-
-- `place_id` (string, FK -> `places.place_id`)
-- `decade` (int)
-- `presence_status` (enum: `attested`, `probable`, `claimed_tradition`, `unknown`, etc.)
-- `persuasion_ids` (string; `;`-separated FK -> `persuasions.persuasion_id`)
-- `polity_id` (string, nullable; FK -> `polities.polity_id`)
-- `ruling_subdivision` (string, nullable)
-- `church_planted_year_scholarly` (int, nullable)
-- `church_planted_year_earliest_claim` (int, nullable)
-- `church_planted_by` (string, nullable)
-- `apostolic_origin_thread` (string, nullable)
-- `council_context` (string, nullable)
-- `evidence_note_id` (string, nullable; FK -> `notes.note_id`)
-
-
-### 14) `entity_place_footprints.tsv` (NEW)
-
-This table powers the UX requirement:
-> “I search for a work/doctrine/person and see on the map where it is represented.”
-
-It is a **precomputed index** mapping any entity to places.
-
-- `entity_type` (enum)
-- `entity_id` (string)
-- `place_id` (string)
-- `year_start` (int, nullable)
-- `year_end` (int, nullable)
-- `reason` (string; e.g., `written_in`, `sent_to`, `held_in`, `located_at`, `presence`, `via_work_affirms`)
-- `weight` (int, nullable)
-
-**Examples**
-- For a `work`: footprint includes `place_written_id` and `place_recipient_ids`.
-- For a `doctrine`: footprint includes places of works that affirm/deny it.
-- For a `person`: footprint includes cities they were bishop of / active in / visited.
-
-
-## How cross-references answer your “ideal UI” questions
-
-### “Show me where gnosticism is present in 180–220”
-
-- Primary: `place_state_by_decade` filtered by `persuasion_ids contains gnostic`
-- Evidence: join `evidence_note_id` to `notes.tsv`
-
-### “Show the correspondence network between bishops (overlay on map) in decade 110”
-
-- Network: `relations` where `relation_type=corresponded_with` and time overlaps decade
-- Place anchoring:
-  - join each person to their `bishop_of` relation(s) active in that decade
-  - render lines between their bishop-cities
-
-### “Doctrine ↔ archaeology”
-
-- Direct: `relations` with `archaeology -> attests -> doctrine`
-- Indirect (via works): `archaeology -> located_in -> place` plus `work -> sent_to/written_in -> place` plus `work -> affirms -> doctrine`
-
-
-## Implementation status
-
-All tables above are **implemented** as of the current schema.
-
-**Derived by `scripts/build_final_data_from_final.ts`** (from `final.tsv` + manual files):
-- `cities.tsv`, `people.tsv`, `persuasions.tsv`, `polities.tsv`
-- `places.tsv`, `notes.tsv`, `note_mentions.tsv`
-- `place_state_by_decade.tsv`, `entity_place_footprints.tsv`
-- `mappings/*`
-
-**Manual source files** (edited directly in `data/`):
-- `works.tsv`, `events.tsv`, `doctrines.tsv`, `quotes.tsv`, `archaeology.tsv`, `relations.tsv`
-
-**Removed** (previously existed, now deleted):
-- `edges.tsv` — superseded by `relations.tsv`
-- `denominations.tsv`, `people-extra.tsv`, `empires.tsv` — data rolled into manual TSVs
-
-**Planned future change**: `final.tsv` and `build_final_data_from_final.ts` will be deleted once all historical data is migrated to the manual TSVs above.
+| I want to record… | I edit… | What auto-derives… |
+|---|---|---|
+| Ignatius was bishop of Antioch | `relations.tsv`: person→bishop_of→city | footprint: person Ignatius → city:antioch |
+| Ignatius's letters affirm episcopacy | `relations.tsv`: work→affirms→doctrine | footprint: doctrine→city:antioch, stance=affirms |
+| Origen condemned adoptionism | `relations.tsv`: person→condemns→doctrine | footprint: doctrine→all Origen's cities, stance=condemns |
+| Note mentions Tertullian | `notes.tsv`: body contains `[[person:tertullian]]` | `note_mentions.tsv`: note → person:tertullian |

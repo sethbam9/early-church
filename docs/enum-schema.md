@@ -234,8 +234,22 @@
 ### `stance`
 | Value | Meaning |
 |---|---|
-| `for` | Supports the doctrine |
-| `against` | Opposes the doctrine |
+| `supports` | Supports / affirms the doctrine |
+| `opposes` | Opposes / condemns the doctrine |
+| `neutral` | Mentions without clear stance |
+| `developing` | Doctrine in development; foundational but not yet explicitly stated |
+
+---
+
+## entity_place_footprints.tsv (derived — do not edit)
+
+### `stance`
+| Value | Meaning |
+|---|---|
+| `affirms` | Entity/person in this city affirmed the doctrine |
+| `condemns` | Entity/person in this city condemned the doctrine |
+| `neutral` | Present in city, no doctrine stance |
+| `` (empty) | Non-doctrine footprints (person, work, event, etc.) |
 
 ---
 

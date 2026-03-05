@@ -7,7 +7,10 @@
     "predev": "npm run data:validate",
     "dev": "vite",
     "data:derive-places": "tsx scripts/derive_places.ts",
-    "data:validate": "tsx scripts/derive_places.ts && tsx scripts/validate_data.ts",
+    "data:derive-footprints": "tsx scripts/derive_footprints.ts",
+    "data:derive-mentions": "tsx scripts/derive_mentions.ts",
+    "data:derive": "tsx scripts/derive_places.ts && tsx scripts/derive_footprints.ts && tsx scripts/derive_mentions.ts",
+    "data:validate": "npm run data:derive && tsx scripts/validate_data.ts",
     "prebuild": "npm run data:validate",
     "build": "tsc -b && vite build",
     "preview": "vite preview"

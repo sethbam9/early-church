@@ -16,6 +16,10 @@ export interface City {
   lon: number | null;
   location_precision: LocationPrecision;
   christianity_start_year: number | null;
+  church_planted_year_scholarly: number | null;
+  church_planted_year_earliest_claim: number | null;
+  church_planted_by: string;
+  apostolic_origin_thread: string;
 }
 
 export interface PlaceState {
@@ -25,10 +29,6 @@ export interface PlaceState {
   persuasion_ids: string[];
   polity_id: string | null;
   ruling_subdivision: string;
-  church_planted_year_scholarly: number | null;
-  church_planted_year_earliest_claim: number | null;
-  church_planted_by: string;
-  apostolic_origin_thread: string;
   council_context: string;
   evidence_note_id: string | null;
 }
@@ -40,10 +40,6 @@ export interface CityAtDecade extends City {
   persuasion_ids: string[];
   polity_id: string | null;
   ruling_subdivision: string;
-  church_planted_year_scholarly: number | null;
-  church_planted_year_earliest_claim: number | null;
-  church_planted_by: string;
-  apostolic_origin_thread: string;
   council_context: string;
   evidence_note_id: string | null;
 }
@@ -199,6 +195,8 @@ export interface Note {
   citation_urls: string[];
 }
 
+export type FootprintStance = "affirms" | "condemns" | "neutral" | "";
+
 export interface Footprint {
   entity_type: string;
   entity_id: string;
@@ -207,9 +205,17 @@ export interface Footprint {
   year_end: number | null;
   weight: number | null;
   reason: string;
+  stance: FootprintStance;
+}
+
+export interface NoteMention {
+  note_id: string;
+  mentioned_type: string;
+  mentioned_slug: string;
 }
 
 export type EntityKind = "city" | "person" | "work" | "doctrine" | "event" | "archaeology" | "persuasion" | "polity";
+
 
 export interface EntityRef {
   kind: EntityKind;
@@ -242,4 +248,5 @@ export type Selection =
   | { kind: "archaeology"; id: string }
   | { kind: "persuasion"; id: string }
   | { kind: "polity"; id: string }
-  | { kind: "quote"; id: string };
+  | { kind: "quote"; id: string }
+  | { kind: "note"; id: string };

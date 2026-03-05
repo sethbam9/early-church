@@ -6,10 +6,11 @@ import { Pagination, PAGE_SIZE } from "../shared/Pagination";
 import { NoteCard } from "../shared/NoteCard";
 import { kindIcon, kindLabel } from "../shared/entityConstants";
 import { getRelationLabel } from "../../domain/relationLabels";
+import { RelationCard } from "../shared/RelationCard";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
-type EntityDetailTab = "info" | "locations" | "works" | "people" | "quotes" | "evidence" | "related";
+type EntityDetailTab = "info" | "locations" | "works" | "people" | "quotes" | "evidence" | "related" | "mentions";
 
 // ─── EntityDetail (main) ─────────────────────────────────────────────────────
 
@@ -91,8 +92,9 @@ export function EntityDetail({
       counts.locations = dataStore.map.getCitiesAtDecade(currentDecade)
         .filter(c => c.polity_id === id).length;
     }
-    counts.evidence = notes.length;
-    counts.related  = relations.length;
+    counts.evidence  = notes.length;
+    counts.related   = relations.length;
+    counts.mentions  = dataStore.noteMentions.getMentioning(kind, id).length;
     return counts;
   }, [kind, id, notes.length, relations.length, currentDecade]);
 
@@ -130,6 +132,10 @@ export function EntityDetail({
     }
     if (relations.length > 0 || kind === "archaeology") {
       tabs.push({ id: "related", label: `Related (${relations.length})` });
+    }
+    const mentionCount = tabCounts.mentions ?? 0;
+    if (mentionCount > 0) {
+      tabs.push({ id: "mentions", label: `Mentioned (${mentionCount})` });
     }
     return tabs;
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -253,6 +259,7 @@ export function EntityDetail({
         {activeTab === "quotes"    && <EntityQuotesTab kind={kind} id={id} onSelectEntity={onSelectEntity} />}
         {activeTab === "evidence"  && <EntityEvidenceTab notes={notes} onSelectEntity={onSelectEntity} />}
         {activeTab === "related"   && <EntityRelatedTab relations={relations} entityId={id} entityType={kind} onSelectEntity={onSelectEntity} />}
+        {activeTab === "mentions"  && <EntityMentionedInTab kind={kind} id={id} onSelectEntity={onSelectEntity} />}
       </div>
     </div>
   );
@@ -752,6 +759,50 @@ function EntityEvidenceTab({ notes, onSelectEntity }: {
   );
 }
 
+// ─── Mentioned In tab ─────────────────────────────────────────────────────────
+
+function EntityMentionedInTab({ kind, id, onSelectEntity }: {
+  kind: string; id: string;
+  onSelectEntity: (kind: string, id: string) => void;
+}) {
+  const [page, setPage] = useState(0);
+  useEffect(() => { setPage(0); }, [kind, id]);
+
+  const mentions = useMemo(() => dataStore.noteMentions.getMentioning(kind, id), [kind, id]);
+
+  const notes = useMemo(() => {
+    const seen = new Set<string>();
+    const out: ReturnType<typeof dataStore.notes.getForEntity> = [];
+    for (const m of mentions) {
+      if (seen.has(m.note_id)) continue;
+      seen.add(m.note_id);
+      // Find the note — it could be primary to any entity; look up by note_id
+      const allNotes = dataStore.notes.getAll ? dataStore.notes.getAll() : [];
+      const note = allNotes.find((n) => n.note_id === m.note_id);
+      if (note) out.push(note);
+    }
+    return out;
+  }, [mentions]);
+
+  if (notes.length === 0) return <div className="empty-state">No notes mention this entity.</div>;
+
+  const pageItems = notes.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+
+  return (
+    <div className="flex-col-8">
+      {pageItems.map((n) => (
+        <NoteCard
+          key={n.note_id}
+          note={n}
+          onSelectEntity={onSelectEntity}
+          yearLabel={`AD ${n.year_bucket ?? n.year_exact ?? "?"} · ${n.note_kind}`}
+        />
+      ))}
+      <Pagination page={page} total={notes.length} pageSize={PAGE_SIZE} onChange={setPage} />
+    </div>
+  );
+}
+
 // ─── Related tab ──────────────────────────────────────────────────────────────
 
 function EntityRelatedTab({ relations, entityId, entityType, onSelectEntity }: {
@@ -760,6 +811,7 @@ function EntityRelatedTab({ relations, entityId, entityType, onSelectEntity }: {
   entityType: string;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
+  const searchQuery = useAppStore((s) => s.searchQuery).trim();
   const [page, setPage] = useState(0);
   useEffect(() => { setPage(0); }, [entityId]);
 
@@ -769,23 +821,16 @@ function EntityRelatedTab({ relations, entityId, entityType, onSelectEntity }: {
 
   return (
     <div className="flex-col">
-      <div className="conn-list">
-        {pageItems.map((r) => {
-          const isOut   = r.source_id === entityId && r.source_type === entityType;
-          const otherId = isOut ? r.target_id   : r.source_id;
-          const othKind = isOut ? r.target_type : r.source_type;
-          const lbl     = getEntityLabel(othKind, otherId);
-          return (
-            <div key={r.relation_id} className="conn-card" onClick={() => onSelectEntity(othKind, otherId)}>
-              <span className="conn-icon">{kindIcon(othKind)}</span>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div className="conn-name">{lbl}</div>
-                <div className="conn-rel">{getRelationLabel(r.relation_type, isOut)}</div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      {pageItems.map((r) => (
+        <RelationCard
+          key={r.relation_id}
+          relation={r}
+          entityId={entityId}
+          entityType={entityType}
+          onSelectEntity={onSelectEntity}
+          searchQuery={searchQuery}
+        />
+      ))}
       <Pagination page={page} total={relations.length} pageSize={PAGE_SIZE} onChange={setPage} />
     </div>
   );

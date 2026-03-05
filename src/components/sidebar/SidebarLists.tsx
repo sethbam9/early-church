@@ -17,46 +17,84 @@ export function CitiesList({ search, currentDecade, onSelectCity, onFlyToCity }:
 }) {
   const includeCumulative = useAppStore((s) => s.includeCumulative);
   const [page, setPage] = useState(0);
-  useEffect(() => { setPage(0); }, [search, currentDecade, includeCumulative]);
+  const [mapVisibleOnly, setMapVisibleOnly] = useState(false);
+
+  useEffect(() => { setPage(0); }, [search, currentDecade, includeCumulative, mapVisibleOnly]);
+
+  // Decade-presence index for dot colors even in "all" mode
+  const decadePresence = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const c of dataStore.map.getCumulativeCitiesAtDecade(currentDecade)) {
+      m.set(c.city_id, c.presence_status);
+    }
+    return m;
+  }, [currentDecade]);
 
   const cities = useMemo(() => {
-    const all = includeCumulative
-      ? dataStore.map.getCumulativeCitiesAtDecade(currentDecade)
-      : dataStore.map.getCitiesAtDecade(currentDecade);
+    let base: { city_id: string; city_label: string; city_ancient: string; city_modern: string; country_modern: string; presence_status: string }[];
+    if (mapVisibleOnly) {
+      base = includeCumulative
+        ? dataStore.map.getCumulativeCitiesAtDecade(currentDecade)
+        : dataStore.map.getCitiesAtDecade(currentDecade);
+    } else {
+      base = dataStore.cities.getAll().map((c) => ({
+        ...c,
+        presence_status: decadePresence.get(c.city_id) ?? "unknown",
+      }));
+    }
     const q = search.trim().toLowerCase();
-    if (!q) return all;
-    return all.filter((c) =>
+    if (!q) return base;
+    return base.filter((c) =>
       `${c.city_ancient} ${c.city_label} ${c.city_modern} ${c.country_modern}`.toLowerCase().includes(q),
     );
-  }, [search, currentDecade, includeCumulative]);
-
-  if (cities.length === 0) return <div className="empty-state">No cities found.</div>;
+  }, [search, currentDecade, includeCumulative, mapVisibleOnly, decadePresence]);
 
   const pageItems = cities.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <>
-      {pageItems.map((c) => (
-        <div key={c.city_id} className="sidebar-list-item" onClick={() => onSelectCity(c.city_id)}>
-          <span className="sli-dot" style={{ background: presenceColor(c.presence_status) }} />
-          <div className="sli-main">
-            <div className="sli-name">{c.city_label}</div>
-            <div className="sli-meta">
-              {c.city_ancient !== c.city_label ? `${c.city_ancient} · ` : ""}
-              {c.country_modern}
-            </div>
-          </div>
-          <button
-            type="button"
-            className="sli-fly-btn"
-            title="Fly to"
-            onClick={(e) => { e.stopPropagation(); onFlyToCity(c.city_id); }}
-          >
-            ⌖
-          </button>
-        </div>
-      ))}
-      <Pagination page={page} total={cities.length} pageSize={PAGE_SIZE} onChange={setPage} />
+      {/* Map-visible toggle */}
+      <div className="list-filter-bar">
+        <span className="faint" style={{ fontSize: "0.72rem" }}>{cities.length} cities</span>
+        <button
+          type="button"
+          className={`list-filter-toggle${mapVisibleOnly ? " active" : ""}`}
+          onClick={() => setMapVisibleOnly((v) => !v)}
+          title={mapVisibleOnly ? "Showing map-visible only — click for all" : "Showing all cities — click to filter to map"}
+        >
+          {mapVisibleOnly ? "🗺 Map only" : "🌍 All cities"}
+        </button>
+      </div>
+
+      {cities.length === 0
+        ? <div className="empty-state">No cities found.</div>
+        : <>
+            {pageItems.map((c) => (
+              <div key={c.city_id} className="sidebar-list-item" onClick={() => onSelectCity(c.city_id)}>
+                <span className="sli-dot" style={{ background: presenceColor(c.presence_status) }} />
+                <div className="sli-main">
+                  <div className="sli-name"><Hl text={c.city_label} query={search} /></div>
+                  <div className="sli-meta">
+                    {c.city_ancient !== c.city_label ? `${c.city_ancient} · ` : ""}
+                    {c.country_modern}
+                    {!mapVisibleOnly && decadePresence.has(c.city_id) && (
+                      <span style={{ color: "var(--attested)", marginLeft: 4, fontSize: "0.7rem" }}>on map</span>
+                    )}
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  className="sli-fly-btn"
+                  title="Fly to"
+                  onClick={(e) => { e.stopPropagation(); onFlyToCity(c.city_id); }}
+                >
+                  ⌖
+                </button>
+              </div>
+            ))}
+            <Pagination page={page} total={cities.length} pageSize={PAGE_SIZE} onChange={setPage} />
+          </>
+      }
     </>
   );
 }

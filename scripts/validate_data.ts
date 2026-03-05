@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -274,6 +274,10 @@ async function main(): Promise<void> {
       "lon",
       "location_precision",
       "christianity_start_year",
+      "church_planted_year_scholarly",
+      "church_planted_year_earliest_claim",
+      "church_planted_by",
+      "apostolic_origin_thread",
     ],
     "data/persuasions.tsv": [
       "persuasion_id",
@@ -357,10 +361,6 @@ async function main(): Promise<void> {
       "persuasion_ids",
       "polity_id",
       "ruling_subdivision",
-      "church_planted_year_scholarly",
-      "church_planted_year_earliest_claim",
-      "church_planted_by",
-      "apostolic_origin_thread",
       "council_context",
       "evidence_note_id",
     ],
@@ -372,6 +372,7 @@ async function main(): Promise<void> {
       "year_end",
       "weight",
       "reason",
+      "stance",
     ],
     "data/works.tsv": [
       "work_id",
@@ -547,6 +548,8 @@ async function main(): Promise<void> {
   const relationCertaintyAllowed = ["attested", "probable", "claimed_tradition", "legendary", "unknown"];
   const entityTypeAllowed = ["person", "event", "work", "doctrine", "city", "archaeology", "persuasion", "polity"];
   const mentionTypeAllowed = ["person", "persuasion", "polity", "city", "work", "doctrine", "event", "archaeology"];
+  const quoteStanceAllowed = ["supports", "opposes", "neutral", "developing"];
+  const footprintStanceAllowed = ["affirms", "condemns", "neutral", ""];
 
   function fkSetForType(type: string): Set<string> {
     switch (type) {
@@ -644,6 +647,7 @@ async function main(): Promise<void> {
     }
 
     validateIntField({ issues, file, line, field: "year", rawValue: r.year ?? "" });
+    validateEnum({ issues, file, line, field: "stance", value: emptyIfNullToken(r.stance ?? ""), allowed: quoteStanceAllowed, allowEmpty: true });
   }
 
   // --- archaeology.tsv ---
@@ -848,9 +852,41 @@ async function main(): Promise<void> {
     }
 
     validateIntField({ issues, file, line, field: "weight", rawValue: r.weight ?? "" });
+    validateEnum({ issues, file, line, field: "stance", value: emptyIfNullToken(r.stance ?? ""), allowed: footprintStanceAllowed, allowEmpty: true });
 
     if (entityType && entityId && fkSetForType(entityType).size > 0 && !fkSetForType(entityType).has(entityId)) {
       issues.push({ severity: "error", file, line, message: `Broken FK entity_id for type ${entityType}: ${entityId}` });
+    }
+  }
+
+  // --- essays (data/essays/*.md) — validate [[type:id]] entity links ---
+  const essaysDir = resolve(ROOT, "data", "essays");
+  let essayFiles: string[] = [];
+  try {
+    essayFiles = (await readdir(essaysDir)).filter((f) => f.endsWith(".md"));
+  } catch {
+    issues.push({ severity: "warn", file: "data/essays", line: 0, message: "Could not read essays directory" });
+  }
+
+  for (const essayFile of essayFiles) {
+    const essayPath = resolve(essaysDir, essayFile);
+    let body = "";
+    try {
+      body = await readFile(essayPath, "utf8");
+    } catch {
+      issues.push({ severity: "warn", file: `data/essays/${essayFile}`, line: 0, message: "Could not read essay file" });
+      continue;
+    }
+    const essayRelPath = `data/essays/${essayFile}`;
+    for (const mention of parseBracketMentions(body)) {
+      if (!mentionTypeAllowed.includes(mention.type)) {
+        issues.push({ severity: "error", file: essayRelPath, line: 0, message: `Unknown mention type in essay: ${mention.type}` });
+        continue;
+      }
+      const fkSet = fkSetForType(mention.type);
+      if (fkSet.size > 0 && !fkSet.has(mention.slug)) {
+        issues.push({ severity: "error", file: essayRelPath, line: 0, message: `Broken entity link [[${mention.type}:${mention.slug}]] — not found in ${mention.type}s` });
+      }
     }
   }
 
@@ -858,6 +894,7 @@ async function main(): Promise<void> {
   void eventIds;
   void quoteIds;
   void relationIds;
+  void footprintStanceAllowed;
 
   const errors = issues.filter((i) => i.severity === "error");
   const warns = issues.filter((i) => i.severity === "warn");

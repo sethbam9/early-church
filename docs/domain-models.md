@@ -1,6 +1,6 @@
 # Core Domain Models
 
-How the app's TypeScript types should map to the data web, and how to migrate to a DB later.
+How the app's TypeScript types map to the data, and how to migrate to a DB later.
 
 ---
 
@@ -10,7 +10,8 @@ How the app's TypeScript types should map to the data web, and how to migrate to
 2. **Time is always a separate field** — `year_start` / `year_end`, never embedded in identity.
 3. **Geography is a join** — entities don't own coordinates; they reference a `place_id`.
 4. **Relations are first-class** — the graph is in `relations.tsv`, not in per-entity columns.
-5. **Derived state is pre-computed** — `place_state_by_decade` and `entity_place_footprints` are caches, not source of truth.
+5. **Static data lives once** — city-planting metadata is on `City`, not repeated per decade.
+6. **Derived state is pre-computed** — `places.tsv`, `entity_place_footprints.tsv`, and `note_mentions.tsv` are derive-script outputs, never edited manually.
 
 ---
 
@@ -21,20 +22,25 @@ Canonical geographic unit. Corresponds to `cities.tsv`.
 
 ```ts
 interface City {
-  city_id: string;          // PK
+  city_id: string;              // PK
   city_label: string;
-  city_ancient_primary: string;
-  city_modern_primary: string;
-  country_modern_primary: string;
+  city_ancient: string;         // col: city_ancient_primary
+  city_modern: string;          // col: city_modern_primary
+  country_modern: string;       // col: country_modern_primary
   lat: number | null;
   lon: number | null;
   location_precision: "exact" | "approx_city" | "region_only" | "unknown";
   christianity_start_year: number | null;
+  // Static church-planting metadata (moved from place_state_by_decade)
+  church_planted_year_scholarly: number | null;
+  church_planted_year_earliest_claim: number | null;
+  church_planted_by: string;
+  apostolic_origin_thread: string;
 }
 ```
 
 ### Place
-Map-visible thing. A city, or an archaeology site with its own coordinates. Corresponds to `places.tsv`.
+Map-visible thing. A city, or an archaeology site with its own coordinates. Corresponds to `places.tsv` (DERIVED).
 
 ```ts
 interface Place {
@@ -49,6 +55,38 @@ interface Place {
 }
 ```
 
+### PlaceState
+Temporal map state for a place at a specific decade. Corresponds to `place_state_by_decade.tsv`.
+
+```ts
+interface PlaceState {
+  place_id: string;             // FK → Place
+  decade: number;
+  presence_status: PresenceStatus;
+  persuasion_ids: string[];     // FK → Persuasion (semicolon-separated in TSV)
+  polity_id: string | null;     // FK → Polity
+  ruling_subdivision: string;
+  council_context: string;
+  evidence_note_id: string | null;  // FK → Note
+}
+```
+
+### CityAtDecade
+Merged view of City + PlaceState (used by the map). `City` fields are inherited, so church-planting metadata is available.
+
+```ts
+interface CityAtDecade extends City {
+  place_id: string;
+  decade: number;
+  presence_status: PresenceStatus;
+  persuasion_ids: string[];
+  polity_id: string | null;
+  ruling_subdivision: string;
+  council_context: string;
+  evidence_note_id: string | null;
+}
+```
+
 ### Person
 Historical figure. Corresponds to `people.tsv`.
 
@@ -56,16 +94,16 @@ Historical figure. Corresponds to `people.tsv`.
 interface Person {
   person_id: string;        // PK
   person_label: string;
-  name_alt: string;
+  name_alt: string[];
   birth_year: number | null;
   death_year: number | null;
   death_type: string;       // "martyrdom" | "natural" | "unknown"
-  roles: string;            // semicolon-separated: "bishop;theologian"
+  roles: string[];          // semicolon-separated in TSV: "bishop;theologian"
   city_of_origin_id: string | null;  // FK → City
   apostolic_connection: string;
   description: string;
-  wikipedia_url: string;
-  citations: string;
+  wikipedia_url: string | null;
+  citations: string[];
 }
 ```
 
@@ -78,16 +116,16 @@ interface Work {
   title_display: string;
   author_person_id: string | null;   // FK → Person
   author_name_display: string;
-  year_written_start: number;
-  year_written_end: number;
-  work_type: "letter" | "treatise" | "canon" | "creed" | "homily" | "chronicle" | "rule" | "other";
+  year_written_start: number | null;
+  year_written_end: number | null;
+  work_type: string;        // see enum-schema.md
   language: string;
   place_written_id: string | null;   // FK → Place (formatted "city:…")
-  place_recipient_ids: string;       // semicolon-separated FK → Place
+  place_recipient_ids: string[];     // semicolon-separated FK → Place
   description: string;
   significance: string;
-  modern_edition_url: string;
-  citations: string;
+  modern_edition_url: string | null;
+  citations: string[];
 }
 ```
 
@@ -98,18 +136,18 @@ A theological claim or practice. Corresponds to `doctrines.tsv`.
 interface Doctrine {
   doctrine_id: string;      // PK
   name_display: string;
-  category: string;         // "sacraments" | "christology" | "ecclesiology" | …
+  category: string;         // see enum-schema.md
   description: string;
   first_attested_year: number | null;
   first_attested_work_id: string | null;  // FK → Work
-  controversy_level: "low" | "medium" | "high";
+  controversy_level: string; // "low" | "medium" | "high"
   resolution: string;
-  citations: string;
+  citations: string[];
 }
 ```
 
 ### Quote
-Verbatim evidence tying a doctrine to a work. Corresponds to `quotes.tsv`.
+Verbatim evidence quote. Corresponds to `quotes.tsv`.
 
 ```ts
 interface Quote {
@@ -117,140 +155,140 @@ interface Quote {
   doctrine_id: string;      // FK → Doctrine
   work_id: string | null;   // FK → Work
   text: string;
-  work_reference: string;   // e.g. "Smyrnaeans 8"
+  work_reference: string;
   year: number | null;
-  stance: "affirming" | "condemning" | "neutral" | "questioning" | "developing";
+  stance: string;           // "supports" | "opposes" | "neutral" | "developing"
   notes: string;
-  citations: string;
+  citations: string[];
 }
 ```
 
-### Event
-A datable historical occurrence. Corresponds to `events.tsv`.
+### HistoricalEvent
+Historical event. Corresponds to `events.tsv`.
 
 ```ts
-interface Event {
+interface HistoricalEvent {
   event_id: string;         // PK
   name_display: string;
-  event_type: "council" | "persecution" | "political" | "martyrdom" | "missionary" | "liturgical" | "schism" | "other";
-  year_start: number;
+  event_type: string;       // see enum-schema.md
+  year_start: number | null;
   year_end: number | null;
-  primary_place_id: string | null;      // FK → Place
+  primary_place_id: string | null;   // FK → Place
   region: string;
-  key_figure_person_ids: string;        // semicolon-separated FK → Person
+  key_figure_person_ids: string[];   // FK → Person
   description: string;
   significance: string;
   outcome: string;
-  citations: string;
+  citations: string[];
 }
 ```
 
-### Archaeology
-A physical site or artefact with geographic coordinates. Corresponds to `archaeology.tsv`.
+### ArchaeologySite
+Physical archaeological site. Corresponds to `archaeology.tsv`.
 
 ```ts
-interface Archaeology {
+interface ArchaeologySite {
   archaeology_id: string;   // PK
   name_display: string;
-  site_type: string;        // "house-church" | "basilica" | "catacomb" | "inscription" | …
+  site_type: string;        // see enum-schema.md
   city_id: string | null;   // FK → City
   lat: number | null;
   lon: number | null;
-  location_precision: "exact" | "approx_city" | "region_only" | "unknown";
+  location_precision: LocationPrecision;
   year_start: number | null;
   year_end: number | null;
   description: string;
   significance: string;
   discovery_notes: string;
-  current_status: string;   // "extant" | "destroyed" | "partially_preserved" | "unknown"
+  current_status: string;
   uncertainty: string;
-  citations: string;
+  citations: string[];
 }
 ```
 
 ### Persuasion
-A theological tradition, sect, or practice stream. Corresponds to `persuasions.tsv`.
+Theological tradition/stream. Corresponds to `persuasions.tsv`.
 
 ```ts
 interface Persuasion {
   persuasion_id: string;    // PK
   persuasion_label: string;
-  persuasion_stream: string;  // "apostolic" | "gnostic" | "theological_party" | "jewish_christian" | "schism" | "practice" | "ascetic" | "prophetic"
+  persuasion_stream: string; // see enum-schema.md
   year_start: number | null;
   year_end: number | null;
   description: string;
-  wikipedia_url: string;
-  citations: string;
+  wikipedia_url: string | null;
+  citations: string[];
 }
 ```
 
 ### Polity
-A political entity that controlled territory. Corresponds to `polities.tsv`.
+Political entity. Corresponds to `polities.tsv`.
 
 ```ts
 interface Polity {
   polity_id: string;        // PK
   polity_label: string;
-  name_alt: string;
+  name_alt: string[];
   year_start: number | null;
   year_end: number | null;
   capital: string;
   region: string;
   description: string;
-  wikipedia_url: string;
-  citations: string;
+  wikipedia_url: string | null;
+  citations: string[];
 }
 ```
 
 ---
 
-## Edge / relation entities
+## Relation model
 
 ### Relation
 Universal graph edge. Corresponds to `relations.tsv`.
 
 ```ts
-type RelationNodeType = "place" | "city" | "person" | "work" | "doctrine" | "event" | "archaeology" | "persuasion" | "polity" | "note";
-
 interface Relation {
   relation_id: string;      // PK
-  source_type: RelationNodeType;
+  source_type: string;
   source_id: string;
-  relation_type: string;    // e.g. "bishop_of" | "affirms" | "martyred_in" | "disciple_of"
-  target_type: RelationNodeType;
+  relation_type: string;    // see enum-schema.md
+  target_type: string;
   target_id: string;
   year_start: number | null;
   year_end: number | null;
   weight: number | null;
-  polarity: "supports" | "opposes" | "neutral" | null;
-  certainty: "attested" | "probable" | "claimed_tradition" | "legendary" | "unknown" | null;
+  polarity: string;         // "supports" | "opposes" | "neutral"
+  certainty: string;        // "attested" | "probable" | "claimed_tradition" | "legendary" | "unknown"
   evidence_note_id: string | null;  // FK → Note
-  citations: string;
+  citations: string[];
 }
 ```
 
+**The `polarity` field on `work→affirms→doctrine` and `person→affirms→doctrine` relations drives footprint stance derivation and the doctrine city map.**
+
 ---
 
-## Evidence entities
+## Evidence model
 
 ### Note
-Human-readable evidence or commentary. Corresponds to `notes.tsv`.
+Evidence or commentary. Corresponds to `notes.tsv`.
 
 ```ts
 interface Note {
-  note_id: string;          // PK (stable content hash)
-  year_bucket: number;
+  note_id: string;          // PK — 10-char SHA-1 hash of content
+  year_bucket: number | null;
   year_exact: number | null;
   primary_entity_type: string;
   primary_entity_id: string;
-  note_kind: "evidence" | "commentary";
-  body_md: string;          // may contain [[type:id]] mention tags
-  citation_urls: string;    // semicolon-separated
+  note_kind: string;        // "evidence" | "commentary"
+  body_md: string;          // may contain [[type:id|label]] mention tags
+  citation_urls: string[];
 }
 ```
 
 ### NoteMention
-Pre-parsed join of note → mentioned entity. Corresponds to `note_mentions.tsv`.
+Pre-parsed mention join. Corresponds to `note_mentions.tsv` (DERIVED from `notes.tsv`).
 
 ```ts
 interface NoteMention {
@@ -260,58 +298,81 @@ interface NoteMention {
 }
 ```
 
+Derived by `scripts/derive_mentions.ts`. Access via `dataStore.noteMentions.getMentioning(type, id)`.
+
 ---
 
-## Pre-computed fact tables
+## Footprint model
 
-### PlaceStateByDecade
-Denormalized temporal state of a place per decade. Derived from `final.tsv`. Corresponds to `place_state_by_decade.tsv`.
-
-```ts
-type PresenceStatus = "attested" | "probable" | "claimed_tradition" | "not_attested" | "suppressed" | "unknown";
-
-interface PlaceStateByDecade {
-  place_id: string;         // FK → Place
-  decade: number;           // e.g. 100 = "100s CE"
-  presence_status: PresenceStatus;
-  persuasion_ids: string;   // semicolon-separated FK → Persuasion
-  polity_id: string | null; // FK → Polity
-  ruling_subdivision: string;
-  church_planted_year_scholarly: number | null;
-  church_planted_year_earliest_claim: number | null;
-  church_planted_by: string;
-  apostolic_origin_thread: string;
-  council_context: string;
-  evidence_note_id: string | null;  // FK → Note
-}
-```
-
-### EntityPlaceFootprint
-Pre-computed mapping of any entity to the places it is associated with, over time. Corresponds to `entity_place_footprints.tsv`.
+### Footprint
+Precomputed entity↔place index. Corresponds to `entity_place_footprints.tsv` (DERIVED).
 
 ```ts
-type EntityType = "person" | "event" | "work" | "doctrine" | "city" | "archaeology" | "persuasion" | "polity";
+type FootprintStance = "affirms" | "condemns" | "neutral" | "";
 
-interface EntityPlaceFootprint {
-  entity_type: EntityType;
-  entity_id: string;        // FK into the entity's own table
+interface Footprint {
+  entity_type: string;
+  entity_id: string;
   place_id: string;         // FK → Place
   year_start: number | null;
   year_end: number | null;
-  weight: number | null;    // 1–5; higher = more significant association
-  reason: string;           // e.g. "written_in" | "sent_to" | "presence" | "via_work_affirms"
+  weight: number | null;
+  reason: string;           // e.g. "bishop_of", "written_in", "via_work_affirms"
+  stance: FootprintStance;  // non-empty only for doctrine footprints
 }
+```
+
+Derived by `scripts/derive_footprints.ts`. Access via:
+- `dataStore.footprints.getForEntity(type, id)` — all places for an entity
+- `dataStore.footprints.getForPlace(placeId)` — all entities at a place
+- `dataStore.footprints.getDoctrineFootprintsForCity(cityId)` — doctrine stances for a city
+
+**Doctrine city map flow:**
+1. `dataStore.footprints.getForEntity("doctrine", id)` returns footprints with `stance`.
+2. Group by `place_id`, pick dominant stance → color city markers on map.
+
+---
+
+## DataStore access patterns
+
+```ts
+// Entity lookups
+dataStore.cities.getById(id)
+dataStore.people.getById(id)
+dataStore.works.getByAuthor(personId)
+dataStore.quotes.getByDoctrine(doctrineId)
+dataStore.relations.getForEntity(type, id)
+dataStore.notes.getForEntity(type, id)
+
+// Map data
+dataStore.map.getCumulativeCitiesAtDecade(decade)   // CityAtDecade[]
+dataStore.map.getPlaceStatesForCity(cityId)          // PlaceState[]
+
+// Footprints
+dataStore.footprints.getForEntity(type, id)          // Footprint[]
+dataStore.footprints.getForPlace(placeId)            // Footprint[]
+
+// Note mentions (cross-reference: "all notes that mention X")
+dataStore.noteMentions.getMentioning(type, id)       // NoteMention[]
 ```
 
 ---
 
-## DB migration notes
+## Implementation status
 
-When moving from TSV files to a relational DB (e.g. SQLite, Postgres):
+**All tables implemented and validated.** Run `npm run data:validate` to regenerate and verify.
 
-- Each interface above maps to a table 1:1.
-- All `_id` fields are `TEXT PRIMARY KEY` or `TEXT REFERENCES`.
-- Semicolon-separated multi-value columns (`persuasion_ids`, `place_recipient_ids`, etc.) become join tables.
-- `EntityPlaceFootprint` and `PlaceStateByDecade` stay as denormalized caches — populate them via a migration script, not application logic.
-- `Note.note_id` is a content-hash — recalculate if body changes, do not auto-increment.
-- `Relation` is the single authoritative edge table; never re-introduce `edges`.
+**Derive pipeline** (`npm run data:derive`):
+- `scripts/derive_places.ts` → `data/places.tsv`
+- `scripts/derive_footprints.ts` → `data/entity_place_footprints.tsv`
+- `scripts/derive_mentions.ts` → `data/note_mentions.tsv`
+
+**Source files** (edited directly in `data/`):
+- `cities.tsv`, `people.tsv`, `persuasions.tsv`, `polities.tsv`
+- `works.tsv`, `events.tsv`, `doctrines.tsv`, `quotes.tsv`
+- `archaeology.tsv`, `relations.tsv`, `notes.tsv`
+- `place_state_by_decade.tsv`
+
+**Migration note**: `scripts/migrate_static_to_cities.ts` was a one-time migration that moved `church_planted_year_scholarly`, `church_planted_year_earliest_claim`, `church_planted_by`, `apostolic_origin_thread` from `place_state_by_decade.tsv` to `cities.tsv` (run 2026-03-05).
+
+**Future**: `final.tsv` and `build_final_data_from_final.ts` will be deleted once all historical data is migrated to the manual TSVs above.

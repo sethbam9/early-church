@@ -70,10 +70,12 @@ export function RightSidebar({ onFlyToCity, onFlyToArch, currentDecade }: RightS
 
   const handleEntitySelect = (kind: string, id: string) => {
     if (selectedEssay) {
-      // Remember the essay so back can return to it
       setPrevEssay(selectedEssay);
       setSelectedEssay(null);
     }
+    // Fly map to city/arch whenever selected from sidebar
+    if (kind === "city") onFlyToCity(id);
+    else if (kind === "archaeology") onFlyToArch(id);
     pushSelection({ kind: kind as Selection["kind"], id });
   };
 
@@ -93,6 +95,14 @@ export function RightSidebar({ onFlyToCity, onFlyToArch, currentDecade }: RightS
   };
 
   // ── Entity detail routing ────────────────────────────────────────────────
+
+  if (selection?.kind === "note") {
+    return (
+      <SidebarShell expanded={sidebarExpanded} onToggleExpand={toggleExpanded} onDismiss={toggleRightPanel}>
+        <NoteDetail noteId={selection.id} onBack={handleBack} onSelectEntity={handleEntitySelect} />
+      </SidebarShell>
+    );
+  }
 
   if (selection?.kind === "quote") {
     return (
@@ -277,6 +287,74 @@ export function RightSidebar({ onFlyToCity, onFlyToArch, currentDecade }: RightS
         )}
       </div>
     </SidebarShell>
+  );
+}
+
+// ─── Note detail panel ────────────────────────────────────────────────────────
+
+function NoteDetail({ noteId, onBack, onSelectEntity }: {
+  noteId: string;
+  onBack: () => void;
+  onSelectEntity: (kind: string, id: string) => void;
+}) {
+  const allNotes = dataStore.notes.getAll();
+  const note = allNotes.find((n) => n.note_id === noteId);
+  if (!note) return (
+    <div className="detail-panel">
+      <div className="detail-back-bar"><button type="button" className="back-btn" onClick={onBack}>← Back</button></div>
+      <div className="empty-state">Note not found.</div>
+    </div>
+  );
+
+  const entity = note.primary_entity_id
+    ? getEntityLabel(note.primary_entity_type, note.primary_entity_id)
+    : null;
+
+  const yearLabel = note.year_exact
+    ? `AD ${note.year_exact}`
+    : note.year_bucket
+      ? `c. AD ${note.year_bucket}`
+      : null;
+
+  return (
+    <div className="detail-panel">
+      <div className="detail-back-bar">
+        <button type="button" className="back-btn" onClick={onBack}>← Back</button>
+        <span className="detail-crumb">Note</span>
+      </div>
+      <div className="detail-header">
+        <div className="detail-kind-badge">📋 Evidence Note</div>
+        {note.note_kind && <div className="detail-subtitle">{note.note_kind}{yearLabel ? ` · ${yearLabel}` : ""}</div>}
+      </div>
+      <div className="detail-body flex-col-12">
+        <div className="note-card">
+          <MarkdownRenderer onSelectEntity={onSelectEntity}>
+            {note.body_md}
+          </MarkdownRenderer>
+          {note.citation_urls.length > 0 && (
+            <div style={{ marginTop: 6, display: "flex", flexWrap: "wrap", gap: 4 }}>
+              {note.citation_urls.map((url, i) => (
+                <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="citation-link">{url}</a>
+              ))}
+            </div>
+          )}
+        </div>
+        {entity && note.primary_entity_id && (
+          <div className="fact-grid">
+            <span className="fact-label">Primary entity</span>
+            <span className="fact-value">
+              <button
+                type="button"
+                className="mention-link"
+                onClick={() => onSelectEntity(note.primary_entity_type, note.primary_entity_id)}
+              >
+                {entity}
+              </button>
+            </span>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 

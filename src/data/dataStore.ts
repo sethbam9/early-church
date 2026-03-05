@@ -5,14 +5,14 @@ import { parseTsv, int, float, splitSemi, str } from "./parseTsv";
 export type {
   LocationPrecision, PresenceStatus, City, PlaceState, CityAtDecade,
   Person, Work, Doctrine, Quote, HistoricalEvent, ArchaeologySite,
-  Persuasion, Polity, Place, Relation, Note, Footprint,
+  Persuasion, Polity, Place, Relation, Note, Footprint, FootprintStance, NoteMention,
   EntityKind, EntityRef, HighlightEntry, CorrespondenceArc, Selection,
 } from "./types";
 
 import type {
   LocationPrecision, PresenceStatus, City, PlaceState, CityAtDecade,
   Person, Work, Doctrine, Quote, HistoricalEvent, ArchaeologySite,
-  Persuasion, Polity, Place, Relation, Note, Footprint,
+  Persuasion, Polity, Place, Relation, Note, Footprint, FootprintStance, NoteMention,
 } from "./types";
 
 // ─── Raw TSV imports (bundled at build time) ──────────────────────────────────
@@ -30,6 +30,7 @@ import relationsRaw from "../../data/relations.tsv?raw";
 import placesRaw from "../../data/places.tsv?raw";
 import placeStatesRaw from "../../data/place_state_by_decade.tsv?raw";
 import notesRaw from "../../data/notes.tsv?raw";
+import noteMentionsRaw from "../../data/note_mentions.tsv?raw";
 import footprintsRaw from "../../data/entity_place_footprints.tsv?raw";
 
 // ─── Parsing helpers ──────────────────────────────────────────────────────────
@@ -56,6 +57,10 @@ const cities: City[] = parseTsv(citiesRaw).map((r) => ({
   lon: float(r.lon),
   location_precision: parseLocPrec(str(r.location_precision)),
   christianity_start_year: int(r.christianity_start_year),
+  church_planted_year_scholarly: int(r.church_planted_year_scholarly),
+  church_planted_year_earliest_claim: int(r.church_planted_year_earliest_claim),
+  church_planted_by: str(r.church_planted_by),
+  apostolic_origin_thread: str(r.apostolic_origin_thread),
 }));
 
 const people: Person[] = parseTsv(peopleRaw).map((r) => ({
@@ -205,10 +210,6 @@ const placeStates: PlaceState[] = parseTsv(placeStatesRaw).map((r) => ({
   persuasion_ids: splitSemi(r.persuasion_ids),
   polity_id: str(r.polity_id) || null,
   ruling_subdivision: str(r.ruling_subdivision),
-  church_planted_year_scholarly: int(r.church_planted_year_scholarly),
-  church_planted_year_earliest_claim: int(r.church_planted_year_earliest_claim),
-  church_planted_by: str(r.church_planted_by),
-  apostolic_origin_thread: str(r.apostolic_origin_thread),
   council_context: str(r.council_context),
   evidence_note_id: str(r.evidence_note_id) || null,
 }));
@@ -224,6 +225,11 @@ const notes: Note[] = parseTsv(notesRaw).map((r) => ({
   citation_urls: splitSemi(r.citation_urls),
 }));
 
+function parseFootprintStance(v: string): FootprintStance {
+  const allowed: FootprintStance[] = ["affirms", "condemns", "neutral", ""];
+  return allowed.includes(v as FootprintStance) ? (v as FootprintStance) : "";
+}
+
 const footprints: Footprint[] = parseTsv(footprintsRaw).map((r) => ({
   entity_type: str(r.entity_type),
   entity_id: str(r.entity_id),
@@ -232,6 +238,13 @@ const footprints: Footprint[] = parseTsv(footprintsRaw).map((r) => ({
   year_end: int(r.year_end),
   weight: int(r.weight),
   reason: str(r.reason),
+  stance: parseFootprintStance(str(r.stance)),
+}));
+
+const noteMentions: NoteMention[] = parseTsv(noteMentionsRaw).map((r) => ({
+  note_id: str(r.note_id),
+  mentioned_type: str(r.mentioned_type),
+  mentioned_slug: str(r.mentioned_slug),
 }));
 
 // ─── Lookup Maps ──────────────────────────────────────────────────────────────
@@ -316,6 +329,15 @@ for (const q of quotes) {
     wArr.push(q);
     quotesByWork.set(q.work_id, wArr);
   }
+}
+
+// note_mentions indexed by mentioned entity (mentioned_type:mentioned_slug)
+const noteMentionsByEntity = new Map<string, NoteMention[]>();
+for (const m of noteMentions) {
+  const key = `${m.mentioned_type}:${m.mentioned_slug}`;
+  const arr = noteMentionsByEntity.get(key) ?? [];
+  arr.push(m);
+  noteMentionsByEntity.set(key, arr);
 }
 
 // works indexed by author_person_id
@@ -532,5 +554,13 @@ export const dataStore = {
     getAll: () => footprints,
     getForEntity: (type: string, id: string) => footprintsByEntity.get(`${type}:${id}`) ?? [],
     getForPlace: (placeId: string) => footprints.filter((f) => f.place_id === placeId),
+    getDoctrineFootprintsForCity: (cityId: string) =>
+      footprints.filter((f) => f.entity_type === "doctrine" && f.place_id === `city:${cityId}`),
+  },
+
+  // ── Note Mentions ──
+  noteMentions: {
+    getAll: () => noteMentions,
+    getMentioning: (type: string, id: string) => noteMentionsByEntity.get(`${type}:${id}`) ?? [],
   },
 };

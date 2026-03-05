@@ -49,14 +49,11 @@ function buildCitySearchIndex(): Map<string, string> {
     }
   }
 
-  // 5. Via place_state church_planted_by text (iterate all cities)
+  // 5. church_planted_by text (now a direct field on city)
   const cityPlantedBy = new Map<string, string>();
   for (const city of dataStore.cities.getAll()) {
-    for (const ps of dataStore.map.getPlaceStatesForCity(city.city_id)) {
-      if (ps.church_planted_by) {
-        const existing = cityPlantedBy.get(city.city_id) ?? "";
-        cityPlantedBy.set(city.city_id, existing + " " + ps.church_planted_by.toLowerCase());
-      }
+    if (city.church_planted_by) {
+      cityPlantedBy.set(city.city_id, city.church_planted_by.toLowerCase());
     }
   }
 
@@ -329,7 +326,9 @@ export function MapPage() {
 
   // ── Arc data ──────────────────────────────────────────────────────────────
 
-  const arcPairs = useMemo<[CityAtDecade, CityAtDecade][]>(() => {
+  type ArcEntry = { a: CityAtDecade; b: CityAtDecade; label: string; color?: string };
+
+  const arcPairs = useMemo<ArcEntry[]>(() => {
     if (!showArcs) return [];
 
     function makeFakeCity(cityId: string): CityAtDecade | null {
@@ -343,13 +342,20 @@ export function MapPage() {
         persuasion_ids: [],
         polity_id: null,
         ruling_subdivision: "",
-        church_planted_year_scholarly: null,
-        church_planted_year_earliest_claim: null,
-        church_planted_by: "",
-        apostolic_origin_thread: "",
         council_context: "",
         evidence_note_id: null,
       };
+    }
+
+    function makePairs(cities: CityAtDecade[], label: string, color?: string): ArcEntry[] {
+      const pairs: ArcEntry[] = [];
+      for (let i = 0; i < cities.length - 1; i++) {
+        for (let j = i + 1; j < cities.length; j++) {
+          const a = cities[i]; const b = cities[j];
+          if (a && b) pairs.push({ a, b, label, color });
+        }
+      }
+      return pairs;
     }
 
     if (selection?.kind === "city") {
@@ -357,12 +363,10 @@ export function MapPage() {
         ?? makeFakeCity(selection.id);
       if (!selectedCity) return [];
 
-      // Gather connected cities via footprints of associated people
       const footprints = dataStore.footprints.getForPlace(`city:${selection.id}`);
       const personIds = new Set(
         footprints.filter((f) => f.entity_type === "person").map((f) => f.entity_id),
       );
-      // Also gather from relations
       const rels = dataStore.relations.getForEntity("city", selection.id);
       for (const r of rels) {
         const otherType = r.source_id === selection.id ? r.target_type : r.source_type;
@@ -370,32 +374,93 @@ export function MapPage() {
         if (otherType === "person") personIds.add(otherId);
       }
 
-      const otherCityIds = new Set<string>();
+      // Build arcs per person so we can label them
+      const cityLabel = dataStore.cities.getById(selection.id)?.city_label ?? "";
+      const result: ArcEntry[] = [];
+      const seen = new Set<string>();
       for (const pid of personIds) {
+        const p = dataStore.people.getById(pid);
+        const pLabel = p?.person_label ?? pid;
         for (const cid of getCityIdsForPerson(pid)) {
-          if (cid !== selection.id) otherCityIds.add(cid);
+          if (cid === selection.id) continue;
+          const key = cid < selection.id ? `${cid}:${selection.id}` : `${selection.id}:${cid}`;
+          if (seen.has(key)) continue;
+          seen.add(key);
+          const other = makeFakeCity(cid);
+          if (other) result.push({ a: selectedCity, b: other, label: `${cityLabel} ↔ ${other.city_label} via ${pLabel}` });
         }
       }
-
-      return Array.from(otherCityIds)
-        .map((cid) => {
-          const other = makeFakeCity(cid);
-          return other ? [selectedCity, other] as [CityAtDecade, CityAtDecade] : null;
-        })
-        .filter(Boolean) as [CityAtDecade, CityAtDecade][];
+      return result;
     }
 
     if (selection?.kind === "person") {
+      const p = dataStore.people.getById(selection.id);
+      const label = p?.person_label ?? selection.id;
       const cityIds = Array.from(getCityIdsForPerson(selection.id));
       const cities = cityIds.map(makeFakeCity).filter(Boolean) as CityAtDecade[];
-      const pairs: [CityAtDecade, CityAtDecade][] = [];
+      return makePairs(cities, `${label}'s journey`);
+    }
+
+    if (selection?.kind === "work") {
+      const w = dataStore.works.getById(selection.id);
+      const label = w?.title_display ?? selection.id;
+      const cityIds: string[] = [];
+      if (w?.place_written_id?.startsWith("city:")) cityIds.push(w.place_written_id.slice(5));
+      for (const rid of w?.place_recipient_ids ?? []) {
+        if (rid.startsWith("city:")) cityIds.push(rid.slice(5));
+      }
+      for (const r of dataStore.relations.getForEntity("work", selection.id)) {
+        if (r.source_type === "city") cityIds.push(r.source_id);
+        if (r.target_type === "city") cityIds.push(r.target_id);
+      }
+      if (w?.author_person_id) {
+        for (const cid of getCityIdsForPerson(w.author_person_id)) cityIds.push(cid);
+      }
+      const cities = Array.from(new Set(cityIds)).map(makeFakeCity).filter(Boolean) as CityAtDecade[];
+      return makePairs(cities, label);
+    }
+
+    if (selection?.kind === "event") {
+      const e = dataStore.events.getById(selection.id);
+      const label = e?.name_display ?? selection.id;
+      const cityIds: string[] = [];
+      if (e?.primary_place_id?.startsWith("city:")) cityIds.push(e.primary_place_id.slice(5));
+      for (const pid of e?.key_figure_person_ids ?? []) {
+        for (const cid of getCityIdsForPerson(pid)) cityIds.push(cid);
+      }
+      for (const r of dataStore.relations.getForEntity("event", selection.id)) {
+        if (r.source_type === "city") cityIds.push(r.source_id);
+        if (r.target_type === "city") cityIds.push(r.target_id);
+      }
+      const cities = Array.from(new Set(cityIds)).map(makeFakeCity).filter(Boolean) as CityAtDecade[];
+      return makePairs(cities, label);
+    }
+
+    if (selection?.kind === "doctrine") {
+      const fps = dataStore.footprints.getForEntity("doctrine", selection.id);
+      const d = dataStore.doctrines.getById(selection.id);
+      const dLabel = d?.name_display ?? selection.id;
+      // Build per-city stance for label
+      const cityStance = new Map<string, string>();
+      for (const fp of fps) {
+        if (!fp.place_id.startsWith("city:")) continue;
+        const cid = fp.place_id.slice(5);
+        if (!cityStance.has(cid) && fp.stance) cityStance.set(cid, fp.stance);
+      }
+      const cityIds = Array.from(cityStance.keys());
+      const cities = cityIds.map(makeFakeCity).filter(Boolean) as CityAtDecade[];
+      const pairs: ArcEntry[] = [];
       for (let i = 0; i < cities.length - 1; i++) {
         for (let j = i + 1; j < cities.length; j++) {
           const a = cities[i]; const b = cities[j];
-          if (a && b) pairs.push([a, b]);
+          if (!a || !b) continue;
+          const sA = cityStance.get(a.city_id) ?? "";
+          const sB = cityStance.get(b.city_id) ?? "";
+          const stanceNote = sA && sB ? ` (${sA} ↔ ${sB})` : "";
+          pairs.push({ a, b, label: `${dLabel}${stanceNote}` });
         }
       }
-      return pairs;
+      return pairs.slice(0, 80);
     }
 
     return [];
@@ -455,6 +520,28 @@ export function MapPage() {
 
   // ── Render city/arch markers ──────────────────────────────────────────────
 
+  // ── Doctrine stance map: precompute per-city dominant stance when a doctrine is selected ──
+  const doctrineStanceMap = useMemo<Map<string, "affirms" | "condemns" | "mixed"> | null>(() => {
+    if (selection?.kind !== "doctrine") return null;
+    const fps = dataStore.footprints.getForEntity("doctrine", selection.id);
+    const cityStances = new Map<string, Set<string>>();
+    for (const fp of fps) {
+      if (!fp.place_id.startsWith("city:")) continue;
+      const cityId = fp.place_id.slice(5);
+      if (!cityStances.has(cityId)) cityStances.set(cityId, new Set());
+      if (fp.stance) cityStances.get(cityId)!.add(fp.stance);
+    }
+    const result = new Map<string, "affirms" | "condemns" | "mixed">();
+    for (const [cityId, stances] of cityStances.entries()) {
+      const hasAffirms  = stances.has("affirms");
+      const hasCondemns = stances.has("condemns");
+      if (hasAffirms && hasCondemns) result.set(cityId, "mixed");
+      else if (hasAffirms)           result.set(cityId, "affirms");
+      else if (hasCondemns)          result.set(cityId, "condemns");
+    }
+    return result;
+  }, [selection]);
+
   useEffect(() => {
     const map     = mapRef.current;
     const rowLyr  = rowLayerRef.current;
@@ -469,16 +556,18 @@ export function MapPage() {
 
     // Compute connected city IDs for non-city selections
     const connectedCityIds = selection?.kind !== "city" ? getConnectedCityIds(selection) : new Set<string>();
-    const hasEntityHighlight = connectedCityIds.size > 0;
+    const hasEntityHighlight = connectedCityIds.size > 0 || doctrineStanceMap !== null;
 
     for (const city of visibleCities) {
       if (city.lat == null || city.lon == null) continue;
       const isSelected  = city.city_id === selCityId;
       const isConnected = connectedCityIds.has(city.city_id);
-      const isDimmed    = hasEntityHighlight && !isConnected;
+      const docStance   = doctrineStanceMap?.get(city.city_id) ?? null;
+      const isDimmed    = hasEntityHighlight && !isConnected && !docStance && !isSelected;
       const color       = PRESENCE_COLORS[city.presence_status] ?? "#8e8070";
-      const r           = isSelected ? 9 : isConnected ? 8 : 6;
+      const r           = isSelected ? 9 : (isConnected || docStance) ? 8 : 6;
 
+      // Selected city ring
       if (isSelected) {
         L.circleMarker([city.lat, city.lon], {
           radius: 17, color: "#c47c3a", weight: 2.5,
@@ -487,8 +576,14 @@ export function MapPage() {
         }).addTo(rowLyr);
       }
 
-      // Highlight ring for connected cities
-      if (isConnected) {
+      // Doctrine stance ring (overrides generic highlight ring)
+      if (docStance) {
+        const ringColor = docStance === "affirms" ? "#1a7a5c" : docStance === "condemns" ? "#c0392b" : "#c47d2a";
+        L.circleMarker([city.lat, city.lon], {
+          radius: 13, color: ringColor, weight: 2.5,
+          fillColor: "transparent", fillOpacity: 0,
+        }).addTo(rowLyr);
+      } else if (isConnected) {
         L.circleMarker([city.lat, city.lon], {
           radius: 14, color: "#c47c3a", weight: 2,
           fillColor: "transparent", fillOpacity: 0,
@@ -507,8 +602,9 @@ export function MapPage() {
       const modernPart  = city.city_modern && city.city_modern !== ancientName
         ? ` (${city.city_modern})`
         : "";
+      const stanceHint  = docStance ? ` · ${docStance === "affirms" ? "✓ affirms" : docStance === "condemns" ? "✗ condemns" : "⚡ mixed"}` : "";
       m.bindTooltip(
-        `${ancientName}${modernPart}, ${city.country_modern}`,
+        `${ancientName}${modernPart}, ${city.country_modern}${stanceHint}`,
         { direction: "top", offset: [0, -4], className: "city-tooltip" },
       );
       m.on("click", () => {
@@ -543,7 +639,7 @@ export function MapPage() {
       try { map.fitBounds(L.latLngBounds(bounds).pad(0.1)); } catch (_) {}
       didFitRef.current = true;
     }
-  }, [visibleCities, visibleArchSites, selection, setSelection, setSidebarTab, rightPanelVisible, toggleRightPanel]);
+  }, [visibleCities, visibleArchSites, selection, doctrineStanceMap, setSelection, setSidebarTab, rightPanelVisible, toggleRightPanel]);
 
   // ── Render arcs ───────────────────────────────────────────────────────────
 
@@ -552,14 +648,18 @@ export function MapPage() {
     if (!arcLyr) return;
     arcLyr.clearLayers();
 
-    for (const [a, b] of arcPairs) {
+    for (const { a, b, label } of arcPairs) {
       if (a.lat == null || a.lon == null || b.lat == null || b.lon == null) continue;
-      L.polyline([[a.lat, a.lon], [b.lat, b.lon]], {
+      const line = L.polyline([[a.lat, a.lon], [b.lat, b.lon]], {
         color: "#c47c3a",
-        weight: 1.2,
+        weight: 1.4,
         opacity: 0.45,
         dashArray: "4 4",
-      }).addTo(arcLyr);
+      });
+      if (label) {
+        line.bindTooltip(label, { sticky: true, className: "arc-tooltip", direction: "auto" });
+      }
+      line.addTo(arcLyr);
     }
   }, [arcPairs]);
 
@@ -585,6 +685,9 @@ export function MapPage() {
     if (selection.kind === "city") {
       const city = dataStore.cities.getById(selection.id);
       if (city?.lat != null && city?.lon != null) map.setView([city.lat, city.lon], 7, { animate: true });
+    } else if (selection.kind === "archaeology") {
+      const site = dataStore.archaeology.getById(selection.id);
+      if (site?.lat != null && site?.lon != null) map.setView([site.lat, site.lon], 9, { animate: true });
     }
   }, [selection]);
 
@@ -657,6 +760,7 @@ export function MapPage() {
             query={searchQuery.trim()}
             activeDecade={activeDecade}
             matchedCityIds={new Set(visibleCities.map((c) => c.city_id))}
+            onClear={() => useAppStore.getState().setSearchQuery("")}
           />
         )}
       </div>
@@ -692,10 +796,12 @@ function SearchResultsPanel({
   query,
   activeDecade,
   matchedCityIds,
+  onClear,
 }: {
   query: string;
   activeDecade: number;
   matchedCityIds: Set<string>;
+  onClear: () => void;
 }) {
   const setSelection  = useAppStore((s) => s.setSelection);
   const setSidebarTab = useAppStore((s) => s.setSidebarTab);
@@ -813,11 +919,19 @@ function SearchResultsPanel({
         <span className="search-results-title">
           {matches.length} match{matches.length !== 1 ? "es" : ""} for &ldquo;{query}&rdquo;
         </span>
-        {totalPages > 1 && (
-          <span style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}>
-            {page + 1} / {totalPages}
-          </span>
-        )}
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          {totalPages > 1 && (
+            <span style={{ fontSize: "0.72rem", color: "var(--text-faint)" }}>
+              {page + 1} / {totalPages}
+            </span>
+          )}
+          <button
+            type="button"
+            className="close-btn"
+            onClick={onClear}
+            title="Clear search"
+          >✕</button>
+        </div>
       </div>
 
       <div className="search-results-list">
