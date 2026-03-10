@@ -65,14 +65,18 @@ clm-group-disciples-judea	group	disciples-of-jesus	group_present_at	entity	place
 clm-group-herodians-jerusalem	group	herodians	group_present_at	entity	place	jerusalem					30	30		attested	not_applicable	active	cascade	2026-03-10T06:40:00Z
 clm-jesus-active-judea	person	jesus-of-nazareth	active_in	entity	place	judea					30	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-jesus-in-crucifixion	person	jesus-of-nazareth	participant_in	entity	event	crucifixion-of-jesus					30	30	jerusalem	attested	not_applicable	active	openai-manual-edit	2026-03-10T19:20:00Z
+clm-jesus-in-resurrection	person	jesus-of-nazareth	participant_in	entity	event	resurrection-of-jesus					30	30	jerusalem	attested	not_applicable	active	openai-manual-edit	2026-03-10T21:45:00Z
 clm-jesus-in-temple	person	jesus-of-nazareth	participant_in	entity	event	temple-cleansing					30	30	jerusalem	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-joseph-arimathea-active-jerusalem	person	joseph-of-arimathea	active_in	entity	place	jerusalem					30	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-joseph-arimathea-disciple	person	joseph-of-arimathea	member_of_group	entity	group	disciples-of-jesus					30	30	jerusalem	attested	not_applicable	active	openai-manual-edit	2026-03-10T19:00:00Z
 clm-mary-magdalene-active-jerusalem	person	mary-magdalene	active_in	entity	place	jerusalem					30	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-mary-magdalene-in-resurrection	person	mary-magdalene	participant_in	entity	event	resurrection-of-jesus					30	30	jerusalem	attested	not_applicable	active	openai-manual-edit	2026-03-10T21:45:00Z
 clm-mary-mother-active-jerusalem	person	mary-mother-of-jesus	active_in	entity	place	jerusalem					30	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-mary-mother-disciple	person	mary-mother-of-jesus	member_of_group	entity	group	disciples-of-jesus					30	30	jerusalem	probable	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-nicodemus-active-jerusalem	person	nicodemus	active_in	entity	place	jerusalem					30	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-pentecost-at-jerusalem	event	pentecost	event_occurs_at	entity	place	jerusalem					30	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T19:20:00Z
+clm-resurrection-at-jerusalem	event	resurrection-of-jesus	event_occurs_at	entity	place	jerusalem					30	30		probable	not_applicable	active	openai-manual-edit	2026-03-10T21:45:00Z
+clm-resurrection-year	event	resurrection-of-jesus	event_has_year	year					30					probable	not_applicable	active	openai-manual-edit	2026-03-10T21:45:00Z
 clm-peter-in-pentecost	person	simon-peter	participant_in	entity	event	pentecost					30	30	jerusalem	attested	not_applicable	active	openai-manual-edit	2026-03-10T19:20:00Z
 clm-pilate-in-crucifixion	person	pontius-pilate	participant_in	entity	event	crucifixion-of-jesus					30	30	jerusalem	attested	not_applicable	active	openai-manual-edit	2026-03-10T19:20:00Z
 clm-place-jericho-attested	place	jericho	place_presence_status	text			attested				30	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
@@ -377,6 +381,9 @@ clm-epaphroditus-coworker-paul	person	epaphroditus	coworker_of	entity	person	pau
 clm-philemon-addressed-colossae	work	epistle-to-philemon	addressed_to_place	entity	place	colossae					61	61		probable	not_applicable	active	openai-manual-edit	2026-03-10T16:45:00Z
 clm-philippians-addressed-philippi	work	epistle-to-the-philippians	addressed_to_place	entity	place	philippi					61	61		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-philippians-resurrection	work	epistle-to-the-philippians	work_affirms_proposition	entity	proposition	jesus-is-proclaimed-as-raised					61	61		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-ananus-ii-in-james-just-martyrdom	person	ananus-ii	participant_in	entity	event	james-the-just-martyrdom					62	62	jerusalem	probable	not_applicable	active	openai-manual-edit	2026-03-10T20:40:00Z
+clm-james-just-in-martyrdom	person	james-the-just	participant_in	entity	event	james-the-just-martyrdom					62	62	jerusalem	attested	not_applicable	active	openai-manual-edit	2026-03-10T20:40:00Z
+clm-james-just-martyrdom-at-jerusalem	event	james-the-just-martyrdom	event_occurs_at	entity	place	jerusalem					62	62		probable	not_applicable	active	openai-manual-edit	2026-03-10T20:40:00Z
 clm-first-peter-addressed-asia	work	first-epistle-of-peter	addressed_to_place	entity	place	asia					62	64		attested	not_applicable	active	cascade	2026-03-10T05:05:00Z
 clm-first-peter-addressed-bithynia	work	first-epistle-of-peter	addressed_to_place	entity	place	bithynia					62	64		attested	not_applicable	active	cascade	2026-03-10T05:05:00Z
 clm-first-peter-addressed-cappadocia	work	first-epistle-of-peter	addressed_to_place	entity	place	cappadocia					62	64		attested	not_applicable	active	cascade	2026-03-10T05:05:00Z
@@ -432,6 +439,8 @@ clm-john-christ	person	john-son-of-zebedee	person_affirms_proposition	entity	pro
 clm-john-resurrection	work	gospel-of-john	work_affirms_proposition	entity	proposition	jesus-is-proclaimed-as-raised					90	90		attested	supports	active	openai-manual-edit	2026-03-10T18:45:00Z
 clm-antiquities-repentance	work	antiquities-of-the-jews	work_affirms_proposition	entity	proposition	repentance-is-required					94	94		probable	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-antipas-active-pergamum	person	antipas-of-pergamum	active_in	entity	place	pergamum					95	95		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:30:00Z
+clm-antipas-in-martyrdom	person	antipas-of-pergamum	participant_in	entity	event	antipas-martyrdom					95	95	pergamum	attested	not_applicable	active	openai-manual-edit	2026-03-10T21:10:00Z
+clm-antipas-martyrdom-at-pergamum	event	antipas-martyrdom	event_occurs_at	entity	place	pergamum					95	95		attested	not_applicable	active	openai-manual-edit	2026-03-10T21:10:00Z
 clm-antipas-pergamum-church	person	antipas-of-pergamum	member_of_group	entity	group	pergamum-church					95	95	pergamum	attested	not_applicable	active	openai-manual-edit	2026-03-10T16:30:00Z
 clm-group-laodicean-church-laodicea-rev	group	laodicean-church	group_present_at	entity	place	laodicea					95	95		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-group-nicolaitans-ephesus	group	nicolaitans	group_present_at	entity	place	ephesus					95	95		probable	not_applicable	active	openai-manual-edit	2026-03-10T17:00:00Z
@@ -442,6 +451,8 @@ clm-group-sardis-church-sardis	group	sardis-church	group_present_at	entity	place
 clm-group-smyrna-church-smyrna	group	smyrna-church	group_present_at	entity	place	smyrna					95	95		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-group-thyatira-church-thyatira	group	thyatira-church	group_present_at	entity	place	thyatira					95	95		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-john-active-patmos	person	john-son-of-zebedee	active_in	entity	place	patmos					95	95		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
+clm-john-in-john-on-patmos	person	john-son-of-zebedee	participant_in	entity	event	john-on-patmos					95	95	patmos	attested	not_applicable	active	openai-manual-edit	2026-03-10T21:00:00Z
+clm-john-on-patmos-at-patmos	event	john-on-patmos	event_occurs_at	entity	place	patmos					95	95		attested	not_applicable	active	openai-manual-edit	2026-03-10T21:00:00Z
 clm-place-laodicea-attested-rev	place	laodicea	place_presence_status	text			attested				95	95		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-place-pergamum-attested	place	pergamum	place_presence_status	text			attested				95	95		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-place-philadelphia-attested	place	philadelphia-asia	place_presence_status	text			attested				95	95		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
@@ -458,22 +469,31 @@ clm-revelation-addressed-thyatira	work	revelation-of-john	addressed_to_place	ent
 clm-revelation-judgment	work	revelation-of-john	work_affirms_proposition	entity	proposition	final-judgment-is-coming					95	95		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-revelation-written-patmos	work	revelation-of-john	written_at	entity	place	patmos					95	95		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-second-john-christ	work	second-epistle-of-john	work_affirms_proposition	entity	proposition	jesus-is-the-christ					95	95		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-antipas-martyrdom-year	event	antipas-martyrdom	event_has_year	year					95					probable	not_applicable	active	openai-manual-edit	2026-03-10T21:10:00Z
 clm-baptism-year	event	baptism-of-jesus	event_has_year	year					27					attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-calling-year	event	calling-of-the-first-disciples	event_has_year	year					28					probable	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-conversion-year	event	pauls-conversion	event_has_year	year					34					attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-council-year	event	council-of-jerusalem	event_has_year	year					49					attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-crucifixion-year	event	crucifixion-of-jesus	event_has_year	year					30					probable	not_applicable	active	openai-manual-edit	2026-03-10T19:20:00Z
 clm-fire-of-rome-year	event	great-fire-of-rome	event_has_year	year					64					attested	not_applicable	active	openai-manual-edit	2026-03-10T19:40:00Z
+clm-herod-antipas-in-john-baptist-martyrdom	person	herod-antipas	participant_in	entity	event	john-the-baptists-martyrdom								attested	not_applicable	active	openai-manual-edit	2026-03-10T21:25:00Z
 clm-herodian-persecution-year	event	herodian-persecution-of-jerusalem-church	event_has_year	year					44					probable	not_applicable	active	openai-manual-edit	2026-03-10T19:55:00Z
+clm-james-just-martyrdom-year	event	james-the-just-martyrdom	event_has_year	year					62					probable	not_applicable	active	openai-manual-edit	2026-03-10T20:40:00Z
 clm-james-zebedee-martyrdom-year	event	james-son-of-zebedee-martyrdom	event_has_year	year					44					probable	not_applicable	active	openai-manual-edit	2026-03-10T19:20:00Z
 clm-jerusalem-persecution-after-stephen-year	event	jerusalem-persecution-after-stephen	event_has_year	year					34					probable	not_applicable	active	openai-manual-edit	2026-03-10T19:55:00Z
 clm-jesus-authority	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	jesus-teaches-with-unique-authority							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z
 clm-jesus-follow	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	disciples-are-called-to-follow-jesus							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z
 clm-jesus-kingdom	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	kingdom-of-god-has-drawn-near							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z
 clm-jesus-repentance	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	repentance-is-required							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z
+clm-john-baptist-in-martyrdom	person	john-the-baptist	participant_in	entity	event	john-the-baptists-martyrdom								attested	not_applicable	active	openai-manual-edit	2026-03-10T21:25:00Z
+clm-john-on-patmos-year	event	john-on-patmos	event_has_year	year					95					probable	not_applicable	active	openai-manual-edit	2026-03-10T21:00:00Z
 clm-john-repentance	person	john-the-baptist	person_affirms_proposition	entity	proposition	repentance-is-required							wilderness-of-judea	attested	supports	active	seed-script	2026-03-09T00:00:00Z
 clm-neronian-persecution-year	event	neronian-persecution	event_has_year	year					64					attested	not_applicable	active	openai-manual-edit	2026-03-10T19:40:00Z
+clm-paul-in-martyrdom	person	paul	participant_in	entity	event	pauls-martyrdom								probable	not_applicable	active	openai-manual-edit	2026-03-10T20:10:00Z
+clm-pauls-martyrdom-at-rome	event	pauls-martyrdom	event_occurs_at	entity	place	rome								probable	not_applicable	active	openai-manual-edit	2026-03-10T20:25:00Z
 clm-pentecost-year	event	pentecost	event_has_year	year					30					probable	not_applicable	active	openai-manual-edit	2026-03-10T19:20:00Z
+clm-peter-in-martyrdom	person	simon-peter	participant_in	entity	event	peters-martyrdom								probable	not_applicable	active	openai-manual-edit	2026-03-10T20:10:00Z
+clm-peters-martyrdom-at-rome	event	peters-martyrdom	event_occurs_at	entity	place	rome								probable	not_applicable	active	openai-manual-edit	2026-03-10T20:25:00Z
 clm-sack-of-jerusalem-year	event	sack-of-jerusalem	event_has_year	year					70					attested	not_applicable	active	openai-manual-edit	2026-03-10T19:20:00Z
 clm-sermon-year	event	sermon-on-the-mount	event_has_year	year					28					attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-stephens-martyrdom-year	event	stephens-martyrdom	event_has_year	year					34					probable	not_applicable	active	cascade	2026-03-10T04:20:00Z
