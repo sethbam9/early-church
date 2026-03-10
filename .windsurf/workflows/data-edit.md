@@ -16,21 +16,21 @@ Edit only these source tables directly:
 
 | File | What it contains |
 |---|---|
-| `data/places.tsv` | Canonical places with historical/canonical label and optional modern label |
-| `data/people.tsv` | Canonical people |
-| `data/works.tsv` | Canonical works |
-| `data/events.tsv` | Canonical events |
-| `data/groups.tsv` | Canonical groups, including polities |
-| `data/topics.tsv` | High-level doctrinal topics |
-| `data/dimensions.tsv` | Topic axes |
-| `data/propositions.tsv` | Precise proposition rows |
-| `data/predicate_types.tsv` | Predicate catalog and canonical direction |
-| `data/sources.tsv` | Source bibliography/web identities |
-| `data/passages.tsv` | Citable source passages |
-| `data/claims.tsv` | Atomic historical assertions |
-| `data/claim_evidence.tsv` | Claim ↔ passage links |
-| `data/claim_reviews.tsv` | Claim review status |
-| `data/editor_notes.tsv` | Editorial markdown notes |
+| `data/sheets/places.tsv` | Canonical places with historical/canonical label and optional modern label |
+| `data/sheets/people.tsv` | Canonical people |
+| `data/sheets/works.tsv` | Canonical works |
+| `data/sheets/events.tsv` | Canonical events |
+| `data/sheets/groups.tsv` | Canonical groups, including polities |
+| `data/sheets/topics.tsv` | High-level doctrinal topics |
+| `data/sheets/dimensions.tsv` | Topic axes |
+| `data/sheets/propositions.tsv` | Precise proposition rows |
+| `data/sheets/predicate_types.tsv` | Predicate catalog and canonical direction |
+| `data/sheets/sources.tsv` | Source bibliography/web identities |
+| `data/sheets/passages.tsv` | Citable source passages |
+| `data/sheets/claims.tsv` | Atomic historical assertions |
+| `data/sheets/claim_evidence.tsv` | Claim ↔ passage links |
+| `data/sheets/claim_reviews.tsv` | Claim review status |
+| `data/sheets/editor_notes.tsv` | Editorial markdown notes |
 
 ## Derived files
 
@@ -38,11 +38,11 @@ Never edit these manually. They are rewritten by validation.
 
 | File | Produced by |
 |---|---|
-| `data/entity_place_footprints.tsv` | `python generate_derived_tables.py` |
-| `data/place_state_by_decade.tsv` | `python generate_derived_tables.py` |
-| `data/first_attestations.tsv` | `python generate_derived_tables.py` |
-| `data/proposition_place_presence.tsv` | `python generate_derived_tables.py` |
-| `data/note_mentions.tsv` | `python generate_derived_tables.py` |
+| `data/derived/entity_place_footprints.tsv` | `python generate_derived_tables.py` |
+| `data/derived/place_state_by_decade.tsv` | `python generate_derived_tables.py` |
+| `data/derived/first_attestations.tsv` | `python generate_derived_tables.py` |
+| `data/derived/proposition_place_presence.tsv` | `python generate_derived_tables.py` |
+| `data/derived/note_mentions.tsv` | `python generate_derived_tables.py` |
 
 ---
 
@@ -128,7 +128,7 @@ Do not touch derived files.
 Use the canonical validator after every batch:
 
 ```bash
-python validate_canonical_data.py --data-dir data --scan-root .
+python3 scripts/validate_canonical_data.py --data-dir data --scan-root .
 ```
 
 This does all of the following:
@@ -155,22 +155,22 @@ Avoid mixing schema migration, row additions, and unrelated copy edits in one co
 
 ### Add a new place
 
-1. Add a row to `data/places.tsv`
+1. Add a row to `data/sheets/places.tsv`
 2. Set `place_label`
 3. Set `place_label_modern` when the modern name differs
-4. Add any relevant claims in `data/claims.tsv`
+4. Add any relevant claims in `data/sheets/claims.tsv`
 5. Run validation
 
 ### Add a polity
 
-1. Add a row to `data/groups.tsv` with `group_kind=polity`
-2. Add `controls_place` claims in `data/claims.tsv`
+1. Add a row to `data/sheets/groups.tsv` with `group_kind=polity`
+2. Add `controls_place` claims in `data/sheets/claims.tsv`
 3. Use one uninterrupted date range per continuous control span
 4. Run validation
 
 ### Record a schism or split
 
-1. Keep both bodies in `data/groups.tsv`
+1. Keep both bodies in `data/sheets/groups.tsv`
 2. Add the relationship claim such as `split_from_group`
 3. Add `group_present_at` claims only where presence actually needs to be asserted
 4. Do not create repetitive continuity rows just because time passes
@@ -178,18 +178,18 @@ Avoid mixing schema migration, row additions, and unrelated copy edits in one co
 
 ### Add doctrinal evidence
 
-1. Create or reuse a proposition in `data/propositions.tsv`
+1. Create or reuse a proposition in `data/sheets/propositions.tsv`
 2. Add a claim such as `work_affirms_proposition`, `person_opposes_proposition`, etc.
-3. Add supporting passage rows in `data/passages.tsv` if needed
-4. Link them in `data/claim_evidence.tsv`
+3. Add supporting passage rows in `data/sheets/passages.tsv` if needed
+4. Link them in `data/sheets/claim_evidence.tsv`
 5. Run validation
 
 ### Add an editorial note or article mention
 
-1. Put markdown in `data/editor_notes.tsv` or in a project `.md` file
+1. Put markdown in `data/sheets/editor_notes.tsv` or in a project `.md` file
 2. Use canonical links such as `[[person:paul|Paul]]`
 3. Use `[[bible:...]]` with OSIS
-4. Run validation so `note_mentions.tsv` is regenerated
+4. Run validation so `data/derived/note_mentions.tsv` is regenerated
 
 ---
 
@@ -202,7 +202,7 @@ When renaming any primary key:
 - update all `[[type:id]]` references in TSV markdown fields
 - update all `[[type:id]]` references in markdown files
 - run validation
-- review the regenerated `note_mentions.tsv` and other derived tables
+- review the regenerated `data/derived/note_mentions.tsv` and other derived tables
 
 ---
 
@@ -223,13 +223,13 @@ Every Windsurf agent or scripted assistant should follow these constraints:
 ## Recommended command sequence
 
 ```bash
-python validate_canonical_data.py --data-dir data --scan-root .
+python3 scripts/validate_canonical_data.py --data-dir data --scan-root .
 ```
 
 Optional explicit derivation run:
 
 ```bash
-python generate_derived_tables.py --data-dir data --scan-root .
+python3 scripts/generate_derived_tables.py --data-dir data --scan-root .
 ```
 
 Normal practice:

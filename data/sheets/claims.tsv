@@ -1,42 +1,42 @@
 claim_id	subject_type	subject_id	predicate_id	object_mode	object_type	object_id	value_text	value_number	value_year	value_boolean	year_start	year_end	context_place_id	certainty	polarity	claim_status	created_by	updated_at
-clm-place-galilee-attested	place	galilee	place_presence_status	text			attested				27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-place-judea-attested	place	judea	place_presence_status	text			attested				27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-place-jerusalem-attested	place	jerusalem	place_presence_status	text			attested				27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-jesus-active-galilee	person	jesus-of-nazareth	active_in	entity	place	galilee					27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-jesus-active-judea	person	jesus-of-nazareth	active_in	entity	place	judea					30	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-john-active-wilderness	person	john-the-baptist	active_in	entity	place	wilderness-of-judea					27	28		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-pilate-active-judea	person	pontius-pilate	active_in	entity	place	judea					26	36		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-caiaphas-active-jerusalem	person	caiaphas	active_in	entity	place	jerusalem					18	36		probable	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-group-disciples-galilee	group	disciples-of-jesus	group_present_at	entity	place	galilee					28	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-group-disciples-judea	group	disciples-of-jesus	group_present_at	entity	place	judea					30	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-pilate-active-judea	person	pontius-pilate	active_in	entity	place	judea					26	36		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-baptism-at-bethany	event	baptism-of-jesus	event_occurs_at	entity	place	bethany-beyond-the-jordan					27	27		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-jesus-in-baptism	person	jesus-of-nazareth	participant_in	entity	event	baptism-of-jesus					27	27	bethany-beyond-the-jordan	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-john-in-baptism	person	john-the-baptist	participant_in	entity	event	baptism-of-jesus					27	27	bethany-beyond-the-jordan	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-group-john-judea	group	followers-of-john-the-baptist	group_present_at	entity	place	wilderness-of-judea					27	28		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-john-active-wilderness	person	john-the-baptist	active_in	entity	place	wilderness-of-judea					27	28		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-johnb-group	person	john-the-baptist	member_of_group	entity	group	followers-of-john-the-baptist					27	28	wilderness-of-judea	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-group-pharisees-judea	group	pharisees	group_present_at	entity	place	judea					27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-group-sadducees-jerusalem	group	sadducees	group_present_at	entity	place	jerusalem					27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-peter-disciple	person	simon-peter	member_of_group	entity	group	disciples-of-jesus					28	30	galilee	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-jesus-active-galilee	person	jesus-of-nazareth	active_in	entity	place	galilee					27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-place-galilee-attested	place	galilee	place_presence_status	text			attested				27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-place-jerusalem-attested	place	jerusalem	place_presence_status	text			attested				27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-place-judea-attested	place	judea	place_presence_status	text			attested				27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-andrew-in-calling	person	andrew	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-calling-at-capernaum	event	calling-of-the-first-disciples	event_occurs_at	entity	place	capernaum					28	28		probable	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-james-in-calling	person	james-son-of-zebedee	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-jesus-in-calling	person	jesus-of-nazareth	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-jesus-in-sermon	person	jesus-of-nazareth	participant_in	entity	event	sermon-on-the-mount					28	28	galilee	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-john-in-calling	person	john-son-of-zebedee	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-peter-in-calling	person	simon-peter	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-sermon-at-galilee	event	sermon-on-the-mount	event_occurs_at	entity	place	galilee					28	28		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-andrew-disciple	person	andrew	member_of_group	entity	group	disciples-of-jesus					28	30	galilee	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-group-disciples-galilee	group	disciples-of-jesus	group_present_at	entity	place	galilee					28	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-james-disciple	person	james-son-of-zebedee	member_of_group	entity	group	disciples-of-jesus					28	30	galilee	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-john-disciple	person	john-son-of-zebedee	member_of_group	entity	group	disciples-of-jesus					28	30	galilee	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-johnb-group	person	john-the-baptist	member_of_group	entity	group	followers-of-john-the-baptist					27	28	wilderness-of-judea	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-baptism-at-bethany	event	baptism-of-jesus	event_occurs_at	entity	place	bethany-beyond-the-jordan					27	27		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-calling-at-capernaum	event	calling-of-the-first-disciples	event_occurs_at	entity	place	capernaum					28	28		probable	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-sermon-at-galilee	event	sermon-on-the-mount	event_occurs_at	entity	place	galilee					28	28		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-peter-disciple	person	simon-peter	member_of_group	entity	group	disciples-of-jesus					28	30	galilee	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-caiaphas-in-temple-era	person	caiaphas	participant_in	entity	event	temple-cleansing					30	30	jerusalem	possible	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-group-disciples-judea	group	disciples-of-jesus	group_present_at	entity	place	judea					30	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-jesus-active-judea	person	jesus-of-nazareth	active_in	entity	place	judea					30	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-jesus-in-temple	person	jesus-of-nazareth	participant_in	entity	event	temple-cleansing					30	30	jerusalem	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-temple-at-jerusalem	event	temple-cleansing	event_occurs_at	entity	place	jerusalem					30	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-baptism-year	event	baptism-of-jesus	event_has_year	year					27					attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-calling-year	event	calling-of-the-first-disciples	event_has_year	year					28					probable	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-sermon-year	event	sermon-on-the-mount	event_has_year	year					28					attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-temple-year	event	temple-cleansing	event_has_year	year					30					attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-jesus-in-baptism	person	jesus-of-nazareth	participant_in	entity	event	baptism-of-jesus					27	27	bethany-beyond-the-jordan	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-john-in-baptism	person	john-the-baptist	participant_in	entity	event	baptism-of-jesus					27	27	bethany-beyond-the-jordan	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-jesus-in-calling	person	jesus-of-nazareth	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-peter-in-calling	person	simon-peter	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-andrew-in-calling	person	andrew	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-james-in-calling	person	james-son-of-zebedee	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-john-in-calling	person	john-son-of-zebedee	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-jesus-in-sermon	person	jesus-of-nazareth	participant_in	entity	event	sermon-on-the-mount					28	28	galilee	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-jesus-in-temple	person	jesus-of-nazareth	participant_in	entity	event	temple-cleansing					30	30	jerusalem	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
-clm-caiaphas-in-temple-era	person	caiaphas	participant_in	entity	event	temple-cleansing					30	30	jerusalem	possible	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-jesus-authority	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	jesus-teaches-with-unique-authority							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z
+clm-jesus-follow	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	disciples-are-called-to-follow-jesus							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z
 clm-jesus-kingdom	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	kingdom-of-god-has-drawn-near							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z
 clm-jesus-repentance	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	repentance-is-required							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z
-clm-jesus-follow	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	disciples-are-called-to-follow-jesus							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z
-clm-jesus-authority	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	jesus-teaches-with-unique-authority							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z
 clm-john-repentance	person	john-the-baptist	person_affirms_proposition	entity	proposition	repentance-is-required							wilderness-of-judea	attested	supports	active	seed-script	2026-03-09T00:00:00Z
+clm-sermon-year	event	sermon-on-the-mount	event_has_year	year					28					attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-temple-year	event	temple-cleansing	event_has_year	year					30					attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z

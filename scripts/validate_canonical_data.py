@@ -9,6 +9,8 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 
 from generate_derived_tables import (
+    SOURCE_HEADERS,
+    DERIVED_HEADERS,
     TARGET_HEADERS,
     DERIVED_FILES,
     ENTITY_TYPES,
@@ -133,8 +135,12 @@ class Validator:
         return bool(filename and entity_id in self.by_id.get(filename, set()))
 
     def load(self) -> None:
-        for filename, headers in TARGET_HEADERS.items():
-            path = self.data_dir / filename
+        sheets_dir = self.data_dir / "sheets"
+        derived_dir = self.data_dir / "derived"
+        
+        # Load source files from sheets/
+        for filename, headers in SOURCE_HEADERS.items():
+            path = sheets_dir / filename
             if not path.exists():
                 self.error(f"Missing required file: {filename}")
                 continue
@@ -150,6 +156,21 @@ class Validator:
                 write_tsv(path, headers, rows_sorted)
                 self.warn(f"Rewrote unsorted table into canonical order: {filename}")
                 rows = rows_sorted
+            self.tables[filename] = rows
+        
+        # Load derived files from derived/
+        for filename, headers in DERIVED_HEADERS.items():
+            path = derived_dir / filename
+            if not path.exists():
+                self.error(f"Missing required derived file: {filename}")
+                continue
+            rows = read_tsv(path)
+            actual_headers = []
+            with path.open("r", encoding="utf-8") as f:
+                first = f.readline().rstrip("\n\r")
+                actual_headers = first.split("\t") if first else []
+            if actual_headers != headers:
+                self.error(f"Header mismatch in derived {filename}: expected {headers} got {actual_headers}")
             self.tables[filename] = rows
 
         for filename, id_col in {

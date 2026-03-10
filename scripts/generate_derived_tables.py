@@ -511,11 +511,12 @@ def main() -> None:
     args = parser.parse_args()
 
     data_dir = Path(args.data_dir).resolve()
+    sheets_dir = data_dir / "sheets"
     scan_root = Path(args.scan_root).resolve() if args.scan_root else data_dir.parent.resolve()
 
-    claims = read_tsv(data_dir / "claims.tsv")
-    passages = read_tsv(data_dir / "passages.tsv")
-    claim_evidence = read_tsv(data_dir / "claim_evidence.tsv")
+    claims = read_tsv(sheets_dir / "claims.tsv")
+    passages = read_tsv(sheets_dir / "passages.tsv")
+    claim_evidence = read_tsv(sheets_dir / "claim_evidence.tsv")
 
     markdown_sources = collect_markdown_reference_sources(data_dir, scan_root)
     note_mentions = derive_note_mentions(markdown_sources)
