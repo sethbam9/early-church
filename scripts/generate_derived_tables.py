@@ -14,7 +14,7 @@ SOURCE_HEADERS: Dict[str, List[str]] = {
     "people.tsv": ["person_id", "person_label", "name_alt", "name_native", "birth_year_display", "death_year_display", "person_kind", "notes"],
     "works.tsv": ["work_id", "title_display", "title_original", "work_type", "language_original", "work_kind", "notes"],
     "events.tsv": ["event_id", "event_label", "event_type", "event_kind", "notes"],
-    "groups.tsv": ["group_id", "group_label", "group_kind", "notes"],
+    "groups.tsv": ["group_id", "group_label", "group_kind", "is_christian", "notes"],
     "topics.tsv": ["topic_id", "topic_label", "topic_kind", "notes"],
     "dimensions.tsv": ["dimension_id", "topic_id", "dimension_label", "dimension_kind", "notes"],
     "propositions.tsv": ["proposition_id", "topic_id", "dimension_id", "proposition_label", "polarity_family", "description", "notes"],

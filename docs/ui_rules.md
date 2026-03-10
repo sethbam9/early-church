@@ -18,12 +18,12 @@ src/
       entityConstants.ts   – KIND_ICONS, KIND_LABELS, PRESENCE_COLORS/LABELS,
                              kindIcon(), kindLabel(), presenceColor()
     sidebar/        # Sidebar sub-modules (extracted from RightSidebar)
-      SidebarShell.tsx     – Expand/collapse/dismiss wrapper
-      SidebarLists.tsx     – All 9 sidebar list components
+      SidebarShell.tsx     – Drag-to-resize / snap-dismiss wrapper
+      SidebarLists.tsx     – All sidebar list components (PlacesList, GroupsList, etc.)
       EntityDetail.tsx     – Generic entity detail + 7 sub-tab components
     map/            # Map-specific components
       RightSidebar.tsx     – Routing layer (delegates to sidebar/ modules)
-      CityDetail.tsx       – City-specific detail panel with sub-tabs
+      CityDetail.tsx       – Place detail panel with sub-tabs (PlaceDetail + CityDetail compat wrapper)
       LeftPanel.tsx        – Timeline controls, search, filters
     entity/
       EntityDetailPanel.tsx – Entity detail for graph page (uses NoteCard)

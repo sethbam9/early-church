@@ -1,52 +1,192 @@
 entity_type	entity_id	place_id	year_start	year_end	reason_predicate_id	stance	path_signature
-event	baptism-of-jesus	bethany-beyond-the-jordan	27	27	event_occurs_at		path-a73a2cb0e166a12d
-event	calling-of-the-first-disciples	capernaum	28	28	event_occurs_at		path-928481bfdc52e5ee
-event	council-of-jerusalem	jerusalem	49	49	event_occurs_at		path-19791beadc7cce36
-event	pauls-conversion	damascus	34	34	event_occurs_at		path-5dce05eef909611c
-event	sermon-on-the-mount	galilee	28	28	event_occurs_at		path-1ad9b20c02570a91
-event	temple-cleansing	jerusalem	30	30	event_occurs_at		path-ac026136fdb02b56
-group	antioch-church	antioch	40	70	group_present_at		path-57f218670bbe808b
-group	corinthian-church	corinth	50	70	group_present_at		path-95a320cf8dc26648
-group	disciples-of-jesus	ephesus	52	95	group_present_at		path-d6a92f3026d71b72
-group	disciples-of-jesus	galilee	28	30	group_present_at		path-aa9988453476fb0b
-group	disciples-of-jesus	judea	30	30	group_present_at		path-661ec0c564f5efe7
-group	disciples-of-jesus	rome	49	70	group_present_at		path-5bff8d5dc5d95292
-group	followers-of-john-the-baptist	wilderness-of-judea	27	28	group_present_at		path-fbf574ba88c39de9
-group	jerusalem-church	jerusalem	30	70	group_present_at		path-19c4daf6416b86c4
-group	pharisees	judea	27	30	group_present_at		path-6223dc9cc4637342
-group	philippian-church	philippi	49	70	group_present_at		path-f392536afbf57cc8
-group	roman-empire	corinth	50	70	controls_place		path-9080bac0a5dffa51
-group	roman-empire	judea	27	66	controls_place		path-63e3e13d3d2dd22f
-group	roman-empire	philippi	49	70	controls_place		path-c5aa9e66ac7ea014
-group	sadducees	jerusalem	27	30	group_present_at		path-00138bfb2808cf5b
-person	barnabas	antioch	42	48	active_in		path-bdb2d08f392949d9
+group	essenes	judea	-150	70	group_present_at		path-523bd0ddd0dfb430
 person	caiaphas	jerusalem	18	36	active_in		path-14ff57a8dbdea411
-person	james-the-just	jerusalem	30	62	active_in		path-818402a7c3023ef3
-person	jesus-of-nazareth	galilee	27	30	active_in		path-7a21f0e6ae9be5d1
-person	jesus-of-nazareth	judea	30	30	active_in		path-ebf3e7cbb767c493
-person	john-the-baptist	wilderness-of-judea	27	28	active_in		path-11f79275ca29126f
-person	lydia	philippi	49	60	active_in		path-f9ff536e6d00e47d
-person	paul	antioch	44	48	active_in		path-5cfb62300b5f8761
-person	paul	corinth	50	52	active_in		path-14e1ffcfbb44fa9f
-person	paul	damascus	34	36	active_in		path-6091541d8e96e252
-person	paul	ephesus	52	55	active_in		path-ef4942d357c0c120
-person	paul	rome	60	62	active_in		path-38539d4397b1783e
 person	pontius-pilate	judea	26	36	active_in		path-d6e01aab1c887ccb
-person	silas	corinth	50	52	active_in		path-f9edc8c996de3479
-proposition	disciples-are-called-to-follow-jesus	galilee	27	30	derived_proposition_presence	affirms	drv-67a50822290b2e48
-proposition	disciples-are-called-to-follow-jesus	judea	30	30	derived_proposition_presence	affirms	drv-83fbc7ee4d5ba6aa
-proposition	gentile-believers-need-not-be-circumcised	galatia	49	49	derived_proposition_presence	affirms	drv-8b55870a5c299c51
-proposition	jesus-is-proclaimed-as-raised	corinth	54	54	derived_proposition_presence	affirms	drv-64cbc91014dc23ae
-proposition	jesus-is-proclaimed-as-raised	ephesus	54	54	derived_proposition_presence	affirms	drv-7fb76bfe93d76f87
-proposition	jesus-teaches-with-unique-authority	galilee	27	30	derived_proposition_presence	affirms	drv-8fb29ca9f4609f3e
-proposition	jesus-teaches-with-unique-authority	judea	30	30	derived_proposition_presence	affirms	drv-731963c422d89ecc
-proposition	kingdom-of-god-has-drawn-near	galilee	27	30	derived_proposition_presence	affirms	drv-241a7818b4ce18ec
-proposition	kingdom-of-god-has-drawn-near	judea	30	30	derived_proposition_presence	affirms	drv-6249a7b19d1cfed7
-proposition	repentance-is-required	galilee	27	30	derived_proposition_presence	affirms	drv-86f8227bea1339e8
-proposition	repentance-is-required	judea	30	30	derived_proposition_presence	affirms	drv-4d1ddd2370435da7
+event	baptism-of-jesus	bethany-beyond-the-jordan	27	27	event_occurs_at		path-a73a2cb0e166a12d
+group	followers-of-john-the-baptist	wilderness-of-judea	27	28	group_present_at		path-fbf574ba88c39de9
+person	john-the-baptist	wilderness-of-judea	27	28	active_in		path-11f79275ca29126f
 proposition	repentance-is-required	wilderness-of-judea	27	28	derived_proposition_presence	affirms	drv-919cb82fc5b2cf59
+proposition	disciples-are-called-to-follow-jesus	galilee	27	30	derived_proposition_presence	affirms	drv-67a50822290b2e48
+person	jesus-of-nazareth	galilee	27	30	active_in		path-7a21f0e6ae9be5d1
+proposition	jesus-teaches-with-unique-authority	galilee	27	30	derived_proposition_presence	affirms	drv-8fb29ca9f4609f3e
+proposition	kingdom-of-god-has-drawn-near	galilee	27	30	derived_proposition_presence	affirms	drv-241a7818b4ce18ec
+group	pharisees	judea	27	30	group_present_at		path-6223dc9cc4637342
+proposition	repentance-is-required	galilee	27	30	derived_proposition_presence	affirms	drv-86f8227bea1339e8
+group	sadducees	jerusalem	27	30	group_present_at		path-00138bfb2808cf5b
+group	roman-empire	judea	27	66	controls_place		path-63e3e13d3d2dd22f
+event	calling-of-the-first-disciples	capernaum	28	28	event_occurs_at		path-928481bfdc52e5ee
+event	sermon-on-the-mount	galilee	28	28	event_occurs_at		path-1ad9b20c02570a91
+group	disciples-of-jesus	galilee	28	30	group_present_at		path-aa9988453476fb0b
+group	herodians	galilee	28	30	group_present_at		path-8153c965ea604159
+proposition	disciples-are-called-to-follow-jesus	judea	30	30	derived_proposition_presence	affirms	drv-83fbc7ee4d5ba6aa
+group	disciples-of-jesus	judea	30	30	group_present_at		path-661ec0c564f5efe7
+group	herodians	jerusalem	30	30	group_present_at		path-c476066ea54c41ee
+person	jesus-of-nazareth	judea	30	30	active_in		path-ebf3e7cbb767c493
+proposition	jesus-teaches-with-unique-authority	judea	30	30	derived_proposition_presence	affirms	drv-731963c422d89ecc
+proposition	kingdom-of-god-has-drawn-near	judea	30	30	derived_proposition_presence	affirms	drv-6249a7b19d1cfed7
+proposition	repentance-is-required	judea	30	30	derived_proposition_presence	affirms	drv-4d1ddd2370435da7
+event	temple-cleansing	jerusalem	30	30	event_occurs_at		path-ac026136fdb02b56
+person	james-the-just	jerusalem	30	62	active_in		path-818402a7c3023ef3
+group	jerusalem-church	jerusalem	30	70	group_present_at		path-19c4daf6416b86c4
+person	stephen	jerusalem	33	34	active_in		path-a8c298a82013ff95
+group	disciples-of-jesus	samaria	33	35	group_present_at		path-9b6af4941b5507f4
+person	philip-the-evangelist	samaria	33	35	active_in		path-ac17d7cd6a55be3b
+person	ananias-of-damascus	damascus	34	34	active_in		path-d0e0f50a1ed5aab6
+person	judas-damascus-householder	damascus	34	34	active_in		path-591759ee89b0b967
+event	pauls-conversion	damascus	34	34	event_occurs_at		path-5dce05eef909611c
+event	stephens-martyrdom	jerusalem	34	34	event_occurs_at		path-e10d810fc8c756c1
+person	paul	damascus	34	36	active_in		path-6091541d8e96e252
+person	aeneas	lydda	39	40	active_in		path-f134b3f453868f33
+group	disciples-of-jesus	joppa	39	40	group_present_at		path-132a067c12db6884
+person	simon-peter	joppa	39	40	active_in		path-50578114b686d4a1
+person	simon-the-tanner	joppa	39	40	active_in		path-d4ded18b8ee58071
+person	tabitha	joppa	39	40	active_in		path-99a27e8e1e452419
+person	simon-peter	caesarea	40	40	active_in		path-4bc28ba2a3f55c4f
+person	cornelius	caesarea	40	41	active_in		path-b5541ec66da7d7c5
+group	disciples-of-jesus	caesarea	40	41	group_present_at		path-d942ce0550398474
+group	antioch-church	antioch	40	70	group_present_at		path-57f218670bbe808b
+person	barnabas	antioch	42	48	active_in		path-bdb2d08f392949d9
+person	paul	antioch	44	48	active_in		path-5cfb62300b5f8761
+person	barnabas	cyprus	46	46	active_in		path-fab850d2633094e2
+group	disciples-of-jesus	paphos	46	46	group_present_at		path-2c8cf944759b7dfd
+person	john-mark	cyprus	46	46	active_in		path-9d6e3eb920b5edfd
+person	paul	cyprus	46	46	active_in		path-a88670f1b505aa82
+person	sergius-paulus	paphos	46	46	active_in		path-537f5548a8e28bb3
+event	council-of-jerusalem	jerusalem	49	49	event_occurs_at		path-19791beadc7cce36
 work	epistle-to-the-galatians	galatia	49	49	addressed_to_place		path-ed0e1a9e989ce7f7
-work	epistle-to-the-romans	rome	57	57	addressed_to_place		path-30247de92fa46c4a
+proposition	gentile-believers-need-not-be-circumcised	galatia	49	49	derived_proposition_presence	affirms	drv-8b55870a5c299c51
+person	timothy	lystra	49	49	active_in		path-bb05c69786e4136a
+person	jason	thessalonica	49	50	active_in		path-87b04934e71715ed
+person	paul	thessalonica	49	50	active_in		path-cbf36b5e756b7d03
+person	silas	thessalonica	49	50	active_in		path-d68a6212b10689a3
+person	lydia	philippi	49	60	active_in		path-f9ff536e6d00e47d
+group	disciples-of-jesus	rome	49	70	group_present_at		path-5bff8d5dc5d95292
+group	philippian-church	philippi	49	70	group_present_at		path-f392536afbf57cc8
+group	roman-empire	philippi	49	70	controls_place		path-c5aa9e66ac7ea014
+person	damaris	athens	50	50	active_in		path-77c7a7f19036a5fc
+person	dionysius	athens	50	50	active_in		path-d1e03a2268cdc2fb
+work	first-epistle-to-the-thessalonians	thessalonica	50	50	addressed_to_place		path-36e48c3f0cc7db16
+proposition	jesus-is-proclaimed-as-raised	thessalonica	50	50	derived_proposition_presence	affirms	drv-38dc62fa70a35ebf
+person	paul	athens	50	50	active_in		path-56db34df1035804d
+person	paul	berea	50	50	active_in		path-a5f2fdf331d944ab
+person	silas	berea	50	50	active_in		path-c92d620ebb5d1f95
+person	timothy	berea	50	50	active_in		path-5603b4aa51f32afe
+group	thessalonian-church	thessalonica	50	51	group_present_at		path-d342e3f095650cbc
+person	aquila	corinth	50	52	active_in		path-c2fc3e61a2c6c4b7
+person	crispus	corinth	50	52	active_in		path-1d7e2c34c376cb5b
+person	paul	corinth	50	52	active_in		path-14e1ffcfbb44fa9f
+person	priscilla	corinth	50	52	active_in		path-7f4ccc2f1bd95445
+person	silas	corinth	50	52	active_in		path-f9edc8c996de3479
+person	titius-justus	corinth	50	52	active_in		path-499a8480e6706fcc
+group	corinthian-church	corinth	50	70	group_present_at		path-95a320cf8dc26648
+group	roman-empire	corinth	50	70	controls_place		path-9080bac0a5dffa51
+work	second-epistle-to-the-thessalonians	thessalonica	51	51	addressed_to_place		path-682bb5062ee99fef
+person	gallio	achaia	51	52	active_in		path-5e197c24ff52cf3f
+person	sosthenes	corinth	51	52	active_in		path-ed8a65399b75cfef
+person	aquila	ephesus	52	55	active_in		path-de0fd4e987beb842
+person	paul	ephesus	52	55	active_in		path-ef4942d357c0c120
+person	priscilla	ephesus	52	55	active_in		path-8ee4adec6e323b80
+group	disciples-of-jesus	ephesus	52	95	group_present_at		path-d6a92f3026d71b72
+group	ephesian-church	ephesus	52	95	group_present_at		path-e761661078ebba16
+person	apollos	ephesus	53	54	active_in		path-a62bc882813b2a7f
 work	first-epistle-to-the-corinthians	corinth	54	54	addressed_to_place		path-c762e0fc1f8d53e5
 work	first-epistle-to-the-corinthians	ephesus	54	54	written_at		path-ca30e910f0614025
+proposition	jesus-is-proclaimed-as-raised	corinth	54	54	derived_proposition_presence	affirms	drv-64cbc91014dc23ae
+proposition	jesus-is-proclaimed-as-raised	ephesus	54	54	derived_proposition_presence	affirms	drv-7fb76bfe93d76f87
+person	alexander-ephesus-riot	ephesus	54	55	active_in		path-ef88421870f4d8e0
+person	apollos	achaia	54	55	active_in		path-d2338468c549067e
+person	aristarchus	ephesus	54	55	active_in		path-8f2e40f1ea6b8a6d
+person	demetrius	ephesus	54	55	active_in		path-0ccde594407396df
+person	tyrannus	ephesus	54	55	active_in		path-53c35ec22aa939fb
+group	disciples-of-jesus	achaia	55	56	group_present_at		path-47a5595b97ae85f5
+proposition	jesus-is-proclaimed-as-raised	achaia	55	56	derived_proposition_presence	affirms	drv-780d822088952cb6
+proposition	jesus-is-proclaimed-as-raised	corinth	55	56	derived_proposition_presence	affirms	drv-2d488b6f3018e866
+work	second-epistle-to-the-corinthians	achaia	55	56	addressed_to_place		path-a7da10a49684f6a2
+work	second-epistle-to-the-corinthians	corinth	55	56	addressed_to_place		path-56d267c35344859a
+person	agabus	judea	57	57	active_in		path-d067ab7b20433c8a
+person	ananias-high-priest	caesarea	57	57	active_in		path-597359e3c4e35004
+person	aristarchus	thessalonica	57	57	active_in		path-7f703e066fcd84cd
+group	disciples-of-jesus	troas	57	57	group_present_at		path-cac8f1eb851f290b
+group	disciples-of-jesus	tyre	57	57	group_present_at		path-119fea0d8e75067d
+work	epistle-to-the-romans	rome	57	57	addressed_to_place		path-30247de92fa46c4a
+person	gaius-of-derbe	derbe	57	57	active_in		path-1099c02c91a84cc1
+person	mnason	cyprus	57	57	active_in		path-e3771a7892f286a0
+person	paul	assos	57	57	active_in		path-7455c859a88d019a
+person	paul	chios	57	57	active_in		path-29c31a590a8eb3a3
+person	paul	miletus	57	57	active_in		path-37662d02fe8177cd
+person	paul	mitylene	57	57	active_in		path-2bc4b5427075a04f
+person	paul	samos	57	57	active_in		path-f2422677f5a39491
+person	paul	troas	57	57	active_in		path-211c05dc407cefea
+person	paul	tyre	57	57	active_in		path-775e5493c0baa086
+person	secundus	thessalonica	57	57	active_in		path-d6b6840f52073001
+person	sopater	berea	57	57	active_in		path-fc14220739bcaedf
+person	tertullus	caesarea	57	57	active_in		path-3dc04682cb1d90c0
+person	trophimus	asia	57	57	active_in		path-e431b80e39707c26
+person	trophimus	jerusalem	57	57	active_in		path-fe793d0bebd03bc0
+person	tychicus	asia	57	57	active_in		path-99c7d6099db80ef2
+person	drusilla	caesarea	57	59	active_in		path-18d8bea2a1029448
+person	felix	caesarea	57	59	active_in		path-66d5bfa3c3be89c1
+group	disciples-of-jesus	caesarea	57	62	group_present_at		path-bf09bd443ff88cff
+person	philip-the-evangelist	caesarea	57	62	active_in		path-c7ebf6b5ee9c4d98
+person	julius	sidon	59	59	active_in		path-336459d9529a11ec
+person	paul	fair-havens	59	59	active_in		path-0c2d15d8234ea682
+person	paul	myra	59	59	active_in		path-6ac6655326844d53
+person	paul	sidon	59	59	active_in		path-46a2d3f5b6593798
+person	agrippa-ii	caesarea	59	60	active_in		path-82ed0dd6f9f034aa
+person	bernice	caesarea	59	60	active_in		path-05ae00e2e31a0218
+person	festus	caesarea	59	60	active_in		path-c85b76682196682b
+group	colossian-church	colossae	60	60	group_present_at		path-ca6e3f4b9c91c581
+group	disciples-of-jesus	puteoli	60	60	group_present_at		path-1ca8e8cc9b94b062
+work	epistle-to-the-colossians	colossae	60	60	addressed_to_place		path-694dec4e8a0b0240
+work	epistle-to-the-ephesians	ephesus	60	60	addressed_to_place		path-2ab02866656f11c3
+group	laodicean-church	laodicea	60	60	group_present_at		path-e6fa1e76c507326f
+person	paul	appii-forum	60	60	active_in		path-d612404aa6cc5f68
+person	paul	malta	60	60	active_in		path-b877863729073723
+person	paul	puteoli	60	60	active_in		path-44f86958b068e1e8
+person	paul	rhegium	60	60	active_in		path-b1f99d7484bf1a85
+person	paul	syracuse	60	60	active_in		path-e94dc69fbb5c078b
+person	paul	three-taverns	60	60	active_in		path-ad848e73947e39b7
+person	publius	malta	60	60	active_in		path-f88faa4820bc25cd
+person	paul	rome	60	62	active_in		path-38539d4397b1783e
+work	epistle-to-the-philippians	philippi	61	61	addressed_to_place		path-2fb1df66de3f50ed
+group	disciples-of-jesus	asia	62	64	group_present_at		path-013a873485640f67
+group	disciples-of-jesus	bithynia	62	64	group_present_at		path-75f9b5e60202f306
+group	disciples-of-jesus	cappadocia	62	64	group_present_at		path-e6dab0d1ab2a9f40
+group	disciples-of-jesus	galatia	62	64	group_present_at		path-d5cda592eec3bd7e
+group	disciples-of-jesus	pontus	62	64	group_present_at		path-89ef197ef5ae96c2
+work	first-epistle-of-peter	asia	62	64	addressed_to_place		path-367caa337c3d227c
+work	first-epistle-of-peter	bithynia	62	64	addressed_to_place		path-f6624e95d20c46f9
+work	first-epistle-of-peter	cappadocia	62	64	addressed_to_place		path-0a9d5f6191b1854d
+work	first-epistle-of-peter	galatia	62	64	addressed_to_place		path-6d0e17e660ce3f0c
+work	first-epistle-of-peter	pontus	62	64	addressed_to_place		path-dcc929e173bae381
+proposition	jesus-is-proclaimed-as-raised	asia	62	64	derived_proposition_presence	affirms	drv-0d6c9bf4a8c4fbb2
+proposition	jesus-is-proclaimed-as-raised	bithynia	62	64	derived_proposition_presence	affirms	drv-e7f895b2fee17341
+proposition	jesus-is-proclaimed-as-raised	cappadocia	62	64	derived_proposition_presence	affirms	drv-0660d5a971e69eef
+proposition	jesus-is-proclaimed-as-raised	galatia	62	64	derived_proposition_presence	affirms	drv-bd8ba7d2a09d67e0
+proposition	jesus-is-proclaimed-as-raised	pontus	62	64	derived_proposition_presence	affirms	drv-d7b049956519be7b
+group	disciples-of-jesus	crete	63	64	group_present_at		path-ba03be23eb02d453
+person	titus	crete	63	64	active_in		path-c7a73f5be341263f
+person	timothy	ephesus	63	65	active_in		path-7b7d0e58198e4b8c
+person	carpus	troas	66	66	active_in		path-4a1353a9910632e9
+person	crescens	galatia	66	66	active_in		path-d6c2df0ac0291080
+person	demas	thessalonica	66	66	active_in		path-d9792c33a263db51
+person	erastus	corinth	66	66	active_in		path-50403ae7e1a86dd6
+person	titus	dalmatia	66	66	active_in		path-b70e27530c775a62
+person	trophimus	miletus	66	66	active_in		path-b0895583f47d6397
+person	tychicus	ephesus	66	66	active_in		path-12e55813cf362b2f
+group	zealots	jerusalem	66	70	group_present_at		path-b1c734a56f5d5409
+person	john-son-of-zebedee	patmos	95	95	active_in		path-5dc0176817ec0b61
+group	laodicean-church	laodicea	95	95	group_present_at		path-6d376c0ff1755e1a
+group	pergamum-church	pergamum	95	95	group_present_at		path-af329ac79eb08d2b
+group	philadelphia-church	philadelphia-asia	95	95	group_present_at		path-c1d5e05ad0505d2c
+work	revelation-of-john	ephesus	95	95	addressed_to_place		path-287ac2a666c9b553
+work	revelation-of-john	laodicea	95	95	addressed_to_place		path-29627f75d03d58fc
 work	revelation-of-john	patmos	95	95	written_at		path-4e348eab136ac306
+work	revelation-of-john	pergamum	95	95	addressed_to_place		path-f8ff0291f843698f
+work	revelation-of-john	philadelphia-asia	95	95	addressed_to_place		path-b547193b509a5931
+work	revelation-of-john	sardis	95	95	addressed_to_place		path-3d559d18721d350d
+work	revelation-of-john	smyrna	95	95	addressed_to_place		path-8c1d8fc6c01b07dc
+work	revelation-of-john	thyatira	95	95	addressed_to_place		path-1fa234889fcfd2f3
+group	sardis-church	sardis	95	95	group_present_at		path-5b49fc33d68980f3
+group	smyrna-church	smyrna	95	95	group_present_at		path-e5d782ef9b47c859
+group	thyatira-church	thyatira	95	95	group_present_at		path-59412c95f747debe

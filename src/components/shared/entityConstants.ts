@@ -4,13 +4,15 @@
  */
 
 export const KIND_ICONS: Record<string, string> = {
-  city: "🏛", person: "👤", work: "📜", doctrine: "📖",
-  event: "⚡", archaeology: "★", persuasion: "✦", polity: "⚔",
+  place: "🏛", person: "👤", work: "📜", event: "⚡",
+  group: "✦", topic: "📖", dimension: "📊", proposition: "📝",
+  source: "📚", passage: "📄", claim: "🔗", editor_note: "📋",
 };
 
 export const KIND_LABELS: Record<string, string> = {
-  person: "Person", work: "Work", doctrine: "Doctrine", event: "Event",
-  archaeology: "Archaeology", city: "City", persuasion: "Persuasion", polity: "Polity",
+  place: "Place", person: "Person", work: "Work", event: "Event",
+  group: "Group", topic: "Topic", dimension: "Dimension", proposition: "Proposition",
+  source: "Source", passage: "Passage", claim: "Claim", editor_note: "Note",
 };
 
 export function kindIcon(kind: string): string {

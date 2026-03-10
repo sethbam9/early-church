@@ -4,16 +4,13 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "predev": "npm run data:validate",
     "dev": "vite",
-    "data:derive-places": "tsx scripts/derive_places.ts",
-    "data:derive-footprints": "tsx scripts/derive_footprints.ts",
-    "data:derive-mentions": "tsx scripts/derive_mentions.ts",
-    "data:derive": "tsx scripts/derive_places.ts && tsx scripts/derive_footprints.ts && tsx scripts/derive_mentions.ts",
-    "data:validate": "npm run data:derive && tsx scripts/validate_data.ts",
-    "prebuild": "npm run data:validate",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "data:derive": "tsx scripts/derive_places.ts && tsx scripts/derive_footprints.ts && tsx scripts/derive_mentions.ts",
+    "data:validate": "python3 scripts/validate_canonical_data.py --data-dir data --scan-root data/sheets",
+    "data:validate-full": "npm run data:derive && python3 scripts/validate_canonical_data.py --data-dir data --scan-root data/sheets"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
@@ -31,6 +28,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^4.3.3",
     "d3-dsv": "^3.0.1",
+    "husky": "^9.1.7",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3",
     "vite": "^5.4.10"

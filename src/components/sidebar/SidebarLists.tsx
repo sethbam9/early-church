@@ -1,182 +1,148 @@
 import { useState, useMemo, useEffect } from "react";
 import { useAppStore } from "../../stores/appStore";
 import { dataStore } from "../../data/dataStore";
-import type { PlacesSubTab } from "../../stores/appStore";
+import type { PlaceKind } from "../../data/dataStore";
 import { Hl } from "../shared/Hl";
 import { Pagination, PAGE_SIZE } from "../shared/Pagination";
 import { presenceColor } from "../shared/entityConstants";
+import { FilterChips } from "../shared/FilterChips";
 import type { Essay } from "../../data/essays";
 
-// ─── Cities list ──────────────────────────────────────────────────────────────
+// ─── Places list (unified — replaces CitiesList + ArchaeologyList) ───────────
 
-export function CitiesList({ search, currentDecade, onSelectCity, onFlyToCity }: {
+const PLACE_KIND_OPTIONS: { value: PlaceKind; label: string }[] = [
+  { value: "city", label: "City" },
+  { value: "region", label: "Region" },
+  { value: "site", label: "Site" },
+  { value: "province", label: "Province" },
+  { value: "monastery", label: "Monastery" },
+  { value: "route", label: "Route" },
+];
+
+export function PlacesList({ search, currentDecade, onSelectPlace, onFlyToPlace }: {
   search: string;
   currentDecade: number;
-  onSelectCity: (id: string) => void;
-  onFlyToCity: (id: string) => void;
+  onSelectPlace: (id: string) => void;
+  onFlyToPlace: (id: string) => void;
 }) {
   const includeCumulative = useAppStore((s) => s.includeCumulative);
-  const [page, setPage] = useState(0);
+  const placeKindFilter   = useAppStore((s) => s.activePlaceKindFilter);
+  const setPlaceKindFilter = useAppStore((s) => s.setPlaceKindFilter);
+  const christianOnly     = useAppStore((s) => s.christianOnly);
+  const setChristianOnly  = useAppStore((s) => s.setChristianOnly);
+  const [page, setPage]   = useState(0);
   const [mapVisibleOnly, setMapVisibleOnly] = useState(false);
 
-  useEffect(() => { setPage(0); }, [search, currentDecade, includeCumulative, mapVisibleOnly]);
+  useEffect(() => { setPage(0); }, [search, currentDecade, includeCumulative, mapVisibleOnly, placeKindFilter, christianOnly]);
 
-  // Decade-presence index for dot colors
   const decadePresence = useMemo(() => {
     const m = new Map<string, string>();
-    for (const c of dataStore.map.getCumulativeCitiesAtDecade(currentDecade)) {
-      m.set(c.city_id, c.presence_status);
+    for (const p of dataStore.map.getCumulativePlacesAtDecade(currentDecade)) {
+      m.set(p.place_id, p.presence_status);
     }
     return m;
   }, [currentDecade]);
 
-  const cities = useMemo(() => {
-    let base: { city_id: string; city_label: string; city_ancient: string; city_modern: string; country_modern: string; presence_status: string }[];
-    if (mapVisibleOnly) {
-      base = includeCumulative
-        ? dataStore.map.getCumulativeCitiesAtDecade(currentDecade)
-        : dataStore.map.getCitiesAtDecade(currentDecade);
-    } else {
-      base = dataStore.cities.getAll().map((c) => ({
-        ...c,
-        presence_status: decadePresence.get(c.city_id) ?? "unknown",
-      }));
+  const places = useMemo(() => {
+    let base = mapVisibleOnly
+      ? (includeCumulative
+          ? dataStore.map.getCumulativePlacesAtDecade(currentDecade)
+          : dataStore.map.getPlacesAtDecade(currentDecade))
+        .map((p) => ({ ...p }))
+      : dataStore.places.getAll().map((p) => ({
+          ...p,
+          presence_status: decadePresence.get(p.place_id) ?? "unknown",
+        }));
+
+    if (placeKindFilter) {
+      base = base.filter((p) => p.place_kind === placeKindFilter);
+    }
+    if (christianOnly) {
+      base = base.filter((p) => dataStore.map.placeHasChristianity(p.place_id));
     }
     const q = search.trim().toLowerCase();
-    if (!q) return base;
-    return base.filter((c) =>
-      `${c.city_ancient} ${c.city_label} ${c.city_modern} ${c.country_modern}`.toLowerCase().includes(q),
-    );
-  }, [search, currentDecade, includeCumulative, mapVisibleOnly, decadePresence]);
+    if (q) {
+      base = base.filter((p) =>
+        `${p.place_label} ${p.place_label_modern} ${p.modern_country_label}`.toLowerCase().includes(q),
+      );
+    }
+    return base;
+  }, [search, currentDecade, includeCumulative, mapVisibleOnly, decadePresence, placeKindFilter, christianOnly]);
 
-  const pageItems = cities.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  const pageItems = places.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
   const mapVisibleCount = decadePresence.size;
 
   return (
     <>
-      {/* Toggle: show all (default) vs map-visible only */}
+      <FilterChips label="Place type" options={PLACE_KIND_OPTIONS} active={placeKindFilter} onChange={setPlaceKindFilter} />
       <div className="list-filter-bar">
         <span className="faint" style={{ fontSize: "0.72rem" }}>
-          {mapVisibleOnly ? `${cities.length} on map` : `${cities.length} total · ${mapVisibleCount} on map`}
+          {mapVisibleOnly ? `${places.length} on map` : `${places.length} total · ${mapVisibleCount} on map`}
         </span>
-        <button
-          type="button"
-          className={`list-filter-toggle${mapVisibleOnly ? " active" : ""}`}
-          onClick={() => setMapVisibleOnly((v) => !v)}
-          title={mapVisibleOnly ? "Showing map-visible only — click for all" : "Showing all cities — click to filter to map-visible"}
-        >
-          {mapVisibleOnly ? "🗺 Map only" : "🌍 Show all"}
-        </button>
+        <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+          <label style={{ fontSize: "0.7rem", display: "flex", alignItems: "center", gap: 3, color: "var(--text-faint)" }}>
+            <input type="checkbox" checked={christianOnly} onChange={(e) => setChristianOnly(e.target.checked)} />
+            Christian
+          </label>
+          <button
+            type="button"
+            className={`list-filter-toggle${mapVisibleOnly ? " active" : ""}`}
+            onClick={() => setMapVisibleOnly((v) => !v)}
+            title={mapVisibleOnly ? "Showing map-visible only — click for all" : "Showing all places — click to filter to map-visible"}
+          >
+            {mapVisibleOnly ? "🌍 Show all" : "🗺 Map only"}
+          </button>
+        </div>
       </div>
 
-      {cities.length === 0
-        ? <div className="empty-state">No cities found.</div>
+      {places.length === 0
+        ? <div className="empty-state">No places found.</div>
         : <>
-            {pageItems.map((c) => (
-              <div key={c.city_id} className="sidebar-list-item" onClick={() => onSelectCity(c.city_id)}>
-                <span className="sli-dot" style={{ background: presenceColor(c.presence_status) }} />
+            {pageItems.map((p) => (
+              <div key={p.place_id} className="sidebar-list-item" onClick={() => onSelectPlace(p.place_id)}>
+                <span className="sli-dot" style={{ background: presenceColor((p as any).presence_status ?? "unknown") }} />
                 <div className="sli-main">
-                  <div className="sli-name"><Hl text={c.city_label} query={search} /></div>
+                  <div className="sli-name"><Hl text={p.place_label} query={search} /></div>
                   <div className="sli-meta">
-                    {c.city_ancient !== c.city_label ? `${c.city_ancient} · ` : ""}
-                    {c.country_modern}
-                    {!mapVisibleOnly && decadePresence.has(c.city_id) && (
+                    {p.place_label_modern && p.place_label_modern !== p.place_label ? `${p.place_label_modern} · ` : ""}
+                    {p.modern_country_label}
+                    <span className="faint" style={{ marginLeft: 4 }}>{p.place_kind}</span>
+                    {!mapVisibleOnly && decadePresence.has(p.place_id) && (
                       <span style={{ color: "var(--attested)", marginLeft: 4, fontSize: "0.7rem" }}>on map</span>
                     )}
                   </div>
                 </div>
-                <button
-                  type="button"
-                  className="sli-fly-btn"
-                  title="Fly to"
-                  onClick={(e) => { e.stopPropagation(); onFlyToCity(c.city_id); }}
-                >
-                  ⌖
-                </button>
-              </div>
-            ))}
-            <Pagination page={page} total={cities.length} pageSize={PAGE_SIZE} onChange={setPage} />
-          </>
-      }
-    </>
-  );
-}
-
-// ─── Archaeology list ─────────────────────────────────────────────────────────
-
-export function ArchaeologyList({ search, currentDecade, onSelect, onFlyToSite }: {
-  search: string;
-  currentDecade: number;
-  onSelect: (id: string) => void;
-  onFlyToSite: (id: string) => void;
-}) {
-  const includeCumulative = useAppStore((s) => s.includeCumulative);
-  const [page, setPage] = useState(0);
-  const [mapVisibleOnly, setMapVisibleOnly] = useState(false);
-  useEffect(() => { setPage(0); }, [search, currentDecade, includeCumulative, mapVisibleOnly]);
-
-  const mapVisibleSites = useMemo(() => {
-    return includeCumulative
-      ? dataStore.archaeology.getCumulativeAtDecade(currentDecade)
-      : dataStore.archaeology.getActiveAtDecade(currentDecade);
-  }, [currentDecade, includeCumulative]);
-
-  const sites = useMemo(() => {
-    const base = mapVisibleOnly ? mapVisibleSites : dataStore.archaeology.getAll();
-    const q = search.trim().toLowerCase();
-    if (!q) return base;
-    return base.filter((a) => `${a.name_display} ${a.site_type} ${a.description ?? ""}`.toLowerCase().includes(q));
-  }, [search, mapVisibleOnly, mapVisibleSites]);
-
-  const pageItems = sites.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
-
-  return (
-    <>
-      <div className="list-filter-bar">
-        <span className="faint" style={{ fontSize: "0.72rem" }}>
-          {mapVisibleOnly ? `${sites.length} on map` : `${sites.length} total · ${mapVisibleSites.length} on map`}
-        </span>
-        <button
-          type="button"
-          className={`list-filter-toggle${mapVisibleOnly ? " active" : ""}`}
-          onClick={() => setMapVisibleOnly((v) => !v)}
-          title={mapVisibleOnly ? "Showing map-visible only — click for all" : "Showing all sites — click to filter to map-visible"}
-        >
-          {mapVisibleOnly ? "🗺 Map only" : "🌍 Show all"}
-        </button>
-      </div>
-      {sites.length === 0
-        ? <div className="empty-state">No archaeology sites found.</div>
-        : <>
-            {pageItems.map((a) => (
-              <div key={a.archaeology_id} className="sidebar-list-item" onClick={() => onSelect(a.archaeology_id)}>
-                <span className="sli-icon">★</span>
-                <div className="sli-main">
-                  <div className="sli-name">{a.name_display}</div>
-                  <div className="sli-meta">{a.site_type}{a.year_start ? ` · AD ${a.year_start}` : ""}</div>
-                </div>
-                {a.lat != null && a.lon != null && (
+                {p.lat != null && p.lon != null && (
                   <button
                     type="button"
                     className="sli-fly-btn"
                     title="Fly to"
-                    onClick={(e) => { e.stopPropagation(); onFlyToSite(a.archaeology_id); }}
+                    onClick={(e) => { e.stopPropagation(); onFlyToPlace(p.place_id); }}
                   >
                     ⌖
                   </button>
                 )}
               </div>
             ))}
-            <Pagination page={page} total={sites.length} pageSize={PAGE_SIZE} onChange={setPage} />
+            <Pagination page={page} total={places.length} pageSize={PAGE_SIZE} onChange={setPage} />
           </>
       }
     </>
   );
 }
 
-// ─── Persuasions list ─────────────────────────────────────────────────────────
+// ─── Groups list (replaces PersuasionsList + PolitiesList) ───────────────────
 
-export function PersuasionsList({ search, currentDecade, onSelect, mapFilterId, mapFilterType }: {
+const GROUP_KIND_OPTIONS = [
+  { value: "communion" as const, label: "Communion" },
+  { value: "school" as const, label: "School" },
+  { value: "sect" as const, label: "Sect" },
+  { value: "polity" as const, label: "Polity" },
+  { value: "faction" as const, label: "Faction" },
+  { value: "order" as const, label: "Order" },
+];
+
+export function GroupsList({ search, currentDecade, onSelect, mapFilterId, mapFilterType }: {
   search: string;
   currentDecade: number;
   onSelect: (id: string) => void;
@@ -184,98 +150,55 @@ export function PersuasionsList({ search, currentDecade, onSelect, mapFilterId, 
   mapFilterType: string | null;
 }) {
   const [page, setPage] = useState(0);
-  useEffect(() => { setPage(0); }, [search, currentDecade]);
+  const [kindFilter, setKindFilter] = useState<string | null>(null);
+  useEffect(() => { setPage(0); }, [search, currentDecade, kindFilter]);
 
   const rows = useMemo(() => {
-    const statesAtDecade = dataStore.map.getCitiesAtDecade(currentDecade);
-    const countByPersuasion: Record<string, number> = {};
-    for (const c of statesAtDecade) {
-      for (const pid of c.persuasion_ids ?? []) {
-        countByPersuasion[pid] = (countByPersuasion[pid] ?? 0) + 1;
+    const statesAtDecade = dataStore.map.getPlacesAtDecade(currentDecade);
+    const countByGroup: Record<string, number> = {};
+    for (const ps of statesAtDecade) {
+      for (const gid of ps.group_presence_summary) {
+        countByGroup[gid] = (countByGroup[gid] ?? 0) + 1;
       }
     }
-    const all = dataStore.persuasions.getAll();
-    const q = search.trim().toLowerCase();
-    return all
-      .filter((p) => !q || p.persuasion_label.toLowerCase().includes(q))
-      .map((p) => ({ ...p, count: countByPersuasion[p.persuasion_id] ?? 0 }))
-      .sort((a, b) => b.count - a.count);
-  }, [search, currentDecade]);
-
-  if (rows.length === 0) return <div className="empty-state">No persuasions found.</div>;
-
-  const pageItems = rows.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
-
-  return (
-    <>
-      {pageItems.map((p) => {
-        const isFiltered = mapFilterType === "persuasion" && mapFilterId === p.persuasion_id;
-        return (
-          <div
-            key={p.persuasion_id}
-            className={`sidebar-list-item${isFiltered ? " selected" : ""}`}
-            onClick={() => onSelect(p.persuasion_id)}
-          >
-            <span className="sli-icon">❆</span>
-            <div className="sli-main">
-              <div className="sli-name">{p.persuasion_label}</div>
-              {p.count > 0 && <div className="sli-meta">{p.count} cities at AD {currentDecade}</div>}
-            </div>
-            {p.count > 0 && <span className="sli-badge">{p.count}</span>}
-          </div>
-        );
-      })}
-      <Pagination page={page} total={rows.length} pageSize={PAGE_SIZE} onChange={setPage} />
-    </>
-  );
-}
-
-// ─── Polities list ────────────────────────────────────────────────────────────
-
-export function PolitiesList({ search, currentDecade, onSelect, mapFilterId, mapFilterType }: {
-  search: string;
-  currentDecade: number;
-  onSelect: (id: string) => void;
-  mapFilterId: string | null;
-  mapFilterType: string | null;
-}) {
-  const [page, setPage] = useState(0);
-  useEffect(() => { setPage(0); }, [search, currentDecade]);
-
-  const rows = useMemo(() => {
-    const statesAtDecade = dataStore.map.getCitiesAtDecade(currentDecade);
-    const countByPolity: Record<string, number> = {};
-    for (const c of statesAtDecade) {
-      if (c.polity_id) countByPolity[c.polity_id] = (countByPolity[c.polity_id] ?? 0) + 1;
+    let all = dataStore.groups.getAll();
+    if (kindFilter) {
+      all = all.filter((g) => g.group_kind === kindFilter);
     }
-    const all = dataStore.polities.getAll();
     const q = search.trim().toLowerCase();
     return all
-      .filter((p) => !q || p.polity_label.toLowerCase().includes(q))
-      .map((p) => ({ ...p, count: countByPolity[p.polity_id] ?? 0 }))
-      .sort((a, b) => b.count - a.count);
-  }, [search, currentDecade]);
+      .filter((g) => !q || g.group_label.toLowerCase().includes(q))
+      .map((g) => ({ ...g, count: countByGroup[g.group_id] ?? 0 }))
+      .sort((a, b) => a.group_label.localeCompare(b.group_label));
+  }, [search, currentDecade, kindFilter]);
 
-  if (rows.length === 0) return <div className="empty-state">No polities found.</div>;
+  if (rows.length === 0 && !kindFilter) return <div className="empty-state">No groups found.</div>;
 
   const pageItems = rows.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <>
-      {pageItems.map((p) => {
-        const isFiltered = mapFilterType === "polity" && mapFilterId === p.polity_id;
+      <FilterChips label="Filter by kind" options={GROUP_KIND_OPTIONS} active={kindFilter} onChange={setKindFilter} />
+      {rows.length === 0
+        ? <div className="empty-state">No groups match this filter.</div>
+        : null}
+      {pageItems.map((g) => {
+        const isFiltered = mapFilterType === "group" && mapFilterId === g.group_id;
         return (
           <div
-            key={p.polity_id}
+            key={g.group_id}
             className={`sidebar-list-item${isFiltered ? " selected" : ""}`}
-            onClick={() => onSelect(p.polity_id)}
+            onClick={() => onSelect(g.group_id)}
           >
-            <span className="sli-icon">⚔</span>
+            <span className="sli-icon">✦</span>
             <div className="sli-main">
-              <div className="sli-name">{p.polity_label}</div>
-              {p.count > 0 && <div className="sli-meta">{p.count} cities at AD {currentDecade}</div>}
+              <div className="sli-name">{g.group_label}</div>
+              <div className="sli-meta">
+                {g.group_kind}
+                {g.count > 0 && ` · ${g.count} places at AD ${currentDecade}`}
+              </div>
             </div>
-            {p.count > 0 && <span className="sli-badge">{p.count}</span>}
+            {g.count > 0 && <span className="sli-badge">{g.count}</span>}
           </div>
         );
       })}
@@ -286,31 +209,43 @@ export function PolitiesList({ search, currentDecade, onSelect, mapFilterId, map
 
 // ─── People list ──────────────────────────────────────────────────────────────
 
+const PERSON_KIND_OPTIONS = [
+  { value: "individual", label: "Individual" },
+  { value: "anonymous_author", label: "Anonymous Author" },
+  { value: "collective_author", label: "Collective Author" },
+  { value: "composite_figure", label: "Composite Figure" },
+];
+
 export function PeopleList({ search, onSelect }: { search: string; onSelect: (id: string) => void }) {
   const [page, setPage] = useState(0);
-  useEffect(() => { setPage(0); }, [search]);
+  const [kindFilter, setKindFilter] = useState<string | null>(null);
+  useEffect(() => { setPage(0); }, [search, kindFilter]);
 
   const people = useMemo(() => {
     const q = search.trim().toLowerCase();
-    const all = dataStore.people.getAll();
+    let all = dataStore.people.getAll();
+    if (kindFilter) all = all.filter((p) => p.person_kind === kindFilter);
     if (!q) return all;
-    return all.filter((p) => `${p.person_label} ${p.name_alt.join(" ")} ${p.roles.join(" ")} ${p.description}`.toLowerCase().includes(q));
-  }, [search]);
+    return all.filter((p) => `${p.person_label} ${p.name_alt.join(" ")} ${p.notes}`.toLowerCase().includes(q));
+  }, [search, kindFilter]);
 
-  if (people.length === 0) return <div className="empty-state">No people found.</div>;
+  if (people.length === 0 && !kindFilter) return <div className="empty-state">No people found.</div>;
 
   const pageItems = people.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <>
+      <FilterChips label="Filter by kind" options={PERSON_KIND_OPTIONS} active={kindFilter} onChange={setKindFilter} />
+      {people.length === 0 ? <div className="empty-state">No people match this filter.</div> : null}
       {pageItems.map((p) => (
         <div key={p.person_id} className="sidebar-list-item" onClick={() => onSelect(p.person_id)}>
           <span className="sli-icon">👤</span>
           <div className="sli-main">
             <div className="sli-name">{p.person_label}</div>
             <div className="sli-meta">
-              {p.roles.slice(0, 2).join(", ")}
-              {(p.birth_year || p.death_year) ? ` · ${p.birth_year ? `b.${p.birth_year}` : ""}${p.death_year ? ` d.${p.death_year}` : ""}` : ""}
+              {p.person_kind !== "individual" ? p.person_kind : ""}
+              {p.birth_year_display ? ` ${p.birth_year_display}` : ""}
+              {p.death_year_display ? ` – ${p.death_year_display}` : ""}
             </div>
           </div>
         </div>
@@ -320,157 +255,99 @@ export function PeopleList({ search, onSelect }: { search: string; onSelect: (id
   );
 }
 
-// ─── Doctrines list ───────────────────────────────────────────────────────────
+// ─── Propositions list (replaces DoctrinesList) ──────────────────────────────
 
-export function DoctrinesList({ search, subTab, onSubTabChange, onSelect, onSelectEntity }: {
+export function PropositionsList({ search, onSelect }: {
   search: string;
-  subTab: "doctrines" | "quotes";
-  onSubTabChange: (t: "doctrines" | "quotes") => void;
   onSelect: (id: string) => void;
-  onSelectEntity: (kind: string, id: string) => void;
 }) {
-  const hl = search.trim();
-  const [dPage, setDPage] = useState(0);
-  const [qPage, setQPage] = useState(0);
-  useEffect(() => { setDPage(0); setQPage(0); }, [hl, subTab]);
+  const [page, setPage] = useState(0);
+  const [topicFilter, setTopicFilter] = useState<string | null>(null);
+  useEffect(() => { setPage(0); }, [search, topicFilter]);
 
-  const doctrines = useMemo(() => {
-    const q = hl.toLowerCase();
-    const all = dataStore.doctrines.getAll();
+  const topicOptions = useMemo(() =>
+    dataStore.topics.getAll().map((t) => ({ value: t.topic_id, label: t.topic_label })),
+    [],
+  );
+
+  const propositions = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    let all = dataStore.propositions.getAll();
+    if (topicFilter) all = all.filter((p) => p.topic_id === topicFilter);
     if (!q) return all;
-    return all.filter((d) =>
-      `${d.name_display} ${d.category} ${d.description}`.toLowerCase().includes(q) ||
-      dataStore.quotes.getByDoctrine(d.doctrine_id).some((qt) => qt.text.toLowerCase().includes(q)),
+    return all.filter((p) =>
+      `${p.proposition_label} ${p.description} ${p.polarity_family}`.toLowerCase().includes(q),
     );
-  }, [hl]);
+  }, [search, topicFilter]);
 
-  const allQuotes = useMemo(() => {
-    const q = hl.toLowerCase();
-    const all = dataStore.quotes.getAll().slice().sort((a, b) => (a.year ?? 9999) - (b.year ?? 9999));
-    if (!q) return all;
-    return all.filter((qt) =>
-      qt.text.toLowerCase().includes(q) ||
-      qt.work_reference.toLowerCase().includes(q) ||
-      (qt.notes ?? "").toLowerCase().includes(q),
-    );
-  }, [hl]);
+  if (propositions.length === 0 && !topicFilter) return <div className="empty-state">No propositions found.</div>;
 
-  const docPage = doctrines.slice(dPage * PAGE_SIZE, (dPage + 1) * PAGE_SIZE);
-  const quotePage = allQuotes.slice(qPage * PAGE_SIZE, (qPage + 1) * PAGE_SIZE);
+  const pageItems = propositions.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <>
-      <div className="sub-tabs" style={{ padding: "0 8px" }}>
-        <button type="button" className={`sub-tab${subTab === "doctrines" ? " active" : ""}`} onClick={() => onSubTabChange("doctrines")}>
-          Doctrines ({doctrines.length})
-        </button>
-        <button type="button" className={`sub-tab${subTab === "quotes" ? " active" : ""}`} onClick={() => onSubTabChange("quotes")}>
-          All Quotes {hl ? `(${allQuotes.length})` : ""}
-        </button>
-      </div>
-
-      {subTab === "doctrines" && (
-        doctrines.length === 0
-          ? <div className="empty-state">No doctrines found.</div>
-          : <>
-              {docPage.map((d) => (
-                <div key={d.doctrine_id} className="sidebar-list-item" onClick={() => onSelect(d.doctrine_id)}>
-                  <span className="sli-icon">📖</span>
-                  <div className="sli-main">
-                    <div className="sli-name"><Hl text={d.name_display} query={hl} /></div>
-                    <div className="sli-meta">
-                      {d.category}
-                      {d.first_attested_year ? ` · AD ${d.first_attested_year}` : ""}
-                    </div>
-                  </div>
-                </div>
-              ))}
-              <Pagination page={dPage} total={doctrines.length} pageSize={PAGE_SIZE} onChange={setDPage} />
-            </>
-      )}
-
-      {subTab === "quotes" && (
-        allQuotes.length === 0
-          ? <div className="empty-state">No quotes found.</div>
-          : <>
-              {quotePage.map((qt) => {
-                const doctrine = qt.doctrine_id ? dataStore.doctrines.getById(qt.doctrine_id) : null;
-                const work     = qt.work_id     ? dataStore.works.getById(qt.work_id)         : null;
-                return (
-                  <div
-                    key={qt.quote_id}
-                    className="note-card"
-                    style={{ margin: "4px 8px", cursor: "pointer" }}
-                    onClick={() => onSelectEntity("quote", qt.quote_id)}
-                  >
-                    <div className="note-year" style={{ display: "flex", gap: 6, alignItems: "center" }}>
-                      {qt.year ? `AD ${qt.year}` : ""}
-                      {qt.stance ? ` · ${qt.stance}` : ""}
-                      {doctrine && (
-                        <button type="button" className="mention-link" style={{ marginLeft: "auto" }}
-                          onClick={(e) => { e.stopPropagation(); onSelectEntity("doctrine", doctrine.doctrine_id); }}>
-                          {doctrine.name_display}
-                        </button>
-                      )}
-                    </div>
-                    <p style={{ fontStyle: "italic", margin: "4px 0", fontSize: "0.82rem", lineHeight: 1.5 }}>
-                      &ldquo;<Hl text={qt.text} query={hl} />&rdquo;
-                    </p>
-                    {qt.work_reference && (
-                      <div style={{ fontSize: "0.73rem", color: "var(--text-faint)" }}>
-                        — <Hl text={qt.work_reference} query={hl} />
-                        {work && (
-                          <button type="button" className="mention-link" style={{ marginLeft: 5 }}
-                            onClick={(e) => { e.stopPropagation(); onSelectEntity("work", work.work_id); }}>
-                            {work.title_display}
-                          </button>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-              <Pagination page={qPage} total={allQuotes.length} pageSize={PAGE_SIZE} onChange={setQPage} />
-            </>
-      )}
+      <FilterChips label="Filter by topic" options={topicOptions} active={topicFilter} onChange={setTopicFilter} />
+      {propositions.length === 0 ? <div className="empty-state">No propositions match this filter.</div> : null}
+      {pageItems.map((p) => {
+        const topic = dataStore.topics.getById(p.topic_id);
+        return (
+          <div key={p.proposition_id} className="sidebar-list-item" onClick={() => onSelect(p.proposition_id)}>
+            <span className="sli-icon">📝</span>
+            <div className="sli-main">
+              <div className="sli-name"><Hl text={p.proposition_label} query={search} /></div>
+              <div className="sli-meta">
+                {topic?.topic_label ?? p.topic_id}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+      <Pagination page={page} total={propositions.length} pageSize={PAGE_SIZE} onChange={setPage} />
     </>
   );
 }
 
 // ─── Events list ──────────────────────────────────────────────────────────────
 
-export function EventsList({ search, currentDecade, onSelect }: {
+const EVENT_TYPE_OPTIONS = [
+  { value: "council", label: "Council" },
+  { value: "mission", label: "Mission" },
+  { value: "persecution", label: "Persecution" },
+  { value: "political", label: "Political" },
+  { value: "literary", label: "Literary" },
+  { value: "other", label: "Other" },
+];
+
+export function EventsList({ search, onSelect }: {
   search: string;
-  currentDecade: number;
   onSelect: (id: string) => void;
 }) {
   const [page, setPage] = useState(0);
-  useEffect(() => { setPage(0); }, [search, currentDecade]);
+  const [typeFilter, setTypeFilter] = useState<string | null>(null);
+  useEffect(() => { setPage(0); }, [search, typeFilter]);
 
   const events = useMemo(() => {
     const q = search.trim().toLowerCase();
-    const all = dataStore.events.getAll()
-      .filter((e) => (e.year_start ?? 0) <= currentDecade + 10)
-      .sort((a, b) => (a.year_start ?? 0) - (b.year_start ?? 0));
+    let all = dataStore.events.getAll();
+    if (typeFilter) all = all.filter((e) => e.event_type === typeFilter);
     if (!q) return all;
-    return all.filter((e) => `${e.name_display} ${e.event_type} ${e.region} ${e.description}`.toLowerCase().includes(q));
-  }, [search, currentDecade]);
+    return all.filter((e) => `${e.event_label} ${e.event_type} ${e.notes}`.toLowerCase().includes(q));
+  }, [search, typeFilter]);
 
-  if (events.length === 0) return <div className="empty-state">No events found.</div>;
+  if (events.length === 0 && !typeFilter) return <div className="empty-state">No events found.</div>;
 
   const pageItems = events.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <>
+      <FilterChips label="Filter by type" options={EVENT_TYPE_OPTIONS} active={typeFilter} onChange={setTypeFilter} />
+      {events.length === 0 ? <div className="empty-state">No events match this filter.</div> : null}
       {pageItems.map((e) => (
         <div key={e.event_id} className="sidebar-list-item" onClick={() => onSelect(e.event_id)}>
           <span className="sli-icon">⚡</span>
           <div className="sli-main">
-            <div className="sli-name">{e.name_display}</div>
-            <div className="sli-meta">
-              {e.year_start ? `AD ${e.year_start}` : ""}
-              {e.event_type ? ` · ${e.event_type}` : ""}
-            </div>
+            <div className="sli-name">{e.event_label}</div>
+            <div className="sli-meta">{e.event_type}</div>
           </div>
         </div>
       ))}
@@ -481,33 +358,44 @@ export function EventsList({ search, currentDecade, onSelect }: {
 
 // ─── Works list ───────────────────────────────────────────────────────────────
 
+const WORK_TYPE_OPTIONS = [
+  { value: "letter", label: "Letter" },
+  { value: "chronicle", label: "Chronicle" },
+  { value: "treatise", label: "Treatise" },
+  { value: "other", label: "Other" },
+];
+
 export function WorksList({ search, onSelect }: { search: string; onSelect: (id: string) => void }) {
   const [page, setPage] = useState(0);
-  useEffect(() => { setPage(0); }, [search]);
+  const [typeFilter, setTypeFilter] = useState<string | null>(null);
+  useEffect(() => { setPage(0); }, [search, typeFilter]);
 
   const works = useMemo(() => {
     const q = search.trim().toLowerCase();
-    const all = dataStore.works.getAll().sort((a, b) => (a.year_written_start ?? 0) - (b.year_written_start ?? 0));
+    let all = dataStore.works.getAll();
+    if (typeFilter) all = all.filter((w) => w.work_type === typeFilter);
     if (!q) return all;
     return all.filter((w) =>
-      `${w.title_display} ${w.author_name_display} ${w.description} ${w.work_type}`.toLowerCase().includes(q),
+      `${w.title_display} ${w.title_original} ${w.work_type} ${w.notes}`.toLowerCase().includes(q),
     );
-  }, [search]);
+  }, [search, typeFilter]);
 
-  if (works.length === 0) return <div className="empty-state">No works found.</div>;
+  if (works.length === 0 && !typeFilter) return <div className="empty-state">No works found.</div>;
 
   const pageItems = works.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <>
+      <FilterChips label="Filter by type" options={WORK_TYPE_OPTIONS} active={typeFilter} onChange={setTypeFilter} />
+      {works.length === 0 ? <div className="empty-state">No works match this filter.</div> : null}
       {pageItems.map((w) => (
         <div key={w.work_id} className="sidebar-list-item" onClick={() => onSelect(w.work_id)}>
           <span className="sli-icon">📜</span>
           <div className="sli-main">
             <div className="sli-name">{w.title_display}</div>
             <div className="sli-meta">
-              {w.author_name_display}
-              {w.year_written_start ? ` · AD ${w.year_written_start}` : ""}
+              {w.work_type}
+              {w.language_original ? ` · ${w.language_original}` : ""}
             </div>
           </div>
         </div>

@@ -1,152 +1,76 @@
 import { useState, useMemo, useEffect, useRef } from "react";
-import { dataStore, getEntityLabel } from "../../data/dataStore";
+import { dataStore } from "../../data/dataStore";
 import { useAppStore } from "../../stores/appStore";
-import type { PlaceState } from "../../data/dataStore";
+import type { PlaceStateByDecade } from "../../data/dataStore";
 import { Hl } from "../shared/Hl";
 import { NoteCard } from "../shared/NoteCard";
 import { Pagination, PAGE_SIZE } from "../shared/Pagination";
-import { getRelationLabel } from "../../domain/relationLabels";
-import { KIND_ICONS, PRESENCE_LABELS, PRESENCE_COLORS } from "../shared/entityConstants";
-import { RelationCard } from "../shared/RelationCard";
-
-// ─── Types ────────────────────────────────────────────────────────────────────
-
-type SubTab = "info" | "timeline" | "people" | "doctrines" | "events" | "works" | "archaeology" | "relations";
-
-const SUB_TABS: { id: SubTab; label: string }[] = [
-  { id: "info",        label: "Info" },
-  { id: "timeline",    label: "Timeline" },
-  { id: "people",      label: "People" },
-  { id: "doctrines",   label: "Doctrines" },
-  { id: "events",      label: "Events" },
-  { id: "works",       label: "Works" },
-  { id: "archaeology", label: "Archaeology" },
-  { id: "relations",   label: "Relations" },
-];
-
+import { usePaginatedList } from "../../hooks/usePaginatedList";
+import { PRESENCE_LABELS, PRESENCE_COLORS } from "../shared/entityConstants";
+import { ClaimCard } from "../shared/RelationCard";
+import { FootprintCard } from "../shared/FootprintCard";
 
 // ─── Props ────────────────────────────────────────────────────────────────────
 
-interface CityDetailProps {
-  cityId: string;
+interface PlaceDetailProps {
+  placeId: string;
   onBack: () => void;
   onSelectEntity: (kind: string, id: string) => void;
 }
 
-// ─── CityDetail ───────────────────────────────────────────────────────────────
+// ─── PlaceDetail (exported as CityDetail for migration compat) ───────────────
 
-export function CityDetail({ cityId, onBack, onSelectEntity }: CityDetailProps) {
-  const [subTab, setSubTab] = useState<SubTab>("info");
+export function CityDetail({ cityId, onBack, onSelectEntity }: { cityId: string; onBack: () => void; onSelectEntity: (kind: string, id: string) => void }) {
+  return <PlaceDetail placeId={cityId} onBack={onBack} onSelectEntity={onSelectEntity} />;
+}
+
+export function PlaceDetail({ placeId, onBack, onSelectEntity }: PlaceDetailProps) {
+  const [subTab, setSubTab] = useState<"info" | "timeline" | "claims">("info");
   const activeDecade = useAppStore((s) => s.activeDecade);
 
-  const city        = dataStore.cities.getById(cityId);
-  const placeStates = dataStore.map.getPlaceStatesForCity(cityId);
-  const notes       = dataStore.notes.getForEntity("city", cityId);
-  const footprints  = dataStore.footprints.getForPlace(`city:${cityId}`);
+  const place       = dataStore.places.getById(placeId);
+  const placeStates = dataStore.map.getPlaceStatesForPlace(placeId);
+  const editorNotes = dataStore.editorNotes.getForEntity("place", placeId);
+  const footprints  = dataStore.footprints.getForPlace(placeId);
+  const claims      = dataStore.claims.getVisibleForEntity("place", placeId);
 
-  // Current state at active decade (or nearest past)
-  const currentState = useMemo(() => {
-    const exact = placeStates.find((ps) => ps.decade === activeDecade);
-    if (exact) return exact;
-    const past = placeStates.filter((ps) => ps.decade <= activeDecade);
-    return past.length > 0 ? past[past.length - 1] : placeStates[0];
-  }, [placeStates, activeDecade]);
+  const currentState = useMemo(() => dataStore.map.getCurrentPlaceState(placeId, activeDecade), [placeId, activeDecade]);
 
-  // People via footprints + relations
-  const cityPeople = useMemo(() => {
-    const personIds = new Set<string>(
-      footprints.filter((f) => f.entity_type === "person").map((f) => f.entity_id),
-    );
-    // Also via relations
-    for (const r of dataStore.relations.getForEntity("city", cityId)) {
-      const otherId = r.source_id === cityId ? r.target_id : r.source_id;
-      const otherType = r.source_id === cityId ? r.target_type : r.source_type;
-      if (otherType === "person") personIds.add(otherId);
-    }
-    return Array.from(personIds)
-      .map((id) => dataStore.people.getById(id))
-      .filter(Boolean) as NonNullable<ReturnType<typeof dataStore.people.getById>>[];
-  }, [cityId, footprints]);
-
-  // Works by city's people
-  const cityWorks = useMemo(() => {
-    const seen = new Set<string>();
-    const works: NonNullable<ReturnType<typeof dataStore.works.getById>>[] = [];
-    for (const p of cityPeople) {
-      for (const w of dataStore.works.getByAuthor(p.person_id)) {
-        if (!seen.has(w.work_id)) { seen.add(w.work_id); works.push(w); }
-      }
-    }
-    return works;
-  }, [cityPeople]);
-
-  // Events at this city
-  const cityEvents = useMemo(() =>
-    dataStore.events.getAll().filter((e) => e.primary_place_id === `city:${cityId}`),
-    [cityId],
-  );
-
-  // Archaeology sites at this city
-  const cityArchaeology = useMemo(() =>
-    dataStore.archaeology.getAll().filter((a) => a.city_id === cityId),
-    [cityId],
-  );
-
-  // Relations for this city
-  const cityRelations = useMemo(() =>
-    dataStore.relations.getForEntity("city", cityId),
-    [cityId],
-  );
-
-  // Doctrines: attested vs traditionally assumed
-  const doctrineRows = useMemo(() => {
-    const decadeYear = activeDecade;
-    const workIds = new Set(cityWorks.map((w) => w.work_id));
-    return dataStore.doctrines.getAll()
-      .filter((d) => d.first_attested_year != null && d.first_attested_year <= decadeYear)
-      .map((d) => {
-        const quotes = dataStore.quotes.getByDoctrine(d.doctrine_id);
-        const hasLocalQuote = quotes.some((q) => q.work_id && workIds.has(q.work_id));
-        const firstWorkLocal = d.first_attested_work_id ? workIds.has(d.first_attested_work_id) : false;
-        const attested = hasLocalQuote || firstWorkLocal;
-        return { doctrine: d, attested };
-      });
-  }, [activeDecade, cityWorks]);
-
-  if (!city) {
+  if (!place) {
     return (
       <div className="detail-panel">
         <div className="detail-back-bar">
           <button type="button" className="back-btn" onClick={onBack}>← Back</button>
         </div>
-        <div className="empty-state">City not found.</div>
+        <div className="empty-state">Place not found.</div>
       </div>
     );
   }
 
   const presenceColor = PRESENCE_COLORS[currentState?.presence_status ?? "unknown"] ?? "#8e8070";
 
+
   return (
     <div className="detail-panel">
       {/* Back bar */}
       <div className="detail-back-bar">
         <button type="button" className="back-btn" onClick={onBack}>← Back</button>
-        <span className="detail-crumb">Places › City</span>
+        <span className="detail-crumb">Place</span>
       </div>
 
       {/* Header */}
       <div className="detail-header">
-        <div className="detail-kind-badge">🏛 City</div>
-        <div className="detail-title">{city.city_label}</div>
+        <div className="detail-kind-badge">🏛 {place.place_kind}</div>
+        <div className="detail-title">{place.place_label}</div>
         <div className="detail-subtitle">
-          {city.city_modern !== city.city_ancient
-            ? `${city.city_ancient} · modern: ${city.city_modern}`
-            : city.city_ancient}
-          {city.country_modern ? ` · ${city.country_modern}` : ""}
+          {place.place_label_modern && place.place_label_modern !== place.place_label
+            ? `modern: ${place.place_label_modern} · `
+            : ""}
+          {place.modern_country_label}
         </div>
 
         {currentState && (
-          <div className="detail-tags" style={{ marginTop: 6 }}>
+          <div className="detail-tags detail-tags--spaced">
             <span className="tag">AD {activeDecade}</span>
             <span
               className="tag"
@@ -159,77 +83,63 @@ export function CityDetail({ cityId, onBack, onSelectEntity }: CityDetailProps) 
               {PRESENCE_LABELS[currentState.presence_status] ?? currentState.presence_status}
             </span>
 
-            {/* Clickable polity tag */}
-            {currentState.polity_id && (
+            {/* Dominant polity tag (shown first, separated from other groups) */}
+            {currentState.dominant_polity_group_id && (
               <button
                 type="button"
-                className="tag tag-clickable"
-                onClick={() => onSelectEntity("polity", currentState.polity_id!)}
-                title="View polity details"
+                className="tag tag-clickable tag-persuasion"
+                onClick={() => onSelectEntity("group", currentState.dominant_polity_group_id)}
+                title="Dominant polity"
               >
-                {dataStore.polities.getById(currentState.polity_id)?.polity_label ?? currentState.polity_id}
+                ⚔ {dataStore.groups.getById(currentState.dominant_polity_group_id)?.group_label ?? currentState.dominant_polity_group_id}
               </button>
             )}
 
-            {/* Clickable persuasion tags */}
-            {(currentState.persuasion_ids ?? []).map((pid) => {
-              const persuasion = dataStore.persuasions.getById(pid);
-              if (!persuasion) return null;
-              return (
-                <button
-                  key={pid}
-                  type="button"
-                  className="tag tag-clickable tag-persuasion"
-                  onClick={() => onSelectEntity("persuasion", pid)}
-                  title="View persuasion details"
-                >
-                  {persuasion.persuasion_label}
-                </button>
-              );
-            })}
+            {/* Group presence tags (skip the dominant polity to avoid duplication) */}
+            {currentState.group_presence_summary
+              .filter((gid) => gid !== currentState.dominant_polity_group_id)
+              .map((gid) => {
+                const group = dataStore.groups.getById(gid);
+                if (!group) return null;
+                return (
+                  <button
+                    key={gid}
+                    type="button"
+                    className="tag tag-clickable"
+                    onClick={() => onSelectEntity("group", gid)}
+                    title={`View group: ${group.group_label}`}
+                  >
+                    {group.group_label}
+                  </button>
+                );
+              })}
           </div>
         )}
       </div>
 
       {/* Sub-tabs */}
       <div className="detail-sub-tabs">
-        {SUB_TABS.filter((t) => {
-          if (t.id === "archaeology") return cityArchaeology.length > 0;
-          if (t.id === "relations") return cityRelations.length > 0;
-          return true;
-        }).map((t) => {
-          const counts: Partial<Record<SubTab, number>> = {
-            people: cityPeople.length,
-            doctrines: doctrineRows.length,
-            events: cityEvents.length,
-            works: cityWorks.length,
-            archaeology: cityArchaeology.length,
-            relations: cityRelations.length,
-          };
-          const c = counts[t.id];
-          return (
-            <button
-              key={t.id}
-              type="button"
-              className={`detail-sub-tab${subTab === t.id ? " active" : ""}`}
-              onClick={() => setSubTab(t.id)}
-            >
-              {t.label}{c != null ? ` (${c})` : ""}
-            </button>
-          );
-        })}
+        {[
+          { id: "info" as const, label: "Info" },
+          { id: "timeline" as const, label: `Timeline (${placeStates.length})` },
+          ...(claims.length > 0 ? [{ id: "claims" as const, label: `Claims (${claims.length})` }] : []),
+        ].map((t) => (
+          <button
+            key={t.id}
+            type="button"
+            className={`detail-sub-tab${subTab === t.id ? " active" : ""}`}
+            onClick={() => setSubTab(t.id)}
+          >
+            {t.label}
+          </button>
+        ))}
       </div>
 
       {/* Tab body */}
       <div className="detail-body">
-        {subTab === "info"        && <InfoTab city={city} currentState={currentState} notes={notes} onSelectEntity={onSelectEntity} />}
-        {subTab === "timeline"    && <TimelineTab placeStates={placeStates} activeDecade={activeDecade} notes={notes} onSelectEntity={onSelectEntity} />}
-        {subTab === "people"      && <PeopleTab people={cityPeople} onSelectEntity={onSelectEntity} />}
-        {subTab === "doctrines"   && <DoctrinesTab rows={doctrineRows} onSelectEntity={onSelectEntity} />}
-        {subTab === "events"      && <EventsTab events={cityEvents} onSelectEntity={onSelectEntity} />}
-        {subTab === "works"       && <WorksTab works={cityWorks} onSelectEntity={onSelectEntity} />}
-        {subTab === "archaeology" && <ArchaeologyTab sites={cityArchaeology} onSelectEntity={onSelectEntity} />}
-        {subTab === "relations"   && <RelationsTab relations={cityRelations} cityId={cityId} onSelectEntity={onSelectEntity} />}
+        {subTab === "info" && <InfoTab place={place} currentState={currentState} editorNotes={editorNotes} onSelectEntity={onSelectEntity} />}
+        {subTab === "timeline" && <TimelineTab placeStates={placeStates} placeId={placeId} activeDecade={activeDecade} onSelectEntity={onSelectEntity} />}
+        {subTab === "claims" && <ClaimsTab claims={claims} placeId={placeId} onSelectEntity={onSelectEntity} />}
       </div>
     </div>
   );
@@ -237,106 +147,76 @@ export function CityDetail({ cityId, onBack, onSelectEntity }: CityDetailProps) 
 
 // ─── Info tab ─────────────────────────────────────────────────────────────────
 
-function InfoTab({ city, currentState, notes, onSelectEntity }: {
-  city: NonNullable<ReturnType<typeof dataStore.cities.getById>>;
-  currentState: PlaceState | undefined;
-  notes: ReturnType<typeof dataStore.notes.getForEntity>;
+function InfoTab({ place, currentState, editorNotes, onSelectEntity }: {
+  place: NonNullable<ReturnType<typeof dataStore.places.getById>>;
+  currentState: PlaceStateByDecade | undefined;
+  editorNotes: ReturnType<typeof dataStore.editorNotes.getForEntity>;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
   const searchQuery = useAppStore((s) => s.searchQuery);
   const q = searchQuery.trim();
 
-  // Evidence note for the current decade
-  const evidenceNote = useMemo(() => {
-    if (!currentState?.evidence_note_id) return null;
-    return notes.find((n) => n.note_id === currentState.evidence_note_id) ?? null;
-  }, [currentState, notes]);
-
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+    <div className="flex-col-14">
       <div className="fact-grid">
-        {city.christianity_start_year != null && (
-          <>
-            <span className="fact-label">Christianity est.</span>
-            <span className="fact-value">AD {city.christianity_start_year}</span>
-          </>
-        )}
+        <span className="fact-label">Kind</span>
+        <span className="fact-value">{place.place_kind}</span>
         <span className="fact-label">Location precision</span>
-        <span className="fact-value">{city.location_precision?.replace(/_/g, " ")}</span>
-        {city.lat != null && city.lon != null && (
+        <span className="fact-value">{place.location_precision?.replace(/_/g, " ")}</span>
+        {place.lat != null && place.lon != null && (
           <>
             <span className="fact-label">Coordinates</span>
-            <span className="fact-value">{city.lat.toFixed(4)}, {city.lon.toFixed(4)}</span>
+            <span className="fact-value">{place.lat.toFixed(4)}, {place.lon.toFixed(4)}</span>
           </>
         )}
-        {city.church_planted_by && (
+        {place.parent_place_id && (
           <>
-            <span className="fact-label">Planted by</span>
-            <span className="fact-value"><Hl text={city.church_planted_by} query={q} /></span>
+            <span className="fact-label">Parent place</span>
+            <span className="fact-value">
+              <button type="button" className="mention-link" onClick={() => onSelectEntity("place", place.parent_place_id)}>
+                {dataStore.places.getById(place.parent_place_id)?.place_label ?? place.parent_place_id}
+              </button>
+            </span>
           </>
         )}
-        {city.apostolic_origin_thread && (
+        {place.notes && (
           <>
-            <span className="fact-label">Apostolic thread</span>
-            <span className="fact-value"><Hl text={city.apostolic_origin_thread} query={q} /></span>
-          </>
-        )}
-        {currentState?.ruling_subdivision && (
-          <>
-            <span className="fact-label">Region</span>
-            <span className="fact-value"><Hl text={currentState.ruling_subdivision} query={q} /></span>
-          </>
-        )}
-        {currentState?.council_context && (
-          <>
-            <span className="fact-label">Council</span>
-            <span className="fact-value">{currentState.council_context}</span>
-          </>
-        )}
-        {city.church_planted_year_scholarly != null && (
-          <>
-            <span className="fact-label">Planted (scholarly)</span>
-            <span className="fact-value">AD {city.church_planted_year_scholarly}</span>
-          </>
-        )}
-        {city.church_planted_year_earliest_claim != null && (
-          <>
-            <span className="fact-label">Planted (earliest claim)</span>
-            <span className="fact-value">AD {city.church_planted_year_earliest_claim}</span>
+            <span className="fact-label">Notes</span>
+            <span className="fact-value"><Hl text={place.notes} query={q} /></span>
           </>
         )}
       </div>
 
-      {evidenceNote && (
+      {editorNotes.length > 0 && (
         <div>
-          <div className="detail-section-title">Evidence for AD {currentState?.decade}</div>
-          <NoteCard note={evidenceNote} onSelectEntity={onSelectEntity} searchQuery={q} />
+          <div className="detail-section-title">Editor Notes</div>
+          {editorNotes.map((n) => (
+            <NoteCard key={n.editor_note_id} note={n} onSelectEntity={onSelectEntity} searchQuery={q} />
+          ))}
         </div>
       )}
     </div>
   );
 }
 
-// ─── Timeline tab ─────────────────────────────────────────────────────────────
+// ─── Timeline tab (enriched with footprint activity per decade) ──────────────
 
-function TimelineTab({ placeStates, activeDecade, notes, onSelectEntity }: {
-  placeStates: PlaceState[];
+function TimelineTab({ placeStates, placeId, activeDecade, onSelectEntity }: {
+  placeStates: PlaceStateByDecade[];
+  placeId: string;
   activeDecade: number;
-  notes: ReturnType<typeof dataStore.notes.getForEntity>;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
-  const q = useAppStore((s) => s.searchQuery).trim();
   const activeRowRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     activeRowRef.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
   }, [activeDecade]);
 
-  const noteById = useMemo(() => {
-    const m = new Map<string, (typeof notes)[0]>();
-    for (const n of notes) m.set(n.note_id, n);
-    return m;
-  }, [notes]);
+  const footprintsByDecade = useMemo(
+    () => dataStore.footprints.getByDecadeForPlace(placeId, placeStates),
+    [placeId, placeStates],
+  );
 
   if (placeStates.length === 0) return <div className="empty-state">No timeline data.</div>;
 
@@ -344,11 +224,10 @@ function TimelineTab({ placeStates, activeDecade, notes, onSelectEntity }: {
     <div className="tl-v-list">
       {placeStates.map((ps, idx) => {
         const isActive = ps.decade === activeDecade;
-        const note     = ps.evidence_note_id ? noteById.get(ps.evidence_note_id) : null;
-        const polity   = ps.polity_id ? dataStore.polities.getById(ps.polity_id) : null;
         const isLast   = idx === placeStates.length - 1;
         const dotColor = PRESENCE_COLORS[ps.presence_status] ?? "#8e8070";
         const statusLabel = PRESENCE_LABELS[ps.presence_status] ?? ps.presence_status;
+        const decadeFootprints = footprintsByDecade.get(ps.decade) ?? [];
 
         return (
           <div
@@ -356,7 +235,6 @@ function TimelineTab({ placeStates, activeDecade, notes, onSelectEntity }: {
             ref={isActive ? activeRowRef : null}
             className={`tl-v-row${isActive ? " tl-v-row--active" : ""}`}
           >
-            {/* Left gutter */}
             <div className={`tl-v-gutter${isLast ? " tl-v-gutter--last" : ""}`}>
               <span
                 className={`tl-v-dot${isActive ? " tl-v-dot--active" : ""}`}
@@ -368,50 +246,63 @@ function TimelineTab({ placeStates, activeDecade, notes, onSelectEntity }: {
               />
             </div>
 
-            {/* Content */}
             <div className="tl-v-content">
-              {/* Primary: status label (bold, colored) */}
               <div className="tl-v-status" style={{ color: dotColor }}>
                 {statusLabel}
               </div>
-
-              {/* Secondary: year + chips */}
               <div className="tl-v-meta">
                 <span className="tl-v-year">{isActive ? `▶ AD ${ps.decade}` : `AD ${ps.decade}`}</span>
-                {polity && (
-                  <button
-                    type="button"
-                    className="timeline-polity-btn"
-                    onClick={() => onSelectEntity("polity", ps.polity_id!)}
-                  >
-                    {polity.polity_label}
-                  </button>
-                )}
-                {ps.persuasion_ids?.map((pid) => {
-                  const p = dataStore.persuasions.getById(pid);
-                  return p ? (
+
+                {/* Dominant polity */}
+                {ps.dominant_polity_group_id && (() => {
+                  const polity = dataStore.groups.getById(ps.dominant_polity_group_id);
+                  return polity ? (
                     <button
-                      key={pid}
                       type="button"
-                      className="timeline-persuasion-btn"
-                      onClick={() => onSelectEntity("persuasion", pid)}
+                      className="timeline-polity-btn"
+                      onClick={() => onSelectEntity("group", ps.dominant_polity_group_id)}
                     >
-                      {p.persuasion_label}
+                      {polity.group_label}
                     </button>
                   ) : null;
-                })}
+                })()}
+
+                {/* Group presence chips (skip dominant polity) */}
+                {ps.group_presence_summary
+                  .filter((gid) => gid !== ps.dominant_polity_group_id)
+                  .map((gid) => {
+                    const g = dataStore.groups.getById(gid);
+                    return g ? (
+                      <button
+                        key={gid}
+                        type="button"
+                        className="timeline-persuasion-btn"
+                        onClick={() => onSelectEntity("group", gid)}
+                      >
+                        {g.group_label}
+                      </button>
+                    ) : null;
+                  })}
               </div>
 
-              {ps.council_context && (
-                <div className="tl-council">{ps.council_context}</div>
-              )}
-
-              {/* Evidence note — always shown when present */}
-              {note && (
-                <div className="tl-v-evidence">
-                  <NoteCard note={note} onSelectEntity={onSelectEntity} searchQuery={q} />
-                </div>
-              )}
+              {/* Footprint cards for this decade (skip groups already shown as chips) */}
+              {decadeFootprints.length > 0 && (() => {
+                const groupIds = new Set([ps.dominant_polity_group_id, ...ps.group_presence_summary].filter(Boolean));
+                const filtered = decadeFootprints.filter((fp) => !(fp.entity_type === "group" && groupIds.has(fp.entity_id)));
+                return filtered.length > 0 ? (
+                  <div className="fp-stack">
+                    {filtered.map((fp, i) => (
+                      <FootprintCard
+                        key={`${fp.entity_type}:${fp.entity_id}:${fp.reason_predicate_id}:${i}`}
+                        footprint={fp}
+                        showEntity={true}
+                        showPlace={false}
+                        onSelectEntity={onSelectEntity}
+                      />
+                    ))}
+                  </div>
+                ) : null;
+              })()}
             </div>
           </div>
         );
@@ -420,205 +311,35 @@ function TimelineTab({ placeStates, activeDecade, notes, onSelectEntity }: {
   );
 }
 
-// ─── People tab ───────────────────────────────────────────────────────────────
+// ─── Claims tab ───────────────────────────────────────────────────────────────
 
-function PeopleTab({ people, onSelectEntity }: {
-  people: NonNullable<ReturnType<typeof dataStore.people.getById>>[];
+function ClaimsTab({ claims, placeId, onSelectEntity }: {
+  claims: ReturnType<typeof dataStore.claims.getForEntity>;
+  placeId: string;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
-  const q = useAppStore((s) => s.searchQuery).trim();
-  const [page, setPage] = useState(0);
-  if (people.length === 0) return <div className="empty-state">No associated people.</div>;
-  const pageItems = people.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
-
-  return (
-    <>
-      <div className="conn-list">
-        {pageItems.map((p) => (
-          <div key={p.person_id} className="conn-card" onClick={() => onSelectEntity("person", p.person_id)}>
-            <span className="conn-icon">👤</span>
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div className="conn-name"><Hl text={p.person_label} query={q} /></div>
-              <div className="conn-rel">{p.roles.slice(0, 2).join(", ")}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <Pagination page={page} total={people.length} onChange={setPage} />
-    </>
+  const sorted = useMemo(() =>
+    claims.slice().sort((a, b) => (a.year_start ?? 9999) - (b.year_start ?? 9999)),
+    [claims],
   );
-}
+  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(sorted, PAGE_SIZE);
 
-// ─── Doctrines tab ────────────────────────────────────────────────────────────
-
-function DoctrinesTab({ rows, onSelectEntity }: {
-  rows: { doctrine: ReturnType<typeof dataStore.doctrines.getAll>[0]; attested: boolean }[];
-  onSelectEntity: (kind: string, id: string) => void;
-}) {
-  const [page, setPage] = useState(0);
-  if (rows.length === 0) return <div className="empty-state">No doctrines recorded for this period.</div>;
-  const pageItems = rows.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
-
-  return (
-    <>
-      <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
-        <div className="detail-section-title" style={{ marginBottom: 4 }}>
-          <span style={{ color: "#1a7a5c" }}>■ Attested locally</span>
-          {" · "}
-          <span style={{ color: "#b07e10" }}>■ Traditionally assumed</span>
-        </div>
-        {pageItems.map(({ doctrine: d, attested }) => (
-          <div
-            key={d.doctrine_id}
-            className="conn-card"
-            style={{ borderLeft: `3px solid ${attested ? "#1a7a5c" : "#b07e10"}` }}
-            onClick={() => onSelectEntity("doctrine", d.doctrine_id)}
-          >
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div className="conn-name">{d.name_display}</div>
-              <div className="conn-rel">
-                {d.category}
-                {d.first_attested_year ? ` · AD ${d.first_attested_year}` : ""}
-              </div>
-            </div>
-            <span
-              className="tag"
-              style={{
-                fontSize: "0.68rem",
-                background: attested ? "#1a7a5c18" : "#b07e1018",
-                borderColor: attested ? "#1a7a5c55" : "#b07e1055",
-                color: attested ? "#1a7a5c" : "#b07e10",
-                flexShrink: 0,
-              }}
-            >
-              {attested ? "Attested" : "Assumed"}
-            </span>
-          </div>
-        ))}
-      </div>
-      <Pagination page={page} total={rows.length} onChange={setPage} />
-    </>
-  );
-}
-
-// ─── Archaeology tab ──────────────────────────────────────────────────────────
-
-function ArchaeologyTab({ sites, onSelectEntity }: {
-  sites: ReturnType<typeof dataStore.archaeology.getAll>;
-  onSelectEntity: (kind: string, id: string) => void;
-}) {
-  const [page, setPage] = useState(0);
-  if (sites.length === 0) return <div className="empty-state">No archaeology sites here.</div>;
-  const pageItems = sites.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
-
-  return (
-    <>
-      <div className="conn-list">
-        {pageItems.map((a) => (
-          <div key={a.archaeology_id} className="conn-card" onClick={() => onSelectEntity("archaeology", a.archaeology_id)}>
-            <span className="conn-icon">★</span>
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div className="conn-name">{a.name_display}</div>
-              <div className="conn-rel">
-                {a.site_type}
-                {a.year_start ? ` · AD ${a.year_start}` : ""}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <Pagination page={page} total={sites.length} onChange={setPage} />
-    </>
-  );
-}
-
-// ─── Events tab ───────────────────────────────────────────────────────────────
-
-function EventsTab({ events, onSelectEntity }: {
-  events: ReturnType<typeof dataStore.events.getAll>;
-  onSelectEntity: (kind: string, id: string) => void;
-}) {
-  const [page, setPage] = useState(0);
-  if (events.length === 0) return <div className="empty-state">No events recorded here.</div>;
-  const pageItems = events.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
-
-  return (
-    <>
-      <div className="conn-list">
-        {pageItems.map((e) => (
-          <div key={e.event_id} className="conn-card" onClick={() => onSelectEntity("event", e.event_id)}>
-            <span className="conn-icon">⚡</span>
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div className="conn-name">{e.name_display}</div>
-              <div className="conn-rel">
-                {e.year_start ? `AD ${e.year_start}` : ""}
-                {e.event_type ? ` · ${e.event_type}` : ""}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <Pagination page={page} total={events.length} onChange={setPage} />
-    </>
-  );
-}
-
-// ─── Works tab ────────────────────────────────────────────────────────────────
-
-function WorksTab({ works, onSelectEntity }: {
-  works: NonNullable<ReturnType<typeof dataStore.works.getById>>[];
-  onSelectEntity: (kind: string, id: string) => void;
-}) {
-  const [page, setPage] = useState(0);
-  if (works.length === 0) return <div className="empty-state">No associated works.</div>;
-  const pageItems = works.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
-
-  return (
-    <>
-      <div className="conn-list">
-        {pageItems.map((w) => (
-          <div key={w.work_id} className="conn-card" onClick={() => onSelectEntity("work", w.work_id)}>
-            <span className="conn-icon">📜</span>
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div className="conn-name">{w.title_display}</div>
-              <div className="conn-rel">
-                {w.author_name_display}
-                {w.year_written_start ? ` · AD ${w.year_written_start}` : ""}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <Pagination page={page} total={works.length} onChange={setPage} />
-    </>
-  );
-}
-
-// ─── Relations tab ─────────────────────────────────────────────────────────────
-
-function RelationsTab({ relations, cityId, onSelectEntity }: {
-  relations: ReturnType<typeof dataStore.relations.getForEntity>;
-  cityId: string;
-  onSelectEntity: (kind: string, id: string) => void;
-}) {
-  const q = useAppStore((s) => s.searchQuery).trim();
-  const [page, setPage] = useState(0);
-  if (relations.length === 0) return <div className="empty-state">No relations found.</div>;
-  const pageItems = relations.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  if (sorted.length === 0) return <div className="empty-state">No claims.</div>;
 
   return (
     <div className="flex-col">
-      {pageItems.map((r) => (
-        <RelationCard
-          key={r.relation_id}
-          relation={r}
-          entityId={cityId}
-          entityType="city"
+      {pageItems.map((c) => (
+        <ClaimCard
+          key={c.claim_id}
+          claim={c}
+          entityId={placeId}
+          entityType="place"
           onSelectEntity={onSelectEntity}
-          searchQuery={q}
         />
       ))}
-      <Pagination page={page} total={relations.length} onChange={setPage} />
+      <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
     </div>
   );
 }
+
+

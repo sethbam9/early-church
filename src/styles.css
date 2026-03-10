@@ -187,36 +187,16 @@ button { font-family: inherit; }
   position: relative;
   overflow: hidden;
 }
-.map-layout.sidebar-expanded .map-center {
-  width: 0;
-  min-width: 0;
-  overflow: hidden;
-  flex: 0;
-}
-.map-layout.sidebar-expanded .map-left {
-  width: 0;
-  min-width: 0;
-  overflow: hidden;
-  flex: 0;
-}
 
-/* Right sidebar */
+/* Right sidebar — width controlled by SidebarShell inline style */
 .map-right {
-  width: var(--right-w);
   flex-shrink: 0;
   background: var(--surface);
   border-left: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: width 0.2s ease;
   z-index: 10;
-}
-.map-right.hidden { width: 0; }
-.map-layout.sidebar-expanded .map-right {
-  flex: 1;
-  width: 100%;
-  border-left: none;
 }
 
 /* ─── Leaflet Map ────────────────────────────────────────────────────────────── */
@@ -655,6 +635,8 @@ button { font-family: inherit; }
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
+}
+.detail-tags--spaced {
   margin-top: 6px;
 }
 .tag {
@@ -768,7 +750,7 @@ button { font-family: inherit; }
   color: var(--text-muted);
   line-height: 1.5;
 }
-.note-year { font-size: 0.72rem; color: var(--accent); font-weight: 600; margin-bottom: 3px; }
+.note-year { font-size: 0.72rem; color: var(--accent); font-weight: 600; margin-bottom: 3px; display: flex; align-items: center; justify-content: space-between; }
 .note-open-btn {
   background: none;
   border: none;
@@ -1054,38 +1036,39 @@ button { font-family: inherit; }
 .detail-panel-close-btn:hover { background: var(--surface-2); color: var(--text); }
 
 /* ─── Sidebar Shell (expand/collapse/dismiss wrapper) ────────────────────────── */
+/* Drag handle on left edge of sidebar */
+.sidebar-drag-handle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  cursor: col-resize;
+  z-index: 10;
+  background: transparent;
+  transition: background 0.15s;
+  touch-action: none;
+}
+.sidebar-drag-handle:hover {
+  background: var(--accent-bright);
+  opacity: 0.35;
+}
+.sidebar-drag-handle:active {
+  background: var(--accent);
+  opacity: 0.5;
+}
+
 .sidebar-shell {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  position: relative;
+  transition: opacity 0.15s;
 }
-.sidebar-shell-controls {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  padding: 4px 6px;
-  border-bottom: 1px solid var(--border-subtle);
-  flex-shrink: 0;
-  background: var(--surface);
+.sidebar-shell--closing {
+  opacity: 0.35;
 }
-.sidebar-ctrl-btn {
-  background: none;
-  border: 1px solid transparent;
-  color: var(--text-faint);
-  cursor: pointer;
-  font-size: 0.82rem;
-  width: 26px; height: 26px;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.12s, color 0.12s, border-color 0.12s;
-}
-.sidebar-ctrl-btn:hover { background: var(--surface-2); color: var(--text); border-color: var(--border); }
-.sidebar-ctrl-btn--dismiss { margin-left: auto; }
-.sidebar-ctrl-btn--dismiss:hover { background: #fee2e2; color: #c0392b; border-color: #fca5a5; }
 
 /* ─── Panel dismiss button (left panel header) ───────────────────────────────── */
 .left-panel-head {
@@ -1510,6 +1493,7 @@ button { font-family: inherit; }
   margin-bottom: 6px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -2054,6 +2038,65 @@ button { font-family: inherit; }
   gap: 4px;
 }
 
+/* ─── Connection card variants ───────────────────────────────────────────────── */
+.conn-card--col {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+.conn-card-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.conn-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ─── Evidence detail (shared by FootprintCard, ClaimCard, WorkPeopleTab) ───── */
+.evidence-detail {
+  padding-left: 28px;
+  padding-top: 4px;
+}
+.evidence-item {
+  font-size: 0.78rem;
+  padding: 3px 0;
+  color: var(--text-muted);
+}
+.evidence-excerpt {
+  font-style: italic;
+  font-size: 0.74rem;
+  margin-top: 1px;
+}
+.evidence-source {
+  font-size: 0.72rem;
+  color: var(--text-faint);
+}
+.evidence-locator {
+  margin-left: 4px;
+}
+
+/* ─── Footprint card stack in timeline ───────────────────────────────────────── */
+.fp-stack {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ─── Detail panel close bar (graph page) ────────────────────────────────────── */
+.detail-panel-close {
+  position: relative;
+  padding: 0 0 12px 0;
+}
+.graph-footprint-item {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
 /* ─── Arc tooltip ─────────────────────────────────────────────────────────────── */
 .arc-tooltip {
   background: rgba(44,32,16,0.9) !important;
@@ -2108,4 +2151,84 @@ button { font-family: inherit; }
   text-align: center;
   color: var(--text-faint);
   font-size: 0.84rem;
+}
+
+/* ─── Bible Overlay ──────────────────────────────────────────────────────────── */
+.bible-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100000;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  width: min(480px, 90vw);
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+.bible-overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.bible-overlay-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.bible-overlay-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+}
+.bible-overlay-text {
+  font-style: italic;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent-bright);
+  padding-left: 12px;
+  margin: 0;
+}
+.bible-verse-num {
+  font-style: normal;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--accent);
+  vertical-align: super;
+  margin-right: 1px;
+}
+.bible-overlay-meta {
+  margin-top: 10px;
+  font-size: 0.72rem;
+  color: var(--text-faint);
+}
+.bible-overlay-footer {
+  padding: 10px 14px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+}
+.bible-overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0,0,0,0.35);
+}
+.bible-ref-btn {
+  background: none;
+  border: none;
+  color: var(--accent-bright);
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+.bible-ref-btn:hover {
+  color: var(--accent);
 }

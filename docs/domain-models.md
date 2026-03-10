@@ -295,9 +295,15 @@ export interface Group extends AuditFields {
   group_id: Id;
   group_label: string;
   group_kind: GroupKind;
+  is_christian: boolean;
   notes: Markdown | null;
 }
 ```
+
+> `is_christian` is an editorial flag indicating whether the group counts as
+> "Christian presence" for map filtering. This includes orthodox, gnostic, and
+> schismatic groups at the editor's discretion. Non-Christian movements
+> (Pharisees, Essenes, Roman Empire, etc.) are `false`.
 
 ### Topic / Dimension / Proposition
 

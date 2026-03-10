@@ -1,15 +1,14 @@
 import { useCallback, useMemo } from "react";
 import { useAppStore } from "../../stores/appStore";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
-import type { PresenceStatus } from "../../data/dataStore";
+import type { PresenceStatus, PlaceKind } from "../../data/dataStore";
 import { PRESENCE_LABELS, PRESENCE_COLORS } from "../shared/entityConstants";
 
 interface LeftPanelProps {
-  visibleCityCount: number;
-  visibleArchCount: number;
+  visiblePlaceCount: number;
   onFitVisible: () => void;
   onCenterSelected: () => void;
-  onRandomSite: () => void;
+  onRandomPlace: () => void;
 }
 
 // ─── Entity context banner ────────────────────────────────────────────────────
@@ -27,80 +26,31 @@ function EntityContextBanner() {
   const stats = useMemo(() => {
     if (!activeKind || !activeId) return null;
 
-    if (activeKind === "doctrine") {
-      const fps = dataStore.footprints.getForEntity("doctrine", activeId);
-      let affirms = 0, condemns = 0, mixed = 0;
-      const cityStances = new Map<string, Set<string>>();
-      for (const fp of fps) {
-        if (!fp.place_id.startsWith("city:")) continue;
-        const cid = fp.place_id.slice(5);
-        if (!cityStances.has(cid)) cityStances.set(cid, new Set());
-        if (fp.stance) cityStances.get(cid)!.add(fp.stance);
-      }
-      for (const stances of cityStances.values()) {
-        const hasA = stances.has("affirms"), hasC = stances.has("condemns");
-        if (hasA && hasC) mixed++;
-        else if (hasA) affirms++;
-        else if (hasC) condemns++;
-      }
-      const total = affirms + condemns + mixed;
-      if (total === 0) return null;
-      return { kind: "doctrine", affirms, condemns, mixed, total };
-    }
-
     if (activeKind === "person") {
-      const cityIds = new Set<string>();
-      for (const fp of dataStore.footprints.getForEntity("person", activeId)) {
-        if (fp.place_id.startsWith("city:")) cityIds.add(fp.place_id.slice(5));
-      }
-      for (const r of dataStore.relations.getForEntity("person", activeId)) {
-        const othId   = r.source_id === activeId ? r.target_id   : r.source_id;
-        const othType = r.source_id === activeId ? r.target_type : r.source_type;
-        if (othType === "city") cityIds.add(othId);
-      }
-      const p = dataStore.people.getById(activeId);
-      if (p?.city_of_origin_id) cityIds.add(p.city_of_origin_id);
-      return cityIds.size > 0 ? { kind: "person", cities: cityIds.size } : null;
+      const fps = dataStore.footprints.getForEntity("person", activeId);
+      const placeIds = new Set(fps.map((f) => f.place_id));
+      return placeIds.size > 0 ? { kind: "person", places: placeIds.size } : null;
     }
 
-    if (activeKind === "persuasion") {
-      const count = dataStore.map.getCumulativeCitiesAtDecade(activeDecade)
-        .filter((c) => (c.persuasion_ids ?? []).includes(activeId)).length;
-      return count > 0 ? { kind: "persuasion", cities: count } : null;
+    if (activeKind === "group") {
+      const count = dataStore.map.getCumulativePlacesAtDecade(activeDecade)
+        .filter((p) => p.group_presence_summary.includes(activeId)).length;
+      return count > 0 ? { kind: "group", places: count } : null;
     }
 
-    if (activeKind === "polity") {
-      const count = dataStore.map.getCumulativeCitiesAtDecade(activeDecade)
-        .filter((c) => c.polity_id === activeId).length;
-      return count > 0 ? { kind: "polity", cities: count } : null;
+    if (activeKind === "proposition") {
+      const ppp = dataStore.propositionPlacePresence.getForProposition(activeId);
+      return ppp.length > 0 ? { kind: "proposition", places: ppp.length } : null;
     }
 
     if (activeKind === "work") {
-      const w = dataStore.works.getById(activeId);
-      const cityIds = new Set<string>();
-      if (w?.place_written_id?.startsWith("city:")) cityIds.add(w.place_written_id.slice(5));
-      for (const rid of w?.place_recipient_ids ?? []) {
-        if (rid.startsWith("city:")) cityIds.add(rid.slice(5));
-      }
-      return cityIds.size > 0 ? { kind: "work", cities: cityIds.size } : null;
+      const fps = dataStore.footprints.getForEntity("work", activeId);
+      return fps.length > 0 ? { kind: "work", places: fps.length } : null;
     }
 
     if (activeKind === "event") {
-      const e = dataStore.events.getById(activeId);
-      const cityIds = new Set<string>();
-      if (e?.primary_place_id?.startsWith("city:")) cityIds.add(e.primary_place_id.slice(5));
-      for (const r of dataStore.relations.getForEntity("event", activeId)) {
-        if (r.source_type === "city") cityIds.add(r.source_id);
-        if (r.target_type === "city") cityIds.add(r.target_id);
-      }
-      return cityIds.size > 0 ? { kind: "event", cities: cityIds.size } : null;
-    }
-
-    if (activeKind === "archaeology") {
-      const site = dataStore.archaeology.getById(activeId);
-      if (!site) return null;
-      const relCount = dataStore.relations.getForEntity("archaeology", activeId).length;
-      return { kind: "archaeology", siteType: site.site_type, yearStart: site.year_start, yearEnd: site.year_end, relCount };
+      const fps = dataStore.footprints.getForEntity("event", activeId);
+      return fps.length > 0 ? { kind: "event", places: fps.length } : null;
     }
 
     return null;
@@ -118,44 +68,26 @@ function EntityContextBanner() {
           <button type="button" className="close-btn" onClick={clearMapFilter} title="Clear filter">✕</button>
         )}
       </div>
-      {stats.kind === "doctrine" && (
+      {"places" in stats && (
         <div className="entity-context-stats">
-          <span className="ecs-affirm">✓ {stats.affirms} affirm</span>
-          <span className="ecs-condemn">✗ {stats.condemns} condemn</span>
-          {(stats.mixed ?? 0) > 0 && <span className="ecs-mixed">~ {stats.mixed} mixed</span>}
-          <span className="ecs-total faint">{stats.total} cities</span>
-        </div>
-      )}
-      {(stats.kind === "person" || stats.kind === "persuasion" || stats.kind === "polity" || stats.kind === "work" || stats.kind === "event") && (
-        <div className="entity-context-stats">
-          <span className="ecs-cities">🏛 {stats.cities} cit{stats.cities === 1 ? "y" : "ies"}</span>
-        </div>
-      )}
-      {stats.kind === "archaeology" && (
-        <div className="entity-context-stats">
-          <span className="ecs-cities">★ {stats.siteType}</span>
-          {stats.yearStart != null && (
-            <span className="faint">
-              AD {stats.yearStart}{stats.yearEnd && stats.yearEnd !== stats.yearStart ? `–${stats.yearEnd}` : ""}
-            </span>
-          )}
-          {(stats.relCount ?? 0) > 0 && (
-            <span className="faint">{stats.relCount} relation{stats.relCount === 1 ? "" : "s"}</span>
-          )}
+          <span className="ecs-cities">🏛 {stats.places} place{stats.places === 1 ? "" : "s"}</span>
         </div>
       )}
     </div>
   );
 }
 
+// ─── Place kind chips ─────────────────────────────────────────────────────────
+
+const PLACE_KINDS: PlaceKind[] = ["city", "region", "site", "province", "monastery", "route"];
+
 // ─── LeftPanel ────────────────────────────────────────────────────────────────
 
 export function LeftPanel({
-  visibleCityCount,
-  visibleArchCount,
+  visiblePlaceCount,
   onFitVisible,
   onCenterSelected,
-  onRandomSite,
+  onRandomPlace,
 }: LeftPanelProps) {
   const activeDecade      = useAppStore((s) => s.activeDecade);
   const isPlaying         = useAppStore((s) => s.isPlaying);
@@ -163,8 +95,9 @@ export function LeftPanel({
   const includeCumulative = useAppStore((s) => s.includeCumulative);
   const searchQuery       = useAppStore((s) => s.searchQuery);
   const showArcs          = useAppStore((s) => s.showArcs);
-  const archaeologyVisible= useAppStore((s) => s.archaeologyLayerVisible);
   const activeFilters     = useAppStore((s) => s.activePresenceFilters);
+  const placeKindFilter   = useAppStore((s) => s.activePlaceKindFilter);
+  const christianOnly     = useAppStore((s) => s.christianOnly);
 
   const setDecade            = useAppStore((s) => s.setDecade);
   const stepDecade           = useAppStore((s) => s.stepDecade);
@@ -174,9 +107,10 @@ export function LeftPanel({
   const setIncludeCumulative = useAppStore((s) => s.setIncludeCumulative);
   const setSearchQuery       = useAppStore((s) => s.setSearchQuery);
   const toggleShowArcs       = useAppStore((s) => s.toggleShowArcs);
-  const toggleArch           = useAppStore((s) => s.toggleArchaeologyLayer);
   const toggleFilter         = useAppStore((s) => s.togglePresenceFilter);
   const setAllFilters        = useAppStore((s) => s.setAllPresenceFilters);
+  const setPlaceKindFilter   = useAppStore((s) => s.setPlaceKindFilter);
+  const setChristianOnly     = useAppStore((s) => s.setChristianOnly);
   const toggleLeftPanel      = useAppStore((s) => s.toggleLeftPanel);
   const clearAll             = useAppStore((s) => s.clearAll);
 
@@ -208,7 +142,7 @@ export function LeftPanel({
           <div className="left-panel-eyebrow">Timeline</div>
           <div className="left-panel-title">AD {activeDecade}</div>
           <div className="left-panel-sub">
-            {visibleCityCount} cities · {visibleArchCount} sites
+            {visiblePlaceCount} places
           </div>
         </div>
         <button
@@ -230,8 +164,8 @@ export function LeftPanel({
         {/* Timeline slider */}
         <div className="timeline-section">
           <div className="timeline-range-row">
-            <span>AD 0</span>
-            <span>AD 800</span>
+            <span>AD {decades[0] ?? 0}</span>
+            <span>AD {decades[decades.length - 1] ?? 100}</span>
           </div>
           <input
             type="range"
@@ -286,7 +220,7 @@ export function LeftPanel({
             <span className="search-icon">🔍</span>
             <input
               type="text"
-              placeholder="Search city, figure, polity…"
+              placeholder="Search place, figure, group…"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -307,24 +241,57 @@ export function LeftPanel({
           <div className="action-grid">
             <button type="button" className="action-btn" onClick={onFitVisible}>Fit visible</button>
             <button type="button" className="action-btn" onClick={onCenterSelected}>Center selected</button>
-            <button type="button" className="action-btn" onClick={onRandomSite}>Random site</button>
+            <button type="button" className="action-btn" onClick={onRandomPlace}>Random place</button>
             <button type="button" className="action-btn" onClick={clearAll}>Clear selection</button>
             <button
               type="button"
               className={`action-btn${showArcs ? " active" : ""}`}
               onClick={toggleShowArcs}
-              title="Draw arcs to related cities"
+              title="Draw arcs to related places"
             >
               {showArcs ? "Hide arcs" : "Show arcs"}
             </button>
-            <button
-              type="button"
-              className={`action-btn${archaeologyVisible ? " active" : ""}`}
-              onClick={toggleArch}
-            >
-              {archaeologyVisible ? "Hide arch." : "Show arch."}
-            </button>
           </div>
+        </div>
+
+        {/* Place kind filter */}
+        <div className="presence-section">
+          <div className="section-label">
+            Filter by place type
+            {placeKindFilter && (
+              <button
+                type="button"
+                className="section-label-action"
+                onClick={() => setPlaceKindFilter(null)}
+              >
+                show all
+              </button>
+            )}
+          </div>
+          <div className="presence-chips">
+            {PLACE_KINDS.map((k) => (
+              <button
+                key={k}
+                type="button"
+                className={`pchip${placeKindFilter === k ? " active" : ""}`}
+                onClick={() => setPlaceKindFilter(placeKindFilter === k ? null : k)}
+              >
+                {k}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Christian toggle */}
+        <div className="presence-section">
+          <label className="cumul-label">
+            <input
+              type="checkbox"
+              checked={christianOnly}
+              onChange={(e) => setChristianOnly(e.target.checked)}
+            />
+            Christian places only
+          </label>
         </div>
 
         {/* Presence filter — compact chips grid */}

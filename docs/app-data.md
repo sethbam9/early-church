@@ -237,6 +237,7 @@ Canonical identity for communions, sects, schools, factions, orders, modern heir
 | `group_id` | string | yes | Stable slug PK |
 | `group_label` | string | yes | Preferred display label |
 | `group_kind` | enum `group_kind` | yes | Includes `polity` |
+| `is_christian` | boolean | yes | Editorial flag: `true` if group counts as Christian presence for map filtering. Covers orthodox, gnostic, and schismatic groups. |
 | `notes` | markdown string | no | Identity note; wiki-links allowed |
 
 ### Rules

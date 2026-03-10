@@ -1,19 +1,18 @@
 import { useState } from "react";
-import type { Relation } from "../../data/types";
+import type { Claim } from "../../data/types";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
-import { getRelationLabel } from "../../domain/relationLabels";
+import { getPredicateLabel } from "../../domain/relationLabels";
 import { kindIcon } from "./entityConstants";
-import { NoteCard } from "./NoteCard";
+import { BibleOverlay } from "./BibleOverlay";
+import { locatorToDisplay } from "../../utils/bibleApi";
 
-interface RelationCardProps {
-  relation: Relation;
+interface ClaimCardProps {
+  claim: Claim;
   entityId: string;
   entityType: string;
   onSelectEntity: (kind: string, id: string) => void;
   searchQuery?: string;
 }
-
-const WEIGHT_LABEL = ["", "Very low", "Low", "Medium", "High", "Very high"];
 
 const CERTAINTY_COLORS: Record<string, string> = {
   attested:  "var(--attested)",
@@ -23,55 +22,47 @@ const CERTAINTY_COLORS: Record<string, string> = {
 };
 
 const POLARITY_META: Record<string, { icon: string; cls: string }> = {
-  supports: { icon: "✓", cls: "rel-polarity--supports" },
-  opposes:  { icon: "✗", cls: "rel-polarity--opposes"  },
-  neutral:  { icon: "~", cls: "rel-polarity--neutral"  },
+  supports:        { icon: "✓", cls: "rel-polarity--supports" },
+  opposes:         { icon: "✗", cls: "rel-polarity--opposes"  },
+  not_applicable:  { icon: "~", cls: "rel-polarity--neutral"  },
 };
 
-export function RelationCard({ relation, entityId, entityType, onSelectEntity, searchQuery = "" }: RelationCardProps) {
+export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQuery = "" }: ClaimCardProps) {
   const [showEvidence, setShowEvidence] = useState(false);
+  const [bibleLocator, setBibleLocator] = useState<string | null>(null);
 
-  const isOut   = relation.source_id === entityId && relation.source_type === entityType;
-  const othId   = isOut ? relation.target_id   : relation.source_id;
-  const othKind = isOut ? relation.target_type : relation.source_type;
-  const relLabel = getRelationLabel(relation.relation_type, isOut);
-  const othLabel = getEntityLabel(othKind, othId);
+  const isSubject = claim.subject_type === entityType && claim.subject_id === entityId;
+  const othKind   = isSubject ? claim.object_type : claim.subject_type;
+  const othId     = isSubject ? claim.object_id   : claim.subject_id;
+  const predLabel = getPredicateLabel(claim.predicate_id, isSubject);
+  const othLabel  = othId ? getEntityLabel(othKind, othId) : (claim.value_text || claim.value_year?.toString() || "");
 
-  const weight    = relation.weight ?? 0;
-  const certainty = relation.certainty || "";
-  const polarity  = relation.polarity  || "";
+  const certainty = claim.certainty || "";
+  const polarity  = claim.polarity  || "";
   const pol       = POLARITY_META[polarity];
 
-  const evidenceNote = relation.evidence_note_id
-    ? dataStore.notes.getAll().find((n) => n.note_id === relation.evidence_note_id)
-    : null;
-  const hasMeta = evidenceNote != null || relation.citations.length > 0;
-  const yearRange = relation.year_start
-    ? `AD ${relation.year_start}${relation.year_end && relation.year_end !== relation.year_start ? `–${relation.year_end}` : ""}`
+  const evidence = dataStore.claimEvidence.getForClaim(claim.claim_id);
+  const hasMeta  = evidence.length > 0;
+
+  const yearRange = claim.year_start
+    ? `AD ${claim.year_start}${claim.year_end && claim.year_end !== claim.year_start ? `–${claim.year_end}` : ""}`
     : "";
 
   return (
     <div className="rel-card">
-      <div className="rel-card-main" onClick={() => onSelectEntity(othKind, othId)}>
+      <div className="rel-card-main" onClick={() => othId && onSelectEntity(othKind, othId)}>
         <span className="rel-card-icon">{kindIcon(othKind)}</span>
         <div className="rel-card-body">
           <div className="rel-card-name">{othLabel}</div>
           <div className="rel-card-rel">
-            {relLabel}
+            {predLabel}
             {yearRange && <span className="rel-card-year">{yearRange}</span>}
           </div>
         </div>
         <div className="rel-card-badges">
-          {pol && (
+          {pol && polarity !== "not_applicable" && (
             <span className={`rel-polarity ${pol.cls}`} title={polarity}>
               {pol.icon}
-            </span>
-          )}
-          {weight > 0 && (
-            <span className="rel-weight" title={WEIGHT_LABEL[weight] ?? ""}>
-              {Array.from({ length: 5 }, (_, i) => (
-                <span key={i} className={`rel-dot${i < weight ? " rel-dot--filled" : ""}`} />
-              ))}
             </span>
           )}
           {certainty && certainty !== "attested" && (
@@ -98,24 +89,38 @@ export function RelationCard({ relation, entityId, entityType, onSelectEntity, s
 
       {showEvidence && (
         <div className="rel-card-evidence">
-          {evidenceNote && (
-            <NoteCard
-              note={evidenceNote}
-              onSelectEntity={onSelectEntity}
-              searchQuery={searchQuery}
-            />
-          )}
-          {relation.citations.length > 0 && (
-            <div className="rel-citations">
-              {relation.citations.map((url, i) => (
-                <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="citation-link">
-                  {url}
-                </a>
-              ))}
-            </div>
-          )}
+          {evidence.map((ev) => {
+            const passage = dataStore.passages.getById(ev.passage_id);
+            const source  = passage ? dataStore.sources.getById(passage.source_id) : null;
+            return (
+              <div key={`${ev.claim_id}-${ev.passage_id}`} className="evidence-item">
+                <span className="faint">{ev.evidence_role}</span>
+                {passage && (
+                  <button
+                    type="button"
+                    className="bible-ref-btn evidence-locator"
+                    onClick={(e) => { e.stopPropagation(); setBibleLocator(passage.locator); }}
+                    title={`Look up ${locatorToDisplay(passage.locator)}`}
+                  >
+                    {locatorToDisplay(passage.locator)}
+                  </button>
+                )}
+                {passage?.excerpt && <div className="evidence-excerpt">{passage.excerpt}</div>}
+                {source?.url && (
+                  <a href={source.url} target="_blank" rel="noopener noreferrer" className="citation-link evidence-source">
+                    {source.title}
+                  </a>
+                )}
+              </div>
+            );
+          })}
         </div>
+      )}
+
+      {bibleLocator && (
+        <BibleOverlay locator={bibleLocator} onClose={() => setBibleLocator(null)} />
       )}
     </div>
   );
 }
+

@@ -2,217 +2,55 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import L, { type LayerGroup, type Map as LeafletMap } from "leaflet";
 import { useAppStore } from "../stores/appStore";
 import { dataStore } from "../data/dataStore";
-import type { CityAtDecade } from "../data/dataStore";
+import type { PlaceAtDecade } from "../data/dataStore";
 import { LeftPanel } from "../components/map/LeftPanel";
 import { RightSidebar } from "../components/map/RightSidebar";
 import { PRESENCE_COLORS, KIND_ICONS } from "../components/shared/entityConstants";
 import { Hl } from "../components/shared/Hl";
 
-// ─── City-search index: maps city_id → searchable text blob ─────────────────
-// Indexes city names, associated people (all routes), works, doctrines,
-// persuasions, polities, events, notes, and quote text.
+// ─── Place search index ──────────────────────────────────────────────────────
 
-function buildCitySearchIndex(): Map<string, string> {
+function buildPlaceSearchIndex(): Map<string, string> {
   const index = new Map<string, string>();
-
-  // Pre-build: city_id → person_ids via every available data path
-  const cityPersonMap = new Map<string, Set<string>>();
-  const addCityPerson = (cityId: string, personId: string) => {
-    if (!cityPersonMap.has(cityId)) cityPersonMap.set(cityId, new Set());
-    cityPersonMap.get(cityId)!.add(personId);
-  };
-
-  // 1. People with city_of_origin_id
-  for (const p of dataStore.people.getAll()) {
-    if (p.city_of_origin_id) addCityPerson(p.city_of_origin_id, p.person_id);
-  }
-
-  // 2. Via footprints (person → city)
-  for (const fp of dataStore.footprints.getAll()) {
-    if (fp.entity_type === "person" && fp.place_id.startsWith("city:")) {
-      addCityPerson(fp.place_id.slice(5), fp.entity_id);
-    }
-  }
-
-  // 3. Via person ↔ city relations
-  for (const r of dataStore.relations.getAll()) {
-    if (r.source_type === "person" && r.target_type === "city") addCityPerson(r.target_id, r.source_id);
-    if (r.target_type === "person" && r.source_type === "city") addCityPerson(r.source_id, r.target_id);
-  }
-
-  // 4. Via works authored at / addressed to city
-  for (const w of dataStore.works.getAll()) {
-    const writtenAt = w.place_written_id?.startsWith("city:") ? w.place_written_id.slice(5) : null;
-    if (writtenAt && w.author_person_id) addCityPerson(writtenAt, w.author_person_id);
-    for (const rid of w.place_recipient_ids ?? []) {
-      if (rid.startsWith("city:") && w.author_person_id) addCityPerson(rid.slice(5), w.author_person_id);
-    }
-  }
-
-  // 5. church_planted_by text (now a direct field on city)
-  const cityPlantedBy = new Map<string, string>();
-  for (const city of dataStore.cities.getAll()) {
-    if (city.church_planted_by) {
-      cityPlantedBy.set(city.city_id, city.church_planted_by.toLowerCase());
-    }
-  }
-
-  for (const city of dataStore.cities.getAll()) {
+  for (const place of dataStore.places.getAll()) {
     const parts: string[] = [
-      city.city_label,
-      city.city_ancient,
-      city.city_modern,
-      city.country_modern,
+      place.place_label,
+      place.place_label_modern,
+      place.modern_country_label,
+      place.place_kind,
+      place.notes,
     ];
 
-    // Planted-by text (already contains person names like "Paul" "Barnabas")
-    const planted = cityPlantedBy.get(city.city_id);
-    if (planted) parts.push(planted);
-
-    // All associated people
-    const personIds = cityPersonMap.get(city.city_id) ?? new Set();
-    for (const pid of personIds) {
-      const p = dataStore.people.getById(pid);
-      if (p) parts.push(p.person_label, ...p.name_alt, ...p.roles, p.description);
+    // Footprints at this place
+    for (const fp of dataStore.footprints.getForPlace(place.place_id)) {
+      const entityLabel = dataStore.places.getById(fp.entity_id)?.place_label
+        ?? dataStore.people.getById(fp.entity_id)?.person_label
+        ?? dataStore.groups.getById(fp.entity_id)?.group_label
+        ?? fp.entity_id;
+      parts.push(entityLabel, fp.entity_type, fp.reason_predicate_id);
     }
 
-    // Relations touching this city
-    for (const r of dataStore.relations.getForEntity("city", city.city_id)) {
-      const othId  = r.source_id === city.city_id ? r.target_id : r.source_id;
-      const othType= r.source_id === city.city_id ? r.target_type : r.source_type;
-      if (othType === "work") {
-        const w = dataStore.works.getById(othId);
-        if (w) parts.push(w.title_display, w.author_name_display, w.description ?? "");
-      } else if (othType === "doctrine") {
-        const d = dataStore.doctrines.getById(othId);
-        if (d) parts.push(d.name_display, d.category, d.description ?? "");
-      } else if (othType === "event") {
-        const e = dataStore.events.getById(othId);
-        if (e) parts.push(e.name_display, e.event_type ?? "");
+    // Groups from place states
+    for (const ps of dataStore.map.getPlaceStatesForPlace(place.place_id)) {
+      for (const gid of ps.group_presence_summary) {
+        const g = dataStore.groups.getById(gid);
+        if (g) parts.push(g.group_label, g.group_kind);
       }
     }
 
-    // Notes (body text mentioning this city)
-    for (const n of dataStore.notes.getForEntity("city", city.city_id)) {
-      parts.push(n.body_md);
-    }
-
-    // Persuasions and polities from place states
-    for (const ps of dataStore.map.getPlaceStatesForCity(city.city_id)) {
-      if (ps.polity_id) {
-        const pol = dataStore.polities.getById(ps.polity_id);
-        if (pol) parts.push(pol.polity_label, pol.region ?? "");
-      }
-      for (const persId of ps.persuasion_ids) {
-        const pers = dataStore.persuasions.getById(persId);
-        if (pers) parts.push(pers.persuasion_label, pers.persuasion_stream ?? "");
-      }
-    }
-
-    index.set(city.city_id, parts.join(" ").toLowerCase());
+    index.set(place.place_id, parts.join(" ").toLowerCase());
   }
-
   return index;
 }
 
-const CITY_SEARCH_INDEX = buildCitySearchIndex();
+const PLACE_SEARCH_INDEX = buildPlaceSearchIndex();
 
-// ─── Person → city IDs via relations ─────────────────────────────────────────
+// ─── Get place IDs connected to an entity via footprints ─────────────────────
 
-function getCityIdsForPerson(personId: string): Set<string> {
-  const cityIds = new Set<string>();
-
-  // Via footprints (may have entries)
-  const fps = dataStore.footprints.getForEntity("person", personId);
-  for (const fp of fps) {
-    if (fp.place_id.startsWith("city:")) cityIds.add(fp.place_id.slice(5));
-  }
-
-  // Via relations (person ↔ city, or person ↔ work ↔ city)
-  const rels = dataStore.relations.getForEntity("person", personId);
-  for (const r of rels) {
-    const otherId = r.source_id === personId ? r.target_id : r.source_id;
-    const otherType = r.source_id === personId ? r.target_type : r.source_type;
-    if (otherType === "city") {
-      cityIds.add(otherId);
-    } else if (otherType === "work") {
-      // Work's place_written_id
-      const work = dataStore.works.getById(otherId);
-      if (work?.place_written_id?.startsWith("city:")) {
-        cityIds.add(work.place_written_id.slice(5));
-      }
-      for (const rid of work?.place_recipient_ids ?? []) {
-        if (rid.startsWith("city:")) cityIds.add(rid.slice(5));
-      }
-    }
-  }
-
-  // Via city_of_origin
-  const person = dataStore.people.getById(personId);
-  if (person?.city_of_origin_id) cityIds.add(person.city_of_origin_id);
-
-  return cityIds;
-}
-
-// ─── Get city IDs connected to any entity type ───────────────────────────────
-
-function getConnectedCityIds(selection: { kind: string; id: string } | null): Set<string> {
+function getConnectedPlaceIds(selection: { kind: string; id: string } | null): Set<string> {
   if (!selection) return new Set();
-
-  if (selection.kind === "person") return getCityIdsForPerson(selection.id);
-
-  if (selection.kind === "event") {
-    const e = dataStore.events.getById(selection.id);
-    const ids = new Set<string>();
-    if (e?.primary_place_id?.startsWith("city:")) ids.add(e.primary_place_id.slice(5));
-    for (const r of dataStore.relations.getForEntity("event", selection.id)) {
-      if (r.source_type === "city") ids.add(r.source_id);
-      if (r.target_type === "city") ids.add(r.target_id);
-    }
-    return ids;
-  }
-
-  if (selection.kind === "work") {
-    const w = dataStore.works.getById(selection.id);
-    const ids = new Set<string>();
-    if (w?.place_written_id?.startsWith("city:")) ids.add(w.place_written_id.slice(5));
-    for (const rid of w?.place_recipient_ids ?? []) {
-      if (rid.startsWith("city:")) ids.add(rid.slice(5));
-    }
-    for (const r of dataStore.relations.getForEntity("work", selection.id)) {
-      if (r.source_type === "city") ids.add(r.source_id);
-      if (r.target_type === "city") ids.add(r.target_id);
-    }
-    return ids;
-  }
-
-  if (selection.kind === "doctrine") {
-    const fps = dataStore.footprints.getForEntity("doctrine", selection.id);
-    const ids = new Set(fps.filter((f) => f.place_id.startsWith("city:")).map((f) => f.place_id.slice(5)));
-    for (const r of dataStore.relations.getForEntity("doctrine", selection.id)) {
-      if (r.source_type === "city") ids.add(r.source_id);
-      if (r.target_type === "city") ids.add(r.target_id);
-    }
-    return ids;
-  }
-
-  if (selection.kind === "persuasion") {
-    return new Set(
-      dataStore.map.getAllPlaceStates()
-        .filter((ps) => ps.place_id.startsWith("city:") && (ps.persuasion_ids ?? []).includes(selection.id))
-        .map((ps) => ps.place_id.slice(5)),
-    );
-  }
-
-  if (selection.kind === "polity") {
-    return new Set(
-      dataStore.map.getAllPlaceStates()
-        .filter((ps) => ps.place_id.startsWith("city:") && ps.polity_id === selection.id)
-        .map((ps) => ps.place_id.slice(5)),
-    );
-  }
-
-  return new Set();
+  const fps = dataStore.footprints.getForEntity(selection.kind, selection.id);
+  return new Set(fps.map((f) => f.place_id));
 }
 
 // ─── MapPage ──────────────────────────────────────────────────────────────────
@@ -225,14 +63,14 @@ export function MapPage() {
   const playbackSpeed     = useAppStore((s) => s.playbackSpeed);
   const selection         = useAppStore((s) => s.selection);
   const activeFilters     = useAppStore((s) => s.activePresenceFilters);
-  const archaeologyVisible= useAppStore((s) => s.archaeologyLayerVisible);
+  const placeKindFilter   = useAppStore((s) => s.activePlaceKindFilter);
+  const christianOnly     = useAppStore((s) => s.christianOnly);
   const showArcs          = useAppStore((s) => s.showArcs);
   const mapFilterType     = useAppStore((s) => s.mapFilterType);
   const mapFilterId       = useAppStore((s) => s.mapFilterId);
   const searchQuery       = useAppStore((s) => s.searchQuery);
   const leftPanelVisible  = useAppStore((s) => s.leftPanelVisible);
   const rightPanelVisible = useAppStore((s) => s.rightPanelVisible);
-  const sidebarExpanded   = useAppStore((s) => s.sidebarExpanded);
 
   const setDecade         = useAppStore((s) => s.setDecade);
   const setIsPlaying      = useAppStore((s) => s.setIsPlaying);
@@ -245,226 +83,95 @@ export function MapPage() {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef          = useRef<LeafletMap | null>(null);
   const rowLayerRef     = useRef<LayerGroup | null>(null);
-  const archLayerRef    = useRef<LayerGroup | null>(null);
   const arcLayerRef     = useRef<LayerGroup | null>(null);
   const didFitRef       = useRef(false);
 
   const decades   = dataStore.map.getDecades();
-  const decadeIdx = decades.indexOf(activeDecade);
 
   // ── Visible data ──────────────────────────────────────────────────────────
 
-  const visibleCities = useMemo<CityAtDecade[]>(() => {
+  const visiblePlaces = useMemo<PlaceAtDecade[]>(() => {
     const base = includeCumulative
-      ? dataStore.map.getCumulativeCitiesAtDecade(activeDecade)
-      : dataStore.map.getCitiesAtDecade(activeDecade);
+      ? dataStore.map.getCumulativePlacesAtDecade(activeDecade)
+      : dataStore.map.getPlacesAtDecade(activeDecade);
 
     let result = base;
 
-    // Presence filter (empty = all)
+    // Presence filter
     if (activeFilters.length > 0) {
-      result = result.filter((c) => activeFilters.includes(c.presence_status));
+      result = result.filter((p) => activeFilters.includes(p.presence_status));
     }
 
-    // Map entity filter
+    // Place kind filter
+    if (placeKindFilter) {
+      result = result.filter((p) => p.place_kind === placeKindFilter);
+    }
+
+    // Christian only filter
+    if (christianOnly) {
+      result = result.filter((p) => dataStore.map.placeHasChristianity(p.place_id));
+    }
+
+    // Map entity filter (group / person / proposition)
     if (mapFilterType && mapFilterId) {
-      if (mapFilterType === "persuasion") {
-        result = result.filter((c) => (c.persuasion_ids ?? []).includes(mapFilterId));
-      } else if (mapFilterType === "polity") {
-        result = result.filter((c) => c.polity_id === mapFilterId);
-      } else if (mapFilterType === "person") {
-        const cityIds = getCityIdsForPerson(mapFilterId);
-        result = result.filter((c) => cityIds.has(c.city_id));
-      } else if (mapFilterType === "doctrine") {
-        // Cities that have a footprint for this doctrine
-        const fps = dataStore.footprints.getForEntity("doctrine", mapFilterId);
-        const cityIds = new Set(fps.filter(f => f.place_id.startsWith("city:")).map(f => f.place_id.slice(5)));
-        // Also cities linked via relations
-        for (const r of dataStore.relations.getForEntity("doctrine", mapFilterId)) {
-          if (r.source_type === "city") cityIds.add(r.source_id);
-          if (r.target_type === "city") cityIds.add(r.target_id);
-        }
-        result = result.filter((c) => cityIds.has(c.city_id));
-      } else if (mapFilterType === "event") {
-        const e = dataStore.events.getById(mapFilterId);
-        const cityIds = new Set<string>();
-        if (e?.primary_place_id?.startsWith("city:")) cityIds.add(e.primary_place_id.slice(5));
-        for (const r of dataStore.relations.getForEntity("event", mapFilterId)) {
-          if (r.source_type === "city") cityIds.add(r.source_id);
-          if (r.target_type === "city") cityIds.add(r.target_id);
-        }
-        result = result.filter((c) => cityIds.has(c.city_id));
-      } else if (mapFilterType === "work") {
-        const w = dataStore.works.getById(mapFilterId);
-        const cityIds = new Set<string>();
-        if (w?.place_written_id?.startsWith("city:")) cityIds.add(w.place_written_id.slice(5));
-        for (const rid of w?.place_recipient_ids ?? []) {
-          if (rid.startsWith("city:")) cityIds.add(rid.slice(5));
-        }
-        for (const r of dataStore.relations.getForEntity("work", mapFilterId)) {
-          if (r.source_type === "city") cityIds.add(r.source_id);
-          if (r.target_type === "city") cityIds.add(r.target_id);
-        }
-        result = result.filter((c) => cityIds.has(c.city_id));
+      if (mapFilterType === "group") {
+        result = result.filter((p) => p.group_presence_summary.includes(mapFilterId));
+      } else if (mapFilterType === "person" || mapFilterType === "work" || mapFilterType === "event") {
+        const placeIds = getConnectedPlaceIds({ kind: mapFilterType, id: mapFilterId });
+        result = result.filter((p) => placeIds.has(p.place_id));
+      } else if (mapFilterType === "proposition") {
+        const ppp = dataStore.propositionPlacePresence.getForProposition(mapFilterId);
+        const placeIds = new Set(ppp.map((pp) => pp.place_id));
+        result = result.filter((p) => placeIds.has(p.place_id));
       }
     }
 
-    // Robust global text search: uses pre-built index
+    // Global text search
     if (searchQuery.trim()) {
       const q = searchQuery.trim().toLowerCase();
-      result = result.filter((c) => CITY_SEARCH_INDEX.get(c.city_id)?.includes(q) ?? false);
+      result = result.filter((p) => PLACE_SEARCH_INDEX.get(p.place_id)?.includes(q) ?? false);
     }
 
     return result;
-  }, [activeDecade, includeCumulative, activeFilters, mapFilterType, mapFilterId, searchQuery]);
-
-  const visibleArchSites = useMemo(() => {
-    if (!archaeologyVisible) return [];
-    if (includeCumulative) return dataStore.archaeology.getCumulativeAtDecade(activeDecade);
-    return dataStore.archaeology.getActiveAtDecade(activeDecade);
-  }, [activeDecade, archaeologyVisible, includeCumulative]);
+  }, [activeDecade, includeCumulative, activeFilters, placeKindFilter, christianOnly, mapFilterType, mapFilterId, searchQuery]);
 
   // ── Arc data ──────────────────────────────────────────────────────────────
 
-  type ArcEntry = { a: CityAtDecade; b: CityAtDecade; label: string; color?: string };
+  type ArcEntry = { a: PlaceAtDecade; b: PlaceAtDecade; label: string };
 
   const arcPairs = useMemo<ArcEntry[]>(() => {
-    if (!showArcs) return [];
+    if (!showArcs || !selection) return [];
 
-    function makeFakeCity(cityId: string): CityAtDecade | null {
-      const c = dataStore.cities.getById(cityId);
-      if (!c || c.lat == null || c.lon == null) return null;
+    function makeFakePlace(placeId: string): PlaceAtDecade | null {
+      const p = dataStore.places.getById(placeId);
+      if (!p || p.lat == null || p.lon == null) return null;
       return {
-        ...c,
-        place_id: `city:${cityId}`,
+        ...p,
         decade: activeDecade,
         presence_status: "unknown",
-        persuasion_ids: [],
-        polity_id: null,
-        ruling_subdivision: "",
-        council_context: "",
-        evidence_note_id: null,
+        group_presence_summary: [],
+        dominant_polity_group_id: "",
+        supporting_claim_count: 0,
+        derivation_hash: "",
       };
     }
 
-    function makePairs(cities: CityAtDecade[], label: string, color?: string): ArcEntry[] {
-      const pairs: ArcEntry[] = [];
-      for (let i = 0; i < cities.length - 1; i++) {
-        for (let j = i + 1; j < cities.length; j++) {
-          const a = cities[i]; const b = cities[j];
-          if (a && b) pairs.push({ a, b, label, color });
-        }
+    const fps = dataStore.footprints.getForEntity(selection.kind, selection.id);
+    const placeIds = [...new Set(fps.map((f) => f.place_id))];
+    const places = placeIds.map(makeFakePlace).filter(Boolean) as PlaceAtDecade[];
+
+    if (places.length < 2) return [];
+
+    const label = `${dataStore.places.getById(selection.id)?.place_label ?? selection.id}`;
+    const pairs: ArcEntry[] = [];
+    for (let i = 0; i < places.length - 1; i++) {
+      for (let j = i + 1; j < places.length; j++) {
+        const pa = places[i], pb = places[j];
+        if (pa && pb) pairs.push({ a: pa, b: pb, label });
       }
-      return pairs;
     }
-
-    if (selection?.kind === "city") {
-      const selectedCity = visibleCities.find((c) => c.city_id === selection.id)
-        ?? makeFakeCity(selection.id);
-      if (!selectedCity) return [];
-
-      const footprints = dataStore.footprints.getForPlace(`city:${selection.id}`);
-      const personIds = new Set(
-        footprints.filter((f) => f.entity_type === "person").map((f) => f.entity_id),
-      );
-      const rels = dataStore.relations.getForEntity("city", selection.id);
-      for (const r of rels) {
-        const otherType = r.source_id === selection.id ? r.target_type : r.source_type;
-        const otherId   = r.source_id === selection.id ? r.target_id   : r.source_id;
-        if (otherType === "person") personIds.add(otherId);
-      }
-
-      // Build arcs per person so we can label them
-      const cityLabel = dataStore.cities.getById(selection.id)?.city_label ?? "";
-      const result: ArcEntry[] = [];
-      const seen = new Set<string>();
-      for (const pid of personIds) {
-        const p = dataStore.people.getById(pid);
-        const pLabel = p?.person_label ?? pid;
-        for (const cid of getCityIdsForPerson(pid)) {
-          if (cid === selection.id) continue;
-          const key = cid < selection.id ? `${cid}:${selection.id}` : `${selection.id}:${cid}`;
-          if (seen.has(key)) continue;
-          seen.add(key);
-          const other = makeFakeCity(cid);
-          if (other) result.push({ a: selectedCity, b: other, label: `${cityLabel} ↔ ${other.city_label} via ${pLabel}` });
-        }
-      }
-      return result;
-    }
-
-    if (selection?.kind === "person") {
-      const p = dataStore.people.getById(selection.id);
-      const label = p?.person_label ?? selection.id;
-      const cityIds = Array.from(getCityIdsForPerson(selection.id));
-      const cities = cityIds.map(makeFakeCity).filter(Boolean) as CityAtDecade[];
-      return makePairs(cities, `${label}'s journey`);
-    }
-
-    if (selection?.kind === "work") {
-      const w = dataStore.works.getById(selection.id);
-      const label = w?.title_display ?? selection.id;
-      const cityIds: string[] = [];
-      if (w?.place_written_id?.startsWith("city:")) cityIds.push(w.place_written_id.slice(5));
-      for (const rid of w?.place_recipient_ids ?? []) {
-        if (rid.startsWith("city:")) cityIds.push(rid.slice(5));
-      }
-      for (const r of dataStore.relations.getForEntity("work", selection.id)) {
-        if (r.source_type === "city") cityIds.push(r.source_id);
-        if (r.target_type === "city") cityIds.push(r.target_id);
-      }
-      if (w?.author_person_id) {
-        for (const cid of getCityIdsForPerson(w.author_person_id)) cityIds.push(cid);
-      }
-      const cities = Array.from(new Set(cityIds)).map(makeFakeCity).filter(Boolean) as CityAtDecade[];
-      return makePairs(cities, label);
-    }
-
-    if (selection?.kind === "event") {
-      const e = dataStore.events.getById(selection.id);
-      const label = e?.name_display ?? selection.id;
-      const cityIds: string[] = [];
-      if (e?.primary_place_id?.startsWith("city:")) cityIds.push(e.primary_place_id.slice(5));
-      for (const pid of e?.key_figure_person_ids ?? []) {
-        for (const cid of getCityIdsForPerson(pid)) cityIds.push(cid);
-      }
-      for (const r of dataStore.relations.getForEntity("event", selection.id)) {
-        if (r.source_type === "city") cityIds.push(r.source_id);
-        if (r.target_type === "city") cityIds.push(r.target_id);
-      }
-      const cities = Array.from(new Set(cityIds)).map(makeFakeCity).filter(Boolean) as CityAtDecade[];
-      return makePairs(cities, label);
-    }
-
-    if (selection?.kind === "doctrine") {
-      const fps = dataStore.footprints.getForEntity("doctrine", selection.id);
-      const d = dataStore.doctrines.getById(selection.id);
-      const dLabel = d?.name_display ?? selection.id;
-      // Build per-city stance for label
-      const cityStance = new Map<string, string>();
-      for (const fp of fps) {
-        if (!fp.place_id.startsWith("city:")) continue;
-        const cid = fp.place_id.slice(5);
-        if (!cityStance.has(cid) && fp.stance) cityStance.set(cid, fp.stance);
-      }
-      const cityIds = Array.from(cityStance.keys());
-      const cities = cityIds.map(makeFakeCity).filter(Boolean) as CityAtDecade[];
-      const pairs: ArcEntry[] = [];
-      for (let i = 0; i < cities.length - 1; i++) {
-        for (let j = i + 1; j < cities.length; j++) {
-          const a = cities[i]; const b = cities[j];
-          if (!a || !b) continue;
-          const sA = cityStance.get(a.city_id) ?? "";
-          const sB = cityStance.get(b.city_id) ?? "";
-          const stanceNote = sA && sB ? ` (${sA} ↔ ${sB})` : "";
-          pairs.push({ a, b, label: `${dLabel}${stanceNote}` });
-        }
-      }
-      return pairs.slice(0, 80);
-    }
-
-    return [];
-  }, [showArcs, selection, visibleCities, activeDecade]);
+    return pairs.slice(0, 80);
+  }, [showArcs, selection, activeDecade]);
 
   // ── Map initialization ────────────────────────────────────────────────────
 
@@ -474,7 +181,6 @@ export function MapPage() {
     const map = L.map(mapContainerRef.current, {
       worldCopyJump: true,
       zoomControl: true,
-      preferCanvas: true,
       maxZoom: 18,
     }).setView([37, 26], 4);
 
@@ -488,18 +194,16 @@ export function MapPage() {
       },
     ).addTo(map);
 
-    rowLayerRef.current  = L.layerGroup().addTo(map);
-    archLayerRef.current = L.layerGroup().addTo(map);
-    arcLayerRef.current  = L.layerGroup().addTo(map);
+    rowLayerRef.current = L.layerGroup().addTo(map);
+    arcLayerRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
 
     return () => {
       map.remove();
-      mapRef.current       = null;
-      rowLayerRef.current  = null;
-      archLayerRef.current = null;
-      arcLayerRef.current  = null;
-      didFitRef.current    = false;
+      mapRef.current      = null;
+      rowLayerRef.current = null;
+      arcLayerRef.current = null;
+      didFitRef.current   = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -518,79 +222,47 @@ export function MapPage() {
     return () => window.clearInterval(timer);
   }, [isPlaying, playbackSpeed, decades, setDecade, setIsPlaying]);
 
-  // ── Render city/arch markers ──────────────────────────────────────────────
-
-  // ── Doctrine stance map: precompute per-city dominant stance when a doctrine is selected ──
-  const doctrineStanceMap = useMemo<Map<string, "affirms" | "condemns" | "mixed"> | null>(() => {
-    if (selection?.kind !== "doctrine") return null;
-    const fps = dataStore.footprints.getForEntity("doctrine", selection.id);
-    const cityStances = new Map<string, Set<string>>();
-    for (const fp of fps) {
-      if (!fp.place_id.startsWith("city:")) continue;
-      const cityId = fp.place_id.slice(5);
-      if (!cityStances.has(cityId)) cityStances.set(cityId, new Set());
-      if (fp.stance) cityStances.get(cityId)!.add(fp.stance);
-    }
-    const result = new Map<string, "affirms" | "condemns" | "mixed">();
-    for (const [cityId, stances] of cityStances.entries()) {
-      const hasAffirms  = stances.has("affirms");
-      const hasCondemns = stances.has("condemns");
-      if (hasAffirms && hasCondemns) result.set(cityId, "mixed");
-      else if (hasAffirms)           result.set(cityId, "affirms");
-      else if (hasCondemns)          result.set(cityId, "condemns");
-    }
-    return result;
-  }, [selection]);
+  // ── Render place markers ──────────────────────────────────────────────────
 
   useEffect(() => {
-    const map     = mapRef.current;
-    const rowLyr  = rowLayerRef.current;
-    const archLyr = archLayerRef.current;
-    if (!map || !rowLyr || !archLyr) return;
+    const map    = mapRef.current;
+    const rowLyr = rowLayerRef.current;
+    if (!map || !rowLyr) return;
 
     rowLyr.clearLayers();
-    archLyr.clearLayers();
 
     const bounds: L.LatLngExpression[] = [];
-    const selCityId = selection?.kind === "city" ? selection.id : null;
+    const selPlaceId = selection?.kind === "place" ? selection.id : null;
 
-    // Compute connected city IDs for non-city selections
-    const connectedCityIds = selection?.kind !== "city" ? getConnectedCityIds(selection) : new Set<string>();
-    const hasEntityHighlight = connectedCityIds.size > 0 || doctrineStanceMap !== null;
+    // Connected place IDs for non-place selections
+    const connectedPlaceIds = selection?.kind !== "place" ? getConnectedPlaceIds(selection) : new Set<string>();
+    const hasEntityHighlight = connectedPlaceIds.size > 0;
 
-    for (const city of visibleCities) {
-      if (city.lat == null || city.lon == null) continue;
-      const isSelected  = city.city_id === selCityId;
-      const isConnected = connectedCityIds.has(city.city_id);
-      const docStance   = doctrineStanceMap?.get(city.city_id) ?? null;
-      const isDimmed    = hasEntityHighlight && !isConnected && !docStance && !isSelected;
-      const color       = PRESENCE_COLORS[city.presence_status] ?? "#8e8070";
-      const r           = isSelected ? 9 : (isConnected || docStance) ? 8 : 6;
+    for (const place of visiblePlaces) {
+      if (place.lat == null || place.lon == null) continue;
+      const isSelected  = place.place_id === selPlaceId;
+      const isConnected = connectedPlaceIds.has(place.place_id);
+      const isDimmed    = hasEntityHighlight && !isConnected && !isSelected;
+      const color       = PRESENCE_COLORS[place.presence_status] ?? "#8e8070";
+      const r           = isSelected ? 9 : isConnected ? 8 : 6;
 
-      // Selected city ring
+      // Selected ring
       if (isSelected) {
-        L.circleMarker([city.lat, city.lon], {
+        L.circleMarker([place.lat, place.lon], {
           radius: 17, color: "#c47c3a", weight: 2.5,
           fillColor: "transparent", fillOpacity: 0,
           dashArray: "5 4",
         }).addTo(rowLyr);
       }
 
-      // Doctrine stance ring (overrides generic highlight ring)
-      if (docStance) {
-        const ringColor = docStance === "affirms" ? "#1a7a5c" : docStance === "condemns" ? "#c0392b" : "#c47d2a";
-        L.circleMarker([city.lat, city.lon], {
-          radius: 13, color: ringColor, weight: 2.5,
-          fillColor: "transparent", fillOpacity: 0,
-        }).addTo(rowLyr);
-      } else if (isConnected) {
-        L.circleMarker([city.lat, city.lon], {
+      if (isConnected && !isSelected) {
+        L.circleMarker([place.lat, place.lon], {
           radius: 14, color: "#c47c3a", weight: 2,
           fillColor: "transparent", fillOpacity: 0,
         }).addTo(rowLyr);
       }
 
-      const m = L.circleMarker([city.lat, city.lon], {
+      const m = L.circleMarker([place.lat, place.lon], {
         radius: r,
         color: isSelected ? "#c47c3a" : isConnected ? "#e8943a" : color,
         weight: isSelected ? 2.5 : isConnected ? 2 : 1.2,
@@ -598,27 +270,25 @@ export function MapPage() {
         fillOpacity: isSelected ? 1 : isDimmed ? 0.22 : isConnected ? 0.92 : 0.78,
       });
 
-      const ancientName = city.city_ancient || city.city_label;
-      const modernPart  = city.city_modern && city.city_modern !== ancientName
-        ? ` (${city.city_modern})`
+      const modernPart = place.place_label_modern && place.place_label_modern !== place.place_label
+        ? ` (${place.place_label_modern})`
         : "";
-      const stanceHint  = docStance ? ` · ${docStance === "affirms" ? "✓ affirms" : docStance === "condemns" ? "✗ condemns" : "⚡ mixed"}` : "";
       m.bindTooltip(
-        `${ancientName}${modernPart}, ${city.country_modern}${stanceHint}`,
+        `${place.place_label}${modernPart}, ${place.modern_country_label} [${place.place_kind}]`,
         { direction: "top", offset: [0, -4], className: "city-tooltip" },
       );
       m.on("click", () => {
-        setSelection({ kind: "city", id: city.city_id });
+        setSelection({ kind: "place", id: place.place_id });
         setSidebarTab("places");
         if (!rightPanelVisible) toggleRightPanel();
       });
       m.addTo(rowLyr);
-      bounds.push([city.lat, city.lon]);
+      bounds.push([place.lat, place.lon]);
     }
 
-    // Ghost marker: selected city not in visibleCities (e.g. from essay mention, different decade)
-    if (selCityId && !visibleCities.some((c) => c.city_id === selCityId)) {
-      const ghost = dataStore.cities.getById(selCityId);
+    // Ghost marker for selected place not in visible set
+    if (selPlaceId && !visiblePlaces.some((p) => p.place_id === selPlaceId)) {
+      const ghost = dataStore.places.getById(selPlaceId);
       if (ghost && ghost.lat != null && ghost.lon != null) {
         L.circleMarker([ghost.lat, ghost.lon], {
           radius: 17, color: "#c47c3a", weight: 2.5,
@@ -628,13 +298,10 @@ export function MapPage() {
           radius: 9, color: "#c47c3a", weight: 2.5,
           fillColor: "#c47c3a", fillOpacity: 0.45,
         });
-        const ancientName = ghost.city_ancient || ghost.city_label;
-        const modernPart  = ghost.city_modern && ghost.city_modern !== ancientName
-          ? ` (${ghost.city_modern})` : "";
-        gm.bindTooltip(`${ancientName}${modernPart}, ${ghost.country_modern} (not in this decade)`,
+        gm.bindTooltip(`${ghost.place_label} (not in this decade)`,
           { direction: "top", offset: [0, -4], className: "city-tooltip" });
         gm.on("click", () => {
-          setSelection({ kind: "city", id: selCityId });
+          setSelection({ kind: "place", id: selPlaceId });
           setSidebarTab("places");
           if (!rightPanelVisible) toggleRightPanel();
         });
@@ -642,30 +309,11 @@ export function MapPage() {
       }
     }
 
-    for (const site of visibleArchSites) {
-      if (site.lat == null || site.lon == null) continue;
-      const isSelected = selection?.kind === "archaeology" && selection.id === site.archaeology_id;
-      const icon = L.divIcon({
-        className: "",
-        html: `<div style="font-size:14px;color:${isSelected ? "#c47c3a" : "#b07e10"};text-shadow:0 1px 3px rgba(0,0,0,.3);line-height:1;">★</div>`,
-        iconSize: [16, 16],
-        iconAnchor: [8, 8],
-      });
-      const m = L.marker([site.lat, site.lon], { icon });
-      m.bindTooltip(site.name_display, { direction: "top" });
-      m.on("click", () => {
-        setSelection({ kind: "archaeology", id: site.archaeology_id });
-        if (!rightPanelVisible) toggleRightPanel();
-      });
-      m.addTo(archLyr);
-      bounds.push([site.lat, site.lon]);
-    }
-
     if (!didFitRef.current && bounds.length > 0) {
       try { map.fitBounds(L.latLngBounds(bounds).pad(0.1)); } catch (_) {}
       didFitRef.current = true;
     }
-  }, [visibleCities, visibleArchSites, selection, doctrineStanceMap, setSelection, setSidebarTab, rightPanelVisible, toggleRightPanel]);
+  }, [visiblePlaces, selection, setSelection, setSidebarTab, rightPanelVisible, toggleRightPanel]);
 
   // ── Render arcs ───────────────────────────────────────────────────────────
 
@@ -694,70 +342,57 @@ export function MapPage() {
   useEffect(() => {
     const t = window.setTimeout(() => mapRef.current?.invalidateSize(), 160);
     return () => window.clearTimeout(t);
-  }, [leftPanelVisible, rightPanelVisible, sidebarExpanded]);
+  }, [leftPanelVisible, rightPanelVisible]);
 
   // ── Map action callbacks ──────────────────────────────────────────────────
 
   const handleFitVisible = useCallback(() => {
     const map = mapRef.current;
-    const cities = visibleCities.filter((c) => c.lat != null && c.lon != null);
-    if (!map || cities.length === 0) return;
-    map.fitBounds(L.latLngBounds(cities.map((c) => [c.lat!, c.lon!])).pad(0.1));
-  }, [visibleCities]);
+    const pts = visiblePlaces.filter((p) => p.lat != null && p.lon != null);
+    if (!map || pts.length === 0) return;
+    map.fitBounds(L.latLngBounds(pts.map((p) => [p.lat!, p.lon!])).pad(0.1));
+  }, [visiblePlaces]);
 
   const handleCenterSelected = useCallback(() => {
     const map = mapRef.current;
     if (!map || !selection) return;
-    if (selection.kind === "city") {
-      const city = dataStore.cities.getById(selection.id);
-      if (city?.lat != null && city?.lon != null) map.setView([city.lat, city.lon], 7, { animate: true });
-    } else if (selection.kind === "archaeology") {
-      const site = dataStore.archaeology.getById(selection.id);
-      if (site?.lat != null && site?.lon != null) map.setView([site.lat, site.lon], 9, { animate: true });
+    if (selection.kind === "place") {
+      const place = dataStore.places.getById(selection.id);
+      if (place?.lat != null && place?.lon != null) map.setView([place.lat, place.lon], 10, { animate: true });
     }
   }, [selection]);
 
-  const handleRandomSite = useCallback(() => {
-    const cities = visibleCities.filter((c) => c.lat != null && c.lon != null);
-    if (!cities.length) return;
-    const city = cities[Math.floor(Math.random() * cities.length)];
-    if (!city) return;
-    setSelection({ kind: "city", id: city.city_id });
+  const handleRandomPlace = useCallback(() => {
+    const pts = visiblePlaces.filter((p) => p.lat != null && p.lon != null);
+    if (!pts.length) return;
+    const place = pts[Math.floor(Math.random() * pts.length)];
+    if (!place) return;
+    setSelection({ kind: "place", id: place.place_id });
     setSidebarTab("places");
     const map = mapRef.current;
-    if (map && city.lat != null && city.lon != null) map.setView([city.lat, city.lon], 7, { animate: true });
-  }, [visibleCities, setSelection, setSidebarTab]);
+    if (map && place.lat != null && place.lon != null) map.setView([place.lat, place.lon], 7, { animate: true });
+  }, [visiblePlaces, setSelection, setSidebarTab]);
 
-
-  const handleFlyToCity = useCallback((cityId: string) => {
+  const handleFlyToPlace = useCallback((placeId: string) => {
     const map = mapRef.current;
-    const city = dataStore.cities.getById(cityId);
-    if (map && city?.lat != null && city?.lon != null) {
-      map.setView([city.lat, city.lon], 7, { animate: true });
-    }
-  }, []);
-
-  const handleFlyToArch = useCallback((archId: string) => {
-    const map = mapRef.current;
-    const site = dataStore.archaeology.getById(archId);
-    if (map && site?.lat != null && site?.lon != null) {
-      map.setView([site.lat, site.lon], 9, { animate: true });
+    const place = dataStore.places.getById(placeId);
+    if (map && place?.lat != null && place?.lon != null) {
+      map.setView([place.lat, place.lon], 7, { animate: true });
     }
   }, []);
 
   // ── Render ────────────────────────────────────────────────────────────────
 
   return (
-    <div className={`map-layout${sidebarExpanded ? " sidebar-expanded" : ""}`}>
+    <div className="map-layout">
       {/* Left panel */}
       {leftPanelVisible && (
         <div className="map-left">
           <LeftPanel
-            visibleCityCount={visibleCities.length}
-            visibleArchCount={visibleArchSites.length}
+            visiblePlaceCount={visiblePlaces.length}
             onFitVisible={handleFitVisible}
             onCenterSelected={handleCenterSelected}
-            onRandomSite={handleRandomSite}
+            onRandomPlace={handleRandomPlace}
           />
         </div>
       )}
@@ -785,7 +420,7 @@ export function MapPage() {
           <SearchResultsPanel
             query={searchQuery.trim()}
             activeDecade={activeDecade}
-            matchedCityIds={new Set(visibleCities.map((c) => c.city_id))}
+            matchedPlaceIds={new Set(visiblePlaces.map((p) => p.place_id))}
             onClear={() => useAppStore.getState().setSearchQuery("")}
           />
         )}
@@ -793,10 +428,9 @@ export function MapPage() {
 
       {/* Right sidebar */}
       {rightPanelVisible && (
-        <div className={`map-right${sidebarExpanded ? " expanded" : ""}`}>
+        <div className="map-right">
           <RightSidebar
-            onFlyToCity={handleFlyToCity}
-            onFlyToArch={handleFlyToArch}
+            onFlyToPlace={handleFlyToPlace}
             currentDecade={activeDecade}
           />
         </div>
@@ -807,26 +441,24 @@ export function MapPage() {
 
 // ─── Search Results Panel ─────────────────────────────────────────────────────
 
-const PAGE_SIZE = 20;
+const SEARCH_PAGE_SIZE = 20;
 
 interface SearchMatch {
   kind: string;
   id: string;
   label: string;
   sub: string;
-  decade?: number | null;
-  isCurrentDecade: boolean;
 }
 
 function SearchResultsPanel({
   query,
   activeDecade,
-  matchedCityIds,
+  matchedPlaceIds,
   onClear,
 }: {
   query: string;
   activeDecade: number;
-  matchedCityIds: Set<string>;
+  matchedPlaceIds: Set<string>;
   onClear: () => void;
 }) {
   const setSelection  = useAppStore((s) => s.setSelection);
@@ -840,100 +472,57 @@ function SearchResultsPanel({
   const matches = useMemo((): SearchMatch[] => {
     const results: SearchMatch[] = [];
 
-    // Cities (use pre-built index)
-    for (const city of dataStore.cities.getAll()) {
-      const blob = CITY_SEARCH_INDEX.get(city.city_id) ?? "";
+    for (const place of dataStore.places.getAll()) {
+      const blob = PLACE_SEARCH_INDEX.get(place.place_id) ?? "";
       if (!blob.includes(q)) continue;
       results.push({
-        kind: "city",
-        id: city.city_id,
-        label: city.city_ancient || city.city_label,
-        sub: city.country_modern,
-        decade: null,
-        isCurrentDecade: matchedCityIds.has(city.city_id),
+        kind: "place", id: place.place_id,
+        label: place.place_label, sub: `${place.modern_country_label} · ${place.place_kind}`,
       });
     }
 
-    // People
     for (const p of dataStore.people.getAll()) {
-      const blob = [p.person_label, ...p.name_alt, ...p.roles, p.description, p.apostolic_connection].join(" ").toLowerCase();
+      const blob = [p.person_label, ...p.name_alt, p.notes].join(" ").toLowerCase();
       if (!blob.includes(q)) continue;
-      const decade = p.birth_year ?? p.death_year ?? null;
-      results.push({
-        kind: "person", id: p.person_id, label: p.person_label,
-        sub: p.roles.slice(0, 2).join(", "),
-        decade,
-        isCurrentDecade: Math.abs((decade ?? activeDecade) - activeDecade) < 60,
-      });
+      results.push({ kind: "person", id: p.person_id, label: p.person_label, sub: p.person_kind });
     }
 
-    // Works
     for (const w of dataStore.works.getAll()) {
-      const blob = [w.title_display, w.author_name_display, w.description ?? "", w.significance ?? ""].join(" ").toLowerCase();
+      const blob = [w.title_display, w.work_type, w.notes].join(" ").toLowerCase();
       if (!blob.includes(q)) continue;
-      results.push({
-        kind: "work", id: w.work_id, label: w.title_display,
-        sub: w.author_name_display,
-        decade: w.year_written_start,
-        isCurrentDecade: !w.year_written_start || Math.abs(w.year_written_start - activeDecade) < 60,
-      });
+      results.push({ kind: "work", id: w.work_id, label: w.title_display, sub: w.work_type });
     }
 
-    // Doctrines
-    for (const d of dataStore.doctrines.getAll()) {
-      const blob = [d.name_display, d.category, d.description ?? ""].join(" ").toLowerCase();
+    for (const g of dataStore.groups.getAll()) {
+      const blob = [g.group_label, g.group_kind, g.notes].join(" ").toLowerCase();
       if (!blob.includes(q)) continue;
-      results.push({
-        kind: "doctrine", id: d.doctrine_id, label: d.name_display,
-        sub: d.category,
-        decade: null,
-        isCurrentDecade: true,
-      });
+      results.push({ kind: "group", id: g.group_id, label: g.group_label, sub: g.group_kind });
     }
 
-    // Events
     for (const e of dataStore.events.getAll()) {
-      const blob = [e.name_display, e.event_type ?? "", e.description ?? ""].join(" ").toLowerCase();
+      const blob = [e.event_label, e.event_type, e.notes].join(" ").toLowerCase();
       if (!blob.includes(q)) continue;
-      results.push({
-        kind: "event", id: e.event_id, label: e.name_display,
-        sub: e.event_type ?? "",
-        decade: e.year_start,
-        isCurrentDecade: !e.year_start || Math.abs(e.year_start - activeDecade) < 60,
-      });
+      results.push({ kind: "event", id: e.event_id, label: e.event_label, sub: e.event_type });
     }
 
-    // Persuasions
-    for (const p of dataStore.persuasions.getAll()) {
-      const blob = [p.persuasion_label, p.persuasion_stream ?? "", p.description ?? ""].join(" ").toLowerCase();
+    for (const p of dataStore.propositions.getAll()) {
+      const blob = [p.proposition_label, p.description, p.polarity_family].join(" ").toLowerCase();
       if (!blob.includes(q)) continue;
-      results.push({
-        kind: "persuasion", id: p.persuasion_id, label: p.persuasion_label,
-        sub: p.persuasion_stream ?? "",
-        decade: null,
-        isCurrentDecade: true,
-      });
+      results.push({ kind: "proposition", id: p.proposition_id, label: p.proposition_label, sub: "proposition" });
     }
 
-    // Sort: current-decade matches first, then alphabetical
-    results.sort((a, b) => {
-      if (a.isCurrentDecade && !b.isCurrentDecade) return -1;
-      if (!a.isCurrentDecade && b.isCurrentDecade) return 1;
-      return a.label.localeCompare(b.label);
-    });
-
+    results.sort((a, b) => a.label.localeCompare(b.label));
     return results;
-  }, [q, activeDecade, matchedCityIds]);
+  }, [q]);
 
-  // Reset page when query changes
   useEffect(() => { setPage(0); }, [q]);
 
-  const totalPages = Math.ceil(matches.length / PAGE_SIZE);
-  const pageItems  = matches.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  const totalPages = Math.ceil(matches.length / SEARCH_PAGE_SIZE);
+  const pageItems  = matches.slice(page * SEARCH_PAGE_SIZE, (page + 1) * SEARCH_PAGE_SIZE);
 
   const handleSelect = (kind: string, id: string) => {
     setSelection({ kind: kind as import("../data/dataStore").Selection["kind"], id });
-    if (kind === "city") setSidebarTab("places");
+    if (kind === "place") setSidebarTab("places");
     if (!rightVisible) toggleRight();
   };
 
@@ -951,12 +540,7 @@ function SearchResultsPanel({
               {page + 1} / {totalPages}
             </span>
           )}
-          <button
-            type="button"
-            className="close-btn"
-            onClick={onClear}
-            title="Clear search"
-          >✕</button>
+          <button type="button" className="close-btn" onClick={onClear} title="Clear search">✕</button>
         </div>
       </div>
 
@@ -965,7 +549,7 @@ function SearchResultsPanel({
           <button
             key={`${m.kind}:${m.id}`}
             type="button"
-            className={`search-result-item${m.isCurrentDecade ? " current" : ""}`}
+            className="search-result-item"
             onClick={() => handleSelect(m.kind, m.id)}
           >
             <span className="search-result-icon">{KIND_ICONS[m.kind] ?? "•"}</span>
@@ -973,21 +557,14 @@ function SearchResultsPanel({
               <div className="search-result-label"><Hl text={m.label} query={q} /></div>
               {m.sub && <div className="search-result-sub"><Hl text={m.sub} query={q} /></div>}
             </div>
-            {m.decade && (
-              <span className="search-result-decade">AD {m.decade}</span>
-            )}
           </button>
         ))}
       </div>
 
       {totalPages > 1 && (
         <div className="search-results-pagination">
-          <button type="button" className="action-btn" disabled={page === 0} onClick={() => setPage((p: number) => p - 1)}>
-            ← Prev
-          </button>
-          <button type="button" className="action-btn" disabled={page >= totalPages - 1} onClick={() => setPage((p: number) => p + 1)}>
-            Next →
-          </button>
+          <button type="button" className="action-btn" disabled={page === 0} onClick={() => setPage((p) => p - 1)}>← Prev</button>
+          <button type="button" className="action-btn" disabled={page >= totalPages - 1} onClick={() => setPage((p) => p + 1)}>Next →</button>
         </div>
       )}
     </div>
