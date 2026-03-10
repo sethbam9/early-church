@@ -97,7 +97,7 @@ def sort_rows(headers: Sequence[str], rows: List[Dict[str, str]]) -> List[Dict[s
 class Validator:
     def __init__(self, data_dir: Path, scan_root: Optional[Path] = None, rewrite_derived: bool = False) -> None:
         self.data_dir = data_dir
-        self.scan_root = scan_root or data_dir.parent
+        self.scan_root = scan_root or data_dir
         self.rewrite_derived = rewrite_derived
         self.errors: List[str] = []
         self.warnings: List[str] = []
@@ -433,11 +433,11 @@ class Validator:
                 self.error(f"editor_notes.tsv:{idx} broken FK claim_id={row['claim_id']}")
 
     def derive_expected_note_mentions(self) -> List[Dict[str, str]]:
-        sources = collect_markdown_reference_sources(self.data_dir, self.scan_root)
+        sources = collect_markdown_reference_sources(self.data_dir / "sheets", self.scan_root)
         return derive_note_mentions(sources)
 
     def validate_markdown_links_and_osis(self) -> None:
-        sources = collect_markdown_reference_sources(self.data_dir, self.scan_root)
+        sources = collect_markdown_reference_sources(self.data_dir / "sheets", self.scan_root)
         for src in sources:
             origin = src.get("source_path") or f"{src.get('source_table')}:{src.get('source_row_id')}:{src.get('source_field')}"
             for mentioned_type, mentioned_id, _label in parse_mentions(src.get("text", "")):
@@ -484,7 +484,7 @@ class Validator:
         if actual == expected_norm:
             self.tables[filename] = actual
             return
-        write_tsv(self.data_dir / filename, expected_headers, expected_norm)
+        write_tsv(self.data_dir / "derived" / filename, expected_headers, expected_norm)
         self.warn(f"Rewrote stale derived file: {filename}")
         self.tables[filename] = expected_norm
 
@@ -563,10 +563,10 @@ class Validator:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate canonical TSV data against the canonical schema and rewrite into canonical order.")
     parser.add_argument("--data-dir", default=str(Path(__file__).resolve().parent), help="Directory containing canonical TSV files.")
-    parser.add_argument("--scan-root", default=None, help="Project root to scan for markdown-file wiki-links. Defaults to parent of data-dir.")
+    parser.add_argument("--scan-root", default=None, help="Directory to scan for markdown file wiki-links. Defaults to data-dir.")
     parser.add_argument("--rewrite-derived", action="store_true", help="Accepted for CLI compatibility; derived files are rewritten automatically when stale.")
     args = parser.parse_args()
-    validator = Validator(Path(args.data_dir).resolve(), scan_root=Path(args.scan_root).resolve() if args.scan_root else None, rewrite_derived=args.rewrite_derived)
+    validator = Validator(Path(args.data_dir).resolve(), scan_root=Path(args.scan_root).resolve() if args.scan_root else Path(args.data_dir).resolve(), rewrite_derived=args.rewrite_derived)
     sys.exit(validator.run())
 
 

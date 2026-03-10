@@ -13,6 +13,7 @@ clm-jesus-active-galilee	person	jesus-of-nazareth	active_in	entity	place	galilee
 clm-place-galilee-attested	place	galilee	place_presence_status	text			attested				27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-place-jerusalem-attested	place	jerusalem	place_presence_status	text			attested				27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-place-judea-attested	place	judea	place_presence_status	text			attested				27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-group-roman-empire-judea	group	roman-empire	controls_place	entity	place	judea					27	66		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-andrew-in-calling	person	andrew	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-calling-at-capernaum	event	calling-of-the-first-disciples	event_occurs_at	entity	place	capernaum					28	28		probable	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-james-in-calling	person	james-son-of-zebedee	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
@@ -31,8 +32,50 @@ clm-group-disciples-judea	group	disciples-of-jesus	group_present_at	entity	place
 clm-jesus-active-judea	person	jesus-of-nazareth	active_in	entity	place	judea					30	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-jesus-in-temple	person	jesus-of-nazareth	participant_in	entity	event	temple-cleansing					30	30	jerusalem	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-temple-at-jerusalem	event	temple-cleansing	event_occurs_at	entity	place	jerusalem					30	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-james-active-jerusalem	person	james-the-just	active_in	entity	place	jerusalem					30	62		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-james-just-disciple	person	james-the-just	member_of_group	entity	group	disciples-of-jesus					30	62		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-james-just-jerusalem-church	person	james-the-just	member_of_group	entity	group	jerusalem-church					30	62	jerusalem	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-group-jerusalem-church-jerusalem	group	jerusalem-church	group_present_at	entity	place	jerusalem					30	70		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-conversion-at-damascus	event	pauls-conversion	event_occurs_at	entity	place	damascus					34	34		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-paul-in-conversion	person	paul	participant_in	entity	event	pauls-conversion					34	34	damascus	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-paul-active-damascus	person	paul	active_in	entity	place	damascus					34	36		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-paul-disciple	person	paul	member_of_group	entity	group	disciples-of-jesus					34	64		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-group-antioch-church-antioch	group	antioch-church	group_present_at	entity	place	antioch					40	70		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-barnabas-active-antioch	person	barnabas	active_in	entity	place	antioch					42	48		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-barnabas-disciple	person	barnabas	member_of_group	entity	group	disciples-of-jesus					42	61		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-barnabas-coworker-paul	person	barnabas	coworker_of	entity	person	paul					44	48	antioch	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-paul-active-antioch	person	paul	active_in	entity	place	antioch					44	48		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-barnabas-in-council	person	barnabas	participant_in	entity	event	council-of-jerusalem					49	49	jerusalem	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-council-at-jerusalem	event	council-of-jerusalem	event_occurs_at	entity	place	jerusalem					49	49		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-galatians-addressed-galatia	work	epistle-to-the-galatians	addressed_to_place	entity	place	galatia					49	49		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-galatians-gentiles	work	epistle-to-the-galatians	work_affirms_proposition	entity	proposition	gentile-believers-need-not-be-circumcised					49	49	galatia	attested	supports	active	seed-script	2026-03-10T00:00:00Z
+clm-james-just-in-council	person	james-the-just	participant_in	entity	event	council-of-jerusalem					49	49	jerusalem	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-paul-in-council	person	paul	participant_in	entity	event	council-of-jerusalem					49	49	jerusalem	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-peter-in-council	person	simon-peter	participant_in	entity	event	council-of-jerusalem					49	49	jerusalem	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-lydia-active-philippi	person	lydia	active_in	entity	place	philippi					49	60		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-lydia-disciple	person	lydia	member_of_group	entity	group	disciples-of-jesus					49	60		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-lydia-philippian-church	person	lydia	member_of_group	entity	group	philippian-church					49	60	philippi	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-group-disciples-rome	group	disciples-of-jesus	group_present_at	entity	place	rome					49	70		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-group-philippian-church-philippi	group	philippian-church	group_present_at	entity	place	philippi					49	70		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-group-roman-empire-philippi	group	roman-empire	controls_place	entity	place	philippi					49	70		probable	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-paul-active-corinth	person	paul	active_in	entity	place	corinth					50	52		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-paul-coworker-silas	person	paul	coworker_of	entity	person	silas					50	52	corinth	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-silas-active-corinth	person	silas	active_in	entity	place	corinth					50	52		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-silas-disciple	person	silas	member_of_group	entity	group	disciples-of-jesus					50	64		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-group-corinthian-church-corinth	group	corinthian-church	group_present_at	entity	place	corinth					50	70		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-group-roman-empire-corinth	group	roman-empire	controls_place	entity	place	corinth					50	70		probable	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-paul-active-ephesus	person	paul	active_in	entity	place	ephesus					52	55		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-group-disciples-ephesus	group	disciples-of-jesus	group_present_at	entity	place	ephesus					52	95		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-first-corinthians-addressed-corinth	work	first-epistle-to-the-corinthians	addressed_to_place	entity	place	corinth					54	54		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-first-corinthians-resurrection	work	first-epistle-to-the-corinthians	work_affirms_proposition	entity	proposition	jesus-is-proclaimed-as-raised					54	54	corinth	attested	supports	active	seed-script	2026-03-10T00:00:00Z
+clm-first-corinthians-written-ephesus	work	first-epistle-to-the-corinthians	written_at	entity	place	ephesus					54	54		probable	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-romans-addressed-rome	work	epistle-to-the-romans	addressed_to_place	entity	place	rome					57	57		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-paul-active-rome	person	paul	active_in	entity	place	rome					60	62		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-revelation-written-patmos	work	revelation-of-john	written_at	entity	place	patmos					95	95		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-baptism-year	event	baptism-of-jesus	event_has_year	year					27					attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-calling-year	event	calling-of-the-first-disciples	event_has_year	year					28					probable	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-conversion-year	event	pauls-conversion	event_has_year	year					34					attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-council-year	event	council-of-jerusalem	event_has_year	year					49					attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-jesus-authority	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	jesus-teaches-with-unique-authority							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z
 clm-jesus-follow	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	disciples-are-called-to-follow-jesus							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z
 clm-jesus-kingdom	person	jesus-of-nazareth	person_affirms_proposition	entity	proposition	kingdom-of-god-has-drawn-near							galilee	attested	supports	active	seed-script	2026-03-09T00:00:00Z

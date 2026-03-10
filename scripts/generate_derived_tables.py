@@ -175,10 +175,10 @@ def get_row_id(row: Dict[str, str], headers: Sequence[str]) -> str:
     return f"row-{digest}"
 
 
-def collect_markdown_reference_sources(data_dir: Path, scan_root: Path) -> List[Dict[str, str]]:
+def collect_markdown_reference_sources(source_tables_dir: Path, scan_root: Path) -> List[Dict[str, str]]:
     sources: List[Dict[str, str]] = []
     for filename, headers in SOURCE_HEADERS.items():
-        path = data_dir / filename
+        path = source_tables_dir / filename
         if not path.exists():
             continue
         rows = read_tsv(path)
@@ -507,18 +507,18 @@ def derive_place_state_by_decade(claims: List[Dict[str, str]]) -> List[Dict[str,
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate derived canonical TSV tables.")
     parser.add_argument("--data-dir", default=str(Path(__file__).resolve().parent), help="Directory containing canonical TSV files.")
-    parser.add_argument("--scan-root", default=None, help="Project root to scan for markdown file wiki-links. Defaults to parent of data-dir.")
+    parser.add_argument("--scan-root", default=None, help="Directory to scan for markdown file wiki-links. Defaults to data-dir.")
     args = parser.parse_args()
 
     data_dir = Path(args.data_dir).resolve()
     sheets_dir = data_dir / "sheets"
-    scan_root = Path(args.scan_root).resolve() if args.scan_root else data_dir.parent.resolve()
+    scan_root = Path(args.scan_root).resolve() if args.scan_root else data_dir
 
     claims = read_tsv(sheets_dir / "claims.tsv")
     passages = read_tsv(sheets_dir / "passages.tsv")
     claim_evidence = read_tsv(sheets_dir / "claim_evidence.tsv")
 
-    markdown_sources = collect_markdown_reference_sources(data_dir, scan_root)
+    markdown_sources = collect_markdown_reference_sources(sheets_dir, scan_root)
     note_mentions = derive_note_mentions(markdown_sources)
     proposition_presence = derive_proposition_place_presence(claims)
     entity_footprints = derive_entity_place_footprints(claims, proposition_presence)
@@ -526,7 +526,7 @@ def main() -> None:
     place_state = derive_place_state_by_decade(claims)
 
     derived_path = data_dir / "derived"
-    write_tsv(derived_path / "" "note_mentions.tsv", DERIVED_HEADERS["note_mentions.tsv"], note_mentions)
+    write_tsv(derived_path / "note_mentions.tsv", DERIVED_HEADERS["note_mentions.tsv"], note_mentions)
     write_tsv(derived_path / "proposition_place_presence.tsv", DERIVED_HEADERS["proposition_place_presence.tsv"], proposition_presence)
     write_tsv(derived_path / "entity_place_footprints.tsv", DERIVED_HEADERS["entity_place_footprints.tsv"], entity_footprints)
     write_tsv(derived_path / "first_attestations.tsv", DERIVED_HEADERS["first_attestations.tsv"], first_attestations)

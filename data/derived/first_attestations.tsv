@@ -3,20 +3,36 @@ event	baptism-of-jesus	event_has_year	27	clm-baptism-year
 event	baptism-of-jesus	event_occurs_at	27	clm-baptism-at-bethany	psg-john-1-28-34
 event	calling-of-the-first-disciples	event_has_year	28	clm-calling-year	
 event	calling-of-the-first-disciples	event_occurs_at	28	clm-calling-at-capernaum	psg-mark-1-16-20
+event	council-of-jerusalem	event_has_year	49	clm-council-year	
+event	council-of-jerusalem	event_occurs_at	49	clm-council-at-jerusalem	psg-acts-15-1-29
+event	pauls-conversion	event_has_year	34	clm-conversion-year	
+event	pauls-conversion	event_occurs_at	34	clm-conversion-at-damascus	psg-acts-9-1-19
 event	sermon-on-the-mount	event_has_year	28	clm-sermon-year	
 event	sermon-on-the-mount	event_occurs_at	28	clm-sermon-at-galilee	psg-matt-7-28-29
 event	temple-cleansing	event_has_year	30	clm-temple-year	
 event	temple-cleansing	event_occurs_at	30	clm-temple-at-jerusalem	psg-mark-11-15-18
-group	disciples-of-jesus	group_present_at	28	clm-group-disciples-galilee	
+group	antioch-church	group_present_at	40	clm-group-antioch-church-antioch	psg-acts-11-25-26
+group	corinthian-church	group_present_at	50	clm-group-corinthian-church-corinth	psg-acts-18-1-11
+group	disciples-of-jesus	group_present_at	28	clm-group-disciples-galilee	psg-mark-1-16-20
 group	followers-of-john-the-baptist	group_present_at	27	clm-group-john-judea	psg-luke-3-1-3
-group	pharisees	group_present_at	27	clm-group-pharisees-judea	
-group	sadducees	group_present_at	27	clm-group-sadducees-jerusalem	
+group	jerusalem-church	group_present_at	30	clm-group-jerusalem-church-jerusalem	psg-acts-15-1-29
+group	pharisees	group_present_at	27	clm-group-pharisees-judea	psg-mark-11-15-18
+group	philippian-church	group_present_at	49	clm-group-philippian-church-philippi	psg-acts-16-11-15
+group	roman-empire	controls_place	27	clm-group-roman-empire-judea	psg-josephus-ant-18-55-59
+group	sadducees	group_present_at	27	clm-group-sadducees-jerusalem	psg-mark-11-15-18
 person	andrew	member_of_group	28	clm-andrew-disciple	psg-mark-1-16-20
 person	andrew	participant_in	28	clm-andrew-in-calling	psg-mark-1-16-20
+person	barnabas	active_in	42	clm-barnabas-active-antioch	psg-acts-11-25-26
+person	barnabas	coworker_of	44	clm-barnabas-coworker-paul	psg-acts-11-25-26
+person	barnabas	member_of_group	42	clm-barnabas-disciple	psg-acts-11-25-26
+person	barnabas	participant_in	49	clm-barnabas-in-council	psg-acts-15-1-29
 person	caiaphas	active_in	18	clm-caiaphas-active-jerusalem	
 person	caiaphas	participant_in	30	clm-caiaphas-in-temple-era	
 person	james-son-of-zebedee	member_of_group	28	clm-james-disciple	psg-mark-1-16-20
 person	james-son-of-zebedee	participant_in	28	clm-james-in-calling	psg-mark-1-16-20
+person	james-the-just	active_in	30	clm-james-active-jerusalem	psg-acts-15-1-29
+person	james-the-just	member_of_group	30	clm-james-just-disciple	psg-acts-15-1-29
+person	james-the-just	participant_in	49	clm-james-just-in-council	psg-acts-15-1-29
 person	jesus-of-nazareth	active_in	27	clm-jesus-active-galilee	psg-mark-1-14-15
 person	jesus-of-nazareth	participant_in	27	clm-jesus-in-baptism	psg-john-1-28-34
 person	jesus-of-nazareth	person_affirms_proposition	70	clm-jesus-follow	psg-mark-1-16-20
@@ -26,9 +42,24 @@ person	john-the-baptist	active_in	27	clm-john-active-wilderness	psg-josephus-ant
 person	john-the-baptist	member_of_group	27	clm-johnb-group	psg-josephus-ant-18-116-119
 person	john-the-baptist	participant_in	27	clm-john-in-baptism	psg-john-1-28-34
 person	john-the-baptist	person_affirms_proposition	85	clm-john-repentance	psg-josephus-ant-18-116-119
+person	lydia	active_in	49	clm-lydia-active-philippi	psg-acts-16-11-15
+person	lydia	member_of_group	49	clm-lydia-disciple	psg-acts-16-11-15
+person	paul	active_in	34	clm-paul-active-damascus	psg-acts-9-1-19
+person	paul	coworker_of	50	clm-paul-coworker-silas	psg-acts-18-1-11
+person	paul	member_of_group	34	clm-paul-disciple	psg-acts-9-1-19
+person	paul	participant_in	34	clm-paul-in-conversion	psg-acts-9-1-19
 person	pontius-pilate	active_in	26	clm-pilate-active-judea	psg-josephus-ant-18-55-59
+person	silas	active_in	50	clm-silas-active-corinth	psg-acts-18-1-11
+person	silas	member_of_group	50	clm-silas-disciple	psg-acts-15-1-29
 person	simon-peter	member_of_group	28	clm-peter-disciple	psg-mark-1-16-20
 person	simon-peter	participant_in	28	clm-peter-in-calling	psg-mark-1-16-20
 place	galilee	place_presence_status	27	clm-place-galilee-attested	psg-mark-1-14-15
 place	jerusalem	place_presence_status	27	clm-place-jerusalem-attested	psg-mark-11-15-18
 place	judea	place_presence_status	27	clm-place-judea-attested	psg-mark-11-15-18
+work	epistle-to-the-galatians	addressed_to_place	49	clm-galatians-addressed-galatia	psg-gal-1-2
+work	epistle-to-the-galatians	work_affirms_proposition	49	clm-galatians-gentiles	psg-gal-2-1-10
+work	epistle-to-the-romans	addressed_to_place	57	clm-romans-addressed-rome	psg-rom-1-7
+work	first-epistle-to-the-corinthians	addressed_to_place	54	clm-first-corinthians-addressed-corinth	psg-1cor-1-2
+work	first-epistle-to-the-corinthians	work_affirms_proposition	54	clm-first-corinthians-resurrection	psg-1cor-15-3-8
+work	first-epistle-to-the-corinthians	written_at	54	clm-first-corinthians-written-ephesus	psg-1cor-16-8
+work	revelation-of-john	written_at	95	clm-revelation-written-patmos	psg-rev-1-9

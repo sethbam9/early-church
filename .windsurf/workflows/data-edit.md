@@ -128,7 +128,13 @@ Do not touch derived files.
 Use the canonical validator after every batch:
 
 ```bash
-python3 scripts/validate_canonical_data.py --data-dir data --scan-root .
+python3 scripts/validate_canonical_data.py --data-dir data
+```
+
+If you want to validate only canonical source tables and temporarily ignore unresolved markdown links in `data/essays/`, use:
+
+```bash
+python3 scripts/validate_canonical_data.py --data-dir data --scan-root data/sheets
 ```
 
 This does all of the following:
@@ -223,13 +229,25 @@ Every Windsurf agent or scripted assistant should follow these constraints:
 ## Recommended command sequence
 
 ```bash
-python3 scripts/validate_canonical_data.py --data-dir data --scan-root .
+python3 scripts/validate_canonical_data.py --data-dir data
+```
+
+For source-table-only validation while ignoring unresolved essay links:
+
+```bash
+python3 scripts/validate_canonical_data.py --data-dir data --scan-root data/sheets
 ```
 
 Optional explicit derivation run:
 
 ```bash
-python3 scripts/generate_derived_tables.py --data-dir data --scan-root .
+python3 scripts/generate_derived_tables.py --data-dir data
+```
+
+To scan a different directory for markdown mentions:
+
+```bash
+python3 scripts/validate_canonical_data.py --data-dir data --scan-root data/essays
 ```
 
 Normal practice:

@@ -1,20 +1,43 @@
 entity_type	entity_id	place_id	year_start	year_end	reason_predicate_id	stance	path_signature
 event	baptism-of-jesus	bethany-beyond-the-jordan	27	27	event_occurs_at		path-a73a2cb0e166a12d
 event	calling-of-the-first-disciples	capernaum	28	28	event_occurs_at		path-928481bfdc52e5ee
+event	council-of-jerusalem	jerusalem	49	49	event_occurs_at		path-19791beadc7cce36
+event	pauls-conversion	damascus	34	34	event_occurs_at		path-5dce05eef909611c
 event	sermon-on-the-mount	galilee	28	28	event_occurs_at		path-1ad9b20c02570a91
 event	temple-cleansing	jerusalem	30	30	event_occurs_at		path-ac026136fdb02b56
+group	antioch-church	antioch	40	70	group_present_at		path-57f218670bbe808b
+group	corinthian-church	corinth	50	70	group_present_at		path-95a320cf8dc26648
+group	disciples-of-jesus	ephesus	52	95	group_present_at		path-d6a92f3026d71b72
 group	disciples-of-jesus	galilee	28	30	group_present_at		path-aa9988453476fb0b
 group	disciples-of-jesus	judea	30	30	group_present_at		path-661ec0c564f5efe7
+group	disciples-of-jesus	rome	49	70	group_present_at		path-5bff8d5dc5d95292
 group	followers-of-john-the-baptist	wilderness-of-judea	27	28	group_present_at		path-fbf574ba88c39de9
+group	jerusalem-church	jerusalem	30	70	group_present_at		path-19c4daf6416b86c4
 group	pharisees	judea	27	30	group_present_at		path-6223dc9cc4637342
+group	philippian-church	philippi	49	70	group_present_at		path-f392536afbf57cc8
+group	roman-empire	corinth	50	70	controls_place		path-9080bac0a5dffa51
+group	roman-empire	judea	27	66	controls_place		path-63e3e13d3d2dd22f
+group	roman-empire	philippi	49	70	controls_place		path-c5aa9e66ac7ea014
 group	sadducees	jerusalem	27	30	group_present_at		path-00138bfb2808cf5b
+person	barnabas	antioch	42	48	active_in		path-bdb2d08f392949d9
 person	caiaphas	jerusalem	18	36	active_in		path-14ff57a8dbdea411
+person	james-the-just	jerusalem	30	62	active_in		path-818402a7c3023ef3
 person	jesus-of-nazareth	galilee	27	30	active_in		path-7a21f0e6ae9be5d1
 person	jesus-of-nazareth	judea	30	30	active_in		path-ebf3e7cbb767c493
 person	john-the-baptist	wilderness-of-judea	27	28	active_in		path-11f79275ca29126f
+person	lydia	philippi	49	60	active_in		path-f9ff536e6d00e47d
+person	paul	antioch	44	48	active_in		path-5cfb62300b5f8761
+person	paul	corinth	50	52	active_in		path-14e1ffcfbb44fa9f
+person	paul	damascus	34	36	active_in		path-6091541d8e96e252
+person	paul	ephesus	52	55	active_in		path-ef4942d357c0c120
+person	paul	rome	60	62	active_in		path-38539d4397b1783e
 person	pontius-pilate	judea	26	36	active_in		path-d6e01aab1c887ccb
+person	silas	corinth	50	52	active_in		path-f9edc8c996de3479
 proposition	disciples-are-called-to-follow-jesus	galilee	27	30	derived_proposition_presence	affirms	drv-67a50822290b2e48
 proposition	disciples-are-called-to-follow-jesus	judea	30	30	derived_proposition_presence	affirms	drv-83fbc7ee4d5ba6aa
+proposition	gentile-believers-need-not-be-circumcised	galatia	49	49	derived_proposition_presence	affirms	drv-8b55870a5c299c51
+proposition	jesus-is-proclaimed-as-raised	corinth	54	54	derived_proposition_presence	affirms	drv-64cbc91014dc23ae
+proposition	jesus-is-proclaimed-as-raised	ephesus	54	54	derived_proposition_presence	affirms	drv-7fb76bfe93d76f87
 proposition	jesus-teaches-with-unique-authority	galilee	27	30	derived_proposition_presence	affirms	drv-8fb29ca9f4609f3e
 proposition	jesus-teaches-with-unique-authority	judea	30	30	derived_proposition_presence	affirms	drv-731963c422d89ecc
 proposition	kingdom-of-god-has-drawn-near	galilee	27	30	derived_proposition_presence	affirms	drv-241a7818b4ce18ec
@@ -22,3 +45,8 @@ proposition	kingdom-of-god-has-drawn-near	judea	30	30	derived_proposition_presen
 proposition	repentance-is-required	galilee	27	30	derived_proposition_presence	affirms	drv-86f8227bea1339e8
 proposition	repentance-is-required	judea	30	30	derived_proposition_presence	affirms	drv-4d1ddd2370435da7
 proposition	repentance-is-required	wilderness-of-judea	27	28	derived_proposition_presence	affirms	drv-919cb82fc5b2cf59
+work	epistle-to-the-galatians	galatia	49	49	addressed_to_place		path-ed0e1a9e989ce7f7
+work	epistle-to-the-romans	rome	57	57	addressed_to_place		path-30247de92fa46c4a
+work	first-epistle-to-the-corinthians	corinth	54	54	addressed_to_place		path-c762e0fc1f8d53e5
+work	first-epistle-to-the-corinthians	ephesus	54	54	written_at		path-ca30e910f0614025
+work	revelation-of-john	patmos	95	95	written_at		path-4e348eab136ac306
