@@ -205,8 +205,8 @@ For everything else, use or create a CSS class. Common utility classes available
 
 ## 10. Clickable Mentions (MarkdownRenderer)
 
-- Syntax: `[[kind:id|label]]` or `[[kind:id]]`.
-- Supported kinds: `city`, `person`, `work`, `doctrine`, `event`, `persuasion`, `polity`, `archaeology`.
+- Syntax: `\[\[kind:id|label\]\]` or `\[\[kind:id\]\]`.
+- Supported kinds in the current schema: `place`, `person`, `work`, `event`, `group`, `topic`, `dimension`, `proposition`, `source`, `passage`, `claim`, `editor_note`, `bible`.
 - Mention buttons use `.mention-link` class: dashed underline, no background.
 - Use `<MarkdownRenderer>` everywhere note/essay body text is displayed.
 

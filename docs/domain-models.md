@@ -22,6 +22,7 @@ export type DateTimeIso = string;
 export type Markdown = string;
 export type UrlString = string;
 export type OsisRef = string;
+export type PassageLocatorType = "bible_osis" | "source_ref";
 ```
 
 ---
@@ -369,6 +370,7 @@ export interface SourceRecord extends AuditFields {
 export interface Passage extends AuditFields {
   passage_id: Id;
   source_id: Id;
+  locator_type: PassageLocatorType;
   locator: string;
   excerpt: string | null;
   language: string | null;

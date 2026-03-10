@@ -3,8 +3,7 @@ import type { Claim } from "../../data/types";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { getPredicateLabel } from "../../domain/relationLabels";
 import { kindIcon } from "./entityConstants";
-import { BibleOverlay } from "./BibleOverlay";
-import { locatorToDisplay } from "../../utils/bibleApi";
+import { PassageReference } from "./PassageReference";
 
 interface ClaimCardProps {
   claim: Claim;
@@ -29,7 +28,6 @@ const POLARITY_META: Record<string, { icon: string; cls: string }> = {
 
 export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQuery = "" }: ClaimCardProps) {
   const [showEvidence, setShowEvidence] = useState(false);
-  const [bibleLocator, setBibleLocator] = useState<string | null>(null);
 
   const isSubject = claim.subject_type === entityType && claim.subject_id === entityId;
   const othKind   = isSubject ? claim.object_type : claim.subject_type;
@@ -95,16 +93,7 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
             return (
               <div key={`${ev.claim_id}-${ev.passage_id}`} className="evidence-item">
                 <span className="faint">{ev.evidence_role}</span>
-                {passage && (
-                  <button
-                    type="button"
-                    className="bible-ref-btn evidence-locator"
-                    onClick={(e) => { e.stopPropagation(); setBibleLocator(passage.locator); }}
-                    title={`Look up ${locatorToDisplay(passage.locator)}`}
-                  >
-                    {locatorToDisplay(passage.locator)}
-                  </button>
-                )}
+                {passage && <PassageReference passage={passage} source={source} />}
                 {passage?.excerpt && <div className="evidence-excerpt">{passage.excerpt}</div>}
                 {source?.url && (
                   <a href={source.url} target="_blank" rel="noopener noreferrer" className="citation-link evidence-source">
@@ -117,9 +106,6 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
         </div>
       )}
 
-      {bibleLocator && (
-        <BibleOverlay locator={bibleLocator} onClose={() => setBibleLocator(null)} />
-      )}
     </div>
   );
 }

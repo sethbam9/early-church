@@ -2,8 +2,7 @@ import { useState } from "react";
 import type { EntityPlaceFootprint } from "../../data/types";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { kindIcon } from "./entityConstants";
-import { BibleOverlay } from "./BibleOverlay";
-import { locatorToDisplay } from "../../utils/bibleApi";
+import { PassageReference } from "./PassageReference";
 
 interface FootprintCardProps {
   footprint: EntityPlaceFootprint;
@@ -14,7 +13,6 @@ interface FootprintCardProps {
 
 export function FootprintCard({ footprint: f, showEntity = true, showPlace = false, onSelectEntity }: FootprintCardProps) {
   const [expanded, setExpanded] = useState(false);
-  const [bibleLocator, setBibleLocator] = useState<string | null>(null);
 
   const clickTarget = showPlace ? { kind: "place", id: f.place_id } : { kind: f.entity_type, id: f.entity_id };
   const primaryLabel = showPlace
@@ -61,16 +59,7 @@ export function FootprintCard({ footprint: f, showEntity = true, showPlace = fal
               return (
                 <div key={`${ev.claim_id}-${ev.passage_id}`} className="evidence-item">
                   <span className="faint">{ev.evidence_role}</span>
-                  {passage && (
-                    <button
-                      type="button"
-                      className="bible-ref-btn evidence-locator"
-                      onClick={(e) => { e.stopPropagation(); setBibleLocator(passage.locator); }}
-                      title={`Look up ${locatorToDisplay(passage.locator)}`}
-                    >
-                      {locatorToDisplay(passage.locator)}
-                    </button>
-                  )}
+                  {passage && <PassageReference passage={passage} source={source} />}
                   {passage?.excerpt && <div className="evidence-excerpt">{passage.excerpt}</div>}
                   {source?.url && (
                     <a href={source.url} target="_blank" rel="noopener noreferrer" className="citation-link evidence-source">
@@ -82,10 +71,6 @@ export function FootprintCard({ footprint: f, showEntity = true, showPlace = fal
             });
           })}
         </div>
-      )}
-
-      {bibleLocator && (
-        <BibleOverlay locator={bibleLocator} onClose={() => setBibleLocator(null)} />
       )}
     </div>
   );

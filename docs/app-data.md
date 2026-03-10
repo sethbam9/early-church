@@ -20,8 +20,8 @@ Related file: [`domain-models.md`](./domain-models.md)
 2. **Claims are atomic.** One row in `claims.tsv` expresses one assertion.
 3. **Groups absorb former polity/persuasion roles.** Ancient communions, sects, schools, factions, and political polities all live in `groups.tsv`, distinguished by `group_kind` and claims.
 4. **Derived tables are regenerated only.** No manual edits.
-5. **Markdown cross-references are first-class.** `[[type:id|label]]` links may appear in markdown files and in markdown-capable TSV fields.
-6. **Bible references must use OSIS.** Example: `1Cor.1.1`.
+5. **Markdown cross-references are first-class.** `\[\[type:id|label\]\]` links may appear in markdown files and in markdown-capable TSV fields.
+6. **Bible passage locators must declare their type.** Use `locator_type=bible_osis` for canonical Bible passages and store the locator in OSIS (example: `1Cor.1.1`). Use `locator_type=source_ref` for non-biblical reference systems such as Josephus, Qumran, or other Second Temple works.
 7. **Temporal continuity is claim-based.** Do not restate the same group presence or place control centuries later unless the state actually changes.
 8. **Sorting is deterministic.** Validation rewrites every TSV in canonical order.
 
@@ -127,7 +127,7 @@ Those belong in claims or in derived tables.
 Canonical markdown links use this shape:
 
 ```text
-[[type:id|Label]]
+\[\[type:id|Label\]\]
 ```
 
 The `|Label` segment is optional.
@@ -135,8 +135,8 @@ The `|Label` segment is optional.
 Examples:
 
 - `[[person:paul|Paul]]`
-- `[[work:nt-1cor|1 Corinthians]]`
-- `[[place:jerusalem-jerusalem|Jerusalem]]`
+- `[[work:first-epistle-to-the-corinthians|1 Corinthians]]`
+- `[[place:jerusalem|Jerusalem]]`
 - `[[group:roman-empire|Roman Empire]]`
 - `[[bible:1Cor.11.23|1 Corinthians 11:23]]`
 
@@ -146,11 +146,11 @@ Wiki-links may appear in:
 
 - any TSV field named `notes`
 - any TSV field ending in `_md`
-- markdown articles and other `.md` files in the project tree
+- markdown articles and other `.md` files in the project tree when validation runs with markdown scanning enabled
 
 ### Bible references must use OSIS
 
-Where a Bible reference is stored directly or linked through `[[bible:...]]`, it must use OSIS.
+Where a Bible reference is stored directly or linked through a `bible` wiki-link, it must use OSIS. In `passages.tsv`, this applies specifically to rows with `locator_type=bible_osis`. Rows with `locator_type=source_ref` may use non-OSIS citation systems such as `Antiquities 18.116-119` or `1QS 5.7-13`.
 
 Valid examples:
 
@@ -320,7 +320,8 @@ The proposition model replaces the old flat doctrine model.
 |---|---|---:|---|
 | `passage_id` | string | yes | Stable slug PK |
 | `source_id` | string FK→sources | yes | Parent source |
-| `locator` | string | yes | Section/page/chapter/canon/line/etc. If a biblical reference is stored here, it must use OSIS. |
+| `locator_type` | enum | yes | `bible_osis` for canonical Bible passages fetched in the UI, `source_ref` for non-biblical citation systems |
+| `locator` | string | yes | Section/page/chapter/canon/line/etc. If `locator_type=bible_osis`, the stored locator must use OSIS. |
 | `excerpt` | string | no | Short quote/paraphrase |
 | `language` | string | no | Passage language |
 | `passage_year` | int | no | Optional dated passage year |
@@ -473,7 +474,7 @@ Map rollup for place-by-time visualization.
 
 ## `note_mentions.tsv`
 
-Parsed wiki-links from every markdown-capable TSV field and from markdown files across the project tree.
+Parsed wiki-links from every markdown-capable TSV field and, when markdown scanning is enabled, from markdown files across the configured scan root.
 
 | Column | Type | Required | Rules |
 |---|---|---:|---|
@@ -484,11 +485,11 @@ Parsed wiki-links from every markdown-capable TSV field and from markdown files 
 | `source_path` | string | no | Relative path for markdown-file mentions |
 | `mentioned_type` | enum `mention_target_type` | yes | `entity_type` value or `bible` |
 | `mentioned_id` | string | yes | Entity ID or OSIS reference |
-| `mention_label` | string | no | Optional label from `[[type:id|label]]` |
+| `mention_label` | string | no | Optional label from `\[\[type:id|label\]\]` |
 
 ### Rules
 
-- `note_mentions.tsv` is a project-wide mention index, not an editor-note-only table.
+- `note_mentions.tsv` is a project-wide mention index rooted in markdown-capable TSV fields and optionally expanded with project markdown files.
 - Entity mentions must resolve to existing rows.
 - `mentioned_type=bible` must contain OSIS in `mentioned_id`.
 
@@ -600,10 +601,10 @@ Validation must enforce all of the following:
    - all `notes` fields
    - all `*_md` fields
    - markdown files in the project tree
-4. **Bible references use OSIS.**
-   - `[[bible:...]]` mentions must validate as OSIS
+4. **Bible references use OSIS where declared.**
+   - `bible` wiki-links must validate as OSIS
    - any field whose name contains `osis` must validate as OSIS
-   - any biblical reference stored in `passages.locator` must use OSIS
+   - any `passages.tsv` row with `locator_type=bible_osis` must use OSIS
 5. **Derived tables are regenerated, never hand-edited.**
 6. **Group continuity is merged.** Overlapping or directly adjacent identical active `controls_place` / `group_present_at` claim intervals are invalid and must be merged into one claim.
 7. **No duplicate active logical claims.**

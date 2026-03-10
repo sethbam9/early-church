@@ -38,11 +38,11 @@ Never edit these manually. They are rewritten by validation.
 
 | File | Produced by |
 |---|---|
-| `data/derived/entity_place_footprints.tsv` | `python generate_derived_tables.py` |
-| `data/derived/place_state_by_decade.tsv` | `python generate_derived_tables.py` |
-| `data/derived/first_attestations.tsv` | `python generate_derived_tables.py` |
-| `data/derived/proposition_place_presence.tsv` | `python generate_derived_tables.py` |
-| `data/derived/note_mentions.tsv` | `python generate_derived_tables.py` |
+| `data/derived/entity_place_footprints.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
+| `data/derived/place_state_by_decade.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
+| `data/derived/first_attestations.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
+| `data/derived/proposition_place_presence.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
+| `data/derived/note_mentions.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
 
 ---
 
@@ -131,17 +131,17 @@ Use the canonical validator after every batch:
 python3 scripts/validate_canonical_data.py --data-dir data
 ```
 
-If you want to validate only canonical source tables and temporarily ignore unresolved markdown links in `data/essays/`, use:
+If you want to include project markdown files such as `data/essays/` and `docs/` in the mention/link scan, use:
 
 ```bash
-python3 scripts/validate_canonical_data.py --data-dir data --scan-root data/sheets
+python3 scripts/validate_canonical_data.py --data-dir data --check-markdown --scan-root .
 ```
 
 This does all of the following:
 
 - validates headers and enums
 - validates foreign keys
-- validates wiki-links in TSV markdown fields and markdown files
+- validates wiki-links in TSV markdown fields and, when enabled, markdown files under the scan root
 - validates OSIS Bible references
 - rewrites tables into canonical sorted order
 - regenerates stale derived files
@@ -235,19 +235,19 @@ python3 scripts/validate_canonical_data.py --data-dir data
 For source-table-only validation while ignoring unresolved essay links:
 
 ```bash
-python3 scripts/validate_canonical_data.py --data-dir data --scan-root data/sheets
+python3 scripts/validate_canonical_data.py --data-dir data
 ```
 
-Optional explicit derivation run:
+Optional sparse-connectivity report:
 
 ```bash
-python3 scripts/generate_derived_tables.py --data-dir data
+python3 scripts/validate_canonical_data.py --data-dir data --check-sparse
 ```
 
 To scan a different directory for markdown mentions:
 
 ```bash
-python3 scripts/validate_canonical_data.py --data-dir data --scan-root data/essays
+python3 scripts/validate_canonical_data.py --data-dir data --check-markdown --scan-root data/essays
 ```
 
 Normal practice:

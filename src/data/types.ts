@@ -42,6 +42,7 @@ export type DimensionKind = "binary" | "multivalue" | "continuum" | "descriptive
 export type SourceKind =
   | "primary_text" | "inscription" | "manuscript_catalog" | "modern_book"
   | "journal_article" | "reference_work" | "web_page" | "database" | "other";
+export type PassageLocatorType = "bible_osis" | "source_ref";
 
 export type EditorNoteKind = "commentary" | "todo" | "dispute" | "migration" | "rationale";
 
@@ -182,6 +183,7 @@ export interface SourceRecord {
 export interface Passage {
   passage_id: string;
   source_id: string;
+  locator_type: PassageLocatorType;
   locator: string;
   excerpt: string;
   language: string;

@@ -1,5 +1,15 @@
 claim_id	subject_type	subject_id	predicate_id	object_mode	object_type	object_id	value_text	value_number	value_year	value_boolean	year_start	year_end	context_place_id	certainty	polarity	claim_status	created_by	updated_at
+clm-group-samaritans-samaria	group	samaritans	group_present_at	entity	place	samaria					-200	100		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-sirach-repentance	work	sirach	work_affirms_proposition	entity	proposition	repentance-is-required					-180	-180		probable	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-group-qumran-community-qumran	group	qumran-community	group_present_at	entity	place	qumran					-150	68		probable	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-place-qumran-attested	place	qumran	place_presence_status	text			attested				-150	68		probable	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-group-essenes-judea	group	essenes	group_present_at	entity	place	judea					-150	70		probable	not_applicable	active	cascade	2026-03-10T04:20:00Z
+clm-community-rule-repentance	work	community-rule	work_affirms_proposition	entity	proposition	repentance-is-required					-100	-100		probable	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-first-enoch-judgment	work	first-enoch	work_affirms_proposition	entity	proposition	final-judgment-is-coming					-100	-100		probable	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-damascus-document-repentance	work	damascus-document	work_affirms_proposition	entity	proposition	repentance-is-required					-50	-50		probable	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-psalms-of-solomon-judgment	work	psalms-of-solomon	work_affirms_proposition	entity	proposition	final-judgment-is-coming					-50	-50		probable	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-war-scroll-judgment	work	war-scroll	work_affirms_proposition	entity	proposition	final-judgment-is-coming					-50	-50		probable	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-wisdom-judgment	work	wisdom-of-solomon	work_affirms_proposition	entity	proposition	final-judgment-is-coming					-30	-30		probable	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-caiaphas-active-jerusalem	person	caiaphas	active_in	entity	place	jerusalem					18	36		probable	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-pilate-active-judea	person	pontius-pilate	active_in	entity	place	judea					26	36		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-baptism-at-bethany	event	baptism-of-jesus	event_occurs_at	entity	place	bethany-beyond-the-jordan					27	27		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
@@ -11,9 +21,11 @@ clm-johnb-group	person	john-the-baptist	member_of_group	entity	group	followers-o
 clm-group-pharisees-judea	group	pharisees	group_present_at	entity	place	judea					27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-group-sadducees-jerusalem	group	sadducees	group_present_at	entity	place	jerusalem					27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-jesus-active-galilee	person	jesus-of-nazareth	active_in	entity	place	galilee					27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-jesus-active-nazareth	person	jesus-of-nazareth	active_in	entity	place	nazareth					27	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-place-galilee-attested	place	galilee	place_presence_status	text			attested				27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-place-jerusalem-attested	place	jerusalem	place_presence_status	text			attested				27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-place-judea-attested	place	judea	place_presence_status	text			attested				27	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-place-nazareth-attested	place	nazareth	place_presence_status	text			attested				27	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-group-roman-empire-judea	group	roman-empire	controls_place	entity	place	judea					27	66		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-andrew-in-calling	person	andrew	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-calling-at-capernaum	event	calling-of-the-first-disciples	event_occurs_at	entity	place	capernaum					28	28		probable	not_applicable	active	seed-script	2026-03-09T00:00:00Z
@@ -24,21 +36,45 @@ clm-john-in-calling	person	john-son-of-zebedee	participant_in	entity	event	calli
 clm-peter-in-calling	person	simon-peter	participant_in	entity	event	calling-of-the-first-disciples					28	28	capernaum	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-sermon-at-galilee	event	sermon-on-the-mount	event_occurs_at	entity	place	galilee					28	28		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-andrew-disciple	person	andrew	member_of_group	entity	group	disciples-of-jesus					28	30	galilee	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-bartholomew-active-galilee	person	bartholomew	active_in	entity	place	galilee					28	30		probable	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-bartholomew-disciple	person	bartholomew	member_of_group	entity	group	disciples-of-jesus					28	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-group-disciples-galilee	group	disciples-of-jesus	group_present_at	entity	place	galilee					28	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-group-herodians-galilee	group	herodians	group_present_at	entity	place	galilee					28	30		attested	not_applicable	active	cascade	2026-03-10T06:40:00Z
 clm-james-disciple	person	james-son-of-zebedee	member_of_group	entity	group	disciples-of-jesus					28	30	galilee	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-john-disciple	person	john-son-of-zebedee	member_of_group	entity	group	disciples-of-jesus					28	30	galilee	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-mary-magdalene-active-galilee	person	mary-magdalene	active_in	entity	place	galilee					28	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-mary-magdalene-disciple	person	mary-magdalene	member_of_group	entity	group	disciples-of-jesus					28	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-matthew-active-galilee	person	matthew-the-apostle	active_in	entity	place	galilee					28	30		probable	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-matthew-disciple	person	matthew-the-apostle	member_of_group	entity	group	disciples-of-jesus					28	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-nathanael-active-cana	person	nathanael	active_in	entity	place	cana					28	30		probable	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-nathanael-disciple	person	nathanael	member_of_group	entity	group	disciples-of-jesus					28	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-peter-disciple	person	simon-peter	member_of_group	entity	group	disciples-of-jesus					28	30	galilee	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-philip-apostle-active-bethsaida	person	philip-the-apostle	active_in	entity	place	bethsaida					28	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-philip-apostle-disciple	person	philip-the-apostle	member_of_group	entity	group	disciples-of-jesus					28	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-place-bethsaida-attested	place	bethsaida	place_presence_status	text			attested				28	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-place-cana-attested	place	cana	place_presence_status	text			attested				28	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-thomas-disciple	person	thomas	member_of_group	entity	group	disciples-of-jesus					28	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-lazarus-active-bethany	person	lazarus-of-bethany	active_in	entity	place	bethany-near-jerusalem					29	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-martha-active-bethany	person	martha-of-bethany	active_in	entity	place	bethany-near-jerusalem					29	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-place-bethany-near-jerusalem-attested	place	bethany-near-jerusalem	place_presence_status	text			attested				29	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-caiaphas-in-temple-era	person	caiaphas	participant_in	entity	event	temple-cleansing					30	30	jerusalem	possible	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-group-disciples-judea	group	disciples-of-jesus	group_present_at	entity	place	judea					30	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-group-herodians-jerusalem	group	herodians	group_present_at	entity	place	jerusalem					30	30		attested	not_applicable	active	cascade	2026-03-10T06:40:00Z
 clm-jesus-active-judea	person	jesus-of-nazareth	active_in	entity	place	judea					30	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
 clm-jesus-in-temple	person	jesus-of-nazareth	participant_in	entity	event	temple-cleansing					30	30	jerusalem	attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-joseph-arimathea-active-jerusalem	person	joseph-of-arimathea	active_in	entity	place	jerusalem					30	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-mary-magdalene-active-jerusalem	person	mary-magdalene	active_in	entity	place	jerusalem					30	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-mary-mother-active-jerusalem	person	mary-mother-of-jesus	active_in	entity	place	jerusalem					30	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-mary-mother-disciple	person	mary-mother-of-jesus	member_of_group	entity	group	disciples-of-jesus					30	30	jerusalem	probable	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-nicodemus-active-jerusalem	person	nicodemus	active_in	entity	place	jerusalem					30	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-place-jericho-attested	place	jericho	place_presence_status	text			attested				30	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-temple-at-jerusalem	event	temple-cleansing	event_occurs_at	entity	place	jerusalem					30	30		attested	not_applicable	active	seed-script	2026-03-09T00:00:00Z
+clm-thomas-active-jerusalem	person	thomas	active_in	entity	place	jerusalem					30	30		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-james-active-jerusalem	person	james-the-just	active_in	entity	place	jerusalem					30	62		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-james-just-disciple	person	james-the-just	member_of_group	entity	group	disciples-of-jesus					30	62		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-james-just-jerusalem-church	person	james-the-just	member_of_group	entity	group	jerusalem-church					30	62	jerusalem	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-group-jerusalem-church-jerusalem	group	jerusalem-church	group_present_at	entity	place	jerusalem					30	70		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-acts-resurrection	work	acts-of-the-apostles	work_affirms_proposition	entity	proposition	jesus-is-proclaimed-as-raised					30	90		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-stephen-active-jerusalem	person	stephen	active_in	entity	place	jerusalem					33	34		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-stephen-jerusalem-church	person	stephen	member_of_group	entity	group	jerusalem-church					33	34	jerusalem	attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-group-disciples-samaria	group	disciples-of-jesus	group_present_at	entity	place	samaria					33	35		attested	not_applicable	active	cascade	2026-03-10T05:05:00Z
@@ -68,6 +104,7 @@ clm-place-caesarea-attested-early	place	caesarea	place_presence_status	text			at
 clm-group-antioch-church-antioch	group	antioch-church	group_present_at	entity	place	antioch					40	70		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-barnabas-active-antioch	person	barnabas	active_in	entity	place	antioch					42	48		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-barnabas-disciple	person	barnabas	member_of_group	entity	group	disciples-of-jesus					42	61		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-barnabas-coworker-john-mark	person	barnabas	coworker_of	entity	person	john-mark					44	48		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-barnabas-coworker-paul	person	barnabas	coworker_of	entity	person	paul					44	48	antioch	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-paul-active-antioch	person	paul	active_in	entity	place	antioch					44	48		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-barnabas-active-cyprus	person	barnabas	active_in	entity	place	cyprus					46	46		attested	not_applicable	active	cascade	2026-03-10T05:30:00Z
@@ -84,8 +121,11 @@ clm-barnabas-in-council	person	barnabas	participant_in	entity	event	council-of-j
 clm-council-at-jerusalem	event	council-of-jerusalem	event_occurs_at	entity	place	jerusalem					49	49		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-galatians-addressed-galatia	work	epistle-to-the-galatians	addressed_to_place	entity	place	galatia					49	49		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-galatians-gentiles	work	epistle-to-the-galatians	work_affirms_proposition	entity	proposition	gentile-believers-need-not-be-circumcised					49	49	galatia	attested	supports	active	seed-script	2026-03-10T00:00:00Z
+clm-james-gentile-inclusion	person	james-the-just	person_affirms_proposition	entity	proposition	gentile-believers-need-not-be-circumcised					49	49	jerusalem	attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-james-just-in-council	person	james-the-just	participant_in	entity	event	council-of-jerusalem					49	49	jerusalem	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-paul-gentile-inclusion	person	paul	person_affirms_proposition	entity	proposition	gentile-believers-need-not-be-circumcised					49	49	jerusalem	attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-paul-in-council	person	paul	participant_in	entity	event	council-of-jerusalem					49	49	jerusalem	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-peter-gentile-inclusion	person	simon-peter	person_affirms_proposition	entity	proposition	gentile-believers-need-not-be-circumcised					49	49	jerusalem	attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-peter-in-council	person	simon-peter	participant_in	entity	event	council-of-jerusalem					49	49	jerusalem	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-place-lystra-attested	place	lystra	place_presence_status	text			attested				49	49		attested	not_applicable	active	cascade	2026-03-10T09:00:00Z
 clm-timothy-active-lystra	person	timothy	active_in	entity	place	lystra					49	49		attested	not_applicable	active	cascade	2026-03-10T09:00:00Z
@@ -95,6 +135,7 @@ clm-silas-active-thessalonica	person	silas	active_in	entity	place	thessalonica		
 clm-lydia-active-philippi	person	lydia	active_in	entity	place	philippi					49	60		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-lydia-disciple	person	lydia	member_of_group	entity	group	disciples-of-jesus					49	60		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-lydia-philippian-church	person	lydia	member_of_group	entity	group	philippian-church					49	60	philippi	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-aquila-coworker-priscilla	person	aquila	coworker_of	entity	person	priscilla					49	64		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-group-disciples-rome	group	disciples-of-jesus	group_present_at	entity	place	rome					49	70		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-group-philippian-church-philippi	group	philippian-church	group_present_at	entity	place	philippi					49	70		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-group-roman-empire-philippi	group	roman-empire	controls_place	entity	place	philippi					49	70		probable	not_applicable	active	seed-script	2026-03-10T00:00:00Z
@@ -116,7 +157,10 @@ clm-paul-active-corinth	person	paul	active_in	entity	place	corinth					50	52		at
 clm-paul-coworker-silas	person	paul	coworker_of	entity	person	silas					50	52	corinth	attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-priscilla-active-corinth	person	priscilla	active_in	entity	place	corinth					50	52		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-silas-active-corinth	person	silas	active_in	entity	place	corinth					50	52		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-silas-coworker-timothy	person	silas	coworker_of	entity	person	timothy					50	52		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-titius-justus-active-corinth	person	titius-justus	active_in	entity	place	corinth					50	52		attested	not_applicable	active	cascade	2026-03-10T08:20:00Z
+clm-aquila-coworker-paul	person	aquila	coworker_of	entity	person	paul					50	57		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-paul-coworker-priscilla	person	paul	coworker_of	entity	person	priscilla					50	57		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-paul-coworker-timothy	person	paul	coworker_of	entity	person	timothy					50	61		probable	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-silas-disciple	person	silas	member_of_group	entity	group	disciples-of-jesus					50	64		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-group-corinthian-church-corinth	group	corinthian-church	group_present_at	entity	place	corinth					50	70		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
@@ -144,6 +188,8 @@ clm-place-achaia-attested	place	achaia	place_presence_status	text			attested				
 clm-second-corinthians-addressed-achaia	work	second-epistle-to-the-corinthians	addressed_to_place	entity	place	achaia					55	56		attested	not_applicable	active	cascade	2026-03-10T06:05:00Z
 clm-second-corinthians-addressed-corinth	work	second-epistle-to-the-corinthians	addressed_to_place	entity	place	corinth					55	56		attested	not_applicable	active	cascade	2026-03-10T06:05:00Z
 clm-second-corinthians-resurrection	work	second-epistle-to-the-corinthians	work_affirms_proposition	entity	proposition	jesus-is-proclaimed-as-raised					55	56		attested	supports	active	cascade	2026-03-10T06:05:00Z
+clm-paul-coworker-titus	person	paul	coworker_of	entity	person	titus					55	65		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-phoebe-active-corinth	person	phoebe	active_in	entity	place	corinth					56	57		probable	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-agabus-active-judea	person	agabus	active_in	entity	place	judea					57	57		attested	not_applicable	active	cascade	2026-03-10T09:40:00Z
 clm-ananias-high-priest-active-caesarea	person	ananias-high-priest	active_in	entity	place	caesarea					57	57		attested	not_applicable	active	cascade	2026-03-10T11:50:00Z
 clm-aristarchus-active-thessalonica	person	aristarchus	active_in	entity	place	thessalonica					57	57		attested	not_applicable	active	cascade	2026-03-10T08:30:00Z
@@ -167,6 +213,7 @@ clm-place-samos-attested	place	samos	place_presence_status	text			attested				57
 clm-place-troas-attested	place	troas	place_presence_status	text			attested				57	57		attested	not_applicable	active	cascade	2026-03-10T05:50:00Z
 clm-place-tyre-attested	place	tyre	place_presence_status	text			attested				57	57		attested	not_applicable	active	cascade	2026-03-10T05:50:00Z
 clm-romans-addressed-rome	work	epistle-to-the-romans	addressed_to_place	entity	place	rome					57	57		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
+clm-romans-resurrection	work	epistle-to-the-romans	work_affirms_proposition	entity	proposition	jesus-is-proclaimed-as-raised					57	57		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-secundus-active-thessalonica	person	secundus	active_in	entity	place	thessalonica					57	57		attested	not_applicable	active	cascade	2026-03-10T08:30:00Z
 clm-sopater-active-berea	person	sopater	active_in	entity	place	berea					57	57		attested	not_applicable	active	cascade	2026-03-10T08:30:00Z
 clm-tertullus-active-caesarea	person	tertullus	active_in	entity	place	caesarea					57	57		attested	not_applicable	active	cascade	2026-03-10T11:40:00Z
@@ -178,6 +225,7 @@ clm-felix-active-caesarea	person	felix	active_in	entity	place	caesarea					57	59
 clm-group-disciples-caesarea-late	group	disciples-of-jesus	group_present_at	entity	place	caesarea					57	62		attested	not_applicable	active	cascade	2026-03-10T05:05:00Z
 clm-philip-evangelist-active-caesarea	person	philip-the-evangelist	active_in	entity	place	caesarea					57	62		attested	not_applicable	active	cascade	2026-03-10T05:05:00Z
 clm-place-caesarea-attested-late	place	caesarea	place_presence_status	text			attested				57	62		attested	not_applicable	active	cascade	2026-03-10T05:05:00Z
+clm-luke-coworker-paul	person	luke-the-evangelist	coworker_of	entity	person	paul					57	64		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-julius-active-sidon	person	julius	active_in	entity	place	sidon					59	59		attested	not_applicable	active	cascade	2026-03-10T09:20:00Z
 clm-paul-active-fair-havens	person	paul	active_in	entity	place	fair-havens					59	59		attested	not_applicable	active	cascade	2026-03-10T06:25:00Z
 clm-paul-active-myra	person	paul	active_in	entity	place	myra					59	59		attested	not_applicable	active	cascade	2026-03-10T06:55:00Z
@@ -215,9 +263,19 @@ clm-place-three-taverns-attested	place	three-taverns	place_presence_status	text	
 clm-publius-active-malta	person	publius	active_in	entity	place	malta					60	60		attested	not_applicable	active	cascade	2026-03-10T07:45:00Z
 clm-apphia-disciple	person	apphia	member_of_group	entity	group	disciples-of-jesus					60	62	colossae	attested	not_applicable	active	cascade	2026-03-10T06:12:00Z
 clm-archippus-disciple	person	archippus	member_of_group	entity	group	disciples-of-jesus					60	62	colossae	attested	not_applicable	active	cascade	2026-03-10T06:12:00Z
+clm-epaphras-active-colossae	person	epaphras	active_in	entity	place	colossae					60	62		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-epaphras-colossian-church	person	epaphras	member_of_group	entity	group	colossian-church					60	62		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-epaphras-coworker-paul	person	epaphras	coworker_of	entity	person	paul					60	62		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-epaphroditus-active-philippi	person	epaphroditus	active_in	entity	place	philippi					60	62		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-epaphroditus-philippian-church	person	epaphroditus	member_of_group	entity	group	philippian-church					60	62		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-euodia-active-philippi	person	euodia	active_in	entity	place	philippi					60	62		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-euodia-philippian-church	person	euodia	member_of_group	entity	group	philippian-church					60	62		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-onesimus-disciple	person	onesimus	member_of_group	entity	group	disciples-of-jesus					60	62	colossae	attested	not_applicable	active	cascade	2026-03-10T06:12:00Z
 clm-paul-active-rome	person	paul	active_in	entity	place	rome					60	62		attested	not_applicable	active	seed-script	2026-03-10T00:00:00Z
 clm-philemon-disciple	person	philemon	member_of_group	entity	group	disciples-of-jesus					60	62	colossae	attested	not_applicable	active	cascade	2026-03-10T06:12:00Z
+clm-syntyche-active-philippi	person	syntyche	active_in	entity	place	philippi					60	62		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-syntyche-philippian-church	person	syntyche	member_of_group	entity	group	philippian-church					60	62		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-luke-active-rome	person	luke-the-evangelist	active_in	entity	place	rome					60	64		attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-philippians-addressed-philippi	work	epistle-to-the-philippians	addressed_to_place	entity	place	philippi					61	61		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-first-peter-addressed-asia	work	first-epistle-of-peter	addressed_to_place	entity	place	asia					62	64		attested	not_applicable	active	cascade	2026-03-10T05:05:00Z
 clm-first-peter-addressed-bithynia	work	first-epistle-of-peter	addressed_to_place	entity	place	bithynia					62	64		attested	not_applicable	active	cascade	2026-03-10T05:05:00Z
@@ -239,16 +297,29 @@ clm-group-disciples-crete	group	disciples-of-jesus	group_present_at	entity	place
 clm-place-crete-attested	place	crete	place_presence_status	text			attested				63	64		attested	not_applicable	active	cascade	2026-03-10T05:50:00Z
 clm-titus-active-crete	person	titus	active_in	entity	place	crete					63	64		attested	not_applicable	active	cascade	2026-03-10T05:50:00Z
 clm-timothy-active-ephesus	person	timothy	active_in	entity	place	ephesus					63	65		attested	not_applicable	active	cascade	2026-03-10T06:05:00Z
+clm-first-timothy-addressed-ephesus	work	first-epistle-to-timothy	addressed_to_place	entity	place	ephesus					64	64	ephesus	attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-place-nicopolis-attested	place	nicopolis	place_presence_status	text			attested				64	64		attested	not_applicable	active	cascade	2026-03-10T05:50:00Z
+clm-titus-addressed-crete	work	epistle-to-titus	addressed_to_place	entity	place	crete					64	64	crete	attested	not_applicable	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-hebrews-resurrection	work	epistle-to-the-hebrews	work_affirms_proposition	entity	proposition	jesus-is-proclaimed-as-raised					65	65		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-carpus-active-troas	person	carpus	active_in	entity	place	troas					66	66		attested	not_applicable	active	cascade	2026-03-10T07:05:00Z
 clm-crescens-active-galatia	person	crescens	active_in	entity	place	galatia					66	66		attested	not_applicable	active	cascade	2026-03-10T07:15:00Z
 clm-demas-active-thessalonica-late	person	demas	active_in	entity	place	thessalonica					66	66		attested	not_applicable	active	cascade	2026-03-10T07:15:00Z
 clm-erastus-active-corinth-late	person	erastus	active_in	entity	place	corinth					66	66		attested	not_applicable	active	cascade	2026-03-10T07:05:00Z
 clm-place-dalmatia-attested	place	dalmatia	place_presence_status	text			attested				66	66		attested	not_applicable	active	cascade	2026-03-10T07:25:00Z
+clm-second-timothy-resurrection	work	second-epistle-to-timothy	work_affirms_proposition	entity	proposition	jesus-is-proclaimed-as-raised					66	66		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-titus-active-dalmatia	person	titus	active_in	entity	place	dalmatia					66	66		attested	not_applicable	active	cascade	2026-03-10T07:25:00Z
 clm-trophimus-active-miletus	person	trophimus	active_in	entity	place	miletus					66	66		attested	not_applicable	active	cascade	2026-03-10T07:05:00Z
 clm-tychicus-active-ephesus	person	tychicus	active_in	entity	place	ephesus					66	66		attested	not_applicable	active	cascade	2026-03-10T07:15:00Z
 clm-group-zealots-jerusalem	group	zealots	group_present_at	entity	place	jerusalem					66	70		attested	not_applicable	active	cascade	2026-03-10T05:20:00Z
+clm-second-peter-judgment	work	second-epistle-of-peter	work_affirms_proposition	entity	proposition	final-judgment-is-coming					67	67		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-jude-judgment	work	epistle-of-jude	work_affirms_proposition	entity	proposition	final-judgment-is-coming					70	70		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-mark-kingdom	work	gospel-of-mark	work_affirms_proposition	entity	proposition	kingdom-of-god-has-drawn-near					70	70	galilee	attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-mark-repentance	work	gospel-of-mark	work_affirms_proposition	entity	proposition	repentance-is-required					70	70	galilee	attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-matthew-repentance	work	gospel-of-matthew	work_affirms_proposition	entity	proposition	repentance-is-required					80	80		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-luke-repentance	work	gospel-of-luke	work_affirms_proposition	entity	proposition	repentance-is-required					85	85		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-first-john-christ	work	first-epistle-of-john	work_affirms_proposition	entity	proposition	jesus-is-the-christ					90	90		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-gospel-john-christ	work	gospel-of-john	work_affirms_proposition	entity	proposition	jesus-is-the-christ					90	90		attested	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
+clm-john-christ	person	john-son-of-zebedee	person_affirms_proposition	entity	proposition	jesus-is-the-christ					90	90		probable	supports	active	openai-manual-edit	2026-03-10T16:00:00Z
 clm-group-laodicean-church-laodicea-rev	group	laodicean-church	group_present_at	entity	place	laodicea					95	95		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-group-pergamum-church-pergamum	group	pergamum-church	group_present_at	entity	place	pergamum					95	95		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z
 clm-group-philadelphia-church-philadelphia-asia	group	philadelphia-church	group_present_at	entity	place	philadelphia-asia					95	95		attested	not_applicable	active	cascade	2026-03-10T04:20:00Z

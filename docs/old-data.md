@@ -87,7 +87,7 @@
 
 ### 4. `notes.tsv` [SOURCE]
 
-**No change.** Evidence notes indexed by their primary entity. Mention tags `[[type:id]]` in `body_md` are parsed into `note_mentions.tsv` by the derive pipeline.
+**No change.** Evidence notes indexed by their primary entity. Mention tags `\[\[type:id\]\]` in `body_md` are parsed into `note_mentions.tsv` by the derive pipeline.
 
 | Column | Type | Notes |
 |---|---|---|
@@ -263,7 +263,7 @@ Derive command: `npm run data:derive-footprints`
 
 ### D3. `note_mentions.tsv` ← `notes.tsv` body_md parsing [NEW DERIVATION]
 
-Parsed from all `[[type:id]]` and `[[type:id|label]]` mention tags found in `body_md` of every note.
+Parsed from all `\[\[type:id\]\]` and `\[\[type:id|label\]\]` mention tags found in `body_md` of every note.
 
 | Column | Type | Notes |
 |---|---|---|
@@ -373,7 +373,7 @@ npm run data:validate           # runs all three derives, then validates FKs/hea
 | Record Ignatius was bishop of Antioch | `relations.tsv`: `person:ignatius → bishop_of → city:antioch-antakya` | footprint: person `ignatius` → `city:antioch-antakya` |
 | Record that Ignatius's letters affirm monarchical episcopacy | `relations.tsv`: `work:ignatius-epistles → affirms → doctrine:monarchical-episcopacy` | footprint: doctrine `monarchical-episcopacy` → `city:antioch-antakya`, stance=affirms |
 | Record Origen condemned adoptionism | `relations.tsv`: `person:origen → condemns → doctrine:adoptionist-monarchianism` | footprint: doctrine → every city Origen was active_in (Caesarea, Alexandria, Tyre...), stance=condemns |
-| Add a note mentioning Tertullian | `notes.tsv`: body contains `[[person:tertullian]]` | `note_mentions.tsv`: note → person:tertullian |
+| Add a note mentioning Paul | `notes.tsv`: body contains `[[person:paul]]` | `note_mentions.tsv`: note → person:paul |
 
 ### Files removed from the ID-rename checklist
 - `entity_place_footprints.tsv` — now derived, updated by script

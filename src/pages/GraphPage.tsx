@@ -6,6 +6,7 @@ import { useAppStore } from "../stores/appStore";
 import { type GraphNode, type GraphEdge, runForceSync } from "../utils/forceLayout";
 import { KIND_ICONS } from "../components/shared/entityConstants";
 import { ClaimCard } from "../components/shared/RelationCard";
+import { formatPassageLocator } from "../utils/passageReferences";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -401,7 +402,7 @@ export function GraphPage() {
                     <div style={{ marginTop: 4 }}>
                       {evidence.map((ev) => {
                         const passage = dataStore.passages.getById(ev.passage_id);
-                        return <div key={ev.passage_id} className="faint">{ev.evidence_role}{passage ? ` — ${passage.locator}` : ""}</div>;
+                        return <div key={ev.passage_id} className="faint">{ev.evidence_role}{passage ? ` — ${formatPassageLocator(passage)}` : ""}</div>;
                       })}
                     </div>
                   )}

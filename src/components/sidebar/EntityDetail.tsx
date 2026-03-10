@@ -9,8 +9,7 @@ import { NoteCard } from "../shared/NoteCard";
 import { kindIcon, kindLabel } from "../shared/entityConstants";
 import { ClaimCard } from "../shared/RelationCard";
 import { FootprintCard } from "../shared/FootprintCard";
-import { BibleOverlay } from "../shared/BibleOverlay";
-import { locatorToDisplay } from "../../utils/bibleApi";
+import { PassageReference } from "../shared/PassageReference";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -378,7 +377,6 @@ function WorkPeopleTab({ people, onSelectEntity }: {
   onSelectEntity: (kind: string, id: string) => void;
 }) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const [bibleLocator, setBibleLocator] = useState<string | null>(null);
   const { page, setPage, pageItems, total, pageSize } = usePaginatedList(people, PAGE_SIZE);
 
   if (people.length === 0) return <div className="empty-state">No people found.</div>;
@@ -424,16 +422,7 @@ function WorkPeopleTab({ people, onSelectEntity }: {
                   return (
                     <div key={`${ev.claim_id}-${ev.passage_id}`} className="evidence-item">
                       <span className="faint">{ev.evidence_role}</span>
-                      {passage && (
-                        <button
-                          type="button"
-                          className="bible-ref-btn evidence-locator"
-                          onClick={(e) => { e.stopPropagation(); setBibleLocator(passage.locator); }}
-                          title={`Look up ${locatorToDisplay(passage.locator)}`}
-                        >
-                          {locatorToDisplay(passage.locator)}
-                        </button>
-                      )}
+                      {passage && <PassageReference passage={passage} source={source} />}
                       {passage?.excerpt && <div className="evidence-excerpt">{passage.excerpt}</div>}
                       {source?.url && (
                         <a href={source.url} target="_blank" rel="noopener noreferrer" className="citation-link evidence-source">
@@ -450,9 +439,6 @@ function WorkPeopleTab({ people, onSelectEntity }: {
       })}
       <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
 
-      {bibleLocator && (
-        <BibleOverlay locator={bibleLocator} onClose={() => setBibleLocator(null)} />
-      )}
     </div>
   );
 }

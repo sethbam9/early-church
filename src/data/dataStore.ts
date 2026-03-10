@@ -4,7 +4,7 @@ import { parseTsv, int, float, splitSemi, str } from "./parseTsv";
 
 export type {
   PlaceKind, LocationPrecision, PresenceStatus, PersonKind, WorkType, WorkKind,
-  EventType, EventKind, GroupKind, TopicKind, DimensionKind, SourceKind,
+  EventType, EventKind, GroupKind, TopicKind, DimensionKind, SourceKind, PassageLocatorType,
   EditorNoteKind, Certainty, Polarity, ClaimStatus, EvidenceRole,
   ReviewStatus, ReviewConfidence, ObjectMode, DerivedStance, Stance,
   CanonicalSortRule, MentionSourceType,
@@ -185,6 +185,7 @@ const sources: SourceRecord[] = parseTsv(sourcesRaw).map((r) => ({
 const passages: Passage[] = parseTsv(passagesRaw).map((r) => ({
   passage_id: str(r.passage_id),
   source_id: str(r.source_id),
+  locator_type: str(r.locator_type) as Passage["locator_type"],
   locator: str(r.locator),
   excerpt: str(r.excerpt),
   language: str(r.language),
