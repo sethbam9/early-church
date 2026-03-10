@@ -1,5 +1,6 @@
 import type { Passage, SourceRecord } from "../data/types";
 import { locatorToDisplay, osisToStepBibleUrl } from "./bibleApi";
+import { getSourceExternalUrl } from "./sourceLinks";
 
 export function isBiblePassage(passage: Passage | null | undefined): boolean {
   return passage?.locator_type === "bible_osis";
@@ -17,5 +18,5 @@ export function getPassageUrl(
   if (!passage) return "";
   if (passage.url_override) return passage.url_override;
   if (isBiblePassage(passage)) return osisToStepBibleUrl(passage.locator);
-  return source?.url ?? "";
+  return getSourceExternalUrl(source);
 }

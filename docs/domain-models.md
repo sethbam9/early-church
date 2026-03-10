@@ -354,6 +354,7 @@ export interface PredicateType extends AuditFields {
 
 export interface SourceRecord extends AuditFields {
   source_id: Id;
+  work_id: Id | null;
   source_kind: SourceKind;
   title: string;
   author: string | null;

@@ -4,6 +4,7 @@ group	qumran-community	qumran	-150	68	group_present_at		path-9f13434023c7d910
 group	essenes	judea	-150	70	group_present_at		path-523bd0ddd0dfb430
 person	caiaphas	jerusalem	18	36	active_in		path-14ff57a8dbdea411
 person	pontius-pilate	judea	26	36	active_in		path-d6e01aab1c887ccb
+person	herod-antipas	galilee	26	39	active_in		path-aa05c99d6a326761
 event	baptism-of-jesus	bethany-beyond-the-jordan	27	27	event_occurs_at		path-a73a2cb0e166a12d
 group	followers-of-john-the-baptist	wilderness-of-judea	27	28	group_present_at		path-fbf574ba88c39de9
 person	john-the-baptist	wilderness-of-judea	27	28	active_in		path-11f79275ca29126f
@@ -32,6 +33,7 @@ person	nathanael	cana	28	30	active_in		path-bd086b8877aa3299
 person	philip-the-apostle	bethsaida	28	30	active_in		path-60eacb05bf4021bb
 person	lazarus-of-bethany	bethany-near-jerusalem	29	30	active_in		path-56bc1354f71ca8d4
 person	martha-of-bethany	bethany-near-jerusalem	29	30	active_in		path-14dee1074e46519e
+event	crucifixion-of-jesus	jerusalem	30	30	event_occurs_at		path-dced6e7ffba7f8fe
 proposition	disciples-are-called-to-follow-jesus	judea	30	30	derived_proposition_presence	affirms	drv-83fbc7ee4d5ba6aa
 group	disciples-of-jesus	judea	30	30	group_present_at		path-661ec0c564f5efe7
 group	herodians	jerusalem	30	30	group_present_at		path-c476066ea54c41ee
@@ -42,6 +44,7 @@ proposition	kingdom-of-god-has-drawn-near	judea	30	30	derived_proposition_presen
 person	mary-magdalene	jerusalem	30	30	active_in		path-a3edad576582e64d
 person	mary-mother-of-jesus	jerusalem	30	30	active_in		path-09ea1964254cdec1
 person	nicodemus	jerusalem	30	30	active_in		path-9ead6c29568aabaf
+event	pentecost	jerusalem	30	30	event_occurs_at		path-4e1ee707d7051e16
 proposition	repentance-is-required	judea	30	30	derived_proposition_presence	affirms	drv-4d1ddd2370435da7
 event	temple-cleansing	jerusalem	30	30	event_occurs_at		path-ac026136fdb02b56
 person	thomas	jerusalem	30	30	active_in		path-8f5aacbcd9099159
@@ -51,6 +54,7 @@ person	stephen	jerusalem	33	34	active_in		path-a8c298a82013ff95
 group	disciples-of-jesus	samaria	33	35	group_present_at		path-9b6af4941b5507f4
 person	philip-the-evangelist	samaria	33	35	active_in		path-ac17d7cd6a55be3b
 person	ananias-of-damascus	damascus	34	34	active_in		path-d0e0f50a1ed5aab6
+event	jerusalem-persecution-after-stephen	jerusalem	34	34	event_occurs_at		path-5c92592e28baa331
 person	judas-damascus-householder	damascus	34	34	active_in		path-591759ee89b0b967
 event	pauls-conversion	damascus	34	34	event_occurs_at		path-5dce05eef909611c
 event	stephens-martyrdom	jerusalem	34	34	event_occurs_at		path-e10d810fc8c756c1
@@ -65,12 +69,17 @@ person	cornelius	caesarea	40	41	active_in		path-b5541ec66da7d7c5
 group	disciples-of-jesus	caesarea	40	41	group_present_at		path-d942ce0550398474
 group	antioch-church	antioch	40	70	group_present_at		path-57f218670bbe808b
 person	barnabas	antioch	42	48	active_in		path-bdb2d08f392949d9
+event	herodian-persecution-of-jerusalem-church	jerusalem	44	44	event_occurs_at		path-aa8cefc2d05ca3de
+event	james-son-of-zebedee-martyrdom	jerusalem	44	44	event_occurs_at		path-e371761876eadadf
 person	paul	antioch	44	48	active_in		path-5cfb62300b5f8761
 person	barnabas	cyprus	46	46	active_in		path-fab850d2633094e2
 group	disciples-of-jesus	paphos	46	46	group_present_at		path-2c8cf944759b7dfd
 person	john-mark	cyprus	46	46	active_in		path-9d6e3eb920b5edfd
+person	lucius-of-cyrene	antioch	46	46	active_in		path-90d1bff9f8c17117
+person	manaen	antioch	46	46	active_in		path-d14bc00c07378805
 person	paul	cyprus	46	46	active_in		path-a88670f1b505aa82
 person	sergius-paulus	paphos	46	46	active_in		path-537f5548a8e28bb3
+person	simeon-called-niger	antioch	46	46	active_in		path-cf62ab27863f0668
 event	council-of-jerusalem	jerusalem	49	49	event_occurs_at		path-19791beadc7cce36
 work	epistle-to-the-galatians	galatia	49	49	addressed_to_place		path-ed0e1a9e989ce7f7
 proposition	gentile-believers-need-not-be-circumcised	antioch	49	49	derived_proposition_presence	affirms	drv-b9693fdd5d8eba38
@@ -92,6 +101,7 @@ proposition	gentile-believers-need-not-be-circumcised	malta	49	49	derived_propos
 proposition	gentile-believers-need-not-be-circumcised	miletus	49	49	derived_proposition_presence	affirms	drv-e6af04d16ac2e245
 proposition	gentile-believers-need-not-be-circumcised	mitylene	49	49	derived_proposition_presence	affirms	drv-7fe47f3b72168ba4
 proposition	gentile-believers-need-not-be-circumcised	myra	49	49	derived_proposition_presence	affirms	drv-2300449e06e8293f
+proposition	gentile-believers-need-not-be-circumcised	nicopolis	49	49	derived_proposition_presence	affirms	drv-98851cbb9cd38bd5
 proposition	gentile-believers-need-not-be-circumcised	puteoli	49	49	derived_proposition_presence	affirms	drv-d8ee7dd379a80c05
 proposition	gentile-believers-need-not-be-circumcised	rhegium	49	49	derived_proposition_presence	affirms	drv-9336cc0c071e57e1
 proposition	gentile-believers-need-not-be-circumcised	rome	49	49	derived_proposition_presence	affirms	drv-9b0b7fb4c3dc5556
@@ -112,6 +122,7 @@ group	philippian-church	philippi	49	70	group_present_at		path-f392536afbf57cc8
 group	roman-empire	philippi	49	70	controls_place		path-c5aa9e66ac7ea014
 person	damaris	athens	50	50	active_in		path-77c7a7f19036a5fc
 person	dionysius	athens	50	50	active_in		path-d1e03a2268cdc2fb
+group	disciples-of-jesus	athens	50	50	group_present_at		path-07c0575533082150
 work	first-epistle-to-the-thessalonians	thessalonica	50	50	addressed_to_place		path-36e48c3f0cc7db16
 proposition	jesus-is-proclaimed-as-raised	thessalonica	50	50	derived_proposition_presence	affirms	drv-38dc62fa70a35ebf
 person	paul	athens	50	50	active_in		path-56db34df1035804d
@@ -127,9 +138,11 @@ person	silas	corinth	50	52	active_in		path-f9edc8c996de3479
 person	titius-justus	corinth	50	52	active_in		path-499a8480e6706fcc
 group	corinthian-church	corinth	50	70	group_present_at		path-95a320cf8dc26648
 group	roman-empire	corinth	50	70	controls_place		path-9080bac0a5dffa51
+proposition	final-judgment-is-coming	thessalonica	51	51	derived_proposition_presence	affirms	drv-bda000b6589ca127
 work	second-epistle-to-the-thessalonians	thessalonica	51	51	addressed_to_place		path-682bb5062ee99fef
 person	gallio	achaia	51	52	active_in		path-5e197c24ff52cf3f
 person	sosthenes	corinth	51	52	active_in		path-ed8a65399b75cfef
+group	followers-of-john-the-baptist	ephesus	52	52	group_present_at		path-40ddeca2516d4630
 person	aquila	ephesus	52	55	active_in		path-de0fd4e987beb842
 person	paul	ephesus	52	55	active_in		path-ef4942d357c0c120
 person	priscilla	ephesus	52	55	active_in		path-8ee4adec6e323b80
@@ -145,6 +158,7 @@ person	apollos	achaia	54	55	active_in		path-d2338468c549067e
 person	aristarchus	ephesus	54	55	active_in		path-8f2e40f1ea6b8a6d
 person	demetrius	ephesus	54	55	active_in		path-0ccde594407396df
 person	tyrannus	ephesus	54	55	active_in		path-53c35ec22aa939fb
+person	nero	rome	54	68	active_in		path-38b6d5786585bedf
 group	disciples-of-jesus	achaia	55	56	group_present_at		path-47a5595b97ae85f5
 proposition	jesus-is-proclaimed-as-raised	achaia	55	56	derived_proposition_presence	affirms	drv-780d822088952cb6
 proposition	jesus-is-proclaimed-as-raised	corinth	55	56	derived_proposition_presence	affirms	drv-2d488b6f3018e866
@@ -153,13 +167,23 @@ work	second-epistle-to-the-corinthians	corinth	55	56	addressed_to_place		path-56
 person	phoebe	corinth	56	57	active_in		path-a0a95d5c38bf8f75
 person	agabus	judea	57	57	active_in		path-d067ab7b20433c8a
 person	ananias-high-priest	caesarea	57	57	active_in		path-597359e3c4e35004
+person	andronicus	rome	57	57	active_in		path-c99106eed7bb5973
 person	aristarchus	thessalonica	57	57	active_in		path-7f703e066fcd84cd
+person	asyncritus	rome	57	57	active_in		path-7530f7b29708f07c
 group	disciples-of-jesus	troas	57	57	group_present_at		path-cac8f1eb851f290b
 group	disciples-of-jesus	tyre	57	57	group_present_at		path-119fea0d8e75067d
 work	epistle-to-the-romans	rome	57	57	addressed_to_place		path-30247de92fa46c4a
 person	gaius-of-derbe	derbe	57	57	active_in		path-1099c02c91a84cc1
+person	hermas	rome	57	57	active_in		path-d2a3ab3ce7ec14fa
+person	hermes	rome	57	57	active_in		path-820f7b7835701235
 proposition	jesus-is-proclaimed-as-raised	rome	57	57	derived_proposition_presence	affirms	drv-85774131af32140c
+person	julia-of-rome	rome	57	57	active_in		path-190af776f17ba04d
+person	junia	rome	57	57	active_in		path-06cf1322e05ab692
+person	mary-of-rome	rome	57	57	active_in		path-9e00fbaf4b6bc080
 person	mnason	cyprus	57	57	active_in		path-e3771a7892f286a0
+person	nereus-of-rome	rome	57	57	active_in		path-81abdab094a7b1b3
+person	olympas	rome	57	57	active_in		path-7d923bcd15876844
+person	patrobas	rome	57	57	active_in		path-624cf66dbc2131ac
 person	paul	assos	57	57	active_in		path-7455c859a88d019a
 person	paul	chios	57	57	active_in		path-29c31a590a8eb3a3
 person	paul	miletus	57	57	active_in		path-37662d02fe8177cd
@@ -167,12 +191,21 @@ person	paul	mitylene	57	57	active_in		path-2bc4b5427075a04f
 person	paul	samos	57	57	active_in		path-f2422677f5a39491
 person	paul	troas	57	57	active_in		path-211c05dc407cefea
 person	paul	tyre	57	57	active_in		path-775e5493c0baa086
+person	persis	rome	57	57	active_in		path-3d132d0b3fbe3e2c
+person	philologus	rome	57	57	active_in		path-baca34e94e6795d1
+person	phlegon	rome	57	57	active_in		path-847f94fd72cfb512
+group	roman-church	rome	57	57	group_present_at		path-35ecb58b50abb4c9
+person	rufus-of-rome	rome	57	57	active_in		path-5b9c102ee7e42166
 person	secundus	thessalonica	57	57	active_in		path-d6b6840f52073001
 person	sopater	berea	57	57	active_in		path-fc14220739bcaedf
+person	stachys	rome	57	57	active_in		path-8b390799347bce5f
 person	tertullus	caesarea	57	57	active_in		path-3dc04682cb1d90c0
 person	trophimus	asia	57	57	active_in		path-e431b80e39707c26
 person	trophimus	jerusalem	57	57	active_in		path-fe793d0bebd03bc0
+person	tryphaena	rome	57	57	active_in		path-259d1525c2936034
+person	tryphosa	rome	57	57	active_in		path-cc5dd12b2b330270
 person	tychicus	asia	57	57	active_in		path-99c7d6099db80ef2
+person	urbanus	rome	57	57	active_in		path-b550995023d96c3b
 person	drusilla	caesarea	57	59	active_in		path-18d8bea2a1029448
 person	felix	caesarea	57	59	active_in		path-66d5bfa3c3be89c1
 group	disciples-of-jesus	caesarea	57	62	group_present_at		path-bf09bd443ff88cff
@@ -188,6 +221,8 @@ group	colossian-church	colossae	60	60	group_present_at		path-ca6e3f4b9c91c581
 group	disciples-of-jesus	puteoli	60	60	group_present_at		path-1ca8e8cc9b94b062
 work	epistle-to-the-colossians	colossae	60	60	addressed_to_place		path-694dec4e8a0b0240
 work	epistle-to-the-ephesians	ephesus	60	60	addressed_to_place		path-2ab02866656f11c3
+proposition	jesus-is-proclaimed-as-raised	colossae	60	60	derived_proposition_presence	affirms	drv-f3a543b0d597619e
+proposition	jesus-is-proclaimed-as-raised	ephesus	60	60	derived_proposition_presence	affirms	drv-a46efec102d3e5db
 group	laodicean-church	laodicea	60	60	group_present_at		path-e6fa1e76c507326f
 person	paul	appii-forum	60	60	active_in		path-d612404aa6cc5f68
 person	paul	malta	60	60	active_in		path-b877863729073723
@@ -196,13 +231,21 @@ person	paul	rhegium	60	60	active_in		path-b1f99d7484bf1a85
 person	paul	syracuse	60	60	active_in		path-e94dc69fbb5c078b
 person	paul	three-taverns	60	60	active_in		path-ad848e73947e39b7
 person	publius	malta	60	60	active_in		path-f88faa4820bc25cd
+person	archippus	colossae	60	62	active_in		path-4425da9f7a84828b
+group	disciples-of-jesus	hierapolis	60	62	group_present_at		path-399ca4003bafc905
 person	epaphras	colossae	60	62	active_in		path-2b71c2fededbb458
+person	epaphras	hierapolis	60	62	active_in		path-757725fa7d33aa68
+person	epaphras	laodicea	60	62	active_in		path-81df5de7a092cf53
 person	epaphroditus	philippi	60	62	active_in		path-51b7084d4021b9b3
 person	euodia	philippi	60	62	active_in		path-21a39703e9e85075
+person	nympha	laodicea	60	62	active_in		path-537bf93aa8f05f5f
+person	onesimus	colossae	60	62	active_in		path-facee8987f5f075f
 person	paul	rome	60	62	active_in		path-38539d4397b1783e
 person	syntyche	philippi	60	62	active_in		path-a2e10bd2eed03ef5
 person	luke-the-evangelist	rome	60	64	active_in		path-70621a7af09cea11
+work	epistle-to-philemon	colossae	61	61	addressed_to_place		path-243ad889f3edd5d8
 work	epistle-to-the-philippians	philippi	61	61	addressed_to_place		path-2fb1df66de3f50ed
+proposition	jesus-is-proclaimed-as-raised	philippi	61	61	derived_proposition_presence	affirms	drv-bbc6be74e51e6572
 group	disciples-of-jesus	asia	62	64	group_present_at		path-013a873485640f67
 group	disciples-of-jesus	bithynia	62	64	group_present_at		path-75f9b5e60202f306
 group	disciples-of-jesus	cappadocia	62	64	group_present_at		path-e6dab0d1ab2a9f40
@@ -223,6 +266,9 @@ person	titus	crete	63	64	active_in		path-c7a73f5be341263f
 person	timothy	ephesus	63	65	active_in		path-7b7d0e58198e4b8c
 work	epistle-to-titus	crete	64	64	addressed_to_place		path-c1594883f8fc8bc3
 work	first-epistle-to-timothy	ephesus	64	64	addressed_to_place		path-039daab418d9fb4b
+event	great-fire-of-rome	rome	64	64	event_occurs_at		path-2a5e8a88150aa9a8
+event	neronian-persecution	rome	64	64	event_occurs_at		path-9a20af81f444e2b9
+person	paul	nicopolis	64	64	active_in		path-e5900d885cda9db9
 person	carpus	troas	66	66	active_in		path-4a1353a9910632e9
 person	crescens	galatia	66	66	active_in		path-d6c2df0ac0291080
 person	demas	thessalonica	66	66	active_in		path-d9792c33a263db51
@@ -231,9 +277,21 @@ person	titus	dalmatia	66	66	active_in		path-b70e27530c775a62
 person	trophimus	miletus	66	66	active_in		path-b0895583f47d6397
 person	tychicus	ephesus	66	66	active_in		path-12e55813cf362b2f
 group	zealots	jerusalem	66	70	group_present_at		path-b1c734a56f5d5409
+event	sack-of-jerusalem	jerusalem	70	70	event_occurs_at		path-0dc26be7a0bf278c
 proposition	jesus-is-the-christ	patmos	90	90	derived_proposition_presence	affirms	drv-bf1a2b222bc8648f
+person	antipas-of-pergamum	pergamum	95	95	active_in		path-b52b93870da2a4bf
+proposition	final-judgment-is-coming	ephesus	95	95	derived_proposition_presence	affirms	drv-f40fc86e6237deb1
+proposition	final-judgment-is-coming	laodicea	95	95	derived_proposition_presence	affirms	drv-e55994d8cf0bc648
+proposition	final-judgment-is-coming	patmos	95	95	derived_proposition_presence	affirms	drv-f8fb39aab2f9aaa0
+proposition	final-judgment-is-coming	pergamum	95	95	derived_proposition_presence	affirms	drv-e1fcb5d3c9fd2167
+proposition	final-judgment-is-coming	philadelphia-asia	95	95	derived_proposition_presence	affirms	drv-62cedd97a3769033
+proposition	final-judgment-is-coming	sardis	95	95	derived_proposition_presence	affirms	drv-508b075df2fbef69
+proposition	final-judgment-is-coming	smyrna	95	95	derived_proposition_presence	affirms	drv-359e13935c7eca00
+proposition	final-judgment-is-coming	thyatira	95	95	derived_proposition_presence	affirms	drv-4bda7cb0d1b2bec4
 person	john-son-of-zebedee	patmos	95	95	active_in		path-5dc0176817ec0b61
 group	laodicean-church	laodicea	95	95	group_present_at		path-6d376c0ff1755e1a
+group	nicolaitans	ephesus	95	95	group_present_at		path-b07b11994926feaa
+group	nicolaitans	pergamum	95	95	group_present_at		path-07873cd15a58cd66
 group	pergamum-church	pergamum	95	95	group_present_at		path-af329ac79eb08d2b
 group	philadelphia-church	philadelphia-asia	95	95	group_present_at		path-c1d5e05ad0505d2c
 work	revelation-of-john	ephesus	95	95	addressed_to_place		path-287ac2a666c9b553

@@ -169,6 +169,7 @@ const predicateTypes: PredicateType[] = parseTsv(predicateTypesRaw).map((r) => (
 
 const sources: SourceRecord[] = parseTsv(sourcesRaw).map((r) => ({
   source_id: str(r.source_id),
+  work_id: str(r.work_id),
   source_kind: str(r.source_kind) as SourceRecord["source_kind"],
   title: str(r.title),
   author: str(r.author),
@@ -311,6 +312,13 @@ const dimensionById = new Map(dimensions.map((d) => [d.dimension_id, d]));
 const propositionById = new Map(propositions.map((p) => [p.proposition_id, p]));
 const predicateById = new Map(predicateTypes.map((p) => [p.predicate_id, p]));
 const sourceById = new Map(sources.map((s) => [s.source_id, s]));
+const sourcesByWorkId = new Map<string, SourceRecord[]>();
+for (const source of sources) {
+  if (!source.work_id) continue;
+  const arr = sourcesByWorkId.get(source.work_id) ?? [];
+  arr.push(source);
+  sourcesByWorkId.set(source.work_id, arr);
+}
 const passageById = new Map(passages.map((p) => [p.passage_id, p]));
 const claimById = new Map(claims.map((c) => [c.claim_id, c]));
 const editorNoteById = new Map(editorNotes.map((n) => [n.editor_note_id, n]));
@@ -411,6 +419,27 @@ for (const m of noteMentions) {
   arr.push(m);
   noteMentionsByEntity.set(key, arr);
 }
+
+const PROPOSITION_CLAIM_PREDICATES = new Set([
+  "work_affirms_proposition",
+  "person_affirms_proposition",
+  "work_opposes_proposition",
+  "person_opposes_proposition",
+  "work_develops_proposition",
+  "person_develops_proposition",
+  "work_mentions_proposition",
+]);
+
+const PLACE_LINK_PREDICATES = new Set([
+  "bishop_of",
+  "active_in",
+  "originated_in",
+  "written_at",
+  "addressed_to_place",
+  "event_occurs_at",
+  "group_present_at",
+  "controls_place",
+]);
 
 // first_attestations indexed by (subject_type:subject_id)
 const firstAttestBySubject = new Map<string, FirstAttestation[]>();
@@ -572,6 +601,95 @@ function getBackingClaimsForFootprint(fp: EntityPlaceFootprint): Claim[] {
   );
 }
 
+function getSourcesForWork(workId: string): SourceRecord[] {
+  const explicit = sourcesByWorkId.get(workId) ?? [];
+  if (explicit.length > 0) return explicit;
+
+  const work = workById.get(workId);
+  if (!work) return [];
+
+  return sources.filter((source) => source.title === work.title_display);
+}
+
+function getPreferredSourceForWork(workId: string): SourceRecord | undefined {
+  return getSourcesForWork(workId)
+    .slice()
+    .sort((a, b) => {
+      const aScore = (a.url ? 2 : 0) + (a.isbn_issn ? 1 : 0);
+      const bScore = (b.url ? 2 : 0) + (b.isbn_issn ? 1 : 0);
+      return bScore - aScore || a.source_id.localeCompare(b.source_id);
+    })[0];
+}
+
+function getPassagesForWork(workId: string): Passage[] {
+  const sourceIds = new Set(getSourcesForWork(workId).map((source) => source.source_id));
+  return passages.filter((passage) => sourceIds.has(passage.source_id));
+}
+
+function getEffectivePlaceLinkYears(claim: Claim): { yearStart: number | null; yearEnd: number | null } {
+  let yearStart = claim.year_start;
+  let yearEnd = claim.year_end;
+
+  if (claim.subject_type === "work" && yearStart == null && yearEnd == null) {
+    const subjectClaims = claimsBySubject.get(`${claim.subject_type}:${claim.subject_id}`) ?? [];
+    const startClaim = subjectClaims.find((row) => row.predicate_id === "work_year_start");
+    const endClaim = subjectClaims.find((row) => row.predicate_id === "work_year_end");
+    yearStart = startClaim?.value_year ?? null;
+    yearEnd = endClaim?.value_year ?? null;
+  }
+
+  return { yearStart, yearEnd };
+}
+
+function getTraceForFootprint(fp: EntityPlaceFootprint) {
+  if (fp.entity_type !== "proposition" || fp.reason_predicate_id !== "derived_proposition_presence") {
+    return {
+      mode: "direct" as const,
+      claims: getBackingClaimsForFootprint(fp),
+    };
+  }
+
+  const propositionClaims = claims.filter((claim) =>
+    claim.claim_status === "active" &&
+    claim.object_mode === "entity" &&
+    claim.object_type === "proposition" &&
+    claim.object_id === fp.entity_id &&
+    PROPOSITION_CLAIM_PREDICATES.has(claim.predicate_id),
+  );
+
+  const seen = new Set<string>();
+  const paths: Array<{ propositionClaim: Claim; placeClaim: Claim }> = [];
+
+  for (const propositionClaim of propositionClaims) {
+    const subjectClaims = claimsBySubject.get(`${propositionClaim.subject_type}:${propositionClaim.subject_id}`) ?? [];
+    const placeClaims = subjectClaims.filter((claim) =>
+      claim.claim_status === "active" &&
+      claim.object_mode === "entity" &&
+      claim.object_type === "place" &&
+      claim.object_id === fp.place_id &&
+      PLACE_LINK_PREDICATES.has(claim.predicate_id),
+    );
+
+    for (const placeClaim of placeClaims) {
+      const { yearStart: placeYearStart, yearEnd: placeYearEnd } = getEffectivePlaceLinkYears(placeClaim);
+      const derivedYearStart = propositionClaim.year_start ?? placeYearStart;
+      const derivedYearEnd = propositionClaim.year_end ?? placeYearEnd;
+
+      if (derivedYearStart !== fp.year_start || derivedYearEnd !== fp.year_end) continue;
+
+      const key = `${propositionClaim.claim_id}:${placeClaim.claim_id}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      paths.push({ propositionClaim, placeClaim });
+    }
+  }
+
+  return {
+    mode: "derived_proposition_presence" as const,
+    paths,
+  };
+}
+
 /** Bucket footprints by decade for a place. */
 function getFootprintsByDecadeForPlace(
   placeId: string,
@@ -658,6 +776,7 @@ export const dataStore = {
   works: {
     getAll: () => works,
     getById: (id: string) => workById.get(id),
+    getPreferredSource: (workId: string) => getPreferredSourceForWork(workId),
   },
 
   // ── Events ──
@@ -703,6 +822,8 @@ export const dataStore = {
   sources: {
     getAll: () => sources,
     getById: (id: string) => sourceById.get(id),
+    getForWork: (workId: string) => getSourcesForWork(workId),
+    getPreferredForWork: (workId: string) => getPreferredSourceForWork(workId),
   },
 
   // ── Passages ──
@@ -710,6 +831,7 @@ export const dataStore = {
     getAll: () => passages,
     getById: (id: string) => passageById.get(id),
     getBySource: (sourceId: string) => passages.filter((p) => p.source_id === sourceId),
+    getByWork: (workId: string) => getPassagesForWork(workId),
   },
 
   // ── Claims (replaces relations) ──
@@ -728,6 +850,7 @@ export const dataStore = {
     ].filter((c) => !INFRA_PREDICATES.has(c.predicate_id)),
     isInfraPredicate: (predicateId: string) => INFRA_PREDICATES.has(predicateId),
     getBackingForFootprint: (fp: EntityPlaceFootprint) => getBackingClaimsForFootprint(fp),
+    getTraceForFootprint: (fp: EntityPlaceFootprint) => getTraceForFootprint(fp),
     getPeopleForWork: (workId: string) => getPeopleForWork(workId),
     getPeopleForEntity: (type: string, id: string) => getPeopleFromClaims([
       ...(claimsBySubject.get(`${type}:${id}`) ?? []),

@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { Passage, SourceRecord } from "../../data/types";
 import { BibleOverlay } from "./BibleOverlay";
 import { formatPassageLocator, getPassageUrl, isBiblePassage } from "../../utils/passageReferences";
+import { getSourceAccessLabel } from "../../utils/sourceLinks";
 
 interface PassageReferenceProps {
   passage: Passage;
@@ -13,10 +14,11 @@ export function PassageReference({ passage, source = null }: PassageReferencePro
 
   const label = formatPassageLocator(passage);
   const url = getPassageUrl(passage, source);
+  const accessLabel = getSourceAccessLabel(source);
 
   if (isBiblePassage(passage)) {
     return (
-      <>
+      <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
         <button
           type="button"
           className="bible-ref-btn evidence-locator"
@@ -28,10 +30,22 @@ export function PassageReference({ passage, source = null }: PassageReferencePro
         >
           {label}
         </button>
+        {url && (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="citation-link evidence-locator"
+            onClick={(event) => event.stopPropagation()}
+            title={accessLabel || `Open ${label}`}
+          >
+            ↗
+          </a>
+        )}
         {showBibleOverlay && (
           <BibleOverlay locator={passage.locator} onClose={() => setShowBibleOverlay(false)} />
         )}
-      </>
+      </span>
     );
   }
 

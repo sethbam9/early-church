@@ -4,6 +4,7 @@ import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { getPredicateLabel } from "../../domain/relationLabels";
 import { kindIcon } from "./entityConstants";
 import { PassageReference } from "./PassageReference";
+import { getSourceAccessTitle, getSourceExternalUrl } from "../../utils/sourceLinks";
 
 interface ClaimCardProps {
   claim: Claim;
@@ -45,6 +46,7 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
   const yearRange = claim.year_start
     ? `AD ${claim.year_start}${claim.year_end && claim.year_end !== claim.year_start ? `–${claim.year_end}` : ""}`
     : "";
+  const contextPlaceLabel = claim.context_place_id ? getEntityLabel("place", claim.context_place_id) : "";
 
   return (
     <div className="rel-card">
@@ -87,18 +89,46 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
 
       {showEvidence && (
         <div className="rel-card-evidence">
+          {claim.context_place_id && (
+            <div className="evidence-item">
+              <span className="faint">context</span>
+              <button
+                type="button"
+                className="mention-link"
+                onClick={() => onSelectEntity("place", claim.context_place_id)}
+              >
+                {contextPlaceLabel}
+              </button>
+            </div>
+          )}
           {evidence.map((ev) => {
             const passage = dataStore.passages.getById(ev.passage_id);
             const source  = passage ? dataStore.sources.getById(passage.source_id) : null;
+            const sourceUrl = getSourceExternalUrl(source);
             return (
               <div key={`${ev.claim_id}-${ev.passage_id}`} className="evidence-item">
                 <span className="faint">{ev.evidence_role}</span>
                 {passage && <PassageReference passage={passage} source={source} />}
                 {passage?.excerpt && <div className="evidence-excerpt">{passage.excerpt}</div>}
-                {source?.url && (
-                  <a href={source.url} target="_blank" rel="noopener noreferrer" className="citation-link evidence-source">
+                {source && sourceUrl && (
+                  <a
+                    href={sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="citation-link evidence-source"
+                    title={getSourceAccessTitle(source)}
+                  >
                     {source.title}
                   </a>
+                )}
+                {source?.work_id && (
+                  <button
+                    type="button"
+                    className="mention-link"
+                    onClick={() => onSelectEntity("work", source.work_id)}
+                  >
+                    Open work
+                  </button>
                 )}
               </div>
             );

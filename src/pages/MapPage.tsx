@@ -137,10 +137,11 @@ export function MapPage() {
 
   // ── Arc data ──────────────────────────────────────────────────────────────
 
+  // TODO : @SETH Revisit to see if there's more we want to do with arcs than just works.
   type ArcEntry = { a: PlaceAtDecade; b: PlaceAtDecade; label: string };
 
   const arcPairs = useMemo<ArcEntry[]>(() => {
-    if (!showArcs || !selection) return [];
+    if (!showArcs || !selection || selection.kind !== "work") return [];
 
     function makeFakePlace(placeId: string): PlaceAtDecade | null {
       const p = dataStore.places.getById(placeId);
@@ -156,18 +157,28 @@ export function MapPage() {
       };
     }
 
-    const fps = dataStore.footprints.getForEntity(selection.kind, selection.id);
-    const placeIds = [...new Set(fps.map((f) => f.place_id))];
-    const places = placeIds.map(makeFakePlace).filter(Boolean) as PlaceAtDecade[];
+    const workClaims = dataStore.claims.getForSubject("work", selection.id).filter((claim) => claim.claim_status === "active");
+    const originIds = workClaims
+      .filter((claim) => claim.object_mode === "entity" && claim.object_type === "place" && claim.predicate_id === "written_at")
+      .map((claim) => claim.object_id);
+    const destinationIds = workClaims
+      .filter((claim) => claim.object_mode === "entity" && claim.object_type === "place" && claim.predicate_id === "addressed_to_place")
+      .map((claim) => claim.object_id);
 
-    if (places.length < 2) return [];
+    if (originIds.length === 0 || destinationIds.length === 0) return [];
 
-    const label = `${dataStore.places.getById(selection.id)?.place_label ?? selection.id}`;
+    const origins = [...new Set(originIds)].map(makeFakePlace).filter(Boolean) as PlaceAtDecade[];
+    const destinations = [...new Set(destinationIds)].map(makeFakePlace).filter(Boolean) as PlaceAtDecade[];
+    const workLabel = dataStore.works.getById(selection.id)?.title_display ?? selection.id;
     const pairs: ArcEntry[] = [];
-    for (let i = 0; i < places.length - 1; i++) {
-      for (let j = i + 1; j < places.length; j++) {
-        const pa = places[i], pb = places[j];
-        if (pa && pb) pairs.push({ a: pa, b: pb, label });
+    for (const origin of origins) {
+      for (const destination of destinations) {
+        if (origin.place_id === destination.place_id) continue;
+        pairs.push({
+          a: origin,
+          b: destination,
+          label: `${workLabel}: ${origin.place_label} → ${destination.place_label}`,
+        });
       }
     }
     return pairs.slice(0, 80);

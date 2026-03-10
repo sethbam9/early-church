@@ -167,6 +167,7 @@ export interface PredicateType {
 
 export interface SourceRecord {
   source_id: string;
+  work_id: string;
   source_kind: SourceKind;
   title: string;
   author: string;

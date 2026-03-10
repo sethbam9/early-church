@@ -299,9 +299,12 @@ The proposition model replaces the old flat doctrine model.
 
 ## `sources.tsv`
 
+`works.tsv` stores canonical work identities. `sources.tsv` stores citable manifestations of those works: an online text, edition, catalog record, article, or other bibliographic witness. `passages.tsv` still hangs from `sources.tsv`, and `claim_evidence.tsv` still links claims to passages. The optional `work_id` on a source is only a back-reference to the work identity when that source represents or witnesses that work.
+
 | Column | Type | Required | Rules |
 |---|---|---:|---|
 | `source_id` | string | yes | Stable slug PK |
+| `work_id` | string FK→works | no | Optional canonical work identity represented by this source |
 | `source_kind` | enum `source_kind` | yes | Bibliographic/source type |
 | `title` | string | yes | Display title |
 | `author` | string | no | Free text |

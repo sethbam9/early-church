@@ -20,7 +20,7 @@ SOURCE_HEADERS: Dict[str, List[str]] = {
     "dimensions.tsv": ["dimension_id", "topic_id", "dimension_label", "dimension_kind", "notes"],
     "propositions.tsv": ["proposition_id", "topic_id", "dimension_id", "proposition_label", "polarity_family", "description", "notes"],
     "predicate_types.tsv": ["predicate_id", "predicate_label", "subject_type", "object_mode", "object_type", "inverse_label", "is_symmetric", "canonical_sort_rule", "allows_date_range", "allows_context_place", "description"],
-    "sources.tsv": ["source_id", "source_kind", "title", "author", "editor", "year", "container_title", "publisher", "url", "accessed_on", "isbn_issn", "notes"],
+    "sources.tsv": ["source_id", "work_id", "source_kind", "title", "author", "editor", "year", "container_title", "publisher", "url", "accessed_on", "isbn_issn", "notes"],
     "passages.tsv": ["passage_id", "source_id", "locator_type", "locator", "excerpt", "language", "passage_year", "url_override", "notes"],
     "claims.tsv": ["claim_id", "subject_type", "subject_id", "predicate_id", "object_mode", "object_type", "object_id", "value_text", "value_number", "value_year", "value_boolean", "year_start", "year_end", "context_place_id", "certainty", "polarity", "claim_status", "created_by", "updated_at"],
     "claim_evidence.tsv": ["claim_id", "passage_id", "evidence_role", "excerpt_override", "evidence_weight", "notes"],
@@ -722,6 +722,8 @@ class Validator:
         for idx, row in enumerate(self.tables.get("sources.tsv", []), start=2):
             if row["source_kind"] not in SOURCE_KIND:
                 self.error(f"sources.tsv:{idx} invalid source_kind={row['source_kind']}")
+            if row.get("work_id") and row["work_id"] not in self.by_id.get("works.tsv", set()):
+                self.error(f"sources.tsv:{idx} broken FK work_id={row['work_id']}")
 
         for idx, row in enumerate(self.tables.get("passages.tsv", []), start=2):
             if row["source_id"] not in self.by_id.get("sources.tsv", set()):
