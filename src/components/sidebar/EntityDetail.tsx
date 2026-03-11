@@ -1,20 +1,45 @@
-import { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import { useAppStore } from "../../stores/appStore";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
-import type { PersonWithClaims } from "../../data/dataStore";
-import { Hl } from "../shared/Hl";
+import { EntityHeader } from "../shared/EntityHeader";
 import { Pagination, PAGE_SIZE } from "../shared/Pagination";
 import { usePaginatedList } from "../../hooks/usePaginatedList";
 import { NoteCard } from "../shared/NoteCard";
-import { kindIcon, kindLabel } from "../shared/entityConstants";
+import { kindIcon, kindLabel, PRESENCE_COLORS, PRESENCE_LABELS, CERTAINTY_COLORS } from "../shared/entityConstants";
 import { CrossPageNav } from "../shared/CrossPageNav";
-import { ClaimCard } from "../shared/RelationCard";
 import { FootprintCard } from "../shared/FootprintCard";
 import { PassageReference } from "../shared/PassageReference";
+import { getPredicateLabel } from "../../domain/relationLabels";
+import { getSourceExternalUrl, getSourceAccessTitle } from "../../utils/sourceLinks";
+import type { Claim, EntityPlaceFootprint, PlaceStateByDecade } from "../../data/types";
 
-// ─── Types ───────────────────────────────────────────────────────────────────
+// ─── Types ────────────────────────────────────────────────────────────────────
 
-type EntityDetailTab = "info" | "locations" | "claims" | "people" | "evidence" | "mentions";
+type EntityDetailTab =
+  | "info" | "timeline" | "people" | "places" | "groups"
+  | "works" | "events" | "propositions" | "topics" | "notes" | "mentions";
+
+interface ConnectedEntity {
+  kind: string;
+  id: string;
+  claims: Claim[];
+}
+
+// ─── Tab label map ────────────────────────────────────────────────────────────
+
+const TAB_LABELS: Record<EntityDetailTab, string> = {
+  info:         "Info",
+  timeline:     "Timeline",
+  people:       "People",
+  places:       "Places",
+  groups:       "Groups",
+  works:        "Works",
+  events:       "Events",
+  propositions: "Propositions",
+  topics:       "Topics",
+  notes:        "Notes",
+  mentions:     "Mentions",
+};
 
 // ─── EntityDetail (main) ─────────────────────────────────────────────────────
 
@@ -23,107 +48,100 @@ interface EntityDetailProps {
   id: string;
   onBack: () => void;
   onSelectEntity: (kind: string, id: string) => void;
-  mapFilterType: string | null;
-  mapFilterId: string | null;
-  setMapFilter: (type: string, id: string) => void;
-  clearMapFilter: () => void;
-  currentDecade: number;
+  mapFilterType?: string | null;
+  mapFilterId?: string | null;
+  setMapFilter?: (type: string, id: string) => void;
+  clearMapFilter?: () => void;
+  currentDecade?: number;
 }
 
 export function EntityDetail({
   kind, id, onBack, onSelectEntity,
-  mapFilterType, mapFilterId, setMapFilter, clearMapFilter, currentDecade,
+  mapFilterType, mapFilterId, setMapFilter, clearMapFilter, currentDecade = 0,
 }: EntityDetailProps) {
   const [activeTab, setActiveTab] = useState<EntityDetailTab>("info");
 
   const isFiltered = mapFilterType === kind && mapFilterId === id;
   const canFilter  = ["group", "person", "proposition", "event", "work"].includes(kind);
-  const label      = getEntityLabel(kind, id);
 
   const toggleFilter = () => {
-    if (isFiltered) clearMapFilter();
-    else setMapFilter(kind, id);
+    if (isFiltered) clearMapFilter?.();
+    else setMapFilter?.(kind, id);
   };
 
-  const editorNotes = dataStore.editorNotes.getForEntity(kind, id);
-  const claims      = dataStore.claims.getVisibleForEntity(kind, id);
-  const footprints  = dataStore.footprints.getForEntity(kind, id);
-  const mentions    = dataStore.noteMentions.getMentioning(kind, id);
+  // ── Data ────────────────────────────────────────────────────────────────
+  const editorNotes  = useMemo(() => dataStore.editorNotes.getForEntity(kind, id), [kind, id]);
+  const footprints   = useMemo(() => dataStore.footprints.getForEntityDeduped(kind, id), [kind, id]);
+  const mentions     = useMemo(() => dataStore.noteMentions.getMentioning(kind, id), [kind, id]);
+  const placeStates  = useMemo(() => kind === "place" ? dataStore.map.getPlaceStatesForPlace(id) : [], [kind, id]);
+  const datedClaims  = useMemo(() => kind !== "place" ? dataStore.claims.getDatedSorted(kind, id) : [], [kind, id]);
 
-  const workPeople = useMemo(() => kind === "work" ? dataStore.claims.getPeopleForWork(id) : [], [kind, id]);
-  const propositionPeople = useMemo(() => kind === "proposition" ? dataStore.claims.getPeopleForEntity("proposition", id) : [], [kind, id]);
+  const grouped = useMemo(() => dataStore.claims.getGroupedByObjectType(kind, id), [kind, id]);
 
-  // ── Build tab list based on kind ────────────────────────────────────────
+  // Secondary grouping: for each entity type, group claims by connected entity ID
+  const connectedByType = useMemo((): Record<string, ConnectedEntity[]> => {
+    const result: Record<string, ConnectedEntity[]> = {};
+    for (const [entityType, claimsForType] of grouped.entries()) {
+      if (entityType === "scalar" || !entityType) continue;
+      const entityMap = new Map<string, Claim[]>();
+      for (const c of claimsForType) {
+        const isSubject = c.subject_type === kind && c.subject_id === id;
+        const othId = isSubject ? c.object_id : c.subject_id;
+        if (!othId) continue;
+        const arr = entityMap.get(othId) ?? [];
+        arr.push(c);
+        entityMap.set(othId, arr);
+      }
+      result[entityType] = Array.from(entityMap.entries()).map(([eid, eClaims]) => ({
+        kind: entityType, id: eid, claims: eClaims,
+      }));
+    }
+    return result;
+  }, [grouped, kind, id]);
 
+  // ── Build available tabs ─────────────────────────────────────────────────
   const availableTabs = useMemo((): { id: EntityDetailTab; label: string }[] => {
-    const tabs: { id: EntityDetailTab; label: string }[] = [{ id: "info", label: "Info" }];
+    const tabs: { id: EntityDetailTab; label: string }[] = [
+      { id: "info", label: TAB_LABELS.info },
+    ];
 
-    if (footprints.length > 0) {
-      tabs.push({ id: "locations", label: `Locations (${footprints.length})` });
+    const timelineCount = kind === "place" ? placeStates.length : datedClaims.length;
+    if (timelineCount > 0)
+      tabs.push({ id: "timeline", label: `Timeline (${timelineCount})` });
+
+    const RELATION_TYPES: { type: string; tab: EntityDetailTab }[] = [
+      { type: "person",      tab: "people"       },
+      { type: "group",       tab: "groups"        },
+      { type: "work",        tab: "works"         },
+      { type: "event",       tab: "events"        },
+      { type: "proposition", tab: "propositions"  },
+      { type: "topic",       tab: "topics"        },
+    ];
+    for (const { type, tab } of RELATION_TYPES) {
+      const n = connectedByType[type]?.length ?? 0;
+      if (n > 0) tabs.push({ id: tab, label: `${TAB_LABELS[tab]} (${n})` });
     }
-    if (claims.length > 0) {
-      tabs.push({ id: "claims", label: `Claims (${claims.length})` });
-    }
-    const peopleCount = workPeople.length + propositionPeople.length;
-    if (peopleCount > 0) {
-      tabs.push({ id: "people", label: `People (${peopleCount})` });
-    }
-    if (editorNotes.length > 0) {
-      tabs.push({ id: "evidence", label: `Notes (${editorNotes.length})` });
-    }
-    if (mentions.length > 0) {
-      tabs.push({ id: "mentions", label: `Mentioned (${mentions.length})` });
-    }
+
+    if (footprints.length > 0)
+      tabs.push({ id: "places", label: `Places (${footprints.length})` });
+
+    if (editorNotes.length > 0)
+      tabs.push({ id: "notes", label: `Notes (${editorNotes.length})` });
+    if (mentions.length > 0)
+      tabs.push({ id: "mentions", label: `Mentions (${mentions.length})` });
+
     return tabs;
-  }, [kind, id, editorNotes.length, claims.length, footprints.length, mentions.length, workPeople.length, propositionPeople.length]);
+  }, [kind, id, placeStates.length, datedClaims.length, connectedByType, footprints.length, editorNotes.length, mentions.length]);
 
-  // ── Build header ────────────────────────────────────────────────────────
+  // Reset tab when entity changes
+  useEffect(() => { setActiveTab("info"); }, [kind, id]);
 
-  const header = useMemo(() => {
-    let title = label;
-    let subtitle = "";
-    let tags: string[] = [];
-
-    if (kind === "person") {
-      const p = dataStore.people.getById(id);
-      if (p) {
-        title = p.person_label;
-        subtitle = [p.birth_year_display, p.death_year_display].filter(Boolean).join(" – ");
-        tags = [p.person_kind !== "individual" ? p.person_kind : ""].filter(Boolean);
-      }
-    } else if (kind === "group") {
-      const g = dataStore.groups.getById(id);
-      if (g) { title = g.group_label; tags = [g.group_kind]; }
-    } else if (kind === "work") {
-      const w = dataStore.works.getById(id);
-      if (w) {
-        title = w.title_display;
-        subtitle = `${w.work_type} · ${w.language_original}`;
-        tags = [w.work_kind !== "single_work" ? w.work_kind : ""].filter(Boolean);
-      }
-    } else if (kind === "proposition") {
-      const p = dataStore.propositions.getById(id);
-      if (p) {
-        title = p.proposition_label;
-        const topic = dataStore.topics.getById(p.topic_id);
-        subtitle = topic?.topic_label ?? p.topic_id;
-      }
-    } else if (kind === "event") {
-      const e = dataStore.events.getById(id);
-      if (e) {
-        title = e.event_label;
-        tags = [e.event_type].filter(Boolean);
-      }
-    } else if (kind === "source") {
-      const s = dataStore.sources.getById(id);
-      if (s) {
-        title = s.title;
-        subtitle = [s.author, s.year].filter(Boolean).join(" · ");
-      }
-    }
-
-    return { title, subtitle, tags };
-  }, [kind, id, label]);
+  // ── Place-specific header data ───────────────────────────────────────────
+  const activeDecade = useAppStore((s) => s.activeDecade);
+  const currentState = useMemo(
+    () => kind === "place" ? dataStore.map.getCurrentPlaceState(id, activeDecade) : undefined,
+    [kind, id, activeDecade],
+  );
 
   return (
     <div className="detail-panel">
@@ -136,20 +154,22 @@ export function EntityDetail({
       {/* Header */}
       <div className="detail-header">
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <div className="detail-kind-badge">{kindIcon(kind)} {kindLabel(kind)}</div>
           <CrossPageNav kind={kind} id={id} current="map" />
         </div>
-        <div className="detail-title">{header.title}</div>
-        {header.subtitle && <div className="detail-subtitle">{header.subtitle}</div>}
-        {header.tags.length > 0 && (
-          <div className="detail-tags">
-            {header.tags.map((t, i) => <span key={i} className="tag accent">{t}</span>)}
-          </div>
+        <EntityHeader kind={kind} id={id} />
+
+        {/* Place: presence status + group chips */}
+        {kind === "place" && currentState && (
+          <PlacePresenceChips
+            currentState={currentState}
+            activeDecade={activeDecade}
+            onSelectEntity={onSelectEntity}
+          />
         )}
       </div>
 
       {/* Map filter banner */}
-      {canFilter && (
+      {canFilter && setMapFilter && (
         <div className="filter-banner">
           <span>🗺 Filter map to this {kindLabel(kind).toLowerCase()}</span>
           <button
@@ -180,258 +200,301 @@ export function EntityDetail({
 
       {/* Tab body */}
       <div className="detail-body">
-        {activeTab === "info"      && <EntityInfoTab kind={kind} id={id} onSelectEntity={onSelectEntity} />}
-        {activeTab === "locations" && <EntityLocationsTab kind={kind} id={id} onSelectEntity={onSelectEntity} />}
-        {activeTab === "claims"    && <EntityClaimsTab claims={claims} entityId={id} entityType={kind} onSelectEntity={onSelectEntity} />}
-        {activeTab === "people"    && <WorkPeopleTab people={[...workPeople, ...propositionPeople]} onSelectEntity={onSelectEntity} />}
-        {activeTab === "evidence"  && <EntityEvidenceTab notes={editorNotes} onSelectEntity={onSelectEntity} />}
-        {activeTab === "mentions"  && <EntityMentionedInTab kind={kind} id={id} onSelectEntity={onSelectEntity} />}
+        {activeTab === "info" && (
+          <InfoTab kind={kind} id={id} editorNotes={editorNotes} onSelectEntity={onSelectEntity} />
+        )}
+        {activeTab === "timeline" && kind === "place" && (
+          <PlaceTimelineTab placeStates={placeStates} placeId={id} activeDecade={activeDecade} onSelectEntity={onSelectEntity} />
+        )}
+        {activeTab === "timeline" && kind !== "place" && (
+          <EntityTimelineTab claims={datedClaims} entityKind={kind} entityId={id} onSelectEntity={onSelectEntity} />
+        )}
+        {activeTab === "people"       && <RelationTab entities={connectedByType["person"]      ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} />}
+        {activeTab === "groups"       && <RelationTab entities={connectedByType["group"]       ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} />}
+        {activeTab === "works"        && <RelationTab entities={connectedByType["work"]        ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} />}
+        {activeTab === "events"       && <RelationTab entities={connectedByType["event"]       ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} />}
+        {activeTab === "propositions" && <RelationTab entities={connectedByType["proposition"] ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} />}
+        {activeTab === "topics"       && <RelationTab entities={connectedByType["topic"]       ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} />}
+        {activeTab === "places"       && <PlacesTab footprints={footprints} onSelectEntity={onSelectEntity} />}
+        {activeTab === "notes"        && <NotesTab notes={editorNotes} onSelectEntity={onSelectEntity} />}
+        {activeTab === "mentions"     && <MentionsTab kind={kind} id={id} onSelectEntity={onSelectEntity} />}
       </div>
+    </div>
+  );
+}
+
+// ─── Place presence chips (place header extra) ────────────────────────────────
+
+function PlacePresenceChips({ currentState, activeDecade, onSelectEntity }: {
+  currentState: PlaceStateByDecade;
+  activeDecade: number;
+  onSelectEntity: (kind: string, id: string) => void;
+}) {
+  const presenceColor = PRESENCE_COLORS[currentState.presence_status] ?? "#8e8070";
+  return (
+    <div className="detail-tags detail-tags--spaced">
+      <span className="tag">AD {activeDecade}</span>
+      <span className="tag" style={{ background: `${presenceColor}18`, borderColor: `${presenceColor}55`, color: presenceColor }}>
+        {PRESENCE_LABELS[currentState.presence_status] ?? currentState.presence_status}
+      </span>
+      {currentState.dominant_polity_group_id && (
+        <button type="button" className="tag tag-clickable tag-persuasion"
+          onClick={() => onSelectEntity("group", currentState.dominant_polity_group_id)}
+          title="Dominant polity"
+        >
+          ⚔ {dataStore.groups.getById(currentState.dominant_polity_group_id)?.group_label ?? currentState.dominant_polity_group_id}
+        </button>
+      )}
+      {currentState.group_presence_summary
+        .filter((gid) => gid !== currentState.dominant_polity_group_id)
+        .map((gid) => {
+          const group = dataStore.groups.getById(gid);
+          if (!group) return null;
+          return (
+            <button key={gid} type="button" className="tag tag-clickable" onClick={() => onSelectEntity("group", gid)}>
+              {group.group_label}
+            </button>
+          );
+        })}
     </div>
   );
 }
 
 // ─── Info tab ─────────────────────────────────────────────────────────────────
 
-function EntityInfoTab({ kind, id, onSelectEntity }: {
+function InfoTab({ kind, id, editorNotes, onSelectEntity }: {
   kind: string; id: string;
+  editorNotes: ReturnType<typeof dataStore.editorNotes.getForEntity>;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
-  const searchQuery = useAppStore((s) => s.searchQuery);
-  const q = searchQuery.trim();
-
-  if (kind === "person") {
-    const p = dataStore.people.getById(id);
-    if (!p) return <div className="empty-state">Not found.</div>;
-    return (
-      <div className="flex-col-12">
-        {p.notes && <p className="entity-desc"><Hl text={p.notes} query={q} /></p>}
-        <div className="fact-grid">
-          {p.name_native && <><span className="fact-label">Native name</span><span className="fact-value">{p.name_native}</span></>}
-          {p.name_alt.length > 0 && <><span className="fact-label">Also known as</span><span className="fact-value">{p.name_alt.join(", ")}</span></>}
-          {p.birth_year_display && <><span className="fact-label">Born</span><span className="fact-value">{p.birth_year_display}</span></>}
-          {p.death_year_display && <><span className="fact-label">Died</span><span className="fact-value">{p.death_year_display}</span></>}
-        </div>
-      </div>
-    );
-  }
-
-  if (kind === "work") {
-    const w = dataStore.works.getById(id);
-    if (!w) return <div className="empty-state">Not found.</div>;
-    const workSource = dataStore.sources.getAll().find((s) => s.title === w.title_display);
-    return (
-      <div className="flex-col-12">
-        {w.notes && <p className="entity-desc"><Hl text={w.notes} query={q} /></p>}
-        <div className="fact-grid">
-          <span className="fact-label">Language</span><span className="fact-value">{w.language_original || "—"}</span>
-          <span className="fact-label">Type</span><span className="fact-value">{w.work_type}</span>
-          {w.title_original && <><span className="fact-label">Original title</span><span className="fact-value">{w.title_original}</span></>}
-        </div>
-        {workSource?.url && (
-          <a href={workSource.url} target="_blank" rel="noopener noreferrer" className="citation-link">
-            Read online →
-          </a>
-        )}
-      </div>
-    );
-  }
-
-  if (kind === "group") {
-    const g = dataStore.groups.getById(id);
-    if (!g) return <div className="empty-state">Not found.</div>;
-    return (
-      <div className="flex-col-12">
-        {g.notes && <p className="entity-desc"><Hl text={g.notes} query={q} /></p>}
-        <div className="fact-grid">
-          <span className="fact-label">Kind</span><span className="fact-value">{g.group_kind}</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (kind === "proposition") {
-    const p = dataStore.propositions.getById(id);
-    if (!p) return <div className="empty-state">Not found.</div>;
-    const topic = dataStore.topics.getById(p.topic_id);
-    const dim   = dataStore.dimensions.getById(p.dimension_id);
-    return (
-      <div className="flex-col-12">
-        {p.description && <p className="entity-desc"><Hl text={p.description} query={q} /></p>}
-        <div className="fact-grid">
-          {topic && <><span className="fact-label">Topic</span><span className="fact-value">
-            <button type="button" className="mention-link" onClick={() => onSelectEntity("topic", topic.topic_id)}>{topic.topic_label}</button>
-          </span></>}
-          {dim && <><span className="fact-label">Dimension</span><span className="fact-value">{dim.dimension_label}</span></>}
-          {p.polarity_family && <><span className="fact-label">Polarity family</span><span className="fact-value">{p.polarity_family}</span></>}
-        </div>
-      </div>
-    );
-  }
-
-  if (kind === "event") {
-    const e = dataStore.events.getById(id);
-    if (!e) return <div className="empty-state">Not found.</div>;
-    return (
-      <div className="flex-col-12">
-        {e.notes && <p className="entity-desc"><Hl text={e.notes} query={q} /></p>}
-        <div className="fact-grid">
-          <span className="fact-label">Type</span><span className="fact-value">{e.event_type}</span>
-          <span className="fact-label">Kind</span><span className="fact-value">{e.event_kind}</span>
-        </div>
-      </div>
-    );
-  }
-
-  if (kind === "source") {
-    const s = dataStore.sources.getById(id);
-    if (!s) return <div className="empty-state">Not found.</div>;
-    return (
-      <div className="flex-col-12">
-        {s.notes && <p className="entity-desc"><Hl text={s.notes} query={q} /></p>}
-        <div className="fact-grid">
-          {s.author && <><span className="fact-label">Author</span><span className="fact-value">{s.author}</span></>}
-          {s.year && <><span className="fact-label">Year</span><span className="fact-value">{s.year}</span></>}
-          {s.source_kind && <><span className="fact-label">Kind</span><span className="fact-value">{s.source_kind}</span></>}
-        </div>
-        {s.url && <a href={s.url} target="_blank" rel="noopener noreferrer" className="citation-link">{s.title} →</a>}
-      </div>
-    );
-  }
-
-  if (kind === "topic") {
-    const t = dataStore.topics.getById(id);
-    if (!t) return <div className="empty-state">Not found.</div>;
-    return (
-      <div className="flex-col-12">
-        {t.notes && <p className="entity-desc"><Hl text={t.notes} query={q} /></p>}
-        <div className="fact-grid">
-          <span className="fact-label">Kind</span><span className="fact-value">{t.topic_kind}</span>
-        </div>
-      </div>
-    );
-  }
-
-  return null;
-}
-
-// ─── Locations tab ────────────────────────────────────────────────────────────
-
-function EntityLocationsTab({ kind, id, onSelectEntity }: {
-  kind: string; id: string;
-  onSelectEntity: (kind: string, id: string) => void;
-}) {
-  const deduped = useMemo(() => dataStore.footprints.getForEntityDeduped(kind, id), [kind, id]);
-  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(deduped, PAGE_SIZE);
-
-  if (deduped.length === 0) return <div className="empty-state">No locations found.</div>;
-
+  const searchQuery = useAppStore((s) => s.searchQuery).trim();
   return (
-    <div className="flex-col">
-      {pageItems.map((f, i) => (
-        <FootprintCard
-          key={`${f.place_id}:${i}`}
-          footprint={f}
-          showEntity={false}
-          showPlace={true}
-          onSelectEntity={onSelectEntity}
-        />
-      ))}
-      <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
+    <div className="flex-col-12">
+      <EntityHeader kind={kind} id={id} showAllFields onSelectEntity={onSelectEntity} />
+      {editorNotes.length > 0 && (
+        <div className="flex-col-8">
+          <div className="detail-section-title">Editor Notes</div>
+          {editorNotes.map((n) => (
+            <NoteCard key={n.editor_note_id} note={n} onSelectEntity={onSelectEntity} searchQuery={searchQuery} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
 
-// ─── Claims tab ───────────────────────────────────────────────────────────────
+// ─── Place timeline tab (decade-by-decade) ────────────────────────────────────
 
-function EntityClaimsTab({ claims, entityId, entityType, onSelectEntity }: {
-  claims: ReturnType<typeof dataStore.claims.getForEntity>;
+function PlaceTimelineTab({ placeStates, placeId, activeDecade, onSelectEntity }: {
+  placeStates: PlaceStateByDecade[];
+  placeId: string;
+  activeDecade: number;
+  onSelectEntity: (kind: string, id: string) => void;
+}) {
+  const activeRowRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    activeRowRef.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }, [activeDecade]);
+
+  const footprintsByDecade = useMemo(
+    () => dataStore.footprints.getByDecadeForPlace(placeId, placeStates),
+    [placeId, placeStates],
+  );
+
+  if (placeStates.length === 0) return <div className="empty-state">No timeline data.</div>;
+
+  return (
+    <div className="tl-v-list">
+      {placeStates.map((ps, idx) => {
+        const isActive  = ps.decade === activeDecade;
+        const isLast    = idx === placeStates.length - 1;
+        const dotColor  = PRESENCE_COLORS[ps.presence_status] ?? "#8e8070";
+        const statusLabel = PRESENCE_LABELS[ps.presence_status] ?? ps.presence_status;
+        const decadeFootprints = footprintsByDecade.get(ps.decade) ?? [];
+        return (
+          <div key={ps.decade} ref={isActive ? activeRowRef : null}
+            className={`tl-v-row${isActive ? " tl-v-row--active" : ""}`}
+          >
+            <div className={`tl-v-gutter${isLast ? " tl-v-gutter--last" : ""}`}>
+              <span className={`tl-v-dot${isActive ? " tl-v-dot--active" : ""}`}
+                style={{ borderColor: dotColor, background: isActive ? dotColor : "transparent",
+                  boxShadow: isActive ? `0 0 0 4px ${dotColor}22` : undefined }}
+              />
+            </div>
+            <div className="tl-v-content">
+              <div className="tl-v-status" style={{ color: dotColor }}>{statusLabel}</div>
+              <div className="tl-v-meta">
+                <span className="tl-v-year">{isActive ? `▶ AD ${ps.decade}` : `AD ${ps.decade}`}</span>
+                {ps.dominant_polity_group_id && (() => {
+                  const polity = dataStore.groups.getById(ps.dominant_polity_group_id);
+                  return polity ? (
+                    <button type="button" className="timeline-polity-btn" onClick={() => onSelectEntity("group", ps.dominant_polity_group_id)}>
+                      {polity.group_label}
+                    </button>
+                  ) : null;
+                })()}
+                {ps.group_presence_summary
+                  .filter((gid) => gid !== ps.dominant_polity_group_id)
+                  .map((gid) => {
+                    const g = dataStore.groups.getById(gid);
+                    return g ? (
+                      <button key={gid} type="button" className="timeline-persuasion-btn" onClick={() => onSelectEntity("group", gid)}>
+                        {g.group_label}
+                      </button>
+                    ) : null;
+                  })}
+              </div>
+              {decadeFootprints.length > 0 && (() => {
+                const groupIds = new Set([ps.dominant_polity_group_id, ...ps.group_presence_summary].filter(Boolean));
+                const filtered = decadeFootprints.filter((fp) => !(fp.entity_type === "group" && groupIds.has(fp.entity_id)));
+                return filtered.length > 0 ? (
+                  <div className="fp-stack">
+                    {filtered.map((fp, i) => (
+                      <FootprintCard key={`${fp.entity_type}:${fp.entity_id}:${fp.reason_predicate_id}:${i}`}
+                        footprint={fp} showEntity showPlace={false} onSelectEntity={onSelectEntity} />
+                    ))}
+                  </div>
+                ) : null;
+              })()}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+// ─── Entity timeline tab (dated claims) ───────────────────────────────────────
+
+function EntityTimelineTab({ claims, entityKind, entityId, onSelectEntity }: {
+  claims: Claim[];
+  entityKind: string;
   entityId: string;
-  entityType: string;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
-  const sorted = useMemo(() =>
-    claims.slice().sort((a, b) => (a.year_start ?? 9999) - (b.year_start ?? 9999)),
-    [claims],
-  );
-  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(sorted, PAGE_SIZE);
-
-  if (sorted.length === 0) return <div className="empty-state">No claims.</div>;
-
+  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(claims, PAGE_SIZE);
+  if (claims.length === 0) return <div className="empty-state">No dated claims.</div>;
   return (
     <div className="flex-col">
-      {pageItems.map((c) => (
-        <ClaimCard
-          key={c.claim_id}
-          claim={c}
-          entityId={entityId}
-          entityType={entityType}
-          onSelectEntity={onSelectEntity}
-        />
-      ))}
+      {pageItems.map((c) => {
+        const isSubject = c.subject_type === entityKind && c.subject_id === entityId;
+        const othKind   = isSubject ? c.object_type : c.subject_type;
+        const othId     = isSubject ? c.object_id   : c.subject_id;
+        const predLabel = getPredicateLabel(c.predicate_id, isSubject);
+        const othLabel  = othId ? getEntityLabel(othKind, othId) : (c.value_text || c.value_year?.toString() || "—");
+        const yearStr = `AD ${c.year_start}${c.year_end && c.year_end !== c.year_start ? `–${c.year_end}` : ""}`;
+        return (
+          <div key={c.claim_id} className="tl-v-row">
+            <div className="tl-v-gutter">
+              <span className="tl-v-dot" style={{ borderColor: "var(--border)", background: "var(--surface-2)" }} />
+            </div>
+            <div className="tl-v-content">
+              <div className="tl-v-year">{yearStr}</div>
+              <div className="tl-v-status">
+                <span className="faint">{predLabel}</span>{" "}
+                {othId ? (
+                  <button type="button" className="mention-link" onClick={() => onSelectEntity(othKind, othId)}>
+                    {kindIcon(othKind)} {othLabel}
+                  </button>
+                ) : othLabel}
+              </div>
+              {c.certainty && c.certainty !== "attested" && (
+                <span className="rel-certainty" style={{ color: CERTAINTY_COLORS[c.certainty] ?? "var(--text-faint)" }}>
+                  {c.certainty}
+                </span>
+              )}
+            </div>
+          </div>
+        );
+      })}
       <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
     </div>
   );
 }
 
-// ─── Work People tab ─────────────────────────────────────────────────────────
+// ─── Relation tab (people / groups / works / events / propositions / topics) ──
 
-function WorkPeopleTab({ people, onSelectEntity }: {
-  people: PersonWithClaims[];
+function RelationTab({ entities, focusKind, focusId, onSelectEntity }: {
+  entities: ConnectedEntity[];
+  focusKind: string;
+  focusId: string;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(people, PAGE_SIZE);
+  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(entities, PAGE_SIZE);
 
-  if (people.length === 0) return <div className="empty-state">No people found.</div>;
+  if (entities.length === 0) return <div className="empty-state">None.</div>;
 
   return (
     <div className="flex-col">
-      {pageItems.map(({ personId, claims: pClaims }) => {
-        const person = dataStore.people.getById(personId);
-        const label = person?.person_label ?? personId;
-        const isOpen = expandedId === personId;
-
-        const evidence = pClaims.flatMap((c) =>
-          dataStore.claimEvidence.getForClaim(c.claim_id).map((ev) => ({ ...ev, predicate: c.predicate_id })),
+      {pageItems.map(({ kind, id, claims: eClaims }) => {
+        const label      = getEntityLabel(kind, id);
+        const isOpen     = expandedId === id;
+        const predicates = Array.from(new Set(eClaims.map((c) => {
+          const isSub = c.subject_type === focusKind && c.subject_id === focusId;
+          return getPredicateLabel(c.predicate_id, isSub);
+        })));
+        const evidence = eClaims.flatMap((c) =>
+          dataStore.claimEvidence.getForClaim(c.claim_id).map((ev) => ({ ...ev, claim: c })),
         );
+        const hasCertainty = eClaims.some((c) => c.certainty && c.certainty !== "attested");
 
         return (
-          <div key={personId} className="conn-card conn-card--col">
-            <div className="conn-card-row" onClick={() => onSelectEntity("person", personId)}>
-              <span className="conn-icon">{kindIcon("person")}</span>
+          <div key={id} className="conn-card conn-card--col">
+            <div className="conn-card-row" onClick={() => onSelectEntity(kind, id)}>
+              <span className="conn-icon">{kindIcon(kind)}</span>
               <div className="conn-card-body">
                 <div className="conn-name">{label}</div>
-                <div className="conn-rel">
-                  {pClaims.map((c) => c.predicate_id.replace(/_/g, " ")).filter((v, i, a) => a.indexOf(v) === i).join(", ")}
-                </div>
+                <div className="conn-rel">{predicates.join(" · ")}</div>
               </div>
-              {evidence.length > 0 && (
-                <button
-                  type="button"
-                  className="rel-expand-btn"
-                  onClick={(e) => { e.stopPropagation(); setExpandedId(isOpen ? null : personId); }}
-                  title={isOpen ? "Hide references" : "Show references"}
-                >
-                  {isOpen ? "▲" : "▼"}
-                </button>
-              )}
+              <div className="rel-card-badges">
+                {hasCertainty && (
+                  <span className="rel-certainty" style={{ color: CERTAINTY_COLORS[eClaims.find((c) => c.certainty && c.certainty !== "attested")?.certainty ?? ""] ?? "var(--text-faint)" }}>
+                    {eClaims.find((c) => c.certainty && c.certainty !== "attested")?.certainty}
+                  </span>
+                )}
+                {evidence.length > 0 && (
+                  <button type="button" className="rel-expand-btn"
+                    onClick={(e) => { e.stopPropagation(); setExpandedId(isOpen ? null : id); }}
+                    title={isOpen ? "Hide evidence" : "Show evidence"}
+                  >
+                    {isOpen ? "▲" : "▼"}
+                  </button>
+                )}
+              </div>
             </div>
 
             {isOpen && evidence.length > 0 && (
-              <div className="evidence-detail">
+              <div className="rel-card-evidence">
                 {evidence.map((ev) => {
                   const passage = dataStore.passages.getById(ev.passage_id);
-                  const source = passage ? dataStore.sources.getById(passage.source_id) : null;
+                  const source  = passage ? dataStore.sources.getById(passage.source_id) : null;
+                  const url     = getSourceExternalUrl(source);
                   return (
                     <div key={`${ev.claim_id}-${ev.passage_id}`} className="evidence-item">
-                      <span className="faint">{ev.evidence_role}</span>
+                      <div className="evidence-item-meta">
+                        <span className="faint">{ev.evidence_role}</span>
+                        {ev.evidence_weight != null && (
+                          <span className="faint" title="Evidence weight">⚖ {ev.evidence_weight}</span>
+                        )}
+                      </div>
                       {passage && <PassageReference passage={passage} source={source} />}
-                      {passage?.excerpt && <div className="evidence-excerpt">{passage.excerpt}</div>}
-                      {source?.url && (
-                        <a href={source.url} target="_blank" rel="noopener noreferrer" className="citation-link evidence-source">
+                      {(ev.excerpt_override || passage?.excerpt) && (
+                        <div className="evidence-excerpt">{ev.excerpt_override || passage?.excerpt}</div>
+                      )}
+                      {ev.notes && <div className="evidence-note faint">{ev.notes}</div>}
+                      {source && url && (
+                        <a href={url} target="_blank" rel="noopener noreferrer"
+                          className="citation-link evidence-source" title={getSourceAccessTitle(source)}>
                           {source.title}
                         </a>
+                      )}
+                      {source?.work_id && (
+                        <button type="button" className="mention-link"
+                          onClick={() => onSelectEntity("work", source.work_id)}>
+                          Open work
+                        </button>
                       )}
                     </div>
                   );
@@ -442,58 +505,61 @@ function WorkPeopleTab({ people, onSelectEntity }: {
         );
       })}
       <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
-
     </div>
   );
 }
 
-// ─── Evidence tab ─────────────────────────────────────────────────────────────
+// ─── Places tab (footprints) ──────────────────────────────────────────────────
 
-function EntityEvidenceTab({ notes, onSelectEntity }: {
-  notes: ReturnType<typeof dataStore.editorNotes.getForEntity>;
+function PlacesTab({ footprints, onSelectEntity }: {
+  footprints: EntityPlaceFootprint[];
   onSelectEntity: (kind: string, id: string) => void;
 }) {
-  const searchQuery = useAppStore((s) => s.searchQuery).trim();
-  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(notes, PAGE_SIZE);
-
-  if (notes.length === 0) return <div className="empty-state">No editor notes.</div>;
-
+  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(footprints, PAGE_SIZE);
+  if (footprints.length === 0) return <div className="empty-state">No locations found.</div>;
   return (
-    <div className="flex-col-8">
-      {pageItems.map((n) => (
-        <NoteCard
-          key={n.editor_note_id}
-          note={n}
-          onSelectEntity={onSelectEntity}
-          searchQuery={searchQuery}
-          yearLabel={n.note_kind}
-        />
+    <div className="flex-col">
+      {pageItems.map((f, i) => (
+        <FootprintCard key={`${f.place_id}:${i}`} footprint={f} showEntity={false} showPlace onSelectEntity={onSelectEntity} />
       ))}
       <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
     </div>
   );
 }
 
-// ─── Mentioned In tab ─────────────────────────────────────────────────────────
+// ─── Notes tab ────────────────────────────────────────────────────────────────
 
-function EntityMentionedInTab({ kind, id, onSelectEntity }: {
+function NotesTab({ notes, onSelectEntity }: {
+  notes: ReturnType<typeof dataStore.editorNotes.getForEntity>;
+  onSelectEntity: (kind: string, id: string) => void;
+}) {
+  const searchQuery = useAppStore((s) => s.searchQuery).trim();
+  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(notes, PAGE_SIZE);
+  if (notes.length === 0) return <div className="empty-state">No editor notes.</div>;
+  return (
+    <div className="flex-col-8">
+      {pageItems.map((n) => (
+        <NoteCard key={n.editor_note_id} note={n} onSelectEntity={onSelectEntity}
+          searchQuery={searchQuery} yearLabel={n.note_kind} />
+      ))}
+      <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
+    </div>
+  );
+}
+
+// ─── Mentions tab ─────────────────────────────────────────────────────────────
+
+function MentionsTab({ kind, id, onSelectEntity }: {
   kind: string; id: string;
   onSelectEntity: (kind: string, id: string) => void;
 }) {
   const notes = useMemo(() => dataStore.editorNotes.getMentioningNotes(kind, id), [kind, id]);
   const { page, setPage, pageItems, total, pageSize } = usePaginatedList(notes, PAGE_SIZE);
-
   if (notes.length === 0) return <div className="empty-state">No notes mention this entity.</div>;
-
   return (
     <div className="flex-col-8">
       {pageItems.map((n) => (
-        <NoteCard
-          key={n.editor_note_id}
-          note={n}
-          onSelectEntity={onSelectEntity}
-          yearLabel={n.note_kind}
-        />
+        <NoteCard key={n.editor_note_id} note={n} onSelectEntity={onSelectEntity} yearLabel={n.note_kind} />
       ))}
       <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
     </div>

@@ -5,7 +5,7 @@ import { dataStore } from "../data/dataStore";
 import type { PlaceAtDecade } from "../data/dataStore";
 import { LeftPanel } from "../components/map/LeftPanel";
 import { RightSidebar } from "../components/map/RightSidebar";
-import { PRESENCE_COLORS, KIND_ICONS } from "../components/shared/entityConstants";
+import { PRESENCE_COLORS, STANCE_COLORS, STANCE_LABELS, KIND_ICONS } from "../components/shared/entityConstants";
 import { Hl } from "../components/shared/Hl";
 
 // ─── Place search index ──────────────────────────────────────────────────────
@@ -135,6 +135,18 @@ export function MapPage() {
     return result;
   }, [activeDecade, includeCumulative, activeFilters, placeKindFilter, christianOnly, mapFilterType, mapFilterId, searchQuery]);
 
+  // ── Proposition stance lookup (used for marker coloring) ──────────────────
+
+  const propositionStanceMap = useMemo<Map<string, string>>(() => {
+    if (mapFilterType !== "proposition" || !mapFilterId) return new Map();
+    const ppp = dataStore.propositionPlacePresence.getForProposition(mapFilterId);
+    const map = new Map<string, string>();
+    for (const entry of ppp) {
+      map.set(entry.place_id, entry.stance || "unknown");
+    }
+    return map;
+  }, [mapFilterType, mapFilterId]);
+
   // ── Arc data ──────────────────────────────────────────────────────────────
 
   // TODO : @SETH Revisit to see if there's more we want to do with arcs than just works.
@@ -254,7 +266,8 @@ export function MapPage() {
       const isSelected  = place.place_id === selPlaceId;
       const isConnected = connectedPlaceIds.has(place.place_id);
       const isDimmed    = hasEntityHighlight && !isConnected && !isSelected;
-      const color       = PRESENCE_COLORS[place.presence_status] ?? "#8e8070";
+      const stanceColor = propositionStanceMap.size > 0 ? propositionStanceMap.get(place.place_id) : undefined;
+      const color       = stanceColor ? (STANCE_COLORS[stanceColor] ?? "#8e8070") : (PRESENCE_COLORS[place.presence_status] ?? "#8e8070");
       const r           = isSelected ? 9 : isConnected ? 8 : 6;
 
       // Selected ring
@@ -324,7 +337,7 @@ export function MapPage() {
       try { map.fitBounds(L.latLngBounds(bounds).pad(0.1)); } catch (_) {}
       didFitRef.current = true;
     }
-  }, [visiblePlaces, selection, setSelection, setSidebarTab, rightPanelVisible, toggleRightPanel]);
+  }, [visiblePlaces, selection, propositionStanceMap, setSelection, setSidebarTab, rightPanelVisible, toggleRightPanel]);
 
   // ── Render arcs ───────────────────────────────────────────────────────────
 

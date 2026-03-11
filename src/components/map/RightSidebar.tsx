@@ -13,7 +13,6 @@ import {
   PlacesList, GroupsList,
   PeopleList, PropositionsList, EventsList, WorksList, EssaysList,
 } from "../sidebar/SidebarLists";
-import { CityDetail, PlaceDetail } from "./CityDetail";
 
 // ─── Tab definitions ──────────────────────────────────────────────────────────
 
@@ -84,14 +83,6 @@ export function RightSidebar({ onFlyToPlace, currentDecade }: RightSidebarProps)
     );
   }
 
-  if (selection?.kind === "place") {
-    return (
-      <SidebarShell onDismiss={toggleRightPanel}>
-        <PlaceDetail placeId={selection.id} onBack={handleBack} onSelectEntity={handleEntitySelect} />
-      </SidebarShell>
-    );
-  }
-
   if (selection) {
     return (
       <SidebarShell onDismiss={toggleRightPanel}>
@@ -121,26 +112,18 @@ export function RightSidebar({ onFlyToPlace, currentDecade }: RightSidebarProps)
         />
         {essayOverlay && (
           <div className="essay-entity-overlay">
-            {essayOverlay.kind === "place" ? (
-              <PlaceDetail
-                placeId={essayOverlay.id}
-                onBack={() => setEssayOverlay(null)}
-                onSelectEntity={handleEssayEntitySelect}
-              />
-            ) : (
-              <EntityDetail
-                key={`${essayOverlay.kind}:${essayOverlay.id}`}
-                kind={essayOverlay.kind}
-                id={essayOverlay.id}
-                onBack={() => setEssayOverlay(null)}
-                onSelectEntity={handleEssayEntitySelect}
-                mapFilterType={mapFilterType}
-                mapFilterId={mapFilterId}
-                setMapFilter={setMapFilter}
-                clearMapFilter={clearMapFilter}
-                currentDecade={currentDecade}
-              />
-            )}
+            <EntityDetail
+              key={`${essayOverlay.kind}:${essayOverlay.id}`}
+              kind={essayOverlay.kind}
+              id={essayOverlay.id}
+              onBack={() => setEssayOverlay(null)}
+              onSelectEntity={handleEssayEntitySelect}
+              mapFilterType={mapFilterType}
+              mapFilterId={mapFilterId}
+              setMapFilter={setMapFilter}
+              clearMapFilter={clearMapFilter}
+              currentDecade={currentDecade}
+            />
           </div>
         )}
       </SidebarShell>
@@ -170,7 +153,7 @@ export function RightSidebar({ onFlyToPlace, currentDecade }: RightSidebarProps)
       {/* Search bar */}
       <div className="sidebar-toolbar">
         <div className="sidebar-search">
-          <span style={{ color: "var(--text-faint)", fontSize: "0.8rem" }}>🔍</span>
+          <span className="search-input-icon">🔍</span>
           <input
             type="text"
             placeholder={`Search ${TABS.find((t) => t.id === sidebarTab)?.label.toLowerCase() ?? ""}…`}
@@ -178,13 +161,7 @@ export function RightSidebar({ onFlyToPlace, currentDecade }: RightSidebarProps)
             onChange={(e) => setSidebarSearch(e.target.value)}
           />
           {sidebarSearch && (
-            <button
-              type="button"
-              style={{ background: "none", border: "none", color: "var(--text-faint)", cursor: "pointer", padding: "0 2px" }}
-              onClick={() => setSidebarSearch("")}
-            >
-              ✕
-            </button>
+            <button type="button" className="close-btn" onClick={() => setSidebarSearch("")}>✕</button>
           )}
         </div>
       </div>

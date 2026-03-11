@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { Claim } from "../../data/types";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { getPredicateLabel } from "../../domain/relationLabels";
-import { kindIcon } from "./entityConstants";
+import { kindIcon, CERTAINTY_COLORS, POLARITY_META } from "./entityConstants";
 import { PassageReference } from "./PassageReference";
 import { getSourceAccessTitle, getSourceExternalUrl } from "../../utils/sourceLinks";
 
@@ -13,19 +13,6 @@ interface ClaimCardProps {
   onSelectEntity: (kind: string, id: string) => void;
   searchQuery?: string;
 }
-
-const CERTAINTY_COLORS: Record<string, string> = {
-  attested:  "var(--attested)",
-  probable:  "var(--probable)",
-  possible:  "#8e8070",
-  uncertain: "#c0392b",
-};
-
-const POLARITY_META: Record<string, { icon: string; cls: string }> = {
-  supports:        { icon: "✓", cls: "rel-polarity--supports" },
-  opposes:         { icon: "✗", cls: "rel-polarity--opposes"  },
-  not_applicable:  { icon: "~", cls: "rel-polarity--neutral"  },
-};
 
 export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQuery = "" }: ClaimCardProps) {
   const [showEvidence, setShowEvidence] = useState(false);

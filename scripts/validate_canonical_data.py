@@ -855,28 +855,41 @@ class Validator:
                 previous_claim = claim_id
 
     def validate_author_work_affirmation_redundancy(self) -> None:
-        """Prevent person_affirms_proposition when the person authored a work that already affirms it."""
-        # Build author -> works index
-        author_works: Dict[str, set[str]] = defaultdict(set)
+        """Error when person_affirms_proposition is backed solely by passages from works that already work_affirm that proposition.
+
+        Authorship is inferred structurally: if ALL of a person claim's evidence passages trace back
+        (passage → source → work) to works that already carry work_affirms_proposition for the same
+        proposition, the person claim is entirely redundant — the work claim covers the author's position.
+        Remove the person claim; keep the work claim.
+        """
+        # passage_id -> work_id via passages.source_id -> sources.work_id
+        source_by_id = {row["source_id"]: row for row in self.tables.get("sources.tsv", []) if row.get("source_id")}
+        passage_to_work: Dict[str, str] = {}
+        for row in self.tables.get("passages.tsv", []):
+            pid = row.get("passage_id", "")
+            sid = row.get("source_id", "")
+            if pid and sid:
+                wid = source_by_id.get(sid, {}).get("work_id", "")
+                if wid:
+                    passage_to_work[pid] = wid
+
+        # work_id -> set of proposition_ids it actively affirms
+        work_affirmed: Dict[str, set[str]] = defaultdict(set)
         for row in self.tables.get("claims.tsv", []):
             if row.get("claim_status") != "active":
                 continue
-            if row.get("predicate_id") == "authored_by" and row.get("object_mode") == "entity" and row.get("object_type") == "person":
-                work_id = row["subject_id"]
-                person_id = row["object_id"]
-                author_works[person_id].add(work_id)
-        
-        # Build work -> propositions index
-        work_propositions: Dict[str, set[str]] = defaultdict(set)
-        for row in self.tables.get("claims.tsv", []):
-            if row.get("claim_status") != "active":
-                continue
-            if row.get("predicate_id") == "work_affirms_proposition" and row.get("object_mode") == "entity" and row.get("object_type") == "proposition":
-                work_id = row["subject_id"]
-                prop_id = row["object_id"]
-                work_propositions[work_id].add(prop_id)
-        
-        # Check person_affirms_proposition claims
+            if row.get("predicate_id") == "work_affirms_proposition" \
+                    and row.get("object_mode") == "entity" \
+                    and row.get("object_type") == "proposition":
+                work_affirmed[row["subject_id"]].add(row["object_id"])
+
+        # claim_id -> set of passage_ids (from claim_evidence)
+        claim_passages: Dict[str, set[str]] = defaultdict(set)
+        for row in self.tables.get("claim_evidence.tsv", []):
+            if row.get("claim_id") and row.get("passage_id"):
+                claim_passages[row["claim_id"]].add(row["passage_id"])
+
+        # Validate each person_affirms_proposition claim
         for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
             if row.get("claim_status") != "active":
                 continue
@@ -884,24 +897,28 @@ class Validator:
                 continue
             if row.get("object_mode") != "entity" or row.get("object_type") != "proposition":
                 continue
-            
-            person_id = row["subject_id"]
+
             prop_id = row["object_id"]
-            
-            # Check if this person authored any work
-            authored_works = author_works.get(person_id, set())
-            if not authored_works:
-                continue
-            
-            # Check if any of those works already affirm this proposition
-            for work_id in authored_works:
-                if prop_id in work_propositions.get(work_id, set()):
-                    self.error(
-                        f"claims.tsv:{idx} redundant person_affirms_proposition: "
-                        f"person={person_id} already authored work={work_id} which affirms proposition={prop_id}. "
-                        f"Remove this claim or the work affirmation (claim_id={row['claim_id']})"
-                    )
-                    break
+            claim_id = row["claim_id"]
+            passages = claim_passages.get(claim_id, set())
+            if not passages:
+                continue  # no passage evidence — handled by evidence_role check
+
+            # Map evidence passages to their source works
+            evidence_works = {passage_to_work[p] for p in passages if p in passage_to_work}
+            if not evidence_works:
+                continue  # all passages are Bible / un-work-linked; legitimate person claim
+
+            # If EVERY evidence work already carries work_affirms_proposition for this prop
+            # the person claim adds nothing — it is redundant
+            redundant = [w for w in evidence_works if prop_id in work_affirmed.get(w, set())]
+            if len(redundant) == len(evidence_works):
+                self.error(
+                    f"claims.tsv:{idx} redundant person_affirms_proposition: "
+                    f"person={row['subject_id']} prop={prop_id} is already affirmed by "
+                    f"work(s)={redundant} through their evidence passages. "
+                    f"Remove the person claim; the work claim suffices (claim_id={claim_id})"
+                )
 
     def validate_duplicate_claims(self) -> None:
         """Detect duplicate claims with same semantic meaning."""
@@ -1016,7 +1033,10 @@ class Validator:
                 )
 
     def validate_evidence_role_semantics(self) -> None:
-        """Validate that 'attested' claims have at least one 'supports' evidence."""
+        """Validate evidence role quality:
+        1. 'attested' claims must have at least one 'supports' evidence.
+        2. Any claim whose sole evidence is contextualizes/mentions (no 'supports') gets a warning.
+        """
         # Build claim -> evidence roles index
         claim_evidence_roles: Dict[str, set[str]] = defaultdict(set)
         for row in self.tables.get("claim_evidence.tsv", []):
@@ -1024,30 +1044,37 @@ class Validator:
             evidence_role = row.get("evidence_role", "")
             if evidence_role:
                 claim_evidence_roles[claim_id].add(evidence_role)
-        
-        # Check claims with certainty='attested'
+
         for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
             if row.get("claim_status") != "active":
                 continue
-            if row.get("certainty") != "attested":
-                continue
-            
+
             claim_id = row["claim_id"]
             evidence_roles = claim_evidence_roles.get(claim_id, set())
-            
-            if not evidence_roles:
-                self.warn(
-                    f"claims.tsv:{idx} claim marked 'attested' but has no evidence: "
-                    f"claim_id={claim_id}. Consider adding evidence or changing certainty."
-                )
-            elif "supports" not in evidence_roles:
-                has_only_contextual = evidence_roles.issubset({"contextualizes", "mentions"})
-                if has_only_contextual:
+            certainty = row.get("certainty", "")
+
+            # Rule 1: 'attested' requires at least one 'supports'
+            if certainty == "attested":
+                if not evidence_roles:
                     self.warn(
-                        f"claims.tsv:{idx} claim marked 'attested' but only has contextual/mention evidence: "
-                        f"claim_id={claim_id} evidence_roles={evidence_roles}. "
-                        f"'attested' should require at least one 'supports' evidence. Consider changing certainty to 'probable'."
+                        f"claims.tsv:{idx} claim marked 'attested' but has no evidence: "
+                        f"claim_id={claim_id}. Consider adding evidence or changing certainty."
                     )
+                elif "supports" not in evidence_roles and evidence_roles.issubset({"contextualizes", "mentions"}):
+                    self.warn(
+                        f"claims.tsv:{idx} claim marked 'attested' but all evidence is contextual/mention: "
+                        f"claim_id={claim_id} roles={evidence_roles}. "
+                        f"Change certainty to 'probable' or add a direct 'supports' link."
+                    )
+
+            # Rule 2: any active claim with evidence where ALL roles are contextualizes/mentions
+            if evidence_roles and evidence_roles.issubset({"contextualizes", "mentions"}):
+                self.warn(
+                    f"claims.tsv:{idx} sole evidence is contextual/mention only (no 'supports'): "
+                    f"claim_id={claim_id} roles={evidence_roles}. "
+                    f"This evidence does not directly support the claim. "
+                    f"Add a direct 'supports' link, change to a contextualizes-only note, or remove the evidence."
+                )
 
     def validate_evidence_reviews_notes(self) -> None:
         seen_evidence: set[Tuple[str, str, str]] = set()

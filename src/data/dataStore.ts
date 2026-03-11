@@ -411,6 +411,14 @@ for (const f of footprints) {
   footprintsByPlace.set(f.place_id, arr);
 }
 
+// proposition_place_presence indexed by proposition_id
+const propositionPresenceByPropId = new Map<string, PropositionPlacePresence[]>();
+for (const pp of propositionPlacePresence) {
+  const arr = propositionPresenceByPropId.get(pp.proposition_id) ?? [];
+  arr.push(pp);
+  propositionPresenceByPropId.set(pp.proposition_id, arr);
+}
+
 // note_mentions indexed by (mentioned_type:mentioned_id)
 const noteMentionsByEntity = new Map<string, NoteMention[]>();
 for (const m of noteMentions) {
@@ -856,6 +864,35 @@ export const dataStore = {
       ...(claimsBySubject.get(`${type}:${id}`) ?? []),
       ...(claimsByObject.get(`${type}:${id}`) ?? []),
     ]),
+    getGroupedByObjectType: (type: string, id: string): Map<string, Claim[]> => {
+      const allForEntity = [
+        ...(claimsBySubject.get(`${type}:${id}`) ?? []),
+        ...(claimsByObject.get(`${type}:${id}`) ?? []),
+      ].filter((c) => !INFRA_PREDICATES.has(c.predicate_id));
+      const grouped = new Map<string, Claim[]>();
+      for (const c of allForEntity) {
+        const isSubject = c.subject_type === type && c.subject_id === id;
+        if (c.object_mode !== "entity") {
+          const bucket = grouped.get("scalar") ?? [];
+          bucket.push(c);
+          grouped.set("scalar", bucket);
+        } else {
+          const otherType = isSubject ? c.object_type : c.subject_type;
+          if (otherType) {
+            const bucket = grouped.get(otherType) ?? [];
+            bucket.push(c);
+            grouped.set(otherType, bucket);
+          }
+        }
+      }
+      return grouped;
+    },
+    getDatedSorted: (type: string, id: string): Claim[] => [
+      ...(claimsBySubject.get(`${type}:${id}`) ?? []),
+      ...(claimsByObject.get(`${type}:${id}`) ?? []),
+    ]
+      .filter((c) => !INFRA_PREDICATES.has(c.predicate_id) && c.year_start != null)
+      .sort((a, b) => (a.year_start ?? 0) - (b.year_start ?? 0)),
   },
 
   // ── Claim evidence ──
@@ -896,7 +933,7 @@ export const dataStore = {
   // ── Proposition place presence (derived) ──
   propositionPlacePresence: {
     getAll: () => propositionPlacePresence,
-    getForProposition: (propId: string) => propositionPlacePresence.filter((p) => p.proposition_id === propId),
+    getForProposition: (propId: string) => propositionPresenceByPropId.get(propId) ?? [],
     getForPlace: (placeId: string) => propositionPlacePresence.filter((p) => p.place_id === placeId),
   },
 
@@ -918,3 +955,51 @@ export const dataStore = {
     getCurrentPlaceState: (placeId: string, decade: number) => getCurrentPlaceState(placeId, decade),
   },
 };
+
+// ─── Global search (extracted from WikiPage for reuse) ───────────────────────
+
+export type GlobalSearchResult = { kind: string; id: string; label: string };
+
+export function globalSearch(query: string, limit = 40): GlobalSearchResult[] {
+  const q = query.toLowerCase().trim();
+  if (q.length < 2) return [];
+  const results: GlobalSearchResult[] = [];
+  const cap = limit * 7;
+  for (const e of people) {
+    if (results.length >= cap) break;
+    if (e.person_label.toLowerCase().includes(q) || e.person_id.toLowerCase().includes(q))
+      results.push({ kind: "person", id: e.person_id, label: e.person_label });
+  }
+  for (const e of places) {
+    if (results.length >= cap) break;
+    if (e.place_label.toLowerCase().includes(q) || e.place_id.toLowerCase().includes(q) ||
+        (e.place_label_modern && e.place_label_modern.toLowerCase().includes(q)))
+      results.push({ kind: "place", id: e.place_id, label: e.place_label });
+  }
+  for (const e of groups) {
+    if (results.length >= cap) break;
+    if (e.group_label.toLowerCase().includes(q) || e.group_id.toLowerCase().includes(q))
+      results.push({ kind: "group", id: e.group_id, label: e.group_label });
+  }
+  for (const e of works) {
+    if (results.length >= cap) break;
+    if (e.title_display.toLowerCase().includes(q) || e.work_id.toLowerCase().includes(q))
+      results.push({ kind: "work", id: e.work_id, label: e.title_display });
+  }
+  for (const e of events) {
+    if (results.length >= cap) break;
+    if (e.event_label.toLowerCase().includes(q) || e.event_id.toLowerCase().includes(q))
+      results.push({ kind: "event", id: e.event_id, label: e.event_label });
+  }
+  for (const e of propositions) {
+    if (results.length >= cap) break;
+    if (e.proposition_label.toLowerCase().includes(q) || e.proposition_id.toLowerCase().includes(q))
+      results.push({ kind: "proposition", id: e.proposition_id, label: e.proposition_label });
+  }
+  for (const e of sources) {
+    if (results.length >= cap) break;
+    if (e.title.toLowerCase().includes(q) || e.source_id.toLowerCase().includes(q))
+      results.push({ kind: "source", id: e.source_id, label: e.title });
+  }
+  return results.slice(0, limit);
+}

@@ -44,3 +44,43 @@ export const PRESENCE_LABELS: Record<string, string> = {
 export function presenceColor(status: string): string {
   return PRESENCE_COLORS[status] ?? "#8e8070";
 }
+
+export const KIND_COLORS: Record<string, string> = {
+  person:      "#c47c3a",
+  work:        "#4a9eca",
+  proposition: "#9b72cf",
+  event:       "#e67e22",
+  place:       "#e9a84a",
+  group:       "#e63946",
+  topic:       "#6c757d",
+  source:      "#2a9d8f",
+};
+
+export const CERTAINTY_COLORS: Record<string, string> = {
+  attested:  "var(--attested)",
+  probable:  "var(--probable)",
+  possible:  "#8e8070",
+  uncertain: "#c0392b",
+};
+
+export const POLARITY_META: Record<string, { icon: string; cls: string }> = {
+  supports:       { icon: "✓", cls: "rel-polarity--supports" },
+  opposes:        { icon: "✗", cls: "rel-polarity--opposes"  },
+  not_applicable: { icon: "~", cls: "rel-polarity--neutral"  },
+};
+
+export const STANCE_COLORS: Record<string, string> = {
+  affirms: "#1a7a5c",
+  opposes: "#c0392b",
+  mixed:   "#b07e10",
+  neutral: "#8e8070",
+  unknown: "#8e8070",
+};
+
+export const STANCE_LABELS: Record<string, string> = {
+  affirms: "Affirms",
+  opposes: "Opposes",
+  mixed:   "Mixed",
+  neutral: "Neutral",
+  unknown: "Unknown",
+};

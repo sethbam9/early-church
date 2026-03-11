@@ -1,27 +1,11 @@
 import { useEffect, useRef, useState, useMemo, useCallback } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { dataStore, getEntityLabel } from "../data/dataStore";
 import type { Selection } from "../data/dataStore";
-import { useAppStore } from "../stores/appStore";
 import { type GraphNode, type GraphEdge, runForceSync, spreadNeighbors } from "../utils/forceLayout";
-import { KIND_ICONS, kindIcon, kindLabel } from "../components/shared/entityConstants";
+import { KIND_ICONS, KIND_COLORS, kindIcon, kindLabel } from "../components/shared/entityConstants";
 import { CrossPageNav } from "../components/shared/CrossPageNav";
-import { ClaimCard } from "../components/shared/RelationCard";
-import { Pagination, PAGE_SIZE } from "../components/shared/Pagination";
-import { usePaginatedList } from "../hooks/usePaginatedList";
-
-// ─── Constants ────────────────────────────────────────────────────────────────
-
-const KIND_COLORS: Record<string, string> = {
-  person:      "#c47c3a",
-  work:        "#4a9eca",
-  proposition: "#9b72cf",
-  event:       "#e67e22",
-  place:       "#e9a84a",
-  group:       "#e63946",
-  topic:       "#6c757d",
-  source:      "#2a9d8f",
-};
+import { EntityDetail } from "../components/sidebar/EntityDetail";
 
 // ─── Graph builder ────────────────────────────────────────────────────────────
 
@@ -99,7 +83,6 @@ const FILTER_OPTIONS = [
 // ─── GraphPage ────────────────────────────────────────────────────────────────
 
 export function GraphPage() {
-  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const svgRef = useRef<SVGSVGElement | null>(null);
   const nodesRef = useRef<GraphNode[]>([]);
@@ -630,10 +613,18 @@ export function GraphPage() {
       {/* ── Right detail panel ── */}
       {selection && (
         <div className="graph-right">
-          <GraphDetailPanel
-            selection={selection}
-            onClose={() => { setSelectedKey(null); setHoveredNodeKey(null); setHighlightedNodeKey(null); }}
-            onSelectNode={(kind, id) => {
+          <div className="graph-detail-close-bar">
+            <CrossPageNav kind={selection.kind} id={selection.id} current="graph" />
+            <button type="button" className="close-btn"
+              onClick={() => { setSelectedKey(null); setHoveredNodeKey(null); setHighlightedNodeKey(null); }}
+            >✕</button>
+          </div>
+          <EntityDetail
+            key={`${selection.kind}:${selection.id}`}
+            kind={selection.kind}
+            id={selection.id}
+            onBack={() => { setSelectedKey(null); setHoveredNodeKey(null); setHighlightedNodeKey(null); }}
+            onSelectEntity={(kind, id) => {
               const key = `${kind}:${id}`;
               spreadNeighbors(nodesRef.current, edgesRef.current, key);
               setSelectedKey(key);
@@ -642,83 +633,9 @@ export function GraphPage() {
               zoomToNodeConnections(key);
               forceRender((c) => c + 1);
             }}
-            onHoverNode={setHighlightedNodeKey}
-            onLeaveNode={() => setHighlightedNodeKey(null)}
-            getClaimOtherKey={getClaimOtherKey}
           />
         </div>
       )}
-    </div>
-  );
-}
-
-// ─── GraphDetailPanel ─────────────────────────────────────────────────────────
-
-function GraphDetailPanel({ selection, onClose, onSelectNode, onHoverNode, onLeaveNode, getClaimOtherKey }: {
-  selection: Selection;
-  onClose: () => void;
-  onSelectNode: (kind: string, id: string) => void;
-  onHoverNode: (key: string) => void;
-  onLeaveNode: () => void;
-  getClaimOtherKey: (claim: { subject_type: string; subject_id: string; object_type?: string; object_id?: string; object_mode: string }, focusKind: string, focusId: string) => string | null;
-}) {
-  const { kind, id } = selection;
-  const label = getEntityLabel(kind, id);
-
-  const description = useMemo(() => {
-    if (kind === "person")      return dataStore.people.getById(id)?.notes ?? "";
-    if (kind === "work")        return dataStore.works.getById(id)?.notes ?? "";
-    if (kind === "proposition") return dataStore.propositions.getById(id)?.description ?? "";
-    if (kind === "event")       return dataStore.events.getById(id)?.notes ?? "";
-    if (kind === "group")       return dataStore.groups.getById(id)?.notes ?? "";
-    if (kind === "place")       return dataStore.places.getById(id)?.notes ?? "";
-    return "";
-  }, [kind, id]);
-
-  const claims = useMemo(() => dataStore.claims.getForEntity(kind, id), [kind, id]);
-  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(claims);
-  const totalPages = Math.ceil(total / pageSize);
-
-  return (
-    <div className="mini-card">
-      <div className="graph-detail-header">
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <div className="mini-card-kind">{kindIcon(kind)} {kindLabel(kind)}</div>
-            <CrossPageNav kind={kind} id={id} current="graph" />
-          </div>
-          <div className="mini-card-title" style={{ fontSize: "1rem" }}>{label}</div>
-        </div>
-        <button type="button" className="close-btn" onClick={onClose}>✕</button>
-      </div>
-
-      <div className="graph-detail-body">
-        {description && <p className="entity-desc">{description}</p>}
-
-        {claims.length > 0 && (
-          <div>
-            <div className="mini-card-section-title">Connections ({claims.length})</div>
-            {pageItems.map((c) => {
-              const otherKey = getClaimOtherKey(c, kind, id);
-              return (
-                <div
-                  key={c.claim_id}
-                  onMouseEnter={() => { if (otherKey) onHoverNode(otherKey); }}
-                  onMouseLeave={onLeaveNode}
-                >
-                  <ClaimCard
-                    claim={c}
-                    entityId={id}
-                    entityType={kind}
-                    onSelectEntity={onSelectNode}
-                  />
-                </div>
-              );
-            })}
-            {totalPages > 1 && <Pagination page={page} total={totalPages} onChange={setPage} />}
-          </div>
-        )}
-      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { createPortal } from "react-dom";
-import { dataStore, getEntityLabel } from "../data/dataStore";
+import { dataStore, getEntityLabel, globalSearch } from "../data/dataStore";
 import type { Claim, ClaimEvidence, ClaimReview } from "../data/types";
 import { kindIcon, kindLabel, KIND_ICONS } from "../components/shared/entityConstants";
 import { getPredicateLabel } from "../domain/relationLabels";
@@ -9,6 +9,11 @@ import { getSourceExternalUrl, getSourceAccessTitle } from "../utils/sourceLinks
 import { usePaginatedList } from "../hooks/usePaginatedList";
 import { Pagination, PAGE_SIZE } from "../components/shared/Pagination";
 import { CrossPageNav } from "../components/shared/CrossPageNav";
+import { NoteCard } from "../components/shared/NoteCard";
+import { EntityHeader as SharedEntityHeader } from "../components/shared/EntityHeader";
+import { EntityDetail } from "../components/sidebar/EntityDetail";
+import { getClaimAuditStatus, getClaimBorderClass, getAuditRows } from "../utils/claimAudit";
+import type { ClaimAuditStatus, ClaimAuditRow } from "../utils/claimAudit";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -25,74 +30,9 @@ const ENTITY_TABS: { kind: string; label: string }[] = [
   { kind: "source",      label: "Sources" },
 ];
 
-// ─── Claim audit helpers ──────────────────────────────────────────────────────
-
-type ClaimAuditStatus = "no-evidence" | "unreviewed" | "disputed" | "needs-revision" | "approved" | "ok";
-
-function getClaimAuditStatus(claim: Claim): ClaimAuditStatus {
-  const evidence = dataStore.claimEvidence.getForClaim(claim.claim_id);
-  if (evidence.length === 0) return "no-evidence";
-  const reviews = dataStore.claimReviews.getForClaim(claim.claim_id);
-  if (reviews.length === 0) return "unreviewed";
-  if (reviews.some((r) => r.review_status === "disputed")) return "disputed";
-  if (reviews.some((r) => r.review_status === "needs_revision")) return "needs-revision";
-  if (reviews.every((r) => r.review_status === "approved")) return "approved";
-  return "ok";
-}
-
-function getClaimBorderClass(status: ClaimAuditStatus): string {
-  switch (status) {
-    case "no-evidence": return "wiki-border--red";
-    case "unreviewed": case "needs-revision": return "wiki-border--orange";
-    case "disputed": return "wiki-border--red";
-    case "approved": return "wiki-border--green";
-    default: return "";
-  }
-}
-
 function getEntityAllClaims(kind: string, id: string): Claim[] {
   return dataStore.claims.getForEntity(kind, id)
     .filter((c) => !dataStore.claims.isInfraPredicate(c.predicate_id));
-}
-
-// ─── Precomputed audit index (built once) ─────────────────────────────────────
-
-interface ClaimAuditRow {
-  claim: Claim;
-  status: ClaimAuditStatus;
-  evidenceCount: number;
-  reviewCount: number;
-  subjectLabel: string;
-  objectLabel: string;
-  isDuplicate: boolean;
-}
-
-let _auditCache: ClaimAuditRow[] | null = null;
-function getAuditRows(): ClaimAuditRow[] {
-  if (_auditCache) return _auditCache;
-  const all = dataStore.claims.getAll().filter((c) => c.claim_status === "active" && !dataStore.claims.isInfraPredicate(c.predicate_id));
-  const dupeMap = new Map<string, number>();
-  for (const c of all) {
-    const key = `${c.subject_type}:${c.subject_id}|${c.predicate_id}|${c.object_type}:${c.object_id}`;
-    dupeMap.set(key, (dupeMap.get(key) ?? 0) + 1);
-  }
-  _auditCache = all.map((c) => {
-    const ev = dataStore.claimEvidence.getForClaim(c.claim_id);
-    const rv = dataStore.claimReviews.getForClaim(c.claim_id);
-    const key = `${c.subject_type}:${c.subject_id}|${c.predicate_id}|${c.object_type}:${c.object_id}`;
-    return {
-      claim: c,
-      status: getClaimAuditStatus(c),
-      evidenceCount: ev.length,
-      reviewCount: rv.length,
-      subjectLabel: getEntityLabel(c.subject_type, c.subject_id),
-      objectLabel: c.object_mode === "entity" && c.object_id
-        ? getEntityLabel(c.object_type, c.object_id)
-        : (c.value_text || (c.value_year != null ? String(c.value_year) : "") || ""),
-      isDuplicate: (dupeMap.get(key) ?? 0) > 1,
-    };
-  });
-  return _auditCache;
 }
 
 // ─── Entity list helpers ──────────────────────────────────────────────────────
@@ -134,53 +74,6 @@ function getAllEntities(kind: string): { id: string; label: string; count: numbe
     }
     default: return [];
   }
-}
-
-// ─── Global search ────────────────────────────────────────────────────────────
-
-type GlobalSearchResult = { kind: string; id: string; label: string };
-
-function globalSearch(query: string): GlobalSearchResult[] {
-  const q = query.toLowerCase().trim();
-  if (q.length < 2) return [];
-  const results: GlobalSearchResult[] = [];
-  const limit = 8;
-  for (const e of dataStore.people.getAll()) {
-    if (results.length >= limit * 7) break;
-    if (e.person_label.toLowerCase().includes(q) || e.person_id.toLowerCase().includes(q))
-      results.push({ kind: "person", id: e.person_id, label: e.person_label });
-  }
-  for (const e of dataStore.places.getAll()) {
-    if (results.length >= limit * 7) break;
-    if (e.place_label.toLowerCase().includes(q) || e.place_id.toLowerCase().includes(q) || (e.place_label_modern && e.place_label_modern.toLowerCase().includes(q)))
-      results.push({ kind: "place", id: e.place_id, label: e.place_label });
-  }
-  for (const e of dataStore.groups.getAll()) {
-    if (results.length >= limit * 7) break;
-    if (e.group_label.toLowerCase().includes(q) || e.group_id.toLowerCase().includes(q))
-      results.push({ kind: "group", id: e.group_id, label: e.group_label });
-  }
-  for (const e of dataStore.works.getAll()) {
-    if (results.length >= limit * 7) break;
-    if (e.title_display.toLowerCase().includes(q) || e.work_id.toLowerCase().includes(q))
-      results.push({ kind: "work", id: e.work_id, label: e.title_display });
-  }
-  for (const e of dataStore.events.getAll()) {
-    if (results.length >= limit * 7) break;
-    if (e.event_label.toLowerCase().includes(q) || e.event_id.toLowerCase().includes(q))
-      results.push({ kind: "event", id: e.event_id, label: e.event_label });
-  }
-  for (const e of dataStore.propositions.getAll()) {
-    if (results.length >= limit * 7) break;
-    if (e.proposition_label.toLowerCase().includes(q) || e.proposition_id.toLowerCase().includes(q))
-      results.push({ kind: "proposition", id: e.proposition_id, label: e.proposition_label });
-  }
-  for (const e of dataStore.sources.getAll()) {
-    if (results.length >= limit * 7) break;
-    if (e.title.toLowerCase().includes(q) || e.source_id.toLowerCase().includes(q))
-      results.push({ kind: "source", id: e.source_id, label: e.title });
-  }
-  return results.slice(0, 40);
 }
 
 // ─── Fixed-position tooltip (portal) ──────────────────────────────────────────
@@ -306,19 +199,30 @@ const REVIEW_META: Record<string, { icon: string; cls: string }> = {
 
 // ─── Evidence row ─────────────────────────────────────────────────────────────
 
-function EvidenceRow({ ev, onSelectEntity }: { ev: ClaimEvidence; onSelectEntity: (kind: string, id: string) => void }) {
+function EvidenceRow({ ev, onSelectEntity, roleFilter }: {
+  ev: ClaimEvidence;
+  onSelectEntity: (kind: string, id: string) => void;
+  roleFilter?: string | null;
+}) {
+  if (roleFilter && roleFilter !== "all" && ev.evidence_role !== roleFilter) return null;
   const passage = dataStore.passages.getById(ev.passage_id);
   const source  = passage ? dataStore.sources.getById(passage.source_id) : null;
   const url     = getSourceExternalUrl(source);
   return (
     <div className="wiki-evidence-row">
-      <span className={`wiki-ev-role wiki-ev-role--${ev.evidence_role}`}>{ev.evidence_role}</span>
+      <div className="wiki-ev-row-meta">
+        <span className={`wiki-ev-role wiki-ev-role--${ev.evidence_role}`}>{ev.evidence_role}</span>
+        {ev.evidence_weight != null && (
+          <span className="wiki-ev-weight" title="Evidence weight">⚖ {ev.evidence_weight}</span>
+        )}
+      </div>
       {passage && (
         <button type="button" className="wiki-chip-btn" onClick={() => onSelectEntity("source", passage.source_id)} title={ev.passage_id}>
           {source?.title ?? passage.source_id}{passage.locator ? ` ${passage.locator}` : ""}
         </button>
       )}
       {passage?.excerpt && <span className="wiki-ev-excerpt faint">{passage.excerpt.slice(0, 80)}…</span>}
+      {ev.notes && <div className="wiki-ev-notes faint">{ev.notes}</div>}
       {url && <a href={url} target="_blank" rel="noopener noreferrer" className="wiki-ev-link">↗</a>}
     </div>
   );
@@ -326,13 +230,14 @@ function EvidenceRow({ ev, onSelectEntity }: { ev: ClaimEvidence; onSelectEntity
 
 // ─── Claim row ────────────────────────────────────────────────────────────────
 
-function ClaimRow({ claim, focusKind, focusId, onSelectEntity, onSelectClaim, isSelected }: {
+function ClaimRow({ claim, focusKind, focusId, onSelectEntity, onSelectClaim, isSelected, roleFilter }: {
   claim: Claim;
   focusKind: string;
   focusId: string;
   onSelectEntity: (kind: string, id: string) => void;
   onSelectClaim: (claimId: string) => void;
   isSelected: boolean;
+  roleFilter?: string | null;
 }) {
   const [expanded, setExpanded] = useState(false);
   const isSubject  = claim.subject_type === focusKind && claim.subject_id === focusId;
@@ -388,7 +293,7 @@ function ClaimRow({ claim, focusKind, focusId, onSelectEntity, onSelectClaim, is
       {expanded && (
         <div className="wiki-claim-evidence">
           {evidence.length === 0 && <div className="wiki-empty-sub">No evidence linked.</div>}
-          {evidence.map((ev) => <EvidenceRow key={ev.passage_id} ev={ev} onSelectEntity={onSelectEntity} />)}
+          {evidence.map((ev) => <EvidenceRow key={ev.passage_id} ev={ev} onSelectEntity={onSelectEntity} roleFilter={roleFilter} />)}
           {reviews.length > 0 && (
             <div className="wiki-claim-reviews-inline">
               {reviews.map((r, i) => {
@@ -412,111 +317,29 @@ function ClaimRow({ claim, focusKind, focusId, onSelectEntity, onSelectClaim, is
   );
 }
 
-// ─── Entity header ────────────────────────────────────────────────────────────
+// ─── Entity header (wrapper around shared component for wiki layout) ────────────
 
-function EntityHeader({ kind, id, onBack, historyLength }: {
+function WikiEntityHeader({ kind, id, onBack, historyLength, onSelectEntity }: {
   kind: string; id: string; onBack: () => void; historyLength: number;
+  onSelectEntity: (kind: string, id: string) => void;
 }) {
-  const rows: [string, string][] = [];
-  let title = getEntityLabel(kind, id);
-  let subtitle = "";
-  let tags: string[] = [];
-
-  if (kind === "person") {
-    const e = dataStore.people.getById(id);
-    if (e) {
-      subtitle = [e.birth_year_display, e.death_year_display].filter(Boolean).join(" – ");
-      tags = [e.person_kind !== "individual" ? e.person_kind : ""].filter(Boolean);
-      if (e.name_native) rows.push(["Native name", e.name_native]);
-      if (e.name_alt.length) rows.push(["Also known as", e.name_alt.join(", ")]);
-      if (e.notes) rows.push(["Notes", e.notes]);
-    }
-  } else if (kind === "place") {
-    const e = dataStore.places.getById(id);
-    if (e) {
-      tags = [e.place_kind];
-      if (e.place_label_modern) rows.push(["Modern name", e.place_label_modern]);
-      if (e.modern_country_label) rows.push(["Country", e.modern_country_label]);
-      if (e.lat != null) rows.push(["Coordinates", `${e.lat}°, ${e.lon}°`]);
-      rows.push(["Precision", e.location_precision]);
-      if (e.notes) rows.push(["Notes", e.notes]);
-    }
-  } else if (kind === "group") {
-    const e = dataStore.groups.getById(id);
-    if (e) {
-      tags = [e.group_kind, e.is_christian ? "Christian" : "non-Christian"];
-      if (e.notes) rows.push(["Notes", e.notes]);
-    }
-  } else if (kind === "work") {
-    const e = dataStore.works.getById(id);
-    if (e) {
-      subtitle = `${e.work_type} · ${e.language_original}`;
-      tags = [e.work_kind !== "single_work" ? e.work_kind : ""].filter(Boolean);
-      if (e.title_original) rows.push(["Original title", e.title_original]);
-      if (e.notes) rows.push(["Notes", e.notes]);
-    }
-  } else if (kind === "event") {
-    const e = dataStore.events.getById(id);
-    if (e) {
-      tags = [e.event_type, e.event_kind !== "simple" ? e.event_kind : ""].filter(Boolean);
-      if (e.notes) rows.push(["Notes", e.notes]);
-    }
-  } else if (kind === "proposition") {
-    const e = dataStore.propositions.getById(id);
-    if (e) {
-      const topic = dataStore.topics.getById(e.topic_id);
-      subtitle = topic?.topic_label ?? e.topic_id;
-      if (e.dimension_id) { const dim = dataStore.dimensions.getById(e.dimension_id); if (dim) rows.push(["Dimension", dim.dimension_label]); }
-      if (e.polarity_family) rows.push(["Polarity family", e.polarity_family]);
-      if (e.description) rows.push(["Description", e.description]);
-      if (e.notes) rows.push(["Notes", e.notes]);
-    }
-  } else if (kind === "source") {
-    const e = dataStore.sources.getById(id);
-    if (e) {
-      title = e.title;
-      subtitle = [e.author, e.year].filter(Boolean).join(" · ");
-      tags = [e.source_kind];
-      if (e.editor) rows.push(["Editor", e.editor]);
-      if (e.publisher) rows.push(["Publisher", e.publisher]);
-      if (e.container_title) rows.push(["In", e.container_title]);
-      if (e.isbn_issn) rows.push(["ISBN/ISSN", e.isbn_issn]);
-      if (e.url) rows.push(["URL", e.url]);
-      if (e.notes) rows.push(["Notes", e.notes]);
-    }
-  }
-
   return (
     <div className="wiki-entity-header">
       {historyLength > 0 && (
         <button type="button" className="back-btn wiki-back-btn" onClick={onBack}>← Back</button>
       )}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <div className="wiki-entity-kind-badge">{kindIcon(kind)} {kindLabel(kind)}</div>
+      <div className="wiki-entity-header-nav">
         <CrossPageNav kind={kind} id={id} current="wiki" />
       </div>
-      <div className="wiki-entity-title">{title}</div>
-      {subtitle && <div className="wiki-entity-subtitle">{subtitle}</div>}
-      {tags.length > 0 && (
-        <div className="flex-wrap-4" style={{ marginTop: 4 }}>
-          {tags.map((t, i) => <span key={i} className="tag">{t}</span>)}
-        </div>
-      )}
-      {rows.length > 0 && (
-        <div className="wiki-entity-fields">
-          {rows.map(([k, v]) => (
-            <div key={k} className="wiki-entity-field">
-              <span className="wiki-field-key">{k}</span>
-              <span className="wiki-field-val">{v}</span>
-            </div>
-          ))}
-        </div>
-      )}
+      <SharedEntityHeader kind={kind} id={id} showAllFields onSelectEntity={onSelectEntity} />
     </div>
   );
 }
 
 // ─── Claims panel (grouped by predicate) ──────────────────────────────────────
+
+const EVIDENCE_ROLES = ["all", "supports", "opposes", "contextualizes", "mentions"] as const;
+type EvidenceRoleFilter = typeof EVIDENCE_ROLES[number];
 
 function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelectClaim }: {
   kind: string; id: string;
@@ -524,6 +347,7 @@ function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelectClaim 
   selectedClaimId: string | null;
   onSelectClaim: (id: string) => void;
 }) {
+  const [roleFilter, setRoleFilter] = useState<EvidenceRoleFilter>("all");
   const claims = useMemo(() => getEntityAllClaims(kind, id), [kind, id]);
   const grouped = useMemo(() => {
     const map = new Map<string, Claim[]>();
@@ -591,6 +415,18 @@ function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelectClaim 
 
   return (
     <div className="wiki-claims-panel">
+      {/* Evidence role filter */}
+      <div className="wiki-ev-role-filter">
+        {EVIDENCE_ROLES.map((r) => (
+          <button key={r} type="button"
+            className={`wiki-ev-role-chip${roleFilter === r ? " active" : ""} wiki-ev-role--${r}`}
+            onClick={() => setRoleFilter(r)}
+          >
+            {r}
+          </button>
+        ))}
+      </div>
+
       {/* Editor notes in-feed */}
       {editorNotes.length > 0 && (
         <div className="wiki-pred-group">
@@ -599,13 +435,7 @@ function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelectClaim 
             <span className="wiki-pred-count faint">{editorNotes.length}</span>
           </div>
           {editorNotes.map((note) => (
-            <div key={note.editor_note_id} style={{ padding: "8px 10px", background: "var(--surface)", borderRadius: "var(--radius-sm)", fontSize: "0.8rem", marginBottom: 4 }}>
-              <div style={{ display: "flex", gap: "6px", marginBottom: "4px", fontSize: "0.72rem" }}>
-                <span className="tag">{note.note_kind}</span>
-                {note.created_by && <span className="faint">by {note.created_by}</span>}
-              </div>
-              <div style={{ color: "var(--text-muted)", lineHeight: 1.5 }}>{note.body_md}</div>
-            </div>
+            <NoteCard key={note.editor_note_id} note={note} onSelectEntity={onSelectEntity} yearLabel={note.note_kind} />
           ))}
         </div>
       )}
@@ -618,7 +448,6 @@ function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelectClaim 
         {stats.appr > 0 && <span className="wiki-audit-chip wiki-audit-chip--green">{stats.appr} approved</span>}
       </div>
       {grouped.map(([predicateId, predClaims]) => {
-        const predType = dataStore.predicateTypes.getById(predicateId);
         return (
           <div key={predicateId} className="wiki-pred-group">
             <div className="wiki-pred-group-header">
@@ -627,7 +456,7 @@ function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelectClaim 
             {predClaims.map((claim) => (
               <ClaimRow key={claim.claim_id} claim={claim} focusKind={kind} focusId={id}
                 onSelectEntity={onSelectEntity} onSelectClaim={onSelectClaim}
-                isSelected={claim.claim_id === selectedClaimId} />
+                isSelected={claim.claim_id === selectedClaimId} roleFilter={roleFilter} />
             ))}
           </div>
         );
@@ -937,6 +766,7 @@ export function WikiPage() {
   const [history, setHistory] = useState<BrowseSelection[]>([]);
 
   const [selectedClaimId, setSelectedClaimId] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<"relations" | "claims">("claims");
 
   // Handle deep-link from URL params (e.g. /wiki?kind=person&id=paul-of-tarsus)
   useEffect(() => {
@@ -1065,9 +895,28 @@ export function WikiPage() {
       <div className="wiki-center">
         {mode === "browse" && selection ? (
           <>
-            <EntityHeader kind={selection.kind} id={selection.id} onBack={popSelection} historyLength={history.length} />
-            <ClaimsPanel kind={selection.kind} id={selection.id}
-              onSelectEntity={handleSelectEntity} selectedClaimId={selectedClaimId} onSelectClaim={handleSelectClaim} />
+            {viewMode === "relations" ? (
+              <EntityDetail
+                key={`${selection.kind}:${selection.id}`}
+                kind={selection.kind}
+                id={selection.id}
+                onBack={popSelection}
+                onSelectEntity={handleSelectEntity}
+              />
+            ) : (
+              <>
+                <WikiEntityHeader kind={selection.kind} id={selection.id} onBack={popSelection}
+                  historyLength={history.length} onSelectEntity={handleSelectEntity} />
+                <ClaimsPanel kind={selection.kind} id={selection.id}
+                  onSelectEntity={handleSelectEntity} selectedClaimId={selectedClaimId} onSelectClaim={handleSelectClaim} />
+              </>
+            )}
+            <div className="wiki-view-toggle">
+              <button type="button" className={`wiki-view-btn${viewMode === "relations" ? " active" : ""}`}
+                onClick={() => setViewMode("relations")}>Relations</button>
+              <button type="button" className={`wiki-view-btn${viewMode === "claims" ? " active" : ""}`}
+                onClick={() => setViewMode("claims")}>Claims</button>
+            </div>
           </>
         ) : mode === "browse" ? (
           <div className="wiki-empty-center">

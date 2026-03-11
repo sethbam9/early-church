@@ -15,23 +15,30 @@ src/
       MarkdownRenderer.tsx – Markdown + [[mention]] renderer
       NoteCard.tsx         – Canonical evidence note (body_md + citation_urls)
       Pagination.tsx       – Page controls (uses .pagination CSS)
-      entityConstants.ts   – KIND_ICONS, KIND_LABELS, PRESENCE_COLORS/LABELS,
+      EntityHeader.tsx     – Unified entity header (title/subtitle/tags/facts)
+                             getEntityHeaderData() for data extraction
+      entityConstants.ts   – KIND_ICONS, KIND_LABELS, KIND_COLORS,
+                             PRESENCE_COLORS/LABELS, CERTAINTY_COLORS,
+                             POLARITY_META, STANCE_COLORS/LABELS,
                              kindIcon(), kindLabel(), presenceColor()
-    sidebar/        # Sidebar sub-modules (extracted from RightSidebar)
+    sidebar/        # Sidebar sub-modules
       SidebarShell.tsx     – Drag-to-resize / snap-dismiss wrapper
       SidebarLists.tsx     – All sidebar list components (PlacesList, GroupsList, etc.)
-      EntityDetail.tsx     – Generic entity detail + 7 sub-tab components
+      EntityDetail.tsx     – Unified entity detail for ALL kinds (place, person, etc.)
+                             Tabs: Info, Timeline, People, Places, Groups, Works,
+                             Events, Propositions, Topics, Notes, Mentions
     map/            # Map-specific components
-      RightSidebar.tsx     – Routing layer (delegates to sidebar/ modules)
-      CityDetail.tsx       – Place detail panel with sub-tabs (PlaceDetail + CityDetail compat wrapper)
-      LeftPanel.tsx        – Timeline controls, search, filters
+      RightSidebar.tsx     – Routing layer: uses EntityDetail for all selection kinds
+      CityDetail.tsx       – Compat re-export only (→ EntityDetail)
+      LeftPanel.tsx        – Timeline controls, search, filters, stance legend
     entity/
-      EntityDetailPanel.tsx – Entity detail for graph page (uses NoteCard)
+      EntityDetailPanel.tsx – Compat re-export only (→ EntityDetail)
     layout/
       NavBar.tsx
   data/
     types.ts        # ALL domain type definitions (single source of truth)
     dataStore.ts    # Parsing, indexing, query API (re-exports types)
+                    # Also exports: globalSearch()
     essays.ts       # Essay metadata + body loading
     parseTsv.ts     # TSV parser utilities
   domain/
@@ -43,11 +50,15 @@ src/
   stores/
     appStore.ts     # Zustand store (decade, selection, filters, UI state)
   utils/
+    claimAudit.ts   # Claim audit helpers: getClaimAuditStatus(),
+                    # getClaimBorderClass(), getAuditRows(), ClaimAuditRow type
     forceLayout.ts  # Force-directed graph physics (pure computation)
     formatYear.ts   # Year range formatting
+    sourceLinks.ts  # getSourceExternalUrl(), getSourceAccessTitle()
   pages/
     MapPage.tsx     # Map + left panel + right sidebar
     GraphPage.tsx   # Force-directed network graph
+    WikiPage.tsx    # Data wiki with dual-mode (Relations / Claims) entity view
 ```
 
 ---
@@ -60,19 +71,29 @@ src/
 |------|-------------|
 | Entity icons (🏛👤📜…) | `entityConstants.ts` → `KIND_ICONS`, `kindIcon()` |
 | Entity labels (Person, Work…) | `entityConstants.ts` → `KIND_LABELS`, `kindLabel()` |
+| Graph node colors | `entityConstants.ts` → `KIND_COLORS` |
 | Presence colors (#1a7a5c…) | `entityConstants.ts` → `PRESENCE_COLORS`, `presenceColor()` |
 | Presence labels (Attested…) | `entityConstants.ts` → `PRESENCE_LABELS` |
+| Certainty colors | `entityConstants.ts` → `CERTAINTY_COLORS` |
+| Claim polarity meta (icon/class) | `entityConstants.ts` → `POLARITY_META` |
+| Proposition stance colors | `entityConstants.ts` → `STANCE_COLORS`, `STANCE_LABELS` |
+| Entity header (title/tags/facts) | `EntityHeader.tsx` → `<EntityHeader kind={…} id={…} showAllFields? />` |
 | Search highlight | `Hl.tsx` → `<Hl text={…} query={…} />` |
 | Note rendering | `NoteCard.tsx` → `<NoteCard note={…} />` |
 | Pagination | `Pagination.tsx` → `<Pagination page={…} total={…} onChange={…} />` |
 | Markdown/mentions | `MarkdownRenderer.tsx` → `<MarkdownRenderer>` |
 | Relation labels | `relationLabels.ts` → `getRelationLabel()` |
 | Entity label lookup | `dataStore.ts` → `getEntityLabel()` |
+| Global search | `dataStore.ts` → `globalSearch(query, limit?)` |
+| Claim audit status | `utils/claimAudit.ts` → `getClaimAuditStatus()`, `getAuditRows()` |
 | Year formatting | `formatYear.ts` → `formatYearRange()` |
 | Domain types | `data/types.ts` (or re-exported from `dataStore.ts`) |
 
 ### Never:
-- Define a local `KIND_ICONS`, `PRESENCE_COLORS`, `Hl`, or `presenceColor` function in a component file.
+- Define a local `KIND_ICONS`, `KIND_COLORS`, `PRESENCE_COLORS`, `CERTAINTY_COLORS`, `POLARITY_META`, or `STANCE_COLORS` map in a component file.
+- Write a local `presenceColor`, `kindIcon`, or `kindLabel` function — import from `entityConstants.ts`.
+- Write a local `getClaimAuditStatus`, `getAuditRows`, or `globalSearch` function — import from `utils/claimAudit.ts` or `dataStore.ts`.
+- Write inline entity header rendering (title/subtitle/tags) — use `<EntityHeader>`.
 - Write inline note rendering (body + citations). Use `<NoteCard>`.
 - Write inline pagination UI. Use `<Pagination>`.
 - Define types that already exist in `data/types.ts`.
@@ -195,11 +216,13 @@ For everything else, use or create a CSS class. Common utility classes available
 
 - Shell: back bar → header → filter banner (optional) → sub-tabs → body.
 - **Back bar**: `.detail-back-bar` with `.back-btn` and `.detail-crumb`.
-- **Header**: kind badge (`kindIcon() + kindLabel()`), title, subtitle, tags.
-- **Sub-tabs**: `.detail-sub-tabs` / `.detail-sub-tab`.
+- **Header**: use `<EntityHeader kind id />` (no `showAllFields`); add `<CrossPageNav>` alongside.
+- **Info tab**: use `<EntityHeader kind id showAllFields onSelectEntity />` for full field display.
+- **Sub-tabs**: `.detail-sub-tabs` / `.detail-sub-tab`; shown only when ≥2 tabs available.
 - **Body**: `.detail-body` — scrollable, `flex-col` with gap.
 - **All entity sub-tabs must have pagination** via `<Pagination>`.
-- **City detail**: own component (`CityDetail.tsx`) with tabs: Info, Timeline, People, Doctrines, Events, Works, Archaeology, Relations.
+- **Unified `EntityDetail`**: single component for ALL entity kinds including `place`. Tabs are dynamic: only shown when count > 0. Tab order: Info → Timeline → People → Places → Groups → Works → Events → Propositions → Topics → Notes → Mentions.
+- `CityDetail.tsx` and `EntityDetailPanel.tsx` are **compat re-exports only** — do not add logic there.
 
 ---
 
@@ -267,8 +290,17 @@ For everything else, use or create a CSS class. Common utility classes available
 
 ### Wiki page
 
-- **Editor notes** are displayed **in the claims feed** (inside `ClaimsPanel`), not in the entity header. They appear as a predicate group at the top of the claims list.
+- **Dual view mode**: each entity detail has a **Relations** toggle (shows `EntityDetail` tabs) and a **Claims** toggle (shows `ClaimsPanel` audit view). Default is Claims.
+- **Evidence role filter**: `ClaimsPanel` has role filter chips (all / supports / opposes / contextualizes / mentions) that filter evidence rows within expanded claims.
+- **Editor notes** are displayed **in the claims feed** (inside `ClaimsPanel`) using `<NoteCard>`, not raw styled divs.
+- **Evidence weight and notes** (`evidence_weight`, `ev.notes`) are shown in every `EvidenceRow`.
 - Deep-linking via `?kind=X&id=Y` URL params is supported.
+
+### Map proposition stance coloring
+
+- When `mapFilterType === "proposition"`, map dot colors switch from `PRESENCE_COLORS` to `STANCE_COLORS` keyed by `proposition_place_presence.stance`.
+- `LeftPanel` shows a stance legend when a proposition filter is active.
+- Stance palette: `STANCE_COLORS` / `STANCE_LABELS` in `entityConstants.ts`.
 
 ---
 

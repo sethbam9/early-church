@@ -3111,3 +3111,123 @@ button { font-family: inherit; }
 .wiki-status--needs-revision { color: #8a6200; }
 .wiki-status--approved { color: #1a7a5c; }
 .wiki-status--ok { color: var(--text-muted); }
+
+/* ─── Evidence row meta (role + weight row) ─────────────────────────────────── */
+.wiki-ev-row-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.wiki-ev-weight {
+  font-size: 0.68rem;
+  color: var(--text-faint);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.wiki-ev-notes {
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+
+/* ─── Evidence role filter chips (ClaimsPanel) ──────────────────────────────── */
+.wiki-ev-role-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 6px 0 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 4px;
+}
+.wiki-ev-role-chip {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+.wiki-ev-role-chip:hover { background: var(--surface-2); }
+.wiki-ev-role-chip.active { background: var(--surface-3); border-color: var(--accent); color: var(--text); }
+.wiki-ev-role-chip.wiki-ev-role--all { color: var(--text-muted); }
+
+/* ─── Wiki view toggle (Relations / Claims) ─────────────────────────────────── */
+.wiki-view-toggle {
+  display: flex;
+  gap: 4px;
+  padding: 6px 0;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+.wiki-view-btn {
+  flex: 1;
+  padding: 5px 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.wiki-view-btn:hover { background: var(--surface-2); }
+.wiki-view-btn.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+/* ─── Graph right panel close bar ───────────────────────────────────────────── */
+.graph-detail-close-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px 4px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+/* ─── Non-interactive legend chip ───────────────────────────────────────────── */
+.pchip--legend {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+/* ─── Shared EntityHeader wrapper block ─────────────────────────────────────── */
+.entity-header-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* ─── Wiki entity header nav row ────────────────────────────────────────────── */
+.wiki-entity-header-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2px;
+}
+
+/* ─── Relation tab evidence item extensions ─────────────────────────────────── */
+.evidence-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 2px;
+}
+.evidence-note {
+  font-size: 0.72rem;
+  font-style: italic;
+  margin-top: 1px;
+  color: var(--text-faint);
+}
+
+/* ─── Inline styles cleanup ─────────────────────────────────────────────────── */
+.search-input-icon {
+  color: var(--text-faint);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}

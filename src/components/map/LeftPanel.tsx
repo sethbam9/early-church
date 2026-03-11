@@ -2,7 +2,7 @@ import { useCallback, useMemo } from "react";
 import { useAppStore } from "../../stores/appStore";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import type { PresenceStatus, PlaceKind } from "../../data/dataStore";
-import { PRESENCE_LABELS, PRESENCE_COLORS } from "../shared/entityConstants";
+import { PRESENCE_LABELS, PRESENCE_COLORS, STANCE_COLORS, STANCE_LABELS } from "../shared/entityConstants";
 
 interface LeftPanelProps {
   visiblePlaceCount: number;
@@ -98,6 +98,8 @@ export function LeftPanel({
   const activeFilters     = useAppStore((s) => s.activePresenceFilters);
   const placeKindFilter   = useAppStore((s) => s.activePlaceKindFilter);
   const christianOnly     = useAppStore((s) => s.christianOnly);
+  const mapFilterType     = useAppStore((s) => s.mapFilterType);
+  const mapFilterId       = useAppStore((s) => s.mapFilterId);
 
   const setDecade            = useAppStore((s) => s.setDecade);
   const stepDecade           = useAppStore((s) => s.stepDecade);
@@ -293,6 +295,21 @@ export function LeftPanel({
             Christian places only
           </label>
         </div>
+
+        {/* Proposition stance legend — shown only when proposition filter active */}
+        {mapFilterType === "proposition" && mapFilterId && (
+          <div className="presence-section">
+            <div className="section-label">Proposition stance</div>
+            <div className="presence-chips">
+              {(Object.entries(STANCE_LABELS) as [string, string][]).map(([stance, label]) => (
+                <div key={stance} className="pchip pchip--legend">
+                  <span className="pchip-dot" style={{ background: STANCE_COLORS[stance] ?? "#8e8070" }} />
+                  {label}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Presence filter — compact chips grid */}
         <div className="presence-section">
