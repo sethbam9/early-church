@@ -72,33 +72,130 @@
 
 ---
 
-## Current campaign
-**Campaign 2 — Early Apologists and Liturgical Witness**
+## ✅ CAMPAIGN 2 — SIGNED OFF
+**Early Apologists and Logos Theology, 120-180 AD**
 
-## Witnesses
-- Justin Martyr (already ingested in Campaign 1 — review for any gaps)
-- Aristides
-- Athenagoras
-- Melito of Sardis
-- High-yield fragments where available
-
-## Key places
-- Rome
-- Samaria / Flavia Neapolis
-- Sardis
-- Ephesus and Asia Minor links
-- Athens
-
-## Key doctrines to add
-- Logos theology (Justin)
-- Resurrection of the body as explicit proposition (Athenagoras)
-- First-day / Sunday assembly further evidence
-- Imperial cult / refusal of sacrifice as public doctrine
-- Mary and virgin birth (Justin 1 Apol. 33 — explicitly named)
-- Any martyrdom-under-state evidence
-
-## Sign-off condition
+### Sign-off condition met
 Early public Christian worship and self-description are represented by claims, passages, and places.
 
-## Next exact step
-Begin /patristic-data-harvest-workflow on Aristides, Athenagoras, and Melito for the doctrine checklist above.
+### Status
+- [x] All four Campaign 2 witnesses ingested
+- [x] Logos theology and bodily resurrection propositions added
+- [x] Virgin birth extended to Justin and Aristides
+- [x] Justin martyrdom event added with Rome localization
+- [x] New place flavia-neapolis added
+- [x] Validator passes clean (exit 0)
+
+---
+
+## Doctrine coverage achieved in Campaign 2
+
+| Doctrine | Propositions | Key passages |
+|---|---|---|
+| Logos theology | logos-is-pre-existent-son-of-god | Just. 1 Apol. 5-6, 21, 46; Athen. Emb. 4, 10; Mel. Peri Pascha 96 |
+| Bodily resurrection | bodies-will-be-raised-at-last-day | Athen. Res. 1-3, 25; Just. 1 Apol. 13 |
+| Virgin birth (extended) | jesus-born-of-virgin | Just. 1 Apol. 33; Arist. Apol. 1-2; Mel. Peri Pascha 96 |
+| Martyrdom theology (extended) | martyrdom-witnesses-to-christ | Just. 1 Apol. 13 |
+
+## What was added (Campaign 2 inventory)
+
+### New witnesses
+- Aristides of Athens (c. 125-130) — Apology: virgin birth, monotheism, Christian community practices
+- Athenagoras of Athens (c. 177) — Embassy: Logos theology, Trinity, sexual ethics; On the Resurrection: bodily resurrection
+- Melito of Sardis (c. 160-170) — Peri Pascha: Logos incarnation, Christ as Passover lamb
+- Justin Martyr — supplemented with Logos, virgin birth, bodily resurrection passages from 1 Apol. 5-6, 13, 21, 33, 46
+
+### People added (3)
+- aristides-of-athens, athenagoras-of-athens, melito-of-sardis
+
+### Places added (1)
+- flavia-neapolis (Justin's birthplace, Samaria)
+
+### Works added (4)
+- apology-of-aristides, embassy-for-the-christians, homily-on-the-passover, on-the-resurrection-of-the-dead
+
+### Sources added (4)
+- src-aristides-apology, src-athenagoras-embassy, src-athenagoras-resurrection, src-melito-peri-pascha
+
+### Events added (1)
+- justin-martyrdom (c. 165, Rome)
+
+### Topics added (2)
+- bodily-resurrection, logos-theology
+
+### Dimensions added (2)
+- bodily-resurrection-affirmed, logos-pre-existence
+
+### Propositions added (2)
+- bodies-will-be-raised-at-last-day, logos-is-pre-existent-son-of-god
+
+### Passages added (16)
+- psg-justin-apol-5-6, psg-justin-apol-13, psg-justin-apol-21, psg-justin-apol-33, psg-justin-apol-46
+- psg-aristides-apol-1-2, psg-aristides-apol-15, psg-aristides-apol-16
+- psg-athenagoras-emb-4-6, psg-athenagoras-emb-10, psg-athenagoras-emb-31-33, psg-athenagoras-emb-37
+- psg-athenagoras-res-1-3, psg-athenagoras-res-25
+- psg-melito-peri-pascha-66-71, psg-melito-peri-pascha-96
+
+### Claims added (25)
+- Location: aristides/athenagoras/melito active_in places; justin active flavia-neapolis
+- Work geography: addressed_to_place and written_at for apologist works
+- Justin martyrdom: participant_in, event_occurs_at, event_has_year
+- logos-is-pre-existent-son-of-god: justin apol + person, athenagoras emb + person, melito pascha + person
+- bodies-will-be-raised-at-last-day: athenagoras res + person, justin apol
+- jesus-born-of-virgin: justin apol + person, aristides apol + person
+- martyrdom-witnesses-to-christ: justin person
+
+### Claim evidence added (23 links)
+
+---
+
+## Campaign 3 — SIGNED OFF
+**Campaign 3 — Irenaeus and the anti-gnostic network, 180-200 AD**
+
+### Sign-off date
+2026-03-10
+
+### Source harvested
+Against Heresies (Adversus Haereses) Books 1, 3, 4, 5 via New Advent (Roberts–Rambaut translation)
+Chapters: AH 1.10, 3.1, 3.2, 3.3, 3.4, 4.18, 5.2
+
+### Added
+
+#### People (1)
+- irenaeus-of-lyons
+
+#### Places (2)
+- lyons (Lugdunum, Gaul)
+- gaul (region)
+
+#### Works (1)
+- against-heresies
+
+#### Sources (1)
+- src-irenaeus-against-heresies
+
+#### Groups (2)
+- valentinians
+- marcionites
+
+#### Events (1)
+- lyons-persecution (177 AD, Lyons)
+
+#### Passages (12)
+AH 1.10.1, AH 1.10.2, AH 3.1.1, AH 3.2.1-2, AH 3.3.1, AH 3.3.2, AH 3.3.3, AH 3.3.4, AH 3.4.1, AH 3.4.3, AH 4.18.1-2, AH 5.2.2-3
+
+#### Claims (21)
+- Geography: irenaeus active_in lyons/rome, against-heresies written_at lyons, lyons-persecution event_occurs_at/has_year, irenaeus participant_in lyons-persecution
+- Group presence: valentinians/marcionites at rome (138–190, 144–190)
+- Propositions (work + person): apostolic-succession-transmits-faith, rule-of-faith-received-from-apostles, eucharist-is-body-and-blood, eucharist-is-sacrifice, bodies-will-be-raised-at-last-day, jesus-born-of-virgin, logos-is-pre-existent-son-of-god
+
+#### Claim evidence (23 links)
+Succession: psg-irenaeus-ah-3-3-1/2/3/4 — Rule of faith: psg-irenaeus-ah-1-10-1/2, psg-irenaeus-ah-3-4-1 — Eucharist body/blood + bodily resurrection: psg-irenaeus-ah-5-2-2 — Eucharist sacrifice: psg-irenaeus-ah-4-18-1 — Virgin birth + logos: psg-irenaeus-ah-1-10-1 — Anti-gnostic: psg-irenaeus-ah-3-4-3
+
+### Validation
+`python3 scripts/validate_canonical_data.py --data-dir data --scan-root data/sheets` → passed clean
+
+---
+
+## Next campaign
+**Campaign 4 — TBD per patristic-batch-collection-plan**

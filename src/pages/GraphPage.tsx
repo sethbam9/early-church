@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState, useMemo, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { dataStore, getEntityLabel } from "../data/dataStore";
 import type { Selection } from "../data/dataStore";
 import { useAppStore } from "../stores/appStore";
-import { type GraphNode, type GraphEdge, runForceSync } from "../utils/forceLayout";
-import { KIND_ICONS } from "../components/shared/entityConstants";
+import { type GraphNode, type GraphEdge, runForceSync, spreadNeighbors } from "../utils/forceLayout";
+import { KIND_ICONS, kindIcon, kindLabel } from "../components/shared/entityConstants";
+import { CrossPageNav } from "../components/shared/CrossPageNav";
 import { ClaimCard } from "../components/shared/RelationCard";
-import { formatPassageLocator } from "../utils/passageReferences";
+import { Pagination, PAGE_SIZE } from "../components/shared/Pagination";
+import { usePaginatedList } from "../hooks/usePaginatedList";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -23,7 +25,7 @@ const KIND_COLORS: Record<string, string> = {
 
 // ─── Graph builder ────────────────────────────────────────────────────────────
 
-function buildGraph(filter: string) {
+function buildGraph(filters: string[]) {
   const claims = dataStore.claims.getAll().filter((c) => c.claim_status === "active");
   const nodeMap = new Map<string, GraphNode>();
   const edgeSet = new Set<string>();
@@ -55,7 +57,12 @@ function buildGraph(filter: string) {
     if (c.object_mode !== "entity" || !c.object_id) continue;
     const srcKind = c.subject_type;
     const tgtKind = c.object_type;
-    if (filter !== "all" && srcKind !== filter && tgtKind !== filter) continue;
+    
+    // When filtering, show connections where both entities match one of the selected types
+    if (filters.length > 0 && !filters.includes("all")) {
+      if (!filters.includes(srcKind) || !filters.includes(tgtKind)) continue;
+    }
+    
     addNode(srcKind, c.subject_id);
     addNode(tgtKind, c.object_id);
     addEdge(
@@ -77,12 +84,6 @@ function buildGraph(filter: string) {
   return { nodes, edges };
 }
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-
-function getNodeLabel(nodeId: string, nodes: GraphNode[]): string {
-  return nodes.find((n) => n.id === nodeId)?.label ?? nodeId;
-}
-
 // ─── Filter options ───────────────────────────────────────────────────────────
 
 const FILTER_OPTIONS = [
@@ -99,37 +100,143 @@ const FILTER_OPTIONS = [
 
 export function GraphPage() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const svgRef = useRef<SVGSVGElement | null>(null);
   const nodesRef = useRef<GraphNode[]>([]);
   const edgesRef = useRef<GraphEdge[]>([]);
   const svgSizeRef = useRef({ width: 800, height: 600 });
-  const panRef = useRef({ lastX: 0, lastY: 0, active: false });
+  const panRef = useRef({ lastX: 0, lastY: 0, active: false, didDrag: false });
   const zoomRef = useRef(1.0);
 
-  const [filter, setFilter] = useState("all");
+  const [filters, setFilters] = useState<string[]>(["all"]);
   const [minConnections, setMinConnections] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
-  const [hoveredEdge, setHoveredEdge] = useState<number | null>(null);
-  const [selectedEdge, setSelectedEdge] = useState<number | null>(null);
+  const [hoveredNodeKey, setHoveredNodeKey] = useState<string | null>(null);
+  const [highlightedNodeKey, setHighlightedNodeKey] = useState<string | null>(null);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1.0);
   const [, forceRender] = useState(0);
 
+  // Auto-zoom to show a node and all its connections
+  const zoomToNodeConnections = useCallback((nodeId: string) => {
+    const nodes = nodesRef.current;
+    const edges = edgesRef.current;
+    const center = nodes.find((n) => n.id === nodeId);
+    if (!center) return;
+
+    // Get fresh SVG dimensions (critical when page just became visible)
+    const svg = svgRef.current;
+    if (svg) {
+      const rect = svg.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) {
+        svgSizeRef.current = { width: rect.width, height: rect.height };
+      }
+    }
+
+    const connectedIds = new Set<string>([nodeId]);
+    for (const e of edges) {
+      if (e.source === nodeId) connectedIds.add(e.target);
+      if (e.target === nodeId) connectedIds.add(e.source);
+    }
+    const connectedNodes = nodes.filter((n) => connectedIds.has(n.id));
+    if (connectedNodes.length === 0) return;
+
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    for (const n of connectedNodes) {
+      minX = Math.min(minX, n.x - n.r);
+      maxX = Math.max(maxX, n.x + n.r);
+      minY = Math.min(minY, n.y - n.r);
+      maxY = Math.max(maxY, n.y + n.r);
+    }
+
+    const { width, height } = svgSizeRef.current;
+    const padding = 80;
+    const bboxW = maxX - minX + padding * 2;
+    const bboxH = maxY - minY + padding * 2;
+    const newZoom = Math.max(0.15, Math.min(4, Math.min(width / bboxW, height / bboxH)));
+    const cx = (minX + maxX) / 2;
+    const cy = (minY + maxY) / 2;
+
+    zoomRef.current = newZoom;
+    setZoom(newZoom);
+    setPan({ x: width / 2 - cx * newZoom, y: height / 2 - cy * newZoom });
+  }, []);
+
   useEffect(() => {
-    const { nodes, edges } = buildGraph(filter);
+    const { nodes, edges } = buildGraph(filters);
+    
+    // Measure SVG before running simulation
+    const svg = svgRef.current;
+    if (svg) {
+      const rect = svg.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) {
+        svgSizeRef.current = { width: rect.width, height: rect.height };
+      }
+    }
+    
     const { width, height } = svgSizeRef.current;
     runForceSync(nodes, edges, width, height);
     nodesRef.current = nodes;
     edgesRef.current = edges;
     setSelectedKey(null);
-    setSelectedEdge(null);
+    setHoveredNodeKey(null);
+    setHighlightedNodeKey(null);
     setPan({ x: 0, y: 0 });
     setZoom(1.0);
     zoomRef.current = 1.0;
+    lastHandledParam.current = ""; // Reset so deep-link can re-process
     forceRender((n) => n + 1);
-  }, [filter]);
+  }, [filters]);
+
+  // Handle deep-link from URL params (e.g. /graph?kind=person&id=paul-of-tarsus)
+  const lastHandledParam = useRef("");
+  useEffect(() => {
+    const kind = searchParams.get("kind");
+    const id = searchParams.get("id");
+    if (!kind || !id) {
+      lastHandledParam.current = "";
+      return;
+    }
+    const paramKey = `${kind}:${id}`;
+    if (paramKey === lastHandledParam.current) return;
+    
+    // Wait for graph to be built AND SVG to be measured
+    const trySelect = (attempts = 0) => {
+      const svg = svgRef.current;
+      const nodes = nodesRef.current;
+      
+      // Check if graph is built
+      if (nodes.length === 0) {
+        if (attempts < 15) {
+          setTimeout(() => trySelect(attempts + 1), 50);
+        }
+        return;
+      }
+      
+      // Check if SVG is measured
+      if (svg) {
+        const rect = svg.getBoundingClientRect();
+        if (rect.width > 0 && rect.height > 0) {
+          svgSizeRef.current = { width: rect.width, height: rect.height };
+          const node = nodes.find((n) => n.id === paramKey);
+          if (node) {
+            lastHandledParam.current = paramKey;
+            spreadNeighbors(nodes, edgesRef.current, paramKey);
+            setSelectedKey(paramKey);
+            zoomToNodeConnections(paramKey);
+            forceRender((n) => n + 1);
+          } else {
+            lastHandledParam.current = paramKey; // Still mark as handled even if not found
+          }
+          return;
+        }
+      }
+      if (attempts < 15) setTimeout(() => trySelect(attempts + 1), 50);
+    };
+    requestAnimationFrame(() => trySelect());
+  }, [searchParams, zoomToNodeConnections]);
 
   useEffect(() => {
     const el = svgRef.current;
@@ -170,6 +277,7 @@ export function GraphPage() {
     if (panRef.current.active) {
       const dx = e.clientX - panRef.current.lastX;
       const dy = e.clientY - panRef.current.lastY;
+      if (Math.abs(dx) > 2 || Math.abs(dy) > 2) panRef.current.didDrag = true;
       panRef.current.lastX = e.clientX;
       panRef.current.lastY = e.clientY;
       setPan((p) => ({ x: p.x + dx, y: p.y + dy }));
@@ -179,9 +287,10 @@ export function GraphPage() {
   function handleSvgMouseUp() { panRef.current.active = false; }
 
   function handleSvgMouseDown(e: React.MouseEvent<SVGSVGElement>) {
-    const tag = (e.target as Element).tagName;
-    if (tag === "svg" || tag === "g" || tag === "line") {
+    const tag = (e.target as Element).tagName.toLowerCase();
+    if (tag !== "circle") {
       panRef.current.active = true;
+      panRef.current.didDrag = false;
       panRef.current.lastX = e.clientX;
       panRef.current.lastY = e.clientY;
     }
@@ -198,7 +307,7 @@ export function GraphPage() {
       .filter((n) => n.label.toLowerCase().includes(q) || n.kind.toLowerCase().includes(q))
       .sort((a, b) => b.connections - a.connections)
       .slice(0, 10);
-  }, [searchQuery, filter]);
+  }, [searchQuery, filters]);
 
   const panToNode = useCallback((node: GraphNode) => {
     const { width, height } = svgSizeRef.current;
@@ -232,13 +341,6 @@ export function GraphPage() {
     return { kind: kind as Selection["kind"], id };
   }, [selectedKey]);
 
-  function handleGoToMap() {
-    if (selection) {
-      useAppStore.getState().setSelection(selection);
-    }
-    navigate("/");
-  }
-
   const allNodes = nodesRef.current;
   const allEdges = edgesRef.current;
 
@@ -254,36 +356,59 @@ export function GraphPage() {
 
   const maxConn = useMemo(() => Math.max(1, ...allNodes.map((n) => n.connections)), [allNodes]);
 
-  const hasSelection = selectedKey != null || selectedEdge != null;
+  const hasSelection = selectedKey != null;
   const connectedToSelected = useMemo(() => {
     if (!hasSelection) return null;
     const ids = new Set<string>();
-    if (selectedKey) {
-      ids.add(selectedKey);
-      for (const e of edges) {
-        if (e.source === selectedKey) ids.add(e.target);
-        if (e.target === selectedKey) ids.add(e.source);
-      }
-    }
-    if (selectedEdge != null) {
-      const e = edges[selectedEdge];
-      if (e) { ids.add(e.source); ids.add(e.target); }
+    ids.add(selectedKey!);
+    for (const e of edges) {
+      if (e.source === selectedKey) ids.add(e.target);
+      if (e.target === selectedKey) ids.add(e.source);
     }
     return ids;
-  }, [hasSelection, selectedKey, selectedEdge, edges]);
+  }, [hasSelection, selectedKey, edges]);
 
-  const selectedEdgeInfo = selectedEdge != null ? edges[selectedEdge] ?? null : null;
+  // Edges between selected node and the hovered connected neighbor
+  const hoverEdgeDetails = useMemo(() => {
+    if (!selectedKey || !hoveredNodeKey) return null;
+    if (!connectedToSelected?.has(hoveredNodeKey)) return null;
+    const between = edges.filter(
+      (e) =>
+        (e.source === selectedKey && e.target === hoveredNodeKey) ||
+        (e.source === hoveredNodeKey && e.target === selectedKey),
+    );
+    if (between.length === 0) return null;
+    return between.map((e) => {
+      const claim = e.relationId ? dataStore.claims.getById(e.relationId) : null;
+      return { label: e.label, certainty: claim?.certainty ?? "", yearStart: claim?.year_start, yearEnd: claim?.year_end };
+    });
+  }, [selectedKey, hoveredNodeKey, edges, connectedToSelected]);
+
+  // Helper to get claim's "other" entity key for right-panel hover highlighting
+  function getClaimOtherKey(claim: { subject_type: string; subject_id: string; object_type?: string; object_id?: string; object_mode: string }, focusKind: string, focusId: string): string | null {
+    if (claim.object_mode !== "entity" || !claim.object_id || !claim.object_type) return null;
+    const focusKey = `${focusKind}:${focusId}`;
+    const subKey = `${claim.subject_type}:${claim.subject_id}`;
+    const objKey = `${claim.object_type}:${claim.object_id}`;
+    return subKey === focusKey ? objKey : subKey;
+  }
+
+  function handleNodeClick(nodeId: string) {
+    const newKey = nodeId === selectedKey ? null : nodeId;
+    if (newKey) {
+      spreadNeighbors(nodesRef.current, edgesRef.current, newKey);
+    }
+    setSelectedKey(newKey);
+    setHoveredNodeKey(null);
+    setHighlightedNodeKey(null);
+    if (newKey) zoomToNodeConnections(newKey);
+    forceRender((n) => n + 1);
+  }
 
   return (
     <div className="graph-page">
       {/* ── Left sidebar ── */}
       <div className="graph-sidebar">
-        <div className="graph-sidebar-section">
-          <button type="button" className="map-overlay-btn" style={{ width: "100%", textAlign: "left", boxShadow: "none" }} onClick={() => navigate("/")}>
-            ← Map
-          </button>
-        </div>
-
         <div className="panel-header">
           <div className="panel-eyebrow">Network</div>
           <div className="panel-title">Claim Graph</div>
@@ -292,14 +417,27 @@ export function GraphPage() {
 
         {/* Filter */}
         <div className="graph-sidebar-section">
-          <div className="filter-label" style={{ marginBottom: 6 }}>Filter by type</div>
+          <div className="filter-label" style={{ marginBottom: 6 }}>Filter by type (multi-select)</div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
             {FILTER_OPTIONS.map(({ value, label }) => (
               <button
                 key={value}
                 type="button"
-                className={`pchip${filter === value ? " active" : ""}`}
-                onClick={() => setFilter(value)}
+                className={`pchip${filters.includes(value) ? " active" : ""}`}
+                onClick={() => {
+                  if (value === "all") {
+                    setFilters(["all"]);
+                  } else {
+                    setFilters((prev) => {
+                      const without = prev.filter((v) => v !== "all" && v !== value);
+                      if (prev.includes(value)) {
+                        return without.length === 0 ? ["all"] : without;
+                      } else {
+                        return [...without, value];
+                      }
+                    });
+                  }
+                }}
               >
                 {label}
               </button>
@@ -362,7 +500,6 @@ export function GraphPage() {
             max={Math.max(2, maxConn)}
             value={minConnections}
             onChange={(e) => setMinConnections(Number(e.target.value))}
-            style={{ width: "100%" }}
           />
           <div className="faint" style={{ fontSize: "0.7rem", display: "flex", justifyContent: "space-between" }}>
             <span>1</span>
@@ -370,52 +507,6 @@ export function GraphPage() {
           </div>
         </div>
 
-        {/* Selected node info */}
-        {selectedKey && (
-          <div className="graph-sidebar-section">
-            <div className="filter-label" style={{ marginBottom: 5 }}>Selected Node</div>
-            <div className="bold" style={{ fontSize: "0.88rem", marginBottom: 8 }}>
-              {nodes.find((n) => n.id === selectedKey)?.label ?? selectedKey}
-            </div>
-            <button type="button" className="view-on-map-btn" style={{ width: "100%" }} onClick={handleGoToMap}>🗺 View on map</button>
-          </div>
-        )}
-
-        {/* Selected edge info */}
-        {selectedEdgeInfo && (
-          <div className="graph-sidebar-section">
-            <div className="filter-label" style={{ marginBottom: 5 }}>Selected Edge</div>
-            <div style={{ fontSize: "0.8rem", lineHeight: 1.6 }}>
-              <div className="bold">{getNodeLabel(selectedEdgeInfo.source, nodes)}</div>
-              <div className="accent-text italic" style={{ margin: "2px 0" }}>— {selectedEdgeInfo.label} →</div>
-              <div className="bold">{getNodeLabel(selectedEdgeInfo.target, nodes)}</div>
-            </div>
-            {selectedEdgeInfo.relationId && (() => {
-              const claim = dataStore.claims.getById(selectedEdgeInfo.relationId);
-              if (!claim) return null;
-              const evidence = dataStore.claimEvidence.getForClaim(claim.claim_id);
-              return (
-                <div style={{ marginTop: 6, fontSize: "0.78rem", color: "var(--text-muted)" }}>
-                  <div>{claim.predicate_id.replace(/_/g, " ")} · {claim.certainty}</div>
-                  {claim.year_start && <div className="faint">AD {claim.year_start}{claim.year_end && claim.year_end !== claim.year_start ? `–${claim.year_end}` : ""}</div>}
-                  {evidence.length > 0 && (
-                    <div style={{ marginTop: 4 }}>
-                      {evidence.map((ev) => {
-                        const passage = dataStore.passages.getById(ev.passage_id);
-                        return <div key={ev.passage_id} className="faint">{ev.evidence_role}{passage ? ` — ${formatPassageLocator(passage)}` : ""}</div>;
-                      })}
-                    </div>
-                  )}
-                </div>
-              );
-            })()}
-            <div className="flex-center" style={{ gap: 6, marginTop: 8 }}>
-              <button type="button" className="filter-tab" onClick={() => { setSelectedKey(selectedEdgeInfo.source); setSelectedEdge(null); }}>Source</button>
-              <button type="button" className="filter-tab" onClick={() => { setSelectedKey(selectedEdgeInfo.target); setSelectedEdge(null); }}>Target</button>
-              <button type="button" className="close-btn" style={{ fontSize: "0.75rem" }} onClick={() => setSelectedEdge(null)}>✕</button>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* ── Graph canvas ── */}
@@ -425,71 +516,79 @@ export function GraphPage() {
           <button type="button" className="map-overlay-btn graph-zoom-btn" onClick={zoomOut} title="Zoom out" style={{ fontSize: "1.4rem" }}>−</button>
           <button type="button" className="map-overlay-btn graph-zoom-btn--fit" onClick={resetView} title="Reset view">fit</button>
         </div>
-        <div className="graph-hint">Scroll to zoom · Drag canvas to pan · Click node or edge</div>
+        <div className="graph-hint">Scroll to zoom · Drag to pan · Click node to explore</div>
 
         <svg
           ref={svgRef}
           className="graph-svg"
-          style={{ cursor: "grab" }}
           onMouseMove={handleSvgMouseMove}
           onMouseUp={handleSvgMouseUp}
-          onMouseLeave={handleSvgMouseUp}
+          onMouseLeave={() => { handleSvgMouseUp(); setHoveredNodeKey(null); }}
           onMouseDown={handleSvgMouseDown}
+          onClick={() => { if (!panRef.current.didDrag) { setSelectedKey(null); setHoveredNodeKey(null); setHighlightedNodeKey(null); } }}
         >
           <g transform={`translate(${pan.x},${pan.y}) scale(${zoom})`}>
-            {/* Edges */}
-            {edges.map((e, i) => {
-              const src = nodes.find((n) => n.id === e.source);
-              const tgt = nodes.find((n) => n.id === e.target);
-              if (!src || !tgt) return null;
-              const isNodeSelected = selectedKey === e.source || selectedKey === e.target;
-              const isEdgeSel = selectedEdge === i;
-              const isHovered = hoveredEdge === i;
-              const isDimmed = hasSelection && !isNodeSelected && !isEdgeSel;
-              const mx = (src.x + tgt.x) / 2;
-              const my = (src.y + tgt.y) / 2;
-              const strokeColor = isEdgeSel ? "var(--accent)" : isNodeSelected ? "var(--accent-bright)" : "var(--border)";
-              const strokeW = isEdgeSel ? 2.5 : isNodeSelected ? 1.5 : 0.8;
-              const strokeOp = isEdgeSel ? 0.95 : isNodeSelected ? 0.75 : isDimmed ? 0.08 : 0.28;
-              return (
-                <g key={i}>
-                  <line x1={src.x} y1={src.y} x2={tgt.x} y2={tgt.y} stroke="transparent" strokeWidth={10}
-                    style={{ cursor: "pointer", pointerEvents: "stroke" }}
-                    onMouseEnter={() => setHoveredEdge(i)} onMouseLeave={() => setHoveredEdge(null)}
-                    onClick={(ev) => { ev.stopPropagation(); setSelectedEdge(selectedEdge === i ? null : i); setSelectedKey(null); }} />
-                  <line x1={src.x} y1={src.y} x2={tgt.x} y2={tgt.y} stroke={strokeColor} strokeWidth={strokeW} strokeOpacity={strokeOp} style={{ pointerEvents: "none" }} />
-                  {(isHovered || isEdgeSel) && (
-                    <g style={{ pointerEvents: "none" }}>
-                      <rect x={mx - 42} y={my - 17} width={84} height={17} rx={4} fill="var(--surface)" stroke="var(--border)" strokeWidth={0.5} fillOpacity={0.93} />
-                      <text x={mx} y={my - 5} textAnchor="middle" fill="var(--text-muted)" fontSize="9">{e.label}</text>
-                    </g>
-                  )}
-                </g>
-              );
-            })}
+            {/* Edges — visual only, no interaction */}
+            {(() => {
+              const nodeMap = new Map<string, GraphNode>();
+              for (const n of nodes) nodeMap.set(n.id, n);
+              return edges.map((e, i) => {
+                const src = nodeMap.get(e.source);
+                const tgt = nodeMap.get(e.target);
+                if (!src || !tgt) return null;
+                const isNodeSelected = selectedKey === e.source || selectedKey === e.target;
+                const isHoverEdge = (hoveredNodeKey || highlightedNodeKey) && selectedKey && (() => {
+                  const hk = hoveredNodeKey || highlightedNodeKey;
+                  return (e.source === selectedKey && e.target === hk) ||
+                         (e.source === hk && e.target === selectedKey);
+                })();
+                const isDimmed = hasSelection && !isNodeSelected;
+                const strokeColor = isHoverEdge ? "var(--accent)" : isNodeSelected ? "var(--accent-bright)" : "var(--border)";
+                const strokeW = isHoverEdge ? 2.5 : isNodeSelected ? 1.5 : 0.8;
+                const strokeOp = isHoverEdge ? 0.95 : isNodeSelected ? 0.75 : isDimmed ? 0.08 : 0.28;
+                return (
+                  <line key={i} x1={src.x} y1={src.y} x2={tgt.x} y2={tgt.y}
+                    stroke={strokeColor} strokeWidth={strokeW} strokeOpacity={strokeOp}
+                    style={{ pointerEvents: "none" }} />
+                );
+              });
+            })()}
             {/* Nodes */}
             {nodes.map((n) => {
               const color = KIND_COLORS[n.kind] ?? "#6c757d";
               const isSelected = n.id === selectedKey;
               const isConnected = connectedToSelected?.has(n.id) ?? false;
+              const isHighlighted = n.id === highlightedNodeKey;
+              const isHovered = n.id === hoveredNodeKey && hasSelection && isConnected;
               const isDimmed = hasSelection && !isSelected && !isConnected;
               const showLabel = isSelected || n.connections >= 3 || nodes.length < 60;
               return (
-                <g key={n.id} transform={`translate(${n.x},${n.y})`} style={{ cursor: "pointer" }}
-                  onClick={(e) => { e.stopPropagation(); setSelectedKey(n.id === selectedKey ? null : n.id); setSelectedEdge(null); }}>
+                <g key={n.id} transform={`translate(${n.x},${n.y})`}
+                  style={{ cursor: isDimmed ? "default" : "pointer", pointerEvents: isDimmed ? "none" : "auto" }}
+                  onClick={(ev) => { ev.stopPropagation(); handleNodeClick(n.id); }}
+                  onMouseEnter={() => { if (hasSelection && isConnected && !isSelected) setHoveredNodeKey(n.id); }}
+                  onMouseLeave={() => { if (hoveredNodeKey === n.id) setHoveredNodeKey(null); }}
+                >
+                  {/* Highlight ring from right-panel hover */}
+                  {isHighlighted && !isSelected && (
+                    <circle r={n.r + 9} fill="none" stroke="var(--accent)" strokeWidth={2.5} strokeOpacity={0.7} strokeDasharray="4 3" />
+                  )}
+                  {/* Selected ring */}
                   {isSelected && <circle r={n.r + 7} fill="none" stroke="#fff" strokeWidth={2} strokeOpacity={0.4} />}
+                  {/* Hover ring */}
+                  {isHovered && !isSelected && <circle r={n.r + 5} fill="none" stroke="var(--accent-bright)" strokeWidth={2} strokeOpacity={0.6} />}
                   <circle
                     r={isSelected ? n.r + 3 : n.r}
                     fill={color}
                     fillOpacity={isSelected ? 0.95 : isDimmed ? 0.15 : isConnected ? 0.9 : 0.72}
-                    stroke={isSelected ? "#fff" : isDimmed ? "transparent" : color}
-                    strokeWidth={isSelected ? 2.5 : 0.8}
+                    stroke={isSelected ? "#fff" : isHovered ? "var(--accent-bright)" : isDimmed ? "transparent" : color}
+                    strokeWidth={isSelected ? 2.5 : isHovered ? 2 : 0.8}
                   />
                   {n.connections >= 5 && !isSelected && !isDimmed && (
-                    <text y={3} textAnchor="middle" fill="#fff" fontSize="8" fontWeight="700" style={{ pointerEvents: "none" }}>{n.connections}</text>
+                    <text y={3} textAnchor="middle" fill="#fff" fontSize="8" fontWeight="700">{n.connections}</text>
                   )}
                   {showLabel && !isDimmed && (
-                    <text y={n.r + 11} textAnchor="middle" fill="var(--text)" fontSize={isSelected ? "10" : "8"} fontWeight={isSelected ? "700" : "400"} style={{ pointerEvents: "none" }}>
+                    <text y={n.r + 11} textAnchor="middle" fill="var(--text)" fontSize={isSelected ? "10" : "8"} fontWeight={isSelected ? "700" : "400"}>
                       {n.label.length > 20 ? n.label.slice(0, 19) + "…" : n.label}
                     </text>
                   )}
@@ -498,6 +597,28 @@ export function GraphPage() {
             })}
           </g>
         </svg>
+
+        {/* Hover overlay — shows relationship details between selected and hovered node */}
+        {hoveredNodeKey && hoverEdgeDetails && (() => {
+          const hNode = nodes.find((nd) => nd.id === hoveredNodeKey);
+          if (!hNode) return null;
+          const screenX = hNode.x * zoom + pan.x;
+          const screenY = hNode.y * zoom + pan.y - hNode.r * zoom - 12;
+          return (
+            <div className="graph-hover-overlay" style={{ left: screenX, top: screenY, transform: "translate(-50%, -100%)" }}>
+              <div className="graph-hover-overlay-title">{hNode.label}</div>
+              {hoverEdgeDetails.map((d, i) => (
+                <div key={i} className="graph-hover-overlay-claim">
+                  <span style={{ color: "var(--accent)" }}>{d.label}</span>
+                  {d.certainty && <span className="faint"> · {d.certainty}</span>}
+                  {d.yearStart != null && (
+                    <span className="faint"> · AD {d.yearStart}{d.yearEnd != null && d.yearEnd !== d.yearStart ? `–${d.yearEnd}` : ""}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          );
+        })()}
 
         {nodes.length === 0 && (
           <div className="empty-state" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}>
@@ -511,13 +632,19 @@ export function GraphPage() {
         <div className="graph-right">
           <GraphDetailPanel
             selection={selection}
-            onClose={() => setSelectedKey(null)}
-            onGoToMap={handleGoToMap}
+            onClose={() => { setSelectedKey(null); setHoveredNodeKey(null); setHighlightedNodeKey(null); }}
             onSelectNode={(kind, id) => {
-              setSelectedKey(`${kind}:${id}`);
-              const node = nodesRef.current.find((n) => n.id === `${kind}:${id}`);
-              if (node) panToNode(node);
+              const key = `${kind}:${id}`;
+              spreadNeighbors(nodesRef.current, edgesRef.current, key);
+              setSelectedKey(key);
+              setHoveredNodeKey(null);
+              setHighlightedNodeKey(null);
+              zoomToNodeConnections(key);
+              forceRender((c) => c + 1);
             }}
+            onHoverNode={setHighlightedNodeKey}
+            onLeaveNode={() => setHighlightedNodeKey(null)}
+            getClaimOtherKey={getClaimOtherKey}
           />
         </div>
       )}
@@ -527,11 +654,13 @@ export function GraphPage() {
 
 // ─── GraphDetailPanel ─────────────────────────────────────────────────────────
 
-function GraphDetailPanel({ selection, onClose, onGoToMap, onSelectNode }: {
+function GraphDetailPanel({ selection, onClose, onSelectNode, onHoverNode, onLeaveNode, getClaimOtherKey }: {
   selection: Selection;
   onClose: () => void;
-  onGoToMap: () => void;
   onSelectNode: (kind: string, id: string) => void;
+  onHoverNode: (key: string) => void;
+  onLeaveNode: () => void;
+  getClaimOtherKey: (claim: { subject_type: string; subject_id: string; object_type?: string; object_id?: string; object_mode: string }, focusKind: string, focusId: string) => string | null;
 }) {
   const { kind, id } = selection;
   const label = getEntityLabel(kind, id);
@@ -547,12 +676,17 @@ function GraphDetailPanel({ selection, onClose, onGoToMap, onSelectNode }: {
   }, [kind, id]);
 
   const claims = useMemo(() => dataStore.claims.getForEntity(kind, id), [kind, id]);
+  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(claims);
+  const totalPages = Math.ceil(total / pageSize);
 
   return (
     <div className="mini-card">
       <div className="graph-detail-header">
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div className="mini-card-kind">{KIND_ICONS[kind]} {kind}</div>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <div className="mini-card-kind">{kindIcon(kind)} {kindLabel(kind)}</div>
+            <CrossPageNav kind={kind} id={id} current="graph" />
+          </div>
           <div className="mini-card-title" style={{ fontSize: "1rem" }}>{label}</div>
         </div>
         <button type="button" className="close-btn" onClick={onClose}>✕</button>
@@ -563,20 +697,27 @@ function GraphDetailPanel({ selection, onClose, onGoToMap, onSelectNode }: {
 
         {claims.length > 0 && (
           <div>
-            <div className="mini-card-section-title">Claims ({claims.length})</div>
-            {claims.slice(0, 8).map((c) => (
-              <ClaimCard
-                key={c.claim_id}
-                claim={c}
-                entityId={id}
-                entityType={kind}
-                onSelectEntity={onSelectNode}
-              />
-            ))}
+            <div className="mini-card-section-title">Connections ({claims.length})</div>
+            {pageItems.map((c) => {
+              const otherKey = getClaimOtherKey(c, kind, id);
+              return (
+                <div
+                  key={c.claim_id}
+                  onMouseEnter={() => { if (otherKey) onHoverNode(otherKey); }}
+                  onMouseLeave={onLeaveNode}
+                >
+                  <ClaimCard
+                    claim={c}
+                    entityId={id}
+                    entityType={kind}
+                    onSelectEntity={onSelectNode}
+                  />
+                </div>
+              );
+            })}
+            {totalPages > 1 && <Pagination page={page} total={totalPages} onChange={setPage} />}
           </div>
         )}
-
-        <button type="button" className="view-on-map-btn" style={{ marginTop: "auto" }} onClick={onGoToMap}>🗺 View on map</button>
       </div>
     </div>
   );

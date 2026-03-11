@@ -153,6 +153,7 @@ For everything else, use or create a CSS class. Common utility classes available
 ## 5. Layout
 
 - **App shell**: `NavBar` (fixed top, 44px) + `.page-container` (fills remaining height).
+- **Always-mounted pages**: All three pages (Map, Graph, Wiki) are mounted simultaneously in `App.tsx` using `display: "contents" / "none"`. This **preserves internal state** when switching tabs via `NavBar`. Never use `<Routes>` for page switching.
 - **Map page**: flex row — `.map-left` | `.map-center` (Leaflet) | `.map-right` (sidebar).
 - **Expanded sidebar**: `.sidebar-expanded` sets `.map-center` to `width:0` (NOT `display:none` — Leaflet breaks). `.map-right` gets `flex:1`.
 - **Panel visibility**: toggled via `leftPanelVisible` / `rightPanelVisible` in `appStore`. When hidden, the container is conditionally rendered, not CSS-hidden.
@@ -168,6 +169,14 @@ For everything else, use or create a CSS class. Common utility classes available
 - **Hard reset**: call `setSelection(null)` — clears history.
 - **Essay → entity**: store essay in `prevEssay` local state before `pushSelection`; back restores it.
 - Never navigate using `setSidebarTab` as a back mechanism.
+
+### Cross-page navigation
+
+- **`CrossPageNav`** (`src/components/shared/CrossPageNav.tsx`): renders icon buttons (🗺️ Map, 🕸️ Graph, 📖 Wiki) to open the current entity on another page. Excludes the current page's icon.
+- **Map navigation**: sets `appStore.setSelection()` then `navigate("/")` — the map reads selection from appStore.
+- **Graph/Wiki navigation**: uses URL search params `?kind=X&id=Y` — these pages read params via `useSearchParams`.
+- Place `<CrossPageNav kind={kind} id={id} current="map|graph|wiki" />` in every entity detail header.
+- CSS classes: `.cross-page-nav`, `.page-nav-icon`.
 
 ---
 
@@ -231,10 +240,17 @@ For everything else, use or create a CSS class. Common utility classes available
 
 ## 13. Graph Page
 
-- Layout: `.graph-sidebar` (260px) | `.graph-canvas-area` (flex 1) | optional detail panel (300px).
+- Layout: `.graph-sidebar` (260px) | `.graph-canvas-area` (flex 1) | right detail panel (300px, shown when node or edge selected).
+- **Left sidebar**: filters, search, legend, connection slider only. **No** selected node/edge info.
+- **Right panel**: `GraphDetailPanel` (for nodes) or `GraphEdgePanel` (for edges). Includes `CrossPageNav`, paginated connections, and entity description.
 - Force layout: pure computation in `src/utils/forceLayout.ts` — `runForceSync()`.
+  - Gravity and repulsion scale with node count to keep large graphs compact.
+  - Position clamping prevents nodes from flying off-screen.
+  - Velocity clamping (`maxV=15`) prevents force explosions.
+- **Edge interaction**: Only edges connected to the currently selected node are interactive (hover/click). Non-network edges have `pointerEvents: "none"`.
+- **Auto-zoom**: clicking a node auto-zooms to show the node and all its connections via `zoomToNodeConnections()`.
 - Node labels: shown always when `nodes.length < 60`, otherwise only on selected/high-connection nodes.
-- Edge labels: shown on hover or when either endpoint is selected.
+- Edge labels: shown on hover or click, only for interactive (connected) edges.
 
 ---
 
@@ -244,9 +260,15 @@ For everything else, use or create a CSS class. Common utility classes available
 - **All domain types** defined in `src/data/types.ts`.
 - Map filter: `appStore.mapFilterType` + `mapFilterId`.
 - `showArcs: true` by default.
-- Decade data: always use `getCitiesAtDecade()` / `getCumulativeCitiesAtDecade()`.
+- Decade data: always use `getPlacesAtDecade()` / `getCumulativePlacesAtDecade()`.
 - Default decade: `0` AD (set in appStore).
 - `includeCumulative: true` by default.
+- **Map auto-zoom**: when `selection` changes, the map auto-zooms: for places, centers at zoom 8; for other entities, fits bounds of all footprint-connected places.
+
+### Wiki page
+
+- **Editor notes** are displayed **in the claims feed** (inside `ClaimsPanel`), not in the entity header. They appear as a predicate group at the top of the claims list.
+- Deep-linking via `?kind=X&id=Y` URL params is supported.
 
 ---
 

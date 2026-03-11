@@ -7,6 +7,7 @@ import { Pagination, PAGE_SIZE } from "../shared/Pagination";
 import { usePaginatedList } from "../../hooks/usePaginatedList";
 import { NoteCard } from "../shared/NoteCard";
 import { kindIcon, kindLabel } from "../shared/entityConstants";
+import { CrossPageNav } from "../shared/CrossPageNav";
 import { ClaimCard } from "../shared/RelationCard";
 import { FootprintCard } from "../shared/FootprintCard";
 import { PassageReference } from "../shared/PassageReference";
@@ -134,7 +135,10 @@ export function EntityDetail({
 
       {/* Header */}
       <div className="detail-header">
-        <div className="detail-kind-badge">{kindIcon(kind)} {kindLabel(kind)}</div>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div className="detail-kind-badge">{kindIcon(kind)} {kindLabel(kind)}</div>
+          <CrossPageNav kind={kind} id={id} current="map" />
+        </div>
         <div className="detail-title">{header.title}</div>
         {header.subtitle && <div className="detail-subtitle">{header.subtitle}</div>}
         {header.tags.length > 0 && (

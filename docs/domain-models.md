@@ -468,9 +468,13 @@ export interface ClaimEvidence extends AuditFields {
   notes: Markdown | null;
 }
 
+/**
+ * One review row per claim. Uniqueness is enforced on claim_id alone.
+ * To update a review, mutate the existing row; do not insert a second row.
+ */
 export interface ClaimReview extends AuditFields {
-  claim_id: Id;
-  reviewer_id: Id;
+  claim_id: Id;          // PK — unique per claim
+  reviewer_id: Id;       // reviewer identifier (not part of uniqueness key)
   review_status: ReviewStatus;
   reviewed_at: DateTimeIso | null;
   confidence: ReviewConfidence | null;
@@ -708,3 +712,7 @@ export interface AppRepositories {
 3. `PlaceStateByDecade` uses `dominant_polity_group_id`.
 4. `NoteMention` is project-wide and can target both entities and Bible OSIS references.
 5. Sorting and derivation stability belong to the validation/build layer, not to React selectors.
+6. `ClaimReview` is unique by `claim_id` only. Repositories should expose at most one review per claim — not an array.
+7. **Doctrinal propositions** are now first-class: `work_affirms_proposition` and `person_affirms_proposition` predicates link works and individuals to specific propositions under topics and dimensions.
+8. **Individual-to-individual predicates** — `teacher_of`, `coworker_of` — and **person-to-event predicates** — `participant_in` — are in active use. The derivation chain traces place footprints through these chains.
+9. **`bishop_of`** and **`authored_by`** are first-class predicates with their own footprint logic: bishop location drives a person's place presence; authored_by links works to their authors for dossier views.

@@ -814,6 +814,10 @@ class Validator:
                 logical_seen.add(logical_key)
 
         self.validate_change_based_group_claims()
+        self.validate_author_work_affirmation_redundancy()
+        self.validate_duplicate_claims()
+        self.validate_bishop_location_redundancy()
+        self.validate_evidence_role_semantics()
 
     def validate_change_based_group_claims(self) -> None:
         grouped: Dict[Tuple[str, str, str, str, str, str], List[Tuple[Optional[int], Optional[int], str]]] = defaultdict(list)
@@ -850,6 +854,201 @@ class Validator:
                 previous_end = end
                 previous_claim = claim_id
 
+    def validate_author_work_affirmation_redundancy(self) -> None:
+        """Prevent person_affirms_proposition when the person authored a work that already affirms it."""
+        # Build author -> works index
+        author_works: Dict[str, set[str]] = defaultdict(set)
+        for row in self.tables.get("claims.tsv", []):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") == "authored_by" and row.get("object_mode") == "entity" and row.get("object_type") == "person":
+                work_id = row["subject_id"]
+                person_id = row["object_id"]
+                author_works[person_id].add(work_id)
+        
+        # Build work -> propositions index
+        work_propositions: Dict[str, set[str]] = defaultdict(set)
+        for row in self.tables.get("claims.tsv", []):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") == "work_affirms_proposition" and row.get("object_mode") == "entity" and row.get("object_type") == "proposition":
+                work_id = row["subject_id"]
+                prop_id = row["object_id"]
+                work_propositions[work_id].add(prop_id)
+        
+        # Check person_affirms_proposition claims
+        for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") != "person_affirms_proposition":
+                continue
+            if row.get("object_mode") != "entity" or row.get("object_type") != "proposition":
+                continue
+            
+            person_id = row["subject_id"]
+            prop_id = row["object_id"]
+            
+            # Check if this person authored any work
+            authored_works = author_works.get(person_id, set())
+            if not authored_works:
+                continue
+            
+            # Check if any of those works already affirm this proposition
+            for work_id in authored_works:
+                if prop_id in work_propositions.get(work_id, set()):
+                    self.error(
+                        f"claims.tsv:{idx} redundant person_affirms_proposition: "
+                        f"person={person_id} already authored work={work_id} which affirms proposition={prop_id}. "
+                        f"Remove this claim or the work affirmation (claim_id={row['claim_id']})"
+                    )
+                    break
+
+    def validate_duplicate_claims(self) -> None:
+        """Detect duplicate claims with same semantic meaning."""
+        # Group claims by semantic key (excluding year ranges and claim_id)
+        semantic_groups: Dict[Tuple[str, str, str, str, str, str], List[Tuple[int, Dict[str, str]]]] = defaultdict(list)
+        
+        for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
+            if row.get("claim_status") not in {"active", "deprecated"}:
+                continue
+            
+            normalized_object = (
+                f"{row['object_type']}:{row['object_id']}" if row["object_mode"] == "entity"
+                else f"text:{row.get('value_text', '')}" if row["object_mode"] == "text"
+                else f"number:{row.get('value_number', '')}" if row["object_mode"] == "number"
+                else f"year:{row.get('value_year', '')}" if row["object_mode"] == "year"
+                else f"boolean:{row.get('value_boolean', '')}"
+            )
+            
+            semantic_key = (
+                row["subject_type"],
+                row["subject_id"],
+                row["predicate_id"],
+                row["object_mode"],
+                normalized_object,
+                row.get("polarity", ""),
+            )
+            
+            semantic_groups[semantic_key].append((idx, row))
+        
+        # Check each group for duplicates
+        for semantic_key, claims in semantic_groups.items():
+            if len(claims) < 2:
+                continue
+            
+            # Filter to active claims only
+            active_claims = [(idx, row) for idx, row in claims if row.get("claim_status") == "active"]
+            
+            if len(active_claims) < 2:
+                continue
+            
+            # Check for exact duplicates (same year range)
+            year_groups: Dict[Tuple[str, str], List[Tuple[int, Dict[str, str]]]] = defaultdict(list)
+            for idx, row in active_claims:
+                year_key = (row.get("year_start", ""), row.get("year_end", ""))
+                year_groups[year_key].append((idx, row))
+            
+            for year_key, year_claims in year_groups.items():
+                if len(year_claims) > 1:
+                    claim_ids = ", ".join([row["claim_id"] for _, row in year_claims])
+                    indices = ", ".join([f"line {idx}" for idx, _ in year_claims])
+                    self.error(
+                        f"claims.tsv: exact duplicate claims ({indices}): "
+                        f"subject={semantic_key[1]} predicate={semantic_key[2]} object={semantic_key[4]} "
+                        f"year_range={year_key}. Merge into one claim with combined evidence: {claim_ids}"
+                    )
+            
+            # Warn about overlapping temporal duplicates
+            if len(active_claims) > 1:
+                sorted_claims = sorted(active_claims, key=lambda item: (
+                    parse_int(item[1].get("year_start")) or -(10**9),
+                    parse_int(item[1].get("year_end")) or 10**9
+                ))
+                
+                for i in range(len(sorted_claims) - 1):
+                    idx1, row1 = sorted_claims[i]
+                    idx2, row2 = sorted_claims[i + 1]
+                    
+                    start1 = parse_int(row1.get("year_start"))
+                    end1 = parse_int(row1.get("year_end"))
+                    start2 = parse_int(row2.get("year_start"))
+                    end2 = parse_int(row2.get("year_end"))
+                    
+                    # Check for overlap or adjacency
+                    if start1 is not None and end1 is not None and start2 is not None and end2 is not None:
+                        if start2 <= end1 + 1:  # Overlapping or adjacent
+                            self.warn(
+                                f"claims.tsv:{idx1},{idx2} overlapping/adjacent temporal claims: "
+                                f"subject={semantic_key[1]} predicate={semantic_key[2]} "
+                                f"claim1={row1['claim_id']}({start1}-{end1}) claim2={row2['claim_id']}({start2}-{end2}). "
+                                f"Consider merging if they represent continuous presence."
+                            )
+
+    def validate_bishop_location_redundancy(self) -> None:
+        """Warn when bishop_of implies active_in for same person-place pair."""
+        # Build person -> places index from bishop_of
+        bishop_places: Dict[str, set[str]] = defaultdict(set)
+        for row in self.tables.get("claims.tsv", []):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") == "bishop_of" and row.get("object_mode") == "entity" and row.get("object_type") == "place":
+                person_id = row["subject_id"]
+                place_id = row["object_id"]
+                bishop_places[person_id].add(place_id)
+        
+        # Check active_in claims
+        for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") != "active_in":
+                continue
+            if row.get("object_mode") != "entity" or row.get("object_type") != "place":
+                continue
+            
+            person_id = row["subject_id"]
+            place_id = row["object_id"]
+            
+            if place_id in bishop_places.get(person_id, set()):
+                self.warn(
+                    f"claims.tsv:{idx} redundant active_in claim: "
+                    f"person={person_id} is already bishop_of place={place_id}, which implies active_in. "
+                    f"Consider removing this claim (claim_id={row['claim_id']})"
+                )
+
+    def validate_evidence_role_semantics(self) -> None:
+        """Validate that 'attested' claims have at least one 'supports' evidence."""
+        # Build claim -> evidence roles index
+        claim_evidence_roles: Dict[str, set[str]] = defaultdict(set)
+        for row in self.tables.get("claim_evidence.tsv", []):
+            claim_id = row["claim_id"]
+            evidence_role = row.get("evidence_role", "")
+            if evidence_role:
+                claim_evidence_roles[claim_id].add(evidence_role)
+        
+        # Check claims with certainty='attested'
+        for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("certainty") != "attested":
+                continue
+            
+            claim_id = row["claim_id"]
+            evidence_roles = claim_evidence_roles.get(claim_id, set())
+            
+            if not evidence_roles:
+                self.warn(
+                    f"claims.tsv:{idx} claim marked 'attested' but has no evidence: "
+                    f"claim_id={claim_id}. Consider adding evidence or changing certainty."
+                )
+            elif "supports" not in evidence_roles:
+                has_only_contextual = evidence_roles.issubset({"contextualizes", "mentions"})
+                if has_only_contextual:
+                    self.warn(
+                        f"claims.tsv:{idx} claim marked 'attested' but only has contextual/mention evidence: "
+                        f"claim_id={claim_id} evidence_roles={evidence_roles}. "
+                        f"'attested' should require at least one 'supports' evidence. Consider changing certainty to 'probable'."
+                    )
+
     def validate_evidence_reviews_notes(self) -> None:
         seen_evidence: set[Tuple[str, str, str]] = set()
         for idx, row in enumerate(self.tables.get("claim_evidence.tsv", []), start=2):
@@ -864,7 +1063,8 @@ class Validator:
                 self.error(f"claim_evidence.tsv:{idx} duplicate composite key {key}")
             seen_evidence.add(key)
 
-        seen_reviews: set[Tuple[str, str]] = set()
+        # Check for duplicate reviews - only one review per claim allowed
+        seen_claim_ids: set[str] = set()
         for idx, row in enumerate(self.tables.get("claim_reviews.tsv", []), start=2):
             if row["claim_id"] not in self.by_id.get("claims.tsv", set()):
                 self.error(f"claim_reviews.tsv:{idx} broken FK claim_id={row['claim_id']}")
@@ -872,10 +1072,11 @@ class Validator:
                 self.error(f"claim_reviews.tsv:{idx} invalid review_status={row['review_status']}")
             if row.get("confidence") and row["confidence"] not in REVIEW_CONFIDENCE:
                 self.error(f"claim_reviews.tsv:{idx} invalid confidence={row['confidence']}")
-            key = (row["claim_id"], row["reviewer_id"])
-            if key in seen_reviews:
-                self.error(f"claim_reviews.tsv:{idx} duplicate composite key {key}")
-            seen_reviews.add(key)
+            
+            # Check for duplicate reviews of the same claim
+            if row["claim_id"] in seen_claim_ids:
+                self.error(f"claim_reviews.tsv:{idx} duplicate review for claim_id={row['claim_id']}. Only one review per claim is allowed. Update the existing review timestamp instead.")
+            seen_claim_ids.add(row["claim_id"])
 
         for idx, row in enumerate(self.tables.get("editor_notes.tsv", []), start=2):
             if row["note_kind"] not in EDITOR_NOTE_KIND:

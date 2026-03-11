@@ -392,12 +392,16 @@ Validation flags overlapping or directly adjacent duplicate intervals for the sa
 
 | Column | Type | Required | Rules |
 |---|---|---:|---|
-| `claim_id` | string FK→claims | yes | Part of composite PK |
-| `reviewer_id` | string | yes | Part of composite PK |
+| `claim_id` | string FK→claims | yes | PK — exactly one review row per claim |
+| `reviewer_id` | string | yes | Identifier of the reviewer |
 | `review_status` | enum `review_status` | yes | Review state |
 | `reviewed_at` | datetime | no | Timestamp |
 | `confidence` | enum `review_confidence` | no | Reviewer confidence |
 | `note` | string | no | Short rationale |
+
+### One-review-per-claim rule
+
+Only one review row is permitted per `claim_id`. To update a review, change the `review_status`, `confidence`, `reviewed_at`, and `note` fields of the existing row. Do not add a second row. Validation rejects duplicate `claim_id` values in this table.
 
 ## `editor_notes.tsv`
 
@@ -569,22 +573,35 @@ The validator/script layer is authoritative for the remaining enum sets used by 
 
 The actual `predicate_types.tsv` is authoritative. The following predicates are especially important to the current UI and derivation chain:
 
-- `authored_by`
-- `written_at`
-- `addressed_to_place`
-- `event_occurs_at`
-- `active_in`
-- `originated_in`
-- `bishop_of`
-- `member_of_group`
-- `split_from_group`
-- `group_present_at`
-- `controls_place`
-- `work_affirms_proposition`
-- `work_opposes_proposition`
-- `person_affirms_proposition`
-- `person_opposes_proposition`
-- `place_presence_status`
+**Work predicates**
+- `authored_by` — work → person (inverse: `author_of`)
+- `written_at` — work → place
+- `addressed_to_place` — work → place
+- `work_affirms_proposition` — work → proposition
+- `work_opposes_proposition` — work → proposition
+
+**Person predicates**
+- `active_in` — person → place
+- `originated_in` — person → place
+- `bishop_of` — person → place (inverse: `has_bishop`)
+- `member_of_group` — person → group
+- `teacher_of` — person → person (inverse: `disciple_of`)
+- `coworker_of` — person → person (symmetric)
+- `participant_in` — person → event
+- `person_affirms_proposition` — person → proposition
+- `person_opposes_proposition` — person → proposition
+
+**Event predicates**
+- `event_occurs_at` — event → place
+- `event_has_year` — event → year
+
+**Group predicates**
+- `group_present_at` — group → place
+- `controls_place` — group → place
+- `split_from_group` — group → group
+
+**Place predicates**
+- `place_presence_status` — place → text
 
 Canonical-order reminders:
 
@@ -616,6 +633,44 @@ Validation must enforce all of the following:
    - else if `first_year` exists, sort by `first_year`, then stable tie-breakers
    - else sort by ID/composite-key columns
    - validation rewrites tables into canonical sorted order
+
+---
+
+# Dataset scope (current)
+
+## Propositions and doctrine topics
+
+The proposition model is populated with theological claims across the following topics and dimensions:
+
+| Topic | Representative propositions |
+|---|---|
+| Baptism | baptism-effects-regeneration, baptism-with-water-commanded, baptism-administered-in-trinitarian-name |
+| Eucharist | eucharist-is-body-and-blood, eucharist-is-sacrifice, eucharist-offered-on-sunday, eucharist-fulfills-malachi-pure-offering |
+| Christology | logos-is-pre-existent-son-of-god, christ-truly-became-flesh, jesus-is-proclaimed-as-raised, bodies-will-be-raised-at-last-day |
+| Church Order | apostolic-succession-transmits-faith, bishop-succession-guarantees-apostolic-faith, rule-of-faith-received-from-apostles, post-baptismal-sin-forgiven-by-penance |
+| Eschatology | final-judgment-is-coming |
+| Martyrdom | martyrdom-witnesses-to-christ, martyrs-relics-honored |
+| Ministry | repentance-is-required |
+
+Each proposition links to a `topic_id` and an optional `dimension_id`. Claims of `work_affirms_proposition` and `person_affirms_proposition` connect works and individuals to propositions with polarity and evidence.
+
+## Individuals covered (0–200 AD)
+
+The `people.tsv` table covers individuals from the New Testament period through the end of the second century, including:
+
+**Apostolic and NT era** — Jesus of Nazareth, the Twelve (Peter, John, James, Andrew, Philip, Thomas, etc.), Paul, Mary Magdalene, Joseph of Arimathea, Nicodemus, Timothy, Titus, Epaphroditus, and other Pauline associates.
+
+**Jewish and Greco-Roman figures** — Caiaphas, Herod Antipas, Herod Agrippa, Pilate, Ananus II, Josephus.
+
+**Sub-apostolic Fathers (c. 70–135)** — Clement of Rome, Ignatius of Antioch, Polycarp of Smyrna, Papias of Hierapolis.
+
+**Apologists and Fathers (c. 120–200)** — Justin Martyr, Tatian the Assyrian, Athenagoras of Athens, Aristides of Athens, Melito of Sardis, Theophilus of Antioch, Irenaeus of Lyons, Victor I of Rome, Polycrates of Ephesus, Hegesippus.
+
+**Heresiarchs and opponents** — Marcion of Sinope, Valentinus, Cerinthus, Hermas.
+
+## Groups covered
+
+Groups include both **Christian communities** (Jerusalem church, Antioch church, Roman church, Ephesian church, Smyrnaean church, disciples of Jesus) and **heterodox movements** (Cerinthians, Ebionites, Docetists, Valentinians, Marcionites, Montanists). Political polities (Roman Empire, Herodians, Jewish authorities) use `group_kind=polity` or `group_kind=faction`.
 
 ---
 

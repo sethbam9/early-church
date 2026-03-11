@@ -1,6 +1,7 @@
 subject_type	subject_id	predicate_id	first_year	first_claim_id	first_passage_id
 group	samaritans	group_present_at	-200	clm-group-samaritans-samaria	psg-acts-8-5-25
 work	sirach	work_affirms_proposition	-180	clm-sirach-repentance	psg-sirach-5-7
+group	roman-empire	controls_place	-168	clm-rome-controls-thessalonica	psg-tacitus-annals-15-38-44
 group	essenes	group_present_at	-150	clm-group-essenes-judea	psg-josephus-war-2-119-166
 work	jubilees	work_affirms_proposition	-150	clm-jubilees-judgment	psg-jubilees-23-29-31
 place	qumran	place_presence_status	-150	clm-place-qumran-attested	psg-community-rule-5-7-13
@@ -11,10 +12,10 @@ work	damascus-document	work_affirms_proposition	-50	clm-damascus-document-repent
 work	psalms-of-solomon	work_affirms_proposition	-50	clm-psalms-of-solomon-judgment	psg-pssol-17-32-36
 work	war-scroll	work_affirms_proposition	-50	clm-war-scroll-judgment	psg-war-scroll-1-1-5
 work	wisdom-of-solomon	work_affirms_proposition	-30	clm-wisdom-judgment	psg-wisdom-3-18-19
-person	caiaphas	active_in	18	clm-caiaphas-active-jerusalem	
+person	caiaphas	active_in	18	clm-caiaphas-active-jerusalem	psg-john-18-1-11
 person	herod-antipas	active_in	26	clm-herod-antipas-active-galilee	psg-luke-3-1-3
 person	pontius-pilate	active_in	26	clm-pilate-active-judea	psg-josephus-ant-18-55-59
-event	baptism-of-jesus	event_has_year	27	clm-baptism-year	
+event	baptism-of-jesus	event_has_year	27	clm-baptism-year	psg-luke-3-1-3
 event	baptism-of-jesus	event_occurs_at	27	clm-baptism-at-bethany	psg-john-1-28-34
 group	followers-of-john-the-baptist	group_present_at	27	clm-group-john-judea	psg-luke-3-1-3
 place	galilee	place_presence_status	27	clm-place-galilee-attested	psg-mark-1-14-15
@@ -27,14 +28,13 @@ person	john-the-baptist	participant_in	27	clm-john-in-baptism	psg-john-1-28-34
 place	judea	place_presence_status	27	clm-place-judea-attested	psg-mark-11-15-18
 place	nazareth	place_presence_status	27	clm-place-nazareth-attested	psg-luke-4-16
 group	pharisees	group_present_at	27	clm-group-pharisees-judea	psg-mark-11-15-18
-group	roman-empire	controls_place	27	clm-group-roman-empire-judea	psg-josephus-ant-18-55-59
 group	sadducees	group_present_at	27	clm-group-sadducees-jerusalem	psg-mark-11-15-18
 person	andrew	member_of_group	28	clm-andrew-disciple	psg-mark-1-16-20
 person	andrew	participant_in	28	clm-andrew-in-calling	psg-mark-1-16-20
 person	bartholomew	active_in	28	clm-bartholomew-active-galilee	psg-matt-10-2-4
 person	bartholomew	member_of_group	28	clm-bartholomew-disciple	psg-matt-10-2-4
 place	bethsaida	place_presence_status	28	clm-place-bethsaida-attested	psg-john-1-43-49
-event	calling-of-the-first-disciples	event_has_year	28	clm-calling-year	
+event	calling-of-the-first-disciples	event_has_year	28	clm-calling-year	psg-mark-1-16-20
 event	calling-of-the-first-disciples	event_occurs_at	28	clm-calling-at-capernaum	psg-mark-1-16-20
 place	cana	place_presence_status	28	clm-place-cana-attested	psg-john-1-43-49
 group	disciples-of-jesus	group_present_at	28	clm-group-disciples-galilee	psg-mark-1-16-20
@@ -52,7 +52,7 @@ person	nathanael	active_in	28	clm-nathanael-active-cana	psg-john-1-43-49
 person	nathanael	member_of_group	28	clm-nathanael-disciple	psg-john-1-43-49
 person	philip-the-apostle	active_in	28	clm-philip-apostle-active-bethsaida	psg-john-1-43-49
 person	philip-the-apostle	member_of_group	28	clm-philip-apostle-disciple	psg-john-1-43-49
-event	sermon-on-the-mount	event_has_year	28	clm-sermon-year	
+event	sermon-on-the-mount	event_has_year	28	clm-sermon-year	psg-matt-7-28-29
 event	sermon-on-the-mount	event_occurs_at	28	clm-sermon-at-galilee	psg-matt-7-28-29
 person	simon-peter	member_of_group	28	clm-peter-disciple	psg-mark-1-16-20
 person	simon-peter	participant_in	28	clm-peter-in-calling	psg-mark-1-16-20
@@ -60,14 +60,14 @@ person	thomas	member_of_group	28	clm-thomas-disciple	psg-matt-10-2-4
 place	bethany-near-jerusalem	place_presence_status	29	clm-place-bethany-near-jerusalem-attested	psg-john-11-1-18
 person	lazarus-of-bethany	active_in	29	clm-lazarus-active-bethany	psg-john-11-1-18
 person	martha-of-bethany	active_in	29	clm-martha-active-bethany	psg-john-11-1-18
-work	acts-of-the-apostles	work_affirms_proposition	30	clm-acts-repentance	
+work	acts-of-the-apostles	work_affirms_proposition	30	clm-acts-repentance	psg-luke-24-46-47
 event	arrest-of-jesus	event_has_year	30	clm-arrest-year	psg-john-18-1-11
 event	arrest-of-jesus	event_occurs_at	30	clm-arrest-at-jerusalem	psg-luke-22-47-53
 event	ascension-of-jesus	event_has_year	30	clm-ascension-year	psg-acts-1-9-11
 event	ascension-of-jesus	event_occurs_at	30	clm-ascension-at-bethany	psg-luke-24-50-53
-event	burial-of-jesus	event_has_year	30	clm-burial-year	
-event	burial-of-jesus	event_occurs_at	30	clm-burial-at-jerusalem	
-person	caiaphas	participant_in	30	clm-caiaphas-in-temple-era	
+event	burial-of-jesus	event_has_year	30	clm-burial-year	psg-john-19-38-42
+event	burial-of-jesus	event_occurs_at	30	clm-burial-at-jerusalem	psg-john-19-38-42
+person	caiaphas	participant_in	30	clm-caiaphas-in-temple-era	psg-john-18-1-11
 event	crucifixion-of-jesus	event_has_year	30	clm-crucifixion-year	psg-mark-15-1-15
 event	crucifixion-of-jesus	event_occurs_at	30	clm-crucifixion-at-jerusalem	psg-mark-15-24-39
 work	gospel-of-john	work_affirms_proposition	30	clm-john-resurrection	psg-john-20-1-18
@@ -80,7 +80,7 @@ event	jesus-before-pilate	event_has_year	30	clm-jesus-before-pilate-year	psg-mar
 event	jesus-before-pilate	event_occurs_at	30	clm-jesus-before-pilate-at-jerusalem	psg-mark-15-1-15
 person	joseph-of-arimathea	active_in	30	clm-joseph-arimathea-active-jerusalem	psg-john-19-38-42
 person	joseph-of-arimathea	member_of_group	30	clm-joseph-arimathea-disciple	psg-john-19-38-42
-person	joseph-of-arimathea	participant_in	30	clm-joseph-arimathea-in-burial	
+person	joseph-of-arimathea	participant_in	30	clm-joseph-arimathea-in-burial	psg-john-19-38-42
 person	judas-iscariot	participant_in	30	clm-judas-iscariot-in-arrest	psg-john-18-1-11
 event	last-supper	event_has_year	30	clm-last-supper-year	psg-1cor-11-23-26
 event	last-supper	event_occurs_at	30	clm-last-supper-at-jerusalem	psg-luke-22-7-23
@@ -88,13 +88,13 @@ person	mary-magdalene	participant_in	30	clm-mary-magdalene-in-resurrection	psg-j
 person	mary-mother-of-jesus	active_in	30	clm-mary-mother-active-jerusalem	psg-acts-1-13-14
 person	mary-mother-of-jesus	member_of_group	30	clm-mary-mother-disciple	psg-acts-1-13-14
 person	nicodemus	active_in	30	clm-nicodemus-active-jerusalem	psg-john-19-38-42
-person	nicodemus	participant_in	30	clm-nicodemus-in-burial	
+person	nicodemus	participant_in	30	clm-nicodemus-in-burial	psg-john-19-38-42
 event	pentecost	event_has_year	30	clm-pentecost-year	psg-acts-2-1-4
 event	pentecost	event_occurs_at	30	clm-pentecost-at-jerusalem	psg-acts-2-1-4
 person	pontius-pilate	participant_in	30	clm-pilate-in-crucifixion	psg-mark-15-1-15
 event	resurrection-of-jesus	event_has_year	30	clm-resurrection-year	psg-1cor-15-3-8
 event	resurrection-of-jesus	event_occurs_at	30	clm-resurrection-at-jerusalem	psg-john-19-38-42
-event	temple-cleansing	event_has_year	30	clm-temple-year	
+event	temple-cleansing	event_has_year	30	clm-temple-year	psg-mark-11-15-18
 event	temple-cleansing	event_occurs_at	30	clm-temple-at-jerusalem	psg-mark-11-15-18
 person	thomas	active_in	30	clm-thomas-active-jerusalem	psg-acts-1-13-14
 event	triumphal-entry-into-jerusalem	event_has_year	30	clm-jesus-entry-year	psg-mark-11-1-11
@@ -112,7 +112,7 @@ person	judas-damascus-householder	active_in	34	clm-judas-damascus-householder-ac
 person	paul	active_in	34	clm-paul-active-damascus	psg-acts-9-1-19
 person	paul	member_of_group	34	clm-paul-disciple	psg-acts-9-1-19
 person	paul	participant_in	34	clm-paul-in-conversion	psg-acts-9-1-19
-event	pauls-conversion	event_has_year	34	clm-conversion-year	
+event	pauls-conversion	event_has_year	34	clm-conversion-year	psg-acts-9-1-19
 event	pauls-conversion	event_occurs_at	34	clm-conversion-at-damascus	psg-acts-9-1-19
 person	stephen	participant_in	34	clm-stephen-in-martyrdom	psg-acts-7-54-60
 event	stephens-martyrdom	event_has_year	34	clm-stephens-martyrdom-year	psg-acts-7-54-60
@@ -150,7 +150,7 @@ person	simeon-called-niger	member_of_group	46	clm-simeon-called-niger-antioch-ch
 work	epistle-of-james	work_affirms_proposition	48	clm-james-epistle-repentance	psg-jas-4-8-10
 person	aquila	coworker_of	49	clm-aquila-coworker-priscilla	psg-acts-18-26
 person	barnabas	participant_in	49	clm-barnabas-in-council	psg-acts-15-1-29
-event	council-of-jerusalem	event_has_year	49	clm-council-year	
+event	council-of-jerusalem	event_has_year	49	clm-council-year	psg-acts-15-1-29
 event	council-of-jerusalem	event_occurs_at	49	clm-council-at-jerusalem	psg-acts-15-1-29
 work	epistle-to-the-galatians	addressed_to_place	49	clm-galatians-addressed-galatia	psg-gal-1-2
 work	epistle-to-the-galatians	work_affirms_proposition	49	clm-galatians-gentiles	psg-gal-2-1-10
@@ -165,7 +165,7 @@ group	philippian-church	group_present_at	49	clm-group-philippian-church-philippi
 person	silas	active_in	49	clm-silas-active-thessalonica	psg-acts-17-1-9
 person	simon-peter	person_affirms_proposition	49	clm-peter-gentile-inclusion	psg-acts-15-1-29
 person	timothy	active_in	49	clm-timothy-active-lystra	psg-acts-16-1-3
-person	timothy	member_of_group	49	clm-timothy-disciple	
+person	timothy	member_of_group	49	clm-timothy-disciple	psg-acts-16-1-3
 person	aquila	active_in	50	clm-aquila-active-corinth	psg-acts-18-1-11
 place	athens	place_presence_status	50	clm-place-athens-attested	psg-acts-17-16-34
 place	berea	place_presence_status	50	clm-place-berea-attested	psg-acts-17-10-15
@@ -187,7 +187,7 @@ place	thessalonica	place_presence_status	50	clm-place-thessalonica-attested	psg-
 person	titius-justus	active_in	50	clm-titius-justus-active-corinth	psg-acts-18-7
 person	gallio	active_in	51	clm-gallio-active-achaia	psg-acts-18-12-17
 work	second-epistle-to-the-thessalonians	addressed_to_place	51	clm-second-thessalonians-addressed-thessalonica	psg-2thess-1-1
-work	second-epistle-to-the-thessalonians	work_affirms_proposition	51	clm-second-thessalonians-judgment	
+work	second-epistle-to-the-thessalonians	work_affirms_proposition	51	clm-second-thessalonians-judgment	psg-acts-17-1-9
 person	sosthenes	active_in	51	clm-sosthenes-active-corinth	psg-acts-18-12-17
 group	ephesian-church	group_present_at	52	clm-group-ephesian-church-ephesus	psg-acts-19-1-10
 place	ephesus	place_presence_status	52	clm-place-ephesus-attested	psg-acts-19-1-10
@@ -216,6 +216,8 @@ person	asyncritus	member_of_group	57	clm-asyncritus-roman-church	psg-rom-16-14
 place	chios	place_presence_status	57	clm-place-chios-attested	psg-acts-20-13-15
 place	derbe	place_presence_status	57	clm-place-derbe-attested	psg-acts-20-4
 person	drusilla	active_in	57	clm-drusilla-active-caesarea	psg-acts-24-24-27
+work	epistle-to-the-ephesians	work_affirms_proposition	57	clm-ephesians-resurrection	psg-rom-10-9
+work	epistle-to-the-philippians	work_affirms_proposition	57	clm-philippians-resurrection	psg-rom-10-9
 work	epistle-to-the-romans	addressed_to_place	57	clm-romans-addressed-rome	psg-rom-1-7
 work	epistle-to-the-romans	work_affirms_proposition	57	clm-romans-resurrection	psg-rom-10-9
 person	erastus	member_of_group	57	clm-erastus-corinthian-church	psg-rom-16-23
@@ -295,7 +297,6 @@ person	epaphroditus	member_of_group	60	clm-epaphroditus-philippian-church	psg-ph
 work	epistle-to-the-colossians	addressed_to_place	60	clm-colossians-addressed-colossae	psg-col-1-2
 work	epistle-to-the-colossians	work_affirms_proposition	60	clm-colossians-resurrection	psg-col-2-12
 work	epistle-to-the-ephesians	addressed_to_place	60	clm-ephesians-addressed-ephesus	psg-eph-1-1
-work	epistle-to-the-ephesians	work_affirms_proposition	60	clm-ephesians-resurrection	
 person	euodia	active_in	60	clm-euodia-active-philippi	psg-phil-4-2-3
 person	euodia	member_of_group	60	clm-euodia-philippian-church	psg-phil-4-2-3
 place	hierapolis	place_presence_status	60	clm-place-hierapolis-attested	psg-col-4-12-13
@@ -316,16 +317,15 @@ person	syntyche	active_in	60	clm-syntyche-active-philippi	psg-phil-4-2-3
 person	syntyche	member_of_group	60	clm-syntyche-philippian-church	psg-phil-4-2-3
 place	syracuse	place_presence_status	60	clm-place-syracuse-attested	psg-acts-28-1-14
 place	three-taverns	place_presence_status	60	clm-place-three-taverns-attested	psg-acts-28-15
-person	epaphroditus	coworker_of	61	clm-epaphroditus-coworker-paul	
+person	epaphroditus	coworker_of	61	clm-epaphroditus-coworker-paul	psg-phil-2-25-30
 work	epistle-to-philemon	addressed_to_place	61	clm-philemon-addressed-colossae	psg-philemon-1-2
 work	epistle-to-the-philippians	addressed_to_place	61	clm-philippians-addressed-philippi	psg-phil-1-1
-work	epistle-to-the-philippians	work_affirms_proposition	61	clm-philippians-resurrection	
 person	ananus-ii	participant_in	62	clm-ananus-ii-in-james-just-martyrdom	psg-josephus-ant-20-200
 place	asia	place_presence_status	62	clm-place-asia-attested	psg-1pet-1-1
 place	bithynia	place_presence_status	62	clm-place-bithynia-attested	psg-1pet-1-1
 place	cappadocia	place_presence_status	62	clm-place-cappadocia-attested	psg-1pet-1-1
 work	first-epistle-of-peter	addressed_to_place	62	clm-first-peter-addressed-asia	psg-1pet-1-1
-work	first-epistle-of-peter	work_affirms_proposition	62	clm-first-peter-resurrection	psg-1pet-1-3
+work	first-epistle-of-peter	work_affirms_proposition	62	clm-1pet-affirms-baptism-regen	psg-1clement-40-41
 place	galatia	place_presence_status	62	clm-place-galatia-attested-late	psg-1pet-1-1
 event	james-the-just-martyrdom	event_has_year	62	clm-james-just-martyrdom-year	psg-josephus-ant-20-200
 event	james-the-just-martyrdom	event_occurs_at	62	clm-james-just-martyrdom-at-jerusalem	psg-josephus-ant-20-200
@@ -340,7 +340,7 @@ person	nero	participant_in	64	clm-nero-in-neronian-persecution	psg-tacitus-annal
 event	neronian-persecution	event_has_year	64	clm-neronian-persecution-year	psg-tacitus-annals-15-38-44
 event	neronian-persecution	event_occurs_at	64	clm-neronian-persecution-at-rome	psg-tacitus-annals-15-38-44
 place	nicopolis	place_presence_status	64	clm-place-nicopolis-attested	psg-titus-3-12
-person	titus	member_of_group	64	clm-titus-disciple	
+person	titus	member_of_group	64	clm-titus-disciple	psg-titus-1-5
 work	epistle-to-the-hebrews	work_affirms_proposition	65	clm-hebrews-resurrection	psg-heb-13-20
 person	carpus	active_in	66	clm-carpus-active-troas	psg-2tim-4-13
 person	crescens	active_in	66	clm-crescens-active-galatia	psg-2tim-4-10-12
@@ -355,10 +355,12 @@ work	epistle-of-jude	work_affirms_proposition	70	clm-jude-judgment	psg-jude-1-14
 work	gospel-of-mark	work_affirms_proposition	70	clm-mark-kingdom	psg-mark-1-14-15
 person	herod-antipas	participant_in	70	clm-herod-antipas-in-john-baptist-martyrdom	psg-josephus-ant-18-116-119
 person	jesus-of-nazareth	person_affirms_proposition	70	clm-jesus-follow	psg-mark-1-16-20
+person	john-son-of-zebedee	teacher_of	70	clm-john-teacher-of-polycarp	psg-irenaeus-ah-3-3-4
 event	sack-of-jerusalem	event_has_year	70	clm-sack-of-jerusalem-year	psg-josephus-war-6-249-266
 event	sack-of-jerusalem	event_occurs_at	70	clm-sack-at-jerusalem	psg-josephus-war-6-249-266
 person	john-the-baptist	person_affirms_proposition	85	clm-john-repentance	psg-josephus-ant-18-116-119
-person	clement-of-rome	active_in	90	clm-clement-active-rome	psg-1clement-addressed-corinth
+group	cerinthians	group_present_at	90	clm-cerinthians-at-ephesus	psg-irenaeus-ah-3-3-4
+person	clement-of-rome	bishop_of	90	clm-clement-bishop-rome	psg-1clement-addressed-corinth
 person	clement-of-rome	member_of_group	90	clm-clement-member-roman-church	psg-1clement-addressed-corinth
 work	first-epistle-of-john	work_affirms_proposition	90	clm-first-john-christ	psg-1john-5-1
 person	john-son-of-zebedee	person_affirms_proposition	90	clm-john-christ	psg-1john-5-1
@@ -368,20 +370,25 @@ event	antipas-martyrdom	event_occurs_at	95	clm-antipas-martyrdom-at-pergamum	psg
 person	antipas-of-pergamum	active_in	95	clm-antipas-active-pergamum	psg-rev-2-13
 person	antipas-of-pergamum	member_of_group	95	clm-antipas-pergamum-church	psg-rev-2-13
 person	antipas-of-pergamum	participant_in	95	clm-antipas-in-martyrdom	psg-rev-2-13
-person	clement-of-rome	person_affirms_proposition	95	clm-clement-affirms-succession	psg-1clement-42
+person	clement-of-rome	participant_in	95	clm-clement-in-domitian-persecution	psg-eusebius-he-3-39
+event	domitian-persecution	event_has_year	95	clm-domitian-persecution-year	psg-eusebius-he-3-39
+event	domitian-persecution	event_occurs_at	95	clm-domitian-persecution-at-rome	psg-eusebius-he-3-39
 work	first-epistle-of-clement	addressed_to_place	95	clm-1clement-addressed-corinth	psg-1clement-addressed-corinth
-work	first-epistle-of-clement	work_affirms_proposition	95	clm-1clement-affirms-succession	psg-1clement-42
+work	first-epistle-of-clement	work_affirms_proposition	95	clm-1clement-affirms-bodily-resurrection	psg-1clement-24-26
 work	first-epistle-of-clement	written_at	95	clm-1clement-written-rome	psg-1clement-addressed-corinth
-event	john-on-patmos	event_has_year	95	clm-john-on-patmos-year	
-event	john-on-patmos	event_occurs_at	95	clm-john-on-patmos-at-patmos	
+event	john-on-patmos	event_has_year	95	clm-john-on-patmos-year	psg-eusebius-he-3-39
+event	john-on-patmos	event_occurs_at	95	clm-john-on-patmos-at-patmos	psg-rev-1-9
 person	john-son-of-zebedee	active_in	95	clm-john-active-patmos	psg-rev-1-9
 group	nicolaitans	group_present_at	95	clm-group-nicolaitans-ephesus	psg-rev-2-6
+work	papias-fragments	work_affirms_proposition	95	clm-papias-frags-affirms-apostolic-succession	psg-papias-frag-1
+work	papias-fragments	written_at	95	clm-papias-fragments-written-hierapolis	psg-papias-frag-1
+person	papias-of-hierapolis	bishop_of	95	clm-papias-bishop-hierapolis	psg-eusebius-he-3-39
 place	pergamum	place_presence_status	95	clm-place-pergamum-attested	psg-rev-1-11
 group	pergamum-church	group_present_at	95	clm-group-pergamum-church-pergamum	psg-rev-1-11
 place	philadelphia-asia	place_presence_status	95	clm-place-philadelphia-attested	psg-rev-1-11
 group	philadelphia-church	group_present_at	95	clm-group-philadelphia-church-philadelphia-asia	psg-rev-1-11
 work	revelation-of-john	addressed_to_place	95	clm-revelation-addressed-ephesus	psg-rev-1-11
-work	revelation-of-john	work_affirms_proposition	95	clm-revelation-judgment	
+work	revelation-of-john	work_affirms_proposition	95	clm-revelation-affirms-martyrdom-witness	psg-rev-2-13
 work	revelation-of-john	written_at	95	clm-revelation-written-patmos	psg-rev-1-9
 place	sardis	place_presence_status	95	clm-place-sardis-attested	psg-rev-1-11
 group	sardis-church	group_present_at	95	clm-group-sardis-church-sardis	psg-rev-1-11
@@ -390,36 +397,108 @@ place	smyrna	place_presence_status	95	clm-place-smyrna-attested	psg-rev-1-11
 group	smyrna-church	group_present_at	95	clm-group-smyrna-church-smyrna	psg-rev-1-11
 place	thyatira	place_presence_status	95	clm-place-thyatira-attested	psg-rev-1-11
 group	thyatira-church	group_present_at	95	clm-group-thyatira-church-thyatira	psg-rev-1-11
+work	first-epistle-of-clement	authored_by	96	clm-1clement-by-clement	psg-1clement-addressed-corinth
+person	ignatius-of-antioch	bishop_of	98	clm-ignatius-bishop-antioch	psg-ignatius-magn-13
 group	docetists	group_present_at	100	clm-docetists-at-antioch	psg-ignatius-smyrn-7
-person	hermas-shepherd	active_in	100	clm-hermas-shepherd-active-rome	
-person	hermas-shepherd	member_of_group	100	clm-hermas-shepherd-member-roman-church	
-person	ignatius-of-antioch	active_in	100	clm-ignatius-active-antioch	psg-ignatius-smyrn-8
+group	ebionites	group_present_at	100	clm-ebionites-at-jerusalem	psg-eusebius-he-4-11
+person	hermas-shepherd	active_in	100	clm-hermas-shepherd-active-rome	psg-hermas-vis-2-2
+person	hermas-shepherd	member_of_group	100	clm-hermas-shepherd-member-roman-church	psg-hermas-vis-2-2
 person	ignatius-of-antioch	member_of_group	100	clm-ignatius-member-antioch-church	psg-ignatius-smyrn-7
-person	polycarp-of-smyrna	active_in	100	clm-polycarp-active-smyrna	psg-martyrdom-polycarp-9
+person	justin-martyr	active_in	100	clm-justin-active-flavia-neapolis	psg-justin-apol-13
+person	marcion-of-sinope	active_in	100	clm-marcion-active-sinope	psg-eusebius-he-4-11
+person	papias-of-hierapolis	coworker_of	100	clm-papias-coworker-polycarp	psg-eusebius-he-3-39
+person	polycarp-of-smyrna	bishop_of	100	clm-polycarp-bishop-smyrna	psg-irenaeus-ah-3-3-2
 person	polycarp-of-smyrna	member_of_group	100	clm-polycarp-member-smyrna-church	psg-martyrdom-polycarp-9
 work	shepherd-of-hermas	work_affirms_proposition	100	clm-hermas-affirms-baptism-regen	psg-hermas-sim-9-16
-work	shepherd-of-hermas	written_at	100	clm-hermas-written-rome	
+work	shepherd-of-hermas	written_at	100	clm-hermas-written-rome	psg-hermas-vis-2-2
 work	teaching-of-the-twelve-apostles	work_affirms_proposition	100	clm-didache-affirms-baptism-regen	psg-didache-7-1-4
+work	papias-fragments	authored_by	105	clm-papias-fragments-by-papias	psg-papias-frag-1
 event	ignatius-martyrdom	event_occurs_at	108	clm-ignatius-martyrdom-at-rome	psg-ignatius-rom-7
-person	ignatius-of-antioch	person_affirms_proposition	108	clm-ignatius-person-affirms-martyrdom-witness	psg-ignatius-rom-7
 work	epistle-of-polycarp-to-philippians	addressed_to_place	110	clm-polycarp-letter-addressed-philippi	psg-polycarp-phil-2
-work	epistle-of-polycarp-to-philippians	work_affirms_proposition	110	clm-polycarp-letter-affirms-eucharist	psg-polycarp-phil-7
-work	epistle-of-polycarp-to-philippians	written_at	110	clm-polycarp-letter-written-smyrna	
+work	epistle-of-polycarp-to-philippians	work_affirms_proposition	110	clm-polycarp-letter-affirms-apostolic-succession	psg-polycarp-phil-7
+work	epistle-of-polycarp-to-philippians	written_at	110	clm-polycarp-letter-written-smyrna	psg-polycarp-phil-7
 work	epistles-of-ignatius	addressed_to_place	110	clm-epistles-ignatius-addressed-ephesus	psg-ignatius-eph-13
-work	epistles-of-ignatius	work_affirms_proposition	110	clm-ignatius-affirms-monarchical-bishop	psg-ignatius-magn-6
+work	epistles-of-ignatius	authored_by	110	clm-epistles-ignatius-by-ignatius	psg-ignatius-smyrn-8
+work	epistles-of-ignatius	work_affirms_proposition	110	clm-ignatius-affirms-baptism-regen	psg-ignatius-smyrn-1
 work	epistles-of-ignatius	written_at	110	clm-epistles-ignatius-written-smyrna	psg-ignatius-eph-13
-event	ignatius-martyrdom	event_has_year	110	clm-ignatius-martyrdom-year	
+event	ignatius-martyrdom	event_has_year	110	clm-ignatius-martyrdom-year	psg-eusebius-he-3-39
+person	ignatius-of-antioch	active_in	110	clm-ignatius-active-ephesus-route	psg-ignatius-eph-13
 person	ignatius-of-antioch	coworker_of	110	clm-ignatius-coworker-polycarp	psg-ignatius-smyrn-8
 person	ignatius-of-antioch	participant_in	110	clm-ignatius-in-martyrdom	psg-ignatius-rom-7
-person	polycarp-of-smyrna	person_affirms_proposition	110	clm-polycarp-affirms-rule-of-faith	psg-polycarp-phil-7
-person	justin-martyr	active_in	150	clm-justin-active-rome	psg-justin-apol-65-66
+work	epistle-of-polycarp-to-philippians	authored_by	115	clm-polycarp-phil-by-polycarp	psg-polycarp-phil-7
+person	aristides-of-athens	active_in	120	clm-aristides-active-athens	psg-aristides-apol-1-2
+work	apology-of-aristides	addressed_to_place	125	clm-aristides-apol-addressed-rome	psg-aristides-apol-16
+work	apology-of-aristides	authored_by	125	clm-apol-aristides-by-aristides	psg-aristides-apol-1-2
+work	apology-of-aristides	work_affirms_proposition	125	clm-aristides-apol-affirms-logos	psg-aristides-apol-1-2
+work	letter-to-diognetus	work_affirms_proposition	130	clm-diognetus-affirms-logos	psg-diognetus-7
+group	valentinians	group_present_at	138	clm-valentinians-present-rome	psg-irenaeus-ah-3-4-3
+person	hegesippus	active_in	140	clm-hegesippus-active-jerusalem	psg-eusebius-he-4-22
+person	hegesippus	member_of_group	140	clm-hegesippus-member-jerusalem-church	psg-eusebius-he-4-22
+person	marcion-of-sinope	member_of_group	140	clm-marcion-member-roman-church	psg-eusebius-he-4-11
+person	marcion-of-sinope	person_affirms_proposition	140	clm-marcion-opposes-apostolic-succession	psg-irenaeus-ah-3-3-4
+work	shepherd-of-hermas	authored_by	140	clm-hermas-by-hermas-shepherd	psg-hermas-vis-2-2
+event	marcion-excommunication	event_has_year	144	clm-marcion-excommunication-year	psg-eusebius-he-4-11
+event	marcion-excommunication	event_occurs_at	144	clm-marcion-excommunication-at-rome	psg-eusebius-he-4-11
+person	marcion-of-sinope	participant_in	144	clm-marcion-in-excommunication	psg-eusebius-he-4-11
+group	marcionites	group_present_at	144	clm-marcionites-present-rome	psg-irenaeus-ah-3-4-3
+person	polycarp-of-smyrna	teacher_of	145	clm-polycarp-teacher-of-irenaeus	psg-irenaeus-ah-3-3-4
+person	justin-martyr	coworker_of	150	clm-tatian-coworker-justin	psg-tatian-oration-4
+person	justin-martyr	teacher_of	150	clm-justin-teacher-of-tatian	psg-tatian-oration-4
+person	polycarp-of-smyrna	active_in	150	clm-polycarp-active-rome	psg-eusebius-he-5-24
+person	polycrates-of-ephesus	member_of_group	150	clm-polycrates-member-ephesian-church	psg-eusebius-he-5-24
+person	tatian-the-assyrian	active_in	150	clm-tatian-active-rome	psg-tatian-oration-4
+person	tatian-the-assyrian	member_of_group	150	clm-tatian-member-roman-church	psg-tatian-oration-4
+work	dialogue-with-trypho	work_affirms_proposition	155	clm-dial-trypho-affirms-apostolic-succession	psg-justin-dial-70
+work	dialogue-with-trypho	written_at	155	clm-dialogue-trypho-written-rome	psg-justin-apol-13
+work	first-apology-of-justin	authored_by	155	clm-1apology-by-justin	psg-justin-apol-13
 work	first-apology-of-justin	work_affirms_proposition	155	clm-justin-affirms-baptism-regen	psg-justin-apol-61
-work	first-apology-of-justin	written_at	155	clm-justin-first-apology-written-rome	
-person	justin-martyr	person_affirms_proposition	155	clm-justin-person-affirms-baptism-regen	psg-justin-apol-61
-work	martyrdom-of-polycarp	work_affirms_proposition	155	clm-martyrdom-polycarp-affirms-martyrdom-witness	psg-martyrdom-polycarp-14
-work	martyrdom-of-polycarp	written_at	155	clm-martyrdom-polycarp-written-smyrna	
-event	polycarp-martyrdom	event_has_year	155	clm-polycarp-martyrdom-year	psg-martyrdom-polycarp-9
-event	polycarp-martyrdom	event_occurs_at	155	clm-polycarp-martyrdom-at-smyrna	psg-martyrdom-polycarp-9
-person	polycarp-of-smyrna	participant_in	155	clm-polycarp-in-martyrdom	psg-martyrdom-polycarp-9
+work	first-apology-of-justin	written_at	155	clm-justin-first-apology-written-rome	psg-justin-apol-13
+person	hegesippus	person_affirms_proposition	155	clm-hegesippus-person-affirms-apostolic-succession	psg-eusebius-he-4-22
+person	justin-martyr	participant_in	155	clm-justin-in-martyrdom	psg-justin-apol-13
+person	justin-martyr	person_affirms_proposition	155	clm-justin-person-affirms-martyrdom-witness	psg-justin-apol-13
+event	justin-martyrdom	event_occurs_at	155	clm-justin-martyrdom-at-rome	psg-justin-apol-13
+work	martyrdom-of-polycarp	work_affirms_proposition	155	clm-martyrdom-polycarp-affirms-martyrdom-witness	psg-martpoly-14
+work	martyrdom-of-polycarp	written_at	155	clm-martyrdom-polycarp-written-smyrna	psg-martpoly-14
+person	melito-of-sardis	bishop_of	155	clm-melito-bishop-sardis	psg-melito-peri-pascha-96
+work	oration-to-the-greeks	work_affirms_proposition	155	clm-oration-greeks-affirms-bodily-resurrection	psg-tatian-oration-15
+work	oration-to-the-greeks	written_at	155	clm-oration-greeks-written-rome	psg-tatian-oration-6
+event	polycarp-martyrdom	event_has_year	155	clm-polycarp-martyrdom-year	psg-martpoly-14
+event	polycarp-martyrdom	event_occurs_at	155	clm-polycarp-martyrdom-at-smyrna	psg-martpoly-14
+person	polycarp-of-smyrna	participant_in	155	clm-polycarp-in-martyrdom	psg-martpoly-14
+work	dialogue-with-trypho	authored_by	158	clm-dialogue-trypho-by-justin	psg-justin-dial-70
+work	homily-on-the-passover	work_affirms_proposition	160	clm-melito-pascha-affirms-eucharist	psg-melito-peri-pascha-66-71
+work	homily-on-the-passover	written_at	160	clm-melito-pascha-written-sardis	psg-melito-peri-pascha-96
+work	oration-to-the-greeks	authored_by	160	clm-oration-greeks-by-tatian	psg-tatian-oration-4
+work	homily-on-the-passover	authored_by	165	clm-peri-pascha-by-melito	psg-melito-peri-pascha-96
+event	justin-martyrdom	event_has_year	165	clm-justin-martyrdom-year	psg-eusebius-church-history-2-25
+person	victor-i-of-rome	member_of_group	165	clm-victor-member-roman-church	psg-eusebius-he-5-24
+person	theophilus-of-antioch	bishop_of	169	clm-theophilus-bishop-antioch	psg-theophilus-autol-2-10
+person	athenagoras-of-athens	active_in	170	clm-athenagoras-active-athens	psg-athenagoras-emb-4-6
+group	montanists	group_present_at	170	clm-montanists-at-phrygia	psg-irenaeus-ah-3-3-4
+person	polycrates-of-ephesus	bishop_of	170	clm-polycrates-bishop-ephesus	psg-eusebius-he-5-24
+person	polycrates-of-ephesus	person_affirms_proposition	170	clm-polycrates-person-affirms-rule-of-faith	psg-eusebius-he-5-24
+work	embassy-for-the-christians	addressed_to_place	177	clm-athenagoras-emb-addressed-rome	psg-athenagoras-emb-37
+work	embassy-for-the-christians	authored_by	177	clm-embassy-by-athenagoras	psg-athenagoras-emb-4-6
+work	embassy-for-the-christians	work_affirms_proposition	177	clm-athenagoras-emb-affirms-logos	psg-athenagoras-emb-10
+work	embassy-for-the-christians	written_at	177	clm-athenagoras-emb-written-athens	psg-athenagoras-emb-4-6
+person	irenaeus-of-lyons	active_in	177	clm-irenaeus-active-rome	psg-irenaeus-ah-3-3-2
+person	irenaeus-of-lyons	participant_in	177	clm-irenaeus-in-lyons-persecution	psg-irenaeus-ah-3-3-4
+event	lyons-persecution	event_has_year	177	clm-lyons-persecution-year	psg-irenaeus-ah-3-3-1
+event	lyons-persecution	event_occurs_at	177	clm-lyons-persecution-at-lyons	psg-irenaeus-ah-3-3-1
+work	on-the-resurrection-of-the-dead	authored_by	177	clm-resurrection-by-athenagoras	psg-athenagoras-res-1-3
+work	on-the-resurrection-of-the-dead	work_affirms_proposition	177	clm-athenagoras-res-affirms-bodily-resurrection	psg-athenagoras-res-1-3
+work	ad-autolycum	work_affirms_proposition	178	clm-ad-autolycum-affirms-bodily-resurrection	psg-theophilus-autol-1-13
+work	ad-autolycum	written_at	178	clm-ad-autolycum-written-antioch	psg-theophilus-autol-2-10
+work	ad-autolycum	authored_by	180	clm-ad-autolycum-by-theophilus	psg-theophilus-autol-2-10
+work	against-heresies	work_affirms_proposition	180	clm-irenaeus-ah-affirms-apostolic-succession	psg-irenaeus-ah-3-3-1
+work	against-heresies	written_at	180	clm-against-heresies-written-lyons	psg-irenaeus-ah-3-3-1
+work	against-heresies	authored_by	182	clm-against-heresies-by-irenaeus	psg-irenaeus-ah-3-3-4
+person	victor-i-of-rome	person_affirms_proposition	182	clm-victor-person-affirms-apostolic-succession	psg-irenaeus-ah-3-3-1
+person	irenaeus-of-lyons	coworker_of	189	clm-irenaeus-coworker-victor	psg-eusebius-he-5-24
+person	victor-i-of-rome	bishop_of	189	clm-victor-bishop-rome	psg-eusebius-he-5-24
+person	polycrates-of-ephesus	participant_in	190	clm-polycrates-in-quartodeciman	psg-eusebius-he-5-24
+event	quartodeciman-controversy	event_has_year	190	clm-quartodeciman-year	psg-eusebius-he-5-24
+event	quartodeciman-controversy	event_occurs_at	190	clm-quartodeciman-at-rome	psg-eusebius-he-5-24
+person	victor-i-of-rome	participant_in	190	clm-victor-in-quartodeciman	psg-eusebius-he-5-24
 event	pauls-martyrdom	event_occurs_at	325	clm-pauls-martyrdom-at-rome	psg-eusebius-church-history-2-25
 event	peters-martyrdom	event_occurs_at	325	clm-peters-martyrdom-at-rome	psg-eusebius-church-history-2-25

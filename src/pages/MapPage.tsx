@@ -348,6 +348,48 @@ export function MapPage() {
     }
   }, [arcPairs]);
 
+  // ── Auto-zoom when selection changes ─────────────────────────────────────
+
+  const prevSelRef = useRef<string | null>(null);
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !selection) return;
+    const selKey = `${selection.kind}:${selection.id}`;
+    if (selKey === prevSelRef.current) return;
+    prevSelRef.current = selKey;
+
+    // Ensure map container is visible and sized before zooming
+    const tryZoom = (attempts = 0) => {
+      const container = map.getContainer();
+      const rect = container.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) {
+        if (attempts < 10) {
+          setTimeout(() => tryZoom(attempts + 1), 60);
+        }
+        return;
+      }
+      
+      map.invalidateSize();
+      
+      if (selection.kind === "place") {
+        const place = dataStore.places.getById(selection.id);
+        if (place?.lat != null && place?.lon != null) map.setView([place.lat, place.lon], 8, { animate: true });
+      } else {
+        const fps = dataStore.footprints.getForEntity(selection.kind, selection.id);
+        const pts: L.LatLngExpression[] = [];
+        for (const fp of fps) {
+          const p = dataStore.places.getById(fp.place_id);
+          if (p?.lat != null && p?.lon != null) pts.push([p.lat, p.lon]);
+        }
+        if (pts.length > 0) {
+          try { map.fitBounds(L.latLngBounds(pts).pad(0.3), { animate: true, maxZoom: 8 }); } catch (_) {}
+        }
+      }
+    };
+    
+    requestAnimationFrame(() => tryZoom());
+  }, [selection]);
+
   // ── Invalidate map size on layout changes ─────────────────────────────────
 
   useEffect(() => {

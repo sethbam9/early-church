@@ -9,6 +9,7 @@ import { usePaginatedList } from "../../hooks/usePaginatedList";
 import { PRESENCE_LABELS, PRESENCE_COLORS } from "../shared/entityConstants";
 import { ClaimCard } from "../shared/RelationCard";
 import { FootprintCard } from "../shared/FootprintCard";
+import { CrossPageNav } from "../shared/CrossPageNav";
 
 // ─── Props ────────────────────────────────────────────────────────────────────
 
@@ -60,7 +61,10 @@ export function PlaceDetail({ placeId, onBack, onSelectEntity }: PlaceDetailProp
 
       {/* Header */}
       <div className="detail-header">
-        <div className="detail-kind-badge">🏛 {place.place_kind}</div>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div className="detail-kind-badge">🏛 {place.place_kind}</div>
+          <CrossPageNav kind="place" id={placeId} current="map" />
+        </div>
         <div className="detail-title">{place.place_label}</div>
         <div className="detail-subtitle">
           {place.place_label_modern && place.place_label_modern !== place.place_label
