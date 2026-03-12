@@ -315,26 +315,34 @@ Use an editorial note or a low-certainty claim only if the silence is historical
 
 ---
 
-## Certainty and polarity guidance
+## Certainty guidance
 
 ### Certainty
 
 | Situation | Use |
 |---|---|
-| direct statement, direct prohibition, explicit tradition claim | `high` |
+| direct statement, direct prohibition, explicit tradition claim | `attested` |
 | clear liturgical/disciplinary assumption; strong contextual norm | `probable` |
 | indirect inference through strong network/place ties | `probable` |
 | weak inference through travel/contact or retrospective summary | `possible` |
 | anything textually unstable or thinly attested | `possible` or omit |
 
-### Polarity
+### Proposition stance (predicate-level, not a column)
 
-| Situation | Use |
+The predicate name itself carries the doctrinal direction — there is no `polarity` column on claims.
+
+| Situation | Predicate to use |
 |---|---|
-| explicit affirmation | `supports` |
-| explicit rejection of the opposite | `supports` for the proposition affirmed, or `opposes` for the contrary proposition |
-| mere relation / presence / office / authorship | `not_applicable` |
-| contextual mention without doctrinal direction | `neutral` or `not_applicable`, depending on predicate |
+| work explicitly affirms a proposition | `work_affirms_proposition` |
+| work explicitly opposes a proposition | `work_opposes_proposition` |
+| person's stance reported by a **third-party** source | `person_affirms_proposition` or `person_opposes_proposition` |
+| person's stance derivable from their own authored works | Do NOT add a person claim — the work claim covers it |
+
+### Redundancy rules (what NOT to store)
+
+- Do not store `person_affirms/opposes_proposition` when the person's own authored works already carry the equivalent `work_affirms/opposes_proposition`.
+- Do not store `active_in` when `bishop_of` already covers the same person-place.
+- Prefer letting `authored_by` + `written_at` and `participant_in` + `event_occurs_at` derive person-place presence instead of adding redundant `active_in` claims.
 
 ---
 

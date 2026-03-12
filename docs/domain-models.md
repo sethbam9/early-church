@@ -57,13 +57,6 @@ export type Certainty =
   | "legendary"
   | "unknown";
 
-export type Polarity =
-  | "supports"
-  | "opposes"
-  | "neutral"
-  | "mixed"
-  | "not_applicable";
-
 export type ClaimStatus =
   | "active"
   | "deprecated"
@@ -396,7 +389,6 @@ export interface ClaimBase extends AuditFields {
   year_end: Year | null;
   context_place_id: Id | null;
   certainty: Certainty;
-  polarity: Polarity;
   claim_status: ClaimStatus;
 }
 

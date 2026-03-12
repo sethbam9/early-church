@@ -5,7 +5,7 @@ import { parseTsv, int, float, splitSemi, str } from "./parseTsv";
 export type {
   PlaceKind, LocationPrecision, PresenceStatus, PersonKind, WorkType, WorkKind,
   EventType, EventKind, GroupKind, TopicKind, DimensionKind, SourceKind, PassageLocatorType,
-  EditorNoteKind, Certainty, Polarity, ClaimStatus, EvidenceRole,
+  EditorNoteKind, Certainty, ClaimStatus, EvidenceRole,
   ReviewStatus, ReviewConfidence, ObjectMode, DerivedStance, Stance,
   CanonicalSortRule, MentionSourceType,
   EntityType, MentionTargetType, SelectionKind,
@@ -211,7 +211,6 @@ const claims: Claim[] = parseTsv(claimsRaw).map((r) => ({
   year_end: int(r.year_end),
   context_place_id: str(r.context_place_id),
   certainty: str(r.certainty) as Claim["certainty"],
-  polarity: str(r.polarity) as Claim["polarity"],
   claim_status: str(r.claim_status) as Claim["claim_status"],
   created_by: str(r.created_by),
   updated_at: str(r.updated_at),
@@ -868,7 +867,7 @@ export const dataStore = {
       const allForEntity = [
         ...(claimsBySubject.get(`${type}:${id}`) ?? []),
         ...(claimsByObject.get(`${type}:${id}`) ?? []),
-      ].filter((c) => !INFRA_PREDICATES.has(c.predicate_id));
+      ].filter((c) => c.claim_status === "active" && !INFRA_PREDICATES.has(c.predicate_id));
       const grouped = new Map<string, Claim[]>();
       for (const c of allForEntity) {
         const isSubject = c.subject_type === type && c.subject_id === id;

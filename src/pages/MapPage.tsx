@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
+import { useLocation } from "react-router-dom";
 import L, { type LayerGroup, type Map as LeafletMap } from "leaflet";
 import { useAppStore } from "../stores/appStore";
 import { dataStore } from "../data/dataStore";
@@ -286,11 +287,12 @@ export function MapPage() {
         }).addTo(rowLyr);
       }
 
+      const useStanceColor = stanceColor != null;
       const m = L.circleMarker([place.lat, place.lon], {
         radius: r,
-        color: isSelected ? "#c47c3a" : isConnected ? "#e8943a" : color,
+        color: isSelected ? "#c47c3a" : isConnected && !useStanceColor ? "#e8943a" : color,
         weight: isSelected ? 2.5 : isConnected ? 2 : 1.2,
-        fillColor: isConnected ? "#e8943a" : color,
+        fillColor: useStanceColor ? color : isConnected ? "#e8943a" : color,
         fillOpacity: isSelected ? 1 : isDimmed ? 0.22 : isConnected ? 0.92 : 0.78,
       });
 
@@ -410,6 +412,19 @@ export function MapPage() {
     return () => window.clearTimeout(t);
   }, [leftPanelVisible, rightPanelVisible]);
 
+  // ── Invalidate map size when page becomes visible ─────────────────────────
+
+  const { pathname } = useLocation();
+  const isMapPage = pathname === "/" || pathname === "";
+  useEffect(() => {
+    if (!isMapPage) return;
+    // Leaflet may have stale dimensions when returning from another page
+    const timers = [50, 150, 400].map((ms) =>
+      window.setTimeout(() => mapRef.current?.invalidateSize(), ms),
+    );
+    return () => timers.forEach((t) => window.clearTimeout(t));
+  }, [isMapPage]);
+
   // ── Map action callbacks ──────────────────────────────────────────────────
 
   const handleFitVisible = useCallback(() => {
@@ -422,9 +437,35 @@ export function MapPage() {
   const handleCenterSelected = useCallback(() => {
     const map = mapRef.current;
     if (!map || !selection) return;
+
+    // Account for right panel width: offset the center point leftward
+    const container = map.getContainer();
+    const rightPanel = container.parentElement?.querySelector(".map-right") as HTMLElement | null;
+    const panelW = rightPanel?.offsetWidth ?? 0;
+
+    function centerOnLatLng(lat: number, lon: number, zoom: number) {
+      const targetPoint = map!.project(L.latLng(lat, lon), zoom);
+      const offsetPoint = targetPoint.subtract([-(panelW / 2), 0]);
+      const offsetLatLng = map!.unproject(offsetPoint, zoom);
+      map!.setView(offsetLatLng, zoom, { animate: true });
+    }
+
     if (selection.kind === "place") {
       const place = dataStore.places.getById(selection.id);
-      if (place?.lat != null && place?.lon != null) map.setView([place.lat, place.lon], 10, { animate: true });
+      if (place?.lat != null && place?.lon != null) centerOnLatLng(place.lat, place.lon, 10);
+    } else {
+      const fps = dataStore.footprints.getForEntity(selection.kind, selection.id);
+      const pts: L.LatLngExpression[] = [];
+      for (const fp of fps) {
+        const p = dataStore.places.getById(fp.place_id);
+        if (p?.lat != null && p?.lon != null) pts.push([p.lat, p.lon]);
+      }
+      if (pts.length > 0) {
+        try {
+          const bounds = L.latLngBounds(pts).pad(0.3);
+          map.fitBounds(bounds, { animate: true, maxZoom: 8, paddingTopLeft: [0, 0], paddingBottomRight: [panelW, 0] });
+        } catch (_) {}
+      }
     }
   }, [selection]);
 

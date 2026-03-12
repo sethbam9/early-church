@@ -17,48 +17,50 @@ src/
       Pagination.tsx       – Page controls (uses .pagination CSS)
       EntityHeader.tsx     – Unified entity header (title/subtitle/tags/facts)
                              getEntityHeaderData() for data extraction
+      EvidenceCard.tsx     – Unified evidence card (role, passage, excerpt, links)
+      EntityHoverCard.tsx  – Universal hover tooltip for entity links
+                             <EntityHoverWrap kind id> wraps any element
+      FootprintCard.tsx    – Derived footprint card with derivation-trail hover
+      FilterChips.tsx      – Reusable filter chip bar for sidebar lists
+      CrossPageNav.tsx     – Map/Graph/Wiki nav icons (respects currentPage prop)
       entityConstants.ts   – KIND_ICONS, KIND_LABELS, KIND_COLORS,
                              PRESENCE_COLORS/LABELS, CERTAINTY_COLORS,
-                             POLARITY_META, STANCE_COLORS/LABELS,
+                             STANCE_COLORS/LABELS,
                              kindIcon(), kindLabel(), presenceColor()
     sidebar/        # Sidebar sub-modules
       SidebarShell.tsx     – Drag-to-resize / snap-dismiss wrapper
-      SidebarLists.tsx     – All sidebar list components (PlacesList, GroupsList, etc.)
-      EntityDetail.tsx     – Unified entity detail for ALL kinds (place, person, etc.)
+      SidebarLists.tsx     – All sidebar list components
+      EntityDetail.tsx     – Unified entity detail for ALL kinds
+                             Props: kind, id, onBack, onExit?, onSelectEntity,
+                             onHoverEntity?, onLeaveEntity?, currentPage?
                              Tabs: Info, Timeline, People, Places, Groups, Works,
                              Events, Propositions, Topics, Notes, Mentions
-    map/            # Map-specific components
-      RightSidebar.tsx     – Routing layer: uses EntityDetail for all selection kinds
-      CityDetail.tsx       – Compat re-export only (→ EntityDetail)
+    map/
+      RightSidebar.tsx     – Uses EntityDetail for all selection kinds
       LeftPanel.tsx        – Timeline controls, search, filters, stance legend
-    entity/
-      EntityDetailPanel.tsx – Compat re-export only (→ EntityDetail)
     layout/
       NavBar.tsx
   data/
     types.ts        # ALL domain type definitions (single source of truth)
-    dataStore.ts    # Parsing, indexing, query API (re-exports types)
-                    # Also exports: globalSearch()
+    dataStore.ts    # Parsing, indexing, query API; exports globalSearch()
     essays.ts       # Essay metadata + body loading
     parseTsv.ts     # TSV parser utilities
   domain/
     relationLabels.ts  # Relation type → human label registry
   hooks/
-    useSearchQuery.ts    – Trimmed global search query from appStore
-    usePaginatedList.ts  – Generic pagination with auto-reset
-    useFilteredList.ts   – Generic search + filter
+    useSearchQuery.ts, usePaginatedList.ts, useFilteredList.ts
   stores/
     appStore.ts     # Zustand store (decade, selection, filters, UI state)
   utils/
-    claimAudit.ts   # Claim audit helpers: getClaimAuditStatus(),
-                    # getClaimBorderClass(), getAuditRows(), ClaimAuditRow type
+    claimAudit.ts   # getClaimAuditStatus(), getClaimBorderClass(), getAuditRows()
     forceLayout.ts  # Force-directed graph physics (pure computation)
+    pathFinder.ts   # BFS shortest-path for graph (findShortestPath)
     formatYear.ts   # Year range formatting
     sourceLinks.ts  # getSourceExternalUrl(), getSourceAccessTitle()
   pages/
     MapPage.tsx     # Map + left panel + right sidebar
-    GraphPage.tsx   # Force-directed network graph
-    WikiPage.tsx    # Data wiki with dual-mode (Relations / Claims) entity view
+    GraphPage.tsx   # Force-directed network graph + path finder
+    WikiPage.tsx    # Data wiki: browse + audit modes, essays tab
 ```
 
 ---
@@ -69,101 +71,196 @@ src/
 
 | Need | Import from |
 |------|-------------|
-| Entity icons (🏛👤📜…) | `entityConstants.ts` → `KIND_ICONS`, `kindIcon()` |
-| Entity labels (Person, Work…) | `entityConstants.ts` → `KIND_LABELS`, `kindLabel()` |
-| Graph node colors | `entityConstants.ts` → `KIND_COLORS` |
-| Presence colors (#1a7a5c…) | `entityConstants.ts` → `PRESENCE_COLORS`, `presenceColor()` |
-| Presence labels (Attested…) | `entityConstants.ts` → `PRESENCE_LABELS` |
-| Certainty colors | `entityConstants.ts` → `CERTAINTY_COLORS` |
-| Claim polarity meta (icon/class) | `entityConstants.ts` → `POLARITY_META` |
-| Proposition stance colors | `entityConstants.ts` → `STANCE_COLORS`, `STANCE_LABELS` |
-| Entity header (title/tags/facts) | `EntityHeader.tsx` → `<EntityHeader kind={…} id={…} showAllFields? />` |
-| Search highlight | `Hl.tsx` → `<Hl text={…} query={…} />` |
-| Note rendering | `NoteCard.tsx` → `<NoteCard note={…} />` |
-| Pagination | `Pagination.tsx` → `<Pagination page={…} total={…} onChange={…} />` |
-| Markdown/mentions | `MarkdownRenderer.tsx` → `<MarkdownRenderer>` |
-| Relation labels | `relationLabels.ts` → `getRelationLabel()` |
-| Entity label lookup | `dataStore.ts` → `getEntityLabel()` |
-| Global search | `dataStore.ts` → `globalSearch(query, limit?)` |
-| Claim audit status | `utils/claimAudit.ts` → `getClaimAuditStatus()`, `getAuditRows()` |
-| Year formatting | `formatYear.ts` → `formatYearRange()` |
-| Domain types | `data/types.ts` (or re-exported from `dataStore.ts`) |
+| Entity icons/labels/colors | `entityConstants.ts` |
+| Entity header | `<EntityHeader kind id showAllFields? />` |
+| Evidence display | `<EvidenceCard ev onSelectEntity />` |
+| Entity hover tooltip | `<EntityHoverWrap kind id>{children}</EntityHoverWrap>` |
+| Footprint card | `<FootprintCard footprint onSelectEntity />` |
+| Search highlight | `<Hl text query />` |
+| Note rendering | `<NoteCard note />` |
+| Pagination | `<Pagination page total onChange />` |
+| Markdown/mentions | `<MarkdownRenderer>` |
+| Cross-page nav | `<CrossPageNav kind id current="map|graph|wiki" />` |
+| Relation labels | `getPredicateLabel()` from `relationLabels.ts` |
+| Entity label | `getEntityLabel()` from `dataStore.ts` |
+| Global search | `globalSearch()` from `dataStore.ts` |
+| Claim audit | `getClaimAuditStatus()`, `getAuditRows()` from `claimAudit.ts` |
+| Shortest path | `findShortestPath()` from `pathFinder.ts` |
 
 ### Never:
-- Define a local `KIND_ICONS`, `KIND_COLORS`, `PRESENCE_COLORS`, `CERTAINTY_COLORS`, `POLARITY_META`, or `STANCE_COLORS` map in a component file.
-- Write a local `presenceColor`, `kindIcon`, or `kindLabel` function — import from `entityConstants.ts`.
-- Write a local `getClaimAuditStatus`, `getAuditRows`, or `globalSearch` function — import from `utils/claimAudit.ts` or `dataStore.ts`.
-- Write inline entity header rendering (title/subtitle/tags) — use `<EntityHeader>`.
-- Write inline note rendering (body + citations). Use `<NoteCard>`.
-- Write inline pagination UI. Use `<Pagination>`.
-- Define types that already exist in `data/types.ts`.
+- Define local color/icon/label maps — import from `entityConstants.ts`.
+- Write inline evidence rendering — use `<EvidenceCard>`.
+- Write inline entity tooltip — use `<EntityHoverWrap>`.
+- Write inline pagination — use `<Pagination>`.
+- Write inline note rendering — use `<NoteCard>`.
 
 ---
 
-## 3. Styling Rules
+## 3. Unified Chip System (CSS)
+
+Four chip types, all in `styles.css`:
+
+| Class | Purpose | Active state |
+|-------|---------|-------------|
+| `.chip-filter` / `.pchip` | Interactive multi-select | **Inverted**: `background: var(--accent); color: #fff; font-weight: 600` |
+| `.chip-info` | Read-only tag | N/A (no interaction) |
+| `.chip-legend` | Color-dot + label | N/A (`pointer-events: none`) |
+| `.chip-link` | Entity nav chip | Dashed border, hover: `background: var(--accent-dim)` |
+
+### Rules:
+- **All filter/toggle chips** must use high-contrast inverted active states.
+- Presence-status chips get semantic color overrides (`.active.attested`, etc.).
+- Use `.chip-show-all` for the "show all" reset hint (replaces "All" chip in multi-select).
+- `.chip-dot` for inline colored circles in legend/presence chips.
+- Wiki evidence role chips (`.wiki-ev-role-chip`), audit chips (`.wiki-audit-chip-btn`), view toggle (`.wiki-view-btn`), mode toggle (`.wiki-mode-btn`) all use the same high-contrast active pattern.
+
+---
+
+## 4. Link Differentiation
+
+| Type | CSS class | Behavior |
+|------|-----------|----------|
+| **Internal entity link** | `.link-internal` or `.mention-link` | Dashed underline, hover: accent background. Must have working hover effect. |
+| **External URL** | `.link-external` | Appends `↗` via `::after`. Underline on hover. |
+
+### Rules:
+- An internal entity link **cannot** exist without a working hover effect.
+- All `<a>` tags pointing to external URLs should use `.link-external` or `.ev-card-ext-link`.
+- All `<button>` entity navigation links should use `.mention-link` or `.link-internal`.
+
+---
+
+## 5. Evidence Card
+
+`<EvidenceCard ev onSelectEntity />` — **the only way** to render evidence across the app:
+
+- Full width of parent, flush left (padding: `6px 8px`)
+- Background: `var(--surface-2)`, rounded corners
+- Shows: role badge (colored by role), evidence weight, passage reference, excerpt (italic, left-bordered), notes, links
+- Single internal link: "Open work" (if source has `work_id`)
+- Single external link: source title + `↗` (if source has URL)
+- CSS: `.ev-card`, `.ev-card-meta`, `.ev-card-role`, `.ev-card-excerpt`, `.ev-card-links`
+- **Consumers**: EntityDetail RelationTab, FootprintCard, RelationCard, WikiPage ClaimRow, WikiPage ClaimDetailPanel
+- Old patterns deleted: `evidence-item`, `evidence-excerpt`, `evidence-source`, `wiki-ev-detail`, `wiki-ev-row-meta`, `wiki-evidence-row`
+
+---
+
+## 6. Entity Hover Card
+
+`<EntityHoverWrap kind id>{children}</EntityHoverWrap>` — universal tooltip:
+
+- Fixed-position portal tooltip on hover
+- Shows: kind badge, entity label, key-value facts
+- CSS: `.entity-hover-card`, `.entity-hover-card-title`, `.entity-hover-card-facts`
+- Use everywhere entity links appear across all pages.
+
+---
+
+## 7. Derivation Trail Hover
+
+`FootprintCard` shows a derivation trail tooltip on hover:
+
+- Displays the chain of backing claims that produced the derived footprint
+- Format: `{icon} Subject → predicate → {icon} Object` for each claim
+- Uses `.entity-hover-card` CSS (same as EntityHoverCard)
+
+---
+
+## 8. Navigation: Back + Exit
+
+Every entity detail panel supports two navigation actions:
+
+| Action | Button | Behavior |
+|--------|--------|----------|
+| **Back** | `← Back` | Pops one step in selection history; if empty, clears selection |
+| **Exit** | `✕` (right side of back bar) | Clears entire history stack, returns to list/unselected state |
+
+- `EntityDetail` accepts `onBack` (required) and `onExit` (optional) props.
+- Graph page maintains its own `selectionHistory` stack for back navigation.
+- Wiki page uses `history` state array for back navigation.
+
+---
+
+## 9. Graph Page
+
+### Layout
+- `.graph-sidebar` (260px) | `.graph-canvas-area` (flex 1) | right detail panel (300px)
+
+### Initial load
+- Nodes seeded in **circular/radial** pattern (golden-angle spiral), not rectangular.
+- After `runForceSync`, auto-centers by computing bounding box and fitting zoom.
+- `spreadNeighbors` uses `minSep = r1 + r2 + 26` for adequate spacing.
+
+### Path Finder (Degrees of Kevin Bacon)
+- Two `PathPickerInput` autocomplete fields in the left sidebar
+- `findShortestPath()` via BFS on the edge adjacency list
+- Results: intermediary count + clickable chain display
+- CSS: `.graph-path-result`, `.graph-path-chain`, `.graph-path-step`, `.graph-path-node-btn`
+
+### Selection history
+- Graph maintains `selectionHistory` stack — back reverts to previous node.
+- `pushGraphSelection` / `popGraphSelection` manage the stack.
+
+### Right panel
+- Uses `<EntityDetail currentPage="graph">` — no duplicate `CrossPageNav`.
+- Timeline card hover triggers `onHoverEntity` → highlights graph node.
+
+---
+
+## 10. Map Page
+
+### Leaflet resize handling
+- `invalidateSize()` called at 50ms, 150ms, 400ms when navigating back to map page.
+- Also called on `leftPanelVisible` / `rightPanelVisible` changes.
+
+### Center-selected offset
+- `handleCenterSelected` accounts for right panel width when computing map center.
+- Uses `L.project/unproject` offset for place centering, `paddingBottomRight` for entity bounds.
+
+### Proposition stance coloring
+- When `mapFilterType === "proposition"`, markers use `STANCE_COLORS` instead of `PRESENCE_COLORS`.
+- Stance color takes priority over connected-entity highlight color.
+- `LeftPanel` shows stance legend when proposition filter is active.
+
+---
+
+## 11. Wiki Page
+
+### Layout
+- Left: entity kind tabs + search + entity list (sorted by linkage count, descending)
+- Center: compact top bar (Back + CrossPageNav left, Relations/Claims toggle right) + content
+- Right: claim detail panel (when a claim is selected)
+
+### Entity tabs
+All data types browsable: People, Places, Groups, Works, Events, Propositions, Topics, Sources, Notes, Essays.
+
+### Claim filtration
+- Evidence role filter chips filter which **claims are visible** (not just evidence rows).
+- Claims shown only if they have at least one evidence row matching the selected role.
+
+### Audit table
+- Sortable columns: click header to cycle asc → desc → default.
+- Sort state: `sortCol` + `sortDir` applied after filter.
+- Color key in left panel uses actual colored dots (not plain text).
+
+### Essays
+- Essays browsable as a tab in the wiki left panel.
+- Essay body rendered with `<MarkdownRenderer>` — `[[mention]]` links work.
+
+---
+
+## 12. Styling Rules
 
 ### Use CSS classes, not inline styles
+Inline `style={{…}}` only for dynamic runtime values or one-off layout tweaks.
 
-All visual styling belongs in `src/styles.css`. Inline `style={{…}}` is only acceptable for:
-- **Dynamic values** that depend on runtime data (e.g., `style={{ background: someComputedColor }}`).
-- **One-off layout tweaks** that are truly unique (e.g., `style={{ flex: 1 }}`).
-
-For everything else, use or create a CSS class. Common utility classes available:
-
+### CSS Variables (design tokens)
 ```css
-.flex-col          /* display:flex; flex-direction:column */
-.flex-col-8        /* + gap:8px */
-.flex-col-12       /* + gap:12px */
-.flex-col-14       /* + gap:14px */
-.flex-wrap-4       /* display:flex; flex-wrap:wrap; gap:4px */
-.flex-center       /* display:flex; align-items:center */
-.entity-desc       /* Standard entity description paragraph */
-.entity-desc--italic  /* Italic variant (significance, resolution) */
-.search-input-icon /* 🔍 icon in search inputs */
-.close-btn         /* ✕ dismiss button */
-.faint             /* color: var(--text-faint) */
-.muted             /* color: var(--text-muted) */
-```
-
-### Component-specific CSS class families:
-- `.note-card` / `.note-year` — evidence notes
-- `.conn-list` / `.conn-card` / `.conn-icon` / `.conn-name` / `.conn-rel` — connection lists
-- `.fact-grid` / `.fact-label` / `.fact-value` — key-value fact display
-- `.tag` / `.tag.accent` / `.tag-clickable` / `.tag-persuasion` — chips
-- `.mention-link` — inline entity link in text
-- `.citation-link` — source URL link
-- `.mini-card-*` — essay popup entity mini card
-- `.pagination` / `.pagination-btn` — page controls
-- `.timeline-*` — timeline row components
-- `.sidebar-*` — sidebar tabs, search, list items
-- `.detail-*` — detail panel shell (back bar, header, sub-tabs, body)
-- `.graph-*` — graph page specific elements
-
----
-
-## 4. CSS Variables (design tokens)
-
-```css
---surface        /* panel backgrounds */
---surface-2      /* hover/active backgrounds */
---surface-3      /* deeper nesting */
---border         /* main borders */
---border-subtle  /* dividers within panels */
---text           /* primary text */
---text-muted     /* secondary text */
---text-faint     /* tertiary / labels */
---accent         /* primary brand color (amber) */
---accent-bright  /* brighter accent for links/active */
---accent-dim     /* very light accent background */
---accent-strong  /* darkest accent for hover */
-
-/* Presence status (also in entityConstants.ts) */
---attested       /* #1a7a5c */
---probable       /* #b07e10 */
---claimed        /* #c47d2a */
---suppressed     /* #c0392b */
---unknown        /* #8e8070 */
-
+--surface / --surface-2 / --surface-3
+--border / --border-subtle
+--text / --text-muted / --text-faint
+--accent / --accent-bright / --accent-dim / --accent-strong
+--attested / --probable / --claimed / --suppressed / --unknown
 --shadow / --shadow-md / --shadow-lg
 --radius / --radius-sm / --radius-lg
 --nav-h / --left-w / --right-w
@@ -171,160 +268,17 @@ For everything else, use or create a CSS class. Common utility classes available
 
 ---
 
-## 5. Layout
+## 13. Forbidden Patterns
 
-- **App shell**: `NavBar` (fixed top, 44px) + `.page-container` (fills remaining height).
-- **Always-mounted pages**: All three pages (Map, Graph, Wiki) are mounted simultaneously in `App.tsx` using `display: "contents" / "none"`. This **preserves internal state** when switching tabs via `NavBar`. Never use `<Routes>` for page switching.
-- **Map page**: flex row — `.map-left` | `.map-center` (Leaflet) | `.map-right` (sidebar).
-- **Expanded sidebar**: `.sidebar-expanded` sets `.map-center` to `width:0` (NOT `display:none` — Leaflet breaks). `.map-right` gets `flex:1`.
-- **Panel visibility**: toggled via `leftPanelVisible` / `rightPanelVisible` in `appStore`. When hidden, the container is conditionally rendered, not CSS-hidden.
-- **Show-panel hints**: `.map-overlays` is `position:absolute; pointer-events:none`. Buttons must have `pointer-events:all`.
-
----
-
-## 6. Navigation / Selection History
-
-- `appStore` holds `selection: Selection | null` and `selectionHistory: Selection[]`.
-- **Navigate to entity**: call `pushSelection({ kind, id })`.
-- **Back**: call `popSelection()`. If history empty, call `setSelection(null)`.
-- **Hard reset**: call `setSelection(null)` — clears history.
-- **Essay → entity**: store essay in `prevEssay` local state before `pushSelection`; back restores it.
-- Never navigate using `setSidebarTab` as a back mechanism.
-
-### Cross-page navigation
-
-- **`CrossPageNav`** (`src/components/shared/CrossPageNav.tsx`): renders icon buttons (🗺️ Map, 🕸️ Graph, 📖 Wiki) to open the current entity on another page. Excludes the current page's icon.
-- **Map navigation**: sets `appStore.setSelection()` then `navigate("/")` — the map reads selection from appStore.
-- **Graph/Wiki navigation**: uses URL search params `?kind=X&id=Y` — these pages read params via `useSearchParams`.
-- Place `<CrossPageNav kind={kind} id={id} current="map|graph|wiki" />` in every entity detail header.
-- CSS classes: `.cross-page-nav`, `.page-nav-icon`.
-
----
-
-## 7. Sidebar
-
-- **Tab bar**: defined in `TABS` array in `RightSidebar.tsx`. Icon on top, label below.
-- **Active tab**: `border-bottom-color: var(--accent-bright)`, no background change.
-- **Routing**: RightSidebar checks `selection.kind` and renders CityDetail, EntityDetail, QuoteDetail, or EssayView accordingly. List views are the default.
-- **Lists**: all 9 list components live in `SidebarLists.tsx`. All have pagination via `<Pagination>`.
-- **Search**: each list filters locally from `sidebarSearch` in appStore. Page resets on search change via `useEffect`.
-- **"Show All" for archaeology**: REMOVED. Use the left panel "Include earlier decades" checkbox instead.
-
----
-
-## 8. Entity Detail Panels
-
-- Shell: back bar → header → filter banner (optional) → sub-tabs → body.
-- **Back bar**: `.detail-back-bar` with `.back-btn` and `.detail-crumb`.
-- **Header**: use `<EntityHeader kind id />` (no `showAllFields`); add `<CrossPageNav>` alongside.
-- **Info tab**: use `<EntityHeader kind id showAllFields onSelectEntity />` for full field display.
-- **Sub-tabs**: `.detail-sub-tabs` / `.detail-sub-tab`; shown only when ≥2 tabs available.
-- **Body**: `.detail-body` — scrollable, `flex-col` with gap.
-- **All entity sub-tabs must have pagination** via `<Pagination>`.
-- **Unified `EntityDetail`**: single component for ALL entity kinds including `place`. Tabs are dynamic: only shown when count > 0. Tab order: Info → Timeline → People → Places → Groups → Works → Events → Propositions → Topics → Notes → Mentions.
-- `CityDetail.tsx` and `EntityDetailPanel.tsx` are **compat re-exports only** — do not add logic there.
-
----
-
-## 9. Evidence Notes
-
-- **Always use `<NoteCard>`** wherever evidence is displayed — InfoTab, TimelineTab, EntityEvidenceTab, EntityDetailPanel.
-- NoteCard renders: `body_md` via `<MarkdownRenderer>` + `citation_urls` as clickable links.
-- Optional `yearLabel` prop for the `.note-year` header.
-- **Citations must always be visible.** Never render `body_md` without also rendering `citation_urls`.
-
----
-
-## 10. Clickable Mentions (MarkdownRenderer)
-
-- Syntax: `\[\[kind:id|label\]\]` or `\[\[kind:id\]\]`.
-- Supported kinds in the current schema: `place`, `person`, `work`, `event`, `group`, `topic`, `dimension`, `proposition`, `source`, `passage`, `claim`, `editor_note`, `bible`.
-- Mention buttons use `.mention-link` class: dashed underline, no background.
-- Use `<MarkdownRenderer>` everywhere note/essay body text is displayed.
-
----
-
-## 11. Markdown Rendering
-
-- Supports: `#`/`##`/`###`, `>` blockquotes, `**bold**`, `*italic*`, blank-line paragraphs, `[[mention]]` links, literal `\n` from TSV.
-- CSS: `.md-p`, `.md-h1/2/3`, `.md-blockquote`, `.markdown-renderer`.
-- Essays: `.md` files in `data/essays/`, loaded eagerly via Vite glob in `essays.ts`. `Essay` type is defined in `essays.ts`.
-
----
-
-## 12. Tags / Chips
-
-- `.tag` — read-only info chip.
-- `.tag.accent` — highlighted variant.
-- `.tag-clickable` — interactive chip (dashed border, use `<button>`).
-- `.tag-persuasion` — persuasion-specific color.
-
----
-
-## 13. Graph Page
-
-- Layout: `.graph-sidebar` (260px) | `.graph-canvas-area` (flex 1) | right detail panel (300px, shown when node or edge selected).
-- **Left sidebar**: filters, search, legend, connection slider only. **No** selected node/edge info.
-- **Right panel**: `GraphDetailPanel` (for nodes) or `GraphEdgePanel` (for edges). Includes `CrossPageNav`, paginated connections, and entity description.
-- Force layout: pure computation in `src/utils/forceLayout.ts` — `runForceSync()`.
-  - Gravity and repulsion scale with node count to keep large graphs compact.
-  - Position clamping prevents nodes from flying off-screen.
-  - Velocity clamping (`maxV=15`) prevents force explosions.
-- **Edge interaction**: Only edges connected to the currently selected node are interactive (hover/click). Non-network edges have `pointerEvents: "none"`.
-- **Auto-zoom**: clicking a node auto-zooms to show the node and all its connections via `zoomToNodeConnections()`.
-- Node labels: shown always when `nodes.length < 60`, otherwise only on selected/high-connection nodes.
-- Edge labels: shown on hover or click, only for interactive (connected) edges.
-
----
-
-## 14. Data Flow Rules
-
-- **All data access** goes through `dataStore` singleton.
-- **All domain types** defined in `src/data/types.ts`.
-- Map filter: `appStore.mapFilterType` + `mapFilterId`.
-- `showArcs: true` by default.
-- Decade data: always use `getPlacesAtDecade()` / `getCumulativePlacesAtDecade()`.
-- Default decade: `0` AD (set in appStore).
-- `includeCumulative: true` by default.
-- **Map auto-zoom**: when `selection` changes, the map auto-zooms: for places, centers at zoom 8; for other entities, fits bounds of all footprint-connected places.
-
-### Wiki page
-
-- **Dual view mode**: each entity detail has a **Relations** toggle (shows `EntityDetail` tabs) and a **Claims** toggle (shows `ClaimsPanel` audit view). Default is Claims.
-- **Evidence role filter**: `ClaimsPanel` has role filter chips (all / supports / opposes / contextualizes / mentions) that filter evidence rows within expanded claims.
-- **Editor notes** are displayed **in the claims feed** (inside `ClaimsPanel`) using `<NoteCard>`, not raw styled divs.
-- **Evidence weight and notes** (`evidence_weight`, `ev.notes`) are shown in every `EvidenceRow`.
-- Deep-linking via `?kind=X&id=Y` URL params is supported.
-
-### Map proposition stance coloring
-
-- When `mapFilterType === "proposition"`, map dot colors switch from `PRESENCE_COLORS` to `STANCE_COLORS` keyed by `proposition_place_presence.stance`.
-- `LeftPanel` shows a stance legend when a proposition filter is active.
-- Stance palette: `STANCE_COLORS` / `STANCE_LABELS` in `entityConstants.ts`.
-
----
-
-## 15. Custom Hooks
-
-| Hook | Purpose |
-|------|---------|
-| `useSearchQuery()` | Returns trimmed global search query from appStore |
-| `usePaginatedList(items, pageSize?)` | Returns `{ page, setPage, pageItems, total, pageSize }` with auto-reset |
-| `useFilteredList(items, searchFn)` | Returns `{ search, setSearch, filtered }` |
-
-Use these hooks to avoid duplicating pagination/search state management across components.
-
----
-
-## 16. Forbidden Patterns
-
-1. **No local `KIND_ICONS` / `PRESENCE_COLORS` maps** — import from `entityConstants.ts`.
-2. **No inline note rendering** — use `<NoteCard>`.
-3. **No inline pagination UI** — use `<Pagination>`.
-4. **No `async` wrappers around sync data** — essays are loaded eagerly.
-5. **No unused re-export shim files** (the old `types.ts`, `constants.ts`, `repositories.ts` pattern).
+1. **No local color/icon/label maps** — import from `entityConstants.ts`.
+2. **No inline evidence rendering** — use `<EvidenceCard>`.
+3. **No inline note rendering** — use `<NoteCard>`.
+4. **No inline pagination** — use `<Pagination>`.
+5. **No inline entity tooltip** — use `<EntityHoverWrap>`.
 6. **No `style={{…}}` for static visual properties** — use CSS classes.
-7. **No `@deprecated` compat objects** — delete dead code immediately.
-8. **No unrouted page components** — if a page has no route, delete it.
-9. **No entity list tabs without pagination** — all lists must paginate.
-10. **No evidence display without citations** — always render `citation_urls`.
+7. **No duplicate `CrossPageNav`** — only one per entity detail header.
+8. **No "All" chip in multi-select** — use `.chip-show-all` hint.
+9. **No low-contrast active states** — all filter chips must use inverted high-contrast.
+10. **No internal links without hover effects** — every entity link must respond to hover.
+11. **No entity list tabs without pagination** — all lists must paginate.
+12. **No evidence display without citations** — always render passage references.

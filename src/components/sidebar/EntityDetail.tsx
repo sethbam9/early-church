@@ -1,7 +1,8 @@
 import React, { useState, useMemo, useEffect, useRef } from "react";
 import { useAppStore } from "../../stores/appStore";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
-import { EntityHeader } from "../shared/EntityHeader";
+import { EntityHeader, getEntityHeaderData } from "../shared/EntityHeader";
+import { MarkdownRenderer } from "../shared/MarkdownRenderer";
 import { Pagination, PAGE_SIZE } from "../shared/Pagination";
 import { usePaginatedList } from "../../hooks/usePaginatedList";
 import { NoteCard } from "../shared/NoteCard";
@@ -9,8 +10,8 @@ import { kindIcon, kindLabel, PRESENCE_COLORS, PRESENCE_LABELS, CERTAINTY_COLORS
 import { CrossPageNav } from "../shared/CrossPageNav";
 import { FootprintCard } from "../shared/FootprintCard";
 import { PassageReference } from "../shared/PassageReference";
+import { EvidenceCard } from "../shared/EvidenceCard";
 import { getPredicateLabel } from "../../domain/relationLabels";
-import { getSourceExternalUrl, getSourceAccessTitle } from "../../utils/sourceLinks";
 import type { Claim, EntityPlaceFootprint, PlaceStateByDecade } from "../../data/types";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -35,7 +36,7 @@ const TAB_LABELS: Record<EntityDetailTab, string> = {
   groups:       "Groups",
   works:        "Works",
   events:       "Events",
-  propositions: "Propositions",
+  propositions: "Beliefs",
   topics:       "Topics",
   notes:        "Notes",
   mentions:     "Mentions",
@@ -47,17 +48,24 @@ interface EntityDetailProps {
   kind: string;
   id: string;
   onBack: () => void;
+  onExit?: () => void;
   onSelectEntity: (kind: string, id: string) => void;
+  onHoverEntity?: (kind: string, id: string) => void;
+  onLeaveEntity?: () => void;
   mapFilterType?: string | null;
   mapFilterId?: string | null;
   setMapFilter?: (type: string, id: string) => void;
   clearMapFilter?: () => void;
   currentDecade?: number;
+  currentPage?: "map" | "graph" | "wiki";
+  hideBackBar?: boolean;
 }
 
 export function EntityDetail({
-  kind, id, onBack, onSelectEntity,
+  kind, id, onBack, onExit, onSelectEntity, onHoverEntity, onLeaveEntity,
   mapFilterType, mapFilterId, setMapFilter, clearMapFilter, currentDecade = 0,
+  currentPage = "map",
+  hideBackBar = false,
 }: EntityDetailProps) {
   const [activeTab, setActiveTab] = useState<EntityDetailTab>("info");
 
@@ -146,16 +154,21 @@ export function EntityDetail({
   return (
     <div className="detail-panel">
       {/* Back bar */}
-      <div className="detail-back-bar">
-        <button type="button" className="back-btn" onClick={onBack}>← Back</button>
-        <span className="detail-crumb">{kindLabel(kind)}</span>
-      </div>
+      {!hideBackBar && (
+        <div className="detail-back-bar">
+          <button type="button" className="back-btn" onClick={onBack}>← Back</button>
+          <span className="detail-crumb">{kindLabel(kind)}</span>
+          {onExit && <button type="button" className="close-btn detail-exit-btn" onClick={onExit} title="Exit to list">✕</button>}
+        </div>
+      )}
 
       {/* Header */}
       <div className="detail-header">
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <CrossPageNav kind={kind} id={id} current="map" />
-        </div>
+        {!hideBackBar && (
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <CrossPageNav kind={kind} id={id} current={currentPage} />
+          </div>
+        )}
         <EntityHeader kind={kind} id={id} />
 
         {/* Place: presence status + group chips */}
@@ -204,17 +217,17 @@ export function EntityDetail({
           <InfoTab kind={kind} id={id} editorNotes={editorNotes} onSelectEntity={onSelectEntity} />
         )}
         {activeTab === "timeline" && kind === "place" && (
-          <PlaceTimelineTab placeStates={placeStates} placeId={id} activeDecade={activeDecade} onSelectEntity={onSelectEntity} />
+          <PlaceTimelineTab placeStates={placeStates} placeId={id} activeDecade={activeDecade} onSelectEntity={onSelectEntity} onHoverEntity={onHoverEntity} onLeaveEntity={onLeaveEntity} />
         )}
         {activeTab === "timeline" && kind !== "place" && (
-          <EntityTimelineTab claims={datedClaims} entityKind={kind} entityId={id} onSelectEntity={onSelectEntity} />
+          <EntityTimelineTab claims={datedClaims} entityKind={kind} entityId={id} onSelectEntity={onSelectEntity} onHoverEntity={onHoverEntity} onLeaveEntity={onLeaveEntity} />
         )}
-        {activeTab === "people"       && <RelationTab entities={connectedByType["person"]      ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} />}
-        {activeTab === "groups"       && <RelationTab entities={connectedByType["group"]       ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} />}
-        {activeTab === "works"        && <RelationTab entities={connectedByType["work"]        ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} />}
-        {activeTab === "events"       && <RelationTab entities={connectedByType["event"]       ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} />}
-        {activeTab === "propositions" && <RelationTab entities={connectedByType["proposition"] ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} />}
-        {activeTab === "topics"       && <RelationTab entities={connectedByType["topic"]       ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} />}
+        {activeTab === "people"       && <RelationTab entities={connectedByType["person"]      ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} onHoverEntity={onHoverEntity} onLeaveEntity={onLeaveEntity} />}
+        {activeTab === "groups"       && <RelationTab entities={connectedByType["group"]       ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} onHoverEntity={onHoverEntity} onLeaveEntity={onLeaveEntity} />}
+        {activeTab === "works"        && <RelationTab entities={connectedByType["work"]        ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} onHoverEntity={onHoverEntity} onLeaveEntity={onLeaveEntity} />}
+        {activeTab === "events"       && <RelationTab entities={connectedByType["event"]       ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} onHoverEntity={onHoverEntity} onLeaveEntity={onLeaveEntity} />}
+        {activeTab === "propositions" && <RelationTab entities={connectedByType["proposition"] ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} onHoverEntity={onHoverEntity} onLeaveEntity={onLeaveEntity} />}
+        {activeTab === "topics"       && <RelationTab entities={connectedByType["topic"]       ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} onHoverEntity={onHoverEntity} onLeaveEntity={onLeaveEntity} />}
         {activeTab === "places"       && <PlacesTab footprints={footprints} onSelectEntity={onSelectEntity} />}
         {activeTab === "notes"        && <NotesTab notes={editorNotes} onSelectEntity={onSelectEntity} />}
         {activeTab === "mentions"     && <MentionsTab kind={kind} id={id} onSelectEntity={onSelectEntity} />}
@@ -268,9 +281,35 @@ function InfoTab({ kind, id, editorNotes, onSelectEntity }: {
   onSelectEntity: (kind: string, id: string) => void;
 }) {
   const searchQuery = useAppStore((s) => s.searchQuery).trim();
+  const data = getEntityHeaderData(kind, id);
   return (
     <div className="flex-col-12">
-      <EntityHeader kind={kind} id={id} showAllFields onSelectEntity={onSelectEntity} />
+      {data.rows.length > 0 && (
+        <div className="fact-grid">
+          {data.rows.map(({ label, value, linkKind, linkId }) => (
+            <React.Fragment key={label}>
+              <span className="fact-label">{label}</span>
+              <span className="fact-value">
+                {linkKind && linkId ? (
+                  <button type="button" className="mention-link" onClick={() => onSelectEntity(linkKind, linkId)}>
+                    {value}
+                  </button>
+                ) : value}
+              </span>
+            </React.Fragment>
+          ))}
+        </div>
+      )}
+      {data.notes && (
+        <p className="entity-desc">
+          <MarkdownRenderer onSelectEntity={onSelectEntity}>{data.notes}</MarkdownRenderer>
+        </p>
+      )}
+      {data.url && (
+        <a href={data.url} target="_blank" rel="noopener noreferrer" className="citation-link">
+          Read online →
+        </a>
+      )}
       {editorNotes.length > 0 && (
         <div className="flex-col-8">
           <div className="detail-section-title">Editor Notes</div>
@@ -285,11 +324,13 @@ function InfoTab({ kind, id, editorNotes, onSelectEntity }: {
 
 // ─── Place timeline tab (decade-by-decade) ────────────────────────────────────
 
-function PlaceTimelineTab({ placeStates, placeId, activeDecade, onSelectEntity }: {
+function PlaceTimelineTab({ placeStates, placeId, activeDecade, onSelectEntity, onHoverEntity, onLeaveEntity }: {
   placeStates: PlaceStateByDecade[];
   placeId: string;
   activeDecade: number;
   onSelectEntity: (kind: string, id: string) => void;
+  onHoverEntity?: (kind: string, id: string) => void;
+  onLeaveEntity?: () => void;
 }) {
   const activeRowRef = useRef<HTMLDivElement | null>(null);
 
@@ -365,61 +406,111 @@ function PlaceTimelineTab({ placeStates, placeId, activeDecade, onSelectEntity }
   );
 }
 
-// ─── Entity timeline tab (dated claims) ───────────────────────────────────────
+// ─── Entity timeline tab (decade-grouped dated claims) ────────────────────────
 
-function EntityTimelineTab({ claims, entityKind, entityId, onSelectEntity }: {
+function EntityTimelineTab({ claims, entityKind, entityId, onSelectEntity, onHoverEntity, onLeaveEntity }: {
   claims: Claim[];
   entityKind: string;
   entityId: string;
   onSelectEntity: (kind: string, id: string) => void;
+  onHoverEntity?: (kind: string, id: string) => void;
+  onLeaveEntity?: () => void;
 }) {
-  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(claims, PAGE_SIZE);
-  if (claims.length === 0) return <div className="empty-state">No dated claims.</div>;
+  const activeDecade = useAppStore((s) => s.activeDecade);
+  const activeRowRef = useRef<HTMLDivElement | null>(null);
+
+  const byDecade = useMemo(() => {
+    const map = new Map<number, Claim[]>();
+    for (const c of claims) {
+      if (c.year_start == null) continue;
+      const decade = Math.floor(c.year_start / 10) * 10;
+      const arr = map.get(decade) ?? [];
+      arr.push(c);
+      map.set(decade, arr);
+    }
+    return Array.from(map.entries()).sort(([a], [b]) => a - b);
+  }, [claims]);
+
+  useEffect(() => {
+    activeRowRef.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }, [activeDecade]);
+
+  if (byDecade.length === 0) return <div className="empty-state">No dated claims.</div>;
+
   return (
-    <div className="flex-col">
-      {pageItems.map((c) => {
-        const isSubject = c.subject_type === entityKind && c.subject_id === entityId;
-        const othKind   = isSubject ? c.object_type : c.subject_type;
-        const othId     = isSubject ? c.object_id   : c.subject_id;
-        const predLabel = getPredicateLabel(c.predicate_id, isSubject);
-        const othLabel  = othId ? getEntityLabel(othKind, othId) : (c.value_text || c.value_year?.toString() || "—");
-        const yearStr = `AD ${c.year_start}${c.year_end && c.year_end !== c.year_start ? `–${c.year_end}` : ""}`;
+    <div className="tl-v-list">
+      {byDecade.map(([decade, dClaims], idx) => {
+        const isActive = decade === activeDecade;
+        const isLast   = idx === byDecade.length - 1;
+        const decadeLabel = decade < 0 ? `${Math.abs(decade)}s BC` : `AD ${decade}s`;
         return (
-          <div key={c.claim_id} className="tl-v-row">
-            <div className="tl-v-gutter">
-              <span className="tl-v-dot" style={{ borderColor: "var(--border)", background: "var(--surface-2)" }} />
+          <div key={decade} ref={isActive ? activeRowRef : null}
+            className={`tl-v-row${isActive ? " tl-v-row--active" : ""}`}
+          >
+            <div className={`tl-v-gutter${isLast ? " tl-v-gutter--last" : ""}`}>
+              <span
+                className={`tl-v-dot${isActive ? " tl-v-dot--active" : ""}`}
+                style={{
+                  borderColor: isActive ? "var(--accent)" : "var(--border)",
+                  background:  isActive ? "var(--accent)" : "var(--surface-2)",
+                  boxShadow:   isActive ? "0 0 0 4px var(--accent-dim)" : undefined,
+                }}
+              />
             </div>
             <div className="tl-v-content">
-              <div className="tl-v-year">{yearStr}</div>
-              <div className="tl-v-status">
-                <span className="faint">{predLabel}</span>{" "}
-                {othId ? (
-                  <button type="button" className="mention-link" onClick={() => onSelectEntity(othKind, othId)}>
-                    {kindIcon(othKind)} {othLabel}
-                  </button>
-                ) : othLabel}
+              <div className="tl-v-decade-hdr">
+                {isActive ? `▶ ${decadeLabel}` : decadeLabel}
+                {dClaims.length > 1 && <span className="tl-v-decade-count">{dClaims.length}</span>}
               </div>
-              {c.certainty && c.certainty !== "attested" && (
-                <span className="rel-certainty" style={{ color: CERTAINTY_COLORS[c.certainty] ?? "var(--text-faint)" }}>
-                  {c.certainty}
-                </span>
-              )}
+              <div className="tl-v-claims">
+                {dClaims.map((c) => {
+                  const isSubject = c.subject_type === entityKind && c.subject_id === entityId;
+                  const othKind   = isSubject ? c.object_type  : c.subject_type;
+                  const othId     = isSubject ? c.object_id    : c.subject_id;
+                  const predLabel = getPredicateLabel(c.predicate_id, isSubject);
+                  const othLabel  = othId ? getEntityLabel(othKind, othId) : (c.value_text || c.value_year?.toString() || "—");
+                  const yrStart   = c.year_start ?? 0;
+                  const yearBadge = c.year_end && c.year_end !== c.year_start
+                    ? `${yrStart < 0 ? Math.abs(yrStart) + " BC" : yrStart}–${c.year_end < 0 ? Math.abs(c.year_end) + " BC" : c.year_end}`
+                    : `${yrStart < 0 ? Math.abs(yrStart) + " BC" : yrStart}`;
+                  return (
+                    <div key={c.claim_id} className="tl-v-claim-row"
+                      onMouseEnter={() => othId && onHoverEntity?.(othKind, othId)}
+                      onMouseLeave={() => onLeaveEntity?.()}
+                    >
+                      <span className="tl-v-year-badge">{yearBadge}</span>
+                      <span className="tl-v-pred">{predLabel}</span>
+                      {othId ? (
+                        <button type="button" className="mention-link" onClick={() => onSelectEntity(othKind, othId)}>
+                          {kindIcon(othKind)} {othLabel}
+                        </button>
+                      ) : <span className="faint">{othLabel}</span>}
+                      {c.certainty && c.certainty !== "attested" && (
+                        <span className="rel-certainty" style={{ color: CERTAINTY_COLORS[c.certainty] ?? "var(--text-faint)" }}>
+                          {c.certainty}
+                        </span>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         );
       })}
-      <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
     </div>
   );
 }
 
 // ─── Relation tab (people / groups / works / events / propositions / topics) ──
 
-function RelationTab({ entities, focusKind, focusId, onSelectEntity }: {
+function RelationTab({ entities, focusKind, focusId, onSelectEntity, onHoverEntity, onLeaveEntity }: {
   entities: ConnectedEntity[];
   focusKind: string;
   focusId: string;
   onSelectEntity: (kind: string, id: string) => void;
+  onHoverEntity?: (kind: string, id: string) => void;
+  onLeaveEntity?: () => void;
 }) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const { page, setPage, pageItems, total, pageSize } = usePaginatedList(entities, PAGE_SIZE);
@@ -441,7 +532,10 @@ function RelationTab({ entities, focusKind, focusId, onSelectEntity }: {
         const hasCertainty = eClaims.some((c) => c.certainty && c.certainty !== "attested");
 
         return (
-          <div key={id} className="conn-card conn-card--col">
+          <div key={id} className="conn-card conn-card--col"
+            onMouseEnter={() => onHoverEntity?.(kind, id)}
+            onMouseLeave={() => onLeaveEntity?.()}
+          >
             <div className="conn-card-row" onClick={() => onSelectEntity(kind, id)}>
               <span className="conn-icon">{kindIcon(kind)}</span>
               <div className="conn-card-body">
@@ -467,38 +561,9 @@ function RelationTab({ entities, focusKind, focusId, onSelectEntity }: {
 
             {isOpen && evidence.length > 0 && (
               <div className="rel-card-evidence">
-                {evidence.map((ev) => {
-                  const passage = dataStore.passages.getById(ev.passage_id);
-                  const source  = passage ? dataStore.sources.getById(passage.source_id) : null;
-                  const url     = getSourceExternalUrl(source);
-                  return (
-                    <div key={`${ev.claim_id}-${ev.passage_id}`} className="evidence-item">
-                      <div className="evidence-item-meta">
-                        <span className="faint">{ev.evidence_role}</span>
-                        {ev.evidence_weight != null && (
-                          <span className="faint" title="Evidence weight">⚖ {ev.evidence_weight}</span>
-                        )}
-                      </div>
-                      {passage && <PassageReference passage={passage} source={source} />}
-                      {(ev.excerpt_override || passage?.excerpt) && (
-                        <div className="evidence-excerpt">{ev.excerpt_override || passage?.excerpt}</div>
-                      )}
-                      {ev.notes && <div className="evidence-note faint">{ev.notes}</div>}
-                      {source && url && (
-                        <a href={url} target="_blank" rel="noopener noreferrer"
-                          className="citation-link evidence-source" title={getSourceAccessTitle(source)}>
-                          {source.title}
-                        </a>
-                      )}
-                      {source?.work_id && (
-                        <button type="button" className="mention-link"
-                          onClick={() => onSelectEntity("work", source.work_id)}>
-                          Open work
-                        </button>
-                      )}
-                    </div>
-                  );
-                })}
+                {evidence.map((ev) => (
+                  <EvidenceCard key={`${ev.claim_id}-${ev.passage_id}`} ev={ev} onSelectEntity={onSelectEntity} />
+                ))}
               </div>
             )}
           </div>

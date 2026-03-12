@@ -22,7 +22,7 @@ SOURCE_HEADERS: Dict[str, List[str]] = {
     "predicate_types.tsv": ["predicate_id", "predicate_label", "subject_type", "object_mode", "object_type", "inverse_label", "is_symmetric", "canonical_sort_rule", "allows_date_range", "allows_context_place", "description"],
     "sources.tsv": ["source_id", "work_id", "source_kind", "title", "author", "editor", "year", "container_title", "publisher", "url", "accessed_on", "isbn_issn", "notes"],
     "passages.tsv": ["passage_id", "source_id", "locator_type", "locator", "excerpt", "language", "passage_year", "url_override", "notes"],
-    "claims.tsv": ["claim_id", "subject_type", "subject_id", "predicate_id", "object_mode", "object_type", "object_id", "value_text", "value_number", "value_year", "value_boolean", "year_start", "year_end", "context_place_id", "certainty", "polarity", "claim_status", "created_by", "updated_at"],
+    "claims.tsv": ["claim_id", "subject_type", "subject_id", "predicate_id", "object_mode", "object_type", "object_id", "value_text", "value_number", "value_year", "value_boolean", "year_start", "year_end", "context_place_id", "certainty", "claim_status", "created_by", "updated_at"],
     "claim_evidence.tsv": ["claim_id", "passage_id", "evidence_role", "excerpt_override", "evidence_weight", "notes"],
     "claim_reviews.tsv": ["claim_id", "reviewer_id", "review_status", "reviewed_at", "confidence", "note"],
     "editor_notes.tsv": ["editor_note_id", "note_kind", "entity_type", "entity_id", "claim_id", "body_md", "created_by", "created_at"],
@@ -55,7 +55,7 @@ MENTION_TARGET_TYPES = ENTITY_TYPES | {"bible"}
 MENTION_SOURCE_TYPES = {"table_field", "markdown_file"}
 OBJECT_MODES = {"entity", "text", "number", "year", "boolean"}
 CERTAINTY = {"attested", "probable", "possible", "claimed_tradition", "legendary", "unknown"}
-POLARITY = {"supports", "opposes", "neutral", "mixed", "not_applicable"}
+
 CLAIM_STATUS = {"active", "deprecated", "superseded", "rejected", "draft"}
 EVIDENCE_ROLE = {"supports", "opposes", "contextualizes", "mentions"}
 REVIEW_STATUS = {"unreviewed", "reviewed", "approved", "disputed", "needs_revision"}
@@ -751,8 +751,6 @@ class Validator:
                 self.error(f"claims.tsv:{idx} object_mode {row['object_mode']} does not match predicate.object_mode {predicate['object_mode']}")
             if row["certainty"] not in CERTAINTY:
                 self.error(f"claims.tsv:{idx} invalid certainty={row['certainty']}")
-            if row["polarity"] not in POLARITY:
-                self.error(f"claims.tsv:{idx} invalid polarity={row['polarity']}")
             if row["claim_status"] not in CLAIM_STATUS:
                 self.error(f"claims.tsv:{idx} invalid claim_status={row['claim_status']}")
 
@@ -805,7 +803,6 @@ class Validator:
                 row.get("year_start", ""),
                 row.get("year_end", ""),
                 row.get("context_place_id", ""),
-                row["polarity"],
                 row["claim_status"],
             )
             if row["claim_status"] == "active":
@@ -817,10 +814,12 @@ class Validator:
         self.validate_author_work_affirmation_redundancy()
         self.validate_duplicate_claims()
         self.validate_bishop_location_redundancy()
+        self.validate_authored_place_redundancy()
+        self.validate_participant_place_redundancy()
         self.validate_evidence_role_semantics()
 
     def validate_change_based_group_claims(self) -> None:
-        grouped: Dict[Tuple[str, str, str, str, str, str], List[Tuple[Optional[int], Optional[int], str]]] = defaultdict(list)
+        grouped: Dict[Tuple[str, str, str, str, str], List[Tuple[Optional[int], Optional[int], str]]] = defaultdict(list)
         for row in self.tables.get("claims.tsv", []):
             if row.get("claim_status") != "active":
                 continue
@@ -834,7 +833,6 @@ class Validator:
                 row["subject_id"],
                 row["object_type"],
                 row["object_id"],
-                row["polarity"],
             )
             grouped[key].append((parse_int(row.get("year_start")), parse_int(row.get("year_end")), row["claim_id"]))
         for key, spans in grouped.items():
@@ -889,6 +887,16 @@ class Validator:
             if row.get("claim_id") and row.get("passage_id"):
                 claim_passages[row["claim_id"]].add(row["passage_id"])
 
+        # Build person_id -> set of work_ids they authored (from authored_by claims)
+        person_authored_works: Dict[str, set[str]] = defaultdict(set)
+        for row in self.tables.get("claims.tsv", []):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") == "authored_by" \
+                    and row.get("object_mode") == "entity" \
+                    and row.get("object_type") == "person":
+                person_authored_works[row["object_id"]].add(row["subject_id"])
+
         # Validate each person_affirms_proposition claim
         for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
             if row.get("claim_status") != "active":
@@ -898,8 +906,14 @@ class Validator:
             if row.get("object_mode") != "entity" or row.get("object_type") != "proposition":
                 continue
 
+            # Opposing claims are never redundant: they represent a different
+            # theological position from the work that affirms the prop.
+            if row.get("polarity") == "opposes":
+                continue
+
             prop_id = row["object_id"]
             claim_id = row["claim_id"]
+            subject_id = row["subject_id"]
             passages = claim_passages.get(claim_id, set())
             if not passages:
                 continue  # no passage evidence — handled by evidence_role check
@@ -909,14 +923,21 @@ class Validator:
             if not evidence_works:
                 continue  # all passages are Bible / un-work-linked; legitimate person claim
 
-            # If EVERY evidence work already carries work_affirms_proposition for this prop
-            # the person claim adds nothing — it is redundant
+            # Only fire when all evidence works are works authored by the subject person.
+            # If the evidence comes from a third-party witness (e.g. Irenaeus reporting
+            # Cerinthus), the evidence works are NOT the person's own, so no redundancy.
+            person_works = person_authored_works.get(subject_id, set())
+            if not evidence_works.issubset(person_works):
+                continue  # some evidence is from a different author — legitimate claim
+
+            # If EVERY evidence work is authored by the subject AND already carries
+            # work_affirms_proposition for this prop, the person claim is redundant.
             redundant = [w for w in evidence_works if prop_id in work_affirmed.get(w, set())]
             if len(redundant) == len(evidence_works):
                 self.error(
                     f"claims.tsv:{idx} redundant person_affirms_proposition: "
-                    f"person={row['subject_id']} prop={prop_id} is already affirmed by "
-                    f"work(s)={redundant} through their evidence passages. "
+                    f"person={subject_id} prop={prop_id} is already affirmed by "
+                    f"own work(s)={redundant} through their evidence passages. "
                     f"Remove the person claim; the work claim suffices (claim_id={claim_id})"
                 )
 
@@ -943,7 +964,6 @@ class Validator:
                 row["predicate_id"],
                 row["object_mode"],
                 normalized_object,
-                row.get("polarity", ""),
             )
             
             semantic_groups[semantic_key].append((idx, row))
@@ -1002,18 +1022,14 @@ class Validator:
                             )
 
     def validate_bishop_location_redundancy(self) -> None:
-        """Warn when bishop_of implies active_in for same person-place pair."""
-        # Build person -> places index from bishop_of
+        """Error when bishop_of implies active_in for same person-place pair."""
         bishop_places: Dict[str, set[str]] = defaultdict(set)
         for row in self.tables.get("claims.tsv", []):
             if row.get("claim_status") != "active":
                 continue
             if row.get("predicate_id") == "bishop_of" and row.get("object_mode") == "entity" and row.get("object_type") == "place":
-                person_id = row["subject_id"]
-                place_id = row["object_id"]
-                bishop_places[person_id].add(place_id)
-        
-        # Check active_in claims
+                bishop_places[row["subject_id"]].add(row["object_id"])
+
         for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
             if row.get("claim_status") != "active":
                 continue
@@ -1021,15 +1037,72 @@ class Validator:
                 continue
             if row.get("object_mode") != "entity" or row.get("object_type") != "place":
                 continue
-            
-            person_id = row["subject_id"]
-            place_id = row["object_id"]
-            
-            if place_id in bishop_places.get(person_id, set()):
+            if row["object_id"] in bishop_places.get(row["subject_id"], set()):
+                self.error(
+                    f"claims.tsv:{idx} redundant active_in: "
+                    f"person={row['subject_id']} is already bishop_of place={row['object_id']}. "
+                    f"Remove active_in claim (claim_id={row['claim_id']})"
+                )
+
+    def validate_authored_place_redundancy(self) -> None:
+        """Warn when active_in duplicates a derivable authored_by + written_at chain."""
+        person_authored_places: Dict[str, set[str]] = defaultdict(set)
+        written_at: Dict[str, set[str]] = defaultdict(set)
+        authored_by: Dict[str, set[str]] = defaultdict(set)
+        for row in self.tables.get("claims.tsv", []):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") == "written_at" and row.get("object_mode") == "entity" and row.get("object_type") == "place":
+                written_at[row["subject_id"]].add(row["object_id"])
+            if row.get("predicate_id") == "authored_by" and row.get("object_mode") == "entity" and row.get("object_type") == "person":
+                authored_by[row["subject_id"]].add(row["object_id"])
+        for work_id, places in written_at.items():
+            for person_id in authored_by.get(work_id, set()):
+                person_authored_places[person_id].update(places)
+
+        for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") != "active_in":
+                continue
+            if row.get("object_mode") != "entity" or row.get("object_type") != "place":
+                continue
+            if row["object_id"] in person_authored_places.get(row["subject_id"], set()):
                 self.warn(
-                    f"claims.tsv:{idx} redundant active_in claim: "
-                    f"person={person_id} is already bishop_of place={place_id}, which implies active_in. "
-                    f"Consider removing this claim (claim_id={row['claim_id']})"
+                    f"claims.tsv:{idx} potentially redundant active_in: "
+                    f"person={row['subject_id']} place={row['object_id']} is derivable from authored_by + written_at. "
+                    f"Consider removing (claim_id={row['claim_id']})"
+                )
+
+    def validate_participant_place_redundancy(self) -> None:
+        """Warn when active_in duplicates participant_in + event_occurs_at for same person-place-time."""
+        event_places: Dict[str, set[str]] = defaultdict(set)
+        for row in self.tables.get("claims.tsv", []):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") == "event_occurs_at" and row.get("object_mode") == "entity" and row.get("object_type") == "place":
+                event_places[row["subject_id"]].add(row["object_id"])
+
+        person_event_places: Dict[str, set[str]] = defaultdict(set)
+        for row in self.tables.get("claims.tsv", []):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") == "participant_in" and row.get("object_mode") == "entity" and row.get("object_type") == "event":
+                for place_id in event_places.get(row["object_id"], set()):
+                    person_event_places[row["subject_id"]].add(place_id)
+
+        for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") != "active_in":
+                continue
+            if row.get("object_mode") != "entity" or row.get("object_type") != "place":
+                continue
+            if row["object_id"] in person_event_places.get(row["subject_id"], set()):
+                self.warn(
+                    f"claims.tsv:{idx} potentially redundant active_in: "
+                    f"person={row['subject_id']} place={row['object_id']} is derivable from participant_in + event_occurs_at. "
+                    f"Consider removing (claim_id={row['claim_id']})"
                 )
 
     def validate_evidence_role_semantics(self) -> None:

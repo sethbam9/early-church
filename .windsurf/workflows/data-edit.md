@@ -185,10 +185,11 @@ Avoid mixing schema migration, row additions, and unrelated copy edits in one co
 ### Add doctrinal evidence
 
 1. Create or reuse a proposition in `data/sheets/propositions.tsv`
-2. Add a claim such as `work_affirms_proposition`, `person_opposes_proposition`, etc.
-3. Add supporting passage rows in `data/sheets/passages.tsv` if needed
-4. Link them in `data/sheets/claim_evidence.tsv`
-5. Run validation
+2. Prefer `work_affirms_proposition` or `work_opposes_proposition` — the predicate name carries the doctrinal direction
+3. Only use `person_affirms_proposition` / `person_opposes_proposition` when evidence comes from a **third-party source** (e.g. Eusebius reporting someone's beliefs), NOT from the person's own authored works
+4. Add supporting passage rows in `data/sheets/passages.tsv` if needed
+5. Link them in `data/sheets/claim_evidence.tsv`
+6. Run validation
 
 ### Add an editorial note or article mention
 
@@ -223,6 +224,9 @@ Every Windsurf agent or scripted assistant should follow these constraints:
 5. Never leave unresolved `[[type:id]]` references behind.
 6. Never manually reorder tables; let validation rewrite canonical order.
 7. Never edit derived tables directly.
+8. Never store `person_affirms/opposes_proposition` when the person's own authored works already carry the equivalent `work_affirms/opposes_proposition` — the work claim covers it.
+9. Never store `active_in` when `bishop_of` already covers the same person-place — bishop implies active.
+10. Prefer letting `authored_by` + `written_at` and `participant_in` + `event_occurs_at` derive person-place presence instead of adding redundant `active_in` claims.
 
 ---
 

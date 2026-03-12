@@ -63,11 +63,6 @@ export const CERTAINTY_COLORS: Record<string, string> = {
   uncertain: "#c0392b",
 };
 
-export const POLARITY_META: Record<string, { icon: string; cls: string }> = {
-  supports:       { icon: "✓", cls: "rel-polarity--supports" },
-  opposes:        { icon: "✗", cls: "rel-polarity--opposes"  },
-  not_applicable: { icon: "~", cls: "rel-polarity--neutral"  },
-};
 
 export const STANCE_COLORS: Record<string, string> = {
   affirms: "#1a7a5c",

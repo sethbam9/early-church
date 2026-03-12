@@ -91,6 +91,7 @@ export function RightSidebar({ onFlyToPlace, currentDecade }: RightSidebarProps)
           kind={selection.kind}
           id={selection.id}
           onBack={handleBack}
+          onExit={() => { setSelection(null); }}
           onSelectEntity={handleEntitySelect}
           mapFilterType={mapFilterType}
           mapFilterId={mapFilterId}

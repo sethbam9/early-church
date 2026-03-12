@@ -1,4 +1,5 @@
 import React from "react";
+import { EntityHoverWrap } from "./EntityHoverCard";
 
 interface Props {
   children: string;
@@ -126,15 +127,15 @@ function renderInline(
     if (withLabel) {
       const [, kind, id, label] = withLabel;
       nodes.push(
-        <button
-          key={`${baseKey}-m-${i}`}
-          type="button"
-          className="mention-link"
-          onClick={() => onSelectEntity?.(kind || '', id || '')}
-          title={`View ${kind || ''}: ${label || ''}`}
-        >
-          {searchQuery ? highlightText(label || '', searchQuery, `${baseKey}-m-${i}`) : label}
-        </button>
+        <EntityHoverWrap key={`${baseKey}-m-${i}`} kind={kind || ''} id={id || ''}>
+          <button
+            type="button"
+            className="mention-link"
+            onClick={() => onSelectEntity?.(kind || '', id || '')}
+          >
+            {searchQuery ? highlightText(label || '', searchQuery, `${baseKey}-m-${i}`) : label}
+          </button>
+        </EntityHoverWrap>
       );
       return;
     }
@@ -145,15 +146,15 @@ function renderInline(
       if (!kind || !id) return;
       const label = id.replace(/-/g, " ");
       nodes.push(
-        <button
-          key={`${baseKey}-m-${i}`}
-          type="button"
-          className="mention-link"
-          onClick={() => onSelectEntity?.(kind, id)}
-          title={`View ${kind || ''}`}
-        >
-          {searchQuery ? highlightText(label, searchQuery, `${baseKey}-m-${i}`) : label}
-        </button>
+        <EntityHoverWrap key={`${baseKey}-m-${i}`} kind={kind} id={id}>
+          <button
+            type="button"
+            className="mention-link"
+            onClick={() => onSelectEntity?.(kind, id)}
+          >
+            {searchQuery ? highlightText(label, searchQuery, `${baseKey}-m-${i}`) : label}
+          </button>
+        </EntityHoverWrap>
       );
       return;
     }

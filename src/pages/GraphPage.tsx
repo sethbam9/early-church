@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { dataStore, getEntityLabel } from "../data/dataStore";
 import type { Selection } from "../data/dataStore";
 import { type GraphNode, type GraphEdge, runForceSync, spreadNeighbors } from "../utils/forceLayout";
+import { findShortestPath, type PathResult } from "../utils/pathFinder";
 import { KIND_ICONS, KIND_COLORS, kindIcon, kindLabel } from "../components/shared/entityConstants";
 import { CrossPageNav } from "../components/shared/CrossPageNav";
 import { EntityDetail } from "../components/sidebar/EntityDetail";
@@ -16,23 +17,27 @@ function buildGraph(filters: string[]) {
   const edges: GraphEdge[] = [];
   const connCounts = new Map<string, number>();
 
+  let nodeIndex = 0;
   function addNode(kind: string, id: string) {
     const key = `${kind}:${id}`;
     if (!nodeMap.has(key)) {
+      const angle = (nodeIndex * 2.399963) + Math.random() * 0.3;
+      const radius = 30 + Math.sqrt(nodeIndex) * 22;
       nodeMap.set(key, {
         id: key, kind, label: getEntityLabel(kind, id),
-        x: (Math.random() - 0.5) * 600,
-        y: (Math.random() - 0.5) * 400,
+        x: Math.cos(angle) * radius,
+        y: Math.sin(angle) * radius,
         vx: 0, vy: 0, r: 12, connections: 0,
       });
+      nodeIndex++;
     }
   }
 
-  function addEdge(source: string, target: string, label: string, weight: number, relationId?: string) {
+  function addEdge(source: string, target: string, label: string, weight: number, predicate?: string, relationId?: string) {
     const key = `${source}→${target}→${label}`;
     if (edgeSet.has(key)) return;
     edgeSet.add(key);
-    edges.push({ source, target, label, weight, relationId });
+    edges.push({ source, target, label, predicate, weight, relationId });
     connCounts.set(source, (connCounts.get(source) ?? 0) + 1);
     connCounts.set(target, (connCounts.get(target) ?? 0) + 1);
   }
@@ -54,6 +59,7 @@ function buildGraph(filters: string[]) {
       `${tgtKind}:${c.object_id}`,
       c.predicate_id.replace(/_/g, " "),
       2,
+      c.predicate_id,
       c.claim_id,
     );
   }
@@ -71,7 +77,6 @@ function buildGraph(filters: string[]) {
 // ─── Filter options ───────────────────────────────────────────────────────────
 
 const FILTER_OPTIONS = [
-  { value: "all",         label: "All" },
   { value: "person",      label: "👤 People" },
   { value: "work",        label: "📜 Works" },
   { value: "proposition", label: "📝 Propositions" },
@@ -79,6 +84,71 @@ const FILTER_OPTIONS = [
   { value: "place",       label: "🏛 Places" },
   { value: "group",       label: "✦ Groups" },
 ];
+
+// ─── Path Picker Input (autocomplete for path finder) ─────────────────────────
+
+function PathPickerInput({ placeholder, query, setQuery, selectedId, onSelect, onClear, nodes }: {
+  placeholder: string;
+  query: string;
+  setQuery: (q: string) => void;
+  selectedId: string | null;
+  onSelect: (id: string, label: string) => void;
+  onClear: () => void;
+  nodes: GraphNode[];
+}) {
+  const [open, setOpen] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [showAbove, setShowAbove] = useState(false);
+
+  const suggestions = useMemo(() => {
+    if (selectedId) return [];
+    const q = query.trim().toLowerCase();
+    if (q.length < 1) return [];
+    return nodes
+      .filter((n) => n.label.toLowerCase().includes(q) || n.kind.toLowerCase().includes(q))
+      .sort((a, b) => b.connections - a.connections)
+      .slice(0, 8);
+  }, [query, nodes, selectedId]);
+
+  const handleOpen = () => {
+    setOpen(true);
+    if (inputRef.current) {
+      const rect = inputRef.current.getBoundingClientRect();
+      setShowAbove(rect.top > window.innerHeight / 2);
+    }
+  };
+
+  return (
+    <div style={{ position: "relative" }}>
+      <input
+        ref={inputRef}
+        type="text"
+        className="wiki-audit-input"
+        placeholder={placeholder}
+        value={query}
+        onChange={(e) => {
+          setQuery(e.target.value);
+          if (selectedId) onClear();
+          handleOpen();
+        }}
+        onFocus={handleOpen}
+        onBlur={() => setTimeout(() => setOpen(false), 180)}
+        style={{ width: "100%", fontSize: "0.76rem" }}
+      />
+      {open && suggestions.length > 0 && (
+        <div className="graph-search-dropdown" style={showAbove ? { bottom: "100%", top: "auto", marginBottom: 4 } : undefined}>
+          {suggestions.map((n) => (
+            <button key={n.id} type="button" className="graph-search-suggestion"
+              onMouseDown={() => { onSelect(n.id, n.label); setOpen(false); }}>
+              <span className="graph-node-badge" style={{ background: KIND_COLORS[n.kind] ?? "#666" }} />
+              <span style={{ flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{n.label}</span>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 // ─── GraphPage ────────────────────────────────────────────────────────────────
 
@@ -96,11 +166,20 @@ export function GraphPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
+  const [selectionHistory, setSelectionHistory] = useState<string[]>([]);
   const [hoveredNodeKey, setHoveredNodeKey] = useState<string | null>(null);
   const [highlightedNodeKey, setHighlightedNodeKey] = useState<string | null>(null);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1.0);
   const [, forceRender] = useState(0);
+
+  // Path finder state
+  const [pathStartQuery, setPathStartQuery] = useState("");
+  const [pathEndQuery, setPathEndQuery] = useState("");
+  const [pathStartId, setPathStartId] = useState<string | null>(null);
+  const [pathEndId, setPathEndId] = useState<string | null>(null);
+  const [pathResult, setPathResult] = useState<PathResult | null>(null);
+  const [pathNodeIds, setPathNodeIds] = useState<Set<string>>(new Set());
 
   // Auto-zoom to show a node and all its connections
   const zoomToNodeConnections = useCallback((nodeId: string) => {
@@ -166,9 +245,31 @@ export function GraphPage() {
     setSelectedKey(null);
     setHoveredNodeKey(null);
     setHighlightedNodeKey(null);
-    setPan({ x: 0, y: 0 });
-    setZoom(1.0);
-    zoomRef.current = 1.0;
+
+    // Auto-center: compute bounding box and fit all nodes
+    if (nodes.length > 0) {
+      let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+      for (const n of nodes) {
+        minX = Math.min(minX, n.x - n.r);
+        maxX = Math.max(maxX, n.x + n.r);
+        minY = Math.min(minY, n.y - n.r);
+        maxY = Math.max(maxY, n.y + n.r);
+      }
+      const padding = 60;
+      const bboxW = maxX - minX + padding * 2;
+      const bboxH = maxY - minY + padding * 2;
+      const newZoom = Math.max(0.15, Math.min(2, Math.min(width / bboxW, height / bboxH)));
+      const cx = (minX + maxX) / 2;
+      const cy = (minY + maxY) / 2;
+      zoomRef.current = newZoom;
+      setZoom(newZoom);
+      setPan({ x: width / 2 - cx * newZoom, y: height / 2 - cy * newZoom });
+    } else {
+      setPan({ x: 0, y: 0 });
+      setZoom(1.0);
+      zoomRef.current = 1.0;
+    }
+
     lastHandledParam.current = ""; // Reset so deep-link can re-process
     forceRender((n) => n + 1);
   }, [filters]);
@@ -363,7 +464,8 @@ export function GraphPage() {
     if (between.length === 0) return null;
     return between.map((e) => {
       const claim = e.relationId ? dataStore.claims.getById(e.relationId) : null;
-      return { label: e.label, certainty: claim?.certainty ?? "", yearStart: claim?.year_start, yearEnd: claim?.year_end };
+      const isOpposes = e.predicate?.includes("opposes_proposition") ?? false;
+      return { label: e.label, isOpposes, certainty: claim?.certainty ?? "", yearStart: claim?.year_start, yearEnd: claim?.year_end };
     });
   }, [selectedKey, hoveredNodeKey, edges, connectedToSelected]);
 
@@ -376,9 +478,9 @@ export function GraphPage() {
     return subKey === focusKey ? objKey : subKey;
   }
 
-  function handleNodeClick(nodeId: string) {
-    const newKey = nodeId === selectedKey ? null : nodeId;
-    if (newKey) {
+  function pushGraphSelection(newKey: string | null) {
+    if (newKey && newKey !== selectedKey) {
+      if (selectedKey) setSelectionHistory((h) => [...h, selectedKey]);
       spreadNeighbors(nodesRef.current, edgesRef.current, newKey);
     }
     setSelectedKey(newKey);
@@ -386,6 +488,34 @@ export function GraphPage() {
     setHighlightedNodeKey(null);
     if (newKey) zoomToNodeConnections(newKey);
     forceRender((n) => n + 1);
+  }
+
+  function popGraphSelection() {
+    setSelectionHistory((h) => {
+      const newH = [...h];
+      const prev = newH.pop() ?? null;
+      setSelectedKey(prev);
+      setHoveredNodeKey(null);
+      setHighlightedNodeKey(null);
+      if (prev) {
+        spreadNeighbors(nodesRef.current, edgesRef.current, prev);
+        zoomToNodeConnections(prev);
+      }
+      forceRender((n) => n + 1);
+      return newH;
+    });
+  }
+
+  function handleNodeClick(nodeId: string) {
+    if (nodeId === selectedKey) {
+      setSelectedKey(null);
+      setSelectionHistory([]);
+      setHoveredNodeKey(null);
+      setHighlightedNodeKey(null);
+      forceRender((n) => n + 1);
+    } else {
+      pushGraphSelection(nodeId);
+    }
   }
 
   return (
@@ -398,43 +528,44 @@ export function GraphPage() {
           <div className="panel-subtitle">{nodes.length} nodes · {edges.length} edges</div>
         </div>
 
-        {/* Filter */}
+        {/* Node types (multi-select filter + legend combined) */}
         <div className="graph-sidebar-section">
-          <div className="filter-label" style={{ marginBottom: 6 }}>Filter by type (multi-select)</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
-            {FILTER_OPTIONS.map(({ value, label }) => (
-              <button
-                key={value}
-                type="button"
-                className={`pchip${filters.includes(value) ? " active" : ""}`}
-                onClick={() => {
-                  if (value === "all") {
-                    setFilters(["all"]);
-                  } else {
+          <div className="filter-label" style={{ marginBottom: 6, display: "flex", alignItems: "center", gap: 6 }}>
+            Node types (multi-select)
+            {!filters.includes("all") && (
+              <button type="button" className="chip-show-all" onClick={() => setFilters(["all"])}>show all</button>
+            )}
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+            {FILTER_OPTIONS.map(({ value, label }) => {
+              const isActive = filters.includes("all") || filters.includes(value);
+              return (
+                <button key={value} type="button"
+                  className={`graph-type-row${isActive ? " active" : ""}`}
+                  onClick={() => {
                     setFilters((prev) => {
                       const without = prev.filter((v) => v !== "all" && v !== value);
-                      if (prev.includes(value)) {
-                        return without.length === 0 ? ["all"] : without;
-                      } else {
-                        return [...without, value];
-                      }
+                      if (prev.includes("all")) return [value];
+                      if (prev.includes(value)) return without.length === 0 ? ["all"] : without;
+                      return [...without, value];
                     });
-                  }
-                }}
-              >
-                {label}
-              </button>
-            ))}
+                  }}>
+                  <span className="graph-node-badge" style={{ background: KIND_COLORS[value] ?? "#666" }} />
+                  <span>{label}</span>
+                </button>
+              );
+            })}
           </div>
+          <div className="faint" style={{ marginTop: 6, fontSize: "0.72rem" }}>Node size ∝ connections</div>
         </div>
 
         {/* Search */}
         <div className="graph-sidebar-section" style={{ position: "relative" }}>
           <div className="filter-label" style={{ marginBottom: 6 }}>Search nodes</div>
-          <div style={{ display: "flex", gap: 6 }}>
+          <div className="search-box">
+            <span className="search-icon">🔍</span>
             <input
               type="text"
-              className="graph-search-input"
               placeholder="Name or kind…"
               value={searchQuery}
               onChange={(e) => { setSearchQuery(e.target.value); setShowDropdown(true); }}
@@ -446,7 +577,7 @@ export function GraphPage() {
               onBlur={() => setTimeout(() => setShowDropdown(false), 180)}
             />
             {searchQuery && (
-              <button type="button" className="graph-clear-btn" onClick={() => { setSearchQuery(""); setSelectedKey(null); setShowDropdown(false); }}>✕</button>
+              <button type="button" className="close-btn" onClick={() => { setSearchQuery(""); setSelectedKey(null); setShowDropdown(false); }}>✕</button>
             )}
           </div>
           {showDropdown && searchSuggestions.length > 0 && (
@@ -462,31 +593,85 @@ export function GraphPage() {
           )}
         </div>
 
-        {/* Legend */}
-        <div className="graph-sidebar-section">
-          <div className="filter-label" style={{ marginBottom: 6 }}>Node types</div>
-          {Object.entries(KIND_COLORS).map(([kind, color]) => (
-            <div key={kind} className="graph-legend-item">
-              <span className="graph-node-badge" style={{ width: 10, height: 10, background: color }} />
-              <span className="muted">{KIND_ICONS[kind] ?? "•"} {kind}</span>
-            </div>
-          ))}
-          <div className="faint" style={{ marginTop: 8, fontSize: "0.74rem", lineHeight: 1.4 }}>Node size ∝ connections</div>
-        </div>
-
         {/* Connection count slider */}
         <div className="graph-sidebar-section">
-          <div className="filter-label" style={{ marginBottom: 6 }}>Min connections: {minConnections}</div>
+          <div className="filter-label" style={{ marginBottom: 6 }}>Min connections: <strong>{minConnections}</strong></div>
+          <div className="timeline-range-row">
+            <span>1</span>
+            <span>{maxConn}</span>
+          </div>
           <input
             type="range"
+            className="timeline-slider"
             min={1}
             max={Math.max(2, maxConn)}
             value={minConnections}
             onChange={(e) => setMinConnections(Number(e.target.value))}
           />
-          <div className="faint" style={{ fontSize: "0.7rem", display: "flex", justifyContent: "space-between" }}>
-            <span>1</span>
-            <span>{maxConn}</span>
+        </div>
+
+        {/* Path Finder */}
+        <div className="graph-sidebar-section">
+          <div className="filter-label" style={{ marginBottom: 6 }}>Path Finder</div>
+          <div className="flex-col" style={{ gap: 4 }}>
+            <PathPickerInput
+              placeholder="Start entity…"
+              query={pathStartQuery}
+              setQuery={setPathStartQuery}
+              selectedId={pathStartId}
+              onSelect={(id, label) => { setPathStartId(id); setPathStartQuery(label); }}
+              onClear={() => { setPathStartId(null); setPathResult(null); setPathNodeIds(new Set()); }}
+              nodes={allNodes}
+            />
+            <PathPickerInput
+              placeholder="End entity…"
+              query={pathEndQuery}
+              setQuery={setPathEndQuery}
+              selectedId={pathEndId}
+              onSelect={(id, label) => { setPathEndId(id); setPathEndQuery(label); }}
+              onClear={() => { setPathEndId(null); setPathResult(null); setPathNodeIds(new Set()); }}
+              nodes={allNodes}
+            />
+            <button type="button" className="action-btn" style={{ marginTop: 4 }}
+              disabled={!pathStartId || !pathEndId}
+              onClick={() => {
+                if (!pathStartId || !pathEndId) return;
+                const result = findShortestPath(allEdges, pathStartId, pathEndId);
+                setPathResult(result);
+                setPathNodeIds(new Set(result.steps.map((s) => s.nodeId)));
+              }}
+            >Find Path</button>
+            {pathResult && (
+              <div className="graph-path-result">
+                {pathResult.found ? (
+                  <>
+                    <div className="graph-path-summary">
+                      {pathResult.intermediaries} intermediar{pathResult.intermediaries === 1 ? "y" : "ies"}
+                    </div>
+                    <div className="graph-path-chain">
+                      {pathResult.steps.map((step, i) => {
+                        const node = allNodes.find((n) => n.id === step.nodeId);
+                        return (
+                          <div key={i} className="graph-path-step">
+                            {i > 0 && <span className="graph-path-edge-label">{step.edgeLabel}</span>}
+                            <button type="button" className="graph-path-node-btn" onClick={() => pushGraphSelection(step.nodeId)}
+                              style={{ borderLeft: `3px solid ${KIND_COLORS[node?.kind ?? ""] ?? "#666"}` }}>
+                              {kindIcon(node?.kind ?? "")} {node?.label ?? step.nodeId}
+                            </button>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </>
+                ) : (
+                  <div className="faint" style={{ fontSize: "0.78rem" }}>No path found between these entities.</div>
+                )}
+                <button type="button" className="chip-show-all" style={{ marginTop: 4 }}
+                  onClick={() => { setPathResult(null); setPathNodeIds(new Set()); setPathStartId(null); setPathEndId(null); setPathStartQuery(""); setPathEndQuery(""); }}>
+                  Clear
+                </button>
+              </div>
+            )}
           </div>
         </div>
 
@@ -526,9 +711,12 @@ export function GraphPage() {
                          (e.source === hk && e.target === selectedKey);
                 })();
                 const isDimmed = hasSelection && !isNodeSelected;
-                const strokeColor = isHoverEdge ? "var(--accent)" : isNodeSelected ? "var(--accent-bright)" : "var(--border)";
-                const strokeW = isHoverEdge ? 2.5 : isNodeSelected ? 1.5 : 0.8;
-                const strokeOp = isHoverEdge ? 0.95 : isNodeSelected ? 0.75 : isDimmed ? 0.08 : 0.28;
+                const isOpposes = e.predicate?.includes("opposes_proposition") ?? false;
+                const baseStroke = isOpposes ? "#c0392b" : "var(--border)";
+                const activeStroke = isOpposes ? "#e74c3c" : "var(--accent-bright)";
+                const strokeColor = isHoverEdge ? activeStroke : isNodeSelected ? activeStroke : baseStroke;
+                const strokeW = isHoverEdge ? 2.5 : isNodeSelected ? (isOpposes ? 2 : 1.5) : (isOpposes ? 1.2 : 0.8);
+                const strokeOp = isHoverEdge ? 0.95 : isNodeSelected ? 0.75 : isDimmed ? 0.06 : (isOpposes ? 0.45 : 0.28);
                 return (
                   <line key={i} x1={src.x} y1={src.y} x2={tgt.x} y2={tgt.y}
                     stroke={strokeColor} strokeWidth={strokeW} strokeOpacity={strokeOp}
@@ -592,7 +780,8 @@ export function GraphPage() {
               <div className="graph-hover-overlay-title">{hNode.label}</div>
               {hoverEdgeDetails.map((d, i) => (
                 <div key={i} className="graph-hover-overlay-claim">
-                  <span style={{ color: "var(--accent)" }}>{d.label}</span>
+                  <span style={{ color: d.isOpposes ? "#e74c3c" : "var(--accent)" }}>{d.label}</span>
+                  {d.isOpposes && <span style={{ color: "#e74c3c", fontWeight: 700 }}> ✗</span>}
                   {d.certainty && <span className="faint"> · {d.certainty}</span>}
                   {d.yearStart != null && (
                     <span className="faint"> · AD {d.yearStart}{d.yearEnd != null && d.yearEnd !== d.yearStart ? `–${d.yearEnd}` : ""}</span>
@@ -614,7 +803,6 @@ export function GraphPage() {
       {selection && (
         <div className="graph-right">
           <div className="graph-detail-close-bar">
-            <CrossPageNav kind={selection.kind} id={selection.id} current="graph" />
             <button type="button" className="close-btn"
               onClick={() => { setSelectedKey(null); setHoveredNodeKey(null); setHighlightedNodeKey(null); }}
             >✕</button>
@@ -623,16 +811,17 @@ export function GraphPage() {
             key={`${selection.kind}:${selection.id}`}
             kind={selection.kind}
             id={selection.id}
-            onBack={() => { setSelectedKey(null); setHoveredNodeKey(null); setHighlightedNodeKey(null); }}
-            onSelectEntity={(kind, id) => {
-              const key = `${kind}:${id}`;
-              spreadNeighbors(nodesRef.current, edgesRef.current, key);
-              setSelectedKey(key);
-              setHoveredNodeKey(null);
-              setHighlightedNodeKey(null);
-              zoomToNodeConnections(key);
-              forceRender((c) => c + 1);
+            currentPage="graph"
+            onBack={() => {
+              if (selectionHistory.length > 0) popGraphSelection();
+              else { setSelectedKey(null); setSelectionHistory([]); setHoveredNodeKey(null); setHighlightedNodeKey(null); }
             }}
+            onExit={() => { setSelectedKey(null); setSelectionHistory([]); setHoveredNodeKey(null); setHighlightedNodeKey(null); }}
+            onSelectEntity={(kind, id) => {
+              pushGraphSelection(`${kind}:${id}`);
+            }}
+            onHoverEntity={(kind, id) => setHighlightedNodeKey(`${kind}:${id}`)}
+            onLeaveEntity={() => setHighlightedNodeKey(null)}
           />
         </div>
       )}

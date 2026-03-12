@@ -350,7 +350,6 @@ The proposition model replaces the old flat doctrine model.
 | `year_end` | int | no | Upper bound |
 | `context_place_id` | string FK→places | no | Optional place context |
 | `certainty` | enum `certainty` | yes | Historical confidence |
-| `polarity` | enum `polarity` | yes | Supports/opposes/neutral/etc. |
 | `claim_status` | enum `claim_status` | yes | Active/deprecated/etc. |
 | `created_by` | string | no | Importer/editor identifier |
 | `updated_at` | datetime | no | Optional metadata |
@@ -359,7 +358,7 @@ The proposition model replaces the old flat doctrine model.
 
 Validation rejects duplicate logical active claims on:
 
-`(subject_type, subject_id, predicate_id, normalized_object, normalized_time, normalized_context_place, polarity, claim_status='active')`
+`(subject_type, subject_id, predicate_id, normalized_object, normalized_time, normalized_context_place, claim_status='active')`
 
 ### Change-based temporal rule for groups
 
@@ -376,6 +375,33 @@ Incorrect:
 - periodic restatement of the same uninterrupted state
 
 Validation flags overlapping or directly adjacent duplicate intervals for the same logical group/place state and requires them to be merged.
+
+### Redundancy rules (data-via-intermediaries)
+
+The claim set must not store assertions that are derivable from other claims. Validation enforces:
+
+**Rule A — Person-proposition via authored works (error).**
+`person_affirms_proposition` or `person_opposes_proposition` is invalid when ALL evidence passages trace back (passage → source → work) to works the person authored AND those works already carry the corresponding `work_affirms_proposition` / `work_opposes_proposition` for the same proposition. Remove the person claim; the work claim suffices. `person_*_proposition` is only valid when evidence comes from a third-party source (e.g. Eusebius reporting someone's beliefs, not their own writings).
+
+**Rule B — `bishop_of` implies `active_in` (error).**
+If a person has `bishop_of` place X, an overlapping `active_in` for the same person-place is redundant. The footprint derivation chain already traces bishop → place. Remove the `active_in` claim.
+
+**Rule C — `authored_by` + `written_at` implies person active at place (warning).**
+If work W is `written_at` place P, and work W is `authored_by` person Q, then Q's presence at P is derivable. An `active_in` claim for the same person-place is likely redundant. Consider removing it.
+
+**Rule D — `participant_in` + `event_occurs_at` implies person at event place (warning).**
+If person P has `participant_in` event E, and event E has `event_occurs_at` place X, then P's presence at X during the event is derivable. An `active_in` claim for the same person-place-time is likely redundant. Consider removing it.
+
+### Predicate direction encodes proposition stance
+
+For proposition-related predicates, the predicate name itself carries the doctrinal direction:
+
+- `work_affirms_proposition` — the work affirms the proposition
+- `work_opposes_proposition` — the work opposes the proposition
+- `person_affirms_proposition` — the person affirms the proposition
+- `person_opposes_proposition` — the person opposes the proposition
+
+There is no separate `polarity` or `stance` column on claims. The predicate IS the stance. This prevents contradictory data like `work_affirms_proposition` with a "opposes" qualifier.
 
 ## `claim_evidence.tsv`
 
@@ -547,7 +573,6 @@ The validator/script layer is authoritative for the remaining enum sets used by 
 
 - `object_mode`
 - `certainty`
-- `polarity`
 - `claim_status`
 - `evidence_role`
 - `review_status`

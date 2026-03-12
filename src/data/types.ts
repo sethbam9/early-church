@@ -47,7 +47,6 @@ export type PassageLocatorType = "bible_osis" | "source_ref";
 export type EditorNoteKind = "commentary" | "todo" | "dispute" | "migration" | "rationale";
 
 export type Certainty = "attested" | "probable" | "possible" | "claimed_tradition" | "legendary" | "unknown";
-export type Polarity = "supports" | "opposes" | "neutral" | "mixed" | "not_applicable";
 export type ClaimStatus = "active" | "deprecated" | "superseded" | "rejected" | "draft";
 export type EvidenceRole = "supports" | "opposes" | "contextualizes" | "mentions";
 export type ReviewStatus = "unreviewed" | "reviewed" | "approved" | "disputed" | "needs_revision";
@@ -209,7 +208,6 @@ export interface Claim {
   year_end: number | null;
   context_place_id: string;
   certainty: Certainty;
-  polarity: Polarity;
   claim_status: ClaimStatus;
   created_by: string;
   updated_at: string;

@@ -2,9 +2,8 @@ import { useState } from "react";
 import type { Claim } from "../../data/types";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { getPredicateLabel } from "../../domain/relationLabels";
-import { kindIcon, CERTAINTY_COLORS, POLARITY_META } from "./entityConstants";
-import { PassageReference } from "./PassageReference";
-import { getSourceAccessTitle, getSourceExternalUrl } from "../../utils/sourceLinks";
+import { kindIcon, CERTAINTY_COLORS } from "./entityConstants";
+import { EvidenceCard } from "./EvidenceCard";
 
 interface ClaimCardProps {
   claim: Claim;
@@ -24,8 +23,6 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
   const othLabel  = othId ? getEntityLabel(othKind, othId) : (claim.value_text || claim.value_year?.toString() || "");
 
   const certainty = claim.certainty || "";
-  const polarity  = claim.polarity  || "";
-  const pol       = POLARITY_META[polarity];
 
   const evidence = dataStore.claimEvidence.getForClaim(claim.claim_id);
   const hasMeta  = evidence.length > 0;
@@ -47,11 +44,6 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
           </div>
         </div>
         <div className="rel-card-badges">
-          {pol && polarity !== "not_applicable" && (
-            <span className={`rel-polarity ${pol.cls}`} title={polarity}>
-              {pol.icon}
-            </span>
-          )}
           {certainty && certainty !== "attested" && (
             <span
               className="rel-certainty"
@@ -77,49 +69,17 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
       {showEvidence && (
         <div className="rel-card-evidence">
           {claim.context_place_id && (
-            <div className="evidence-item">
+            <div className="ev-card" style={{ padding: "4px 8px" }}>
               <span className="faint">context</span>
-              <button
-                type="button"
-                className="mention-link"
-                onClick={() => onSelectEntity("place", claim.context_place_id)}
-              >
+              <button type="button" className="mention-link"
+                onClick={() => onSelectEntity("place", claim.context_place_id)}>
                 {contextPlaceLabel}
               </button>
             </div>
           )}
-          {evidence.map((ev) => {
-            const passage = dataStore.passages.getById(ev.passage_id);
-            const source  = passage ? dataStore.sources.getById(passage.source_id) : null;
-            const sourceUrl = getSourceExternalUrl(source);
-            return (
-              <div key={`${ev.claim_id}-${ev.passage_id}`} className="evidence-item">
-                <span className="faint">{ev.evidence_role}</span>
-                {passage && <PassageReference passage={passage} source={source} />}
-                {passage?.excerpt && <div className="evidence-excerpt">{passage.excerpt}</div>}
-                {source && sourceUrl && (
-                  <a
-                    href={sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="citation-link evidence-source"
-                    title={getSourceAccessTitle(source)}
-                  >
-                    {source.title}
-                  </a>
-                )}
-                {source?.work_id && (
-                  <button
-                    type="button"
-                    className="mention-link"
-                    onClick={() => onSelectEntity("work", source.work_id)}
-                  >
-                    Open work
-                  </button>
-                )}
-              </div>
-            );
-          })}
+          {evidence.map((ev) => (
+            <EvidenceCard key={`${ev.claim_id}-${ev.passage_id}`} ev={ev} onSelectEntity={onSelectEntity} />
+          ))}
         </div>
       )}
 

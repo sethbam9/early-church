@@ -8,10 +8,14 @@ coworker_of	coworker of	person	entity	person	coworker of	true	lexicographic_enti
 event_has_year	event has year	event	year			false	none	false	false	Single-year dating assertion for an event.
 event_occurs_at	event occurs at	event	entity	place	hosts event	false	none	true	false	Event-to-place location link.
 group_present_at	group present at	group	entity	place	has group present	false	none	true	false	Group attested in a place during a date range.
+group_schismed_from	schismed from	group	entity	group	spawned schism	false	none	true	false	Group broke away from a parent communion or group.
 member_of_group	member of group	person	entity	group	has member	false	none	true	true	Person belongs to a movement or group.
 participant_in	participant in	person	entity	event	has participant	false	none	true	true	Person participates in an event.
 person_affirms_proposition	person affirms proposition	person	entity	proposition	affirmed by person	false	none	true	true	Person-level affirmation or teaching of a proposition.
+person_opposes_proposition	person opposes proposition	person	entity	proposition	opposed by person	false	none	true	true	Person-level rejection or denial of a proposition.
 place_presence_status	place presence status	place	text			false	none	true	false	Rollup seed indicating presence status for a place over a range.
 teacher_of	teacher of	person	entity	person	student of	false	lexicographic_entity_ref	true	false	Person serves as teacher or mentor to another person.
 work_affirms_proposition	work affirms proposition	work	entity	proposition	affirmed by work	false	none	true	true	Work-level affirmation of a proposition.
+work_mentions_proposition	work mentions proposition	work	entity	proposition	mentioned by work	false	none	true	true	Work-level mention or presupposition of a proposition without explicit affirmation or opposition.
+work_opposes_proposition	work opposes proposition	work	entity	proposition	opposed by work	false	none	true	true	Work-level rejection of a proposition.
 written_at	written at	work	entity	place	has work written	false	none	true	false	Work is composed or issued from a place.

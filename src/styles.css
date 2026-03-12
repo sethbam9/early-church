@@ -125,28 +125,6 @@ button { font-family: inherit; }
   font-weight: 600;
 }
 
-.nav-search {
-  display: flex;
-  align-items: center;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 0 9px;
-  gap: 5px;
-}
-.nav-search input {
-  background: none;
-  border: none;
-  color: var(--text);
-  font-size: 0.84rem;
-  font-family: inherit;
-  width: 180px;
-  outline: none;
-  padding: 5px 0;
-}
-.nav-search input::placeholder { color: var(--text-faint); }
-.nav-search-icon { color: var(--text-faint); font-size: 0.82rem; }
-
 /* ─── Page Container ─────────────────────────────────────────────────────────── */
 .page-container {
   flex: 1;
@@ -206,24 +184,6 @@ button { font-family: inherit; }
   inset: 0;
   width: 100%;
   height: 100%;
-}
-
-.leaflet-container { background: #e8e0d4 !important; }
-.leaflet-popup-content-wrapper {
-  background: var(--surface) !important;
-  color: var(--text) !important;
-  border: 1px solid var(--border) !important;
-  box-shadow: var(--shadow-md) !important;
-  border-radius: var(--radius) !important;
-}
-.leaflet-popup-tip { background: var(--surface) !important; }
-.leaflet-tooltip {
-  background: var(--surface) !important;
-  border: 1px solid var(--border) !important;
-  color: var(--text) !important;
-  font-size: 0.82rem !important;
-  padding: 4px 8px !important;
-  box-shadow: var(--shadow) !important;
 }
 
 /* ─── Map Overlay Buttons ────────────────────────────────────────────────────── */
@@ -375,7 +335,6 @@ button { font-family: inherit; }
 }
 .search-box input::placeholder { color: var(--text-faint); }
 .search-icon { color: var(--text-faint); font-size: 0.8rem; flex-shrink: 0; }
-.search-hit-count { font-size: 0.72rem; color: var(--text-faint); margin-top: 4px; }
 
 /* Map actions */
 .map-actions-section {
@@ -425,8 +384,136 @@ button { font-family: inherit; }
   flex-wrap: wrap;
   gap: 4px;
 }
-.pchip {
+/* ─── Unified Chip System ───────────────────────────────────────────────────── */
+
+/* Base: shared by all chip types */
+
+/* Filter chip: interactive multi-select. HIGH CONTRAST when active. */
+/* Semantic color overrides for presence-status filter chips */
+
+/* Info chip: read-only tag */
+
+/* Legend chip: color-dot + label, non-interactive */
+
+/* Chip dot (inline colored circle) */
+.chip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* "Show all" hint: inline text hint for multi-select reset */
+.chip-show-all {
+  font-size: 0.68rem;
+  color: var(--text-faint);
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  padding: 0;
+}
+.chip-show-all:hover { color: var(--accent-bright); }
+
+/* ─── Entity Hover Card (universal tooltip) ─────────────────────────────────── */
+.entity-hover-card {
+  position: fixed;
+  z-index: 9999;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 10px 12px;
+  max-width: 300px;
+  min-width: 180px;
+  font-size: 0.78rem;
+  pointer-events: none;
+}
+.entity-hover-card-title {
+  font-weight: 700;
+  font-size: 0.82rem;
+  margin-bottom: 4px;
   display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.entity-hover-card-kind {
+  font-size: 0.68rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.entity-hover-card-facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 8px;
+  font-size: 0.72rem;
+}
+.entity-hover-card-facts dt { color: var(--text-faint); }
+.entity-hover-card-facts dd { color: var(--text-muted); margin: 0; }
+
+/* ─── Unified Evidence Card ────────────────────────────────────────────────── */
+.ev-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px 8px;
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.78rem;
+  width: 100%;
+  margin: 0;
+}
+.ev-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ev-card-role {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.ev-card-role--supports       { background: rgba(26,122,92,0.12); color: #1a7a5c; }
+.ev-card-role--opposes        { background: rgba(192,57,43,0.12); color: #c0392b; }
+.ev-card-role--contextualizes { background: rgba(196,124,58,0.12); color: var(--accent); }
+.ev-card-role--mentions       { background: rgba(142,128,112,0.12); color: var(--text-faint); }
+.ev-card-weight {
+  font-size: 0.68rem;
+  color: var(--text-faint);
+}
+.ev-card-excerpt {
+  font-size: 0.76rem;
+  font-style: italic;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent-dim);
+  padding-left: 8px;
+  line-height: 1.45;
+}
+.ev-card-notes {
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+.ev-card-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+.ev-card-ext-link {
+  font-size: 0.72rem;
+  color: var(--accent-bright);
+  text-decoration: none;
+}
+.ev-card-ext-link:hover { text-decoration: underline; }
+
+.pchip {
+  display: inline-flex;
   align-items: center;
   gap: 5px;
   padding: 3px 8px 3px 6px;
@@ -439,23 +526,19 @@ button { font-family: inherit; }
   transition: background 0.12s, border-color 0.12s, color 0.12s;
   user-select: none;
 }
-.pchip.active { background: var(--surface-3); color: var(--text); }
-.pchip.active.attested  { border-color: var(--attested);   color: var(--attested); }
-.pchip.active.probable  { border-color: var(--probable);   color: var(--probable); }
-.pchip.active.claimed   { border-color: var(--claimed);    color: var(--claimed); }
-.pchip.active.suppressed{ border-color: var(--suppressed); color: var(--suppressed); }
-.pchip.active.unknown   { border-color: var(--unknown);    color: var(--unknown); }
-.status-dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  display: inline-block;
+.pchip:hover { background: var(--surface-3); }
+.pchip.active {
+  background: var(--accent);
+  border-color: var(--accent-strong);
+  color: #fff;
+  font-weight: 600;
 }
-.status-dot.attested   { background: var(--attested); }
-.status-dot.probable   { background: var(--probable); }
-.status-dot.claimed_tradition { background: var(--claimed); }
-.status-dot.suppressed { background: var(--suppressed); }
-.status-dot.unknown, .status-dot.not_attested { background: var(--unknown); }
+.pchip.active:hover { background: var(--accent-strong); }
+.pchip.active.attested  { background: var(--attested);   border-color: var(--attested); color: #fff; }
+.pchip.active.probable  { background: var(--probable);   border-color: var(--probable); color: #fff; }
+.pchip.active.claimed   { background: var(--claimed);    border-color: var(--claimed); color: #fff; }
+.pchip.active.suppressed{ background: var(--suppressed); border-color: var(--suppressed); color: #fff; }
+.pchip.active.unknown   { background: var(--unknown);    border-color: var(--unknown); color: #fff; }
 
 /* ─── Right Sidebar ──────────────────────────────────────────────────────────── */
 .sidebar-tabs {
@@ -737,9 +820,6 @@ button { font-family: inherit; }
 }
 
 /* Timeline styles defined later with collapsible row support */
-.timeline-list { display: flex; flex-direction: column; gap: 0; }
-.timeline-year { width: 38px; color: var(--text-faint); flex-shrink: 0; font-size: 0.76rem; }
-.timeline-status { flex: 1; color: var(--text-muted); }
 
 /* Evidence note */
 .note-card {
@@ -765,65 +845,8 @@ button { font-family: inherit; }
 .note-open-btn:hover { text-decoration: underline; }
 
 /* Person card */
-.person-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 6px 8px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border-subtle);
-  background: var(--surface-2);
-  cursor: pointer;
-  transition: background 0.12s, border-color 0.12s;
-}
-.person-card:hover { background: var(--surface-3); border-color: var(--border); }
-.person-avatar {
-  width: 28px; height: 28px;
-  border-radius: 50%;
-  background: var(--surface-3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  color: var(--text-faint);
-  flex-shrink: 0;
-}
-.person-name { font-size: 0.84rem; color: var(--text); font-weight: 500; }
-.person-role { font-size: 0.74rem; color: var(--text-faint); }
 
 /* Doctrine evidence row */
-.doctrine-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 5px 8px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-subtle);
-  background: var(--surface-2);
-  cursor: pointer;
-  transition: background 0.12s;
-  margin-bottom: 3px;
-}
-.doctrine-row:hover { background: var(--surface-3); }
-.doctrine-indicator {
-  width: 9px; height: 9px;
-  border-radius: 50%;
-  margin-top: 4px;
-  flex-shrink: 0;
-}
-.doctrine-indicator.assumed  { background: var(--doc-assumed); }
-.doctrine-indicator.attested { background: var(--doc-attested); }
-.doctrine-name { font-size: 0.82rem; color: var(--text); flex: 1; }
-.doctrine-cat  { font-size: 0.72rem; color: var(--text-faint); }
-.doctrine-legend {
-  display: flex;
-  gap: 14px;
-  font-size: 0.74rem;
-  color: var(--text-faint);
-  align-items: center;
-  margin-bottom: 8px;
-}
-.doctrine-legend span { display: flex; align-items: center; gap: 4px; }
 
 /* Citation link */
 .citation-link {
@@ -836,7 +859,6 @@ button { font-family: inherit; }
 .citation-link:hover { text-decoration: underline; }
 
 /* ─── Connection list ────────────────────────────────────────────────────────── */
-.conn-list { display: flex; flex-direction: column; gap: 3px; }
 .conn-card {
   display: flex;
   align-items: center;
@@ -853,29 +875,6 @@ button { font-family: inherit; }
 .conn-name { font-size: 0.83rem; color: var(--text); flex: 1; }
 .conn-rel { font-size: 0.74rem; color: var(--text-faint); }
 
-/* ─── Entity grid (for graph page etc.) ─────────────────────────────────────── */
-.entity-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 10px;
-  padding: 14px;
-}
-.entity-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 12px;
-  cursor: pointer;
-  transition: box-shadow 0.13s, border-color 0.13s;
-}
-.entity-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: rgba(196,124,58,0.4);
-}
-.entity-card-title { font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 3px; }
-.entity-card-sub { font-size: 0.78rem; color: var(--text-muted); }
-.entity-card-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 6px; }
-
 /* ─── Graph Page ─────────────────────────────────────────────────────────────── */
 .graph-page {
   display: flex;
@@ -885,20 +884,6 @@ button { font-family: inherit; }
   overflow: hidden;
   min-width: 0;
 }
-.graph-left {
-  width: 260px;
-  flex-shrink: 0;
-  background: var(--surface);
-  border-right: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.graph-center {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-}
 .graph-right {
   width: 340px;
   flex-shrink: 0;
@@ -906,88 +891,27 @@ button { font-family: inherit; }
   border-left: 1px solid var(--border);
   overflow-y: auto;
 }
-.graph-controls {
-  padding: 12px;
-  border-bottom: 1px solid var(--border-subtle);
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex-shrink: 0;
-}
-.graph-filter-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3px;
-}
-.graph-filter-tab {
-  padding: 3px 8px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface-2);
-  color: var(--text-muted);
-  cursor: pointer;
-  font-size: 0.76rem;
-  font-family: inherit;
-  transition: background 0.12s, color 0.12s;
-}
-.graph-filter-tab.active { background: var(--accent-dim); color: var(--accent); border-color: rgba(196,124,58,0.3); }
-.graph-legend {
-  padding: 10px 12px;
-  overflow-y: auto;
-  flex: 1;
-}
-.graph-legend-item {
+.graph-type-row {
   display: flex;
   align-items: center;
   gap: 6px;
   font-size: 0.78rem;
   color: var(--text-muted);
-  margin-bottom: 4px;
+  padding: 3px 6px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background 0.1s, opacity 0.15s;
 }
-.graph-node-dot {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
+.graph-type-row:hover { background: var(--surface-2); }
+.graph-type-row.active { color: var(--text); font-weight: 600; }
+.graph-type-row:not(.active) { opacity: 0.45; }
 .graph-svg { width: 100%; height: 100%; cursor: grab; user-select: none; -webkit-user-select: none; }
 .graph-svg:active { cursor: grabbing; }
 .graph-svg text { pointer-events: none; user-select: none; -webkit-user-select: none; }
-
-/* Graph range slider */
-.graph-sidebar-section input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 4px;
-  background: var(--border);
-  border-radius: 2px;
-  outline: none;
-  margin: 6px 0;
-}
-.graph-sidebar-section input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--accent);
-  cursor: pointer;
-  border: 2px solid var(--surface);
-  box-shadow: var(--shadow);
-}
-.graph-sidebar-section input[type="range"]::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--accent);
-  cursor: pointer;
-  border: 2px solid var(--surface);
-  box-shadow: var(--shadow);
-}
-.graph-sidebar-section input[type="range"]::-webkit-slider-runnable-track {
-  height: 4px;
-  border-radius: 2px;
-}
 
 /* Graph hover overlay (shown when hovering a connected node) */
 .graph-hover-overlay {
@@ -1037,19 +961,6 @@ button { font-family: inherit; }
 
 /* Filter tabs (graph page) */
 .filter-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-faint); }
-.filter-tabs  { display: flex; flex-wrap: wrap; gap: 3px; }
-.filter-tab {
-  padding: 3px 9px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface-2);
-  color: var(--text-muted);
-  cursor: pointer;
-  font-size: 0.76rem;
-  font-family: inherit;
-  transition: background 0.12s, color 0.12s;
-}
-.filter-tab.active { background: var(--accent-dim); color: var(--accent); border-color: rgba(196,124,58,0.35); }
 
 /* View-on-map button */
 .view-on-map-btn {
@@ -1069,37 +980,6 @@ button { font-family: inherit; }
 .view-on-map-btn:hover { background: var(--accent-bright); color: #fff; border-color: var(--accent-bright); }
 
 /* Leaflet archaeology marker */
-.poi-marker {
-  font-size: 16px;
-  color: #b07e10;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.poi-marker.selected { color: #c47c3a; }
-
-/* ─── EntityDetailPanel legacy classes (used by GraphPage) ───────────────────── */
-.entity-detail { display: flex; flex-direction: column; padding: 12px; gap: 12px; overflow-y: auto; }
-.entity-header { display: flex; flex-direction: column; gap: 4px; padding-bottom: 10px; border-bottom: 1px solid var(--border-subtle); }
-.entity-kind-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; background: var(--accent-dim); color: var(--accent); border-radius: var(--radius-sm); padding: 2px 7px; }
-.entity-name   { font-size: 1.1rem; font-weight: 700; color: var(--text); }
-.entity-subtitle { font-size: 0.82rem; color: var(--text-muted); }
-.entity-description { font-size: 0.83rem; color: var(--text-muted); line-height: 1.5; }
-.entity-section-title { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 5px; padding-top: 2px; }
-.entity-card-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 5px; }
-.connection-list { display: flex; flex-direction: column; gap: 3px; }
-.connection-card { display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: var(--surface-2); cursor: pointer; transition: background 0.12s; }
-.connection-card:hover { background: var(--surface-3); }
-.connection-node-icon { font-size: 0.9rem; width: 18px; text-align: center; flex-shrink: 0; }
-.connection-info { flex: 1; min-width: 0; }
-.connection-name { font-size: 0.83rem; color: var(--text); }
-.connection-rel  { font-size: 0.74rem; color: var(--text-faint); }
-.connection-weight { font-size: 0.72rem; color: var(--text-faint); flex-shrink: 0; }
-.detail-panel-close { display: flex; align-items: center; justify-content: flex-end; gap: 6px; }
-.detail-panel-close-btn { background: none; border: none; color: var(--text-faint); cursor: pointer; font-size: 1rem; padding: 2px 6px; border-radius: var(--radius-sm); transition: background 0.12s; }
-.detail-panel-close-btn:hover { background: var(--surface-2); color: var(--text); }
 
 /* ─── Sidebar Shell (expand/collapse/dismiss wrapper) ────────────────────────── */
 /* Drag handle on left edge of sidebar */
@@ -1135,32 +1015,6 @@ button { font-family: inherit; }
 .sidebar-shell--closing {
   opacity: 0.35;
 }
-
-/* ─── Panel dismiss button (left panel header) ───────────────────────────────── */
-.left-panel-head {
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  padding: 12px 14px 10px;
-  border-bottom: 1px solid var(--border-subtle);
-  flex-shrink: 0;
-}
-.panel-dismiss-btn {
-  background: none;
-  border: 1px solid transparent;
-  color: var(--text-faint);
-  cursor: pointer;
-  font-size: 0.8rem;
-  width: 24px; height: 24px;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 1px;
-  transition: background 0.12s, color 0.12s;
-}
-.panel-dismiss-btn:hover { background: var(--surface-2); color: var(--text); }
 
 /* Map overlay buttons defined later in file */
 .map-overlay-btn--right { margin-left: auto; }
@@ -1223,28 +1077,6 @@ button { font-family: inherit; }
 .sli-fly-btn:hover { color: var(--accent-bright); background: var(--accent-dim); }
 
 /* ─── Timeline collapsible rows ──────────────────────────────────────────────── */
-.timeline-row {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid var(--border-subtle);
-  font-size: 0.8rem;
-}
-.timeline-row.active { background: var(--accent-dim); border-radius: var(--radius-sm); }
-.timeline-row-header {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 2px;
-  cursor: default;
-  flex-wrap: wrap;
-}
-.timeline-expand-icon { font-size: 0.66rem; color: var(--text-faint); flex-shrink: 0; }
-.timeline-evidence {
-  padding: 6px 8px 8px 46px;
-  background: var(--surface-2);
-  border-top: 1px solid var(--border-subtle);
-  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-}
 .timeline-polity-btn,
 .timeline-persuasion-btn {
   font-size: 0.68rem;
@@ -1282,9 +1114,6 @@ button { font-family: inherit; }
 .md-p:last-child { margin-bottom: 0; }
 .markdown-renderer strong { font-weight: 600; color: var(--text); }
 .markdown-renderer em { font-style: italic; }
-.md-h1 { font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 1.1em 0 0.35em; line-height: 1.25; }
-.md-h2 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin: 1em 0 0.3em; line-height: 1.25; }
-.md-h3 { font-size: 0.87rem; font-weight: 700; color: var(--text); margin: 0.9em 0 0.25em; line-height: 1.25; }
 .md-blockquote {
   border-left: 3px solid var(--border);
   margin: 0.6em 0;
@@ -1309,10 +1138,6 @@ button { font-family: inherit; }
   color: var(--accent-strong); 
   border-color: var(--accent-strong); 
 }
-.mention-text {
-  color: var(--accent-bright);
-  font-weight: 500;
-}
 .search-highlight {
   background: rgba(26, 122, 92, 0.22);
   color: inherit;
@@ -1321,31 +1146,6 @@ button { font-family: inherit; }
 }
 
 /* ─── Top Navigation Items ─────────────────────────────────────────────────── */
-.nav-items {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-left: auto;
-}
-.nav-item {
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  cursor: pointer;
-  font-size: 0.82rem;
-  padding: 4px 8px;
-  border-radius: var(--radius-sm);
-  transition: color 0.12s, background 0.12s;
-  font-family: inherit;
-}
-.nav-item:hover {
-  color: var(--text);
-  background: var(--surface-2);
-}
-.nav-item.active {
-  color: var(--accent-bright);
-  background: var(--accent-dim);
-}
 
 /* ─── Search Results Panel ───────────────────────────────────────────────────── */
 .search-results-panel {
@@ -1404,7 +1204,6 @@ button { font-family: inherit; }
 .search-result-body { flex: 1; min-width: 0; }
 .search-result-label { font-size: 0.82rem; font-weight: 500; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .search-result-sub { font-size: 0.72rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.search-result-decade { font-size: 0.69rem; color: var(--text-faint); flex-shrink: 0; white-space: nowrap; }
 .search-results-pagination {
   display: flex;
   gap: 6px;
@@ -1418,19 +1217,9 @@ button { font-family: inherit; }
 .flex-col        { display: flex; flex-direction: column; }
 .flex-col-8      { display: flex; flex-direction: column; gap: 8px; }
 .flex-col-12     { display: flex; flex-direction: column; gap: 12px; }
-.flex-col-14     { display: flex; flex-direction: column; gap: 14px; }
-.flex-wrap-4     { display: flex; flex-wrap: wrap; gap: 4px; }
-.flex-center     { display: flex; align-items: center; }
 
 .entity-desc {
   font-size: 0.83rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin: 0;
-}
-.entity-desc--italic {
-  font-size: 0.83rem;
-  font-style: italic;
   color: var(--text-muted);
   line-height: 1.5;
   margin: 0;
@@ -1465,53 +1254,8 @@ button { font-family: inherit; }
 .search-input-icon { color: var(--text-faint); font-size: 0.8rem; flex-shrink: 0; }
 
 /* Entity card selected state */
-.entity-card.selected {
-  border-color: var(--accent-bright);
-  box-shadow: 0 0 0 2px var(--accent-dim), var(--shadow-md);
-}
 
 /* Entity page layout */
-.entity-page {
-  display: flex;
-  height: 100%;
-  overflow: hidden;
-}
-.entity-page-main {
-  flex: 1;
-  min-width: 0;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-}
-.entity-page-header {
-  padding: 16px 16px 10px;
-  border-bottom: 1px solid var(--border-subtle);
-  flex-shrink: 0;
-}
-.entity-page-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--text);
-}
-.entity-page-subtitle {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-.entity-page-controls {
-  padding: 10px 16px;
-  border-bottom: 1px solid var(--border-subtle);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-}
-.entity-count {
-  font-size: 0.76rem;
-  color: var(--text-faint);
-  margin-left: auto;
-}
 .search-input {
   display: flex;
   align-items: center;
@@ -1537,130 +1281,10 @@ button { font-family: inherit; }
 .search-input input::placeholder { color: var(--text-faint); }
 
 /* Entity card components */
-.entity-card-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-.entity-card-icon {
-  font-size: 1rem;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.entity-card-meta {
-  font-size: 0.76rem;
-  color: var(--text-faint);
-}
-.entity-card-desc {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  line-height: 1.45;
-  margin-bottom: 6px;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
 
 /* Mini card (essay popup) */
-.mini-card { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
-.mini-card-header {
-  padding: 8px 10px;
-  border-bottom: 1px solid var(--border-subtle);
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  flex-shrink: 0;
-  background: var(--surface-2);
-}
-.mini-card-body {
-  flex: 1;
-  overflow-y: auto;
-  padding: 8px 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.mini-card-footer {
-  padding: 6px 10px;
-  border-top: 1px solid var(--border-subtle);
-  display: flex;
-  gap: 6px;
-  flex-shrink: 0;
-}
-.mini-card-kind {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1px;
-}
-.mini-card-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.2;
-}
-.mini-card-subtitle {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-.mini-card-desc {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin: 0;
-}
-.mini-card-section-title {
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--text-faint);
-  margin-bottom: 4px;
-}
-.mini-card-conn {
-  display: flex;
-  gap: 6px;
-  padding: 4px 5px;
-  border-radius: 3px;
-  font-size: 0.78rem;
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  border-bottom: 1px solid var(--border-subtle);
-  cursor: pointer;
-  align-items: center;
-}
-.mini-card-conn:hover { background: var(--surface-2); }
-.mini-card-conn-label {
-  flex: 1;
-  color: var(--text);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.mini-card-conn-rel {
-  font-size: 0.68rem;
-  color: var(--text-faint);
-  flex-shrink: 0;
-}
 
 /* Quote blockquote */
-.quote-block {
-  font-style: italic;
-  font-size: 0.9rem;
-  line-height: 1.65;
-  border-left: 3px solid var(--accent-bright);
-  margin: 0;
-  padding-left: 12px;
-  color: var(--text-muted);
-}
 
 /* Close button (dismiss) */
 .close-btn {
@@ -1692,42 +1316,12 @@ button { font-family: inherit; }
 }
 
 /* Essay popup overlay */
-.essay-popup {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 30%;
-  background: var(--surface);
-  border-top: 2px solid var(--accent-bright);
-  box-shadow: 0 -6px 24px rgba(0,0,0,0.45);
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
 
 /* Graph page sidebar */
 .graph-sidebar-section {
   padding: 10px 12px;
   border-bottom: 1px solid var(--border-subtle);
   flex-shrink: 0;
-}
-.graph-detail-header {
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--border-subtle);
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  flex-shrink: 0;
-}
-.graph-detail-body {
-  flex: 1;
-  overflow-y: auto;
-  padding: 10px 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
 }
 .graph-zoom-controls {
   position: absolute;
@@ -1801,27 +1395,6 @@ button { font-family: inherit; }
   flex-shrink: 0;
   display: inline-block;
 }
-.graph-search-input {
-  flex: 1;
-  padding: 6px 9px;
-  font-size: 0.82rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  background: var(--surface-2);
-  color: var(--text);
-  font-family: inherit;
-  outline: none;
-}
-.graph-clear-btn {
-  padding: 6px 9px;
-  font-size: 0.82rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  background: var(--surface-3);
-  color: var(--text-faint);
-  cursor: pointer;
-}
-
 /* ─── Left panel head + scrollable body ──────────────────────────────────────── */
 .left-panel-head {
   display: flex;
@@ -1881,10 +1454,6 @@ button { font-family: inherit; }
   flex-wrap: wrap;
   font-size: 0.74rem;
 }
-.ecs-affirm   { color: var(--attested);  font-weight: 600; }
-.ecs-condemn  { color: var(--suppressed); font-weight: 600; }
-.ecs-mixed    { color: var(--probable);  font-weight: 600; }
-.ecs-total    { color: var(--text-faint); }
 .ecs-cities   { color: var(--text-muted); }
 
 /* ─── Section label action link ─────────────────────────────────────────────── */
@@ -1900,7 +1469,6 @@ button { font-family: inherit; }
 }
 .section-label-action:hover { color: var(--accent-bright); text-decoration: underline; }
 
-/* ─── Presence chip dot (inline dot without status-dot) ─────────────────────── */
 .pchip-dot {
   width: 7px;
   height: 7px;
@@ -1994,8 +1562,66 @@ button { font-family: inherit; }
   color: var(--accent-bright);
   font-weight: 600;
 }
-.tl-v-evidence {
-  margin-top: 6px;
+
+/* Decade header for entity timeline */
+.tl-v-decade-hdr {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+.tl-v-row--active .tl-v-decade-hdr {
+  color: var(--accent-bright);
+  font-size: 0.88rem;
+}
+.tl-v-decade-count {
+  font-size: 0.67rem;
+  font-weight: 500;
+  background: var(--border-subtle);
+  color: var(--text-faint);
+  padding: 1px 5px;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+/* Claims container under a decade header */
+.tl-v-claims {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.tl-v-claim-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+.tl-v-claim-row:hover { background: var(--surface-3); border-color: var(--border); }
+.tl-v-year-badge {
+  font-size: 0.68rem;
+  color: var(--text-faint);
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  padding: 1px 4px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.tl-v-pred {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
 }
 
 /* ─── Relation card ───────────────────────────────────────────────────────────── */
@@ -2052,32 +1678,7 @@ button { font-family: inherit; }
   gap: 4px;
   flex-shrink: 0;
 }
-.rel-polarity {
-  font-size: 0.72rem;
-  font-weight: 700;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.rel-polarity--supports { background: rgba(26,122,92,0.15); color: var(--attested); }
-.rel-polarity--opposes  { background: rgba(192,57,43,0.15);  color: var(--suppressed); }
-.rel-polarity--neutral  { background: var(--surface-3);       color: var(--text-faint); }
-.rel-weight {
-  display: flex;
-  gap: 2px;
-  align-items: center;
-}
-.rel-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--border);
-}
-.rel-dot--filled { background: var(--accent-bright); }
+
 .rel-certainty {
   font-size: 0.67rem;
   font-style: italic;
@@ -2098,11 +1699,6 @@ button { font-family: inherit; }
   background: var(--surface-2);
   border-top: 1px solid var(--border-subtle);
 }
-.rel-citations {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
 
 /* ─── Connection card variants ───────────────────────────────────────────────── */
 .conn-card--col {
@@ -2121,25 +1717,6 @@ button { font-family: inherit; }
   min-width: 0;
 }
 
-/* ─── Evidence detail (shared by FootprintCard, ClaimCard, WorkPeopleTab) ───── */
-.evidence-detail {
-  padding-left: 28px;
-  padding-top: 4px;
-}
-.evidence-item {
-  font-size: 0.78rem;
-  padding: 3px 0;
-  color: var(--text-muted);
-}
-.evidence-excerpt {
-  font-style: italic;
-  font-size: 0.74rem;
-  margin-top: 1px;
-}
-.evidence-source {
-  font-size: 0.72rem;
-  color: var(--text-faint);
-}
 .evidence-locator {
   margin-left: 4px;
 }
@@ -2153,15 +1730,6 @@ button { font-family: inherit; }
 }
 
 /* ─── Detail panel close bar (graph page) ────────────────────────────────────── */
-.detail-panel-close {
-  position: relative;
-  padding: 0 0 12px 0;
-}
-.graph-footprint-item {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin-bottom: 4px;
-}
 
 /* ─── Arc tooltip ─────────────────────────────────────────────────────────────── */
 .arc-tooltip {
@@ -2208,10 +1776,8 @@ button { font-family: inherit; }
 /* ─── Utility ────────────────────────────────────────────────────────────────── */
 .muted { color: var(--text-muted); }
 .faint { color: var(--text-faint); }
-.accent-text { color: var(--accent-bright); }
 .bold { font-weight: 600; }
 .italic { font-style: italic; }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 .empty-state {
   padding: 24px 14px;
   text-align: center;
@@ -2347,31 +1913,19 @@ button { font-family: inherit; }
 }
 .wiki-mode-btn:hover { background: var(--surface-2); }
 .wiki-mode-btn.active {
-  background: var(--accent-dim);
-  color: var(--accent-bright);
+  background: var(--accent);
+  color: #fff;
 }
+.wiki-mode-btn.active:hover { background: var(--accent-strong); }
 
 /* Global search */
 .wiki-global-search {
   position: relative;
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  gap: 6px;
   padding: 8px 10px;
   border-bottom: 1px solid var(--border-subtle);
   background: var(--surface);
 }
-.wiki-global-search input {
-  flex: 1;
-  border: none;
-  background: none;
-  outline: none;
-  font-size: 0.82rem;
-  color: var(--text);
-  font-family: inherit;
-}
-.wiki-global-search input::placeholder { color: var(--text-faint); }
 .wiki-global-dropdown {
   position: absolute;
   top: 100%;
@@ -2437,23 +1991,11 @@ button { font-family: inherit; }
 /* Per-type search */
 .wiki-search-bar {
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 10px;
+  padding: 6px 10px;
   border-bottom: 1px solid var(--border-subtle);
   background: var(--surface);
+  border-top: 1px solid var(--border-subtle);
 }
-.wiki-search-bar input {
-  flex: 1;
-  border: none;
-  background: none;
-  outline: none;
-  font-size: 0.82rem;
-  color: var(--text);
-  font-family: inherit;
-}
-.wiki-search-bar input::placeholder { color: var(--text-faint); }
 
 /* Entity list */
 .wiki-entity-list {
@@ -2491,6 +2033,25 @@ button { font-family: inherit; }
 /* Audit left info */
 .wiki-audit-left-info {
   padding: 14px 0;
+}
+.wiki-audit-color-key {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 14px 0;
+}
+.wiki-audit-key-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+.wiki-audit-key-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 .wiki-audit-left-title {
   font-size: 0.9rem;
@@ -2534,13 +2095,6 @@ button { font-family: inherit; }
   transition: background 0.1s, color 0.1s;
 }
 .wiki-back-btn:hover { background: var(--surface-2); color: var(--text); }
-.wiki-entity-kind-badge {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
 .cross-page-nav {
   display: inline-flex;
   gap: 6px;
@@ -2563,28 +2117,6 @@ button { font-family: inherit; }
 .page-nav-icon:hover {
   opacity: 1;
   background: var(--surface-2);
-}
-.wiki-entity-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.3;
-}
-.wiki-entity-subtitle {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-.wiki-entity-fields {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.wiki-entity-field {
-  display: flex;
-  gap: 8px;
-  font-size: 0.8rem;
 }
 .wiki-field-key {
   color: var(--text-faint);
@@ -2759,12 +2291,6 @@ button { font-family: inherit; }
   flex-direction: column;
   gap: 5px;
 }
-.wiki-evidence-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-}
 .wiki-ev-role {
   font-size: 0.68rem;
   font-weight: 700;
@@ -2776,9 +2302,6 @@ button { font-family: inherit; }
 .wiki-ev-role--opposes { background: rgba(192,57,43,0.1); color: #c0392b; }
 .wiki-ev-role--contextualizes { background: rgba(196,124,58,0.1); color: var(--accent); }
 .wiki-ev-role--mentions { background: rgba(142,128,112,0.1); color: var(--text-faint); }
-.wiki-ev-excerpt { font-size: 0.72rem; font-style: italic; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 200px; }
-.wiki-ev-link { font-size: 0.72rem; color: var(--accent-bright); text-decoration: none; flex-shrink: 0; }
-.wiki-ev-link:hover { text-decoration: underline; }
 
 /* Inline reviews inside expanded claim */
 .wiki-claim-reviews-inline {
@@ -2933,20 +2456,6 @@ button { font-family: inherit; }
   color: var(--text-faint);
   padding: 4px 0;
 }
-.wiki-ev-detail {
-  background: var(--surface-2);
-  border-radius: var(--radius-sm);
-  padding: 8px 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.wiki-ev-detail-head {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
 .wiki-excerpt {
   font-style: italic;
   font-size: 0.78rem;
@@ -3031,9 +2540,13 @@ button { font-family: inherit; }
 }
 .wiki-audit-chip-btn:hover { background: var(--surface-3); }
 .wiki-audit-chip-btn.active {
-  background: var(--accent-dim);
-  border-color: var(--accent-bright);
-  color: var(--accent-bright);
+  background: var(--accent);
+  border-color: var(--accent-strong);
+  color: #fff;
+  font-weight: 700;
+}
+.wiki-audit-chip-btn.active:hover {
+  background: var(--accent-strong);
 }
 .wiki-audit-select {
   background: var(--surface-2);
@@ -3082,6 +2595,21 @@ button { font-family: inherit; }
   top: 0;
   z-index: 1;
 }
+.wiki-audit-sort-hdr {
+  background: none;
+  border: none;
+  font: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  color: var(--text-faint);
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: color 0.1s;
+}
+.wiki-audit-sort-hdr:hover { color: var(--accent-bright); }
+.wiki-audit-sort-hdr--active { color: var(--accent); font-weight: 800;
+}
 .wiki-audit-row {
   display: flex;
   align-items: center;
@@ -3096,14 +2624,19 @@ button { font-family: inherit; }
 }
 .wiki-audit-row--selected { background: var(--accent-dim) !important; }
 .wiki-audit-row--dupe:not(:hover):not(.wiki-audit-row--selected) { background: rgba(176,126,16,0.04); }
-.wiki-audit-col { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-right: 8px; }
+.wiki-audit-col {
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  padding: 0 8px; text-align: left;
+  border-right: 1px solid rgba(0,0,0,0.06);
+}
+.wiki-audit-col:last-child { border-right: none; }
 .wiki-audit-col--subject { flex: 2; min-width: 0; }
 .wiki-audit-col--pred { flex: 1.5; min-width: 0; font-size: 0.72rem; color: var(--text-muted); }
 .wiki-audit-col--object { flex: 2; min-width: 0; }
 .wiki-audit-col--cert { flex: 0.8; min-width: 0; font-size: 0.72rem; font-weight: 600; }
-.wiki-audit-col--ev { width: 32px; flex-shrink: 0; text-align: center; }
-.wiki-audit-col--rev { width: 32px; flex-shrink: 0; text-align: center; }
-.wiki-audit-col--status { width: 80px; flex-shrink: 0; font-size: 0.68rem; font-weight: 600; text-align: right; }
+.wiki-audit-col--ev { width: 36px; flex-shrink: 0; }
+.wiki-audit-col--rev { width: 36px; flex-shrink: 0; }
+.wiki-audit-col--status { width: 80px; flex-shrink: 0; font-size: 0.68rem; font-weight: 600; }
 
 .wiki-status--no-evidence { color: #c0392b; }
 .wiki-status--unreviewed { color: #8a6200; }
@@ -3111,26 +2644,6 @@ button { font-family: inherit; }
 .wiki-status--needs-revision { color: #8a6200; }
 .wiki-status--approved { color: #1a7a5c; }
 .wiki-status--ok { color: var(--text-muted); }
-
-/* ─── Evidence row meta (role + weight row) ─────────────────────────────────── */
-.wiki-ev-row-meta {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  flex-shrink: 0;
-}
-.wiki-ev-weight {
-  font-size: 0.68rem;
-  color: var(--text-faint);
-  font-weight: 600;
-  flex-shrink: 0;
-}
-.wiki-ev-notes {
-  font-size: 0.72rem;
-  font-style: italic;
-  color: var(--text-faint);
-  margin-top: 2px;
-}
 
 /* ─── Evidence role filter chips (ClaimsPanel) ──────────────────────────────── */
 .wiki-ev-role-filter {
@@ -3153,8 +2666,15 @@ button { font-family: inherit; }
   transition: background 0.12s, border-color 0.12s;
 }
 .wiki-ev-role-chip:hover { background: var(--surface-2); }
-.wiki-ev-role-chip.active { background: var(--surface-3); border-color: var(--accent); color: var(--text); }
+.wiki-ev-role-chip.active {
+  background: var(--accent);
+  border-color: var(--accent-strong);
+  color: #fff;
+  font-weight: 700;
+}
+.wiki-ev-role-chip.active:hover { background: var(--accent-strong); }
 .wiki-ev-role-chip.wiki-ev-role--all { color: var(--text-muted); }
+.wiki-ev-role-chip.active.wiki-ev-role--all { color: #fff; }
 
 /* ─── Wiki view toggle (Relations / Claims) ─────────────────────────────────── */
 .wiki-view-toggle {
@@ -3178,7 +2698,54 @@ button { font-family: inherit; }
   transition: background 0.12s, color 0.12s;
 }
 .wiki-view-btn:hover { background: var(--surface-2); }
-.wiki-view-btn.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+.wiki-view-btn.active {
+  background: var(--accent);
+  border-color: var(--accent-strong);
+  color: #fff;
+}
+.wiki-view-btn.active:hover { background: var(--accent-strong); }
+
+/* ─── Path Finder ───────────────────────────────────────────────────────────── */
+.graph-path-result {
+  margin-top: 6px;
+  padding: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+.graph-path-summary {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.graph-path-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.graph-path-step {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.graph-path-edge-label {
+  font-size: 0.66rem;
+  color: var(--text-faint);
+  padding-left: 12px;
+  font-style: italic;
+}
+.graph-path-node-btn {
+  background: var(--surface-2);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  font-size: 0.76rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.graph-path-node-btn:hover { background: var(--surface-3); }
 
 /* ─── Graph right panel close bar ───────────────────────────────────────────── */
 .graph-detail-close-bar {
@@ -3204,26 +2771,42 @@ button { font-family: inherit; }
   gap: 3px;
 }
 
+/* ─── Wiki detail topbar (compact nav + toggle) ────────────────────────────── */
+.wiki-browse-detail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+.wiki-detail-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  gap: 8px;
+}
+.wiki-detail-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wiki-view-toggle-inline {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
 /* ─── Wiki entity header nav row ────────────────────────────────────────────── */
 .wiki-entity-header-nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-bottom: 2px;
 }
 
 /* ─── Relation tab evidence item extensions ─────────────────────────────────── */
-.evidence-item-meta {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 2px;
-}
-.evidence-note {
-  font-size: 0.72rem;
-  font-style: italic;
-  margin-top: 1px;
-  color: var(--text-faint);
-}
 
 /* ─── Inline styles cleanup ─────────────────────────────────────────────────── */
 .search-input-icon {

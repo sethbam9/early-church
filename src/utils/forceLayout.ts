@@ -19,6 +19,7 @@ export interface GraphEdge {
   source: string;
   target: string;
   label: string;
+  predicate?: string;
   weight: number;
   relationId?: string;
 }
@@ -128,7 +129,7 @@ export function spreadNeighbors(nodes: GraphNode[], edges: GraphEdge[], centerId
         const dx = b.x - a.x;
         const dy = b.y - a.y;
         const dist = Math.max(Math.sqrt(dx * dx + dy * dy), 1);
-        const minSep = a.r + b.r + 18;
+        const minSep = a.r + b.r + 26;
         if (dist < minSep) {
           const push = (minSep - dist) * 0.12;
           const fx = (dx / dist) * push;
