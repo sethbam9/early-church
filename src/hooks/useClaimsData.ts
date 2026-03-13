@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
-import { dataStore } from "../data/dataStore";
+import { Claim, dataStore } from "../data/dataStore";
 import { getClaimAuditStatus } from "../utils/claimAudit";
-import { getEntityAllClaims, EVIDENCE_ROLES } from "../utils/claimHelpers";
+import { getEntityAllClaims, EVIDENCE_ROLES, EvidenceRoleFilter } from "../utils/claimHelpers";
 
 export { EVIDENCE_ROLES, getEntityAllClaims };
 export type { EvidenceRoleFilter } from "../utils/claimHelpers";
