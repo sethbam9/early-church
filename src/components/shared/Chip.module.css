@@ -1,0 +1,62 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 3px var(--space-2);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-default);
+  font-size: var(--font-size-xs);
+  background: var(--bg-surface-2);
+  color: var(--text-secondary);
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+  user-select: none;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+/* Clickable */
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover {
+  background: var(--bg-surface-3);
+}
+
+/* Active (inverted high-contrast) */
+.active {
+  background: var(--accent);
+  border-color: var(--accent-strong);
+  color: #fff;
+  font-weight: 600;
+}
+.active:hover {
+  background: var(--accent-strong);
+}
+.active .dot { background: #fff !important; }
+
+/* Semantic active overrides */
+.activeSuccess { background: var(--color-success); border-color: var(--color-success); color: #fff; }
+.activeWarning { background: var(--color-warning); border-color: var(--color-warning); color: #fff; }
+.activeDanger  { background: var(--color-danger);  border-color: var(--color-danger);  color: #fff; }
+
+/* Domain presence overrides */
+.activeAttested   { background: var(--color-attested);   border-color: var(--color-attested);   color: #fff; }
+.activeProbable   { background: var(--color-probable);   border-color: var(--color-probable);   color: #fff; }
+.activeClaimed    { background: var(--color-claimed);    border-color: var(--color-claimed);    color: #fff; }
+.activeSuppressed { background: var(--color-suppressed); border-color: var(--color-suppressed); color: #fff; }
+.activeUnknown    { background: var(--color-unknown);    border-color: var(--color-unknown);    color: #fff; }
+
+/* Dimmed (legend, non-interactive) */
+.legend {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+/* Dot indicator */
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}

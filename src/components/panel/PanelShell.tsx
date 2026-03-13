@@ -1,4 +1,5 @@
-import { type ReactNode, useRef, useEffect, useState, useCallback } from "react";
+import { type ReactNode, useRef, useState, useCallback } from "react";
+import s from "./PanelShell.module.css";
 
 interface Props {
   children: ReactNode;
@@ -10,7 +11,7 @@ const MAX_WIDTH = 800;
 const DEFAULT_WIDTH = 340;
 const SNAP_CLOSE_WIDTH = 180;
 
-export function SidebarShell({ children, onDismiss }: Props) {
+export function PanelShell({ children, onDismiss }: Props) {
   const [width, setWidth] = useState(DEFAULT_WIDTH);
   const [closing, setClosing] = useState(false);
   const dragRef = useRef({ active: false, startX: 0, startW: DEFAULT_WIDTH });
@@ -51,11 +52,11 @@ export function SidebarShell({ children, onDismiss }: Props) {
 
   return (
     <div
-      className={`sidebar-shell${closing ? " sidebar-shell--closing" : ""}`}
+      className={`${s.shell}${closing ? ` ${s.closing}` : ""}`}
       style={{ width }}
     >
       <div
-        className="sidebar-drag-handle"
+        className={s.dragHandle}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}

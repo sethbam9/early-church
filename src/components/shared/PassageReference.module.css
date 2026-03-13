@@ -1,0 +1,25 @@
+.wrap { display: inline-flex; align-items: center; gap: 6px; }
+.bibleBtn {
+  background: none;
+  border: none;
+  font: inherit;
+  color: var(--accent-bright);
+  cursor: pointer;
+  border-bottom: 1px dashed var(--border-default);
+  padding: 0;
+  font-size: var(--font-size-sm);
+}
+.bibleBtn:hover { background: var(--accent-dim); border-bottom-color: var(--accent); }
+.extLink {
+  color: var(--accent-bright);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+}
+.extLink:hover { text-decoration: underline; }
+.locator {
+  margin-left: var(--space-1);
+}
+.plain {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+}

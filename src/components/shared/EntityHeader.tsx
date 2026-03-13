@@ -2,6 +2,9 @@ import React from "react";
 import { dataStore } from "../../data/dataStore";
 import { kindIcon, kindLabel } from "./entityConstants";
 import { MarkdownRenderer } from "./MarkdownRenderer";
+import { CrossPageNav } from "./CrossPageNav";
+import { ExternalLink } from "./ExternalLink";
+import s from "./EntityHeader.module.css";
 
 // ─── Data model ───────────────────────────────────────────────────────────────
 
@@ -151,11 +154,18 @@ export function getEntityHeaderData(kind: string, id: string): EntityHeaderData 
   if (kind === "topic") {
     const e = dataStore.topics.getById(id);
     if (!e) return empty;
+    const linkedProps = dataStore.propositions.getByTopic(id);
+    const rows: HeaderRow[] = [];
+    rows.push({ label: "Kind", value: e.topic_kind });
+    rows.push({ label: "Propositions", value: `${linkedProps.length}` });
+    for (const p of linkedProps) {
+      rows.push({ label: "→", value: p.proposition_label, linkKind: "proposition", linkId: p.proposition_id });
+    }
     return {
       title: e.topic_label,
-      subtitle: "",
+      subtitle: e.topic_kind,
       tags: [e.topic_kind],
-      rows: [],
+      rows,
       notes: e.notes || undefined,
     };
   }
@@ -176,32 +186,37 @@ interface EntityHeaderProps {
   id: string;
   showAllFields?: boolean;
   onSelectEntity?: (kind: string, id: string) => void;
+  currentPage?: "map" | "graph" | "wiki";
+  hideExternalLink?: boolean;
 }
 
-export function EntityHeader({ kind, id, showAllFields = false, onSelectEntity }: EntityHeaderProps) {
+export function EntityHeader({ kind, id, showAllFields = false, onSelectEntity, currentPage, hideExternalLink }: EntityHeaderProps) {
   const data = getEntityHeaderData(kind, id);
 
   return (
-    <div className="entity-header-block">
-      <div className="detail-kind-badge">{kindIcon(kind)} {kindLabel(kind)}</div>
-      <div className="detail-title">{data.title}</div>
-      {data.subtitle && <div className="detail-subtitle">{data.subtitle}</div>}
+    <div className={s.block}>
+      <div className={s.topRow}>
+        <div className={s.kindBadge}>{kindIcon(kind)} {kindLabel(kind)}</div>
+        {currentPage && <CrossPageNav kind={kind} id={id} current={currentPage} />}
+      </div>
+      <div className={s.title}>{data.title}</div>
+      {data.subtitle && <div className={s.subtitle}>{data.subtitle}</div>}
       {data.tags.length > 0 && (
-        <div className="detail-tags">
-          {data.tags.map((t, i) => <span key={i} className="tag accent">{t}</span>)}
+        <div className={s.tags}>
+          {data.tags.map((t, i) => <span key={i} className={s.tag}>{t}</span>)}
         </div>
       )}
 
       {showAllFields && (
         <>
           {data.rows.length > 0 && (
-            <div className="fact-grid" style={{ marginTop: 8 }}>
+            <div className={s.factGrid}>
               {data.rows.map(({ label, value, linkKind, linkId }) => (
                 <React.Fragment key={label}>
-                  <span className="fact-label">{label}</span>
-                  <span className="fact-value">
+                  <span className={s.factLabel}>{label}</span>
+                  <span className={s.factValue}>
                     {linkKind && linkId && onSelectEntity ? (
-                      <button type="button" className="mention-link" onClick={() => onSelectEntity(linkKind, linkId)}>
+                      <button type="button" className={s.mentionLink} onClick={() => onSelectEntity(linkKind, linkId)}>
                         {value}
                       </button>
                     ) : value}
@@ -211,14 +226,14 @@ export function EntityHeader({ kind, id, showAllFields = false, onSelectEntity }
             </div>
           )}
           {data.notes && (
-            <p className="entity-desc" style={{ marginTop: 8 }}>
+            <p className={s.desc}>
               <MarkdownRenderer onSelectEntity={onSelectEntity}>{data.notes}</MarkdownRenderer>
             </p>
           )}
-          {data.url && (
-            <a href={data.url} target="_blank" rel="noopener noreferrer" className="citation-link" style={{ marginTop: 6 }}>
-              Read online →
-            </a>
+          {data.url && !hideExternalLink && (
+            <ExternalLink href={data.url} className={s.link}>
+              Read online
+            </ExternalLink>
           )}
         </>
       )}

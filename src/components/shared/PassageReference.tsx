@@ -3,6 +3,8 @@ import type { Passage, SourceRecord } from "../../data/types";
 import { BibleOverlay } from "./BibleOverlay";
 import { formatPassageLocator, getPassageUrl, isBiblePassage } from "../../utils/passageReferences";
 import { getSourceAccessLabel } from "../../utils/sourceLinks";
+import { ExternalLink } from "./ExternalLink";
+import s from "./PassageReference.module.css";
 
 interface PassageReferenceProps {
   passage: Passage;
@@ -18,29 +20,15 @@ export function PassageReference({ passage, source = null }: PassageReferencePro
 
   if (isBiblePassage(passage)) {
     return (
-      <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-        <button
-          type="button"
-          className="bible-ref-btn evidence-locator"
-          onClick={(event) => {
-            event.stopPropagation();
-            setShowBibleOverlay(true);
-          }}
-          title={`Look up ${label}`}
-        >
+      <span className={s.wrap}>
+        <button type="button" className={s.bibleBtn}
+          onClick={(e) => { e.stopPropagation(); setShowBibleOverlay(true); }}
+          title={`Look up ${label}`}>
           {label}
         </button>
         {url && (
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="citation-link evidence-locator"
-            onClick={(event) => event.stopPropagation()}
-            title={accessLabel || `Open ${label}`}
-          >
-            ↗
-          </a>
+          <a href={url} target="_blank" rel="noopener noreferrer" className={s.extLink}
+            onClick={(e) => e.stopPropagation()} title={accessLabel || `Open ${label}`}>↗</a>
         )}
         {showBibleOverlay && (
           <BibleOverlay locator={passage.locator} onClose={() => setShowBibleOverlay(false)} />
@@ -51,18 +39,10 @@ export function PassageReference({ passage, source = null }: PassageReferencePro
 
   if (url) {
     return (
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="citation-link evidence-locator"
-        onClick={(event) => event.stopPropagation()}
-        title={`Open ${label}`}
-      >
-        {label}
-      </a>
+      <ExternalLink href={url} className={s.extLink}
+        onClick={(e) => e.stopPropagation()} title={`Open ${label}`}>{label}</ExternalLink>
     );
   }
 
-  return <span className="faint evidence-locator">{label}</span>;
+  return <span className={s.plain}>{label}</span>;
 }

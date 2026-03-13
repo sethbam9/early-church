@@ -1,7 +1,5 @@
-/**
- * Reusable filter chip bar for sidebar list tabs.
- * Each tab provides its own filter options; this component renders them uniformly.
- */
+import { Chip } from "./Chip";
+import s from "./FilterChips.module.css";
 
 interface FilterChipsProps<T extends string> {
   label: string;
@@ -14,31 +12,19 @@ export function FilterChips<T extends string>({ label, options, active, onChange
   if (options.length === 0) return null;
 
   return (
-    <div className="list-filter-bar" style={{ flexDirection: "column", alignItems: "stretch", gap: 4 }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-        <span className="faint" style={{ fontSize: "0.72rem" }}>{label}</span>
+    <div className={s.bar}>
+      <div className={s.header}>
+        <span className={s.label}>{label}</span>
         {active && (
-          <button
-            type="button"
-            className="section-label-action"
-            onClick={() => onChange(null)}
-            style={{ fontSize: "0.68rem" }}
-          >
-            clear
-          </button>
+          <button type="button" className={s.clearBtn} onClick={() => onChange(null)}>clear</button>
         )}
       </div>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
+      <div className={s.chips}>
         {options.map((opt) => (
-          <button
-            key={opt.value}
-            type="button"
-            className={`pchip${active === opt.value ? " active" : ""}`}
-            onClick={() => onChange(active === opt.value ? null : opt.value)}
-            style={{ fontSize: "0.7rem", padding: "2px 8px" }}
-          >
+          <Chip key={opt.value} active={active === opt.value}
+            onClick={() => onChange(active === opt.value ? null : opt.value)}>
             {opt.label}
-          </button>
+          </Chip>
         ))}
       </div>
     </div>

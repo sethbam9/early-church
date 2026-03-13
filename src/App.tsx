@@ -3,15 +3,16 @@ import { NavBar } from "./components/layout/NavBar";
 import { MapPage } from "./pages/MapPage";
 import { GraphPage } from "./pages/GraphPage";
 import { WikiPage } from "./pages/WikiPage";
+import s from "./App.module.css";
 
 export function App() {
   const { pathname } = useLocation();
   const page = pathname === "/graph" ? "graph" : pathname === "/wiki" ? "wiki" : "map";
 
   return (
-    <div className="app-root">
+    <div className={s.root}>
       <NavBar />
-      <div className="page-container">
+      <div className={s.pages}>
         <div style={{ display: page === "map"   ? "contents" : "none" }}><MapPage /></div>
         <div style={{ display: page === "graph" ? "contents" : "none" }}><GraphPage /></div>
         <div style={{ display: page === "wiki"  ? "contents" : "none" }}><WikiPage /></div>

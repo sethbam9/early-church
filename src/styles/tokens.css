@@ -1,0 +1,123 @@
+/* ─── Design Tokens ─────────────────────────────────────────────────────────── */
+/* Warm theme (default) — parchment/amber palette */
+
+:root {
+  /* Surfaces */
+  --bg-app:        #f5f0e8;
+  --bg-surface:    #fdfaf4;
+  --bg-surface-2:  #f0ebe0;
+  --bg-surface-3:  #e6dfd0;
+
+  /* Text */
+  --text-primary:  #2c2010;
+  --text-secondary:#6b5a40;
+  --text-muted:    #a08060;
+
+  /* Borders */
+  --border-default:#d6c9b0;
+  --border-subtle: #ede5d4;
+
+  /* Accent */
+  --accent:        #9a5c1e;
+  --accent-bright: #c47c3a;
+  --accent-dim:    rgba(196,124,58,0.13);
+  --accent-strong: #7a4415;
+
+  /* Semantic status */
+  --color-success: #1a7a5c;
+  --color-warning: #b07e10;
+  --color-danger:  #c0392b;
+
+  /* Domain-specific (presence/stance) */
+  --color-attested:  #1a7a5c;
+  --color-probable:  #b07e10;
+  --color-claimed:   #c47d2a;
+  --color-suppressed:#c0392b;
+  --color-unknown:   #8e8070;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+
+  /* Radius scale */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-pill:  999px;
+
+  /* Typography scale */
+  --font-size-xs:  0.72rem;
+  --font-size-sm:  0.78rem;
+  --font-size-md:  0.88rem;
+  --font-size-lg:  1.1rem;
+
+  /* Shadows */
+  --shadow-sm:  0 2px 10px rgba(0,0,0,0.09);
+  --shadow-md:  0 4px 18px rgba(0,0,0,0.13);
+  --shadow-lg:  0 8px 30px rgba(0,0,0,0.18);
+
+  /* Focus */
+  --focus-ring: 0 0 0 3px rgba(196,124,58,0.35);
+
+  /* Layout */
+  --nav-h:     44px;
+  --left-w:    268px;
+  --right-w:   380px;
+
+  /* Shorthand aliases (used by CSS modules) */
+  --border:    var(--border-default);
+  --surface:   var(--bg-surface);
+  --surface-2: var(--bg-surface-2);
+  --surface-3: var(--bg-surface-3);
+  --bg:        var(--bg-app);
+  --text:      var(--text-primary);
+  --text-faint:var(--text-muted);
+  --shadow:    var(--shadow-sm);
+  --radius:    var(--radius-md);
+
+  /* Domain shorthand */
+  --attested:  var(--color-attested);
+  --probable:  var(--color-probable);
+  --suppressed:var(--color-suppressed);
+}
+
+/* ─── Dark theme ────────────────────────────────────────────────────────────── */
+
+[data-theme="dark"] {
+  --bg-app:        #0b1020;
+  --bg-surface:    #121830;
+  --bg-surface-2:  #19213d;
+  --bg-surface-3:  #212b50;
+
+  --text-primary:  #eef2ff;
+  --text-secondary:#b7c0d8;
+  --text-muted:    #8d97b0;
+
+  --border-default:#2a3557;
+  --border-subtle: #1e2847;
+
+  --accent:        #8fb4ff;
+  --accent-bright: #a8c8ff;
+  --accent-dim:    rgba(143,180,255,0.14);
+  --accent-strong: #6a9aee;
+
+  --color-success: #4caf50;
+  --color-warning: #d4a72c;
+  --color-danger:  #d85b5b;
+
+  --color-attested:  #4caf50;
+  --color-probable:  #d4a72c;
+  --color-claimed:   #e8943a;
+  --color-suppressed:#d85b5b;
+  --color-unknown:   #8d97b0;
+
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md:  0 8px 24px rgba(0,0,0,0.4);
+  --shadow-lg:  0 12px 40px rgba(0,0,0,0.5);
+
+  --focus-ring: 0 0 0 3px rgba(143,180,255,0.35);
+}

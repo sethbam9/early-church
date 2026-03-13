@@ -1,0 +1,23 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-surface);
+  border-left: 1px solid var(--border);
+  transition: opacity 0.15s;
+}
+.closing { opacity: 0.4; }
+.dragHandle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  cursor: col-resize;
+  z-index: 10;
+  background: transparent;
+  transition: background 0.15s;
+}
+.dragHandle:hover { background: var(--accent-dim); }

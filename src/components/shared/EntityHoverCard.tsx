@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { kindIcon, kindLabel } from "./entityConstants";
+import s from "./EntityHoverCard.module.css";
 
 function getEntityFacts(kind: string, id: string): [string, string][] {
   const rows: [string, string][] = [];
@@ -83,15 +84,15 @@ function HoverCardPortal({ kind, id, anchorEl }: EntityHoverCardProps) {
   const facts = getEntityFacts(kind, id);
 
   return createPortal(
-    <div className="entity-hover-card" style={{ top: pos.top, left: pos.left }}>
-      <div className="entity-hover-card-kind">{kindIcon(kind)} {kindLabel(kind)}</div>
-      <div className="entity-hover-card-title">{label}</div>
+    <div className={s.tooltip} style={{ top: pos.top, left: pos.left }}>
+      <div className={s.kind}>{kindIcon(kind)} {kindLabel(kind)}</div>
+      <div className={s.title}>{label}</div>
       {facts.length > 0 && (
-        <dl className="entity-hover-card-facts">
+        <dl className={s.facts}>
           {facts.map(([k, v]) => (
-            <div key={k} style={{ display: "contents" }}>
-              <dt>{k}</dt>
-              <dd>{v}</dd>
+            <div key={k} className={s.factRow}>
+              <dt className={s.factKey}>{k}</dt>
+              <dd className={s.factVal}>{v}</dd>
             </div>
           ))}
         </dl>
@@ -114,7 +115,7 @@ export function EntityHoverWrap({ kind, id, children }: { kind: string; id: stri
       ref={ref}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      style={{ display: "inline" }}
+      className={s.wrap}
     >
       {children}
       {hovered && ref.current && <HoverCardPortal kind={kind} id={id} anchorEl={ref.current} />}

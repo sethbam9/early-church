@@ -4,9 +4,12 @@ import { dataStore } from "../../data/dataStore";
 import type { PlaceKind } from "../../data/dataStore";
 import { Hl } from "../shared/Hl";
 import { Pagination, PAGE_SIZE } from "../shared/Pagination";
+import { usePaginatedList } from "../../hooks/usePaginatedList";
 import { presenceColor } from "../shared/entityConstants";
 import { FilterChips } from "../shared/FilterChips";
+import { Switch } from "../shared/Switch";
 import type { Essay } from "../../data/essays";
+import s from "./PanelLists.module.css";
 
 // ─── Places list (unified — replaces CitiesList + ArchaeologyList) ───────────
 
@@ -19,17 +22,29 @@ const PLACE_KIND_OPTIONS: { value: PlaceKind; label: string }[] = [
   { value: "route", label: "Route" },
 ];
 
-export function PlacesList({ search, currentDecade, onSelectPlace, onFlyToPlace }: {
+export function PlacesList({ search, currentDecade, onSelectPlace, onFlyToPlace,
+  placeKindFilterOverride, setPlaceKindFilterOverride,
+  christianOnlyOverride, setChristianOnlyOverride,
+}: {
   search: string;
   currentDecade: number;
   onSelectPlace: (id: string) => void;
   onFlyToPlace: (id: string) => void;
+  placeKindFilterOverride?: PlaceKind | null;
+  setPlaceKindFilterOverride?: (k: PlaceKind | null) => void;
+  christianOnlyOverride?: boolean;
+  setChristianOnlyOverride?: (v: boolean) => void;
 }) {
   const includeCumulative = useAppStore((s) => s.includeCumulative);
-  const placeKindFilter   = useAppStore((s) => s.activePlaceKindFilter);
-  const setPlaceKindFilter = useAppStore((s) => s.setPlaceKindFilter);
-  const christianOnly     = useAppStore((s) => s.christianOnly);
-  const setChristianOnly  = useAppStore((s) => s.setChristianOnly);
+  const storePlaceKindFilter   = useAppStore((s) => s.activePlaceKindFilter);
+  const storeSetPlaceKindFilter = useAppStore((s) => s.setPlaceKindFilter);
+  const storeChristianOnly     = useAppStore((s) => s.christianOnly);
+  const storeSetChristianOnly  = useAppStore((s) => s.setChristianOnly);
+
+  const placeKindFilter = placeKindFilterOverride !== undefined ? placeKindFilterOverride : storePlaceKindFilter;
+  const setPlaceKindFilter = setPlaceKindFilterOverride ?? storeSetPlaceKindFilter;
+  const christianOnly = christianOnlyOverride !== undefined ? christianOnlyOverride : storeChristianOnly;
+  const setChristianOnly = setChristianOnlyOverride ?? storeSetChristianOnly;
   const [page, setPage]   = useState(0);
   const [mapVisibleOnly, setMapVisibleOnly] = useState(false);
 
@@ -75,18 +90,15 @@ export function PlacesList({ search, currentDecade, onSelectPlace, onFlyToPlace 
   return (
     <>
       <FilterChips label="Place type" options={PLACE_KIND_OPTIONS} active={placeKindFilter} onChange={setPlaceKindFilter} />
-      <div className="list-filter-bar">
-        <span className="faint" style={{ fontSize: "0.72rem" }}>
+      <div className={s.filterBar}>
+        <span className={`${s.faint} ${s.filterBarCount}`}>
           {mapVisibleOnly ? `${places.length} on map` : `${places.length} total · ${mapVisibleCount} on map`}
         </span>
-        <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
-          <label style={{ fontSize: "0.7rem", display: "flex", alignItems: "center", gap: 3, color: "var(--text-faint)" }}>
-            <input type="checkbox" checked={christianOnly} onChange={(e) => setChristianOnly(e.target.checked)} />
-            Christian
-          </label>
+        <div className={s.filterBarActions}>
+          <Switch checked={christianOnly} onChange={setChristianOnly} label="Christian" />
           <button
             type="button"
-            className={`list-filter-toggle${mapVisibleOnly ? " active" : ""}`}
+            className={`${s.listFilterToggle}${mapVisibleOnly ? ` ${s.listFilterToggleActive}` : ""}`}
             onClick={() => setMapVisibleOnly((v) => !v)}
             title={mapVisibleOnly ? "Showing map-visible only — click for all" : "Showing all places — click to filter to map-visible"}
           >
@@ -96,26 +108,26 @@ export function PlacesList({ search, currentDecade, onSelectPlace, onFlyToPlace 
       </div>
 
       {places.length === 0
-        ? <div className="empty-state">No places found.</div>
+        ? <div className={s.emptyState}>No places found.</div>
         : <>
             {pageItems.map((p) => (
-              <div key={p.place_id} className="sidebar-list-item" onClick={() => onSelectPlace(p.place_id)}>
-                <span className="sli-dot" style={{ background: presenceColor((p as any).presence_status ?? "unknown") }} />
-                <div className="sli-main">
-                  <div className="sli-name"><Hl text={p.place_label} query={search} /></div>
-                  <div className="sli-meta">
+              <div key={p.place_id} className={s.listItem} onClick={() => onSelectPlace(p.place_id)}>
+                <span className={s.dot} style={{ background: presenceColor((p as any).presence_status ?? "unknown") }} />
+                <div className={s.main}>
+                  <div className={s.name}><Hl text={p.place_label} query={search} /></div>
+                  <div className={s.meta}>
                     {p.place_label_modern && p.place_label_modern !== p.place_label ? `${p.place_label_modern} · ` : ""}
                     {p.modern_country_label}
-                    <span className="faint" style={{ marginLeft: 4 }}>{p.place_kind}</span>
+                    <span className={`${s.faint} ${s.placeKindTag}`}>{p.place_kind}</span>
                     {!mapVisibleOnly && decadePresence.has(p.place_id) && (
-                      <span style={{ color: "var(--attested)", marginLeft: 4, fontSize: "0.7rem" }}>on map</span>
+                      <span className={s.onMapTag}>on map</span>
                     )}
                   </div>
                 </div>
                 {p.lat != null && p.lon != null && (
                   <button
                     type="button"
-                    className="sli-fly-btn"
+                    className={s.flyBtn}
                     title="Fly to"
                     onClick={(e) => { e.stopPropagation(); onFlyToPlace(p.place_id); }}
                   >
@@ -149,9 +161,7 @@ export function GroupsList({ search, currentDecade, onSelect, mapFilterId, mapFi
   mapFilterId: string | null;
   mapFilterType: string | null;
 }) {
-  const [page, setPage] = useState(0);
   const [kindFilter, setKindFilter] = useState<string | null>(null);
-  useEffect(() => { setPage(0); }, [search, currentDecade, kindFilter]);
 
   const rows = useMemo(() => {
     const statesAtDecade = dataStore.map.getPlacesAtDecade(currentDecade);
@@ -172,33 +182,33 @@ export function GroupsList({ search, currentDecade, onSelect, mapFilterId, mapFi
       .sort((a, b) => a.group_label.localeCompare(b.group_label));
   }, [search, currentDecade, kindFilter]);
 
-  if (rows.length === 0 && !kindFilter) return <div className="empty-state">No groups found.</div>;
+  const { page, setPage, pageItems } = usePaginatedList(rows, PAGE_SIZE);
 
-  const pageItems = rows.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  if (rows.length === 0 && !kindFilter) return <div className={s.emptyState}>No groups found.</div>;
 
   return (
     <>
       <FilterChips label="Filter by kind" options={GROUP_KIND_OPTIONS} active={kindFilter} onChange={setKindFilter} />
       {rows.length === 0
-        ? <div className="empty-state">No groups match this filter.</div>
+        ? <div className={s.emptyState}>No groups match this filter.</div>
         : null}
       {pageItems.map((g) => {
         const isFiltered = mapFilterType === "group" && mapFilterId === g.group_id;
         return (
           <div
             key={g.group_id}
-            className={`sidebar-list-item${isFiltered ? " selected" : ""}`}
+            className={s.listItem}
             onClick={() => onSelect(g.group_id)}
           >
-            <span className="sli-icon">✦</span>
-            <div className="sli-main">
-              <div className="sli-name">{g.group_label}</div>
-              <div className="sli-meta">
+            <span className={s.icon}>✦</span>
+            <div className={s.main}>
+              <div className={s.name}>{g.group_label}</div>
+              <div className={s.meta}>
                 {g.group_kind}
                 {g.count > 0 && ` · ${g.count} places at AD ${currentDecade}`}
               </div>
             </div>
-            {g.count > 0 && <span className="sli-badge">{g.count}</span>}
+            {g.count > 0 && <span className={s.badge}>{g.count}</span>}
           </div>
         );
       })}
@@ -217,9 +227,7 @@ const PERSON_KIND_OPTIONS = [
 ];
 
 export function PeopleList({ search, onSelect }: { search: string; onSelect: (id: string) => void }) {
-  const [page, setPage] = useState(0);
   const [kindFilter, setKindFilter] = useState<string | null>(null);
-  useEffect(() => { setPage(0); }, [search, kindFilter]);
 
   const people = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -229,20 +237,20 @@ export function PeopleList({ search, onSelect }: { search: string; onSelect: (id
     return all.filter((p) => `${p.person_label} ${p.name_alt.join(" ")} ${p.notes}`.toLowerCase().includes(q));
   }, [search, kindFilter]);
 
-  if (people.length === 0 && !kindFilter) return <div className="empty-state">No people found.</div>;
+  const { page, setPage, pageItems } = usePaginatedList(people, PAGE_SIZE);
 
-  const pageItems = people.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  if (people.length === 0 && !kindFilter) return <div className={s.emptyState}>No people found.</div>;
 
   return (
     <>
       <FilterChips label="Filter by kind" options={PERSON_KIND_OPTIONS} active={kindFilter} onChange={setKindFilter} />
-      {people.length === 0 ? <div className="empty-state">No people match this filter.</div> : null}
+      {people.length === 0 ? <div className={s.emptyState}>No people match this filter.</div> : null}
       {pageItems.map((p) => (
-        <div key={p.person_id} className="sidebar-list-item" onClick={() => onSelect(p.person_id)}>
-          <span className="sli-icon">👤</span>
-          <div className="sli-main">
-            <div className="sli-name">{p.person_label}</div>
-            <div className="sli-meta">
+        <div key={p.person_id} className={s.listItem} onClick={() => onSelect(p.person_id)}>
+          <span className={s.icon}>👤</span>
+          <div className={s.main}>
+            <div className={s.name}>{p.person_label}</div>
+            <div className={s.meta}>
               {p.person_kind !== "individual" ? p.person_kind : ""}
               {p.birth_year_display ? ` ${p.birth_year_display}` : ""}
               {p.death_year_display ? ` – ${p.death_year_display}` : ""}
@@ -261,9 +269,7 @@ export function PropositionsList({ search, onSelect }: {
   search: string;
   onSelect: (id: string) => void;
 }) {
-  const [page, setPage] = useState(0);
   const [topicFilter, setTopicFilter] = useState<string | null>(null);
-  useEffect(() => { setPage(0); }, [search, topicFilter]);
 
   const topicOptions = useMemo(() =>
     dataStore.topics.getAll().map((t) => ({ value: t.topic_id, label: t.topic_label })),
@@ -280,22 +286,22 @@ export function PropositionsList({ search, onSelect }: {
     );
   }, [search, topicFilter]);
 
-  if (propositions.length === 0 && !topicFilter) return <div className="empty-state">No propositions found.</div>;
+  const { page, setPage, pageItems } = usePaginatedList(propositions, PAGE_SIZE);
 
-  const pageItems = propositions.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  if (propositions.length === 0 && !topicFilter) return <div className={s.emptyState}>No propositions found.</div>;
 
   return (
     <>
       <FilterChips label="Filter by topic" options={topicOptions} active={topicFilter} onChange={setTopicFilter} />
-      {propositions.length === 0 ? <div className="empty-state">No propositions match this filter.</div> : null}
+      {propositions.length === 0 ? <div className={s.emptyState}>No propositions match this filter.</div> : null}
       {pageItems.map((p) => {
         const topic = dataStore.topics.getById(p.topic_id);
         return (
-          <div key={p.proposition_id} className="sidebar-list-item" onClick={() => onSelect(p.proposition_id)}>
-            <span className="sli-icon">📝</span>
-            <div className="sli-main">
-              <div className="sli-name"><Hl text={p.proposition_label} query={search} /></div>
-              <div className="sli-meta">
+          <div key={p.proposition_id} className={s.listItem} onClick={() => onSelect(p.proposition_id)}>
+            <span className={s.icon}>📝</span>
+            <div className={s.main}>
+              <div className={s.name}><Hl text={p.proposition_label} query={search} /></div>
+              <div className={s.meta}>
                 {topic?.topic_label ?? p.topic_id}
               </div>
             </div>
@@ -322,9 +328,7 @@ export function EventsList({ search, onSelect }: {
   search: string;
   onSelect: (id: string) => void;
 }) {
-  const [page, setPage] = useState(0);
   const [typeFilter, setTypeFilter] = useState<string | null>(null);
-  useEffect(() => { setPage(0); }, [search, typeFilter]);
 
   const events = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -334,20 +338,20 @@ export function EventsList({ search, onSelect }: {
     return all.filter((e) => `${e.event_label} ${e.event_type} ${e.notes}`.toLowerCase().includes(q));
   }, [search, typeFilter]);
 
-  if (events.length === 0 && !typeFilter) return <div className="empty-state">No events found.</div>;
+  const { page, setPage, pageItems } = usePaginatedList(events, PAGE_SIZE);
 
-  const pageItems = events.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  if (events.length === 0 && !typeFilter) return <div className={s.emptyState}>No events found.</div>;
 
   return (
     <>
       <FilterChips label="Filter by type" options={EVENT_TYPE_OPTIONS} active={typeFilter} onChange={setTypeFilter} />
-      {events.length === 0 ? <div className="empty-state">No events match this filter.</div> : null}
+      {events.length === 0 ? <div className={s.emptyState}>No events match this filter.</div> : null}
       {pageItems.map((e) => (
-        <div key={e.event_id} className="sidebar-list-item" onClick={() => onSelect(e.event_id)}>
-          <span className="sli-icon">⚡</span>
-          <div className="sli-main">
-            <div className="sli-name">{e.event_label}</div>
-            <div className="sli-meta">{e.event_type}</div>
+        <div key={e.event_id} className={s.listItem} onClick={() => onSelect(e.event_id)}>
+          <span className={s.icon}>⚡</span>
+          <div className={s.main}>
+            <div className={s.name}>{e.event_label}</div>
+            <div className={s.meta}>{e.event_type}</div>
           </div>
         </div>
       ))}
@@ -366,9 +370,7 @@ const WORK_TYPE_OPTIONS = [
 ];
 
 export function WorksList({ search, onSelect }: { search: string; onSelect: (id: string) => void }) {
-  const [page, setPage] = useState(0);
   const [typeFilter, setTypeFilter] = useState<string | null>(null);
-  useEffect(() => { setPage(0); }, [search, typeFilter]);
 
   const works = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -380,20 +382,20 @@ export function WorksList({ search, onSelect }: { search: string; onSelect: (id:
     );
   }, [search, typeFilter]);
 
-  if (works.length === 0 && !typeFilter) return <div className="empty-state">No works found.</div>;
+  const { page, setPage, pageItems } = usePaginatedList(works, PAGE_SIZE);
 
-  const pageItems = works.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  if (works.length === 0 && !typeFilter) return <div className={s.emptyState}>No works found.</div>;
 
   return (
     <>
       <FilterChips label="Filter by type" options={WORK_TYPE_OPTIONS} active={typeFilter} onChange={setTypeFilter} />
-      {works.length === 0 ? <div className="empty-state">No works match this filter.</div> : null}
+      {works.length === 0 ? <div className={s.emptyState}>No works match this filter.</div> : null}
       {pageItems.map((w) => (
-        <div key={w.work_id} className="sidebar-list-item" onClick={() => onSelect(w.work_id)}>
-          <span className="sli-icon">📜</span>
-          <div className="sli-main">
-            <div className="sli-name">{w.title_display}</div>
-            <div className="sli-meta">
+        <div key={w.work_id} className={s.listItem} onClick={() => onSelect(w.work_id)}>
+          <span className={s.icon}>📜</span>
+          <div className={s.main}>
+            <div className={s.name}>{w.title_display}</div>
+            <div className={s.meta}>
               {w.work_type}
               {w.language_original ? ` · ${w.language_original}` : ""}
             </div>
@@ -423,47 +425,37 @@ export function EssaysList({ search, essays, loading, onSelect }: {
     );
   }, [search, essays]);
 
-  if (loading) return <div className="empty-state">Loading essays…</div>;
-  if (filtered.length === 0) return <div className="empty-state">No essays found.</div>;
+  if (loading) return <div className={s.emptyState}>Loading essays…</div>;
+  if (filtered.length === 0) return <div className={s.emptyState}>No essays found.</div>;
 
   return (
     <>
       {filtered.map((e) => (
         <div key={e.id}>
           <div
-            className="sidebar-list-item"
-            style={{ alignItems: "center" }}
+            className={`${s.listItem} ${s.listItemCenter}`}
             onClick={() => onSelect(e)}
           >
-            <span className="sli-icon">✍</span>
-            <div className="sli-main">
-              <div className="sli-name">{e.title}</div>
+            <span className={s.icon}>✍</span>
+            <div className={s.main}>
+              <div className={s.name}>{e.title}</div>
             </div>
             {e.summary && (
               <button
                 type="button"
+                className={s.expandBtn}
                 onClick={(evt) => {
                   evt.stopPropagation();
                   setExpandedId(expandedId === e.id ? null : e.id);
                 }}
                 title={expandedId === e.id ? "Hide summary" : "Show summary"}
-                style={{
-                  background: "none", border: "none", cursor: "pointer",
-                  color: "var(--text-faint)", fontSize: "0.7rem", padding: "2px 4px",
-                  flexShrink: 0,
-                }}
               >
                 {expandedId === e.id ? "▲" : "▼"}
               </button>
             )}
           </div>
           {expandedId === e.id && e.summary && (
-            <div style={{
-              padding: "6px 12px 8px 36px",
-              fontSize: "0.8rem", color: "var(--text-muted)",
-              lineHeight: 1.5, borderBottom: "1px solid var(--border-subtle)",
-              background: "var(--surface-2)",
-            }}>
+            <div className={s.expandedSummary}>
               {e.summary}
             </div>
           )}

@@ -16,11 +16,11 @@ export function getClaimAuditStatus(claim: Claim): ClaimAuditStatus {
 
 export function getClaimBorderClass(status: ClaimAuditStatus): string {
   switch (status) {
-    case "no-evidence":    return "wiki-border--red";
+    case "no-evidence":    return "borderRed";
     case "unreviewed":
-    case "needs-revision": return "wiki-border--orange";
-    case "disputed":       return "wiki-border--red";
-    case "approved":       return "wiki-border--green";
+    case "needs-revision": return "borderOrange";
+    case "disputed":       return "borderRed";
+    case "approved":       return "borderGreen";
     default:               return "";
   }
 }
@@ -33,6 +33,9 @@ export interface ClaimAuditRow {
   subjectLabel: string;
   objectLabel: string;
   isDuplicate: boolean;
+  yearLabel: string;
+  yearSort: number | null;
+  latestReviewAt: string;
 }
 
 let _auditCache: ClaimAuditRow[] | null = null;
@@ -51,6 +54,16 @@ export function getAuditRows(): ClaimAuditRow[] {
     const ev = dataStore.claimEvidence.getForClaim(c.claim_id);
     const rv = dataStore.claimReviews.getForClaim(c.claim_id);
     const key = `${c.subject_type}:${c.subject_id}|${c.predicate_id}|${c.object_type}:${c.object_id}`;
+    const ys = c.year_start;
+    const ye = c.year_end;
+    const vy = c.value_year;
+    let yearLabel = "";
+    let yearSort: number | null = null;
+    if (vy != null) { yearLabel = String(vy); yearSort = vy; }
+    else if (ys != null) { yearLabel = ye != null && ye !== ys ? `${ys}–${ye}` : String(ys); yearSort = ys; }
+    const latestReviewAt = rv.length > 0
+      ? rv.reduce((best, r) => r.reviewed_at > best ? r.reviewed_at : best, "")
+      : "";
     return {
       claim: c,
       status: getClaimAuditStatus(c),
@@ -62,6 +75,9 @@ export function getAuditRows(): ClaimAuditRow[] {
           ? getEntityLabel(c.object_type, c.object_id)
           : c.value_text || (c.value_year != null ? String(c.value_year) : "") || "",
       isDuplicate: (dupeMap.get(key) ?? 0) > 1,
+      yearLabel,
+      yearSort,
+      latestReviewAt,
     };
   });
   return _auditCache;

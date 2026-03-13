@@ -1,577 +1,28 @@
-import { useState, useMemo, useCallback, useRef, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
-import { createPortal } from "react-dom";
-import { dataStore, getEntityLabel, globalSearch } from "../data/dataStore";
-import type { Claim, ClaimEvidence, ClaimReview } from "../data/types";
-import { kindIcon, kindLabel, KIND_ICONS } from "../components/shared/entityConstants";
-import { ESSAYS, type Essay } from "../data/essays";
+import { useState, useMemo, useRef, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
+import s from "./WikiPage.module.css";
+import { useAppStore } from "../stores/appStore";
+import { dataStore } from "../data/dataStore";
+import { kindIcon, kindLabel, KIND_ICONS, ENTITY_TABS } from "../components/shared/entityConstants";
+import { GlobalSearchOverlay } from "../components/shared/GlobalSearchOverlay";
+import { ESSAYS } from "../data/essays";
 import { MarkdownRenderer } from "../components/shared/MarkdownRenderer";
-import { getPredicateLabel } from "../domain/relationLabels";
-import { getSourceExternalUrl, getSourceAccessTitle } from "../utils/sourceLinks";
 import { usePaginatedList } from "../hooks/usePaginatedList";
-import { Pagination, PAGE_SIZE } from "../components/shared/Pagination";
+import { useWikiPageState } from "../hooks/useWikiPageState";
+import { Pagination } from "../components/shared/Pagination";
 import { CrossPageNav } from "../components/shared/CrossPageNav";
 import { NoteCard } from "../components/shared/NoteCard";
 import { EntityHeader as SharedEntityHeader } from "../components/shared/EntityHeader";
-import { EvidenceCard } from "../components/shared/EvidenceCard";
-import { EntityDetail } from "../components/sidebar/EntityDetail";
-import { getClaimAuditStatus, getClaimBorderClass, getAuditRows } from "../utils/claimAudit";
-import type { ClaimAuditStatus, ClaimAuditRow } from "../utils/claimAudit";
-
-// ─── Types ────────────────────────────────────────────────────────────────────
-
-type WikiMode = "browse" | "audit";
-type BrowseSelection = { kind: string; id: string };
-
-const ENTITY_TABS: { kind: string; label: string }[] = [
-  { kind: "person",      label: "People" },
-  { kind: "place",       label: "Places" },
-  { kind: "group",       label: "Groups" },
-  { kind: "work",        label: "Works" },
-  { kind: "event",       label: "Events" },
-  { kind: "proposition", label: "Propositions" },
-  { kind: "topic",       label: "Topics" },
-  { kind: "source",      label: "Sources" },
-  { kind: "editor_note", label: "Notes" },
-  { kind: "essay",       label: "Essays" },
-];
-
-function getEntityAllClaims(kind: string, id: string): Claim[] {
-  return dataStore.claims.getForEntity(kind, id)
-    .filter((c) => !dataStore.claims.isInfraPredicate(c.predicate_id));
-}
-
-// ─── Entity list helpers ──────────────────────────────────────────────────────
-
-function getAllEntities(kind: string): { id: string; label: string; count: number; countLabel: string }[] {
-  switch (kind) {
-    case "person": return dataStore.people.getAll().map((e) => ({
-      id: e.person_id, label: e.person_label,
-      count: getEntityAllClaims("person", e.person_id).length, countLabel: "claims",
-    }));
-    case "place": return dataStore.places.getAll().map((e) => ({
-      id: e.place_id, label: e.place_label,
-      count: getEntityAllClaims("place", e.place_id).length, countLabel: "claims",
-    }));
-    case "group": return dataStore.groups.getAll().map((e) => ({
-      id: e.group_id, label: e.group_label,
-      count: getEntityAllClaims("group", e.group_id).length, countLabel: "claims",
-    }));
-    case "work": return dataStore.works.getAll().map((e) => ({
-      id: e.work_id, label: e.title_display,
-      count: getEntityAllClaims("work", e.work_id).length, countLabel: "claims",
-    }));
-    case "event": return dataStore.events.getAll().map((e) => ({
-      id: e.event_id, label: e.event_label,
-      count: getEntityAllClaims("event", e.event_id).length, countLabel: "claims",
-    }));
-    case "proposition": return dataStore.propositions.getAll().map((e) => ({
-      id: e.proposition_id, label: e.proposition_label,
-      count: getEntityAllClaims("proposition", e.proposition_id).length, countLabel: "claims",
-    }));
-    case "source": {
-      return dataStore.sources.getAll().map((e) => {
-        const passages = dataStore.passages.getBySource(e.source_id);
-        return {
-          id: e.source_id, label: e.title,
-          count: passages.length, countLabel: "passages",
-        };
-      });
-    }
-    case "topic": return dataStore.topics.getAll().map((e) => ({
-      id: e.topic_id, label: e.topic_label,
-      count: getEntityAllClaims("topic", e.topic_id).length, countLabel: "claims",
-    }));
-    case "editor_note": return dataStore.editorNotes.getAll().map((e) => ({
-      id: e.editor_note_id, label: e.body_md.slice(0, 60) + (e.body_md.length > 60 ? "…" : ""),
-      count: 0, countLabel: "",
-    }));
-    case "essay": return ESSAYS.map((e) => ({
-      id: e.id, label: e.title,
-      count: 0, countLabel: "",
-    }));
-    default: return [];
-  }
-}
-
-// ─── Fixed-position tooltip (portal) ──────────────────────────────────────────
-
-function FixedTooltip({ anchorRef, children }: { anchorRef: React.RefObject<HTMLElement | null>; children: React.ReactNode }) {
-  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
-  useEffect(() => {
-    const el = anchorRef.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    const tooltipW = 280;
-    const tooltipH = 200;
-    let top = rect.bottom + 4;
-    let left = rect.left;
-    if (top + tooltipH > window.innerHeight) top = rect.top - tooltipH - 4;
-    if (left + tooltipW > window.innerWidth) left = window.innerWidth - tooltipW - 8;
-    if (left < 4) left = 4;
-    setPos({ top, left });
-  }, [anchorRef]);
-
-  if (!pos) return null;
-  return createPortal(
-    <div className="wiki-tooltip wiki-tooltip--fixed" style={{ top: pos.top, left: pos.left }}>{children}</div>,
-    document.body,
-  );
-}
-
-// ─── Field tooltip content ────────────────────────────────────────────────────
-
-function EntityTooltipContent({ kind, id }: { kind: string; id: string }) {
-  const rows: [string, string][] = [];
-  if (kind === "person") {
-    const e = dataStore.people.getById(id);
-    if (e) {
-      rows.push(["ID", e.person_id], ["Kind", e.person_kind]);
-      if (e.name_alt.length) rows.push(["Alt names", e.name_alt.join("; ")]);
-      if (e.name_native) rows.push(["Native", e.name_native]);
-      if (e.birth_year_display) rows.push(["Born", e.birth_year_display]);
-      if (e.death_year_display) rows.push(["Died", e.death_year_display]);
-      if (e.notes) rows.push(["Notes", e.notes.slice(0, 120)]);
-    }
-  } else if (kind === "place") {
-    const e = dataStore.places.getById(id);
-    if (e) {
-      rows.push(["ID", e.place_id], ["Kind", e.place_kind]);
-      if (e.place_label_modern) rows.push(["Modern", e.place_label_modern]);
-      if (e.modern_country_label) rows.push(["Country", e.modern_country_label]);
-      if (e.lat != null) rows.push(["Coords", `${e.lat}, ${e.lon}`]);
-      rows.push(["Precision", e.location_precision]);
-    }
-  } else if (kind === "work") {
-    const e = dataStore.works.getById(id);
-    if (e) {
-      rows.push(["ID", e.work_id], ["Type", e.work_type], ["Kind", e.work_kind]);
-      if (e.title_original) rows.push(["Original title", e.title_original]);
-      if (e.language_original) rows.push(["Language", e.language_original]);
-    }
-  } else if (kind === "event") {
-    const e = dataStore.events.getById(id);
-    if (e) { rows.push(["ID", e.event_id], ["Type", e.event_type], ["Kind", e.event_kind]); }
-  } else if (kind === "group") {
-    const e = dataStore.groups.getById(id);
-    if (e) { rows.push(["ID", e.group_id], ["Kind", e.group_kind], ["Christian", e.is_christian ? "yes" : "no"]); }
-  } else if (kind === "proposition") {
-    const e = dataStore.propositions.getById(id);
-    if (e) {
-      const topic = dataStore.topics.getById(e.topic_id);
-      rows.push(["ID", e.proposition_id]);
-      if (topic) rows.push(["Topic", topic.topic_label]);
-      if (e.description) rows.push(["Description", e.description.slice(0, 120)]);
-    }
-  } else if (kind === "source") {
-    const e = dataStore.sources.getById(id);
-    if (e) {
-      rows.push(["ID", e.source_id], ["Kind", e.source_kind]);
-      if (e.author) rows.push(["Author", e.author]);
-      if (e.year) rows.push(["Year", e.year]);
-    }
-  } else if (kind === "passage") {
-    const e = dataStore.passages.getById(id);
-    if (e) {
-      const src = dataStore.sources.getById(e.source_id);
-      rows.push(["ID", e.passage_id], ["Locator", e.locator]);
-      if (src) rows.push(["Source", src.title]);
-      if (e.excerpt) rows.push(["Excerpt", e.excerpt.slice(0, 120)]);
-    }
-  }
-  if (rows.length === 0) return null;
-  return (
-    <table className="wiki-tooltip-table">
-      <tbody>
-        {rows.map(([k, v]) => <tr key={k}><td className="wiki-tooltip-key">{k}</td><td className="wiki-tooltip-val">{v}</td></tr>)}
-      </tbody>
-    </table>
-  );
-}
-
-// ─── Entity chip (with portal tooltip) ────────────────────────────────────────
-
-function EntityChip({ kind, id, onClick }: { kind: string; id: string; onClick?: () => void }) {
-  const [hovered, setHovered] = useState(false);
-  const ref = useRef<HTMLSpanElement>(null);
-  const label = id ? getEntityLabel(kind, id) : "";
-  return (
-    <span ref={ref} className="wiki-entity-chip" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-      <button type="button" className="wiki-chip-btn" onClick={onClick}>
-        {kindIcon(kind)} {label || id}
-      </button>
-      {hovered && <FixedTooltip anchorRef={ref}><EntityTooltipContent kind={kind} id={id} /></FixedTooltip>}
-    </span>
-  );
-}
-
-// ─── Review badge ─────────────────────────────────────────────────────────────
-
-const REVIEW_META: Record<string, { icon: string; cls: string }> = {
-  approved:      { icon: "✓", cls: "wiki-review--approved" },
-  reviewed:      { icon: "◉", cls: "wiki-review--reviewed" },
-  disputed:      { icon: "✗", cls: "wiki-review--disputed" },
-  needs_revision:{ icon: "↻", cls: "wiki-review--warn" },
-  unreviewed:    { icon: "○", cls: "wiki-review--unreviewed" },
-};
-
-// ─── Claim row ────────────────────────────────────────────────────────────────
-
-function ClaimRow({ claim, focusKind, focusId, onSelectEntity, onSelectClaim, isSelected, roleFilter }: {
-  claim: Claim;
-  focusKind: string;
-  focusId: string;
-  onSelectEntity: (kind: string, id: string) => void;
-  onSelectClaim: (claimId: string) => void;
-  isSelected: boolean;
-  roleFilter?: string | null;
-}) {
-  const [expanded, setExpanded] = useState(false);
-  const isSubject  = claim.subject_type === focusKind && claim.subject_id === focusId;
-  const othKind    = isSubject ? claim.object_type  : claim.subject_type;
-  const othId      = isSubject ? claim.object_id    : claim.subject_id;
-  const predLabel  = getPredicateLabel(claim.predicate_id, isSubject);
-  const auditStatus = getClaimAuditStatus(claim);
-  const borderCls   = getClaimBorderClass(auditStatus);
-  const evidence    = dataStore.claimEvidence.getForClaim(claim.claim_id);
-  const reviews     = dataStore.claimReviews.getForClaim(claim.claim_id);
-
-  const yearRange = claim.year_start
-    ? `AD ${claim.year_start}${claim.year_end && claim.year_end !== claim.year_start ? `–${claim.year_end}` : ""}`
-    : "";
-
-  return (
-    <div className={`wiki-claim-row ${borderCls}${isSelected ? " wiki-claim-row--selected" : ""}`}>
-      <div className="wiki-claim-main" onClick={() => onSelectClaim(claim.claim_id)}>
-        <div className="wiki-claim-left">
-          <span className="wiki-pred-label">{predLabel}</span>
-          {othId && claim.object_mode === "entity" ? (
-            <EntityChip kind={othKind} id={othId} onClick={() => onSelectEntity(othKind, othId)} />
-          ) : (
-            <span className="wiki-claim-value">
-              {claim.value_text || (claim.value_year != null ? `${claim.value_year}` : "") || (claim.value_boolean != null ? String(claim.value_boolean) : "")}
-            </span>
-          )}
-          {claim.context_place_id && (
-            <span className="wiki-context-place">
-              <span className="faint">@ </span>
-              <EntityChip kind="place" id={claim.context_place_id} onClick={() => onSelectEntity("place", claim.context_place_id)} />
-            </span>
-          )}
-        </div>
-        <div className="wiki-claim-right">
-          {yearRange && <span className="wiki-year">{yearRange}</span>}
-          {claim.certainty && claim.certainty !== "attested" && (
-            <span className={`wiki-certainty wiki-certainty--${claim.certainty}`}>{claim.certainty}</span>
-          )}
-          {reviews.map((r, i) => {
-            const m = REVIEW_META[r.review_status] ?? { icon: "?", cls: "" };
-            const timestamp = r.reviewed_at ? new Date(r.reviewed_at).toISOString().split('T')[0] : '';
-            return <span key={i} className={`wiki-review-badge ${m.cls}`} title={`${r.review_status} · ${r.confidence} · ${r.reviewer_id}${timestamp ? ` · ${timestamp}` : ''}`}>{m.icon}</span>;
-          })}
-          <span className="wiki-ev-count" title={`${evidence.length} evidence link(s)`}>
-            {evidence.length}ev
-          </span>
-          <button type="button" className="wiki-expand-btn" onClick={(e) => { e.stopPropagation(); setExpanded((x) => !x); }}>
-            {expanded ? "▲" : "▼"}
-          </button>
-        </div>
-      </div>
-      {expanded && (
-        <div className="wiki-claim-evidence">
-          {evidence.length === 0 && <div className="wiki-empty-sub">No evidence linked.</div>}
-          {evidence
-            .filter((ev) => !roleFilter || roleFilter === "all" || ev.evidence_role === roleFilter)
-            .map((ev) => <EvidenceCard key={ev.passage_id} ev={ev} onSelectEntity={onSelectEntity} />)}
-          {reviews.length > 0 && (
-            <div className="wiki-claim-reviews-inline">
-              {reviews.map((r, i) => {
-                const m = REVIEW_META[r.review_status] ?? { icon: "?", cls: "" };
-                const timestamp = r.reviewed_at ? new Date(r.reviewed_at).toISOString().split('T')[0] : '';
-                return (
-                  <div key={i} className="wiki-review-inline">
-                    <span className={`wiki-review-badge ${m.cls}`}>{m.icon} {r.review_status}</span>
-                    <span className="faint">{r.confidence}</span>
-                    {r.reviewer_id && <span className="faint">by {r.reviewer_id}</span>}
-                    {timestamp && <span className="faint">{timestamp}</span>}
-                    {r.note && <span className="wiki-review-note-inline">{r.note}</span>}
-                  </div>
-                );
-              })}
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
-// ─── Entity header (wrapper around shared component for wiki layout) ────────────
-
-function WikiEntityHeader({ kind, id, onBack, historyLength, onSelectEntity }: {
-  kind: string; id: string; onBack: () => void; historyLength: number;
-  onSelectEntity: (kind: string, id: string) => void;
-}) {
-  return (
-    <div className="wiki-entity-header">
-      {historyLength > 0 && (
-        <button type="button" className="back-btn wiki-back-btn" onClick={onBack}>← Back</button>
-      )}
-      <div className="wiki-entity-header-nav">
-        <CrossPageNav kind={kind} id={id} current="wiki" />
-      </div>
-      <SharedEntityHeader kind={kind} id={id} showAllFields onSelectEntity={onSelectEntity} />
-    </div>
-  );
-}
-
-// ─── Claims panel (grouped by predicate) ──────────────────────────────────────
-
-const EVIDENCE_ROLES = ["all", "supports", "opposes", "contextualizes", "mentions"] as const;
-type EvidenceRoleFilter = typeof EVIDENCE_ROLES[number];
-
-function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelectClaim }: {
-  kind: string; id: string;
-  onSelectEntity: (kind: string, id: string) => void;
-  selectedClaimId: string | null;
-  onSelectClaim: (id: string) => void;
-}) {
-  const [roleFilter, setRoleFilter] = useState<EvidenceRoleFilter>("all");
-  const [certFilter, setCertFilter] = useState("all");
-  const [predSearch, setPredSearch] = useState("");
-  const claims = useMemo(() => getEntityAllClaims(kind, id), [kind, id]);
-
-  const filteredClaims = useMemo(() => {
-    let rows = claims;
-    if (roleFilter !== "all") {
-      rows = rows.filter((c) => {
-        const ev = dataStore.claimEvidence.getForClaim(c.claim_id);
-        return ev.some((e) => e.evidence_role === roleFilter);
-      });
-    }
-    if (certFilter !== "all") rows = rows.filter((c) => c.certainty === certFilter);
-    if (predSearch) {
-      const pq = predSearch.toLowerCase();
-      rows = rows.filter((c) => c.predicate_id.includes(pq));
-    }
-    return rows;
-  }, [claims, roleFilter, certFilter, predSearch]);
-
-  const grouped = useMemo(() => {
-    const map = new Map<string, Claim[]>();
-    for (const c of filteredClaims) { const b = map.get(c.predicate_id) ?? []; b.push(c); map.set(c.predicate_id, b); }
-    return Array.from(map.entries()).sort((a, b) => a[0].localeCompare(b[0]));
-  }, [filteredClaims]);
-
-  const stats = useMemo(() => {
-    let noEv = 0, unrev = 0, disp = 0, appr = 0;
-    for (const c of claims) {
-      const s = getClaimAuditStatus(c);
-      if (s === "no-evidence") noEv++;
-      if (s === "unreviewed") unrev++;
-      if (s === "disputed") disp++;
-      if (s === "approved") appr++;
-    }
-    return { total: claims.length, noEv, unrev, disp, appr };
-  }, [claims]);
-
-  // Source-specific: show passages and their linked claims
-  if (kind === "source") {
-    const passages = dataStore.passages.getBySource(id);
-    return (
-      <div className="wiki-claims-panel">
-        <div className="wiki-audit-summary">
-          <span className="wiki-audit-total">{passages.length} passages</span>
-        </div>
-        {passages.length === 0 && <div className="empty-state">No passages for this source.</div>}
-        {passages.map((p) => {
-          const linkedEvidence = dataStore.claimEvidence.getAll().filter((ev) => ev.passage_id === p.passage_id);
-          return (
-            <div key={p.passage_id} className="wiki-pred-group">
-              <div className="wiki-pred-group-header">
-                <span className="wiki-pred-id">{p.locator || p.passage_id}</span>
-                <span className="wiki-pred-desc faint">{p.locator_type}</span>
-                <span className="wiki-pred-count faint">{linkedEvidence.length} claim(s)</span>
-              </div>
-              {p.excerpt && <div className="wiki-excerpt" style={{ margin: "4px 0 6px 4px" }}>{p.excerpt}</div>}
-              {linkedEvidence.map((ev) => {
-                const claim = dataStore.claims.getById(ev.claim_id);
-                if (!claim) return null;
-                return (
-                  <ClaimRow
-                    key={claim.claim_id}
-                    claim={claim}
-                    focusKind={claim.subject_type}
-                    focusId={claim.subject_id}
-                    onSelectEntity={onSelectEntity}
-                    onSelectClaim={onSelectClaim}
-                    isSelected={claim.claim_id === selectedClaimId}
-                  />
-                );
-              })}
-              {linkedEvidence.length === 0 && <div className="wiki-empty-sub faint" style={{ paddingLeft: 4 }}>No claims reference this passage.</div>}
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-
-  const editorNotes = useMemo(() => dataStore.editorNotes.getForEntity(kind, id), [kind, id]);
-
-  if (claims.length === 0 && editorNotes.length === 0) return <div className="empty-state">No claims for this entity.</div>;
-
-  return (
-    <div className="wiki-claims-panel">
-      {/* Filters */}
-      <div className="wiki-ev-role-filter">
-        {EVIDENCE_ROLES.map((r) => (
-          <button key={r} type="button"
-            className={`wiki-ev-role-chip${roleFilter === r ? " active" : ""} wiki-ev-role--${r}`}
-            onClick={() => setRoleFilter(r)}
-          >
-            {r}
-          </button>
-        ))}
-        <select className="wiki-audit-select" value={certFilter} onChange={(e) => setCertFilter(e.target.value)} style={{ marginLeft: 4 }}>
-          <option value="all">All certainty</option>
-          <option value="attested">Attested</option>
-          <option value="probable">Probable</option>
-          <option value="possible">Possible</option>
-          <option value="claimed_tradition">Claimed tradition</option>
-          <option value="legendary">Legendary</option>
-          <option value="unknown">Unknown</option>
-        </select>
-        <input type="text" className="wiki-audit-input" placeholder="Filter predicate…" value={predSearch}
-          onChange={(e) => setPredSearch(e.target.value)} style={{ flex: 1, minWidth: 80 }} />
-      </div>
-
-      {/* Editor notes in-feed */}
-      {editorNotes.length > 0 && (
-        <div className="wiki-pred-group">
-          <div className="wiki-pred-group-header">
-            <span className="wiki-pred-id">editor notes</span>
-            <span className="wiki-pred-count faint">{editorNotes.length}</span>
-          </div>
-          {editorNotes.map((note) => (
-            <NoteCard key={note.editor_note_id} note={note} onSelectEntity={onSelectEntity} yearLabel={note.note_kind} />
-          ))}
-        </div>
-      )}
-
-      <div className="wiki-audit-summary">
-        <span className="wiki-audit-total">{stats.total} claims</span>
-        {stats.noEv > 0 && <span className="wiki-audit-chip wiki-audit-chip--red">{stats.noEv} no evidence</span>}
-        {stats.unrev > 0 && <span className="wiki-audit-chip wiki-audit-chip--orange">{stats.unrev} unreviewed</span>}
-        {stats.disp > 0 && <span className="wiki-audit-chip wiki-audit-chip--red">{stats.disp} disputed</span>}
-        {stats.appr > 0 && <span className="wiki-audit-chip wiki-audit-chip--green">{stats.appr} approved</span>}
-      </div>
-      {grouped.map(([predicateId, predClaims]) => {
-        return (
-          <div key={predicateId} className="wiki-pred-group">
-            <div className="wiki-pred-group-header">
-              <span className="wiki-pred-id">{`(${predClaims.length}) ${predicateId.replace(/_/g, " ")}`}</span>
-            </div>
-            {predClaims.map((claim) => (
-              <ClaimRow key={claim.claim_id} claim={claim} focusKind={kind} focusId={id}
-                onSelectEntity={onSelectEntity} onSelectClaim={onSelectClaim}
-                isSelected={claim.claim_id === selectedClaimId} roleFilter={roleFilter} />
-            ))}
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
-// ─── Claim detail panel ───────────────────────────────────────────────────────
-
-function ClaimDetailPanel({ claimId, onSelectEntity, onClose }: {
-  claimId: string; onSelectEntity: (kind: string, id: string) => void; onClose: () => void;
-}) {
-  const claim = dataStore.claims.getById(claimId);
-  if (!claim) return null;
-  const evidence = dataStore.claimEvidence.getForClaim(claimId);
-  const reviews  = dataStore.claimReviews.getForClaim(claimId);
-  const fields: [string, string][] = [
-    ["ID", claim.claim_id], ["Status", claim.claim_status], ["Predicate", claim.predicate_id],
-    ["Subject", `${claim.subject_type}: ${claim.subject_id}`],
-    ["Object mode", claim.object_mode],
-  ];
-  if (claim.object_mode === "entity") fields.push(["Object", `${claim.object_type}: ${claim.object_id}`]);
-  else if (claim.value_text) fields.push(["Value (text)", claim.value_text]);
-  else if (claim.value_year != null) fields.push(["Value (year)", String(claim.value_year)]);
-  else if (claim.value_boolean != null) fields.push(["Value (bool)", String(claim.value_boolean)]);
-  fields.push(["Certainty", claim.certainty]);
-  if (claim.year_start != null) fields.push(["Year start", String(claim.year_start)]);
-  if (claim.year_end != null) fields.push(["Year end", String(claim.year_end)]);
-  if (claim.context_place_id) fields.push(["Context place", claim.context_place_id]);
-  if (claim.created_by) fields.push(["Created by", claim.created_by]);
-  if (claim.updated_at) fields.push(["Updated", claim.updated_at]);
-
-  return (
-    <div className="wiki-detail-panel">
-      <div className="wiki-detail-header">
-        <span className="wiki-detail-title">🔗 Claim Detail</span>
-        <button type="button" className="close-btn" onClick={onClose}>✕</button>
-      </div>
-      <div className="wiki-detail-body">
-        <div className="wiki-detail-section">
-          <div className="wiki-detail-section-title">Entities</div>
-          <div className="wiki-detail-entity-row">
-            <EntityChip kind={claim.subject_type} id={claim.subject_id} onClick={() => onSelectEntity(claim.subject_type, claim.subject_id)} />
-            <span className="wiki-arrow-pred">{claim.predicate_id.replace(/_/g, " ")}</span>
-            {claim.object_mode === "entity" && claim.object_id ? (
-              <EntityChip kind={claim.object_type} id={claim.object_id} onClick={() => onSelectEntity(claim.object_type, claim.object_id)} />
-            ) : (
-              <span className="wiki-claim-value">{claim.value_text || claim.value_year || ""}</span>
-            )}
-          </div>
-        </div>
-        <div className="wiki-detail-section">
-          <div className="wiki-detail-section-title">All fields</div>
-          <div className="wiki-fields-grid">
-            {fields.map(([k, v]) => (
-              <div key={k} className="wiki-fields-row"><span className="wiki-field-key">{k}</span><span className="wiki-field-val">{v}</span></div>
-            ))}
-          </div>
-        </div>
-        <div className="wiki-detail-section">
-          <div className="wiki-detail-section-title">Evidence ({evidence.length})</div>
-          {evidence.length === 0 ? <div className="wiki-empty-sub">⚠ No evidence linked.</div> : (
-            <div className="flex-col-8">
-              {evidence.map((ev) => (
-                <EvidenceCard key={ev.passage_id} ev={ev} onSelectEntity={onSelectEntity} />
-              ))}
-            </div>
-          )}
-        </div>
-        <div className="wiki-detail-section">
-          <div className="wiki-detail-section-title">Reviews ({reviews.length})</div>
-          {reviews.length === 0 ? <div className="wiki-empty-sub">○ Not reviewed.</div> : (
-            <div className="flex-col-8">
-              {reviews.map((r, i) => {
-                const m = REVIEW_META[r.review_status] ?? { icon: "?", cls: "" };
-                const timestamp = r.reviewed_at ? new Date(r.reviewed_at).toISOString().split('T')[0] : '';
-                return (
-                  <div key={i} className="wiki-review-detail">
-                    <div className="wiki-review-detail-head">
-                      <span className={`wiki-review-badge ${m.cls}`}>{m.icon} {r.review_status}</span>
-                      <span className="faint">{r.confidence}</span>
-                      {r.reviewer_id && <span className="faint">by {r.reviewer_id}</span>}
-                      {timestamp && <span className="faint">{timestamp}</span>}
-                    </div>
-                    {r.note && <div className="wiki-review-note">{r.note}</div>}
-                  </div>
-                );
-              })}
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
+import { ToggleGroup } from "../components/shared/ToggleGroup";
+import { Tabs } from "../components/shared/Tabs";
+import { SearchInput } from "../components/shared/SearchInput";
+import { Hl } from "../components/shared/Hl";
+import { EntityDetail } from "../components/panel/EntityDetail";
+import { getAllEntities } from "../utils/entityListHelpers";
+import { ClaimsPanel } from "../components/wiki/ClaimsPanel";
+import { ClaimDetailPanel } from "../components/wiki/ClaimDetailPanel";
+import { AuditView } from "../components/wiki/AuditView";
+import { extractEssayEntities, groupByKind } from "../utils/extractEssayEntities";
 
 // ─── Entity list (left panel) ─────────────────────────────────────────────────
 
@@ -586,222 +37,17 @@ function EntityList({ kind, search, selectedId, onSelect }: {
   }, [all, search]);
   const { page, setPage, pageItems, total, pageSize } = usePaginatedList(filtered, 40);
 
-  if (filtered.length === 0) return <div className="empty-state">No results.</div>;
+  if (filtered.length === 0) return <div className={s.emptyState}>No results.</div>;
   return (
-    <div className="wiki-entity-list">
+    <div className={s.entityList}>
       {pageItems.map((e) => (
         <button key={e.id} type="button"
-          className={`wiki-entity-item${selectedId === e.id ? " wiki-entity-item--active" : ""}`}
+          className={`${s.entityItem}${selectedId === e.id ? ` ${s.entityItemActive}` : ""}`}
           onClick={() => onSelect(e.id)}>
-          <span className="wiki-entity-item-label">{e.label}</span>
-          {e.count > 0 && <span className="wiki-entity-item-count" title={e.countLabel}>{e.count}</span>}
+          <span className={s.entityItemLabel}><Hl text={e.label} query={search} /></span>
+          {e.count > 0 && <span className={s.entityItemCount} title={e.countLabel}>{e.count}</span>}
         </button>
       ))}
-      <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
-    </div>
-  );
-}
-
-// ─── Audit view ───────────────────────────────────────────────────────────────
-
-type AuditFilter = {
-  statusFilter: ClaimAuditStatus | "all" | "flagged" | "duplicates";
-  entityTypeFilter: string;
-  predicateFilter: string;
-  certaintyFilter: string;
-  searchFilter: string;
-  roleFilter: "all" | "supports" | "opposes" | "contextualizes" | "mentions";
-};
-
-const AUDIT_EVIDENCE_ROLES: Array<{ key: AuditFilter["roleFilter"]; label: string }> = [
-  { key: "all", label: "All roles" },
-  { key: "supports", label: "Supports" },
-  { key: "opposes", label: "Opposes" },
-  { key: "contextualizes", label: "Contextualizes" },
-  { key: "mentions", label: "Mentions" },
-];
-
-type AuditSortCol = "subject" | "predicate" | "object" | "certainty" | "ev" | "rev" | "status";
-type AuditSortDir = "asc" | "desc" | "default";
-
-function AuditView({ onSelectEntity, onSelectClaim, selectedClaimId }: {
-  onSelectEntity: (kind: string, id: string) => void;
-  onSelectClaim: (id: string) => void;
-  selectedClaimId: string | null;
-}) {
-  const [filters, setFilters] = useState<AuditFilter>({
-    statusFilter: "all", entityTypeFilter: "all", predicateFilter: "", certaintyFilter: "all", searchFilter: "", roleFilter: "all",
-  });
-  const [sortCol, setSortCol] = useState<AuditSortCol | null>(null);
-  const [sortDir, setSortDir] = useState<AuditSortDir>("default");
-
-  const toggleSort = useCallback((col: AuditSortCol) => {
-    if (sortCol !== col) { setSortCol(col); setSortDir("asc"); }
-    else if (sortDir === "asc") setSortDir("desc");
-    else if (sortDir === "desc") { setSortCol(null); setSortDir("default"); }
-    else { setSortDir("asc"); }
-  }, [sortCol, sortDir]);
-
-  const allRows = useMemo(() => getAuditRows(), []);
-
-  const stats = useMemo(() => {
-    let noEv = 0, unrev = 0, disp = 0, appr = 0, dupes = 0;
-    for (const r of allRows) {
-      if (r.status === "no-evidence") noEv++;
-      if (r.status === "unreviewed") unrev++;
-      if (r.status === "disputed") disp++;
-      if (r.status === "approved") appr++;
-      if (r.isDuplicate) dupes++;
-    }
-    return { total: allRows.length, noEv, unrev, disp, appr, dupes };
-  }, [allRows]);
-
-  const filtered = useMemo(() => {
-    let rows = allRows;
-    const sf = filters.statusFilter;
-    if (sf === "flagged") rows = rows.filter((r) => r.status === "no-evidence" || r.status === "unreviewed" || r.status === "disputed" || r.status === "needs-revision");
-    else if (sf === "duplicates") rows = rows.filter((r) => r.isDuplicate);
-    else if (sf !== "all") rows = rows.filter((r) => r.status === sf);
-    if (filters.entityTypeFilter !== "all") rows = rows.filter((r) => r.claim.subject_type === filters.entityTypeFilter || r.claim.object_type === filters.entityTypeFilter);
-    if (filters.certaintyFilter !== "all") rows = rows.filter((r) => r.claim.certainty === filters.certaintyFilter);
-    if (filters.predicateFilter) {
-      const pq = filters.predicateFilter.toLowerCase();
-      rows = rows.filter((r) => r.claim.predicate_id.includes(pq));
-    }
-    if (filters.searchFilter) {
-      const sq = filters.searchFilter.toLowerCase();
-      rows = rows.filter((r) => r.subjectLabel.toLowerCase().includes(sq) || r.objectLabel.toLowerCase().includes(sq) || r.claim.claim_id.toLowerCase().includes(sq));
-    }
-    if (filters.roleFilter !== "all") {
-      rows = rows.filter((r) => {
-        const ev = dataStore.claimEvidence.getForClaim(r.claim.claim_id);
-        return ev.some((e) => e.evidence_role === filters.roleFilter);
-      });
-    }
-    return rows;
-  }, [allRows, filters]);
-
-  const sorted = useMemo(() => {
-    if (!sortCol || sortDir === "default") return filtered;
-    const dir = sortDir === "asc" ? 1 : -1;
-    return [...filtered].sort((a, b) => {
-      let cmp = 0;
-      switch (sortCol) {
-        case "subject":   cmp = a.subjectLabel.localeCompare(b.subjectLabel); break;
-        case "predicate": cmp = a.claim.predicate_id.localeCompare(b.claim.predicate_id); break;
-        case "object":    cmp = a.objectLabel.localeCompare(b.objectLabel); break;
-        case "certainty": cmp = a.claim.certainty.localeCompare(b.claim.certainty); break;
-        case "ev":        cmp = a.evidenceCount - b.evidenceCount; break;
-        case "rev":       cmp = a.reviewCount - b.reviewCount; break;
-        case "status":    cmp = a.status.localeCompare(b.status); break;
-      }
-      return cmp * dir;
-    });
-  }, [filtered, sortCol, sortDir]);
-
-  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(sorted, 50);
-
-  const statusChips: { key: AuditFilter["statusFilter"]; label: string; count: number; cls: string }[] = [
-    { key: "all", label: "All", count: stats.total, cls: "" },
-    { key: "flagged", label: "Flagged", count: stats.noEv + stats.unrev + stats.disp, cls: "wiki-audit-chip--red" },
-    { key: "no-evidence", label: "No evidence", count: stats.noEv, cls: "wiki-audit-chip--red" },
-    { key: "unreviewed", label: "Unreviewed", count: stats.unrev, cls: "wiki-audit-chip--orange" },
-    { key: "disputed", label: "Disputed", count: stats.disp, cls: "wiki-audit-chip--red" },
-    { key: "approved", label: "Approved", count: stats.appr, cls: "wiki-audit-chip--green" },
-    { key: "duplicates", label: "Duplicates", count: stats.dupes, cls: "wiki-audit-chip--orange" },
-  ];
-
-  return (
-    <div className="wiki-audit-view">
-      {/* Stats bar */}
-      <div className="wiki-audit-stats">
-        <span className="wiki-audit-stat">{stats.total} total</span>
-        <span className="wiki-audit-stat wiki-stat--red">{stats.noEv} no evidence</span>
-        <span className="wiki-audit-stat wiki-stat--orange">{stats.unrev} unreviewed</span>
-        <span className="wiki-audit-stat wiki-stat--red">{stats.disp} disputed</span>
-        <span className="wiki-audit-stat wiki-stat--green">{stats.appr} approved</span>
-        <span className="wiki-audit-stat wiki-stat--orange">{stats.dupes} duplicates</span>
-      </div>
-
-      {/* Filter bar */}
-      <div className="wiki-audit-filters">
-        <div className="wiki-audit-filter-row">
-          {statusChips.map((c) => (
-            <button key={c.key} type="button"
-              className={`wiki-audit-chip-btn${filters.statusFilter === c.key ? " active" : ""} ${c.cls}`}
-              onClick={() => setFilters((f) => ({ ...f, statusFilter: c.key }))}>
-              {c.label} ({c.count})
-            </button>
-          ))}
-        </div>
-        <div className="wiki-audit-filter-row">
-          <select className="wiki-audit-select" value={filters.entityTypeFilter}
-            onChange={(e) => setFilters((f) => ({ ...f, entityTypeFilter: e.target.value }))}>
-            <option value="all">All entity types</option>
-            {ENTITY_TABS.map((t) => <option key={t.kind} value={t.kind}>{t.label}</option>)}
-          </select>
-          <select className="wiki-audit-select" value={filters.certaintyFilter}
-            onChange={(e) => setFilters((f) => ({ ...f, certaintyFilter: e.target.value }))}>
-            <option value="all">All certainty</option>
-            <option value="attested">Attested</option>
-            <option value="probable">Probable</option>
-            <option value="possible">Possible</option>
-            <option value="claimed_tradition">Claimed tradition</option>
-            <option value="legendary">Legendary</option>
-            <option value="unknown">Unknown</option>
-          </select>
-          <input type="text" className="wiki-audit-input" placeholder="Filter predicate…"
-            value={filters.predicateFilter} onChange={(e) => setFilters((f) => ({ ...f, predicateFilter: e.target.value }))} />
-          <input type="text" className="wiki-audit-input" placeholder="Search entities…"
-            value={filters.searchFilter} onChange={(e) => setFilters((f) => ({ ...f, searchFilter: e.target.value }))} />
-        </div>
-        <div className="wiki-audit-filter-row">
-          {AUDIT_EVIDENCE_ROLES.map((r) => (
-            <button key={r.key} type="button"
-              className={`wiki-audit-chip-btn${filters.roleFilter === r.key ? " active" : ""}`}
-              onClick={() => setFilters((f) => ({ ...f, roleFilter: r.key }))}>
-              {r.label}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Results */}
-      <div className="wiki-audit-results">
-        <div className="wiki-audit-table-header">
-          {([["subject","Subject"],["predicate","Predicate"],["object","Object"],["certainty","Certainty"],["ev","Ev"],["rev","Rev"],["status","Status"]] as [AuditSortCol,string][]).map(([col, label]) => {
-            const arrow = sortCol === col ? (sortDir === "asc" ? " ▲" : sortDir === "desc" ? " ▼" : "") : "";
-            const cls = `wiki-audit-col wiki-audit-col--${col} wiki-audit-sort-hdr${sortCol === col ? " wiki-audit-sort-hdr--active" : ""}`;
-            return <button key={col} type="button" className={cls} onClick={() => toggleSort(col)}>{label}{arrow}</button>;
-          })}
-        </div>
-        {pageItems.map((row) => {
-          const borderCls = getClaimBorderClass(row.status);
-          const isSelected = row.claim.claim_id === selectedClaimId;
-          return (
-            <div key={row.claim.claim_id}
-              className={`wiki-audit-row ${borderCls}${isSelected ? " wiki-audit-row--selected" : ""}${row.isDuplicate ? " wiki-audit-row--dupe" : ""}`}
-              onClick={() => onSelectClaim(row.claim.claim_id)}>
-              <span className="wiki-audit-col wiki-audit-col--subject" onClick={(e) => e.stopPropagation()}>
-                <EntityChip kind={row.claim.subject_type} id={row.claim.subject_id} onClick={() => onSelectEntity(row.claim.subject_type, row.claim.subject_id)} />
-              </span>
-              <span className="wiki-audit-col wiki-audit-col--pred">{row.claim.predicate_id.replace(/_/g, " ")}</span>
-              <span className="wiki-audit-col wiki-audit-col--object" onClick={(e) => e.stopPropagation()}>
-                {row.claim.object_mode === "entity" && row.claim.object_id ? (
-                  <EntityChip kind={row.claim.object_type} id={row.claim.object_id} onClick={() => onSelectEntity(row.claim.object_type, row.claim.object_id)} />
-                ) : <span className="faint">{row.objectLabel}</span>}
-              </span>
-              <span className={`wiki-audit-col wiki-audit-col--cert wiki-certainty--${row.claim.certainty}`}>{row.claim.certainty}</span>
-              <span className="wiki-audit-col wiki-audit-col--ev">{row.evidenceCount}</span>
-              <span className="wiki-audit-col wiki-audit-col--rev">{row.reviewCount}</span>
-              <span className={`wiki-audit-col wiki-audit-col--status wiki-status--${row.status}`}>
-                {row.status.replace("-", " ")}{row.isDuplicate ? " ⚑" : ""}
-              </span>
-            </div>
-          );
-        })}
-        {pageItems.length === 0 && <div className="empty-state">No claims match these filters.</div>}
-      </div>
       <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
     </div>
   );
@@ -810,130 +56,71 @@ function AuditView({ onSelectEntity, onSelectClaim, selectedClaimId }: {
 // ─── WikiPage (root) ──────────────────────────────────────────────────────────
 
 export function WikiPage() {
-  const [searchParams] = useSearchParams();
-  const [mode, setMode] = useState<WikiMode>("browse");
-  const [entityKind, setEntityKind] = useState("person");
-  const [search, setSearch] = useState("");
-  const [globalQuery, setGlobalQuery] = useState("");
-  const [showGlobalResults, setShowGlobalResults] = useState(false);
-  const globalRef = useRef<HTMLDivElement>(null);
-  const lastHandledParam = useRef("");
+  const navigate = useNavigate();
+  const wiki = useWikiPageState();
+  const scrollMapRef = useRef<Map<string, number>>(new Map());
+  const scrollBodyRef = useRef<HTMLDivElement>(null);
+  const {
+    mode, setMode, entityKind, selectEntityKind,
+    search, setSearch,
+    selection, history, pushSelection, popSelection,
+    selectedClaimId, setSelectedClaimId, handleSelectEntity, handleSelectClaim,
+    viewMode, setViewMode,
+  } = wiki;
 
-  // Selection history stack
-  const [selection, setSelection] = useState<BrowseSelection | null>(null);
-  const [history, setHistory] = useState<BrowseSelection[]>([]);
+  const [wikiEssayTab, setWikiEssayTab] = useState<"content" | "entities">("content");
+  const selKey = selection ? `${selection.kind}:${selection.id}` : null;
 
-  const [selectedClaimId, setSelectedClaimId] = useState<string | null>(null);
-  const [viewMode, setViewMode] = useState<"relations" | "claims">("claims");
-
-  // Handle deep-link from URL params (e.g. /wiki?kind=person&id=paul-of-tarsus)
-  useEffect(() => {
-    const kind = searchParams.get("kind");
-    const id = searchParams.get("id");
-    if (!kind || !id) return;
-    const paramKey = `${kind}:${id}`;
-    if (paramKey === lastHandledParam.current) return;
-    lastHandledParam.current = paramKey;
-    setMode("browse");
-    setEntityKind(kind);
-    setSelection({ kind, id });
-    setHistory([]);
-    setSelectedClaimId(null);
-  }, [searchParams]);
-
-  const pushSelection = useCallback((sel: BrowseSelection) => {
-    setSelection((prev) => {
-      if (prev) setHistory((h) => [...h, prev]);
-      return sel;
-    });
-    setSelectedClaimId(null);
-  }, []);
-
-  const popSelection = useCallback(() => {
-    setHistory((h) => {
-      const newH = [...h];
-      const prev = newH.pop() ?? null;
-      setSelection(prev);
-      return newH;
-    });
-    setSelectedClaimId(null);
-  }, []);
-
-  function handleSelectEntity(kind: string, id: string) {
-    setMode("browse");
-    if (kind !== entityKind) { setEntityKind(kind); setSearch(""); }
-    pushSelection({ kind, id });
-  }
-
-  function handleSelectClaim(claimId: string) {
-    setSelectedClaimId(claimId);
-  }
-
-  // Global search results
-  const globalResults = useMemo(() => globalSearch(globalQuery), [globalQuery]);
-
-  // Close global dropdown on outside click
-  useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (globalRef.current && !globalRef.current.contains(e.target as Node)) setShowGlobalResults(false);
+  // Save scroll position continuously via onScroll
+  const handleBodyScroll = useCallback(() => {
+    if (scrollBodyRef.current && selKey) {
+      scrollMapRef.current.set(selKey, scrollBodyRef.current.scrollTop);
     }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
-  }, []);
+  }, [selKey]);
+
+  // Restore scroll position when selection changes
+  useEffect(() => {
+    if (!selKey) return;
+    requestAnimationFrame(() => {
+      if (scrollBodyRef.current) {
+        const saved = scrollMapRef.current.get(selKey);
+        scrollBodyRef.current.scrollTop = saved ?? 0;
+      }
+    });
+  }, [selKey]);
 
   return (
-    <div className="wiki-page">
+    <div className={s.page}>
       {/* ── Left panel ── */}
-      <div className="wiki-left">
-        <div className="wiki-left-header">
-          <div className="panel-eyebrow">Data Wiki</div>
-          <div className="wiki-mode-toggle">
-            <button type="button" className={`wiki-mode-btn${mode === "browse" ? " active" : ""}`} onClick={() => setMode("browse")}>Browse</button>
-            <button type="button" className={`wiki-mode-btn${mode === "audit" ? " active" : ""}`} onClick={() => setMode("audit")}>Audit</button>
-          </div>
+      <div className={s.left}>
+        <div className={s.leftHeader}>
+          <div className={s.panelEyebrow}>Data Wiki</div>
+          <ToggleGroup
+            options={[{ value: "browse", label: "Browse" }, { value: "audit", label: "Audit" }]}
+            value={mode}
+            onChange={setMode}
+          />
         </div>
 
         {/* Global search */}
-        <div className="wiki-global-search" ref={globalRef}>
-          <div className="search-box">
-            <span className="search-icon">🔍</span>
-            <input type="text" placeholder="Search all entities…" value={globalQuery}
-              onChange={(e) => { setGlobalQuery(e.target.value); setShowGlobalResults(true); }}
-              onFocus={() => { if (globalQuery.length >= 2) setShowGlobalResults(true); }} />
-            {globalQuery && <button type="button" className="close-btn" onClick={() => { setGlobalQuery(""); setShowGlobalResults(false); }}>✕</button>}
-          </div>
-          {showGlobalResults && globalResults.length > 0 && (
-            <div className="wiki-global-dropdown">
-              {globalResults.map((r) => (
-                <button key={`${r.kind}:${r.id}`} type="button" className="wiki-global-result"
-                  onClick={() => { handleSelectEntity(r.kind, r.id); setShowGlobalResults(false); setGlobalQuery(""); setMode("browse"); }}>
-                  <span className="wiki-global-result-icon">{kindIcon(r.kind)}</span>
-                  <span className="wiki-global-result-label">{r.label}</span>
-                  <span className="wiki-global-result-kind faint">{kindLabel(r.kind)}</span>
-                </button>
-              ))}
-            </div>
-          )}
+        <div className={s.globalSearch}>
+          <GlobalSearchOverlay onSelect={handleSelectEntity} />
         </div>
 
         {mode === "browse" && (
           <>
-            <div className="wiki-kind-tabs">
-              {ENTITY_TABS.map((t) => (
-                <button key={t.kind} type="button"
-                  className={`wiki-kind-tab${entityKind === t.kind ? " active" : ""}`}
-                  onClick={() => { setEntityKind(t.kind); setSelection(null); setHistory([]); setSearch(""); setSelectedClaimId(null); }}>
-                  {KIND_ICONS[t.kind] ?? "•"} {t.label}
-                </button>
-              ))}
-            </div>
-            <div className="wiki-search-bar">
-              <div className="search-box">
-                <span className="search-icon">🔍</span>
-                <input type="text" placeholder={`Filter ${ENTITY_TABS.find((t) => t.kind === entityKind)?.label.toLowerCase() ?? ""}…`}
-                  value={search} onChange={(e) => setSearch(e.target.value)} />
-                {search && <button type="button" className="close-btn" onClick={() => setSearch("")}>✕</button>}
-              </div>
+            <Tabs
+              tabs={ENTITY_TABS.map((t) => ({ id: t.kind, label: t.label, icon: KIND_ICONS[t.kind] ?? "•" }))}
+              active={entityKind}
+              onChange={selectEntityKind}
+              vertical
+            />
+            <div className={s.searchBar}>
+              <SearchInput
+                value={search}
+                onChange={setSearch}
+                placeholder={`Filter ${ENTITY_TABS.find((t) => t.kind === entityKind)?.label.toLowerCase() ?? ""}…`}
+              />
             </div>
             <EntityList kind={entityKind} search={search} selectedId={selection?.kind === entityKind ? selection.id : null}
               onSelect={(id) => { pushSelection({ kind: entityKind, id }); }} />
@@ -941,58 +128,92 @@ export function WikiPage() {
         )}
 
         {mode === "audit" && (
-          <div className="wiki-audit-left-info">
-            <div className="wiki-audit-left-title">Claim Audit</div>
-            <p className="faint" style={{ fontSize: "0.8rem", padding: "0 14px" }}>
+          <div className={s.auditLeftInfo}>
+            <div className={s.auditLeftTitle}>Claim Audit</div>
+            <p className={`${s.faint} ${s.auditDesc}`}>
               Review all claims across every entity. Filter by status, entity type, certainty, and predicate to find issues.
             </p>
-            <div className="wiki-audit-color-key">
-              <div className="wiki-audit-key-item"><span className="wiki-audit-key-dot" style={{ background: "#c0392b" }} />No evidence / Disputed</div>
-              <div className="wiki-audit-key-item"><span className="wiki-audit-key-dot" style={{ background: "#b07e10" }} />Unreviewed</div>
-              <div className="wiki-audit-key-item"><span className="wiki-audit-key-dot" style={{ background: "#1a7a5c" }} />Approved</div>
+            <div className={s.auditColorKey}>
+              <div className={s.auditKeyItem}><span className={`${s.auditKeyDot} ${s.auditKeyDotRed}`} />No evidence / Disputed</div>
+              <div className={s.auditKeyItem}><span className={`${s.auditKeyDot} ${s.auditKeyDotOrange}`} />Unreviewed</div>
+              <div className={s.auditKeyItem}><span className={`${s.auditKeyDot} ${s.auditKeyDotGreen}`} />Approved</div>
             </div>
           </div>
         )}
       </div>
 
       {/* ── Center ── */}
-      <div className="wiki-center">
+      <div className={s.center}>
         {mode === "browse" && selection ? (
-          <div className="wiki-browse-detail">
+          <div className={s.browseDetail}>
             {/* Compact top bar: back + nav links (left) | view toggle (right) */}
-            <div className="wiki-detail-topbar">
-              <div className="wiki-detail-topbar-left">
+            <div className={s.detailTopbar}>
+              <div className={s.detailTopbarLeft}>
                 {history.length > 0 && (
-                  <button type="button" className="back-btn wiki-back-btn" onClick={popSelection}>← Back</button>
+                  <button type="button" className={s.backBtn} onClick={popSelection}>← Back</button>
                 )}
-                {selection.kind !== "essay" && (
+                {selection.kind !== "essay" && selection.kind !== "editor_note" && (
                   <CrossPageNav kind={selection.kind} id={selection.id} current="wiki" />
+                )}
+                {selection.kind === "essay" && (
+                  <button type="button" className={s.essayNavBtn} onClick={() => {
+                    useAppStore.getState().setPendingEssay(selection.id);
+                    useAppStore.getState().setPanelTab("essays");
+                    if (!useAppStore.getState().rightPanelVisible) useAppStore.getState().toggleRightPanel();
+                    navigate("/");
+                  }} title="Open in map">🗺️ Open in map</button>
                 )}
               </div>
               {selection.kind !== "essay" && selection.kind !== "editor_note" && (
-                <div className="wiki-view-toggle-inline">
-                  <button type="button" className={`wiki-view-btn${viewMode === "relations" ? " active" : ""}`}
-                    onClick={() => setViewMode("relations")}>Relations</button>
-                  <button type="button" className={`wiki-view-btn${viewMode === "claims" ? " active" : ""}`}
-                    onClick={() => setViewMode("claims")}>Claims</button>
-                </div>
+                <ToggleGroup
+                  options={[{ value: "relations", label: "Relations" }, { value: "claims", label: "Claims" }]}
+                  value={viewMode}
+                  onChange={setViewMode}
+                />
               )}
             </div>
             {selection.kind === "essay" ? (() => {
               const essay = ESSAYS.find((e) => e.id === selection.id);
-              if (!essay) return <div className="empty-state">Essay not found.</div>;
+              if (!essay) return <div className={s.emptyState}>Essay not found.</div>;
+              const groups = groupByKind(extractEssayEntities(essay.body));
+              const entCount = groups.reduce((n, [, refs]) => n + refs.length, 0);
               return (
-                <div className="detail-body" style={{ padding: "12px 16px", overflow: "auto" }}>
-                  <h2 style={{ marginBottom: 8 }}>{essay.title}</h2>
-                  <p className="faint" style={{ marginBottom: 12 }}>{essay.summary}</p>
-                  <MarkdownRenderer onSelectEntity={handleSelectEntity}>{essay.body}</MarkdownRenderer>
-                </div>
+                <>
+                  <div className={s.essayTabBar}>
+                    <button type="button" className={`${s.essayTab}${wikiEssayTab === "content" ? ` ${s.essayTabActive}` : ""}`}
+                      onClick={() => setWikiEssayTab("content")}>Content</button>
+                    <button type="button" className={`${s.essayTab}${wikiEssayTab === "entities" ? ` ${s.essayTabActive}` : ""}`}
+                      onClick={() => setWikiEssayTab("entities")}>Entities ({entCount})</button>
+                  </div>
+                  {wikiEssayTab === "content" ? (
+                    <div className={s.detailBodyStyle} ref={scrollBodyRef} onScroll={handleBodyScroll}>
+                      <h2 className={s.essayTitle}>{essay.title}</h2>
+                      <p className={`${s.faint} ${s.essaySummary}`}>{essay.summary}</p>
+                      <MarkdownRenderer onSelectEntity={handleSelectEntity}>{essay.body}</MarkdownRenderer>
+                    </div>
+                  ) : (
+                    <div className={s.detailBodyStyle}>
+                      {groups.map(([kind, refs]) => (
+                        <div key={kind}>
+                          <div className={s.entityGroupLabel}>{kindLabel(kind)} ({refs.length})</div>
+                          {refs.map((r) => (
+                            <button key={`${r.kind}:${r.id}`} type="button" className={s.entityItem}
+                              onClick={() => handleSelectEntity(r.kind, r.id)}>
+                              <span className={s.entityItemIcon}>{kindIcon(r.kind)}</span>
+                              <span className={s.entityItemLabel}>{r.label}</span>
+                            </button>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </>
               );
             })() : selection.kind === "editor_note" ? (() => {
               const note = dataStore.editorNotes.getById(selection.id);
-              if (!note) return <div className="empty-state">Note not found.</div>;
+              if (!note) return <div className={s.emptyState}>Note not found.</div>;
               return (
-                <div className="detail-body" style={{ padding: "12px 16px", overflow: "auto" }}>
+                <div className={s.detailBodyStyle}>
                   <NoteCard note={note} onSelectEntity={handleSelectEntity} yearLabel={note.note_kind} />
                 </div>
               );
@@ -1001,23 +222,26 @@ export function WikiPage() {
                 key={`${selection.kind}:${selection.id}`}
                 kind={selection.kind}
                 id={selection.id}
-                currentPage="wiki"
                 hideBackBar
+                currentPage="wiki"
                 onBack={popSelection}
                 onSelectEntity={handleSelectEntity}
               />
             ) : (
               <>
-                <SharedEntityHeader kind={selection.kind} id={selection.id} showAllFields onSelectEntity={handleSelectEntity} />
+                <div className={s.claimsHeaderWrap}>
+                  <SharedEntityHeader kind={selection.kind} id={selection.id} showAllFields onSelectEntity={handleSelectEntity}
+                    hideExternalLink={selection.kind === "work" || selection.kind === "source"} />
+                </div>
                 <ClaimsPanel kind={selection.kind} id={selection.id}
                   onSelectEntity={handleSelectEntity} selectedClaimId={selectedClaimId} onSelectClaim={handleSelectClaim} />
               </>
             )}
           </div>
         ) : mode === "browse" ? (
-          <div className="wiki-empty-center">
-            <div className="panel-eyebrow" style={{ marginBottom: 8 }}>Select an entity</div>
-            <div className="faint">Choose an entity from the browser or use the global search.</div>
+          <div className={s.emptyCenter}>
+            <div className={`${s.panelEyebrow} ${s.emptyCenterHeading}`}>Select an entity</div>
+            <div className={s.faint}>Choose an entity from the browser or use the global search.</div>
           </div>
         ) : (
           <AuditView onSelectEntity={handleSelectEntity} onSelectClaim={handleSelectClaim} selectedClaimId={selectedClaimId} />
@@ -1027,7 +251,7 @@ export function WikiPage() {
       {/* ── Right: claim detail ── */}
       {selectedClaimId && (
         <ClaimDetailPanel claimId={selectedClaimId} onSelectEntity={handleSelectEntity}
-          onClose={() => setSelectedClaimId(null)} />
+          onClose={() => setSelectedClaimId(null)} focusKind={selection?.kind} />
       )}
     </div>
   );

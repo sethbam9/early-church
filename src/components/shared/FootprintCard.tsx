@@ -5,6 +5,8 @@ import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { kindIcon } from "./entityConstants";
 import { EvidenceCard } from "./EvidenceCard";
 import { getPredicateLabel } from "../../domain/relationLabels";
+import ehc from "./EntityHoverCard.module.css";
+import fc from "./FootprintCard.module.css";
 
 function claimLine(c: { subject_type: string; subject_id: string; predicate_id: string; object_mode: string; object_type: string; object_id: string; value_text?: string; value_year?: number | null; claim_id: string }) {
   const subLabel = getEntityLabel(c.subject_type, c.subject_id);
@@ -13,9 +15,9 @@ function claimLine(c: { subject_type: string; subject_id: string; predicate_id: 
     ? getEntityLabel(c.object_type, c.object_id)
     : (c.value_text || c.value_year?.toString() || "");
   return (
-    <div key={c.claim_id} style={{ fontSize: "0.72rem", color: "var(--text-muted)", lineHeight: 1.35 }}>
+    <div key={c.claim_id} className={`${fc.textMuted} ${fc.claimLine}`}>
       {kindIcon(c.subject_type)} <strong>{subLabel}</strong>
-      <span style={{ color: "var(--text-faint)" }}> {predLabel} </span>
+      <span className={fc.textMuted}> {predLabel} </span>
       {kindIcon(c.object_type || "")} <strong>{objLabel}</strong>
     </div>
   );
@@ -44,14 +46,14 @@ function DerivationTooltip({ anchorRef, footprint }: {
 
   if (!pos || !hasContent) return null;
   return createPortal(
-    <div className="entity-hover-card" style={{ top: pos.top, left: pos.left, pointerEvents: "none" }}>
-      <div className="entity-hover-card-kind">Derivation trail</div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 3, marginTop: 4 }}>
+    <div className={ehc.tooltip} style={{ top: pos.top, left: pos.left, pointerEvents: "none" }}>
+      <div className={ehc.kind}>Derivation trail</div>
+      <div className={`${fc.stackSm} ${fc.stackSmTop}`}>
         {trace.mode === "direct" ? (
           trace.claims.map((c) => claimLine(c))
         ) : (
           trace.paths.map((p, i) => (
-            <div key={i} style={{ display: "flex", flexDirection: "column", gap: 2, borderBottom: i < trace.paths.length - 1 ? "1px solid var(--border-subtle)" : undefined, paddingBottom: 3 }}>
+            <div key={i} className={fc.tracePath}>
               {claimLine(p.propositionClaim)}
               {claimLine(p.placeClaim)}
             </div>
@@ -85,14 +87,14 @@ export function FootprintCard({ footprint: f, showEntity = true, showPlace = fal
   const hasEvidence = backingClaims.some((c) => dataStore.claimEvidence.getForClaim(c.claim_id).length > 0);
 
   return (
-    <div className="conn-card conn-card--col" ref={cardRef}
+    <div className={fc.card} ref={cardRef}
       onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-      {hovered && <DerivationTooltip anchorRef={cardRef} footprint={f} />}
-      <div className="conn-card-row" onClick={() => onSelectEntity(clickTarget.kind, clickTarget.id)}>
-        <span className="conn-icon">{primaryIcon}</span>
-        <div className="conn-card-body">
-          <div className="conn-name">{primaryLabel}</div>
-          <div className="conn-rel">
+      {hovered && !hasEvidence && <DerivationTooltip anchorRef={cardRef} footprint={f} />}
+      <div className={fc.row} onClick={() => onSelectEntity(clickTarget.kind, clickTarget.id)}>
+        <span className={fc.icon}>{primaryIcon}</span>
+        <div className={fc.body}>
+          <div className={fc.name}>{primaryLabel}</div>
+          <div className={fc.rel}>
             {showPlace ? f.entity_type : "place"} · {f.reason_predicate_id.replace(/_/g, " ")}
             {f.year_start ? ` · AD ${f.year_start}` : ""}
             {f.year_end && f.year_end !== f.year_start ? `–${f.year_end}` : ""}
@@ -100,19 +102,15 @@ export function FootprintCard({ footprint: f, showEntity = true, showPlace = fal
           </div>
         </div>
         {hasEvidence && (
-          <button
-            type="button"
-            className="rel-expand-btn"
+          <button type="button" className={fc.expandBtn}
             onClick={(e) => { e.stopPropagation(); setExpanded((s) => !s); }}
-            title={expanded ? "Hide evidence" : "Show evidence"}
-          >
+            title={expanded ? "Hide evidence" : "Show evidence"}>
             {expanded ? "▲" : "▼"}
           </button>
         )}
       </div>
-
       {expanded && (
-        <div className="rel-card-evidence">
+        <div className={fc.evidence}>
           {backingClaims.map((claim) => {
             const evidence = dataStore.claimEvidence.getForClaim(claim.claim_id);
             if (evidence.length === 0) return null;

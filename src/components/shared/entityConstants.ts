@@ -6,7 +6,7 @@
 export const KIND_ICONS: Record<string, string> = {
   place: "🏛", person: "👤", work: "📜", event: "⚡",
   group: "✦", topic: "📖", dimension: "📊", proposition: "📝",
-  source: "📚", passage: "📄", claim: "🔗", editor_note: "📋",
+  source: "📚", passage: "📄", claim: "🔗", editor_note: "📋", essay: "📝",
 };
 
 export const KIND_LABELS: Record<string, string> = {
@@ -79,3 +79,26 @@ export const STANCE_LABELS: Record<string, string> = {
   neutral: "Neutral",
   unknown: "Unknown",
 };
+
+export const ENTITY_TABS: { kind: string; label: string }[] = [
+  { kind: "person",      label: "People" },
+  { kind: "place",       label: "Places" },
+  { kind: "group",       label: "Groups" },
+  { kind: "work",        label: "Works" },
+  { kind: "event",       label: "Events" },
+  { kind: "proposition", label: "Propositions" },
+  { kind: "topic",       label: "Topics" },
+  { kind: "source",      label: "Sources" },
+  { kind: "editor_note", label: "Notes" },
+  { kind: "essay",       label: "Essays" },
+];
+
+export const CERTAINTY_OPTIONS: { value: string; label: string }[] = [
+  { value: "all",               label: "All certainty" },
+  { value: "attested",          label: "Attested" },
+  { value: "probable",          label: "Probable" },
+  { value: "possible",          label: "Possible" },
+  { value: "claimed_tradition", label: "Claimed tradition" },
+  { value: "legendary",         label: "Legendary" },
+  { value: "unknown",           label: "Unknown" },
+];

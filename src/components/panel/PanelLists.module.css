@@ -1,0 +1,103 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: background 0.1s;
+  font-size: var(--font-size-sm);
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  text-align: left;
+  width: 100%;
+  font-family: inherit;
+  color: var(--text-primary);
+}
+.listItem:hover { background: var(--bg-surface-2); }
+.icon { font-size: var(--font-size-md); width: 18px; text-align: center; flex-shrink: 0; }
+.main { flex: 1; min-width: 0; }
+.name {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.meta {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.badge {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.flyBtn {
+  background: none;
+  border: none;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px;
+  flex-shrink: 0;
+}
+.flyBtn:hover { color: var(--accent-bright); }
+.filterBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-1) var(--space-3) var(--space-2);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+/* Map-visible toggle */
+.listFilterToggle {
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.12s, color 0.12s;
+}
+.listFilterToggle:hover { background: var(--surface-3); color: var(--text); }
+.listFilterToggleActive {
+  background: var(--accent-dim);
+  border-color: rgba(196,124,58,0.4);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Filter bar helpers */
+.filterBarCount { font-size: var(--font-size-xs); }
+.filterBarActions { display: flex; gap: 6px; align-items: center; }
+.placeKindTag { margin-left: var(--space-1); }
+.onMapTag { color: var(--color-attested); margin-left: var(--space-1); font-size: 0.7rem; }
+
+/* List item variant: center-aligned */
+.listItemCenter { align-items: center; }
+
+/* Essay expand */
+.expandBtn { background: none; border: none; cursor: pointer; color: var(--text-faint); font-size: 0.7rem; padding: 2px 4px; flex-shrink: 0; }
+.expandBtn:hover { color: var(--text-primary); }
+.expandedSummary { padding: 6px 12px 8px 36px; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; border-bottom: 1px solid var(--border-subtle); background: var(--bg-surface-2); }
+
+/* Utility */
+.faint { color: var(--text-faint); }
+.emptyState { padding: 16px 12px; text-align: center; color: var(--text-faint); font-size: 0.85rem; }

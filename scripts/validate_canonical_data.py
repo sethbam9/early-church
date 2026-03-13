@@ -100,7 +100,7 @@ PLACE_LINK_PREDICATES = {
 MERGE_REQUIRED_PREDICATES = {"group_present_at", "controls_place"}
 MARKDOWN_FIELD_SUFFIXES = ("_md",)
 MARKDOWN_FIELD_NAMES = {"notes", "body_md"}
-SKIP_DIR_NAMES = {".git", ".hg", ".svn", "node_modules", "dist", "build", "coverage", "__pycache__", ".venv", "venv"}
+SKIP_DIR_NAMES = {".git", ".hg", ".svn", "node_modules", "dist", "build", "coverage", "__pycache__", ".venv", "venv", ".windsurf", "docs"}
 WIKILINK_RE = re.compile(r"\[\[([a-z_]+):([^\]|]+)(?:\|([^\]]+))?\]\]")
 OSIS_RE = re.compile(r"^(?:[1-3]?[A-Za-z][A-Za-z0-9]*)\.\d+\.\d+(?:-(?:(?:[1-3]?[A-Za-z][A-Za-z0-9]*)\.\d+\.\d+|\d+))?$")
 SPARSE_ENTITY_FILES: Dict[str, Tuple[str, str]] = {
@@ -1371,8 +1371,8 @@ class Validator:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate canonical TSV data, regenerate derived tables, optionally scan markdown files, and report sparse entities.")
     parser.add_argument("--data-dir", default=str(Path(__file__).resolve().parent.parent / "data"), help="Directory containing canonical TSV files.")
-    parser.add_argument("--check-markdown", action="store_true", help="Also scan markdown files outside TSV fields for wiki-link validation and note mention derivation.")
-    parser.add_argument("--scan-root", default=None, help="Root directory to scan for markdown files. Defaults to the repository root when --check-markdown is enabled.")
+    parser.add_argument("--check-markdown", action=argparse.BooleanOptionalAction, default=True, help="Scan markdown files outside TSV fields for wiki-link validation and note mention derivation (default: enabled; use --no-check-markdown to disable).")
+    parser.add_argument("--scan-root", default=None, help="Root directory to scan for markdown files. Defaults to the repository root.")
     parser.add_argument("--rewrite-derived", action="store_true", help="Accepted for CLI compatibility; derived files are rewritten automatically when stale.")
     parser.add_argument("--check-sparse", nargs="?", const=1, type=int, default=None, metavar="N", help="Report entities with N or fewer active claim links. Defaults to 1 when passed without a value.")
     args = parser.parse_args()

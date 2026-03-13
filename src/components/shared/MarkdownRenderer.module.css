@@ -1,0 +1,32 @@
+.root { font-size: var(--font-size-sm); line-height: 1.6; }
+.p { margin-bottom: var(--space-2); }
+.h1 { font-size: var(--font-size-lg); font-weight: 700; margin: var(--space-4) 0 var(--space-2); color: var(--text-primary); }
+.h2 { font-size: var(--font-size-md); font-weight: 700; margin: var(--space-3) 0 var(--space-1); color: var(--text-primary); }
+.h3 { font-size: var(--font-size-sm); font-weight: 700; margin: var(--space-2) 0 var(--space-1); color: var(--text-primary); }
+.blockquote {
+  border-left: 3px solid var(--accent-dim);
+  padding-left: var(--space-3);
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: var(--space-2) 0;
+}
+.mention {
+  background: none;
+  border: none;
+  font: inherit;
+  color: var(--accent-bright);
+  cursor: pointer;
+  border-bottom: 1px dashed var(--border-default);
+  padding: 0;
+  transition: background 0.12s, border-color 0.12s;
+}
+.mention:hover {
+  background: var(--accent-dim);
+  border-bottom-color: var(--accent);
+}
+.highlight {
+  background: rgba(26,122,92,0.25);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}

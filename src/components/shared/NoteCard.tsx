@@ -1,31 +1,23 @@
 import type { EditorNote } from "../../data/types";
 import { MarkdownRenderer } from "./MarkdownRenderer";
+import s from "./NoteCard.module.css";
 
 interface NoteCardProps {
   note: EditorNote;
   onSelectEntity?: (kind: string, id: string) => void;
   searchQuery?: string;
-  /** When provided, renders a .note-year header with this text. */
   yearLabel?: string;
 }
 
-/**
- * Canonical note card: renders body_md via MarkdownRenderer.
- * Used everywhere editor notes / evidence is displayed.
- */
 export function NoteCard({ note, onSelectEntity, searchQuery = "", yearLabel }: NoteCardProps) {
   return (
-    <div className="note-card">
+    <div className={s.card}>
       {yearLabel !== undefined && yearLabel !== "" && (
-        <div className="note-year">
+        <div className={s.year}>
           <span>{yearLabel}</span>
           {onSelectEntity && (
-            <button
-              type="button"
-              className="note-open-btn"
-              onClick={() => onSelectEntity("editor_note", note.editor_note_id)}
-              title="Open note detail"
-            >
+            <button type="button" className={s.openBtn}
+              onClick={() => onSelectEntity("editor_note", note.editor_note_id)} title="Open note detail">
               open →
             </button>
           )}

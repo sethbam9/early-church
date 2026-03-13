@@ -2,8 +2,11 @@ import { useState } from "react";
 import type { Claim } from "../../data/types";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { getPredicateLabel } from "../../domain/relationLabels";
-import { kindIcon, CERTAINTY_COLORS } from "./entityConstants";
+import { kindIcon } from "./entityConstants";
+import { CertaintyBadge } from "./CertaintyBadge";
 import { EvidenceCard } from "./EvidenceCard";
+import { EntityLink } from "./EntityLink";
+import rc from "./RelationCard.module.css";
 
 interface ClaimCardProps {
   claim: Claim;
@@ -23,7 +26,6 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
   const othLabel  = othId ? getEntityLabel(othKind, othId) : (claim.value_text || claim.value_year?.toString() || "");
 
   const certainty = claim.certainty || "";
-
   const evidence = dataStore.claimEvidence.getForClaim(claim.claim_id);
   const hasMeta  = evidence.length > 0;
 
@@ -33,48 +35,34 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
   const contextPlaceLabel = claim.context_place_id ? getEntityLabel("place", claim.context_place_id) : "";
 
   return (
-    <div className="rel-card">
-      <div className="rel-card-main" onClick={() => othId && onSelectEntity(othKind, othId)}>
-        <span className="rel-card-icon">{kindIcon(othKind)}</span>
-        <div className="rel-card-body">
-          <div className="rel-card-name">{othLabel}</div>
-          <div className="rel-card-rel">
+    <div className={rc.card}>
+      <div className={rc.main} onClick={() => othId && onSelectEntity(othKind, othId)}>
+        <span className={rc.icon}>{kindIcon(othKind)}</span>
+        <div className={rc.body}>
+          <div className={rc.name}>{othLabel}</div>
+          <div className={rc.rel}>
             {predLabel}
-            {yearRange && <span className="rel-card-year">{yearRange}</span>}
+            {yearRange && <span className={rc.year}>{yearRange}</span>}
           </div>
         </div>
-        <div className="rel-card-badges">
-          {certainty && certainty !== "attested" && (
-            <span
-              className="rel-certainty"
-              style={{ color: CERTAINTY_COLORS[certainty] ?? "var(--text-faint)" }}
-              title={certainty}
-            >
-              {certainty}
-            </span>
-          )}
+        <div className={rc.badges}>
+          <CertaintyBadge value={certainty} />
           {hasMeta && (
-            <button
-              type="button"
-              className="rel-expand-btn"
-              onClick={(e) => { e.stopPropagation(); setShowEvidence((s) => !s); }}
-              title={showEvidence ? "Hide evidence" : "Show evidence"}
-            >
+            <button type="button" className={rc.expandBtn}
+              onClick={(e) => { e.stopPropagation(); setShowEvidence((v) => !v); }}
+              title={showEvidence ? "Hide evidence" : "Show evidence"}>
               {showEvidence ? "▲" : "▼"}
             </button>
           )}
         </div>
       </div>
-
       {showEvidence && (
-        <div className="rel-card-evidence">
+        <div className={rc.evidence}>
           {claim.context_place_id && (
-            <div className="ev-card" style={{ padding: "4px 8px" }}>
-              <span className="faint">context</span>
-              <button type="button" className="mention-link"
-                onClick={() => onSelectEntity("place", claim.context_place_id)}>
-                {contextPlaceLabel}
-              </button>
+            <div className={`${rc.stackSm} ${rc.contextPad}`}>
+              <span className={rc.textMuted}>context</span>
+              <EntityLink kind="place" id={claim.context_place_id} label={contextPlaceLabel}
+                onClick={() => onSelectEntity("place", claim.context_place_id)} />
             </div>
           )}
           {evidence.map((ev) => (
@@ -82,7 +70,6 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
           ))}
         </div>
       )}
-
     </div>
   );
 }

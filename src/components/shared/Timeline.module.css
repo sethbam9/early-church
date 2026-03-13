@@ -1,0 +1,13 @@
+/* Shared Timeline component */
+.list { display: flex; flex-direction: column; }
+.row { display: flex; padding: var(--space-2) 0; border-bottom: 1px solid var(--border-subtle); }
+.rowActive { background: var(--accent-dim); border-radius: var(--radius-sm); }
+.gutter { width: 28px; display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+.gutterLast .line { display: none; }
+.dot {
+  width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--border-default);
+  background: var(--bg-surface-2); flex-shrink: 0;
+}
+.dotActive { border-color: var(--accent); background: var(--accent); }
+.content { flex: 1; min-width: 0; padding-left: var(--space-2); }
+.empty { padding: 16px 12px; text-align: center; color: var(--text-faint); font-size: 0.85rem; }

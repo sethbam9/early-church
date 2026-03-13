@@ -1,0 +1,16 @@
+.nav {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+.icon {
+  background: none;
+  border: none;
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  padding: 2px;
+  border-radius: var(--radius-sm);
+  transition: background 0.12s;
+  line-height: 1;
+}
+.icon:hover { background: var(--bg-surface-2); }

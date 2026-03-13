@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { fetchBiblePassage, osisToStepBibleUrl, locatorToDisplay, type BiblePassageResult } from "../../utils/bibleApi";
+import { ExternalLink } from "./ExternalLink";
+import s from "./BibleOverlay.module.css";
 
 interface BibleOverlayProps {
   locator: string;
@@ -27,45 +29,37 @@ export function BibleOverlay({ locator, onClose }: BibleOverlayProps) {
 
   return createPortal(
     <>
-      <div className="bible-overlay-backdrop" onClick={onClose} />
-      <div className="bible-overlay">
-        <div className="bible-overlay-header">
-          <div className="bible-overlay-title">{displayRef}</div>
-          <button type="button" className="close-btn" onClick={onClose}>✕</button>
+      <div className={s.backdrop} onClick={onClose} />
+      <div className={s.overlay}>
+        <div className={s.header}>
+          <div className={s.title}>{displayRef}</div>
+          <button type="button" className={s.closeBtn} onClick={onClose}>✕</button>
         </div>
-
-        <div className="bible-overlay-body">
-          {loading && <div className="empty-state">Loading passage…</div>}
-          {error && <div className="empty-state">Could not load passage.</div>}
+        <div className={s.body}>
+          {loading && <div className={s.emptyState}>Loading passage…</div>}
+          {error && <div className={s.emptyState}>Could not load passage.</div>}
           {result && (
             <>
-              <blockquote className="bible-overlay-text">
+              <blockquote className={s.text}>
                 {result.verses.length > 0
                   ? result.verses.map((v) => (
                       <span key={`${v.chapter}:${v.verse}`}>
-                        <sup className="bible-verse-num">{v.verse}</sup>
+                        <sup className={s.verseNum}>{v.verse}</sup>
                         {v.text.trim()}{" "}
                       </span>
                     ))
                   : result.text}
               </blockquote>
-              <div className="bible-overlay-meta">
+              <div className={s.meta}>
                 {result.translation_name} ({result.translation_id.toUpperCase()})
               </div>
             </>
           )}
         </div>
-
-        <div className="bible-overlay-footer">
-          <a
-            href={stepUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="view-on-map-btn"
-            style={{ textAlign: "center", flex: 1, textDecoration: "none" }}
-          >
-            Open in STEP Bible →
-          </a>
+        <div className={s.footer}>
+          <ExternalLink href={stepUrl} className={s.stepLink}>
+            Open in STEP Bible
+          </ExternalLink>
         </div>
       </div>
     </>,

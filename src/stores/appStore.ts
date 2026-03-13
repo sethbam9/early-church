@@ -4,7 +4,7 @@ import { dataStore } from "../data/dataStore";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-export type SidebarTab =
+export type PanelTab =
   | "places"
   | "groups"
   | "people"
@@ -47,10 +47,11 @@ export interface AppState {
   mapFilterType: string | null;
   mapFilterId: string | null;
 
-  // Right sidebar
-  sidebarTab: SidebarTab;
-  sidebarExpanded: boolean;
-  sidebarSearch: string;
+  // Right panel
+  panelTab: PanelTab;
+  panelExpanded: boolean;
+  panelSearch: string;
+  pendingEssayId: string | null;
 
   // Panel visibility
   leftPanelVisible: boolean;
@@ -81,9 +82,10 @@ export interface AppState {
   clearMapFilter: () => void;
   clearAll: () => void;
 
-  setSidebarTab: (tab: SidebarTab) => void;
-  toggleSidebarExpanded: () => void;
-  setSidebarSearch: (q: string) => void;
+  setPanelTab: (tab: PanelTab) => void;
+  togglePanelExpanded: () => void;
+  setPanelSearch: (q: string) => void;
+  setPendingEssay: (id: string | null) => void;
 
   toggleLeftPanel: () => void;
   toggleRightPanel: () => void;
@@ -115,9 +117,10 @@ export const useAppStore = create<AppState>((set) => ({
   mapFilterType: null,
   mapFilterId: null,
 
-  sidebarTab: "places",
-  sidebarExpanded: false,
-  sidebarSearch: "",
+  panelTab: "places",
+  panelExpanded: false,
+  panelSearch: "",
+  pendingEssayId: null,
 
   leftPanelVisible: true,
   rightPanelVisible: true,
@@ -140,11 +143,12 @@ export const useAppStore = create<AppState>((set) => ({
 
   // ── Selection ────────────────────────────────────────────────────────────
 
-  setSelection: (selection) => set({ selection, selectionHistory: [] }),
+  setSelection: (selection) => set({ selection, selectionHistory: [], showArcs: true }),
 
   pushSelection: (sel) => set((s) => ({
     selectionHistory: s.selection ? [...s.selectionHistory, s.selection] : s.selectionHistory,
     selection: sel,
+    showArcs: true,
   })),
 
   popSelection: () => set((s) => {
@@ -181,17 +185,18 @@ export const useAppStore = create<AppState>((set) => ({
   clearMapFilter: () => set({ mapFilterType: null, mapFilterId: null }),
   clearAll: () => set({ selection: null, selectionHistory: [], mapFilterType: null, mapFilterId: null, searchQuery: "", activePresenceFilters: [], activePlaceKindFilter: null, christianOnly: false }),
 
-  // ── Sidebar ──────────────────────────────────────────────────────────────
+  // ── Panel ───────────────────────────────────────────────────────────────
 
-  setSidebarTab: (tab) => set({ sidebarTab: tab, sidebarSearch: "" }),
-  toggleSidebarExpanded: () => set((s) => ({ sidebarExpanded: !s.sidebarExpanded })),
-  setSidebarSearch: (q) => set({ sidebarSearch: q }),
+  setPanelTab: (tab) => set({ panelTab: tab, panelSearch: "" }),
+  togglePanelExpanded: () => set((s) => ({ panelExpanded: !s.panelExpanded })),
+  setPanelSearch: (q) => set({ panelSearch: q }),
+  setPendingEssay: (id) => set({ pendingEssayId: id }),
 
   // ── Panel visibility ─────────────────────────────────────────────────────
 
   toggleLeftPanel: () => set((s) => ({ leftPanelVisible: !s.leftPanelVisible })),
   toggleRightPanel: () => set((s) => ({
     rightPanelVisible: !s.rightPanelVisible,
-    sidebarExpanded: s.rightPanelVisible ? false : s.sidebarExpanded,
+    panelExpanded: s.rightPanelVisible ? false : s.panelExpanded,
   })),
 }));

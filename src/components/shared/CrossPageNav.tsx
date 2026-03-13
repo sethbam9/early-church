@@ -6,6 +6,7 @@
 import { useNavigate } from "react-router-dom";
 import { useAppStore } from "../../stores/appStore";
 import type { Selection } from "../../data/dataStore";
+import cs from "./CrossPageNav.module.css";
 
 type PageKey = "map" | "graph" | "wiki";
 
@@ -31,17 +32,11 @@ export function CrossPageNav({ kind, id, current }: { kind: string; id: string; 
   }
 
   return (
-    <span className="cross-page-nav">
+    <span className={cs.nav}>
       {others.map((key) => {
         const p = PAGE_ICONS[key];
         return (
-          <button
-            key={key}
-            type="button"
-            className="page-nav-icon"
-            title={p.label}
-            onClick={() => handleNav(key)}
-          >
+          <button key={key} type="button" className={cs.icon} title={p.label} onClick={() => handleNav(key)}>
             {p.icon}
           </button>
         );
