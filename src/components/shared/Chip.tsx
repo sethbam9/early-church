@@ -4,15 +4,15 @@ type ChipVariant = 'neutral' | 'accent' | 'success' | 'warning' | 'danger'
   | 'attested' | 'probable' | 'claimed' | 'suppressed' | 'unknown';
 
 const ACTIVE_MAP: Record<string, string> = {
-  accent:     s.active,
-  success:    s.activeSuccess,
-  warning:    s.activeWarning,
-  danger:     s.activeDanger,
-  attested:   s.activeAttested,
-  probable:   s.activeProbable,
-  claimed:    s.activeClaimed,
-  suppressed: s.activeSuppressed,
-  unknown:    s.activeUnknown,
+  accent:     s.active || '',
+  success:    s.activeSuccess || '',
+  warning:    s.activeWarning || '',
+  danger:     s.activeDanger || '',
+  attested:   s.activeAttested || '',
+  probable:   s.activeProbable || '',
+  claimed:    s.activeClaimed || '',
+  suppressed: s.activeSuppressed || '',
+  unknown:    s.activeUnknown || '',
 };
 
 interface ChipProps {

@@ -10,8 +10,8 @@ import { Pagination } from "../shared/Pagination";
 import { getClaimBorderClass } from "../../utils/claimAudit";
 
 const COL_CLS: Record<string, string> = {
-  subject: s.auditColSubject, predicate: s.auditColPred, object: s.auditColObject,
-  year: s.auditColYear, certainty: s.auditColCert, ev: s.auditColEv, rev: s.auditColRev, status: s.auditColStatus,
+  subject: s.auditColSubject || '', predicate: s.auditColPred || '', object: s.auditColObject || '',
+  year: s.auditColYear || '', certainty: s.auditColCert || '', ev: s.auditColEv || '', rev: s.auditColRev || '', status: s.auditColStatus || '',
 };
 
 const SORT_OPTIONS: { value: string; label: string }[] = [
@@ -24,13 +24,13 @@ const SORT_OPTIONS: { value: string; label: string }[] = [
   { value: "year-desc", label: "Year ↓" },
 ];
 const STATUS_CLS: Record<string, string> = {
-  "no-evidence": s.statusNoEvidence, unreviewed: s.statusUnreviewed,
-  disputed: s.statusDisputed, "needs-revision": s.statusNeedsRevision,
-  approved: s.statusApproved, ok: s.statusOk,
+  "no-evidence": s.statusNoEvidence || '', unreviewed: s.statusUnreviewed || '',
+  disputed: s.statusDisputed || '', "needs-revision": s.statusNeedsRevision || '',
+  approved: s.statusApproved || '', ok: s.statusOk || '',
 };
 const CERT_CLS: Record<string, string> = {
-  probable: s.certaintyProbable, possible: s.certaintyPossible,
-  claimed_tradition: s.certaintyClaimedTradition, legendary: s.certaintyLegendary, unknown: s.certaintyUnknown,
+  probable: s.certaintyProbable || '', possible: s.certaintyPossible || '',
+  claimed_tradition: s.certaintyClaimedTradition || '', legendary: s.certaintyLegendary || '', unknown: s.certaintyUnknown || '',
 };
 
 interface AuditViewProps {
@@ -108,7 +108,7 @@ export function AuditView({ onSelectEntity, onSelectClaim, selectedClaimId }: Au
       {/* Results */}
       <div className={s.auditResults}>
         <div className={s.auditTableHeader}>
-          {([["subject","Subject"],["predicate","Predicate"],["object","Object"],["year","Year"],["certainty","Cert"],["ev","Ev"],["rev","Rev"],["status","Status"]] as [AuditSortCol,string][]).map(([col, label]) => {
+          {([["subject", "Subject"], ["predicate", "Predicate"], ["object", "Object"], ["year", "Year"], ["certainty", "Cert"], ["ev", "Ev"], ["rev", "Rev"], ["status", "Status"]] as [AuditSortCol, string][]).map(([col, label]) => {
             const arrow = sortCol === col ? (sortDir === "asc" ? " ▲" : sortDir === "desc" ? " ▼" : "") : "";
             const colCls = COL_CLS[col] ?? "";
             const cls = `${s.auditCol} ${colCls} ${s.auditSortHdr}${sortCol === col ? ` ${s.auditSortHdrActive}` : ""}`;

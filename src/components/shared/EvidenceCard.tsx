@@ -5,10 +5,10 @@ import { getSourceExternalUrl, getSourceAccessTitle } from "../../utils/sourceLi
 import s from "./EvidenceCard.module.css";
 
 const ROLE_CLS: Record<string, string> = {
-  supports: s.roleSupports,
-  opposes: s.roleOpposes,
-  contextualizes: s.roleContextualizes,
-  mentions: s.roleMentions,
+  supports: s.roleSupports || '',
+  opposes: s.roleOpposes || '',
+  contextualizes: s.roleContextualizes || '',
+  mentions: s.roleMentions || '',
 };
 
 interface EvidenceCardProps {
