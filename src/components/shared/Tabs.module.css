@@ -1,0 +1,77 @@
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  overflow-x: auto;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  transition: color 0.12s, border-color 0.12s;
+}
+.tab:hover { color: var(--text-primary); }
+.active {
+  color: var(--accent-bright);
+  border-bottom-color: var(--accent-bright);
+  font-weight: 600;
+}
+
+/* Icon + label */
+.icon { font-size: 1rem; line-height: 1; }
+.label { font-size: inherit; }
+
+/* Vertical layout */
+.vertical {
+  flex-direction: column;
+  border-bottom: none;
+  border-right: none;
+  overflow-y: auto;
+  max-height: 240px;
+}
+.vertical .tab {
+  text-align: left;
+  border-bottom: none;
+  border-left: 2px solid transparent;
+  padding: var(--space-1) var(--space-3);
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.vertical .tab:hover {
+  background: var(--bg-surface-2);
+  color: var(--text-primary);
+  border-left-color: var(--accent-bright);
+}
+.vertical .active {
+  border-left-color: var(--accent-bright);
+  border-bottom-color: transparent;
+  background: var(--accent-dim);
+}
+
+/* Compact: icon-centric (RightPanel tab bar) */
+.compact .tab {
+  flex: 1 1 0;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 6px 2px;
+  overflow: hidden;
+}
+.compact .icon { font-size: 1rem; line-height: 1; }
+.compact .label {
+  font-size: 0.67rem; font-weight: 500; letter-spacing: 0.01em;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  max-width: 100%;
+}

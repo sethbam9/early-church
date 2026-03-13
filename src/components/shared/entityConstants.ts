@@ -4,13 +4,15 @@
  */
 
 export const KIND_ICONS: Record<string, string> = {
-  city: "🏛", person: "👤", work: "📜", doctrine: "📖",
-  event: "⚡", archaeology: "★", persuasion: "✦", polity: "⚔",
+  place: "🏛", person: "👤", work: "📜", event: "⚡",
+  group: "✦", topic: "📖", dimension: "📊", proposition: "📝",
+  source: "📚", passage: "📄", claim: "🔗", editor_note: "📋", essay: "📝",
 };
 
 export const KIND_LABELS: Record<string, string> = {
-  person: "Person", work: "Work", doctrine: "Doctrine", event: "Event",
-  archaeology: "Archaeology", city: "City", persuasion: "Persuasion", polity: "Polity",
+  place: "Place", person: "Person", work: "Work", event: "Event",
+  group: "Group", topic: "Topic", dimension: "Dimension", proposition: "Proposition",
+  source: "Source", passage: "Passage", claim: "Claim", editor_note: "Note",
 };
 
 export function kindIcon(kind: string): string {
@@ -42,3 +44,61 @@ export const PRESENCE_LABELS: Record<string, string> = {
 export function presenceColor(status: string): string {
   return PRESENCE_COLORS[status] ?? "#8e8070";
 }
+
+export const KIND_COLORS: Record<string, string> = {
+  person:      "#c47c3a",
+  work:        "#4a9eca",
+  proposition: "#9b72cf",
+  event:       "#e67e22",
+  place:       "#e9a84a",
+  group:       "#e63946",
+  topic:       "#6c757d",
+  source:      "#2a9d8f",
+};
+
+export const CERTAINTY_COLORS: Record<string, string> = {
+  attested:  "var(--attested)",
+  probable:  "var(--probable)",
+  possible:  "#8e8070",
+  uncertain: "#c0392b",
+};
+
+
+export const STANCE_COLORS: Record<string, string> = {
+  affirms: "#1a7a5c",
+  opposes: "#c0392b",
+  mixed:   "#b07e10",
+  neutral: "#8e8070",
+  unknown: "#8e8070",
+};
+
+export const STANCE_LABELS: Record<string, string> = {
+  affirms: "Affirms",
+  opposes: "Opposes",
+  mixed:   "Mixed",
+  neutral: "Neutral",
+  unknown: "Unknown",
+};
+
+export const ENTITY_TABS: { kind: string; label: string }[] = [
+  { kind: "person",      label: "People" },
+  { kind: "place",       label: "Places" },
+  { kind: "group",       label: "Groups" },
+  { kind: "work",        label: "Works" },
+  { kind: "event",       label: "Events" },
+  { kind: "proposition", label: "Propositions" },
+  { kind: "topic",       label: "Topics" },
+  { kind: "source",      label: "Sources" },
+  { kind: "editor_note", label: "Notes" },
+  { kind: "essay",       label: "Essays" },
+];
+
+export const CERTAINTY_OPTIONS: { value: string; label: string }[] = [
+  { value: "all",               label: "All certainty" },
+  { value: "attested",          label: "Attested" },
+  { value: "probable",          label: "Probable" },
+  { value: "possible",          label: "Possible" },
+  { value: "claimed_tradition", label: "Claimed tradition" },
+  { value: "legendary",         label: "Legendary" },
+  { value: "unknown",           label: "Unknown" },
+];

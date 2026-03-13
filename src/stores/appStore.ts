@@ -1,20 +1,18 @@
 import { create } from "zustand";
-import type { Selection, PresenceStatus } from "../data/dataStore";
+import type { Selection, PresenceStatus, PlaceKind } from "../data/dataStore";
 import { dataStore } from "../data/dataStore";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-export type SidebarTab =
+export type PanelTab =
   | "places"
-  | "persuasions"
-  | "polities"
+  | "groups"
   | "people"
-  | "doctrines"
+  | "propositions"
   | "events"
   | "works"
   | "essays";
 
-export type PlacesSubTab = "cities" | "archaeology";
 export type PlaybackSpeed = 1 | 2 | 4;
 
 // ─── State ───────────────────────────────────────────────────────────────────
@@ -33,26 +31,31 @@ export interface AppState {
   // Presence filter chips (empty = all shown)
   activePresenceFilters: PresenceStatus[];
 
+  // Place kind filter (empty = all shown)
+  activePlaceKindFilter: PlaceKind | null;
+
+  // Christian-only toggle
+  christianOnly: boolean;
+
   // Global search (left panel)
   searchQuery: string;
 
   // Arcs overlay (on by default)
   showArcs: boolean;
 
-  // Map filter by entity (persuasion / polity / person)
+  // Map filter by entity (group / person / proposition)
   mapFilterType: string | null;
   mapFilterId: string | null;
 
-  // Right sidebar
-  sidebarTab: SidebarTab;
-  sidebarPlacesSubTab: PlacesSubTab;
-  sidebarExpanded: boolean;
-  sidebarSearch: string;
+  // Right panel
+  panelTab: PanelTab;
+  panelExpanded: boolean;
+  panelSearch: string;
+  pendingEssayId: string | null;
 
   // Panel visibility
   leftPanelVisible: boolean;
   rightPanelVisible: boolean;
-  archaeologyLayerVisible: boolean;
 
   // Actions
   setDecade: (decade: number) => void;
@@ -69,6 +72,9 @@ export interface AppState {
   togglePresenceFilter: (s: PresenceStatus) => void;
   setAllPresenceFilters: (statuses: PresenceStatus[]) => void;
 
+  setPlaceKindFilter: (kind: PlaceKind | null) => void;
+  setChristianOnly: (v: boolean) => void;
+
   setSearchQuery: (q: string) => void;
 
   toggleShowArcs: () => void;
@@ -76,20 +82,19 @@ export interface AppState {
   clearMapFilter: () => void;
   clearAll: () => void;
 
-  setSidebarTab: (tab: SidebarTab) => void;
-  setSidebarPlacesSubTab: (sub: PlacesSubTab) => void;
-  toggleSidebarExpanded: () => void;
-  setSidebarSearch: (q: string) => void;
+  setPanelTab: (tab: PanelTab) => void;
+  togglePanelExpanded: () => void;
+  setPanelSearch: (q: string) => void;
+  setPendingEssay: (id: string | null) => void;
 
   toggleLeftPanel: () => void;
   toggleRightPanel: () => void;
-  toggleArchaeologyLayer: () => void;
 }
 
 // ─── Defaults ────────────────────────────────────────────────────────────────
 
 const decades = dataStore.map.getDecades();
-const defaultDecade = decades.includes(0) ? 0 : (decades.find((d) => d >= 0) ?? decades[0] ?? 0);
+const defaultDecade = decades.includes(20) ? 20 : (decades.find((d) => d >= 0) ?? decades[0] ?? 0);
 
 // ─── Store ───────────────────────────────────────────────────────────────────
 
@@ -103,6 +108,8 @@ export const useAppStore = create<AppState>((set) => ({
   selectionHistory: [],
 
   activePresenceFilters: [],
+  activePlaceKindFilter: null,
+  christianOnly: false,
 
   searchQuery: "",
 
@@ -110,14 +117,13 @@ export const useAppStore = create<AppState>((set) => ({
   mapFilterType: null,
   mapFilterId: null,
 
-  sidebarTab: "places",
-  sidebarPlacesSubTab: "cities",
-  sidebarExpanded: false,
-  sidebarSearch: "",
+  panelTab: "places",
+  panelExpanded: false,
+  panelSearch: "",
+  pendingEssayId: null,
 
   leftPanelVisible: true,
   rightPanelVisible: true,
-  archaeologyLayerVisible: true,
 
   // ── Decade / playback ────────────────────────────────────────────────────
 
@@ -137,11 +143,12 @@ export const useAppStore = create<AppState>((set) => ({
 
   // ── Selection ────────────────────────────────────────────────────────────
 
-  setSelection: (selection) => set({ selection, selectionHistory: [] }),
+  setSelection: (selection) => set({ selection, selectionHistory: [], showArcs: true }),
 
   pushSelection: (sel) => set((s) => ({
     selectionHistory: s.selection ? [...s.selectionHistory, s.selection] : s.selectionHistory,
     selection: sel,
+    showArcs: true,
   })),
 
   popSelection: () => set((s) => {
@@ -161,6 +168,11 @@ export const useAppStore = create<AppState>((set) => ({
 
   setAllPresenceFilters: (statuses) => set({ activePresenceFilters: statuses }),
 
+  // ── Place kind / christian filters ────────────────────────────────────────
+
+  setPlaceKindFilter: (kind) => set({ activePlaceKindFilter: kind }),
+  setChristianOnly: (v) => set({ christianOnly: v }),
+
   // ── Global search ────────────────────────────────────────────────────────
 
   setSearchQuery: (q) => set({ searchQuery: q }),
@@ -171,21 +183,20 @@ export const useAppStore = create<AppState>((set) => ({
 
   setMapFilter: (type, id) => set({ mapFilterType: type, mapFilterId: id }),
   clearMapFilter: () => set({ mapFilterType: null, mapFilterId: null }),
-  clearAll: () => set({ selection: null, selectionHistory: [], mapFilterType: null, mapFilterId: null, searchQuery: "", activePresenceFilters: [] }),
+  clearAll: () => set({ selection: null, selectionHistory: [], mapFilterType: null, mapFilterId: null, searchQuery: "", activePresenceFilters: [], activePlaceKindFilter: null, christianOnly: false }),
 
-  // ── Sidebar ──────────────────────────────────────────────────────────────
+  // ── Panel ───────────────────────────────────────────────────────────────
 
-  setSidebarTab: (tab) => set({ sidebarTab: tab, sidebarSearch: "" }),
-  setSidebarPlacesSubTab: (sub) => set({ sidebarPlacesSubTab: sub, sidebarSearch: "" }),
-  toggleSidebarExpanded: () => set((s) => ({ sidebarExpanded: !s.sidebarExpanded })),
-  setSidebarSearch: (q) => set({ sidebarSearch: q }),
+  setPanelTab: (tab) => set({ panelTab: tab, panelSearch: "" }),
+  togglePanelExpanded: () => set((s) => ({ panelExpanded: !s.panelExpanded })),
+  setPanelSearch: (q) => set({ panelSearch: q }),
+  setPendingEssay: (id) => set({ pendingEssayId: id }),
 
   // ── Panel visibility ─────────────────────────────────────────────────────
 
   toggleLeftPanel: () => set((s) => ({ leftPanelVisible: !s.leftPanelVisible })),
   toggleRightPanel: () => set((s) => ({
     rightPanelVisible: !s.rightPanelVisible,
-    sidebarExpanded: s.rightPanelVisible ? false : s.sidebarExpanded,
+    panelExpanded: s.rightPanelVisible ? false : s.panelExpanded,
   })),
-  toggleArchaeologyLayer: () => set((s) => ({ archaeologyLayerVisible: !s.archaeologyLayerVisible })),
 }));

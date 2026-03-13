@@ -8,7 +8,7 @@ export interface Essay {
 }
 
 // Link syntax: [[kind:id|label]]
-// Supported kinds: city, person, work, doctrine, event, persuasion, polity, archaeology
+// Supported kinds: place, person, work, event, group, topic, proposition, source
 
 // ─── Load raw .md bodies from data/essays/ via Vite glob ─────────────────────
 

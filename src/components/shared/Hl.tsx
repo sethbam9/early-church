@@ -1,3 +1,5 @@
+import s from './Hl.module.css';
+
 /** Single-occurrence search highlight for plain-text strings. */
 export function Hl({ text, query }: { text: string; query: string }) {
   if (!query || !text) return <>{text}</>;
@@ -6,9 +8,7 @@ export function Hl({ text, query }: { text: string; query: string }) {
   return (
     <>
       {text.slice(0, idx)}
-      <mark style={{ background: "rgba(26,122,92,0.25)", color: "inherit", borderRadius: 2, padding: "0 1px" }}>
-        {text.slice(idx, idx + query.length)}
-      </mark>
+      <mark className={s.mark}>{text.slice(idx, idx + query.length)}</mark>
       {text.slice(idx + query.length)}
     </>
   );

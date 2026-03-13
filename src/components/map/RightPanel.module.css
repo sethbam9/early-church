@@ -1,0 +1,124 @@
+/* RightPanel – list shell */
+
+/* Toolbar / search */
+.toolbar {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* List area */
+.list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+
+/* ── NoteDetail / EssayView panel styles ───────────────────────────────────── */
+.panel { display: flex; flex-direction: column; height: 100%; overflow: hidden; position: relative; }
+.backBar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0; background: var(--surface);
+}
+.backBtn {
+  background: none; border: none; color: var(--text-faint);
+  cursor: pointer; font-size: 0.82rem; font-family: inherit;
+  padding: 4px 8px; border-radius: var(--radius-sm);
+  transition: background 0.12s, color 0.12s;
+}
+.backBtn:hover { background: var(--surface-2); color: var(--text); }
+.crumb { font-size: 0.76rem; color: var(--text-faint); }
+
+.header {
+  padding: 12px 14px 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+.kindBadge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--text-faint);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 2px 7px; margin-bottom: 5px;
+}
+.title {
+  font-size: 1.18rem; font-weight: 700;
+  color: var(--text); line-height: 1.2;
+}
+.subtitle {
+  font-size: 0.82rem; color: var(--text-muted); margin-top: 3px;
+}
+
+.body {
+  flex: 1; overflow-y: auto;
+  padding: 10px 14px 20px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.bodyGap12 { gap: 12px; }
+
+.noteCard {
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+
+.factGrid {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 4px 10px; font-size: 0.82rem;
+}
+.factLabel { color: var(--text-faint); white-space: nowrap; padding-top: 1px; }
+.factValue { color: var(--text); }
+
+.mentionLink {
+  background: none; border: none;
+  border-bottom: 1px dashed var(--accent-bright);
+  color: var(--accent-bright); cursor: pointer;
+  font: inherit; padding: 0 1px;
+  transition: color 0.12s, border-color 0.12s;
+}
+.mentionLink:hover { color: var(--accent-strong); border-color: var(--accent-strong); }
+
+.emptyState {
+  padding: 24px 14px; text-align: center;
+  color: var(--text-faint); font-size: 0.85rem;
+}
+
+/* Essay tab toggle */
+.essayTabBar {
+  display: flex; gap: 0; border-bottom: 1px solid var(--border-subtle); flex-shrink: 0;
+}
+.essayTab {
+  flex: 1; padding: 7px 0; text-align: center;
+  background: none; border: none; border-bottom: 2px solid transparent;
+  font: inherit; font-size: 0.8rem; color: var(--text-muted); cursor: pointer;
+  transition: color 0.12s, border-color 0.12s;
+}
+.essayTab:hover { color: var(--text); }
+.essayTabActive { color: var(--accent-bright); border-bottom-color: var(--accent-bright); font-weight: 600; }
+
+/* Entity group in essay entities tab */
+.entityGroupLabel {
+  font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.04em; color: var(--text-faint);
+  padding: 10px 14px 4px;
+}
+.entityItem {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; text-align: left; padding: 6px 14px;
+  background: none; border: none; border-bottom: 1px solid var(--border-subtle);
+  color: var(--text); font: inherit; font-size: 0.82rem;
+  cursor: pointer; transition: background 0.12s;
+}
+.entityItem:hover { background: var(--surface-2); }
+.entityItemIcon { flex-shrink: 0; font-size: 0.85rem; }
+.entityItemLabel { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

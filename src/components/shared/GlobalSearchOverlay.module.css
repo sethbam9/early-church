@@ -1,0 +1,43 @@
+/* Global search overlay — shared across map/graph/wiki */
+.wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 6px 20px rgba(0,0,0,.18);
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text);
+  transition: background 0.12s, color 0.12s;
+  font-family: inherit;
+  font-size: 0.82rem;
+}
+.result:hover, .resultActive {
+  background: var(--surface-2);
+}
+
+.resultIcon { flex-shrink: 0; font-size: 0.85rem; }
+.resultLabel { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.resultKind { flex-shrink: 0; font-size: 0.72rem; color: var(--text-faint); }

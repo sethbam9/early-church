@@ -1,378 +1,710 @@
-# Core Domain Models
+# Domain Models for the App
 
-How the app's TypeScript types map to the data, and how to migrate to a DB later.
+Reference TypeScript domain model for the React/TypeScript app.
 
----
+This file aligns with [`app-data.md`](./app-data.md) and assumes:
 
-## Principles
-
-1. **Every entity has a stable string ID** — never encode time or location in an ID.
-2. **Time is always a separate field** — `year_start` / `year_end`, never embedded in identity.
-3. **Geography is a join** — entities don't own coordinates; they reference a `place_id`.
-4. **Relations are first-class** — the graph is in `relations.tsv`, not in per-entity columns.
-5. **Static data lives once** — city-planting metadata is on `City`, not repeated per decade.
-6. **Derived state is pre-computed** — `places.tsv`, `entity_place_footprints.tsv`, and `note_mentions.tsv` are derive-script outputs, never edited manually.
+- source TSVs are normalized
+- derived tables are regenerated
+- map/UI layers consume view models rather than raw claims
+- groups replace separate polity/persuasion entities
+- place naming supports both historical/canonical and modern labels
+- markdown links and Bible OSIS references are parsed into a shared mention index
 
 ---
 
-## Node entities
-
-### City
-Canonical geographic unit. Corresponds to `cities.tsv`.
+## Core scalar types
 
 ```ts
-interface City {
-  city_id: string;              // PK
-  city_label: string;
-  city_ancient: string;         // col: city_ancient_primary
-  city_modern: string;          // col: city_modern_primary
-  country_modern: string;       // col: country_modern_primary
-  lat: number | null;
-  lon: number | null;
-  location_precision: "exact" | "approx_city" | "region_only" | "unknown";
-  christianity_start_year: number | null;
-  // Static church-planting metadata (moved from place_state_by_decade)
-  church_planted_year_scholarly: number | null;
-  church_planted_year_earliest_claim: number | null;
-  church_planted_by: string;
-  apostolic_origin_thread: string;
+export type Id = string;
+export type Year = number;
+export type DateTimeIso = string;
+export type Markdown = string;
+export type UrlString = string;
+export type OsisRef = string;
+export type PassageLocatorType = "bible_osis" | "source_ref";
+```
+
+---
+
+## Enum types
+
+```ts
+export type EntityType =
+  | "place"
+  | "person"
+  | "work"
+  | "event"
+  | "group"
+  | "topic"
+  | "dimension"
+  | "proposition"
+  | "source"
+  | "passage"
+  | "claim"
+  | "editor_note";
+
+export type MentionTargetType = EntityType | "bible";
+export type MentionSourceType = "table_field" | "markdown_file";
+
+export type ObjectMode = "entity" | "text" | "number" | "year" | "boolean";
+
+export type Certainty =
+  | "attested"
+  | "probable"
+  | "possible"
+  | "claimed_tradition"
+  | "legendary"
+  | "unknown";
+
+export type ClaimStatus =
+  | "active"
+  | "deprecated"
+  | "superseded"
+  | "rejected"
+  | "draft";
+
+export type EvidenceRole =
+  | "supports"
+  | "opposes"
+  | "contextualizes"
+  | "mentions";
+
+export type ReviewStatus =
+  | "unreviewed"
+  | "reviewed"
+  | "approved"
+  | "disputed"
+  | "needs_revision";
+
+export type ReviewConfidence = "low" | "medium" | "high";
+
+export type DerivedStance = "" | "affirms" | "opposes" | "mixed" | "neutral";
+export type Stance = "affirms" | "opposes" | "mixed" | "neutral" | "unknown";
+
+export type PresenceStatus =
+  | "attested"
+  | "probable"
+  | "possible"
+  | "claimed_tradition"
+  | "not_attested"
+  | "suppressed"
+  | "unknown";
+
+export type CanonicalSortRule =
+  | "none"
+  | "lexicographic_entity_ref"
+  | "lexicographic_claim_pair";
+
+export type PlaceKind =
+  | "city"
+  | "region"
+  | "province"
+  | "site"
+  | "monastery"
+  | "route"
+  | "unknown";
+
+export type LocationPrecision =
+  | "exact"
+  | "approx_site"
+  | "approx_city"
+  | "approx_region"
+  | "region_only"
+  | "unknown";
+
+export type PersonKind =
+  | "individual"
+  | "anonymous_author"
+  | "collective_author"
+  | "composite_figure"
+  | "unknown";
+
+export type WorkType =
+  | "letter"
+  | "treatise"
+  | "homily"
+  | "commentary"
+  | "rule"
+  | "canon_list"
+  | "dialogue"
+  | "chronicle"
+  | "apology"
+  | "acta"
+  | "inscription"
+  | "other";
+
+export type WorkKind =
+  | "single_work"
+  | "collection"
+  | "fragment"
+  | "recension"
+  | "inscription_unit";
+
+export type EventType =
+  | "council"
+  | "martyrdom"
+  | "mission"
+  | "persecution"
+  | "political"
+  | "schism"
+  | "literary"
+  | "liturgical"
+  | "other";
+
+export type EventKind = "simple" | "composite" | "recurring" | "session";
+
+export type GroupKind =
+  | "communion"
+  | "sect"
+  | "school"
+  | "order"
+  | "faction"
+  | "practice_stream"
+  | "modern_heir"
+  | "polity"
+  | "unknown";
+
+export type TopicKind =
+  | "doctrine"
+  | "practice"
+  | "office"
+  | "canon"
+  | "devotion"
+  | "discipline"
+  | "other";
+
+export type DimensionKind = "binary" | "multivalue" | "continuum" | "descriptive";
+
+export type SourceKind =
+  | "primary_text"
+  | "inscription"
+  | "manuscript_catalog"
+  | "modern_book"
+  | "journal_article"
+  | "reference_work"
+  | "web_page"
+  | "database"
+  | "other";
+
+export type EditorNoteKind =
+  | "commentary"
+  | "todo"
+  | "dispute"
+  | "migration"
+  | "rationale";
+```
+
+---
+
+## Shared reference types
+
+```ts
+export interface EntityRef<T extends EntityType = EntityType> {
+  entity_type: T;
+  entity_id: Id;
+}
+
+export interface BibleRef {
+  kind: "bible";
+  osis: OsisRef;
+}
+
+export type MentionTargetRef = EntityRef | BibleRef;
+export type EntityLookupKey = `${EntityType}:${Id}`;
+
+export interface AuditFields {
+  created_by?: string;
+  created_at?: DateTimeIso;
+  updated_at?: DateTimeIso;
 }
 ```
+
+---
+
+## Source table models
 
 ### Place
-Map-visible thing. A city, or an archaeology site with its own coordinates. Corresponds to `places.tsv` (DERIVED).
 
 ```ts
-interface Place {
-  place_id: string;         // PK, formatted "city:CITY_ID" or "archaeology:ARCH_ID"
-  place_type: "city" | "archaeology";
+export interface Place extends AuditFields {
+  place_id: Id;
   place_label: string;
+  place_label_modern: string | null;
+  place_kind: PlaceKind;
+  parent_place_id: Id | null;
   lat: number | null;
   lon: number | null;
-  location_precision: "exact" | "approx_city" | "region_only" | "unknown";
-  city_id: string | null;           // FK → City
-  archaeology_id: string | null;    // FK → Archaeology
-}
-```
-
-### PlaceState
-Temporal map state for a place at a specific decade. Corresponds to `place_state_by_decade.tsv`.
-
-```ts
-interface PlaceState {
-  place_id: string;             // FK → Place
-  decade: number;
-  presence_status: PresenceStatus;
-  persuasion_ids: string[];     // FK → Persuasion (semicolon-separated in TSV)
-  polity_id: string | null;     // FK → Polity
-  ruling_subdivision: string;
-  council_context: string;
-  evidence_note_id: string | null;  // FK → Note
-}
-```
-
-### CityAtDecade
-Merged view of City + PlaceState (used by the map). `City` fields are inherited, so church-planting metadata is available.
-
-```ts
-interface CityAtDecade extends City {
-  place_id: string;
-  decade: number;
-  presence_status: PresenceStatus;
-  persuasion_ids: string[];
-  polity_id: string | null;
-  ruling_subdivision: string;
-  council_context: string;
-  evidence_note_id: string | null;
+  location_precision: LocationPrecision;
+  modern_country_label: string | null;
+  notes: Markdown | null;
 }
 ```
 
 ### Person
-Historical figure. Corresponds to `people.tsv`.
 
 ```ts
-interface Person {
-  person_id: string;        // PK
+export interface Person extends AuditFields {
+  person_id: Id;
   person_label: string;
-  name_alt: string[];
-  birth_year: number | null;
-  death_year: number | null;
-  death_type: string;       // "martyrdom" | "natural" | "unknown"
-  roles: string[];          // semicolon-separated in TSV: "bishop;theologian"
-  city_of_origin_id: string | null;  // FK → City
-  apostolic_connection: string;
-  description: string;
-  wikipedia_url: string | null;
-  citations: string[];
+  name_alt: string | null;
+  name_native: string | null;
+  birth_year_display: string | null;
+  death_year_display: string | null;
+  person_kind: PersonKind;
+  notes: Markdown | null;
 }
 ```
 
 ### Work
-Primary source text. Corresponds to `works.tsv`.
 
 ```ts
-interface Work {
-  work_id: string;          // PK
+export interface Work extends AuditFields {
+  work_id: Id;
   title_display: string;
-  author_person_id: string | null;   // FK → Person
-  author_name_display: string;
-  year_written_start: number | null;
-  year_written_end: number | null;
-  work_type: string;        // see enum-schema.md
-  language: string;
-  place_written_id: string | null;   // FK → Place (formatted "city:…")
-  place_recipient_ids: string[];     // semicolon-separated FK → Place
-  description: string;
-  significance: string;
-  modern_edition_url: string | null;
-  citations: string[];
-}
-```
-
-### Doctrine
-A theological claim or practice. Corresponds to `doctrines.tsv`.
-
-```ts
-interface Doctrine {
-  doctrine_id: string;      // PK
-  name_display: string;
-  category: string;         // see enum-schema.md
-  description: string;
-  first_attested_year: number | null;
-  first_attested_work_id: string | null;  // FK → Work
-  controversy_level: string; // "low" | "medium" | "high"
-  resolution: string;
-  citations: string[];
-}
-```
-
-### Quote
-Verbatim evidence quote. Corresponds to `quotes.tsv`.
-
-```ts
-interface Quote {
-  quote_id: string;         // PK
-  doctrine_id: string;      // FK → Doctrine
-  work_id: string | null;   // FK → Work
-  text: string;
-  work_reference: string;
-  year: number | null;
-  stance: string;           // "supports" | "opposes" | "neutral" | "developing"
-  notes: string;
-  citations: string[];
+  title_original: string | null;
+  work_type: WorkType;
+  language_original: string | null;
+  work_kind: WorkKind;
+  notes: Markdown | null;
 }
 ```
 
 ### HistoricalEvent
-Historical event. Corresponds to `events.tsv`.
 
 ```ts
-interface HistoricalEvent {
-  event_id: string;         // PK
-  name_display: string;
-  event_type: string;       // see enum-schema.md
-  year_start: number | null;
-  year_end: number | null;
-  primary_place_id: string | null;   // FK → Place
-  region: string;
-  key_figure_person_ids: string[];   // FK → Person
-  description: string;
-  significance: string;
-  outcome: string;
-  citations: string[];
+export interface HistoricalEvent extends AuditFields {
+  event_id: Id;
+  event_label: string;
+  event_type: EventType;
+  event_kind: EventKind;
+  notes: Markdown | null;
 }
 ```
 
-### ArchaeologySite
-Physical archaeological site. Corresponds to `archaeology.tsv`.
+### Group
 
 ```ts
-interface ArchaeologySite {
-  archaeology_id: string;   // PK
-  name_display: string;
-  site_type: string;        // see enum-schema.md
-  city_id: string | null;   // FK → City
-  lat: number | null;
-  lon: number | null;
-  location_precision: LocationPrecision;
-  year_start: number | null;
-  year_end: number | null;
-  description: string;
-  significance: string;
-  discovery_notes: string;
-  current_status: string;
-  uncertainty: string;
-  citations: string[];
+export interface Group extends AuditFields {
+  group_id: Id;
+  group_label: string;
+  group_kind: GroupKind;
+  is_christian: boolean;
+  notes: Markdown | null;
 }
 ```
 
-### Persuasion
-Theological tradition/stream. Corresponds to `persuasions.tsv`.
+> `is_christian` is an editorial flag indicating whether the group counts as
+> "Christian presence" for map filtering. This includes orthodox, gnostic, and
+> schismatic groups at the editor's discretion. Non-Christian movements
+> (Pharisees, Essenes, Roman Empire, etc.) are `false`.
+
+### Topic / Dimension / Proposition
 
 ```ts
-interface Persuasion {
-  persuasion_id: string;    // PK
-  persuasion_label: string;
-  persuasion_stream: string; // see enum-schema.md
-  year_start: number | null;
-  year_end: number | null;
-  description: string;
-  wikipedia_url: string | null;
-  citations: string[];
+export interface Topic extends AuditFields {
+  topic_id: Id;
+  topic_label: string;
+  topic_kind: TopicKind;
+  notes: Markdown | null;
+}
+
+export interface Dimension extends AuditFields {
+  dimension_id: Id;
+  topic_id: Id;
+  dimension_label: string;
+  dimension_kind: DimensionKind;
+  notes: Markdown | null;
+}
+
+export interface Proposition extends AuditFields {
+  proposition_id: Id;
+  topic_id: Id;
+  dimension_id: Id | null;
+  proposition_label: string;
+  polarity_family: string | null;
+  description: string | null;
+  notes: Markdown | null;
 }
 ```
 
-### Polity
-Political entity. Corresponds to `polities.tsv`.
+### PredicateType / SourceRecord / Passage
 
 ```ts
-interface Polity {
-  polity_id: string;        // PK
-  polity_label: string;
-  name_alt: string[];
-  year_start: number | null;
-  year_end: number | null;
-  capital: string;
-  region: string;
-  description: string;
-  wikipedia_url: string | null;
-  citations: string[];
+export interface PredicateType extends AuditFields {
+  predicate_id: Id;
+  predicate_label: string;
+  subject_type: EntityType;
+  object_mode: ObjectMode;
+  object_type: EntityType | null;
+  inverse_label: string | null;
+  is_symmetric: boolean;
+  canonical_sort_rule: CanonicalSortRule;
+  allows_date_range: boolean;
+  allows_context_place: boolean;
+  description: string | null;
+}
+
+export interface SourceRecord extends AuditFields {
+  source_id: Id;
+  work_id: Id | null;
+  source_kind: SourceKind;
+  title: string;
+  author: string | null;
+  editor: string | null;
+  year: number | null;
+  container_title: string | null;
+  publisher: string | null;
+  url: UrlString | null;
+  accessed_on: string | null;
+  isbn_issn: string | null;
+  notes: Markdown | null;
+}
+
+export interface Passage extends AuditFields {
+  passage_id: Id;
+  source_id: Id;
+  locator_type: PassageLocatorType;
+  locator: string;
+  excerpt: string | null;
+  language: string | null;
+  passage_year: Year | null;
+  url_override: UrlString | null;
+  notes: Markdown | null;
 }
 ```
 
 ---
 
-## Relation model
-
-### Relation
-Universal graph edge. Corresponds to `relations.tsv`.
+## Claim models
 
 ```ts
-interface Relation {
-  relation_id: string;      // PK
-  source_type: string;
-  source_id: string;
-  relation_type: string;    // see enum-schema.md
-  target_type: string;
-  target_id: string;
-  year_start: number | null;
-  year_end: number | null;
-  weight: number | null;
-  polarity: string;         // "supports" | "opposes" | "neutral"
-  certainty: string;        // "attested" | "probable" | "claimed_tradition" | "legendary" | "unknown"
-  evidence_note_id: string | null;  // FK → Note
-  citations: string[];
+export interface ClaimBase extends AuditFields {
+  claim_id: Id;
+  subject_type: EntityType;
+  subject_id: Id;
+  predicate_id: Id;
+  object_mode: ObjectMode;
+  year_start: Year | null;
+  year_end: Year | null;
+  context_place_id: Id | null;
+  certainty: Certainty;
+  claim_status: ClaimStatus;
 }
+
+export interface EntityClaim extends ClaimBase {
+  object_mode: "entity";
+  object_type: EntityType;
+  object_id: Id;
+  value_text: null;
+  value_number: null;
+  value_year: null;
+  value_boolean: null;
+}
+
+export interface TextClaim extends ClaimBase {
+  object_mode: "text";
+  object_type: null;
+  object_id: null;
+  value_text: string;
+  value_number: null;
+  value_year: null;
+  value_boolean: null;
+}
+
+export interface NumberClaim extends ClaimBase {
+  object_mode: "number";
+  object_type: null;
+  object_id: null;
+  value_text: null;
+  value_number: number;
+  value_year: null;
+  value_boolean: null;
+}
+
+export interface YearClaim extends ClaimBase {
+  object_mode: "year";
+  object_type: null;
+  object_id: null;
+  value_text: null;
+  value_number: null;
+  value_year: Year;
+  value_boolean: null;
+}
+
+export interface BooleanClaim extends ClaimBase {
+  object_mode: "boolean";
+  object_type: null;
+  object_id: null;
+  value_text: null;
+  value_number: null;
+  value_year: null;
+  value_boolean: boolean;
+}
+
+export type Claim =
+  | EntityClaim
+  | TextClaim
+  | NumberClaim
+  | YearClaim
+  | BooleanClaim;
 ```
 
-**The `polarity` field on `work→affirms→doctrine` and `person→affirms→doctrine` relations drives footprint stance derivation and the doctrine city map.**
-
----
-
-## Evidence model
-
-### Note
-Evidence or commentary. Corresponds to `notes.tsv`.
-
 ```ts
-interface Note {
-  note_id: string;          // PK — 10-char SHA-1 hash of content
-  year_bucket: number | null;
-  year_exact: number | null;
-  primary_entity_type: string;
-  primary_entity_id: string;
-  note_kind: string;        // "evidence" | "commentary"
-  body_md: string;          // may contain [[type:id|label]] mention tags
-  citation_urls: string[];
+export interface ClaimEvidence extends AuditFields {
+  claim_id: Id;
+  passage_id: Id;
+  evidence_role: EvidenceRole;
+  excerpt_override: string | null;
+  evidence_weight: number | null;
+  notes: Markdown | null;
 }
-```
 
-### NoteMention
-Pre-parsed mention join. Corresponds to `note_mentions.tsv` (DERIVED from `notes.tsv`).
-
-```ts
-interface NoteMention {
-  note_id: string;          // FK → Note
-  mentioned_type: string;
-  mentioned_slug: string;
+/**
+ * One review row per claim. Uniqueness is enforced on claim_id alone.
+ * To update a review, mutate the existing row; do not insert a second row.
+ */
+export interface ClaimReview extends AuditFields {
+  claim_id: Id;          // PK — unique per claim
+  reviewer_id: Id;       // reviewer identifier (not part of uniqueness key)
+  review_status: ReviewStatus;
+  reviewed_at: DateTimeIso | null;
+  confidence: ReviewConfidence | null;
+  note: string | null;
 }
-```
 
-Derived by `scripts/derive_mentions.ts`. Access via `dataStore.noteMentions.getMentioning(type, id)`.
-
----
-
-## Footprint model
-
-### Footprint
-Precomputed entity↔place index. Corresponds to `entity_place_footprints.tsv` (DERIVED).
-
-```ts
-type FootprintStance = "affirms" | "condemns" | "neutral" | "";
-
-interface Footprint {
-  entity_type: string;
-  entity_id: string;
-  place_id: string;         // FK → Place
-  year_start: number | null;
-  year_end: number | null;
-  weight: number | null;
-  reason: string;           // e.g. "bishop_of", "written_in", "via_work_affirms"
-  stance: FootprintStance;  // non-empty only for doctrine footprints
+export interface EditorNote extends AuditFields {
+  editor_note_id: Id;
+  note_kind: EditorNoteKind;
+  entity_type: EntityType | null;
+  entity_id: Id | null;
+  claim_id: Id | null;
+  body_md: Markdown;
 }
-```
-
-Derived by `scripts/derive_footprints.ts`. Access via:
-- `dataStore.footprints.getForEntity(type, id)` — all places for an entity
-- `dataStore.footprints.getForPlace(placeId)` — all entities at a place
-- `dataStore.footprints.getDoctrineFootprintsForCity(cityId)` — doctrine stances for a city
-
-**Doctrine city map flow:**
-1. `dataStore.footprints.getForEntity("doctrine", id)` returns footprints with `stance`.
-2. Group by `place_id`, pick dominant stance → color city markers on map.
-
----
-
-## DataStore access patterns
-
-```ts
-// Entity lookups
-dataStore.cities.getById(id)
-dataStore.people.getById(id)
-dataStore.works.getByAuthor(personId)
-dataStore.quotes.getByDoctrine(doctrineId)
-dataStore.relations.getForEntity(type, id)
-dataStore.notes.getForEntity(type, id)
-
-// Map data
-dataStore.map.getCumulativeCitiesAtDecade(decade)   // CityAtDecade[]
-dataStore.map.getPlaceStatesForCity(cityId)          // PlaceState[]
-
-// Footprints
-dataStore.footprints.getForEntity(type, id)          // Footprint[]
-dataStore.footprints.getForPlace(placeId)            // Footprint[]
-
-// Note mentions (cross-reference: "all notes that mention X")
-dataStore.noteMentions.getMentioning(type, id)       // NoteMention[]
 ```
 
 ---
 
-## Implementation status
+## Derived table models
 
-**All tables implemented and validated.** Run `npm run data:validate` to regenerate and verify.
+```ts
+export interface EntityPlaceFootprint {
+  entity_type: EntityType;
+  entity_id: Id;
+  place_id: Id;
+  year_start: Year | null;
+  year_end: Year | null;
+  reason_predicate_id: Id;
+  stance: DerivedStance;
+  path_signature: string;
+}
+```
 
-**Derive pipeline** (`npm run data:derive`):
-- `scripts/derive_places.ts` → `data/places.tsv`
-- `scripts/derive_footprints.ts` → `data/entity_place_footprints.tsv`
-- `scripts/derive_mentions.ts` → `data/note_mentions.tsv`
+```ts
+export interface PlaceStateByDecade {
+  place_id: Id;
+  decade: number;
+  presence_status: PresenceStatus;
+  group_presence_summary: string | null;
+  dominant_polity_group_id: Id | null;
+  supporting_claim_count: number;
+  derivation_hash: string;
+}
+```
 
-**Source files** (edited directly in `data/`):
-- `cities.tsv`, `people.tsv`, `persuasions.tsv`, `polities.tsv`
-- `works.tsv`, `events.tsv`, `doctrines.tsv`, `quotes.tsv`
-- `archaeology.tsv`, `relations.tsv`, `notes.tsv`
-- `place_state_by_decade.tsv`
+```ts
+export interface FirstAttestation {
+  subject_type: EntityType;
+  subject_id: Id;
+  predicate_id: Id;
+  first_year: Year | null;
+  first_claim_id: Id | null;
+  first_passage_id: Id | null;
+}
+```
 
-**Migration note**: `scripts/migrate_static_to_cities.ts` was a one-time migration that moved `church_planted_year_scholarly`, `church_planted_year_earliest_claim`, `church_planted_by`, `apostolic_origin_thread` from `place_state_by_decade.tsv` to `cities.tsv` (run 2026-03-05).
+```ts
+export interface PropositionPlacePresence {
+  proposition_id: Id;
+  place_id: Id;
+  year_start: Year | null;
+  year_end: Year | null;
+  stance: Stance;
+  supporting_claim_count: number;
+  opposing_claim_count: number;
+  derivation_hash: string;
+}
+```
 
-**Future**: `final.tsv` and `build_final_data_from_final.ts` will be deleted once all historical data is migrated to the manual TSVs above.
+```ts
+export interface NoteMention {
+  mention_source_type: MentionSourceType;
+  source_table: string | null;
+  source_row_id: Id | null;
+  source_field: string | null;
+  source_path: string | null;
+  mentioned_type: MentionTargetType;
+  mentioned_id: Id | OsisRef;
+  mention_label: string | null;
+}
+```
+
+---
+
+## View models used in the app
+
+The UI should not force raw claims directly into React components. It should consume resolved view models.
+
+```ts
+export interface ResolvedClaim {
+  claim: Claim;
+  predicate: PredicateType;
+  subject: EntityRef;
+  object:
+    | EntityRef
+    | { kind: "text"; value: string }
+    | { kind: "number"; value: number }
+    | { kind: "year"; value: Year }
+    | { kind: "boolean"; value: boolean };
+  evidence: ClaimEvidence[];
+  reviews: ClaimReview[];
+}
+```
+
+```ts
+export interface EntityDossier {
+  ref: EntityRef;
+  entity:
+    | Place
+    | Person
+    | Work
+    | HistoricalEvent
+    | Group
+    | Topic
+    | Dimension
+    | Proposition
+    | SourceRecord
+    | Passage
+    | EditorNote;
+  resolved_claims: ResolvedClaim[];
+  editorial_notes: EditorNote[];
+  footprints: EntityPlaceFootprint[];
+  outgoing_mentions: NoteMention[];
+  incoming_mentions: NoteMention[];
+}
+```
+
+```ts
+export interface PlaceMarker {
+  place: Place;
+  state: PlaceStateByDecade | null;
+  footprints: EntityPlaceFootprint[];
+  dominant_polity_group: Group | null;
+}
+
+export interface PropositionPlaceMarker {
+  place: Place;
+  presence: PropositionPlacePresence;
+}
+```
+
+```ts
+export interface SearchDocument {
+  ref: EntityRef | BibleRef;
+  label: string;
+  secondary_label?: string | null;
+  body_text: string;
+  outgoing_mentions: NoteMention[];
+}
+```
+
+---
+
+## Selection model
+
+The UI should no longer special-case separate polity or persuasion entities. It should select `group` and filter/group by `group_kind` when needed.
+
+```ts
+export type SelectionKind = EntityType | "bible";
+
+export interface Selection {
+  kind: SelectionKind;
+  id: Id | OsisRef;
+}
+```
+
+Examples:
+
+- a polity filter selects a `group` whose `group_kind === "polity"`
+- a doctrinal map selection targets a `proposition`
+- Bible cross-reference clicks select `kind: "bible"`
+
+---
+
+## Repository interfaces
+
+```ts
+export interface Repository<T> {
+  getAll(): T[];
+  getById(id: Id): T | null;
+}
+
+export interface MentionRepository {
+  getAll(): NoteMention[];
+  getForEntity(ref: EntityRef): NoteMention[];
+  getForBible(osis: OsisRef): NoteMention[];
+  getOutgoingForSource(opts: {
+    source_table?: string | null;
+    source_row_id?: Id | null;
+    source_field?: string | null;
+    source_path?: string | null;
+  }): NoteMention[];
+}
+
+export interface PlaceStateRepository {
+  getByPlace(placeId: Id): PlaceStateByDecade[];
+  getAtDecade(decade: number): PlaceStateByDecade[];
+}
+```
+
+```ts
+export interface AppRepositories {
+  places: Repository<Place>;
+  people: Repository<Person>;
+  works: Repository<Work>;
+  events: Repository<HistoricalEvent>;
+  groups: Repository<Group>;
+  topics: Repository<Topic>;
+  dimensions: Repository<Dimension>;
+  propositions: Repository<Proposition>;
+  predicateTypes: Repository<PredicateType>;
+  sources: Repository<SourceRecord>;
+  passages: Repository<Passage>;
+  claims: Repository<Claim>;
+  editorNotes: Repository<EditorNote>;
+  mentions: MentionRepository;
+  footprints: {
+    getForEntity(ref: EntityRef): EntityPlaceFootprint[];
+    getForPlace(placeId: Id): EntityPlaceFootprint[];
+  };
+  placeState: PlaceStateRepository;
+  propositionPresence: {
+    getForProposition(propositionId: Id): PropositionPlacePresence[];
+    getForPlace(placeId: Id): PropositionPlacePresence[];
+  };
+}
+```
+
+---
+
+## App-facing implications
+
+1. `Group` replaces separate polity/persuasion models.
+2. `Place` now exposes both `place_label` and `place_label_modern`.
+3. `PlaceStateByDecade` uses `dominant_polity_group_id`.
+4. `NoteMention` is project-wide and can target both entities and Bible OSIS references.
+5. Sorting and derivation stability belong to the validation/build layer, not to React selectors.
+6. `ClaimReview` is unique by `claim_id` only. Repositories should expose at most one review per claim — not an array.
+7. **Doctrinal propositions** are now first-class: `work_affirms_proposition` and `person_affirms_proposition` predicates link works and individuals to specific propositions under topics and dimensions.
+8. **Individual-to-individual predicates** — `teacher_of`, `coworker_of` — and **person-to-event predicates** — `participant_in` — are in active use. The derivation chain traces place footprints through these chains.
+9. **`bishop_of`** and **`authored_by`** are first-class predicates with their own footprint logic: bishop location drives a person's place presence; authored_by links works to their authors for dossier views.

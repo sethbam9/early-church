@@ -1,0 +1,45 @@
+/* PathPickerInput — autocomplete entity picker */
+.wrap { position: relative; }
+
+.input {
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 0.76rem;
+  font-family: inherit;
+  padding: 4px 8px;
+  width: 100%;
+  outline: none;
+}
+.input::placeholder { color: var(--text-faint); }
+.input:focus { border-color: var(--accent); }
+
+.dropdown {
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 0; right: 0;
+  z-index: 200;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 14px rgba(0,0,0,.35);
+  max-height: 240px;
+  overflow-y: auto;
+}
+.dropdownAbove { bottom: 100%; top: auto; margin-bottom: 4px; }
+
+.suggestion {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; text-align: left; padding: 7px 10px;
+  border: none; background: none; cursor: pointer;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text); font-size: 0.82rem;
+}
+.suggestion:hover { background: var(--surface-2); }
+
+.badge {
+  width: 8px; height: 8px; border-radius: 50%;
+  flex-shrink: 0; display: inline-block;
+}
+.label { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

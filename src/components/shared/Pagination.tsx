@@ -1,3 +1,5 @@
+import s from './Pagination.module.css';
+
 export const PAGE_SIZE = 30;
 
 interface PaginationProps {
@@ -11,20 +13,10 @@ export function Pagination({ page, total, pageSize = PAGE_SIZE, onChange }: Pagi
   if (total <= pageSize) return null;
   const pages = Math.ceil(total / pageSize);
   return (
-    <div className="pagination">
-      <button
-        type="button"
-        className="pagination-btn"
-        disabled={page === 0}
-        onClick={() => onChange(page - 1)}
-      >◀</button>
+    <div className={s.pagination}>
+      <button type="button" className={s.btn} disabled={page === 0} onClick={() => onChange(page - 1)}>◀</button>
       <span>{page + 1} / {pages}</span>
-      <button
-        type="button"
-        className="pagination-btn"
-        disabled={page >= pages - 1}
-        onClick={() => onChange(page + 1)}
-      >▶</button>
+      <button type="button" className={s.btn} disabled={page >= pages - 1} onClick={() => onChange(page + 1)}>▶</button>
     </div>
   );
 }

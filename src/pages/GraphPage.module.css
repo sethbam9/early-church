@@ -1,0 +1,270 @@
+/* GraphPage layout */
+.page {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* Left panel */
+.leftPanel {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.searchWrap { position: relative; padding: 6px 12px; border-bottom: 1px solid var(--border-subtle); flex-shrink: 0; }
+
+.section {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+/* Panel header */
+.panelHeader {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+.panelEyebrow {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 1px;
+}
+.panelTitle { font-size: 1rem; font-weight: 700; color: var(--text); }
+.panelSubtitle { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+
+
+/* Type filter rows */
+.typeRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: left;
+  width: 100%;
+  transition: background 0.1s, opacity 0.15s;
+}
+.typeRow:hover { background: var(--surface-2); }
+.typeRowActive { color: var(--text); font-weight: 600; }
+.typeRow:not(.typeRowActive) { opacity: 0.45; }
+
+.nodeBadge {
+  width: 8px; height: 8px; border-radius: 50%;
+  flex-shrink: 0; display: inline-block;
+}
+
+/* Show-all hint */
+.showAll {
+  font-size: 0.68rem; color: var(--text-faint); cursor: pointer;
+  background: none; border: none; text-decoration: underline; padding: 0;
+}
+.showAll:hover { color: var(--accent-bright); }
+
+
+/* Search dropdown */
+.searchDropdown {
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 12px; right: 12px;
+  z-index: 100000;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 14px rgba(0,0,0,.18);
+  max-height: 240px;
+  overflow-y: auto;
+}
+.suggestion {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; text-align: left; padding: 7px 10px;
+  border: none; background: none; cursor: pointer;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text); font-size: 0.82rem;
+}
+.suggestion:hover { background: var(--surface-2); }
+
+/* Action button */
+.actionBtn {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  padding: 5px 8px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.12s, color 0.12s;
+  white-space: nowrap;
+}
+.actionBtn:hover { background: var(--surface-3); color: var(--text); }
+
+/* Path result */
+.pathResult {
+  margin-top: 6px; padding: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+.pathSummary {
+  font-size: 0.78rem; font-weight: 700;
+  color: var(--accent); margin-bottom: 6px;
+}
+.pathChain { display: flex; flex-direction: column; gap: 2px; }
+.pathStep { display: flex; flex-direction: column; gap: 1px; }
+.pathEdgeLabel {
+  font-size: 0.66rem; color: var(--text-faint);
+  padding-left: 12px; font-style: italic;
+}
+.pathNodeBtn {
+  background: var(--surface-2); border: none;
+  border-radius: var(--radius-sm);
+  padding: 4px 8px; font-size: 0.78rem;
+  font-family: inherit; color: var(--text);
+  cursor: pointer; transition: background 0.1s;
+}
+.pathNodeBtn:hover { background: var(--surface-3); }
+
+/* Canvas area */
+.canvasArea { flex: 1; position: relative; overflow: hidden; }
+
+/* Zoom controls now in shared MapGraphOverlay */
+
+.hint {
+  position: absolute; bottom: 10px; left: 50%;
+  transform: translateX(-50%); z-index: 10;
+  font-size: 0.72rem; color: var(--text-faint);
+  pointer-events: none;
+  background: rgba(0,0,0,.3);
+  padding: 3px 8px; border-radius: 4px;
+}
+
+.svg {
+  width: 100%; height: 100%; cursor: grab;
+  user-select: none; -webkit-user-select: none;
+}
+.svg:active { cursor: grabbing; }
+.svg text { pointer-events: none; user-select: none; -webkit-user-select: none; }
+
+/* Hover overlay */
+.hoverOverlay {
+  position: absolute; pointer-events: none; z-index: 10;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 14px rgba(0,0,0,.12);
+  padding: 8px 10px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.hoverTitle {
+  font-weight: 700; color: var(--text);
+  margin-bottom: 4px; font-size: 0.82rem;
+}
+.hoverClaim {
+  padding: 3px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.hoverClaim:last-child { border-bottom: none; }
+
+
+/* Filter label as row */
+.filterLabelRow {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--text-faint);
+  margin-bottom: 6px; display: flex; align-items: center; gap: 6px;
+}
+/* Type list column */
+.typeList { display: flex; flex-direction: column; gap: 2px; }
+/* Small hint text */
+.filterHint { margin-top: 6px; font-size: 0.72rem; }
+/* Section with relative positioning (for dropdown) */
+.sectionRelative { position: relative; }
+/* Path finder column + button spacing */
+.pathFinderCol { display: flex; flex-direction: column; gap: 4px; }
+.pathFinderBtn { margin-top: var(--space-1); }
+.pathNotFound { font-size: 0.78rem; }
+.clearBtn { margin-top: var(--space-1); }
+/* Suggestion text truncation */
+.suggestionLabel { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.suggestionConn { font-size: 0.7rem; }
+/* Path actions row */
+.pathActions {
+  display: flex; align-items: center; gap: 4px; flex-wrap: wrap;
+}
+.pathMiniBtn {
+  background: none; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 2px 7px; font-size: 0.68rem; cursor: pointer; color: var(--text-muted);
+  font-family: inherit; transition: background 0.12s, color 0.12s; white-space: nowrap;
+}
+.pathMiniBtn:hover:not(:disabled) { background: var(--surface-2); color: var(--text); }
+.pathMiniBtn:disabled { opacity: 0.35; cursor: default; }
+
+/* Degrees stats */
+.degreeStats { font-size: 0.75rem; color: var(--text-muted); }
+.degreeSource { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 2px; }
+.degreeSource strong { color: var(--text); }
+
+/* Degrees histogram */
+.degreesHisto { margin-top: 4px; }
+.degreesHistoLabel { font-size: 0.68rem; color: var(--text-faint); margin-bottom: 4px; }
+.degreesHistoBars {
+  display: flex; align-items: flex-end; gap: 2px; height: 56px;
+  padding-bottom: 14px; position: relative;
+}
+.degreesHistoCol {
+  display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 0;
+}
+.degreesHistoBar {
+  width: 100%; min-width: 4px; max-width: 18px;
+  background: var(--accent-dim); border-radius: 2px 2px 0 0;
+  transition: height 0.2s;
+}
+.degreesHistoCol:hover .degreesHistoBar { background: var(--accent); }
+.degreesHistoD {
+  font-size: 0.6rem; color: var(--text-faint); margin-top: 2px;
+  line-height: 1;
+}
+
+/* Path navigation (multi-path prev/next) */
+.pathNav {
+  display: inline-flex; align-items: center; gap: 4px; margin-left: 8px;
+}
+.pathNavBtn {
+  background: none; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 1px 6px; font-size: 0.7rem; cursor: pointer; color: var(--text-muted);
+  font-family: inherit; transition: background 0.12s, color 0.12s;
+}
+.pathNavBtn:hover:not(:disabled) { background: var(--surface-2); color: var(--text); }
+.pathNavBtn:disabled { opacity: 0.35; cursor: default; }
+.pathNavLabel { font-size: 0.7rem; color: var(--text-muted); white-space: nowrap; }
+
+/* Empty overlay center */
+.emptyOverlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+
+/* SVG non-interactive element */
+.svgNoPointer { pointer-events: none; }
+
+/* Hover claim colors */
+.hoverClaimOpposes { color: #e74c3c; font-weight: 700; }
+
+/* Utility */
+.faint { color: var(--text-faint); }
+.emptyState {
+  padding: 24px 14px; text-align: center;
+  color: var(--text-faint); font-size: 0.85rem;
+}

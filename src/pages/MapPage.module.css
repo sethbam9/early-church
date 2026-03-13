@@ -1,0 +1,162 @@
+/* MapPage layout */
+.layout {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.left {
+  width: var(--left-w);
+  flex-shrink: 0;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: width 0.2s ease;
+  z-index: 10;
+  min-height: 0;
+}
+
+.center {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.right {
+  flex-shrink: 0;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* Map overlay buttons */
+.overlays {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 500;
+}
+.overlayBtn {
+  pointer-events: all;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  transition: background 0.13s, color 0.13s, box-shadow 0.13s;
+  white-space: nowrap;
+}
+.overlayBtn:hover { background: var(--surface-2); color: var(--accent-bright); box-shadow: 0 2px 12px rgba(0,0,0,.22); }
+.overlayBtnRight { margin-left: auto; }
+
+/* Zoom/center/fit now in shared MapGraphOverlay */
+
+/* Search results panel */
+.searchPanel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 280px;
+  max-height: calc(100% - 20px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 500;
+  pointer-events: all;
+}
+.searchHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px 6px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+.searchTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.searchHeaderActions { display: flex; align-items: center; gap: 6px; }
+.searchPageInfo { font-size: 0.72rem; color: var(--text-faint); }
+.searchList {
+  overflow-y: auto;
+  flex: 1;
+  padding: 4px 0;
+}
+.searchItem {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  padding: 6px 10px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border-subtle);
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  font-size: 0.82rem;
+  color: var(--text);
+  transition: background 0.12s, color 0.12s;
+}
+.searchItem:last-child { border-bottom: none; }
+.searchItem:hover { background: var(--surface-2); color: var(--accent-bright); }
+.searchIcon { font-size: 0.8rem; flex-shrink: 0; color: var(--text-faint); }
+.searchBody { flex: 1; min-width: 0; }
+.searchLabel { font-size: 0.82rem; font-weight: 500; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.searchSub { font-size: 0.72rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.searchPagination {
+  display: flex;
+  gap: 6px;
+  padding: 6px 8px;
+  border-top: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.closeBtn {
+  background: none; border: none; cursor: pointer;
+  color: var(--text-faint); font-size: 0.85rem;
+  padding: 2px 4px; flex-shrink: 0;
+}
+.closeBtn:hover { color: var(--text); }
+
+.actionBtn {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  padding: 5px 8px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.12s, color 0.12s;
+  white-space: nowrap;
+  flex: 1;
+  font-size: 0.75rem;
+  padding: 4px 6px;
+}
+.actionBtn:hover { background: var(--surface-3); color: var(--text); }

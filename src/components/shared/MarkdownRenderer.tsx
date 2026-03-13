@@ -1,4 +1,6 @@
 import React from "react";
+import { EntityHoverWrap } from "./EntityHoverCard";
+import ms from "./MarkdownRenderer.module.css";
 
 interface Props {
   children: string;
@@ -33,7 +35,7 @@ export function MarkdownRenderer({ children, onSelectEntity, searchQuery, classN
     const text = paraLines.join(" ").trim();
     if (text) {
       blocks.push(
-        <p key={key++} className="md-p">
+        <p key={key++} className={ms.p}>
           {renderInline(text, onSelectEntity, key, q)}
         </p>
       );
@@ -53,7 +55,7 @@ export function MarkdownRenderer({ children, onSelectEntity, searchQuery, classN
       const text = (h1 || h2 || h3)![1];
       const Tag = `h${level}` as "h1" | "h2" | "h3";
       blocks.push(
-        <Tag key={key++} className={`md-h${level}`}>
+        <Tag key={key++} className={level === 1 ? ms.h1 : level === 2 ? ms.h2 : ms.h3}>
           {renderInline(text || '', onSelectEntity, key, q)}
         </Tag>
       );
@@ -64,7 +66,7 @@ export function MarkdownRenderer({ children, onSelectEntity, searchQuery, classN
     if (bq) {
       flushPara();
       blocks.push(
-        <blockquote key={key++} className="md-blockquote">
+        <blockquote key={key++} className={ms.blockquote}>
           {renderInline(bq[1] || '', onSelectEntity, key, q)}
         </blockquote>
       );
@@ -80,7 +82,7 @@ export function MarkdownRenderer({ children, onSelectEntity, searchQuery, classN
   }
   flushPara();
 
-  return <div className={`markdown-renderer ${className ?? ""}`}>{blocks}</div>;
+  return <div className={`${ms.root} ${className ?? ""}`}>{blocks}</div>;
 }
 
 // ─── Search highlight helper ──────────────────────────────────────────────────
@@ -101,7 +103,7 @@ function highlightText(text: string, query: string, baseKey: string): React.Reac
       nodes.push(<span key={`${baseKey}-t-${idx}`}>{text.slice(idx, found)}</span>);
     }
     nodes.push(
-      <mark key={`${baseKey}-hl-${found}`} className="search-highlight">
+      <mark key={`${baseKey}-hl-${found}`} className={ms.highlight}>
         {text.slice(found, found + query.length)}
       </mark>
     );
@@ -126,15 +128,15 @@ function renderInline(
     if (withLabel) {
       const [, kind, id, label] = withLabel;
       nodes.push(
-        <button
-          key={`${baseKey}-m-${i}`}
-          type="button"
-          className="mention-link"
-          onClick={() => onSelectEntity?.(kind || '', id || '')}
-          title={`View ${kind || ''}: ${label || ''}`}
-        >
-          {searchQuery ? highlightText(label || '', searchQuery, `${baseKey}-m-${i}`) : label}
-        </button>
+        <EntityHoverWrap key={`${baseKey}-m-${i}`} kind={kind || ''} id={id || ''}>
+          <button
+            type="button"
+            className={ms.mention}
+            onClick={() => onSelectEntity?.(kind || '', id || '')}
+          >
+            {searchQuery ? highlightText(label || '', searchQuery, `${baseKey}-m-${i}`) : label}
+          </button>
+        </EntityHoverWrap>
       );
       return;
     }
@@ -145,15 +147,15 @@ function renderInline(
       if (!kind || !id) return;
       const label = id.replace(/-/g, " ");
       nodes.push(
-        <button
-          key={`${baseKey}-m-${i}`}
-          type="button"
-          className="mention-link"
-          onClick={() => onSelectEntity?.(kind, id)}
-          title={`View ${kind || ''}`}
-        >
-          {searchQuery ? highlightText(label, searchQuery, `${baseKey}-m-${i}`) : label}
-        </button>
+        <EntityHoverWrap key={`${baseKey}-m-${i}`} kind={kind} id={id}>
+          <button
+            type="button"
+            className={ms.mention}
+            onClick={() => onSelectEntity?.(kind, id)}
+          >
+            {searchQuery ? highlightText(label, searchQuery, `${baseKey}-m-${i}`) : label}
+          </button>
+        </EntityHoverWrap>
       );
       return;
     }

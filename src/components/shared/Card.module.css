@@ -1,0 +1,61 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  width: 100%;
+  transition: background 0.12s;
+}
+.clickable { cursor: pointer; }
+.clickable:hover { background: var(--bg-surface-3); }
+.flush { padding: 0; }
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.icon {
+  font-size: var(--font-size-md);
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.body {
+  flex: 1;
+  min-width: 0;
+}
+.title {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+}
+.subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+.expandBtn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  padding: 2px 4px;
+}
+.expandBtn:hover { color: var(--text-primary); }
+.expandContent {
+  padding-top: var(--space-1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}

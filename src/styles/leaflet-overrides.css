@@ -1,0 +1,35 @@
+/* ─── Leaflet Overrides ──────────────────────────────────────────────────────── */
+
+#map-root {
+  position: absolute;
+  inset: 0;
+}
+
+.city-tooltip {
+  font-size: var(--font-size-xs);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-2);
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-default) !important;
+  color: var(--text-primary) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.arc-tooltip {
+  background: rgba(44,32,16,0.9) !important;
+  color: #f5f0e8 !important;
+  border: 1px solid rgba(196,124,58,0.5) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: var(--space-1) var(--space-2) !important;
+  font-size: var(--font-size-xs) !important;
+  max-width: 220px !important;
+  white-space: normal !important;
+  box-shadow: var(--shadow-md) !important;
+}
+.arc-tooltip::before { display: none !important; }
+
+[data-theme="dark"] .arc-tooltip {
+  background: rgba(18,24,48,0.95) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--accent-dim) !important;
+}
