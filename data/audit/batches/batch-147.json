@@ -1,0 +1,2661 @@
+{
+  "batch_id": "batch-147",
+  "queue": "1",
+  "focus": "fabian; ephrem-the-syrian; rufinus-of-aquileia; pontius-pilate; pharisees; herodians",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-fabian-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "fabian",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "236",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "fabian",
+        "person_label": "Fabian",
+        "name_alt": "Pope Fabian",
+        "name_native": "Φαβιανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 250",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 236–250; brought the bodies of Hippolytus and Pontian back from Sardinia; organized Roman clergy into seven diaconal regions; martyred under Decius."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-fabian-bishop-rome",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Eusebius records Fabian's succession and his role in bringing the bodies back from Sardinia."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-fabian-in-sardinian-return",
+        "clm-fabian-member-roman-church",
+        "clm-fabian-in-decian-persecution"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-fabian-in-sardinian-return",
+        "subject_type": "person",
+        "subject_id": "fabian",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "sardinian-exile",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "236",
+        "year_end": "236",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "fabian",
+        "person_label": "Fabian",
+        "name_alt": "Pope Fabian",
+        "name_native": "Φαβιανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 250",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 236–250; brought the bodies of Hippolytus and Pontian back from Sardinia; organized Roman clergy into seven diaconal regions; martyred under Decius."
+      },
+      "object_entity": {
+        "event_id": "sardinian-exile",
+        "event_label": "Sardinian Exile of Hippolytus and Pontian",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Bishop Pontian and the schismatic Hippolytus were both exiled to the mines of Sardinia in 235 under Emperor Maximinus Thrax; they were reconciled before death; their bodies were brought back to Rome by Pope Fabian c. 236."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-fabian-in-sardinian-return",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "HE 6.43: Cornelius's letter describes Fabian retrieving bodies of Pontian and Hippolytus from Sardinia, establishing his role in this event."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-fabian-bishop-rome",
+        "clm-fabian-member-roman-church",
+        "clm-fabian-in-decian-persecution"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-fabian-in-decian-persecution",
+        "subject_type": "person",
+        "subject_id": "fabian",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "decian-persecution",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "250",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "fabian",
+        "person_label": "Fabian",
+        "name_alt": "Pope Fabian",
+        "name_native": "Φαβιανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 250",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 236–250; brought the bodies of Hippolytus and Pontian back from Sardinia; organized Roman clergy into seven diaconal regions; martyred under Decius."
+      },
+      "object_entity": {
+        "event_id": "decian-persecution",
+        "event_label": "Persecution under Decius",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Empire-wide persecution under Emperor Decius c. 250–251; required all citizens to sacrifice to Roman gods and obtain a certificate (libellus); many Christians lapsed; triggered the controversy over readmission of the lapsed that led to the Novatian schism."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-fabian-in-decian-persecution",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Eusebius records Fabian's martyrdom under Decius."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-fabian-in-decian-persecution",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Cornelius's letter preserved by Eusebius refers to Fabian's martyrdom and the vacancy that followed."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-fabian-in-sardinian-return",
+        "clm-fabian-bishop-rome",
+        "clm-fabian-member-roman-church"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ],
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:subject+object",
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-43:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-fabian-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "fabian",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "236",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "fabian",
+        "person_label": "Fabian",
+        "name_alt": "Pope Fabian",
+        "name_native": "Φαβιανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 250",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 236–250; brought the bodies of Hippolytus and Pontian back from Sardinia; organized Roman clergy into seven diaconal regions; martyred under Decius."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-fabian-member-roman-church",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Fabian as bishop of Rome."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-fabian-in-sardinian-return",
+        "clm-fabian-bishop-rome",
+        "clm-fabian-in-decian-persecution"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ephrem-affirms-fasting",
+        "subject_type": "person",
+        "subject_id": "ephrem-the-syrian",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "fasting-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "363",
+        "year_end": "373",
+        "context_place_id": "edessa",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ephrem-the-syrian",
+        "person_label": "Ephrem the Syrian",
+        "name_alt": "Mar Ephrem",
+        "name_native": "ܡܪܝ ܐܦܪܝܡ ܣܘܪܝܝܐ",
+        "birth_year_display": "306",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Pre-eminent Syriac hymnographer and theologian; deacon at Nisibis under Jacob then relocated to Edessa after 363; wrote Hymns on Faith, Paradise, Nativity, Against Heresies, Nisibis Hymns, and Commentary on the Diatessaron; Doctor of the Church."
+      },
+      "object_entity": {
+        "proposition_id": "fasting-is-required",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "fasting-required",
+        "proposition_label": "Christians are required to fast",
+        "polarity_family": "christian_fasting",
+        "description": "Fasting is a required Christian spiritual discipline presented as obligatory, not merely optional.",
+        "notes": "Ascetic discipline"
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephrem-affirms-fasting",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephrem-coworker-jacob",
+        "clm-ephrem-active-nisibis",
+        "clm-ephrem-in-fall-nisibis",
+        "clm-ephrem-active-edessa",
+        "clm-ephrem-affirms-prayer",
+        "clm-ephrem-member-edessa-church"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ephrem-in-fall-nisibis",
+        "subject_type": "person",
+        "subject_id": "ephrem-the-syrian",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "fall-of-nisibis-363",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "363",
+        "year_end": "363",
+        "context_place_id": "nisibis",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ephrem-the-syrian",
+        "person_label": "Ephrem the Syrian",
+        "name_alt": "Mar Ephrem",
+        "name_native": "ܡܪܝ ܐܦܪܝܡ ܣܘܪܝܝܐ",
+        "birth_year_display": "306",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Pre-eminent Syriac hymnographer and theologian; deacon at Nisibis under Jacob then relocated to Edessa after 363; wrote Hymns on Faith, Paradise, Nativity, Against Heresies, Nisibis Hymns, and Commentary on the Diatessaron; Doctor of the Church."
+      },
+      "object_entity": {
+        "event_id": "fall-of-nisibis-363",
+        "event_label": "Fall of Nisibis",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Emperor Jovian ceded Nisibis to Sasanian Persia by treaty in 363 after Julian's failed campaign; the Christian population including Ephrem the Syrian was forced to relocate, most moving to Edessa."
+      },
+      "context_place": {
+        "place_id": "nisibis",
+        "place_label": "Nisibis",
+        "place_label_modern": "Nusaybin",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.0700",
+        "lon": "41.2150",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major frontier city between Rome and Persia; home of Ephrem the Syrian until 363; seat of Bishop Jacob of Nisibis; ceded to Persia by Jovian's treaty of 363."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephrem-in-fall-nisibis",
+            "passage_id": "psg-ephrem-faith-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes ephrem-the-syrian's participation in fall-of-nisibis-363."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-faith-3",
+            "source_id": "src-hymns-on-faith-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Hymns on Faith 3",
+            "excerpt": "Paraphrase: Ephrem explores the mystery of the Trinity through paradox: the Father begets the Son without division; the Spirit proceeds without separation; the three are one nature yet three persons; human language fails before the divine mystery but faith embraces what reason cannot grasp.",
+            "language": "English",
+            "passage_year": "370",
+            "url_override": "",
+            "notes": "Trinity — paradox and mystery"
+          },
+          "source": {
+            "source_id": "src-hymns-on-faith-ephrem",
+            "work_id": "hymns-on-faith-ephrem",
+            "source_kind": "primary_text",
+            "title": "Hymns on Faith",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 363–373",
+            "year_start": "363",
+            "year_end": "373",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3702.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Hymn cycle on Trinity, incarnation, baptism, and eucharist."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephrem-coworker-jacob",
+        "clm-ephrem-active-nisibis",
+        "clm-ephrem-active-edessa",
+        "clm-ephrem-affirms-fasting",
+        "clm-ephrem-affirms-prayer",
+        "clm-ephrem-member-edessa-church"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-ephrem-faith-3": [
+          "clm-ephrem-active-nisibis",
+          "clm-ephrem-member-edessa-church",
+          "clm-hof-affirms-eternal-generation",
+          "clm-hof-affirms-prayer",
+          "clm-hof-affirms-rule-of-faith",
+          "clm-hof-affirms-trinity"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-faith-3",
+        "PARAPHRASE_RISK:psg-ephrem-faith-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ephrem-member-edessa-church",
+        "subject_type": "person",
+        "subject_id": "ephrem-the-syrian",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "edessa-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "363",
+        "year_end": "373",
+        "context_place_id": "edessa",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ephrem-the-syrian",
+        "person_label": "Ephrem the Syrian",
+        "name_alt": "Mar Ephrem",
+        "name_native": "ܡܪܝ ܐܦܪܝܡ ܣܘܪܝܝܐ",
+        "birth_year_display": "306",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Pre-eminent Syriac hymnographer and theologian; deacon at Nisibis under Jacob then relocated to Edessa after 363; wrote Hymns on Faith, Paradise, Nativity, Against Heresies, Nisibis Hymns, and Commentary on the Diatessaron; Doctor of the Church."
+      },
+      "object_entity": {
+        "group_id": "edessa-church",
+        "group_label": "Church in Edessa",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Edessa (Osroene); spiritual capital of Syriac Christianity from at least c. 200 AD; home of the Abgar/Addai tradition, Bardaisan, and later Ephrem the Syrian; center of Syriac literary and theological culture."
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephrem-member-edessa-church",
+            "passage_id": "psg-ephrem-faith-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes ephrem-the-syrian's membership in edessa-church."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-faith-3",
+            "source_id": "src-hymns-on-faith-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Hymns on Faith 3",
+            "excerpt": "Paraphrase: Ephrem explores the mystery of the Trinity through paradox: the Father begets the Son without division; the Spirit proceeds without separation; the three are one nature yet three persons; human language fails before the divine mystery but faith embraces what reason cannot grasp.",
+            "language": "English",
+            "passage_year": "370",
+            "url_override": "",
+            "notes": "Trinity — paradox and mystery"
+          },
+          "source": {
+            "source_id": "src-hymns-on-faith-ephrem",
+            "work_id": "hymns-on-faith-ephrem",
+            "source_kind": "primary_text",
+            "title": "Hymns on Faith",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 363–373",
+            "year_start": "363",
+            "year_end": "373",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3702.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Hymn cycle on Trinity, incarnation, baptism, and eucharist."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephrem-coworker-jacob",
+        "clm-ephrem-active-nisibis",
+        "clm-ephrem-in-fall-nisibis",
+        "clm-ephrem-active-edessa",
+        "clm-ephrem-affirms-fasting",
+        "clm-ephrem-affirms-prayer"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-ephrem-faith-3": [
+          "clm-ephrem-active-nisibis",
+          "clm-ephrem-in-fall-nisibis",
+          "clm-hof-affirms-eternal-generation",
+          "clm-hof-affirms-prayer",
+          "clm-hof-affirms-rule-of-faith",
+          "clm-hof-affirms-trinity"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-faith-3",
+        "PARAPHRASE_RISK:psg-ephrem-faith-3",
+        "PARAPHRASE_OMISSION:psg-ephrem-faith-3:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ephrem-coworker-jacob",
+        "subject_type": "person",
+        "subject_id": "ephrem-the-syrian",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "jacob-of-nisibis",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "306",
+        "year_end": "338",
+        "context_place_id": "nisibis",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ephrem-the-syrian",
+        "person_label": "Ephrem the Syrian",
+        "name_alt": "Mar Ephrem",
+        "name_native": "ܡܪܝ ܐܦܪܝܡ ܣܘܪܝܝܐ",
+        "birth_year_display": "306",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Pre-eminent Syriac hymnographer and theologian; deacon at Nisibis under Jacob then relocated to Edessa after 363; wrote Hymns on Faith, Paradise, Nativity, Against Heresies, Nisibis Hymns, and Commentary on the Diatessaron; Doctor of the Church."
+      },
+      "object_entity": {
+        "person_id": "jacob-of-nisibis",
+        "person_label": "Jacob of Nisibis",
+        "name_alt": "Mar Jacob",
+        "name_native": "ܝܥܩܘܒ ܕܢܨܝܒܝܢ",
+        "birth_year_display": "c. 280",
+        "death_year_display": "338",
+        "person_kind": "individual",
+        "notes": "First attested bishop of Nisibis; attended the Council of Nicaea (325); mentor of Ephrem the Syrian; credited with building the first church in Nisibis."
+      },
+      "context_place": {
+        "place_id": "nisibis",
+        "place_label": "Nisibis",
+        "place_label_modern": "Nusaybin",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.0700",
+        "lon": "41.2150",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major frontier city between Rome and Persia; home of Ephrem the Syrian until 363; seat of Bishop Jacob of Nisibis; ceded to Persia by Jovian's treaty of 363."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephrem-coworker-jacob",
+            "passage_id": "psg-ephrem-carm-nis-13",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Ephrem Carmina Nisibena 13 directly names Jacob as Ephrem's bishop and spiritual father."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-carm-nis-13",
+            "source_id": "src-hymns-on-faith-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Carmina Nisibena 13",
+            "excerpt": "O Jacob, bishop and man of God, shepherd of your flock, who led your sheep safely through the storms of heresy and siege.",
+            "language": "syr",
+            "passage_year": "363",
+            "url_override": "",
+            "notes": "Ephrem Carmina Nisibena 13: lament for Jacob's city Nisibis; directly names Jacob as bishop and Ephrem's spiritual father."
+          },
+          "source": {
+            "source_id": "src-hymns-on-faith-ephrem",
+            "work_id": "hymns-on-faith-ephrem",
+            "source_kind": "primary_text",
+            "title": "Hymns on Faith",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 363–373",
+            "year_start": "363",
+            "year_end": "373",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3702.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Hymn cycle on Trinity, incarnation, baptism, and eucharist."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-ephrem-coworker-jacob",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.3",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-ephrem-coworker-jacob",
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "VC 3.6-14",
+            "excerpt": "Constantine convened the universal synod at Nicaea in Bithynia, gathering bishops from all regions of the empire.",
+            "language": "el",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "Vita Constantini 3.6-14; primary narrative source for Nicaea."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephrem-active-nisibis",
+        "clm-ephrem-in-fall-nisibis",
+        "clm-ephrem-active-edessa",
+        "clm-ephrem-affirms-fasting",
+        "clm-ephrem-affirms-prayer",
+        "clm-ephrem-member-edessa-church"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-ephrem-carm-nis-13": [
+          "clm-jacob-teacher-ephrem"
+        ],
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ],
+        "psg-eusebius-vita-const-3-6": [
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-participant-nicaea",
+          "clm-church-east-at-nisibis",
+          "clm-constantine-convenes-nicaea",
+          "clm-eusebius-participant-nicaea",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-participant-nicaea",
+          "clm-jacob-teacher-ephrem",
+          "clm-nicaea-occurs-at-nicaea",
+          "clm-nicaea-year-325"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-rufinus-affirms-thomas",
+        "subject_type": "person",
+        "subject_id": "rufinus-of-aquileia",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "thomas-preached-in-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "402",
+        "year_end": "402",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "rufinus-of-aquileia",
+        "person_label": "Rufinus of Aquileia",
+        "name_alt": "Tyrannius Rufinus",
+        "name_native": "Tyrannius Rufinus",
+        "birth_year_display": "c. 345",
+        "death_year_display": "411",
+        "person_kind": "individual",
+        "notes": "Historian, theologian, translator; continued Eusebius's Church History in two Latin books (HE 10–11, c. 402); primary Western source for Frumentius and the christianization of Aksum; translated many of Origen's works into Latin."
+      },
+      "object_entity": {
+        "proposition_id": "thomas-preached-in-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "apostle-thomas-india",
+        "proposition_label": "The apostle Thomas preached in India",
+        "polarity_family": "thomas_india",
+        "description": "The Acts of Thomas (3rd c.) narrates Thomas's journey to India; the Thomas Christian tradition in Malabar claims apostolic origin; certainty is claimed_tradition.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-rufinus-affirms-thomas",
+            "passage_id": "psg-rufinus-he-1-9",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes rufinus-of-aquileia's position on thomas-preached-in-india."
+          },
+          "passage": {
+            "passage_id": "psg-rufinus-he-1-9",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Rufinus HE 1.9 (=10.9)",
+            "excerpt": "Paraphrase: A philosopher named Meropius of Tyre sailed to India with two boys Frumentius and Aedesius. The ship was seized and all killed except the boys who were brought to the king of Aksum. When the king died the queen asked Frumentius to help govern. Frumentius sought out Roman traders who were Christians and built churches. Later he traveled to Alexandria where Athanasius consecrated him bishop. He returned to Aksum and converted many including the king.",
+            "language": "English",
+            "passage_year": "402",
+            "url_override": "",
+            "notes": "Primary Western source for the christianization of Aksum; Rufinus heard the account from Aedesius himself."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-rufinus-active-alexandria",
+        "clm-rufinus-active-jerusalem",
+        "clm-rufinus-active-rome"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-rufinus-he-1-9": [
+          "clm-aksumite-church-at-aksum",
+          "clm-aksumite-church-controls-aksum",
+          "clm-aksumite-church-group-schism-alexandrian",
+          "clm-athanasius-coworker-ezana",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-participant-christianization",
+          "clm-bartholomew-member-india-christians",
+          "clm-christianization-aksum-at-aksum",
+          "clm-christianization-aksum-year",
+          "clm-ezana-participant-christianization",
+          "clm-frumentius-active-tyre",
+          "clm-frumentius-bishop-aksum",
+          "clm-frumentius-member-aksumite",
+          "clm-frumentius-participant-christianization",
+          "clm-frumentius-teacher-ezana",
+          "clm-gregory-illum-bishop-vagharshapat",
+          "clm-person-frumentius-affirms-ethiopia",
+          "clm-rufinus-active-alexandria",
+          "clm-rufinus-active-jerusalem",
+          "clm-rufinus-active-rome",
+          "clm-rufinus-affirms-bartholomew",
+          "clm-rufinus-he-affirms-bartholomew-india",
+          "clm-rufinus-he-affirms-ethiopia-christianized",
+          "clm-rufinus-he-affirms-india",
+          "clm-rufinus-he-by-rufinus",
+          "clm-rufinus-he-mentions-bartholomew-india",
+          "clm-rufinus-he-mentions-thomas-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-rufinus-he-1-9",
+        "PARAPHRASE_RISK:psg-rufinus-he-1-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-rufinus-active-alexandria",
+        "subject_type": "person",
+        "subject_id": "rufinus-of-aquileia",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "372",
+        "year_end": "380",
+        "context_place_id": "alexandria",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "rufinus-of-aquileia",
+        "person_label": "Rufinus of Aquileia",
+        "name_alt": "Tyrannius Rufinus",
+        "name_native": "Tyrannius Rufinus",
+        "birth_year_display": "c. 345",
+        "death_year_display": "411",
+        "person_kind": "individual",
+        "notes": "Historian, theologian, translator; continued Eusebius's Church History in two Latin books (HE 10–11, c. 402); primary Western source for Frumentius and the christianization of Aksum; translated many of Origen's works into Latin."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-rufinus-active-alexandria",
+            "passage_id": "psg-rufinus-he-1-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests rufinus-of-aquileia's activity in or near alexandria."
+          },
+          "passage": {
+            "passage_id": "psg-rufinus-he-1-9",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Rufinus HE 1.9 (=10.9)",
+            "excerpt": "Paraphrase: A philosopher named Meropius of Tyre sailed to India with two boys Frumentius and Aedesius. The ship was seized and all killed except the boys who were brought to the king of Aksum. When the king died the queen asked Frumentius to help govern. Frumentius sought out Roman traders who were Christians and built churches. Later he traveled to Alexandria where Athanasius consecrated him bishop. He returned to Aksum and converted many including the king.",
+            "language": "English",
+            "passage_year": "402",
+            "url_override": "",
+            "notes": "Primary Western source for the christianization of Aksum; Rufinus heard the account from Aedesius himself."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-rufinus-active-jerusalem",
+        "clm-rufinus-active-rome",
+        "clm-rufinus-affirms-thomas"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-rufinus-he-1-9": [
+          "clm-aksumite-church-at-aksum",
+          "clm-aksumite-church-controls-aksum",
+          "clm-aksumite-church-group-schism-alexandrian",
+          "clm-athanasius-coworker-ezana",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-participant-christianization",
+          "clm-bartholomew-member-india-christians",
+          "clm-christianization-aksum-at-aksum",
+          "clm-christianization-aksum-year",
+          "clm-ezana-participant-christianization",
+          "clm-frumentius-active-tyre",
+          "clm-frumentius-bishop-aksum",
+          "clm-frumentius-member-aksumite",
+          "clm-frumentius-participant-christianization",
+          "clm-frumentius-teacher-ezana",
+          "clm-gregory-illum-bishop-vagharshapat",
+          "clm-person-frumentius-affirms-ethiopia",
+          "clm-rufinus-active-jerusalem",
+          "clm-rufinus-active-rome",
+          "clm-rufinus-affirms-bartholomew",
+          "clm-rufinus-affirms-thomas",
+          "clm-rufinus-he-affirms-bartholomew-india",
+          "clm-rufinus-he-affirms-ethiopia-christianized",
+          "clm-rufinus-he-affirms-india",
+          "clm-rufinus-he-by-rufinus",
+          "clm-rufinus-he-mentions-bartholomew-india",
+          "clm-rufinus-he-mentions-thomas-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-rufinus-he-1-9",
+        "PARAPHRASE_RISK:psg-rufinus-he-1-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-rufinus-active-jerusalem",
+        "subject_type": "person",
+        "subject_id": "rufinus-of-aquileia",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "380",
+        "year_end": "397",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "rufinus-of-aquileia",
+        "person_label": "Rufinus of Aquileia",
+        "name_alt": "Tyrannius Rufinus",
+        "name_native": "Tyrannius Rufinus",
+        "birth_year_display": "c. 345",
+        "death_year_display": "411",
+        "person_kind": "individual",
+        "notes": "Historian, theologian, translator; continued Eusebius's Church History in two Latin books (HE 10–11, c. 402); primary Western source for Frumentius and the christianization of Aksum; translated many of Origen's works into Latin."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-rufinus-active-jerusalem",
+            "passage_id": "psg-rufinus-he-1-9",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.4",
+            "notes": "Rufinus HE 1.9 (his own work) was written partly during his Jerusalem years c. 373-397."
+          },
+          "passage": {
+            "passage_id": "psg-rufinus-he-1-9",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Rufinus HE 1.9 (=10.9)",
+            "excerpt": "Paraphrase: A philosopher named Meropius of Tyre sailed to India with two boys Frumentius and Aedesius. The ship was seized and all killed except the boys who were brought to the king of Aksum. When the king died the queen asked Frumentius to help govern. Frumentius sought out Roman traders who were Christians and built churches. Later he traveled to Alexandria where Athanasius consecrated him bishop. He returned to Aksum and converted many including the king.",
+            "language": "English",
+            "passage_year": "402",
+            "url_override": "",
+            "notes": "Primary Western source for the christianization of Aksum; Rufinus heard the account from Aedesius himself."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-rufinus-active-alexandria",
+        "clm-rufinus-active-rome",
+        "clm-rufinus-affirms-thomas"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-rufinus-he-1-9": [
+          "clm-aksumite-church-at-aksum",
+          "clm-aksumite-church-controls-aksum",
+          "clm-aksumite-church-group-schism-alexandrian",
+          "clm-athanasius-coworker-ezana",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-participant-christianization",
+          "clm-bartholomew-member-india-christians",
+          "clm-christianization-aksum-at-aksum",
+          "clm-christianization-aksum-year",
+          "clm-ezana-participant-christianization",
+          "clm-frumentius-active-tyre",
+          "clm-frumentius-bishop-aksum",
+          "clm-frumentius-member-aksumite",
+          "clm-frumentius-participant-christianization",
+          "clm-frumentius-teacher-ezana",
+          "clm-gregory-illum-bishop-vagharshapat",
+          "clm-person-frumentius-affirms-ethiopia",
+          "clm-rufinus-active-alexandria",
+          "clm-rufinus-active-rome",
+          "clm-rufinus-affirms-bartholomew",
+          "clm-rufinus-affirms-thomas",
+          "clm-rufinus-he-affirms-bartholomew-india",
+          "clm-rufinus-he-affirms-ethiopia-christianized",
+          "clm-rufinus-he-affirms-india",
+          "clm-rufinus-he-by-rufinus",
+          "clm-rufinus-he-mentions-bartholomew-india",
+          "clm-rufinus-he-mentions-thomas-india"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-rufinus-active-rome",
+        "subject_type": "person",
+        "subject_id": "rufinus-of-aquileia",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "380",
+        "year_end": "397",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "rufinus-of-aquileia",
+        "person_label": "Rufinus of Aquileia",
+        "name_alt": "Tyrannius Rufinus",
+        "name_native": "Tyrannius Rufinus",
+        "birth_year_display": "c. 345",
+        "death_year_display": "411",
+        "person_kind": "individual",
+        "notes": "Historian, theologian, translator; continued Eusebius's Church History in two Latin books (HE 10–11, c. 402); primary Western source for Frumentius and the christianization of Aksum; translated many of Origen's works into Latin."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-rufinus-active-rome",
+            "passage_id": "psg-rufinus-he-1-9",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Rufinus spent years in Rome before and after his Eastern sojourn; his HE reflects this."
+          },
+          "passage": {
+            "passage_id": "psg-rufinus-he-1-9",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Rufinus HE 1.9 (=10.9)",
+            "excerpt": "Paraphrase: A philosopher named Meropius of Tyre sailed to India with two boys Frumentius and Aedesius. The ship was seized and all killed except the boys who were brought to the king of Aksum. When the king died the queen asked Frumentius to help govern. Frumentius sought out Roman traders who were Christians and built churches. Later he traveled to Alexandria where Athanasius consecrated him bishop. He returned to Aksum and converted many including the king.",
+            "language": "English",
+            "passage_year": "402",
+            "url_override": "",
+            "notes": "Primary Western source for the christianization of Aksum; Rufinus heard the account from Aedesius himself."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-rufinus-active-alexandria",
+        "clm-rufinus-active-jerusalem",
+        "clm-rufinus-affirms-thomas"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-rufinus-he-1-9": [
+          "clm-aksumite-church-at-aksum",
+          "clm-aksumite-church-controls-aksum",
+          "clm-aksumite-church-group-schism-alexandrian",
+          "clm-athanasius-coworker-ezana",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-participant-christianization",
+          "clm-bartholomew-member-india-christians",
+          "clm-christianization-aksum-at-aksum",
+          "clm-christianization-aksum-year",
+          "clm-ezana-participant-christianization",
+          "clm-frumentius-active-tyre",
+          "clm-frumentius-bishop-aksum",
+          "clm-frumentius-member-aksumite",
+          "clm-frumentius-participant-christianization",
+          "clm-frumentius-teacher-ezana",
+          "clm-gregory-illum-bishop-vagharshapat",
+          "clm-person-frumentius-affirms-ethiopia",
+          "clm-rufinus-active-alexandria",
+          "clm-rufinus-active-jerusalem",
+          "clm-rufinus-affirms-bartholomew",
+          "clm-rufinus-affirms-thomas",
+          "clm-rufinus-he-affirms-bartholomew-india",
+          "clm-rufinus-he-affirms-ethiopia-christianized",
+          "clm-rufinus-he-affirms-india",
+          "clm-rufinus-he-by-rufinus",
+          "clm-rufinus-he-mentions-bartholomew-india",
+          "clm-rufinus-he-mentions-thomas-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-rufinus-he-1-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pilate-active-judea",
+        "subject_type": "person",
+        "subject_id": "pontius-pilate",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "judea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "26",
+        "year_end": "36",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pontius-pilate",
+        "person_label": "Pontius Pilate",
+        "name_alt": "Pilate",
+        "name_native": "Πόντιος Πιλᾶτος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Roman prefect of Judea during the later ministry period."
+      },
+      "object_entity": {
+        "place_id": "judea",
+        "place_label": "Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "31.70",
+        "lon": "35.20",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Southern region including Jerusalem and the Judean wilderness."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pilate-active-judea",
+            "passage_id": "psg-josephus-ant-18-55-59",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-josephus-ant-18-55-59",
+            "source_id": "src-josephus-ant",
+            "locator_type": "source_ref",
+            "locator": "Antiquities 18.55-59",
+            "excerpt": "Paraphrase: Josephus identifies Pontius Pilate as prefect governing Judea.",
+            "language": "English",
+            "passage_year": "94",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-ant",
+            "work_id": "antiquities-of-the-jews",
+            "source_kind": "primary_text",
+            "title": "Antiquities of the Jews",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "93/94",
+            "year_start": "93",
+            "year_end": "94",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.perseus.tufts.edu/hopper/text?doc=J.%20AJ%2018",
+            "accessed_on": "2026-03-09",
+            "isbn_issn": "",
+            "notes": "Near-ancient non-Christian witness for John the Baptist and Pontius Pilate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pilate-in-crucifixion",
+        "clm-pilate-in-pilate-trial"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-josephus-ant-18-55-59": [
+          "clm-group-roman-empire-judea",
+          "clm-pilate-in-pilate-trial"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-josephus-ant-18-55-59"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pilate-in-crucifixion",
+        "subject_type": "person",
+        "subject_id": "pontius-pilate",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "crucifixion-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:20:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pontius-pilate",
+        "person_label": "Pontius Pilate",
+        "name_alt": "Pilate",
+        "name_native": "Πόντιος Πιλᾶτος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Roman prefect of Judea during the later ministry period."
+      },
+      "object_entity": {
+        "event_id": "crucifixion-of-jesus",
+        "event_label": "Crucifixion of Jesus",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Execution of Jesus under Roman authority in Jerusalem."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pilate-in-crucifixion",
+            "passage_id": "psg-mark-15-1-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-15-1-15",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.15.1-15",
+            "excerpt": "Paraphrase: Jesus is handed over to Pilate, examined, and condemned to be crucified.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pilate-active-judea",
+        "clm-pilate-in-pilate-trial"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-mark-15-1-15": [
+          "clm-jesus-before-pilate-at-jerusalem",
+          "clm-jesus-before-pilate-year",
+          "clm-jesus-in-pilate-trial",
+          "clm-pilate-in-pilate-trial"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-15-1-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pilate-in-pilate-trial",
+        "subject_type": "person",
+        "subject_id": "pontius-pilate",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "jesus-before-pilate",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T23:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pontius-pilate",
+        "person_label": "Pontius Pilate",
+        "name_alt": "Pilate",
+        "name_native": "Πόντιος Πιλᾶτος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Roman prefect of Judea during the later ministry period."
+      },
+      "object_entity": {
+        "event_id": "jesus-before-pilate",
+        "event_label": "Jesus before Pilate",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Jesus is handed over to Pontius Pilate, examined, and condemned in the passion narrative."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pilate-in-pilate-trial",
+            "passage_id": "psg-josephus-ant-18-55-59",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Josephus independently identifies Pilate as prefect governing Judea, contextualizing his role in the passion hearing."
+          },
+          "passage": {
+            "passage_id": "psg-josephus-ant-18-55-59",
+            "source_id": "src-josephus-ant",
+            "locator_type": "source_ref",
+            "locator": "Antiquities 18.55-59",
+            "excerpt": "Paraphrase: Josephus identifies Pontius Pilate as prefect governing Judea.",
+            "language": "English",
+            "passage_year": "94",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-ant",
+            "work_id": "antiquities-of-the-jews",
+            "source_kind": "primary_text",
+            "title": "Antiquities of the Jews",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "93/94",
+            "year_start": "93",
+            "year_end": "94",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.perseus.tufts.edu/hopper/text?doc=J.%20AJ%2018",
+            "accessed_on": "2026-03-09",
+            "isbn_issn": "",
+            "notes": "Near-ancient non-Christian witness for John the Baptist and Pontius Pilate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-pilate-in-pilate-trial",
+            "passage_id": "psg-mark-15-1-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-15-1-15",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.15.1-15",
+            "excerpt": "Paraphrase: Jesus is handed over to Pilate, examined, and condemned to be crucified.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pilate-active-judea",
+        "clm-pilate-in-crucifixion"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-josephus-ant-18-55-59": [
+          "clm-group-roman-empire-judea",
+          "clm-pilate-active-judea"
+        ],
+        "psg-mark-15-1-15": [
+          "clm-jesus-before-pilate-at-jerusalem",
+          "clm-jesus-before-pilate-year",
+          "clm-jesus-in-pilate-trial",
+          "clm-pilate-in-crucifixion"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-josephus-ant-18-55-59",
+        "PARAPHRASE_RISK:psg-mark-15-1-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-pharisees-judea",
+        "subject_type": "group",
+        "subject_id": "pharisees",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "judea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "27",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "pharisees",
+        "group_label": "Pharisees",
+        "group_kind": "sect",
+        "is_christian": "false",
+        "notes": "Jewish movement frequently appearing in the Gospel narratives."
+      },
+      "object_entity": {
+        "place_id": "judea",
+        "place_label": "Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "31.70",
+        "lon": "35.20",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Southern region including Jerusalem and the Judean wilderness."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-pharisees-judea",
+            "passage_id": "psg-mark-11-15-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Movement presence is inferred from Gospel setting rather than asserted as a formal census."
+          },
+          "passage": {
+            "passage_id": "psg-mark-11-15-18",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.11.15-18",
+            "excerpt": "Paraphrase: Jesus enters the temple precincts in Jerusalem and disrupts buying and selling.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pharisees-at-galilee",
+        "clm-pharisees-at-jerusalem"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-mark-11-15-18": [
+          "clm-group-sadducees-jerusalem",
+          "clm-jesus-in-temple",
+          "clm-pharisees-at-jerusalem",
+          "clm-place-jerusalem-attested",
+          "clm-place-judea-attested",
+          "clm-temple-at-jerusalem",
+          "clm-temple-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-11-15-18",
+        "PARAPHRASE_OMISSION:psg-mark-11-15-18:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pharisees-at-galilee",
+        "subject_type": "group",
+        "subject_id": "pharisees",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galilee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "27",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "pharisees",
+        "group_label": "Pharisees",
+        "group_kind": "sect",
+        "is_christian": "false",
+        "notes": "Jewish movement frequently appearing in the Gospel narratives."
+      },
+      "object_entity": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pharisees-at-galilee",
+            "passage_id": "psg-mark-3-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Pharisees active in Galilee (Mark 3:6)."
+          },
+          "passage": {
+            "passage_id": "psg-mark-3-6",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.3.6",
+            "excerpt": "Paraphrase: Pharisees go out and immediately conspire with the Herodians against Jesus after the Sabbath controversy.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-group-pharisees-judea",
+        "clm-pharisees-at-jerusalem"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-mark-3-6": [
+          "clm-group-herodians-galilee"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-mark-3-6",
+        "PARAPHRASE_RISK:psg-mark-3-6",
+        "PARAPHRASE_OMISSION:psg-mark-3-6:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pharisees-at-jerusalem",
+        "subject_type": "group",
+        "subject_id": "pharisees",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "27",
+        "year_end": "70",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "pharisees",
+        "group_label": "Pharisees",
+        "group_kind": "sect",
+        "is_christian": "false",
+        "notes": "Jewish movement frequently appearing in the Gospel narratives."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pharisees-at-jerusalem",
+            "passage_id": "psg-mark-11-15-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Pharisees active in Jerusalem (Mark 11-12)."
+          },
+          "passage": {
+            "passage_id": "psg-mark-11-15-18",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.11.15-18",
+            "excerpt": "Paraphrase: Jesus enters the temple precincts in Jerusalem and disrupts buying and selling.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-group-pharisees-judea",
+        "clm-pharisees-at-galilee"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-mark-11-15-18": [
+          "clm-group-pharisees-judea",
+          "clm-group-sadducees-jerusalem",
+          "clm-jesus-in-temple",
+          "clm-place-jerusalem-attested",
+          "clm-place-judea-attested",
+          "clm-temple-at-jerusalem",
+          "clm-temple-year"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-mark-11-15-18",
+        "PARAPHRASE_RISK:psg-mark-11-15-18",
+        "PARAPHRASE_OMISSION:psg-mark-11-15-18:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-herodians-at-judea",
+        "subject_type": "group",
+        "subject_id": "herodians",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "judea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "27",
+        "year_end": "40",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "herodians",
+        "group_label": "Herodians",
+        "group_kind": "faction",
+        "is_christian": "false",
+        "notes": "Political faction aligned with the Herodian ruling house and appearing in Gospel opposition scenes."
+      },
+      "object_entity": {
+        "place_id": "judea",
+        "place_label": "Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "31.70",
+        "lon": "35.20",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Southern region including Jerusalem and the Judean wilderness."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-herodians-at-judea",
+            "passage_id": "psg-mark-12-13-17",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Herodians active in Jerusalem/Judea."
+          },
+          "passage": {
+            "passage_id": "psg-mark-12-13-17",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.12.13-17",
+            "excerpt": "Paraphrase: Pharisees and Herodians question Jesus in Jerusalem about paying taxes to Caesar.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-group-herodians-galilee",
+        "clm-group-herodians-jerusalem"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-mark-12-13-17": [
+          "clm-group-herodians-jerusalem"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-mark-12-13-17",
+        "PARAPHRASE_RISK:psg-mark-12-13-17",
+        "PARAPHRASE_OMISSION:psg-mark-12-13-17:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-herodians-galilee",
+        "subject_type": "group",
+        "subject_id": "herodians",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galilee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T06:40:00Z"
+      },
+      "subject_entity": {
+        "group_id": "herodians",
+        "group_label": "Herodians",
+        "group_kind": "faction",
+        "is_christian": "false",
+        "notes": "Political faction aligned with the Herodian ruling house and appearing in Gospel opposition scenes."
+      },
+      "object_entity": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-herodians-galilee",
+            "passage_id": "psg-mark-3-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-3-6",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.3.6",
+            "excerpt": "Paraphrase: Pharisees go out and immediately conspire with the Herodians against Jesus after the Sabbath controversy.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-herodians-at-judea",
+        "clm-group-herodians-jerusalem"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-mark-3-6": [
+          "clm-pharisees-at-galilee"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-3-6",
+        "PARAPHRASE_OMISSION:psg-mark-3-6:object"
+      ]
+    }
+  ]
+}

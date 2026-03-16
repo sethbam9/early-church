@@ -1,0 +1,2572 @@
+{
+  "batch_id": "batch-141",
+  "queue": "1",
+  "focus": "stephen-i-pope; aksumite-church; ezana-of-aksum; theophilus-the-indian",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-stephen-i-affirms-apostolic-succession",
+        "subject_type": "person",
+        "subject_id": "stephen-i-pope",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "254",
+        "year_end": "257",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stephen-i-pope",
+        "person_label": "Stephen I",
+        "name_alt": "Pope Stephen",
+        "name_native": "Στέφανος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 257",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 254–257; central figure in the rebaptism controversy; insisted that heretical baptism was valid if administered in the trinitarian formula, opposing Cyprian and the African councils; invoked the authority of the Roman see and the tradition of Peter's chair; threatened to excommunicate the African and Asian bishops who rebaptized."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stephen-i-affirms-apostolic-succession",
+            "passage_id": "psg-eusebius-he-7-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius records Stephen's appeal to the tradition of Peter's chair and apostolic succession."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-7-3",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 7.3",
+            "excerpt": "Paraphrase: Eusebius reports that Stephen of Rome wrote to Cyprian and the African bishops concerning the rebaptism controversy, insisting that no innovation should be made contrary to tradition and that those baptized in heretical communities should receive only the laying on of hands for reconciliation, not rebaptism. He threatened to break communion with the African churches.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Stephen's position: tradition forbids rebaptism; laying on of hands sufficient for reconciliation"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stephen-i-affirms-episcopal-chair",
+        "clm-stephen-i-bishop-rome",
+        "clm-stephen-i-member-roman-church",
+        "clm-stephen-i-opposes-rebaptism"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-eusebius-he-7-3": [
+          "clm-lucius-i-bishop-rome",
+          "clm-lucius-i-coworker-cyprian",
+          "clm-lucius-i-member-roman-church",
+          "clm-stephen-i-bishop-rome",
+          "clm-stephen-i-member-roman-church",
+          "clm-stephen-i-opposes-rebaptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-7-3",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-7-3:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stephen-i-affirms-episcopal-chair",
+        "subject_type": "person",
+        "subject_id": "stephen-i-pope",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bishop-succession-guarantees-apostolic-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "254",
+        "year_end": "257",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stephen-i-pope",
+        "person_label": "Stephen I",
+        "name_alt": "Pope Stephen",
+        "name_native": "Στέφανος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 257",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 254–257; central figure in the rebaptism controversy; insisted that heretical baptism was valid if administered in the trinitarian formula, opposing Cyprian and the African councils; invoked the authority of the Roman see and the tradition of Peter's chair; threatened to excommunicate the African and Asian bishops who rebaptized."
+      },
+      "object_entity": {
+        "proposition_id": "bishop-succession-guarantees-apostolic-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "episcopal-chair",
+        "proposition_label": "The succession of bishops in their see guarantees the apostolic faith",
+        "polarity_family": "episcopal_chair",
+        "description": "The see of the bishop, transmitted through orderly succession, is the locus and guarantee of the faith received from the apostles.",
+        "notes": "Episcopal chair and succession"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stephen-i-affirms-episcopal-chair",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stephen-i-affirms-apostolic-succession",
+        "clm-stephen-i-bishop-rome",
+        "clm-stephen-i-member-roman-church",
+        "clm-stephen-i-opposes-rebaptism"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stephen-i-opposes-rebaptism",
+        "subject_type": "person",
+        "subject_id": "stephen-i-pope",
+        "predicate_id": "person_opposes_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "heretic-baptism-is-invalid",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "254",
+        "year_end": "257",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stephen-i-pope",
+        "person_label": "Stephen I",
+        "name_alt": "Pope Stephen",
+        "name_native": "Στέφανος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 257",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 254–257; central figure in the rebaptism controversy; insisted that heretical baptism was valid if administered in the trinitarian formula, opposing Cyprian and the African councils; invoked the authority of the Roman see and the tradition of Peter's chair; threatened to excommunicate the African and Asian bishops who rebaptized."
+      },
+      "object_entity": {
+        "proposition_id": "heretic-baptism-is-invalid",
+        "topic_id": "baptism-practice",
+        "dimension_id": "rebaptism-controversy",
+        "proposition_label": "Baptism administered by heretics or schismatics is invalid and must be repeated",
+        "polarity_family": "rebaptism",
+        "description": "Baptism conferred outside the one Church by heretics or schismatics is no baptism at all; converts from heretical groups must be baptized anew because the Holy Spirit operates only within the Church. Held by Cyprian and the African councils; opposed by Stephen of Rome who accepted heretical baptism if in trinitarian form.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stephen-i-opposes-rebaptism",
+            "passage_id": "psg-eusebius-he-7-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eusebius records Stephen insisting heretical baptism is valid and rebaptism is innovation."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-7-3",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 7.3",
+            "excerpt": "Paraphrase: Eusebius reports that Stephen of Rome wrote to Cyprian and the African bishops concerning the rebaptism controversy, insisting that no innovation should be made contrary to tradition and that those baptized in heretical communities should receive only the laying on of hands for reconciliation, not rebaptism. He threatened to break communion with the African churches.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Stephen's position: tradition forbids rebaptism; laying on of hands sufficient for reconciliation"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stephen-i-affirms-apostolic-succession",
+        "clm-stephen-i-affirms-episcopal-chair",
+        "clm-stephen-i-bishop-rome",
+        "clm-stephen-i-member-roman-church"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-eusebius-he-7-3": [
+          "clm-lucius-i-bishop-rome",
+          "clm-lucius-i-coworker-cyprian",
+          "clm-lucius-i-member-roman-church",
+          "clm-stephen-i-affirms-apostolic-succession",
+          "clm-stephen-i-bishop-rome",
+          "clm-stephen-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-7-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stephen-i-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "stephen-i-pope",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "254",
+        "year_end": "257",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stephen-i-pope",
+        "person_label": "Stephen I",
+        "name_alt": "Pope Stephen",
+        "name_native": "Στέφανος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 257",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 254–257; central figure in the rebaptism controversy; insisted that heretical baptism was valid if administered in the trinitarian formula, opposing Cyprian and the African councils; invoked the authority of the Roman see and the tradition of Peter's chair; threatened to excommunicate the African and Asian bishops who rebaptized."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stephen-i-bishop-rome",
+            "passage_id": "psg-eusebius-he-7-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eusebius identifies Stephen as bishop of Rome."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-7-3",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 7.3",
+            "excerpt": "Paraphrase: Eusebius reports that Stephen of Rome wrote to Cyprian and the African bishops concerning the rebaptism controversy, insisting that no innovation should be made contrary to tradition and that those baptized in heretical communities should receive only the laying on of hands for reconciliation, not rebaptism. He threatened to break communion with the African churches.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Stephen's position: tradition forbids rebaptism; laying on of hands sufficient for reconciliation"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stephen-i-affirms-apostolic-succession",
+        "clm-stephen-i-affirms-episcopal-chair",
+        "clm-stephen-i-member-roman-church",
+        "clm-stephen-i-opposes-rebaptism"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-eusebius-he-7-3": [
+          "clm-lucius-i-bishop-rome",
+          "clm-lucius-i-coworker-cyprian",
+          "clm-lucius-i-member-roman-church",
+          "clm-stephen-i-affirms-apostolic-succession",
+          "clm-stephen-i-member-roman-church",
+          "clm-stephen-i-opposes-rebaptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-7-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stephen-i-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "stephen-i-pope",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "254",
+        "year_end": "257",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stephen-i-pope",
+        "person_label": "Stephen I",
+        "name_alt": "Pope Stephen",
+        "name_native": "Στέφανος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 257",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 254–257; central figure in the rebaptism controversy; insisted that heretical baptism was valid if administered in the trinitarian formula, opposing Cyprian and the African councils; invoked the authority of the Roman see and the tradition of Peter's chair; threatened to excommunicate the African and Asian bishops who rebaptized."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stephen-i-member-roman-church",
+            "passage_id": "psg-eusebius-he-7-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Stephen as bishop of Rome is a member of the Roman church."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-7-3",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 7.3",
+            "excerpt": "Paraphrase: Eusebius reports that Stephen of Rome wrote to Cyprian and the African bishops concerning the rebaptism controversy, insisting that no innovation should be made contrary to tradition and that those baptized in heretical communities should receive only the laying on of hands for reconciliation, not rebaptism. He threatened to break communion with the African churches.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Stephen's position: tradition forbids rebaptism; laying on of hands sufficient for reconciliation"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stephen-i-affirms-apostolic-succession",
+        "clm-stephen-i-affirms-episcopal-chair",
+        "clm-stephen-i-bishop-rome",
+        "clm-stephen-i-opposes-rebaptism"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-eusebius-he-7-3": [
+          "clm-lucius-i-bishop-rome",
+          "clm-lucius-i-coworker-cyprian",
+          "clm-lucius-i-member-roman-church",
+          "clm-stephen-i-affirms-apostolic-succession",
+          "clm-stephen-i-bishop-rome",
+          "clm-stephen-i-opposes-rebaptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-7-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aksumite-church-controls-tyre",
+        "subject_type": "group",
+        "subject_id": "aksumite-church",
+        "predicate_id": "controls_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "tyre",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "300",
+        "year_end": "328",
+        "context_place_id": "tyre",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "aksumite-church",
+        "group_label": "Aksumite Church",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in the Aksumite Empire (Ethiopia/Eritrea); established by Frumentius c. 328–333; linked to the See of Alexandria; became state church under King Ezana."
+      },
+      "object_entity": {
+        "place_id": "tyre",
+        "place_label": "Tyre",
+        "place_label_modern": "Sour",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "33.2700",
+        "lon": "35.2000",
+        "location_precision": "approx_city",
+        "modern_country_label": "Lebanon",
+        "notes": "Phoenician city where Paul finds disciples during the journey toward Jerusalem."
+      },
+      "context_place": {
+        "place_id": "tyre",
+        "place_label": "Tyre",
+        "place_label_modern": "Sour",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "33.2700",
+        "lon": "35.2000",
+        "location_precision": "approx_city",
+        "modern_country_label": "Lebanon",
+        "notes": "Phoenician city where Paul finds disciples during the journey toward Jerusalem."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aksumite-church-controls-tyre",
+            "passage_id": "psg-wikipedia-aksumite-control",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Aksumite territorial control is documented in standard historical references."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-aksumite-control",
+            "source_id": "src-wikipedia-aksumite-empire",
+            "locator_type": "source_ref",
+            "locator": "Aksumite_Empire",
+            "excerpt": "The Aksumite Empire at its height controlled territories across the Horn of Africa and parts of the Arabian Peninsula, with the kingdom centered at Aksum in modern-day Ethiopia.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used as contextualizing evidence for Aksumite territorial control."
+          },
+          "source": {
+            "source_id": "src-wikipedia-aksumite-empire",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Aksumite Empire - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Aksumite_Empire",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for Aksumite territorial control and expansion."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aksumite-church-at-alexandria",
+        "clm-aksumite-church-at-egypt",
+        "clm-aksumite-church-group-schism-alexandrian",
+        "clm-aksumite-church-controls-aksum"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-wikipedia-aksumite-control": [
+          "clm-aksumite-church-at-alexandria",
+          "clm-aksumite-church-at-egypt",
+          "clm-ezana-participant-mission-himyar",
+          "clm-person-ezana-affirms-dominion",
+          "clm-place-aksum-attested",
+          "clm-place-vagharshapat-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-aksumite-control",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aksumite-church-at-alexandria",
+        "subject_type": "group",
+        "subject_id": "aksumite-church",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "328",
+        "year_end": "380",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "aksumite-church",
+        "group_label": "Aksumite Church",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in the Aksumite Empire (Ethiopia/Eritrea); established by Frumentius c. 328–333; linked to the See of Alexandria; became state church under King Ezana."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aksumite-church-at-alexandria",
+            "passage_id": "psg-wikipedia-aksumite-control",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "The Aksumite church had connections with Alexandria."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-aksumite-control",
+            "source_id": "src-wikipedia-aksumite-empire",
+            "locator_type": "source_ref",
+            "locator": "Aksumite_Empire",
+            "excerpt": "The Aksumite Empire at its height controlled territories across the Horn of Africa and parts of the Arabian Peninsula, with the kingdom centered at Aksum in modern-day Ethiopia.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used as contextualizing evidence for Aksumite territorial control."
+          },
+          "source": {
+            "source_id": "src-wikipedia-aksumite-empire",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Aksumite Empire - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Aksumite_Empire",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for Aksumite territorial control and expansion."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aksumite-church-controls-tyre",
+        "clm-aksumite-church-at-egypt",
+        "clm-aksumite-church-group-schism-alexandrian",
+        "clm-aksumite-church-controls-aksum"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-wikipedia-aksumite-control": [
+          "clm-aksumite-church-at-egypt",
+          "clm-aksumite-church-controls-tyre",
+          "clm-ezana-participant-mission-himyar",
+          "clm-person-ezana-affirms-dominion",
+          "clm-place-aksum-attested",
+          "clm-place-vagharshapat-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-aksumite-control",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aksumite-church-at-egypt",
+        "subject_type": "group",
+        "subject_id": "aksumite-church",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "egypt",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "328",
+        "year_end": "380",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "aksumite-church",
+        "group_label": "Aksumite Church",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in the Aksumite Empire (Ethiopia/Eritrea); established by Frumentius c. 328–333; linked to the See of Alexandria; became state church under King Ezana."
+      },
+      "object_entity": {
+        "place_id": "egypt",
+        "place_label": "Egypt",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "26.0000",
+        "lon": "30.0000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Egypt",
+        "notes": "Roman province encompassing the Nile valley; home of the Alexandrian church tradition and early monasticism."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aksumite-church-at-egypt",
+            "passage_id": "psg-wikipedia-aksumite-control",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "The Aksumite church had connections with Egypt."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-aksumite-control",
+            "source_id": "src-wikipedia-aksumite-empire",
+            "locator_type": "source_ref",
+            "locator": "Aksumite_Empire",
+            "excerpt": "The Aksumite Empire at its height controlled territories across the Horn of Africa and parts of the Arabian Peninsula, with the kingdom centered at Aksum in modern-day Ethiopia.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used as contextualizing evidence for Aksumite territorial control."
+          },
+          "source": {
+            "source_id": "src-wikipedia-aksumite-empire",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Aksumite Empire - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Aksumite_Empire",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for Aksumite territorial control and expansion."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aksumite-church-controls-tyre",
+        "clm-aksumite-church-at-alexandria",
+        "clm-aksumite-church-group-schism-alexandrian",
+        "clm-aksumite-church-controls-aksum"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-wikipedia-aksumite-control": [
+          "clm-aksumite-church-at-alexandria",
+          "clm-aksumite-church-controls-tyre",
+          "clm-ezana-participant-mission-himyar",
+          "clm-person-ezana-affirms-dominion",
+          "clm-place-aksum-attested",
+          "clm-place-vagharshapat-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-aksumite-control",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aksumite-church-controls-aksum",
+        "subject_type": "group",
+        "subject_id": "aksumite-church",
+        "predicate_id": "controls_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "aksum",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "340",
+        "year_end": "380",
+        "context_place_id": "aksum",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "aksumite-church",
+        "group_label": "Aksumite Church",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in the Aksumite Empire (Ethiopia/Eritrea); established by Frumentius c. 328–333; linked to the See of Alexandria; became state church under King Ezana."
+      },
+      "object_entity": {
+        "place_id": "aksum",
+        "place_label": "Aksum",
+        "place_label_modern": "Axum",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.1308",
+        "lon": "38.7225",
+        "location_precision": "approx_city",
+        "modern_country_label": "Ethiopia",
+        "notes": "Capital of the Aksumite Empire; site of Frumentius's episcopal see; Christianity became state religion under King Ezana c. 330; major Red Sea trade hub."
+      },
+      "context_place": {
+        "place_id": "aksum",
+        "place_label": "Aksum",
+        "place_label_modern": "Axum",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.1308",
+        "lon": "38.7225",
+        "location_precision": "approx_city",
+        "modern_country_label": "Ethiopia",
+        "notes": "Capital of the Aksumite Empire; site of Frumentius's episcopal see; Christianity became state religion under King Ezana c. 330; major Red Sea trade hub."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aksumite-church-controls-aksum",
+            "passage_id": "psg-ezana-inscription-ge-ez",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Ezana's inscriptions show state Christianity."
+          },
+          "passage": {
+            "passage_id": "psg-ezana-inscription-ge-ez",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Ezana Ge'ez inscription (RIE 271)",
+            "excerpt": "Paraphrase: King Ezana of Aksum dedicates his military victory to the Lord of Heaven Lord of Earth using explicitly Christian formulae replacing earlier pagan invocations of Mahrem.",
+            "language": "English",
+            "passage_year": "340",
+            "url_override": "",
+            "notes": "Archaeological evidence: Ezana's later inscriptions use Christian language confirming his conversion."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-aksumite-church-controls-aksum",
+            "passage_id": "psg-rufinus-he-1-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Rufinus describes Frumentius establishing the church with royal support."
+          },
+          "passage": {
+            "passage_id": "psg-rufinus-he-1-9",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Rufinus HE 1.9 (=10.9)",
+            "excerpt": "Paraphrase: A philosopher named Meropius of Tyre sailed to India with two boys Frumentius and Aedesius. The ship was seized and all killed except the boys who were brought to the king of Aksum. When the king died the queen asked Frumentius to help govern. Frumentius sought out Roman traders who were Christians and built churches. Later he traveled to Alexandria where Athanasius consecrated him bishop. He returned to Aksum and converted many including the king.",
+            "language": "English",
+            "passage_year": "402",
+            "url_override": "",
+            "notes": "Primary Western source for the christianization of Aksum; Rufinus heard the account from Aedesius himself."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aksumite-church-controls-tyre",
+        "clm-aksumite-church-at-alexandria",
+        "clm-aksumite-church-at-egypt",
+        "clm-aksumite-church-group-schism-alexandrian"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-ezana-inscription-ge-ez": [
+          "clm-christianization-aksum-year",
+          "clm-ezana-active-aksum",
+          "clm-ezana-affirms-ethiopia",
+          "clm-ezana-member-aksumite",
+          "clm-ezana-participant-christianization"
+        ],
+        "psg-rufinus-he-1-9": [
+          "clm-aksumite-church-at-aksum",
+          "clm-aksumite-church-group-schism-alexandrian",
+          "clm-athanasius-coworker-ezana",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-participant-christianization",
+          "clm-bartholomew-member-india-christians",
+          "clm-christianization-aksum-at-aksum",
+          "clm-christianization-aksum-year",
+          "clm-ezana-participant-christianization",
+          "clm-frumentius-active-tyre",
+          "clm-frumentius-bishop-aksum",
+          "clm-frumentius-member-aksumite",
+          "clm-frumentius-participant-christianization",
+          "clm-frumentius-teacher-ezana",
+          "clm-gregory-illum-bishop-vagharshapat",
+          "clm-person-frumentius-affirms-ethiopia",
+          "clm-rufinus-active-alexandria",
+          "clm-rufinus-active-jerusalem",
+          "clm-rufinus-active-rome",
+          "clm-rufinus-affirms-bartholomew",
+          "clm-rufinus-affirms-thomas",
+          "clm-rufinus-he-affirms-bartholomew-india",
+          "clm-rufinus-he-affirms-ethiopia-christianized",
+          "clm-rufinus-he-affirms-india",
+          "clm-rufinus-he-by-rufinus",
+          "clm-rufinus-he-mentions-bartholomew-india",
+          "clm-rufinus-he-mentions-thomas-india"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ezana-inscription-ge-ez",
+        "PARAPHRASE_OMISSION:psg-ezana-inscription-ge-ez:subject",
+        "PARAPHRASE_RISK:psg-rufinus-he-1-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aksumite-church-group-schism-alexandrian",
+        "subject_type": "group",
+        "subject_id": "aksumite-church",
+        "predicate_id": "group_schismed_from",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "alexandrian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "328",
+        "year_end": "380",
+        "context_place_id": "aksum",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "aksumite-church",
+        "group_label": "Aksumite Church",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in the Aksumite Empire (Ethiopia/Eritrea); established by Frumentius c. 328–333; linked to the See of Alexandria; became state church under King Ezana."
+      },
+      "object_entity": {
+        "group_id": "alexandrian-church",
+        "group_label": "Church in Alexandria",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Alexandria; home of the Catechetical School; major center of Greek-speaking Christianity from the late first century onward."
+      },
+      "context_place": {
+        "place_id": "aksum",
+        "place_label": "Aksum",
+        "place_label_modern": "Axum",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.1308",
+        "lon": "38.7225",
+        "location_precision": "approx_city",
+        "modern_country_label": "Ethiopia",
+        "notes": "Capital of the Aksumite Empire; site of Frumentius's episcopal see; Christianity became state religion under King Ezana c. 330; major Red Sea trade hub."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aksumite-church-group-schism-alexandrian",
+            "passage_id": "psg-rufinus-he-1-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rufinus-he-1-9",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Rufinus HE 1.9 (=10.9)",
+            "excerpt": "Paraphrase: A philosopher named Meropius of Tyre sailed to India with two boys Frumentius and Aedesius. The ship was seized and all killed except the boys who were brought to the king of Aksum. When the king died the queen asked Frumentius to help govern. Frumentius sought out Roman traders who were Christians and built churches. Later he traveled to Alexandria where Athanasius consecrated him bishop. He returned to Aksum and converted many including the king.",
+            "language": "English",
+            "passage_year": "402",
+            "url_override": "",
+            "notes": "Primary Western source for the christianization of Aksum; Rufinus heard the account from Aedesius himself."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aksumite-church-controls-tyre",
+        "clm-aksumite-church-at-alexandria",
+        "clm-aksumite-church-at-egypt",
+        "clm-aksumite-church-controls-aksum"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-rufinus-he-1-9": [
+          "clm-aksumite-church-at-aksum",
+          "clm-aksumite-church-controls-aksum",
+          "clm-athanasius-coworker-ezana",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-participant-christianization",
+          "clm-bartholomew-member-india-christians",
+          "clm-christianization-aksum-at-aksum",
+          "clm-christianization-aksum-year",
+          "clm-ezana-participant-christianization",
+          "clm-frumentius-active-tyre",
+          "clm-frumentius-bishop-aksum",
+          "clm-frumentius-member-aksumite",
+          "clm-frumentius-participant-christianization",
+          "clm-frumentius-teacher-ezana",
+          "clm-gregory-illum-bishop-vagharshapat",
+          "clm-person-frumentius-affirms-ethiopia",
+          "clm-rufinus-active-alexandria",
+          "clm-rufinus-active-jerusalem",
+          "clm-rufinus-active-rome",
+          "clm-rufinus-affirms-bartholomew",
+          "clm-rufinus-affirms-thomas",
+          "clm-rufinus-he-affirms-bartholomew-india",
+          "clm-rufinus-he-affirms-ethiopia-christianized",
+          "clm-rufinus-he-affirms-india",
+          "clm-rufinus-he-by-rufinus",
+          "clm-rufinus-he-mentions-bartholomew-india",
+          "clm-rufinus-he-mentions-thomas-india"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rufinus-he-1-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ezana-affirms-ethiopia",
+        "subject_type": "person",
+        "subject_id": "ezana-of-aksum",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-ethiopia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "340",
+        "year_end": "356",
+        "context_place_id": "aksum",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ezana-of-aksum",
+        "person_label": "Ezana of Aksum",
+        "name_alt": "King Ezana",
+        "name_native": "",
+        "birth_year_display": "c. 303",
+        "death_year_display": "c. 356",
+        "person_kind": "individual",
+        "notes": "King of the Aksumite Empire c. 330–356; converted to Christianity under Frumentius's influence; made Christianity the state religion of Aksum; known from inscriptions and coins."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-ethiopia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "ethiopia-christianized",
+        "proposition_label": "Christianity was established in Ethiopia through Frumentius and the conversion of King Ezana",
+        "polarity_family": "ethiopia_christianized",
+        "description": "The Aksumite kingdom (Ethiopia) received Christianity through the mission of Frumentius, consecrated by Athanasius of Alexandria, who converted King Ezana c. 330; attested by Rufinus, Socrates, Sozomen.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "aksum",
+        "place_label": "Aksum",
+        "place_label_modern": "Axum",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.1308",
+        "lon": "38.7225",
+        "location_precision": "approx_city",
+        "modern_country_label": "Ethiopia",
+        "notes": "Capital of the Aksumite Empire; site of Frumentius's episcopal see; Christianity became state religion under King Ezana c. 330; major Red Sea trade hub."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ezana-affirms-ethiopia",
+            "passage_id": "psg-ezana-inscription-ge-ez",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Ezana's Christian inscriptions directly attest his faith."
+          },
+          "passage": {
+            "passage_id": "psg-ezana-inscription-ge-ez",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Ezana Ge'ez inscription (RIE 271)",
+            "excerpt": "Paraphrase: King Ezana of Aksum dedicates his military victory to the Lord of Heaven Lord of Earth using explicitly Christian formulae replacing earlier pagan invocations of Mahrem.",
+            "language": "English",
+            "passage_year": "340",
+            "url_override": "",
+            "notes": "Archaeological evidence: Ezana's later inscriptions use Christian language confirming his conversion."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ezana-participant-christianization",
+        "clm-ezana-active-aksum",
+        "clm-ezana-member-aksumite",
+        "clm-person-ezana-affirms-dominion",
+        "clm-ezana-participant-mission-himyar"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-ezana-inscription-ge-ez": [
+          "clm-aksumite-church-controls-aksum",
+          "clm-christianization-aksum-year",
+          "clm-ezana-active-aksum",
+          "clm-ezana-member-aksumite",
+          "clm-ezana-participant-christianization"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ezana-inscription-ge-ez"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-person-ezana-affirms-dominion",
+        "subject_type": "person",
+        "subject_id": "ezana-of-aksum",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-dominion-is-universal",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "340",
+        "year_end": "356",
+        "context_place_id": "aksum",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ezana-of-aksum",
+        "person_label": "Ezana of Aksum",
+        "name_alt": "King Ezana",
+        "name_native": "",
+        "birth_year_display": "c. 303",
+        "death_year_display": "c. 356",
+        "person_kind": "individual",
+        "notes": "King of the Aksumite Empire c. 330–356; converted to Christianity under Frumentius's influence; made Christianity the state religion of Aksum; known from inscriptions and coins."
+      },
+      "object_entity": {
+        "proposition_id": "christ-dominion-is-universal",
+        "topic_id": "christian-expansion",
+        "dimension_id": "britannia-reached",
+        "proposition_label": "Christ's dominion extends to all nations beyond the Roman frontier",
+        "polarity_family": "universal_dominion",
+        "description": "Tertullian Adv. Jud. 7 rhetorically lists all nations reached by Christ including those beyond Roman access; an early theological claim of universal Christian presence.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "aksum",
+        "place_label": "Aksum",
+        "place_label_modern": "Axum",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.1308",
+        "lon": "38.7225",
+        "location_precision": "approx_city",
+        "modern_country_label": "Ethiopia",
+        "notes": "Capital of the Aksumite Empire; site of Frumentius's episcopal see; Christianity became state religion under King Ezana c. 330; major Red Sea trade hub."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-person-ezana-affirms-dominion",
+            "passage_id": "psg-wikipedia-aksumite-control",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes ezana-of-aksum's position on christ-dominion-is-universal."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-aksumite-control",
+            "source_id": "src-wikipedia-aksumite-empire",
+            "locator_type": "source_ref",
+            "locator": "Aksumite_Empire",
+            "excerpt": "The Aksumite Empire at its height controlled territories across the Horn of Africa and parts of the Arabian Peninsula, with the kingdom centered at Aksum in modern-day Ethiopia.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used as contextualizing evidence for Aksumite territorial control."
+          },
+          "source": {
+            "source_id": "src-wikipedia-aksumite-empire",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Aksumite Empire - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Aksumite_Empire",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for Aksumite territorial control and expansion."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ezana-participant-christianization",
+        "clm-ezana-active-aksum",
+        "clm-ezana-member-aksumite",
+        "clm-ezana-affirms-ethiopia",
+        "clm-ezana-participant-mission-himyar"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-wikipedia-aksumite-control": [
+          "clm-aksumite-church-at-alexandria",
+          "clm-aksumite-church-at-egypt",
+          "clm-aksumite-church-controls-tyre",
+          "clm-ezana-participant-mission-himyar",
+          "clm-place-aksum-attested",
+          "clm-place-vagharshapat-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-aksumite-control",
+        "TERTIARY_ONLY_SUPPORT",
+        "TERTIARY_DOCTRINAL"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ezana-participant-christianization",
+        "subject_type": "person",
+        "subject_id": "ezana-of-aksum",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "christianization-of-aksum",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "330",
+        "year_end": "340",
+        "context_place_id": "aksum",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ezana-of-aksum",
+        "person_label": "Ezana of Aksum",
+        "name_alt": "King Ezana",
+        "name_native": "",
+        "birth_year_display": "c. 303",
+        "death_year_display": "c. 356",
+        "person_kind": "individual",
+        "notes": "King of the Aksumite Empire c. 330–356; converted to Christianity under Frumentius's influence; made Christianity the state religion of Aksum; known from inscriptions and coins."
+      },
+      "object_entity": {
+        "event_id": "christianization-of-aksum",
+        "event_label": "Christianization of Aksum",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Frumentius consecrated bishop by Athanasius and returns to Aksum c. 328–333; King Ezana converts; Christianity becomes state religion of the Aksumite Empire."
+      },
+      "context_place": {
+        "place_id": "aksum",
+        "place_label": "Aksum",
+        "place_label_modern": "Axum",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.1308",
+        "lon": "38.7225",
+        "location_precision": "approx_city",
+        "modern_country_label": "Ethiopia",
+        "notes": "Capital of the Aksumite Empire; site of Frumentius's episcopal see; Christianity became state religion under King Ezana c. 330; major Red Sea trade hub."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ezana-participant-christianization",
+            "passage_id": "psg-ezana-inscription-ge-ez",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Ezana's later inscriptions use Christian formulae confirming conversion."
+          },
+          "passage": {
+            "passage_id": "psg-ezana-inscription-ge-ez",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Ezana Ge'ez inscription (RIE 271)",
+            "excerpt": "Paraphrase: King Ezana of Aksum dedicates his military victory to the Lord of Heaven Lord of Earth using explicitly Christian formulae replacing earlier pagan invocations of Mahrem.",
+            "language": "English",
+            "passage_year": "340",
+            "url_override": "",
+            "notes": "Archaeological evidence: Ezana's later inscriptions use Christian language confirming his conversion."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-ezana-participant-christianization",
+            "passage_id": "psg-rufinus-he-1-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Rufinus narrates Ezana's conversion."
+          },
+          "passage": {
+            "passage_id": "psg-rufinus-he-1-9",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Rufinus HE 1.9 (=10.9)",
+            "excerpt": "Paraphrase: A philosopher named Meropius of Tyre sailed to India with two boys Frumentius and Aedesius. The ship was seized and all killed except the boys who were brought to the king of Aksum. When the king died the queen asked Frumentius to help govern. Frumentius sought out Roman traders who were Christians and built churches. Later he traveled to Alexandria where Athanasius consecrated him bishop. He returned to Aksum and converted many including the king.",
+            "language": "English",
+            "passage_year": "402",
+            "url_override": "",
+            "notes": "Primary Western source for the christianization of Aksum; Rufinus heard the account from Aedesius himself."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ezana-active-aksum",
+        "clm-ezana-member-aksumite",
+        "clm-ezana-affirms-ethiopia",
+        "clm-person-ezana-affirms-dominion",
+        "clm-ezana-participant-mission-himyar"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-ezana-inscription-ge-ez": [
+          "clm-aksumite-church-controls-aksum",
+          "clm-christianization-aksum-year",
+          "clm-ezana-active-aksum",
+          "clm-ezana-affirms-ethiopia",
+          "clm-ezana-member-aksumite"
+        ],
+        "psg-rufinus-he-1-9": [
+          "clm-aksumite-church-at-aksum",
+          "clm-aksumite-church-controls-aksum",
+          "clm-aksumite-church-group-schism-alexandrian",
+          "clm-athanasius-coworker-ezana",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-participant-christianization",
+          "clm-bartholomew-member-india-christians",
+          "clm-christianization-aksum-at-aksum",
+          "clm-christianization-aksum-year",
+          "clm-frumentius-active-tyre",
+          "clm-frumentius-bishop-aksum",
+          "clm-frumentius-member-aksumite",
+          "clm-frumentius-participant-christianization",
+          "clm-frumentius-teacher-ezana",
+          "clm-gregory-illum-bishop-vagharshapat",
+          "clm-person-frumentius-affirms-ethiopia",
+          "clm-rufinus-active-alexandria",
+          "clm-rufinus-active-jerusalem",
+          "clm-rufinus-active-rome",
+          "clm-rufinus-affirms-bartholomew",
+          "clm-rufinus-affirms-thomas",
+          "clm-rufinus-he-affirms-bartholomew-india",
+          "clm-rufinus-he-affirms-ethiopia-christianized",
+          "clm-rufinus-he-affirms-india",
+          "clm-rufinus-he-by-rufinus",
+          "clm-rufinus-he-mentions-bartholomew-india",
+          "clm-rufinus-he-mentions-thomas-india"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ezana-inscription-ge-ez",
+        "PARAPHRASE_RISK:psg-rufinus-he-1-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ezana-participant-mission-himyar",
+        "subject_type": "person",
+        "subject_id": "ezana-of-aksum",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "mission-of-theophilus-to-himyar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "354",
+        "year_end": "356",
+        "context_place_id": "aksum",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ezana-of-aksum",
+        "person_label": "Ezana of Aksum",
+        "name_alt": "King Ezana",
+        "name_native": "",
+        "birth_year_display": "c. 303",
+        "death_year_display": "c. 356",
+        "person_kind": "individual",
+        "notes": "King of the Aksumite Empire c. 330–356; converted to Christianity under Frumentius's influence; made Christianity the state religion of Aksum; known from inscriptions and coins."
+      },
+      "object_entity": {
+        "event_id": "mission-of-theophilus-to-himyar",
+        "event_label": "Mission of Theophilus to Himyar",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Emperor Constantius II sends bishop Theophilus the Indian c. 354 on a diplomatic-missionary embassy to Himyar (South Arabia); Theophilus builds churches in Zafar and Aden per Philostorgius HE 3.4–6."
+      },
+      "context_place": {
+        "place_id": "aksum",
+        "place_label": "Aksum",
+        "place_label_modern": "Axum",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.1308",
+        "lon": "38.7225",
+        "location_precision": "approx_city",
+        "modern_country_label": "Ethiopia",
+        "notes": "Capital of the Aksumite Empire; site of Frumentius's episcopal see; Christianity became state religion under King Ezana c. 330; major Red Sea trade hub."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ezana-participant-mission-himyar",
+            "passage_id": "psg-wikipedia-aksumite-control",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes ezana-of-aksum's participation in mission-of-theophilus-to-himyar."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-aksumite-control",
+            "source_id": "src-wikipedia-aksumite-empire",
+            "locator_type": "source_ref",
+            "locator": "Aksumite_Empire",
+            "excerpt": "The Aksumite Empire at its height controlled territories across the Horn of Africa and parts of the Arabian Peninsula, with the kingdom centered at Aksum in modern-day Ethiopia.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used as contextualizing evidence for Aksumite territorial control."
+          },
+          "source": {
+            "source_id": "src-wikipedia-aksumite-empire",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Aksumite Empire - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Aksumite_Empire",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for Aksumite territorial control and expansion."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ezana-participant-christianization",
+        "clm-ezana-active-aksum",
+        "clm-ezana-member-aksumite",
+        "clm-ezana-affirms-ethiopia",
+        "clm-person-ezana-affirms-dominion"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-wikipedia-aksumite-control": [
+          "clm-aksumite-church-at-alexandria",
+          "clm-aksumite-church-at-egypt",
+          "clm-aksumite-church-controls-tyre",
+          "clm-person-ezana-affirms-dominion",
+          "clm-place-aksum-attested",
+          "clm-place-vagharshapat-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-aksumite-control",
+        "TERTIARY_ONLY_SUPPORT",
+        "TERTIARY_DOCTRINAL"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ezana-member-aksumite",
+        "subject_type": "person",
+        "subject_id": "ezana-of-aksum",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "aksumite-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "330",
+        "year_end": "356",
+        "context_place_id": "aksum",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ezana-of-aksum",
+        "person_label": "Ezana of Aksum",
+        "name_alt": "King Ezana",
+        "name_native": "",
+        "birth_year_display": "c. 303",
+        "death_year_display": "c. 356",
+        "person_kind": "individual",
+        "notes": "King of the Aksumite Empire c. 330–356; converted to Christianity under Frumentius's influence; made Christianity the state religion of Aksum; known from inscriptions and coins."
+      },
+      "object_entity": {
+        "group_id": "aksumite-church",
+        "group_label": "Aksumite Church",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in the Aksumite Empire (Ethiopia/Eritrea); established by Frumentius c. 328–333; linked to the See of Alexandria; became state church under King Ezana."
+      },
+      "context_place": {
+        "place_id": "aksum",
+        "place_label": "Aksum",
+        "place_label_modern": "Axum",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.1308",
+        "lon": "38.7225",
+        "location_precision": "approx_city",
+        "modern_country_label": "Ethiopia",
+        "notes": "Capital of the Aksumite Empire; site of Frumentius's episcopal see; Christianity became state religion under King Ezana c. 330; major Red Sea trade hub."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ezana-member-aksumite",
+            "passage_id": "psg-ezana-inscription-ge-ez",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Ezana's Christian inscriptions confirm his membership in the Aksumite church."
+          },
+          "passage": {
+            "passage_id": "psg-ezana-inscription-ge-ez",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Ezana Ge'ez inscription (RIE 271)",
+            "excerpt": "Paraphrase: King Ezana of Aksum dedicates his military victory to the Lord of Heaven Lord of Earth using explicitly Christian formulae replacing earlier pagan invocations of Mahrem.",
+            "language": "English",
+            "passage_year": "340",
+            "url_override": "",
+            "notes": "Archaeological evidence: Ezana's later inscriptions use Christian language confirming his conversion."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ezana-participant-christianization",
+        "clm-ezana-active-aksum",
+        "clm-ezana-affirms-ethiopia",
+        "clm-person-ezana-affirms-dominion",
+        "clm-ezana-participant-mission-himyar"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-ezana-inscription-ge-ez": [
+          "clm-aksumite-church-controls-aksum",
+          "clm-christianization-aksum-year",
+          "clm-ezana-active-aksum",
+          "clm-ezana-affirms-ethiopia",
+          "clm-ezana-participant-christianization"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ezana-inscription-ge-ez",
+        "PARAPHRASE_OMISSION:psg-ezana-inscription-ge-ez:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-person-theophilus-affirms-arabia",
+        "subject_type": "person",
+        "subject_id": "theophilus-the-indian",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-arabia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "354",
+        "year_end": "364",
+        "context_place_id": "zafar",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "theophilus-the-indian",
+        "person_label": "Theophilus the Indian",
+        "name_alt": "Theophilus Indus",
+        "name_native": "",
+        "birth_year_display": "fl. c. 354",
+        "death_year_display": "fl. c. 364",
+        "person_kind": "individual",
+        "notes": "Bishop sent by Emperor Constantius II c. 354 on a mission to Himyar (South Arabia) and possibly India; built churches in Zafar and Aden per Philostorgius HE 3.4–6; described as from Socotra island."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-arabia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "arabia-christianized",
+        "proposition_label": "Christian communities were established in the Arabian Peninsula",
+        "polarity_family": "arabia_christianized",
+        "description": "Christianity was established in the Arabian Peninsula including at Bostra (synod c. 244), and in Himyar through Theophilus the Indian's mission c. 354 (Philostorgius); Najran attested later.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-person-theophilus-affirms-arabia",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Theophilus's Arabian mission reported by Philostorgius."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-active-zafar",
+        "clm-theophilus-participant-himyar-mission",
+        "clm-theophilus-member-arabian",
+        "clm-person-theophilus-affirms-india",
+        "clm-theophilus-active-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-person-theophilus-affirms-india",
+        "subject_type": "person",
+        "subject_id": "theophilus-the-indian",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "gospel-reached-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "356",
+        "year_end": "364",
+        "context_place_id": "india-malabar",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "theophilus-the-indian",
+        "person_label": "Theophilus the Indian",
+        "name_alt": "Theophilus Indus",
+        "name_native": "",
+        "birth_year_display": "fl. c. 354",
+        "death_year_display": "fl. c. 364",
+        "person_kind": "individual",
+        "notes": "Bishop sent by Emperor Constantius II c. 354 on a mission to Himyar (South Arabia) and possibly India; built churches in Zafar and Aden per Philostorgius HE 3.4–6; described as from Socotra island."
+      },
+      "object_entity": {
+        "proposition_id": "gospel-reached-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "india-reached",
+        "proposition_label": "The gospel reached India through early missionary or apostolic activity",
+        "polarity_family": "india_reached",
+        "description": "Christianity reached India — whether the Malabar coast or the broader \"India\" of ancient usage — through apostolic (Thomas, Bartholomew) or early missionary (Pantaenus) activity; attested by Eusebius HE 5.10 and Philostorgius.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-person-theophilus-affirms-india",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes theophilus-the-indian's position on gospel-reached-india."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-active-zafar",
+        "clm-theophilus-participant-himyar-mission",
+        "clm-person-theophilus-affirms-arabia",
+        "clm-theophilus-member-arabian",
+        "clm-theophilus-active-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-philostorgius-he-3-4",
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-theophilus-active-india",
+        "subject_type": "person",
+        "subject_id": "theophilus-the-indian",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "india-malabar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "356",
+        "year_end": "364",
+        "context_place_id": "india-malabar",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "theophilus-the-indian",
+        "person_label": "Theophilus the Indian",
+        "name_alt": "Theophilus Indus",
+        "name_native": "",
+        "birth_year_display": "fl. c. 354",
+        "death_year_display": "fl. c. 364",
+        "person_kind": "individual",
+        "notes": "Bishop sent by Emperor Constantius II c. 354 on a mission to Himyar (South Arabia) and possibly India; built churches in Zafar and Aden per Philostorgius HE 3.4–6; described as from Socotra island."
+      },
+      "object_entity": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "context_place": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-theophilus-active-india",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests theophilus-the-indian's activity in or near india-malabar."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-active-zafar",
+        "clm-theophilus-participant-himyar-mission",
+        "clm-person-theophilus-affirms-arabia",
+        "clm-theophilus-member-arabian",
+        "clm-person-theophilus-affirms-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-philostorgius-he-3-4",
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-theophilus-participant-himyar-mission",
+        "subject_type": "person",
+        "subject_id": "theophilus-the-indian",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "mission-of-theophilus-to-himyar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "354",
+        "year_end": "356",
+        "context_place_id": "zafar",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "theophilus-the-indian",
+        "person_label": "Theophilus the Indian",
+        "name_alt": "Theophilus Indus",
+        "name_native": "",
+        "birth_year_display": "fl. c. 354",
+        "death_year_display": "fl. c. 364",
+        "person_kind": "individual",
+        "notes": "Bishop sent by Emperor Constantius II c. 354 on a mission to Himyar (South Arabia) and possibly India; built churches in Zafar and Aden per Philostorgius HE 3.4–6; described as from Socotra island."
+      },
+      "object_entity": {
+        "event_id": "mission-of-theophilus-to-himyar",
+        "event_label": "Mission of Theophilus to Himyar",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Emperor Constantius II sends bishop Theophilus the Indian c. 354 on a diplomatic-missionary embassy to Himyar (South Arabia); Theophilus builds churches in Zafar and Aden per Philostorgius HE 3.4–6."
+      },
+      "context_place": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-theophilus-participant-himyar-mission",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Philostorgius's primary account of the Himyar mission."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-active-zafar",
+        "clm-person-theophilus-affirms-arabia",
+        "clm-theophilus-member-arabian",
+        "clm-person-theophilus-affirms-india",
+        "clm-theophilus-active-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-theophilus-member-arabian",
+        "subject_type": "person",
+        "subject_id": "theophilus-the-indian",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "arabian-christians",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "354",
+        "year_end": "364",
+        "context_place_id": "zafar",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "theophilus-the-indian",
+        "person_label": "Theophilus the Indian",
+        "name_alt": "Theophilus Indus",
+        "name_native": "",
+        "birth_year_display": "fl. c. 354",
+        "death_year_display": "fl. c. 364",
+        "person_kind": "individual",
+        "notes": "Bishop sent by Emperor Constantius II c. 354 on a mission to Himyar (South Arabia) and possibly India; built churches in Zafar and Aden per Philostorgius HE 3.4–6; described as from Socotra island."
+      },
+      "object_entity": {
+        "group_id": "arabian-christians",
+        "group_label": "Arabian Christians",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian communities in the Arabian Peninsula; attested at Bostra (synod c. 244), Najran, and Himyar; Theophilus the Indian built churches in Zafar and Aden c. 354."
+      },
+      "context_place": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-theophilus-member-arabian",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes theophilus-the-indian's membership in arabian-christians."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-active-zafar",
+        "clm-theophilus-participant-himyar-mission",
+        "clm-person-theophilus-affirms-arabia",
+        "clm-person-theophilus-affirms-india",
+        "clm-theophilus-active-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-philostorgius-he-3-4",
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4",
+        "PARAPHRASE_OMISSION:psg-philostorgius-he-3-4:object"
+      ]
+    }
+  ]
+}

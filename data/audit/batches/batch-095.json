@@ -1,0 +1,1453 @@
+{
+  "batch_id": "batch-095",
+  "queue": "1",
+  "focus": "epistula-73-cyprian",
+  "claim_count": 13,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-ep73-by-cyprian",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "cyprian-of-carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "person_id": "cyprian-of-carthage",
+        "person_label": "Cyprian of Carthage",
+        "name_alt": "Thascius Caecilius Cyprianus",
+        "name_native": "Kυπριανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 258",
+        "person_kind": "individual",
+        "notes": "Bishop of Carthage c. 248–258; major Latin theologian of ecclesiology and sacramental theology; converted c. 246; deeply influenced by Tertullian; key figure in the Novatian controversy (supported Cornelius against Novatian); martyred under Valerian."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-by-cyprian",
+            "passage_id": "psg-cyprian-ep73-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Cyprian is the author of Epistula 73."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-4",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.4",
+            "excerpt": "Paraphrase: If baptism could be given by heretics, they could also give the remission of sins. But since it is only in the Church that sins are remitted, baptism cannot be administered outside the Church. For there is one baptism which is appointed in the Catholic Church; and it is not possible that what is done outside should be counted valid for those who are within.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "One baptism in the one Church; heretical baptism invalid; no Spirit outside the Church"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-written-carthage",
+        "clm-ep73-affirms-apostolic-succession",
+        "clm-ep73-affirms-baptism-water",
+        "clm-ep73-affirms-bishop-eucharist",
+        "clm-ep73-affirms-episcopal-unity",
+        "clm-ep73-affirms-one-baptism",
+        "clm-ep73-affirms-ot-authority",
+        "clm-ep73-affirms-penance",
+        "clm-ep73-affirms-rebaptism",
+        "clm-ep73-affirms-rule-of-faith",
+        "clm-ep73-affirms-threefold-ministry",
+        "clm-ep73-affirms-trinitarian-baptism"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-4": [
+          "clm-ep73-affirms-baptism-water",
+          "clm-ep73-affirms-bishop-eucharist",
+          "clm-ep73-affirms-one-baptism",
+          "clm-ep73-affirms-rebaptism",
+          "clm-ep73-affirms-trinitarian-baptism",
+          "clm-ep73-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep73-4",
+        "PARAPHRASE_OMISSION:psg-cyprian-ep73-4:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep73-written-carthage",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "256",
+        "year_end": "256",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-written-carthage",
+            "passage_id": "psg-cyprian-ep73-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Written from Carthage to Jubaianus."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-4",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.4",
+            "excerpt": "Paraphrase: If baptism could be given by heretics, they could also give the remission of sins. But since it is only in the Church that sins are remitted, baptism cannot be administered outside the Church. For there is one baptism which is appointed in the Catholic Church; and it is not possible that what is done outside should be counted valid for those who are within.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "One baptism in the one Church; heretical baptism invalid; no Spirit outside the Church"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-affirms-apostolic-succession",
+        "clm-ep73-affirms-baptism-water",
+        "clm-ep73-affirms-bishop-eucharist",
+        "clm-ep73-affirms-episcopal-unity",
+        "clm-ep73-affirms-one-baptism",
+        "clm-ep73-affirms-ot-authority",
+        "clm-ep73-affirms-penance",
+        "clm-ep73-affirms-rebaptism",
+        "clm-ep73-affirms-rule-of-faith",
+        "clm-ep73-affirms-threefold-ministry",
+        "clm-ep73-affirms-trinitarian-baptism",
+        "clm-ep73-by-cyprian"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-4": [
+          "clm-ep73-affirms-baptism-water",
+          "clm-ep73-affirms-bishop-eucharist",
+          "clm-ep73-affirms-one-baptism",
+          "clm-ep73-affirms-rebaptism",
+          "clm-ep73-affirms-trinitarian-baptism",
+          "clm-ep73-by-cyprian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep73-4",
+        "PARAPHRASE_OMISSION:psg-cyprian-ep73-4:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep73-affirms-apostolic-succession",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-affirms-apostolic-succession",
+            "passage_id": "psg-cyprian-ep73-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "From the beginning established by the Lord and then observed by the apostles."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-11",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.11",
+            "excerpt": "Paraphrase: What then shall we say of the tradition of certain persons who receive the baptism of heretics? Is tradition greater than truth? Stephen claims to follow tradition. But we answer: from the beginning this was the practice, established first by the Lord and then observed by the apostles. The practice arose first, the truth was before custom.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Truth over custom; apostolic precedent for rebaptism; response to Stephen's appeal to tradition"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-written-carthage",
+        "clm-ep73-affirms-baptism-water",
+        "clm-ep73-affirms-bishop-eucharist",
+        "clm-ep73-affirms-episcopal-unity",
+        "clm-ep73-affirms-one-baptism",
+        "clm-ep73-affirms-ot-authority",
+        "clm-ep73-affirms-penance",
+        "clm-ep73-affirms-rebaptism",
+        "clm-ep73-affirms-rule-of-faith",
+        "clm-ep73-affirms-threefold-ministry",
+        "clm-ep73-affirms-trinitarian-baptism",
+        "clm-ep73-by-cyprian"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-11": [
+          "clm-ep73-affirms-episcopal-unity",
+          "clm-ep73-affirms-threefold-ministry"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep73-affirms-baptism-water",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-with-water-commanded",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-with-water-commanded",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-mode",
+        "proposition_label": "Baptism is administered with water",
+        "polarity_family": "baptism_water",
+        "description": "Baptismal practice uses water as the material element.",
+        "notes": "Core initiatory practice"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-affirms-baptism-water",
+            "passage_id": "psg-cyprian-ep73-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Baptism is water baptism administered in the Church."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-4",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.4",
+            "excerpt": "Paraphrase: If baptism could be given by heretics, they could also give the remission of sins. But since it is only in the Church that sins are remitted, baptism cannot be administered outside the Church. For there is one baptism which is appointed in the Catholic Church; and it is not possible that what is done outside should be counted valid for those who are within.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "One baptism in the one Church; heretical baptism invalid; no Spirit outside the Church"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-written-carthage",
+        "clm-ep73-affirms-apostolic-succession",
+        "clm-ep73-affirms-bishop-eucharist",
+        "clm-ep73-affirms-episcopal-unity",
+        "clm-ep73-affirms-one-baptism",
+        "clm-ep73-affirms-ot-authority",
+        "clm-ep73-affirms-penance",
+        "clm-ep73-affirms-rebaptism",
+        "clm-ep73-affirms-rule-of-faith",
+        "clm-ep73-affirms-threefold-ministry",
+        "clm-ep73-affirms-trinitarian-baptism",
+        "clm-ep73-by-cyprian"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-4": [
+          "clm-ep73-affirms-bishop-eucharist",
+          "clm-ep73-affirms-one-baptism",
+          "clm-ep73-affirms-rebaptism",
+          "clm-ep73-affirms-trinitarian-baptism",
+          "clm-ep73-by-cyprian",
+          "clm-ep73-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep73-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep73-affirms-bishop-eucharist",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bishop-authority-over-eucharist",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "proposition_id": "bishop-authority-over-eucharist",
+        "topic_id": "episcopal-authority",
+        "dimension_id": "bishop-liturgy",
+        "proposition_label": "Valid Eucharist requires the bishop or his delegate",
+        "polarity_family": "episcopal_eucharist",
+        "description": "Proper eucharistic celebration is administered by or authorized by the bishop.",
+        "notes": "Episcopal control of sacraments"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-affirms-bishop-eucharist",
+            "passage_id": "psg-cyprian-ep73-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Church-only baptism implies Church-only eucharist under episcopal authority."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-4",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.4",
+            "excerpt": "Paraphrase: If baptism could be given by heretics, they could also give the remission of sins. But since it is only in the Church that sins are remitted, baptism cannot be administered outside the Church. For there is one baptism which is appointed in the Catholic Church; and it is not possible that what is done outside should be counted valid for those who are within.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "One baptism in the one Church; heretical baptism invalid; no Spirit outside the Church"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-written-carthage",
+        "clm-ep73-affirms-apostolic-succession",
+        "clm-ep73-affirms-baptism-water",
+        "clm-ep73-affirms-episcopal-unity",
+        "clm-ep73-affirms-one-baptism",
+        "clm-ep73-affirms-ot-authority",
+        "clm-ep73-affirms-penance",
+        "clm-ep73-affirms-rebaptism",
+        "clm-ep73-affirms-rule-of-faith",
+        "clm-ep73-affirms-threefold-ministry",
+        "clm-ep73-affirms-trinitarian-baptism",
+        "clm-ep73-by-cyprian"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-4": [
+          "clm-ep73-affirms-baptism-water",
+          "clm-ep73-affirms-one-baptism",
+          "clm-ep73-affirms-rebaptism",
+          "clm-ep73-affirms-trinitarian-baptism",
+          "clm-ep73-by-cyprian",
+          "clm-ep73-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep73-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep73-affirms-episcopal-unity",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "episcopal-unity-grounds-church-unity",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "proposition_id": "episcopal-unity-grounds-church-unity",
+        "topic_id": "episcopal-authority",
+        "dimension_id": "episcopal-collegiality",
+        "proposition_label": "The unity of bishops grounds the unity of the Church",
+        "polarity_family": "episcopal_unity",
+        "description": "The Church is one because the episcopate is one; each bishop holds the whole of the one episcopate in solidum; to break with the bishop is to break with the Church; there is one altar and one bishop.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-affirms-episcopal-unity",
+            "passage_id": "psg-cyprian-ep73-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Truth established by the Lord and apostles; practice arose first — episcopal tradition."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-11",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.11",
+            "excerpt": "Paraphrase: What then shall we say of the tradition of certain persons who receive the baptism of heretics? Is tradition greater than truth? Stephen claims to follow tradition. But we answer: from the beginning this was the practice, established first by the Lord and then observed by the apostles. The practice arose first, the truth was before custom.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Truth over custom; apostolic precedent for rebaptism; response to Stephen's appeal to tradition"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-written-carthage",
+        "clm-ep73-affirms-apostolic-succession",
+        "clm-ep73-affirms-baptism-water",
+        "clm-ep73-affirms-bishop-eucharist",
+        "clm-ep73-affirms-one-baptism",
+        "clm-ep73-affirms-ot-authority",
+        "clm-ep73-affirms-penance",
+        "clm-ep73-affirms-rebaptism",
+        "clm-ep73-affirms-rule-of-faith",
+        "clm-ep73-affirms-threefold-ministry",
+        "clm-ep73-affirms-trinitarian-baptism",
+        "clm-ep73-by-cyprian"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-11": [
+          "clm-ep73-affirms-apostolic-succession",
+          "clm-ep73-affirms-threefold-ministry"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep73-affirms-one-baptism",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-effects-regeneration",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-effects-regeneration",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-regeneration",
+        "proposition_label": "Baptism effects spiritual regeneration",
+        "polarity_family": "baptism_regeneration",
+        "description": "Baptism is not merely symbolic but effects a new birth or regeneration of the recipient.",
+        "notes": "Baptismal regeneration"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-affirms-one-baptism",
+            "passage_id": "psg-cyprian-ep73-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "One baptism appointed in the Catholic Church — regeneration only within the Church."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-4",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.4",
+            "excerpt": "Paraphrase: If baptism could be given by heretics, they could also give the remission of sins. But since it is only in the Church that sins are remitted, baptism cannot be administered outside the Church. For there is one baptism which is appointed in the Catholic Church; and it is not possible that what is done outside should be counted valid for those who are within.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "One baptism in the one Church; heretical baptism invalid; no Spirit outside the Church"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-written-carthage",
+        "clm-ep73-affirms-apostolic-succession",
+        "clm-ep73-affirms-baptism-water",
+        "clm-ep73-affirms-bishop-eucharist",
+        "clm-ep73-affirms-episcopal-unity",
+        "clm-ep73-affirms-ot-authority",
+        "clm-ep73-affirms-penance",
+        "clm-ep73-affirms-rebaptism",
+        "clm-ep73-affirms-rule-of-faith",
+        "clm-ep73-affirms-threefold-ministry",
+        "clm-ep73-affirms-trinitarian-baptism",
+        "clm-ep73-by-cyprian"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-4": [
+          "clm-ep73-affirms-baptism-water",
+          "clm-ep73-affirms-bishop-eucharist",
+          "clm-ep73-affirms-rebaptism",
+          "clm-ep73-affirms-trinitarian-baptism",
+          "clm-ep73-by-cyprian",
+          "clm-ep73-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep73-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep73-affirms-ot-authority",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-affirms-ot-authority",
+            "passage_id": "psg-cyprian-ep73-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Return to divine tradition — head and origin includes OT foundation."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-21",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.21",
+            "excerpt": "Paraphrase: Nor ought custom which had crept in among some to prevent the truth from prevailing and conquering. For custom without truth is the antiquity of error. Let us return to the head and origin of divine tradition. For human error must cease.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Custom without truth is antiquity of error; appeal to divine tradition over mere practice"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-written-carthage",
+        "clm-ep73-affirms-apostolic-succession",
+        "clm-ep73-affirms-baptism-water",
+        "clm-ep73-affirms-bishop-eucharist",
+        "clm-ep73-affirms-episcopal-unity",
+        "clm-ep73-affirms-one-baptism",
+        "clm-ep73-affirms-penance",
+        "clm-ep73-affirms-rebaptism",
+        "clm-ep73-affirms-rule-of-faith",
+        "clm-ep73-affirms-threefold-ministry",
+        "clm-ep73-affirms-trinitarian-baptism",
+        "clm-ep73-by-cyprian"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-21": [
+          "clm-ep73-affirms-penance",
+          "clm-ep73-affirms-rule-of-faith"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep73-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep73-affirms-penance",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "post-baptismal-sin-forgiven-by-penance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "proposition_id": "post-baptismal-sin-forgiven-by-penance",
+        "topic_id": "penance-practice",
+        "dimension_id": "post-baptismal-penance",
+        "proposition_label": "Post-baptismal sin can be forgiven through penance",
+        "polarity_family": "post_baptismal_penance",
+        "description": "A second repentance after baptism is possible and administered through church discipline.",
+        "notes": "Penitential discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-affirms-penance",
+            "passage_id": "psg-cyprian-ep73-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Return to divine tradition includes penitential reconciliation."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-21",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.21",
+            "excerpt": "Paraphrase: Nor ought custom which had crept in among some to prevent the truth from prevailing and conquering. For custom without truth is the antiquity of error. Let us return to the head and origin of divine tradition. For human error must cease.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Custom without truth is antiquity of error; appeal to divine tradition over mere practice"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-written-carthage",
+        "clm-ep73-affirms-apostolic-succession",
+        "clm-ep73-affirms-baptism-water",
+        "clm-ep73-affirms-bishop-eucharist",
+        "clm-ep73-affirms-episcopal-unity",
+        "clm-ep73-affirms-one-baptism",
+        "clm-ep73-affirms-ot-authority",
+        "clm-ep73-affirms-rebaptism",
+        "clm-ep73-affirms-rule-of-faith",
+        "clm-ep73-affirms-threefold-ministry",
+        "clm-ep73-affirms-trinitarian-baptism",
+        "clm-ep73-by-cyprian"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-21": [
+          "clm-ep73-affirms-ot-authority",
+          "clm-ep73-affirms-rule-of-faith"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep73-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep73-affirms-rebaptism",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "heretic-baptism-is-invalid",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "proposition_id": "heretic-baptism-is-invalid",
+        "topic_id": "baptism-practice",
+        "dimension_id": "rebaptism-controversy",
+        "proposition_label": "Baptism administered by heretics or schismatics is invalid and must be repeated",
+        "polarity_family": "rebaptism",
+        "description": "Baptism conferred outside the one Church by heretics or schismatics is no baptism at all; converts from heretical groups must be baptized anew because the Holy Spirit operates only within the Church. Held by Cyprian and the African councils; opposed by Stephen of Rome who accepted heretical baptism if in trinitarian form.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-affirms-rebaptism",
+            "passage_id": "psg-cyprian-ep73-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "One baptism in the Catholic Church only; heretical baptism cannot be valid."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-4",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.4",
+            "excerpt": "Paraphrase: If baptism could be given by heretics, they could also give the remission of sins. But since it is only in the Church that sins are remitted, baptism cannot be administered outside the Church. For there is one baptism which is appointed in the Catholic Church; and it is not possible that what is done outside should be counted valid for those who are within.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "One baptism in the one Church; heretical baptism invalid; no Spirit outside the Church"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-written-carthage",
+        "clm-ep73-affirms-apostolic-succession",
+        "clm-ep73-affirms-baptism-water",
+        "clm-ep73-affirms-bishop-eucharist",
+        "clm-ep73-affirms-episcopal-unity",
+        "clm-ep73-affirms-one-baptism",
+        "clm-ep73-affirms-ot-authority",
+        "clm-ep73-affirms-penance",
+        "clm-ep73-affirms-rule-of-faith",
+        "clm-ep73-affirms-threefold-ministry",
+        "clm-ep73-affirms-trinitarian-baptism",
+        "clm-ep73-by-cyprian"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-4": [
+          "clm-ep73-affirms-baptism-water",
+          "clm-ep73-affirms-bishop-eucharist",
+          "clm-ep73-affirms-one-baptism",
+          "clm-ep73-affirms-trinitarian-baptism",
+          "clm-ep73-by-cyprian",
+          "clm-ep73-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep73-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep73-affirms-rule-of-faith",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-affirms-rule-of-faith",
+            "passage_id": "psg-cyprian-ep73-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Return to the head and origin of divine tradition."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-21",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.21",
+            "excerpt": "Paraphrase: Nor ought custom which had crept in among some to prevent the truth from prevailing and conquering. For custom without truth is the antiquity of error. Let us return to the head and origin of divine tradition. For human error must cease.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Custom without truth is antiquity of error; appeal to divine tradition over mere practice"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-written-carthage",
+        "clm-ep73-affirms-apostolic-succession",
+        "clm-ep73-affirms-baptism-water",
+        "clm-ep73-affirms-bishop-eucharist",
+        "clm-ep73-affirms-episcopal-unity",
+        "clm-ep73-affirms-one-baptism",
+        "clm-ep73-affirms-ot-authority",
+        "clm-ep73-affirms-penance",
+        "clm-ep73-affirms-rebaptism",
+        "clm-ep73-affirms-threefold-ministry",
+        "clm-ep73-affirms-trinitarian-baptism",
+        "clm-ep73-by-cyprian"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-21": [
+          "clm-ep73-affirms-ot-authority",
+          "clm-ep73-affirms-penance"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep73-affirms-threefold-ministry",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "threefold-ministry-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "proposition_id": "threefold-ministry-required",
+        "topic_id": "church-order",
+        "dimension_id": "bishop-presbyter-deacon",
+        "proposition_label": "Valid church order requires bishop, presbyter, and deacon",
+        "polarity_family": "threefold_ministry",
+        "description": "The threefold ministry of bishop, presbyter, and deacon is required for valid church structure.",
+        "notes": "Church order"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-affirms-threefold-ministry",
+            "passage_id": "psg-cyprian-ep73-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Episcopal authority to determine baptismal validity presupposes threefold ministry."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-11",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.11",
+            "excerpt": "Paraphrase: What then shall we say of the tradition of certain persons who receive the baptism of heretics? Is tradition greater than truth? Stephen claims to follow tradition. But we answer: from the beginning this was the practice, established first by the Lord and then observed by the apostles. The practice arose first, the truth was before custom.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Truth over custom; apostolic precedent for rebaptism; response to Stephen's appeal to tradition"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-written-carthage",
+        "clm-ep73-affirms-apostolic-succession",
+        "clm-ep73-affirms-baptism-water",
+        "clm-ep73-affirms-bishop-eucharist",
+        "clm-ep73-affirms-episcopal-unity",
+        "clm-ep73-affirms-one-baptism",
+        "clm-ep73-affirms-ot-authority",
+        "clm-ep73-affirms-penance",
+        "clm-ep73-affirms-rebaptism",
+        "clm-ep73-affirms-rule-of-faith",
+        "clm-ep73-affirms-trinitarian-baptism",
+        "clm-ep73-by-cyprian"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-11": [
+          "clm-ep73-affirms-apostolic-succession",
+          "clm-ep73-affirms-episcopal-unity"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep73-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep73-affirms-trinitarian-baptism",
+        "subject_type": "work",
+        "subject_id": "epistula-73-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-administered-in-trinitarian-name",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-73-cyprian",
+        "title_display": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+        "title_original": "Epistula LXXIII",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 256 to Bishop Jubaianus defending the rebaptism of heretics; argues that there is no baptism outside the Church because the Holy Spirit is absent from heretical communities; the one baptism belongs only to the one Church; extensively cited at the Council of Carthage 256; opposed by Pope Stephen I who held that heretical baptism in trinitarian form was valid."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-administered-in-trinitarian-name",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-formula",
+        "proposition_label": "Baptism is administered in the Trinitarian name of Father, Son, and Holy Spirit",
+        "polarity_family": "trinitarian_baptism",
+        "description": "Baptism uses the explicit Trinitarian formula of Father, Son, and Holy Spirit as the form of the sacrament.",
+        "notes": "Trinitarian baptismal formula"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep73-affirms-trinitarian-baptism",
+            "passage_id": "psg-cyprian-ep73-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "One baptism in the Catholic Church implies trinitarian form."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep73-4",
+            "source_id": "src-cyprian-epistula-73",
+            "locator_type": "source_ref",
+            "locator": "Ep. 73.4",
+            "excerpt": "Paraphrase: If baptism could be given by heretics, they could also give the remission of sins. But since it is only in the Church that sins are remitted, baptism cannot be administered outside the Church. For there is one baptism which is appointed in the Catholic Church; and it is not possible that what is done outside should be counted valid for those who are within.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "One baptism in the one Church; heretical baptism invalid; no Spirit outside the Church"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-73",
+            "work_id": "epistula-73-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 73 (Letter to Jubaianus on Rebaptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050673.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter defending rebaptism of heretics; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep73-written-carthage",
+        "clm-ep73-affirms-apostolic-succession",
+        "clm-ep73-affirms-baptism-water",
+        "clm-ep73-affirms-bishop-eucharist",
+        "clm-ep73-affirms-episcopal-unity",
+        "clm-ep73-affirms-one-baptism",
+        "clm-ep73-affirms-ot-authority",
+        "clm-ep73-affirms-penance",
+        "clm-ep73-affirms-rebaptism",
+        "clm-ep73-affirms-rule-of-faith",
+        "clm-ep73-affirms-threefold-ministry",
+        "clm-ep73-by-cyprian"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep73-4": [
+          "clm-ep73-affirms-baptism-water",
+          "clm-ep73-affirms-bishop-eucharist",
+          "clm-ep73-affirms-one-baptism",
+          "clm-ep73-affirms-rebaptism",
+          "clm-ep73-by-cyprian",
+          "clm-ep73-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep73-4"
+      ]
+    }
+  ]
+}

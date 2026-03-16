@@ -1,0 +1,2345 @@
+{
+  "batch_id": "batch-146",
+  "queue": "1",
+  "focus": "quis-dives-salvetur; callistus-i; de-carne-christi; ambrose-of-alexandria; gregory-thaumaturgus",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-qds-by-clement",
+        "subject_type": "work",
+        "subject_id": "quis-dives-salvetur",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "clement-of-alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "195",
+        "year_end": "215",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "campaign4",
+        "updated_at": "2025-01-01"
+      },
+      "subject_entity": {
+        "work_id": "quis-dives-salvetur",
+        "title_display": "Quis Dives Salvetur",
+        "title_original": "Τίς ὁ σῳζόμενος πλούσιος",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Clement of Alexandria's homily c. 195–215 AD on Mark 10:17–31 (the rich young ruler). Argues that wealth is not intrinsically evil but must be used through almsgiving as stewards of God's gifts; includes the story of John restoring a lapsed youth (ch. 42), supporting post-baptismal repentance."
+      },
+      "object_entity": {
+        "person_id": "clement-of-alexandria",
+        "person_label": "Clement of Alexandria",
+        "name_alt": "Titus Flavius Clemens",
+        "name_native": "Κλήμης Ἀλεξανδρεύς",
+        "birth_year_display": "c. 150",
+        "death_year_display": "c. 215",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria; author of Protrepticus, Paedagogus, and Stromateis; synthesized Christian faith with Greek philosophy; key witness for Alexandrian baptismal theology, eucharistic practice, asceticism, and apostolic tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-qds-by-clement",
+            "passage_id": "psg-clement-qds-11-14",
+            "evidence_role": "supports",
+            "support_aspect": "attribution",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Work is attributed to Clement of Alexandria in manuscript tradition and Eusebius HE."
+          },
+          "passage": {
+            "passage_id": "psg-clement-qds-11-14",
+            "source_id": "src-quis-dives-salvetur",
+            "locator_type": "source_ref",
+            "locator": "11-14",
+            "excerpt": "The renunciation of wealth is not about physically disposing of money but about stripping the soul of its passions. Wealth is a tool; rightly used it becomes an instrument for doing good and gaining friends who will intercede for you.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-quis-dives-salvetur",
+            "work_id": "quis-dives-salvetur",
+            "source_kind": "web_page",
+            "title": "Quis Dives Salvetur (Who is the Rich Man that shall be saved?)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "",
+            "publisher": "New Advent",
+            "url": "https://www.newadvent.org/fathers/0207.htm",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "English translation by W. Wilson, ANF vol. 2."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-qds-affirms-almsgiving",
+        "clm-qds-affirms-penance",
+        "clm-qds-written-at-alexandria"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-clement-qds-11-14": [
+          "clm-qds-affirms-almsgiving",
+          "clm-qds-written-at-alexandria"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-qds-written-at-alexandria",
+        "subject_type": "work",
+        "subject_id": "quis-dives-salvetur",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "195",
+        "year_end": "215",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "campaign4",
+        "updated_at": "2025-01-01"
+      },
+      "subject_entity": {
+        "work_id": "quis-dives-salvetur",
+        "title_display": "Quis Dives Salvetur",
+        "title_original": "Τίς ὁ σῳζόμενος πλούσιος",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Clement of Alexandria's homily c. 195–215 AD on Mark 10:17–31 (the rich young ruler). Argues that wealth is not intrinsically evil but must be used through almsgiving as stewards of God's gifts; includes the story of John restoring a lapsed youth (ch. 42), supporting post-baptismal repentance."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-qds-written-at-alexandria",
+            "passage_id": "psg-clement-qds-11-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from quis-dives-salvetur contextualizes its composition at alexandria."
+          },
+          "passage": {
+            "passage_id": "psg-clement-qds-11-14",
+            "source_id": "src-quis-dives-salvetur",
+            "locator_type": "source_ref",
+            "locator": "11-14",
+            "excerpt": "The renunciation of wealth is not about physically disposing of money but about stripping the soul of its passions. Wealth is a tool; rightly used it becomes an instrument for doing good and gaining friends who will intercede for you.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-quis-dives-salvetur",
+            "work_id": "quis-dives-salvetur",
+            "source_kind": "web_page",
+            "title": "Quis Dives Salvetur (Who is the Rich Man that shall be saved?)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "",
+            "publisher": "New Advent",
+            "url": "https://www.newadvent.org/fathers/0207.htm",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "English translation by W. Wilson, ANF vol. 2."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-qds-affirms-almsgiving",
+        "clm-qds-affirms-penance",
+        "clm-qds-by-clement"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-clement-qds-11-14": [
+          "clm-qds-affirms-almsgiving",
+          "clm-qds-by-clement"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-clement-qds-11-14"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-qds-affirms-almsgiving",
+        "subject_type": "work",
+        "subject_id": "quis-dives-salvetur",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "almsgiving-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "195",
+        "year_end": "215",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign4",
+        "updated_at": "2025-01-01"
+      },
+      "subject_entity": {
+        "work_id": "quis-dives-salvetur",
+        "title_display": "Quis Dives Salvetur",
+        "title_original": "Τίς ὁ σῳζόμενος πλούσιος",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Clement of Alexandria's homily c. 195–215 AD on Mark 10:17–31 (the rich young ruler). Argues that wealth is not intrinsically evil but must be used through almsgiving as stewards of God's gifts; includes the story of John restoring a lapsed youth (ch. 42), supporting post-baptismal repentance."
+      },
+      "object_entity": {
+        "proposition_id": "almsgiving-is-required",
+        "topic_id": "social-ethics",
+        "dimension_id": "almsgiving-required",
+        "proposition_label": "Almsgiving is Required",
+        "polarity_family": "",
+        "description": "Christians are obligated to give alms to the poor as stewards of God's gifts; wealth deployed through giving redeems sins and fulfills the commandment of love.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-qds-affirms-almsgiving",
+            "passage_id": "psg-clement-qds-11-14",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Wealth must be used rightly; detachment of soul, not literal poverty, is Clement's point."
+          },
+          "passage": {
+            "passage_id": "psg-clement-qds-11-14",
+            "source_id": "src-quis-dives-salvetur",
+            "locator_type": "source_ref",
+            "locator": "11-14",
+            "excerpt": "The renunciation of wealth is not about physically disposing of money but about stripping the soul of its passions. Wealth is a tool; rightly used it becomes an instrument for doing good and gaining friends who will intercede for you.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-quis-dives-salvetur",
+            "work_id": "quis-dives-salvetur",
+            "source_kind": "web_page",
+            "title": "Quis Dives Salvetur (Who is the Rich Man that shall be saved?)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "",
+            "publisher": "New Advent",
+            "url": "https://www.newadvent.org/fathers/0207.htm",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "English translation by W. Wilson, ANF vol. 2."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-qds-affirms-almsgiving",
+            "passage_id": "psg-clement-qds-32-34",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Direct instruction to give alms; describes almsgiving as redemptive and as fulfilling the love commandment."
+          },
+          "passage": {
+            "passage_id": "psg-clement-qds-32-34",
+            "source_id": "src-quis-dives-salvetur",
+            "locator_type": "source_ref",
+            "locator": "32-34",
+            "excerpt": "God has given earthly wealth to the rich so that it may be distributed to those in need. Almsgiving redeems sins and enlists the prayers of the poor on one's behalf. Love of neighbor, expressed through giving, is the second great commandment.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-quis-dives-salvetur",
+            "work_id": "quis-dives-salvetur",
+            "source_kind": "web_page",
+            "title": "Quis Dives Salvetur (Who is the Rich Man that shall be saved?)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "",
+            "publisher": "New Advent",
+            "url": "https://www.newadvent.org/fathers/0207.htm",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "English translation by W. Wilson, ANF vol. 2."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-qds-affirms-penance",
+        "clm-qds-by-clement",
+        "clm-qds-written-at-alexandria"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-clement-qds-11-14": [
+          "clm-qds-by-clement",
+          "clm-qds-written-at-alexandria"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-qds-affirms-penance",
+        "subject_type": "work",
+        "subject_id": "quis-dives-salvetur",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "post-baptismal-sin-forgiven-by-penance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "195",
+        "year_end": "215",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign4",
+        "updated_at": "2025-01-01"
+      },
+      "subject_entity": {
+        "work_id": "quis-dives-salvetur",
+        "title_display": "Quis Dives Salvetur",
+        "title_original": "Τίς ὁ σῳζόμενος πλούσιος",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Clement of Alexandria's homily c. 195–215 AD on Mark 10:17–31 (the rich young ruler). Argues that wealth is not intrinsically evil but must be used through almsgiving as stewards of God's gifts; includes the story of John restoring a lapsed youth (ch. 42), supporting post-baptismal repentance."
+      },
+      "object_entity": {
+        "proposition_id": "post-baptismal-sin-forgiven-by-penance",
+        "topic_id": "penance-practice",
+        "dimension_id": "post-baptismal-penance",
+        "proposition_label": "Post-baptismal sin can be forgiven through penance",
+        "polarity_family": "post_baptismal_penance",
+        "description": "A second repentance after baptism is possible and administered through church discipline.",
+        "notes": "Penitential discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-qds-affirms-penance",
+            "passage_id": "psg-clement-qds-42",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "John's restoration of the lapsed youth directly illustrates post-baptismal repentance and forgiveness."
+          },
+          "passage": {
+            "passage_id": "psg-clement-qds-42",
+            "source_id": "src-quis-dives-salvetur",
+            "locator_type": "source_ref",
+            "locator": "42",
+            "excerpt": "John the Apostle, returning to Ephesus after his exile, sought out a young man who had lapsed into banditry. He pursued him, restored him to the church, and accepted him back through repentance — showing that post-baptismal sin is not beyond forgiveness.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-quis-dives-salvetur",
+            "work_id": "quis-dives-salvetur",
+            "source_kind": "web_page",
+            "title": "Quis Dives Salvetur (Who is the Rich Man that shall be saved?)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "",
+            "publisher": "New Advent",
+            "url": "https://www.newadvent.org/fathers/0207.htm",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "English translation by W. Wilson, ANF vol. 2."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-qds-affirms-almsgiving",
+        "clm-qds-by-clement",
+        "clm-qds-written-at-alexandria"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {},
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-callistus-person-affirms-penance",
+        "subject_type": "person",
+        "subject_id": "callistus-i",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "post-baptismal-sin-forgiven-by-penance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "217",
+        "year_end": "222",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "callistus-i",
+        "person_label": "Callistus I",
+        "name_alt": "Callixtus I; Pope Callistus",
+        "name_native": "Κάλλιστος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 222",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 217–222; former slave who rose to become deacon under Zephyrinus and then pope; extended absolution to Christians who had committed grave sins after penance, provoking the schism of Hippolytus; accused by Hippolytus of Sabellian sympathies."
+      },
+      "object_entity": {
+        "proposition_id": "post-baptismal-sin-forgiven-by-penance",
+        "topic_id": "penance-practice",
+        "dimension_id": "post-baptismal-penance",
+        "proposition_label": "Post-baptismal sin can be forgiven through penance",
+        "polarity_family": "post_baptismal_penance",
+        "description": "A second repentance after baptism is possible and administered through church discipline.",
+        "notes": "Penitential discipline"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-callistus-person-affirms-penance",
+            "passage_id": "psg-hippolytus-ref-9-11-12",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Callistus extended absolution to grave sinners using parables of the tares and Noah's ark."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-11-12",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.11-12",
+            "excerpt": "Paraphrase: Callistus alleged that the parable of the tares growing together with the wheat was spoken in reference to the Church: sinners should remain in the Church. He also affirmed that the ark of Noah was a figure of the Church, in which were dogs, hawks, and other unclean animals — so must the Church tolerate sinners.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Callistus defends leniency toward sinners using parables of tares and Noah's ark; penitential controversy"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-callistus-member-roman-church",
+        "clm-callistus-bishop-rome",
+        "clm-callistus-in-schism"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-11-12": [
+          "clm-hippolytus-callistus-schism-year",
+          "clm-hippolytus-teacher-of-novatian",
+          "clm-refutation-affirms-penance"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-11-12"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-callistus-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "callistus-i",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "217",
+        "year_end": "222",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "callistus-i",
+        "person_label": "Callistus I",
+        "name_alt": "Callixtus I; Pope Callistus",
+        "name_native": "Κάλλιστος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 222",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 217–222; former slave who rose to become deacon under Zephyrinus and then pope; extended absolution to Christians who had committed grave sins after penance, provoking the schism of Hippolytus; accused by Hippolytus of Sabellian sympathies."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-callistus-bishop-rome",
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Hippolytus identifies Callistus as bishop of Rome who succeeded Zephyrinus."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.7",
+            "excerpt": "Paraphrase: Callistus, having been appointed over the cemetery by Zephyrinus, brought many into his following. He was the first to invent the device of conniving at the sensual pleasures of men, saying that all men had their sins forgiven by himself. For he even permitted women of rank, if they were unmarried and burned with lust, to have a companion of the rank of slave or freedman.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus attacks Callistus for moral laxity; permitting marriages between social classes; forgiving grave sins"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-callistus-member-roman-church",
+        "clm-callistus-in-schism",
+        "clm-callistus-person-affirms-penance"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-7": [
+          "clm-callistus-in-schism",
+          "clm-callistus-member-roman-church",
+          "clm-hippolytus-callistus-schism-at-rome",
+          "clm-hippolytus-in-schism",
+          "clm-hippolytus-rival-bishop-rome",
+          "clm-hippolytus-teacher-of-novatian",
+          "clm-refutation-affirms-rule-of-faith",
+          "clm-refutation-affirms-succession",
+          "clm-refutation-by-hippolytus",
+          "clm-refutation-written-rome",
+          "clm-zephyrinus-in-schism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-7",
+        "PARAPHRASE_OMISSION:psg-hippolytus-ref-9-7:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-callistus-in-schism",
+        "subject_type": "person",
+        "subject_id": "callistus-i",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "hippolytus-callistus-schism",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "217",
+        "year_end": "222",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "callistus-i",
+        "person_label": "Callistus I",
+        "name_alt": "Callixtus I; Pope Callistus",
+        "name_native": "Κάλλιστος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 222",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 217–222; former slave who rose to become deacon under Zephyrinus and then pope; extended absolution to Christians who had committed grave sins after penance, provoking the schism of Hippolytus; accused by Hippolytus of Sabellian sympathies."
+      },
+      "object_entity": {
+        "event_id": "hippolytus-callistus-schism",
+        "event_label": "Schism of Hippolytus and Callistus",
+        "event_type": "schism",
+        "event_kind": "simple",
+        "notes": "Hippolytus set himself up as rival bishop of Rome c. 217 after the election of Callistus I, whom he accused of modalism and moral laxity; sometimes called the first antipope; the schism persisted through the pontificates of Urban I and Pontian until reconciliation in Sardinian exile c. 235."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-callistus-in-schism",
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Callistus's policies provoked Hippolytus's schism."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.7",
+            "excerpt": "Paraphrase: Callistus, having been appointed over the cemetery by Zephyrinus, brought many into his following. He was the first to invent the device of conniving at the sensual pleasures of men, saying that all men had their sins forgiven by himself. For he even permitted women of rank, if they were unmarried and burned with lust, to have a companion of the rank of slave or freedman.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus attacks Callistus for moral laxity; permitting marriages between social classes; forgiving grave sins"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-callistus-member-roman-church",
+        "clm-callistus-bishop-rome",
+        "clm-callistus-person-affirms-penance"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-7": [
+          "clm-callistus-bishop-rome",
+          "clm-callistus-member-roman-church",
+          "clm-hippolytus-callistus-schism-at-rome",
+          "clm-hippolytus-in-schism",
+          "clm-hippolytus-rival-bishop-rome",
+          "clm-hippolytus-teacher-of-novatian",
+          "clm-refutation-affirms-rule-of-faith",
+          "clm-refutation-affirms-succession",
+          "clm-refutation-by-hippolytus",
+          "clm-refutation-written-rome",
+          "clm-zephyrinus-in-schism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-callistus-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "callistus-i",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "199",
+        "year_end": "222",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "callistus-i",
+        "person_label": "Callistus I",
+        "name_alt": "Callixtus I; Pope Callistus",
+        "name_native": "Κάλλιστος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 222",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 217–222; former slave who rose to become deacon under Zephyrinus and then pope; extended absolution to Christians who had committed grave sins after penance, provoking the schism of Hippolytus; accused by Hippolytus of Sabellian sympathies."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-callistus-member-roman-church",
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Callistus active in Roman church as deacon under Zephyrinus and then bishop."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.7",
+            "excerpt": "Paraphrase: Callistus, having been appointed over the cemetery by Zephyrinus, brought many into his following. He was the first to invent the device of conniving at the sensual pleasures of men, saying that all men had their sins forgiven by himself. For he even permitted women of rank, if they were unmarried and burned with lust, to have a companion of the rank of slave or freedman.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus attacks Callistus for moral laxity; permitting marriages between social classes; forgiving grave sins"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-callistus-bishop-rome",
+        "clm-callistus-in-schism",
+        "clm-callistus-person-affirms-penance"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-7": [
+          "clm-callistus-bishop-rome",
+          "clm-callistus-in-schism",
+          "clm-hippolytus-callistus-schism-at-rome",
+          "clm-hippolytus-in-schism",
+          "clm-hippolytus-rival-bishop-rome",
+          "clm-hippolytus-teacher-of-novatian",
+          "clm-refutation-affirms-rule-of-faith",
+          "clm-refutation-affirms-succession",
+          "clm-refutation-by-hippolytus",
+          "clm-refutation-written-rome",
+          "clm-zephyrinus-in-schism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-7",
+        "PARAPHRASE_OMISSION:psg-hippolytus-ref-9-7:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-carne-by-tertullian",
+        "subject_type": "work",
+        "subject_id": "de-carne-christi",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "tertullian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-carne-christi",
+        "title_display": "De Carne Christi",
+        "title_original": "De Carne Christi",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 206-212 defending the reality of Christ's incarnation against docetists and Marcion; argues that Christ took real human flesh from the virgin Mary."
+      },
+      "object_entity": {
+        "person_id": "tertullian",
+        "person_label": "Tertullian",
+        "name_alt": "Quintus Septimius Florens Tertullianus",
+        "name_native": "Tertullianus",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 220",
+        "person_kind": "individual",
+        "notes": "First major Latin Christian author; active in Carthage c. 195–220. Wrote at least 31 works spanning apologetics, anti-heretical polemic, and moral discipline. Coined 'trinitas' and 'tres personae una substantia'. Defender of apostolic succession, rule of faith, incarnation, and bodily resurrection. Later attracted to Montanist rigorism c. 207; teacher of Cyprian by doctrinal influence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-carne-by-tertullian",
+            "passage_id": "psg-tertullian-de-carne-5",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-carne-5",
+            "source_id": "src-tertullian-de-carne",
+            "locator_type": "source_ref",
+            "locator": "De Carne 5",
+            "excerpt": "The Son of God was crucified; I am not ashamed because men must needs be ashamed of it. And the Son of God died; it is by all means to be believed because it is absurd. And he was buried and rose again; the fact is certain because it is impossible. But how will all this be true in him, if he was not himself true — if he had not truly in himself that which might be crucified, might die, might be buried and might rise again? This is the flesh suffused with blood, built up with bones, interwoven with nerves, entwined with veins.",
+            "language": "English",
+            "passage_year": "210",
+            "url_override": "",
+            "notes": "Certum est quia impossibile; defense of the reality of Christ's flesh and incarnation; anti-docetist"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-carne",
+            "work_id": "de-carne-christi",
+            "source_kind": "primary_text",
+            "title": "De Carne Christi",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 206-212",
+            "year_start": "206",
+            "year_end": "212",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0315.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's defense of the incarnation; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-carne-affirms-incarnation",
+        "clm-de-carne-affirms-virgin-birth",
+        "clm-de-carne-written-carthage"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-tertullian-de-carne-5": [
+          "clm-de-carne-affirms-incarnation",
+          "clm-de-carne-affirms-virgin-birth",
+          "clm-de-carne-written-carthage",
+          "clm-tertullian-member-montanists"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-carne-written-carthage",
+        "subject_type": "work",
+        "subject_id": "de-carne-christi",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "206",
+        "year_end": "212",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-carne-christi",
+        "title_display": "De Carne Christi",
+        "title_original": "De Carne Christi",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 206-212 defending the reality of Christ's incarnation against docetists and Marcion; argues that Christ took real human flesh from the virgin Mary."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-carne-written-carthage",
+            "passage_id": "psg-tertullian-de-carne-5",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from de-carne-christi contextualizes its composition at carthage."
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-carne-5",
+            "source_id": "src-tertullian-de-carne",
+            "locator_type": "source_ref",
+            "locator": "De Carne 5",
+            "excerpt": "The Son of God was crucified; I am not ashamed because men must needs be ashamed of it. And the Son of God died; it is by all means to be believed because it is absurd. And he was buried and rose again; the fact is certain because it is impossible. But how will all this be true in him, if he was not himself true — if he had not truly in himself that which might be crucified, might die, might be buried and might rise again? This is the flesh suffused with blood, built up with bones, interwoven with nerves, entwined with veins.",
+            "language": "English",
+            "passage_year": "210",
+            "url_override": "",
+            "notes": "Certum est quia impossibile; defense of the reality of Christ's flesh and incarnation; anti-docetist"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-carne",
+            "work_id": "de-carne-christi",
+            "source_kind": "primary_text",
+            "title": "De Carne Christi",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 206-212",
+            "year_start": "206",
+            "year_end": "212",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0315.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's defense of the incarnation; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-carne-affirms-incarnation",
+        "clm-de-carne-affirms-virgin-birth",
+        "clm-de-carne-by-tertullian"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-tertullian-de-carne-5": [
+          "clm-de-carne-affirms-incarnation",
+          "clm-de-carne-affirms-virgin-birth",
+          "clm-de-carne-by-tertullian",
+          "clm-tertullian-member-montanists"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tertullian-de-carne-5"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-carne-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "de-carne-christi",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "206",
+        "year_end": "212",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-carne-christi",
+        "title_display": "De Carne Christi",
+        "title_original": "De Carne Christi",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 206-212 defending the reality of Christ's incarnation against docetists and Marcion; argues that Christ took real human flesh from the virgin Mary."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-carne-affirms-incarnation",
+            "passage_id": "psg-tertullian-de-carne-5",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "Certum quia impossibile; flesh suffused with blood, bones, nerves"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-carne-5",
+            "source_id": "src-tertullian-de-carne",
+            "locator_type": "source_ref",
+            "locator": "De Carne 5",
+            "excerpt": "The Son of God was crucified; I am not ashamed because men must needs be ashamed of it. And the Son of God died; it is by all means to be believed because it is absurd. And he was buried and rose again; the fact is certain because it is impossible. But how will all this be true in him, if he was not himself true — if he had not truly in himself that which might be crucified, might die, might be buried and might rise again? This is the flesh suffused with blood, built up with bones, interwoven with nerves, entwined with veins.",
+            "language": "English",
+            "passage_year": "210",
+            "url_override": "",
+            "notes": "Certum est quia impossibile; defense of the reality of Christ's flesh and incarnation; anti-docetist"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-carne",
+            "work_id": "de-carne-christi",
+            "source_kind": "primary_text",
+            "title": "De Carne Christi",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 206-212",
+            "year_start": "206",
+            "year_end": "212",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0315.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's defense of the incarnation; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-carne-affirms-virgin-birth",
+        "clm-de-carne-written-carthage",
+        "clm-de-carne-by-tertullian"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-tertullian-de-carne-5": [
+          "clm-de-carne-affirms-virgin-birth",
+          "clm-de-carne-by-tertullian",
+          "clm-de-carne-written-carthage",
+          "clm-tertullian-member-montanists"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-carne-affirms-virgin-birth",
+        "subject_type": "work",
+        "subject_id": "de-carne-christi",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "206",
+        "year_end": "212",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-carne-christi",
+        "title_display": "De Carne Christi",
+        "title_original": "De Carne Christi",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 206-212 defending the reality of Christ's incarnation against docetists and Marcion; argues that Christ took real human flesh from the virgin Mary."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-carne-affirms-virgin-birth",
+            "passage_id": "psg-tertullian-de-carne-5",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Implies true birth from a woman via real flesh; focus is anti-docetist"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-carne-5",
+            "source_id": "src-tertullian-de-carne",
+            "locator_type": "source_ref",
+            "locator": "De Carne 5",
+            "excerpt": "The Son of God was crucified; I am not ashamed because men must needs be ashamed of it. And the Son of God died; it is by all means to be believed because it is absurd. And he was buried and rose again; the fact is certain because it is impossible. But how will all this be true in him, if he was not himself true — if he had not truly in himself that which might be crucified, might die, might be buried and might rise again? This is the flesh suffused with blood, built up with bones, interwoven with nerves, entwined with veins.",
+            "language": "English",
+            "passage_year": "210",
+            "url_override": "",
+            "notes": "Certum est quia impossibile; defense of the reality of Christ's flesh and incarnation; anti-docetist"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-carne",
+            "work_id": "de-carne-christi",
+            "source_kind": "primary_text",
+            "title": "De Carne Christi",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 206-212",
+            "year_start": "206",
+            "year_end": "212",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0315.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's defense of the incarnation; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-carne-affirms-incarnation",
+        "clm-de-carne-written-carthage",
+        "clm-de-carne-by-tertullian"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-tertullian-de-carne-5": [
+          "clm-de-carne-affirms-incarnation",
+          "clm-de-carne-by-tertullian",
+          "clm-de-carne-written-carthage",
+          "clm-tertullian-member-montanists"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ambrose-alex-active-alexandria",
+        "subject_type": "person",
+        "subject_id": "ambrose-of-alexandria",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "210",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ambrose-of-alexandria",
+        "person_label": "Ambrose of Alexandria",
+        "name_alt": "Ambrose",
+        "name_native": "Ἀμβρόσιος",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 250",
+        "person_kind": "individual",
+        "notes": "Wealthy Alexandrian convert from Valentinianism; became Origen's patron and literary sponsor, funding scribes and secretaries for his massive literary output; deacon of the church."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ambrose-alex-active-alexandria",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Eusebius mentions Origen's patron network."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ambrose-alex-member-alexandrian",
+        "clm-ambrose-alex-active-rome",
+        "clm-origen-coworker-ambrose"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ambrose-alex-active-rome",
+        "subject_type": "person",
+        "subject_id": "ambrose-of-alexandria",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ambrose-of-alexandria",
+        "person_label": "Ambrose of Alexandria",
+        "name_alt": "Ambrose",
+        "name_native": "Ἀμβρόσιος",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 250",
+        "person_kind": "individual",
+        "notes": "Wealthy Alexandrian convert from Valentinianism; became Origen's patron and literary sponsor, funding scribes and secretaries for his massive literary output; deacon of the church."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ambrose-alex-active-rome",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions ambrose-of-alexandria or rome."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ambrose-alex-active-alexandria",
+        "clm-ambrose-alex-member-alexandrian",
+        "clm-origen-coworker-ambrose"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-19:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ambrose-alex-member-alexandrian",
+        "subject_type": "person",
+        "subject_id": "ambrose-of-alexandria",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "alexandrian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "210",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ambrose-of-alexandria",
+        "person_label": "Ambrose of Alexandria",
+        "name_alt": "Ambrose",
+        "name_native": "Ἀμβρόσιος",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 250",
+        "person_kind": "individual",
+        "notes": "Wealthy Alexandrian convert from Valentinianism; became Origen's patron and literary sponsor, funding scribes and secretaries for his massive literary output; deacon of the church."
+      },
+      "object_entity": {
+        "group_id": "alexandrian-church",
+        "group_label": "Church in Alexandria",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Alexandria; home of the Catechetical School; major center of Greek-speaking Christianity from the late first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ambrose-alex-member-alexandrian",
+            "passage_id": "psg-eusebius-he-6-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Eusebius describes the Alexandrian Christian milieu."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-3",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.3",
+            "excerpt": "Paraphrase: Origen, while still very young, succeeded Clement as head of the Catechetical School in Alexandria; so many came to him, both men and women, that a multitude of heretics and not a few of the most distinguished philosophers attended his instruction; he led many to the faith and some to martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's early leadership of the Catechetical School"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ambrose-alex-active-alexandria",
+        "clm-ambrose-alex-active-rome",
+        "clm-origen-coworker-ambrose"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-6-3": [
+          "clm-comjohn-written-at-alexandria",
+          "clm-demetrius-bishop-of-alexandria",
+          "clm-demetrius-coworker-origen",
+          "clm-demetrius-member-alexandrian",
+          "clm-demetrius-teacher-of-origen",
+          "clm-deprincipiis-written-at-alexandria",
+          "clm-dionysius-alex-bishop-of-alexandria",
+          "clm-dionysius-alex-member-alexandrian",
+          "clm-heraclas-bishop-of-alexandria",
+          "clm-heraclas-coworker-origen",
+          "clm-heraclas-member-alexandrian",
+          "clm-origen-teacher-of-dionysius",
+          "clm-origen-teacher-of-heraclas"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-3",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-3:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-origen-coworker-ambrose",
+        "subject_type": "person",
+        "subject_id": "ambrose-of-alexandria",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "origen-of-alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ambrose-of-alexandria",
+        "person_label": "Ambrose of Alexandria",
+        "name_alt": "Ambrose",
+        "name_native": "Ἀμβρόσιος",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 250",
+        "person_kind": "individual",
+        "notes": "Wealthy Alexandrian convert from Valentinianism; became Origen's patron and literary sponsor, funding scribes and secretaries for his massive literary output; deacon of the church."
+      },
+      "object_entity": {
+        "person_id": "origen-of-alexandria",
+        "person_label": "Origen of Alexandria",
+        "name_alt": "Origen, Adamantius",
+        "name_native": "Ὠριγένης",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Leading Alexandrian theologian and biblical scholar; student of Clement of Alexandria and eventual head of the Catechetical School. Prolific author covering exegesis, apologetics, and systematic theology. Active in Alexandria (c. 202–232) then Caesarea."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-origen-coworker-ambrose",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ambrose-alex-active-alexandria",
+        "clm-ambrose-alex-member-alexandrian",
+        "clm-ambrose-alex-active-rome"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gregory-thaum-active-neocaesarea",
+        "subject_type": "person",
+        "subject_id": "gregory-thaumaturgus",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "neocaesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "240",
+        "year_end": "270",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gregory-thaumaturgus",
+        "person_label": "Gregory Thaumaturgus",
+        "name_alt": "Gregory the Wonderworker; Theodore",
+        "name_native": "Γρηγόριος ὁ Θαυματουργός",
+        "birth_year_display": "c. 213",
+        "death_year_display": "c. 270",
+        "person_kind": "individual",
+        "notes": "Student of Origen in Caesarea c. 233–238; bishop of Neocaesarea in Pontus c. 240–270; missionary who reportedly converted most of Pontus; his Address of Thanksgiving to Origen is a key source for Origen's teaching method; credited with many miracles."
+      },
+      "object_entity": {
+        "place_id": "neocaesarea",
+        "place_label": "Neocaesarea",
+        "place_label_modern": "Niksar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.5933",
+        "lon": "36.9536",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "City in Pontus on the Black Sea; see of Gregory Thaumaturgus c. 240–270; major early missionary center in northeastern Asia Minor."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gregory-thaum-active-neocaesarea",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Gregory's Address implies his return to Pontus after studying with Origen."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gregory-coworker-origen",
+        "clm-gregory-thaum-active-caesarea",
+        "clm-gregory-thaum-member-caesarean",
+        "clm-gregory-thaum-active-pontus"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gregory-thaum-active-pontus",
+        "subject_type": "person",
+        "subject_id": "gregory-thaumaturgus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "pontus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "240",
+        "year_end": "270",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gregory-thaumaturgus",
+        "person_label": "Gregory Thaumaturgus",
+        "name_alt": "Gregory the Wonderworker; Theodore",
+        "name_native": "Γρηγόριος ὁ Θαυματουργός",
+        "birth_year_display": "c. 213",
+        "death_year_display": "c. 270",
+        "person_kind": "individual",
+        "notes": "Student of Origen in Caesarea c. 233–238; bishop of Neocaesarea in Pontus c. 240–270; missionary who reportedly converted most of Pontus; his Address of Thanksgiving to Origen is a key source for Origen's teaching method; credited with many miracles."
+      },
+      "object_entity": {
+        "place_id": "pontus",
+        "place_label": "Pontus",
+        "place_label_modern": "",
+        "place_kind": "province",
+        "parent_place_id": "",
+        "lat": "40.8000",
+        "lon": "36.8000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Roman province on the Black Sea named in 1 Peter."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gregory-thaum-active-pontus",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gregory-coworker-origen",
+        "clm-gregory-thaum-active-caesarea",
+        "clm-gregory-thaum-member-caesarean",
+        "clm-gregory-thaum-active-neocaesarea"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gregory-thaum-member-caesarean",
+        "subject_type": "person",
+        "subject_id": "gregory-thaumaturgus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "caesarean-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "270",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gregory-thaumaturgus",
+        "person_label": "Gregory Thaumaturgus",
+        "name_alt": "Gregory the Wonderworker; Theodore",
+        "name_native": "Γρηγόριος ὁ Θαυματουργός",
+        "birth_year_display": "c. 213",
+        "death_year_display": "c. 270",
+        "person_kind": "individual",
+        "notes": "Student of Origen in Caesarea c. 233–238; bishop of Neocaesarea in Pontus c. 240–270; missionary who reportedly converted most of Pontus; his Address of Thanksgiving to Origen is a key source for Origen's teaching method; credited with many miracles."
+      },
+      "object_entity": {
+        "group_id": "caesarean-church",
+        "group_label": "Church in Caesarea",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Caesarea Maritima; major center from the apostolic period onward; Origen relocated here c. 232 and founded a theological school and library with Alexander of Jerusalem."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gregory-thaum-member-caesarean",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Gregory was part of the Caesarean school community."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gregory-coworker-origen",
+        "clm-gregory-thaum-active-caesarea",
+        "clm-gregory-thaum-active-neocaesarea",
+        "clm-gregory-thaum-active-pontus"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gregory-coworker-origen",
+        "subject_type": "person",
+        "subject_id": "gregory-thaumaturgus",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "origen-of-alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "238",
+        "context_place_id": "caesarea",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gregory-thaumaturgus",
+        "person_label": "Gregory Thaumaturgus",
+        "name_alt": "Gregory the Wonderworker; Theodore",
+        "name_native": "Γρηγόριος ὁ Θαυματουργός",
+        "birth_year_display": "c. 213",
+        "death_year_display": "c. 270",
+        "person_kind": "individual",
+        "notes": "Student of Origen in Caesarea c. 233–238; bishop of Neocaesarea in Pontus c. 240–270; missionary who reportedly converted most of Pontus; his Address of Thanksgiving to Origen is a key source for Origen's teaching method; credited with many miracles."
+      },
+      "object_entity": {
+        "person_id": "origen-of-alexandria",
+        "person_label": "Origen of Alexandria",
+        "name_alt": "Origen, Adamantius",
+        "name_native": "Ὠριγένης",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Leading Alexandrian theologian and biblical scholar; student of Clement of Alexandria and eventual head of the Catechetical School. Prolific author covering exegesis, apologetics, and systematic theology. Active in Alexandria (c. 202–232) then Caesarea."
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gregory-coworker-origen",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gregory-thaum-active-caesarea",
+        "clm-gregory-thaum-member-caesarean",
+        "clm-gregory-thaum-active-neocaesarea",
+        "clm-gregory-thaum-active-pontus"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:subject"
+      ]
+    }
+  ]
+}

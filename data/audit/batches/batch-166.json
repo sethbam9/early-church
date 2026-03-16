@@ -1,0 +1,2248 @@
+{
+  "batch_id": "batch-166",
+  "queue": "1",
+  "focus": "pontius-deacon; alban-of-britain; novatian-schism; lucius-i-pope; aphrahat; council-of-nicaea-325; philostorgius; socrates-ecclesiastical-history; christianization-of-aksum; conversion-of-edessa",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-pontius-in-cyprians-martyrdom",
+        "subject_type": "person",
+        "subject_id": "pontius-deacon",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "cyprians-martyrdom",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "258",
+        "year_end": "258",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pontius-deacon",
+        "person_label": "Pontius the Deacon",
+        "name_alt": "Pontius",
+        "name_native": "",
+        "birth_year_display": "c. 220",
+        "death_year_display": "c. 260",
+        "person_kind": "individual",
+        "notes": "Deacon of Cyprian of Carthage; accompanied Cyprian into exile and was present at his martyrdom in 258; author of the Vita Cypriani, the earliest Latin Christian biography; provides key details about Cyprian's conversion, episcopate, and death."
+      },
+      "object_entity": {
+        "event_id": "cyprians-martyrdom",
+        "event_label": "Martyrdom of Cyprian",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Cyprian of Carthage was arrested, tried before the proconsul Galerius Maximus, and beheaded on September 14, 258 during the Valerianic persecution; the Acta Proconsularia preserve the trial proceedings; Pontius the Deacon wrote the earliest Latin Christian biography (Vita Cypriani) describing his death; Cyprian was the first African bishop to be martyred."
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pontius-in-cyprians-martyrdom",
+            "passage_id": "psg-eusebius-he-7-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Pontius was present at Cyprian's martyrdom per Eusebius."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-7-9",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 7.9",
+            "excerpt": "Paraphrase: Eusebius records that Cyprian was banished under the Emperor Valerian and thereafter summoned back only to be executed. Pontius the deacon, who was with him, wrote an account of his life and death.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cyprian's exile and martyrdom under Valerian; Pontius as witness and biographer"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pontius-active-carthage",
+        "clm-pontius-member-carthage-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-7-9": [
+          "clm-cyprian-in-cyprians-martyrdom",
+          "clm-cyprians-martyrdom-at-carthage",
+          "clm-cyprians-martyrdom-year",
+          "clm-pontius-coworker-cyprian",
+          "clm-pontius-member-carthage-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-7-9",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-7-9:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pontius-member-carthage-church",
+        "subject_type": "person",
+        "subject_id": "pontius-deacon",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "carthage-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "248",
+        "year_end": "258",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pontius-deacon",
+        "person_label": "Pontius the Deacon",
+        "name_alt": "Pontius",
+        "name_native": "",
+        "birth_year_display": "c. 220",
+        "death_year_display": "c. 260",
+        "person_kind": "individual",
+        "notes": "Deacon of Cyprian of Carthage; accompanied Cyprian into exile and was present at his martyrdom in 258; author of the Vita Cypriani, the earliest Latin Christian biography; provides key details about Cyprian's conversion, episcopate, and death."
+      },
+      "object_entity": {
+        "group_id": "carthage-church",
+        "group_label": "Church in Carthage",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Major North African Christian community centered in Carthage; home of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pontius-member-carthage-church",
+            "passage_id": "psg-eusebius-he-7-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Pontius served as deacon under Cyprian at Carthage."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-7-9",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 7.9",
+            "excerpt": "Paraphrase: Eusebius records that Cyprian was banished under the Emperor Valerian and thereafter summoned back only to be executed. Pontius the deacon, who was with him, wrote an account of his life and death.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cyprian's exile and martyrdom under Valerian; Pontius as witness and biographer"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pontius-active-carthage",
+        "clm-pontius-in-cyprians-martyrdom"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-7-9": [
+          "clm-cyprian-in-cyprians-martyrdom",
+          "clm-cyprians-martyrdom-at-carthage",
+          "clm-cyprians-martyrdom-year",
+          "clm-pontius-coworker-cyprian",
+          "clm-pontius-in-cyprians-martyrdom"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-7-9",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-7-9:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-person-alban-affirms-britannia",
+        "subject_type": "person",
+        "subject_id": "alban-of-britain",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-reached-britannia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "305",
+        "context_place_id": "britannia",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "alban-of-britain",
+        "person_label": "Alban of Britain",
+        "name_alt": "St Alban",
+        "name_native": "",
+        "birth_year_display": "unknown",
+        "death_year_display": "c. 250–305",
+        "person_kind": "individual",
+        "notes": "Proto-martyr of Britain; Roman soldier or citizen who sheltered a Christian priest and was executed; traditionally the first British martyr; date debated between Severan (c. 209) and Diocletianic (c. 304) persecution."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-reached-britannia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "britannia-reached",
+        "proposition_label": "Christianity reached Britannia before the end of the Roman period",
+        "polarity_family": "britannia_reached",
+        "description": "Christianity was present in Roman Britain; rhetorical attestation by Tertullian c. 200, Origen c. 244, and firm documentary evidence of 3 British bishops at the Council of Arles 314.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "britannia",
+        "place_label": "Britannia",
+        "place_label_modern": "Britain",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "52.0000",
+        "lon": "-1.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "United Kingdom",
+        "notes": "Roman province; Christianity attested by Tertullian c. 200 and 3 bishops at Council of Arles 314; proto-martyr Alban."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-person-alban-affirms-britannia",
+            "passage_id": "psg-wikipedia-british-church-control",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes alban-of-britain's position on christianity-reached-britannia."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-british-church-control",
+            "source_id": "src-wikipedia-christianity-roman-britain",
+            "locator_type": "source_ref",
+            "locator": "Christianity_in_Roman_Britain",
+            "excerpt": "Christianity spread in Roman Britain during the 3rd and 4th centuries. The British church had bishops and ecclesiastical organization by the time of the Council of Arles in 314 AD.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used as contextualizing evidence for the British church's territorial presence."
+          },
+          "source": {
+            "source_id": "src-wikipedia-christianity-roman-britain",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Christianity in Roman Britain - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Christianity_in_Roman_Britain",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for early Christianity in Roman Britain."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-alban-active-britannia",
+        "clm-alban-participant-martyrdom"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-wikipedia-british-church-control": [
+          "clm-british-church-controls-britannia",
+          "clm-martyrdom-alban-year-2",
+          "clm-place-arles-attested",
+          "clm-place-britannia-attested",
+          "clm-place-londinium-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-british-church-control",
+        "TERTIARY_ONLY_SUPPORT",
+        "TERTIARY_DOCTRINAL"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-alban-participant-martyrdom",
+        "subject_type": "person",
+        "subject_id": "alban-of-britain",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "martyrdom-of-alban",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "305",
+        "context_place_id": "britannia",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "alban-of-britain",
+        "person_label": "Alban of Britain",
+        "name_alt": "St Alban",
+        "name_native": "",
+        "birth_year_display": "unknown",
+        "death_year_display": "c. 250–305",
+        "person_kind": "individual",
+        "notes": "Proto-martyr of Britain; Roman soldier or citizen who sheltered a Christian priest and was executed; traditionally the first British martyr; date debated between Severan (c. 209) and Diocletianic (c. 304) persecution."
+      },
+      "object_entity": {
+        "event_id": "martyrdom-of-alban",
+        "event_label": "Martyrdom of Alban",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Execution of Alban, proto-martyr of Britain; date debated between the Severan persecution (c. 209) and the Diocletianic persecution (c. 304); earliest witness is Gildas (6th c.)."
+      },
+      "context_place": {
+        "place_id": "britannia",
+        "place_label": "Britannia",
+        "place_label_modern": "Britain",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "52.0000",
+        "lon": "-1.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "United Kingdom",
+        "notes": "Roman province; Christianity attested by Tertullian c. 200 and 3 bishops at Council of Arles 314; proto-martyr Alban."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-alban-participant-martyrdom",
+            "passage_id": "psg-gildas-de-excidio-10",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Gildas De Excidio 10 explicitly describes Alban's martyrdom — primary source."
+          },
+          "passage": {
+            "passage_id": "psg-gildas-de-excidio-10",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Gildas De Excidio Britanniae 10",
+            "excerpt": "Paraphrase: Meanwhile these islands received the beams of light that is the holy precepts of Christ at the latter part of the reign of Tiberius Caesar.",
+            "language": "English",
+            "passage_year": "540",
+            "url_override": "",
+            "notes": "Gildas 6th-century claim that Christianity reached Britain during Tiberius; late and legendary but influential."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-alban-active-britannia",
+        "clm-person-alban-affirms-britannia"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-gildas-de-excidio-10": [
+          "clm-alban-active-britannia",
+          "clm-martyrdom-alban-at-britannia",
+          "clm-martyrdom-alban-year",
+          "clm-place-britannia-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gildas-de-excidio-10"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatian-schism-year",
+        "subject_type": "event",
+        "subject_id": "novatian-schism",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "251",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "novatian-schism",
+        "event_label": "Schism of Novatian",
+        "event_type": "schism",
+        "event_kind": "simple",
+        "notes": "Novatian, a Roman presbyter, set himself up as rival bishop of Rome c. 251 in opposition to Pope Cornelius; refused readmission of Christians who had lapsed during the Decian persecution; condemned by a Roman synod; his followers formed the Novatianist sect which spread across the empire."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatian-schism-year",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "The schism occurred c. 251."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatian-schism-at-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatian-schism-at-rome",
+        "subject_type": "event",
+        "subject_id": "novatian-schism",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "251",
+        "year_end": "251",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "novatian-schism",
+        "event_label": "Schism of Novatian",
+        "event_type": "schism",
+        "event_kind": "simple",
+        "notes": "Novatian, a Roman presbyter, set himself up as rival bishop of Rome c. 251 in opposition to Pope Cornelius; refused readmission of Christians who had lapsed during the Decian persecution; condemned by a Roman synod; his followers formed the Novatianist sect which spread across the empire."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatian-schism-at-rome",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Cornelius's letter places the schism in Rome."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatian-schism-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lucius-i-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "lucius-i-pope",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "253",
+        "year_end": "254",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lucius-i-pope",
+        "person_label": "Lucius I",
+        "name_alt": "Pope Lucius",
+        "name_native": "Λούκιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 253–254; successor of Cornelius; briefly exiled and returned; continued Cornelius's moderate policy on readmission of the lapsed; Cyprian wrote to congratulate him on his return from exile."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lucius-i-bishop-rome",
+            "passage_id": "psg-eusebius-he-7-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Eusebius's narrative of the Roman succession places Lucius after Cornelius."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-7-3",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 7.3",
+            "excerpt": "Paraphrase: Eusebius reports that Stephen of Rome wrote to Cyprian and the African bishops concerning the rebaptism controversy, insisting that no innovation should be made contrary to tradition and that those baptized in heretical communities should receive only the laying on of hands for reconciliation, not rebaptism. He threatened to break communion with the African churches.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Stephen's position: tradition forbids rebaptism; laying on of hands sufficient for reconciliation"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lucius-i-member-roman-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-7-3": [
+          "clm-lucius-i-coworker-cyprian",
+          "clm-lucius-i-member-roman-church",
+          "clm-stephen-i-affirms-apostolic-succession",
+          "clm-stephen-i-bishop-rome",
+          "clm-stephen-i-member-roman-church",
+          "clm-stephen-i-opposes-rebaptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-7-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lucius-i-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "lucius-i-pope",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "253",
+        "year_end": "254",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lucius-i-pope",
+        "person_label": "Lucius I",
+        "name_alt": "Pope Lucius",
+        "name_native": "Λούκιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 253–254; successor of Cornelius; briefly exiled and returned; continued Cornelius's moderate policy on readmission of the lapsed; Cyprian wrote to congratulate him on his return from exile."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lucius-i-member-roman-church",
+            "passage_id": "psg-eusebius-he-7-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Lucius as bishop of Rome is a member of the Roman church by definition."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-7-3",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 7.3",
+            "excerpt": "Paraphrase: Eusebius reports that Stephen of Rome wrote to Cyprian and the African bishops concerning the rebaptism controversy, insisting that no innovation should be made contrary to tradition and that those baptized in heretical communities should receive only the laying on of hands for reconciliation, not rebaptism. He threatened to break communion with the African churches.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Stephen's position: tradition forbids rebaptism; laying on of hands sufficient for reconciliation"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lucius-i-bishop-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-7-3": [
+          "clm-lucius-i-bishop-rome",
+          "clm-lucius-i-coworker-cyprian",
+          "clm-stephen-i-affirms-apostolic-succession",
+          "clm-stephen-i-bishop-rome",
+          "clm-stephen-i-member-roman-church",
+          "clm-stephen-i-opposes-rebaptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-7-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aphrahat-in-persecution",
+        "subject_type": "person",
+        "subject_id": "aphrahat",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "persecution-of-shapur-ii",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "340",
+        "year_end": "345",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aphrahat",
+        "person_label": "Aphrahat",
+        "name_alt": "Aphrahat the Persian Sage",
+        "name_native": "ܐܦܪܗܛ",
+        "birth_year_display": "c. 280",
+        "death_year_display": "c. 345",
+        "person_kind": "individual",
+        "notes": "Syriac church father in the Persian Empire; wrote 23 Demonstrations (337–345) on Christian faith and practice; possibly a bishop; used the Diatessaron as his gospel text; his theology is notably independent of Greek influence."
+      },
+      "object_entity": {
+        "event_id": "persecution-of-shapur-ii",
+        "event_label": "Persecution of Shapur II",
+        "event_type": "persecution",
+        "event_kind": "composite",
+        "notes": "Systematic persecution of Christians in the Sasanian Empire beginning c. 340 under Shapur II; motivated partly by Constantine's declaration of Rome as a Christian empire; Aphrahat wrote his later Demonstrations during this crisis; lasted intermittently until Shapur's death in 379."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aphrahat-in-persecution",
+            "passage_id": "psg-aphrahat-dem-21",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Aphrahat addresses Christians under Shapur II's persecution."
+          },
+          "passage": {
+            "passage_id": "psg-aphrahat-dem-21",
+            "source_id": "src-demonstrations-of-aphrahat",
+            "locator_type": "source_ref",
+            "locator": "Demonstration 21 (On Persecution)",
+            "excerpt": "Paraphrase: Aphrahat addresses the Christians suffering under Shapur II's persecution; he encourages steadfastness, reminding them that persecution purifies the church; the martyrs receive a crown; God will vindicate his people as he did Israel in Egypt.",
+            "language": "English",
+            "passage_year": "344",
+            "url_override": "",
+            "notes": "On Persecution under Shapur II"
+          },
+          "source": {
+            "source_id": "src-demonstrations-of-aphrahat",
+            "work_id": "demonstrations-of-aphrahat",
+            "source_kind": "primary_text",
+            "title": "Demonstrations",
+            "author": "Aphrahat",
+            "editor": "",
+            "year_display": "337–345",
+            "year_start": "337",
+            "year_end": "345",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/370101.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "23 Syriac homilies on faith and practice from the Persian church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aphrahat-active-seleucia",
+        "clm-aphrahat-member-church-east"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-aphrahat-dem-21": [
+          "clm-aphrahat-affirms-martyrdom",
+          "clm-shapur-active-seleucia"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-aphrahat-dem-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aphrahat-member-church-east",
+        "subject_type": "person",
+        "subject_id": "aphrahat",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "church-of-the-east",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "280",
+        "year_end": "345",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aphrahat",
+        "person_label": "Aphrahat",
+        "name_alt": "Aphrahat the Persian Sage",
+        "name_native": "ܐܦܪܗܛ",
+        "birth_year_display": "c. 280",
+        "death_year_display": "c. 345",
+        "person_kind": "individual",
+        "notes": "Syriac church father in the Persian Empire; wrote 23 Demonstrations (337–345) on Christian faith and practice; possibly a bishop; used the Diatessaron as his gospel text; his theology is notably independent of Greek influence."
+      },
+      "object_entity": {
+        "group_id": "church-of-the-east",
+        "group_label": "Church of the East",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in the Sasanian Persian Empire centered on Seleucia-Ctesiphon; developed independently of the Roman imperial church; used the Diatessaron as its gospel text until the 5th century; organized under a Catholicos from the early 4th century."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aphrahat-member-church-east",
+            "passage_id": "psg-aphrahat-dem-1",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Aphrahat's Demonstrations were written in Syriac from within the Persian church context."
+          },
+          "passage": {
+            "passage_id": "psg-aphrahat-dem-1",
+            "source_id": "src-demonstrations-of-aphrahat",
+            "locator_type": "source_ref",
+            "locator": "Demonstration 1 (On Faith)",
+            "excerpt": "Paraphrase: Faith is the foundation upon which all the structure of Christian life is built; faith is the tree from which the fruits of good works grow; faith rests on the rock of Christ and is watered by baptism; the faithful must believe in God, his Christ, the Holy Spirit, baptism, resurrection, and eternal life.",
+            "language": "English",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "On Faith — foundation of Christian life"
+          },
+          "source": {
+            "source_id": "src-demonstrations-of-aphrahat",
+            "work_id": "demonstrations-of-aphrahat",
+            "source_kind": "primary_text",
+            "title": "Demonstrations",
+            "author": "Aphrahat",
+            "editor": "",
+            "year_display": "337–345",
+            "year_start": "337",
+            "year_end": "345",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/370101.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "23 Syriac homilies on faith and practice from the Persian church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aphrahat-active-seleucia",
+        "clm-aphrahat-in-persecution"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-aphrahat-dem-1": [
+          "clm-aphrahat-active-seleucia",
+          "clm-aphrahat-affirms-baptism-regeneration",
+          "clm-aphrahat-affirms-baptism-water",
+          "clm-aphrahat-affirms-baptismal-anointing",
+          "clm-aphrahat-affirms-bishops-govern",
+          "clm-aphrahat-affirms-catechumenate",
+          "clm-aphrahat-affirms-free-will",
+          "clm-aphrahat-affirms-gentile-inclusion",
+          "clm-aphrahat-affirms-gospel-harmony",
+          "clm-aphrahat-affirms-judgment",
+          "clm-aphrahat-affirms-ot-authority",
+          "clm-aphrahat-affirms-resurrection",
+          "clm-aphrahat-affirms-rule-of-faith",
+          "clm-aphrahat-affirms-trinitarian-baptism",
+          "clm-demonstrations-by-aphrahat"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-aphrahat-dem-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nicaea-occurs-at-nicaea",
+        "subject_type": "event",
+        "subject_id": "council-of-nicaea-325",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "nicaea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "325",
+        "year_end": "325",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T11:30:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-nicaea-325",
+        "event_label": "First Council of Nicaea (325)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "First ecumenical council convened by Emperor Constantine at Nicaea in Bithynia, May–August 325 CE. Addressed the Arian controversy; produced the original Nicene Creed affirming the Son as homoousios (same substance) with the Father; condemned Arius; standardized Easter dating; addressed the Meletian schism in Egypt. Attended by ~300 bishops, mostly from the East. Jacob of Nisibis and Eusebius of Caesarea were among the attendees."
+      },
+      "object_entity": {
+        "place_id": "nicaea",
+        "place_label": "Nicaea",
+        "place_label_modern": "İznik, Turkey",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.4261",
+        "lon": "29.7183",
+        "location_precision": "approx_city",
+        "modern_country_label": "",
+        "notes": "Ancient city in Bithynia (modern İznik, Turkey); site of the First Ecumenical Council (325 CE) and Second Ecumenical Council (787 CE)."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nicaea-occurs-at-nicaea",
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "The First Council of Nicaea convened at Nicaea in Bithynia, 325 CE."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "VC 3.6-14",
+            "excerpt": "Constantine convened the universal synod at Nicaea in Bithynia, gathering bishops from all regions of the empire.",
+            "language": "el",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "Vita Constantini 3.6-14; primary narrative source for Nicaea."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nicaea-year-325"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-vita-const-3-6": [
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-participant-nicaea",
+          "clm-church-east-at-nisibis",
+          "clm-constantine-convenes-nicaea",
+          "clm-ephrem-coworker-jacob",
+          "clm-eusebius-participant-nicaea",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-participant-nicaea",
+          "clm-jacob-teacher-ephrem",
+          "clm-nicaea-year-325"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nicaea-year-325",
+        "subject_type": "event",
+        "subject_id": "council-of-nicaea-325",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "325",
+        "value_boolean": "",
+        "year_start": "325",
+        "year_end": "325",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T11:30:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-nicaea-325",
+        "event_label": "First Council of Nicaea (325)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "First ecumenical council convened by Emperor Constantine at Nicaea in Bithynia, May–August 325 CE. Addressed the Arian controversy; produced the original Nicene Creed affirming the Son as homoousios (same substance) with the Father; condemned Arius; standardized Easter dating; addressed the Meletian schism in Egypt. Attended by ~300 bishops, mostly from the East. Jacob of Nisibis and Eusebius of Caesarea were among the attendees."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nicaea-year-325",
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "The First Council of Nicaea was held in 325 CE."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "VC 3.6-14",
+            "excerpt": "Constantine convened the universal synod at Nicaea in Bithynia, gathering bishops from all regions of the empire.",
+            "language": "el",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "Vita Constantini 3.6-14; primary narrative source for Nicaea."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nicaea-occurs-at-nicaea"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-vita-const-3-6": [
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-participant-nicaea",
+          "clm-church-east-at-nisibis",
+          "clm-constantine-convenes-nicaea",
+          "clm-ephrem-coworker-jacob",
+          "clm-eusebius-participant-nicaea",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-participant-nicaea",
+          "clm-jacob-teacher-ephrem",
+          "clm-nicaea-occurs-at-nicaea"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philostorgius-affirms-ethiopia",
+        "subject_type": "person",
+        "subject_id": "philostorgius",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-ethiopia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "425",
+        "year_end": "425",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philostorgius",
+        "person_label": "Philostorgius",
+        "name_alt": "Philostorgios",
+        "name_native": "Φιλοστόργιος",
+        "birth_year_display": "c. 368",
+        "death_year_display": "c. 439",
+        "person_kind": "individual",
+        "notes": "Arian church historian; wrote a 12-book Ecclesiastical History (c. 425) covering 300–425; survives mostly in Photius's epitome; key source for Theophilus the Indian's mission and Constantius II's religious diplomacy."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-ethiopia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "ethiopia-christianized",
+        "proposition_label": "Christianity was established in Ethiopia through Frumentius and the conversion of King Ezana",
+        "polarity_family": "ethiopia_christianized",
+        "description": "The Aksumite kingdom (Ethiopia) received Christianity through the mission of Frumentius, consecrated by Athanasius of Alexandria, who converted King Ezana c. 330; attested by Rufinus, Socrates, Sozomen.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philostorgius-affirms-ethiopia",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Philostorgius HE 3.4 describes Theophilus's mission to Ethiopia (Himyar/Axum region)."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philostorgius-active-constantinople"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-philostorgius-he-3-4",
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philostorgius-active-constantinople",
+        "subject_type": "person",
+        "subject_id": "philostorgius",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "390",
+        "year_end": "439",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philostorgius",
+        "person_label": "Philostorgius",
+        "name_alt": "Philostorgios",
+        "name_native": "Φιλοστόργιος",
+        "birth_year_display": "c. 368",
+        "death_year_display": "c. 439",
+        "person_kind": "individual",
+        "notes": "Arian church historian; wrote a 12-book Ecclesiastical History (c. 425) covering 300–425; survives mostly in Photius's epitome; key source for Theophilus the Indian's mission and Constantius II's religious diplomacy."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philostorgius-active-constantinople",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Philostorgius HE 3.4 was written from Constantinople by Philostorgius himself."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philostorgius-affirms-ethiopia"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-socrates-he-by-socrates",
+        "subject_type": "work",
+        "subject_id": "socrates-ecclesiastical-history",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "socrates-scholasticus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "439",
+        "year_end": "450",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T10:30:00Z"
+      },
+      "subject_entity": {
+        "work_id": "socrates-ecclesiastical-history",
+        "title_display": "Ecclesiastical History (Socrates)",
+        "title_original": "Historia Ecclesiastica",
+        "work_type": "chronicle",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Socrates Scholasticus's church history (c. 439) covering 305–439; independent confirmation of the Frumentius–Aksum story (HE 1.19); important Eastern source for post-Nicene developments."
+      },
+      "object_entity": {
+        "person_id": "socrates-scholasticus",
+        "person_label": "Socrates Scholasticus",
+        "name_alt": "Socrates of Constantinople",
+        "name_native": "Σωκράτης ὁ Σχολαστικός",
+        "birth_year_display": "c. 380",
+        "death_year_display": "c. 450",
+        "person_kind": "individual",
+        "notes": "Christian church historian; author of Ecclesiastical History covering 305–439 CE, continuing Eusebius's work. A layman, lawyer, and careful historian."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-socrates-he-by-socrates",
+            "passage_id": "psg-socrates-he-1-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Socrates Scholasticus names himself in HE 5.24; universally attributed."
+          },
+          "passage": {
+            "passage_id": "psg-socrates-he-1-19",
+            "source_id": "src-socrates-he",
+            "locator_type": "source_ref",
+            "locator": "HE 1.19",
+            "excerpt": "Paraphrase: Socrates narrates how Frumentius, shipwrecked in Ethiopia, gained the king's trust, introduced Christianity, and was later consecrated bishop by Athanasius of Alexandria — an independent Greek confirmation of Rufinus's Latin account.",
+            "language": "English",
+            "passage_year": "439",
+            "url_override": "",
+            "notes": "Socrates Scholasticus HE 1.19; NPNF2 translation."
+          },
+          "source": {
+            "source_id": "src-socrates-he",
+            "work_id": "socrates-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Socrates Scholasticus – Ecclesiastical History",
+            "author": "Socrates Scholasticus",
+            "editor": "",
+            "year_display": "c. 439",
+            "year_start": "439",
+            "year_end": "439",
+            "container_title": "NPNF2-02",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/26011.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Online English translation (NPNF2 series)."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-socrates-he-affirms-ethiopia"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-socrates-he-1-19": [
+          "clm-gregory-illum-bishop-vagharshapat",
+          "clm-gregory-naz-participant-const381",
+          "clm-socrates-he-affirms-ethiopia"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-socrates-he-1-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-socrates-he-affirms-ethiopia",
+        "subject_type": "work",
+        "subject_id": "socrates-ecclesiastical-history",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-ethiopia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "440",
+        "year_end": "440",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "socrates-ecclesiastical-history",
+        "title_display": "Ecclesiastical History (Socrates)",
+        "title_original": "Historia Ecclesiastica",
+        "work_type": "chronicle",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Socrates Scholasticus's church history (c. 439) covering 305–439; independent confirmation of the Frumentius–Aksum story (HE 1.19); important Eastern source for post-Nicene developments."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-ethiopia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "ethiopia-christianized",
+        "proposition_label": "Christianity was established in Ethiopia through Frumentius and the conversion of King Ezana",
+        "polarity_family": "ethiopia_christianized",
+        "description": "The Aksumite kingdom (Ethiopia) received Christianity through the mission of Frumentius, consecrated by Athanasius of Alexandria, who converted King Ezana c. 330; attested by Rufinus, Socrates, Sozomen.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-socrates-he-affirms-ethiopia",
+            "passage_id": "psg-socrates-he-1-19",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Socrates independently confirms the Frumentius story."
+          },
+          "passage": {
+            "passage_id": "psg-socrates-he-1-19",
+            "source_id": "src-socrates-he",
+            "locator_type": "source_ref",
+            "locator": "HE 1.19",
+            "excerpt": "Paraphrase: Socrates narrates how Frumentius, shipwrecked in Ethiopia, gained the king's trust, introduced Christianity, and was later consecrated bishop by Athanasius of Alexandria — an independent Greek confirmation of Rufinus's Latin account.",
+            "language": "English",
+            "passage_year": "439",
+            "url_override": "",
+            "notes": "Socrates Scholasticus HE 1.19; NPNF2 translation."
+          },
+          "source": {
+            "source_id": "src-socrates-he",
+            "work_id": "socrates-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Socrates Scholasticus – Ecclesiastical History",
+            "author": "Socrates Scholasticus",
+            "editor": "",
+            "year_display": "c. 439",
+            "year_start": "439",
+            "year_end": "439",
+            "container_title": "NPNF2-02",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/26011.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Online English translation (NPNF2 series)."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-socrates-he-by-socrates"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-socrates-he-1-19": [
+          "clm-gregory-illum-bishop-vagharshapat",
+          "clm-gregory-naz-participant-const381",
+          "clm-socrates-he-by-socrates"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-socrates-he-1-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-christianization-aksum-at-aksum",
+        "subject_type": "event",
+        "subject_id": "christianization-of-aksum",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "aksum",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "christianization-of-aksum",
+        "event_label": "Christianization of Aksum",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Frumentius consecrated bishop by Athanasius and returns to Aksum c. 328–333; King Ezana converts; Christianity becomes state religion of the Aksumite Empire."
+      },
+      "object_entity": {
+        "place_id": "aksum",
+        "place_label": "Aksum",
+        "place_label_modern": "Axum",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.1308",
+        "lon": "38.7225",
+        "location_precision": "approx_city",
+        "modern_country_label": "Ethiopia",
+        "notes": "Capital of the Aksumite Empire; site of Frumentius's episcopal see; Christianity became state religion under King Ezana c. 330; major Red Sea trade hub."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-christianization-aksum-at-aksum",
+            "passage_id": "psg-rufinus-he-1-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Rufinus locates the event at Aksum."
+          },
+          "passage": {
+            "passage_id": "psg-rufinus-he-1-9",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Rufinus HE 1.9 (=10.9)",
+            "excerpt": "Paraphrase: A philosopher named Meropius of Tyre sailed to India with two boys Frumentius and Aedesius. The ship was seized and all killed except the boys who were brought to the king of Aksum. When the king died the queen asked Frumentius to help govern. Frumentius sought out Roman traders who were Christians and built churches. Later he traveled to Alexandria where Athanasius consecrated him bishop. He returned to Aksum and converted many including the king.",
+            "language": "English",
+            "passage_year": "402",
+            "url_override": "",
+            "notes": "Primary Western source for the christianization of Aksum; Rufinus heard the account from Aedesius himself."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-christianization-aksum-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rufinus-he-1-9": [
+          "clm-aksumite-church-at-aksum",
+          "clm-aksumite-church-controls-aksum",
+          "clm-aksumite-church-group-schism-alexandrian",
+          "clm-athanasius-coworker-ezana",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-participant-christianization",
+          "clm-bartholomew-member-india-christians",
+          "clm-christianization-aksum-year",
+          "clm-ezana-participant-christianization",
+          "clm-frumentius-active-tyre",
+          "clm-frumentius-bishop-aksum",
+          "clm-frumentius-member-aksumite",
+          "clm-frumentius-participant-christianization",
+          "clm-frumentius-teacher-ezana",
+          "clm-gregory-illum-bishop-vagharshapat",
+          "clm-person-frumentius-affirms-ethiopia",
+          "clm-rufinus-active-alexandria",
+          "clm-rufinus-active-jerusalem",
+          "clm-rufinus-active-rome",
+          "clm-rufinus-affirms-bartholomew",
+          "clm-rufinus-affirms-thomas",
+          "clm-rufinus-he-affirms-bartholomew-india",
+          "clm-rufinus-he-affirms-ethiopia-christianized",
+          "clm-rufinus-he-affirms-india",
+          "clm-rufinus-he-by-rufinus",
+          "clm-rufinus-he-mentions-bartholomew-india",
+          "clm-rufinus-he-mentions-thomas-india"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rufinus-he-1-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-christianization-aksum-year",
+        "subject_type": "event",
+        "subject_id": "christianization-of-aksum",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "330",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "christianization-of-aksum",
+        "event_label": "Christianization of Aksum",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Frumentius consecrated bishop by Athanasius and returns to Aksum c. 328–333; King Ezana converts; Christianity becomes state religion of the Aksumite Empire."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-christianization-aksum-year",
+            "passage_id": "psg-ezana-inscription-ge-ez",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Ezana's inscription shift from pagan to Christian confirms approximate date."
+          },
+          "passage": {
+            "passage_id": "psg-ezana-inscription-ge-ez",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Ezana Ge'ez inscription (RIE 271)",
+            "excerpt": "Paraphrase: King Ezana of Aksum dedicates his military victory to the Lord of Heaven Lord of Earth using explicitly Christian formulae replacing earlier pagan invocations of Mahrem.",
+            "language": "English",
+            "passage_year": "340",
+            "url_override": "",
+            "notes": "Archaeological evidence: Ezana's later inscriptions use Christian language confirming his conversion."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-christianization-aksum-year",
+            "passage_id": "psg-rufinus-he-1-9",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Rufinus's chronology implies c. 330."
+          },
+          "passage": {
+            "passage_id": "psg-rufinus-he-1-9",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Rufinus HE 1.9 (=10.9)",
+            "excerpt": "Paraphrase: A philosopher named Meropius of Tyre sailed to India with two boys Frumentius and Aedesius. The ship was seized and all killed except the boys who were brought to the king of Aksum. When the king died the queen asked Frumentius to help govern. Frumentius sought out Roman traders who were Christians and built churches. Later he traveled to Alexandria where Athanasius consecrated him bishop. He returned to Aksum and converted many including the king.",
+            "language": "English",
+            "passage_year": "402",
+            "url_override": "",
+            "notes": "Primary Western source for the christianization of Aksum; Rufinus heard the account from Aedesius himself."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-christianization-aksum-at-aksum"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-ezana-inscription-ge-ez": [
+          "clm-aksumite-church-controls-aksum",
+          "clm-ezana-active-aksum",
+          "clm-ezana-affirms-ethiopia",
+          "clm-ezana-member-aksumite",
+          "clm-ezana-participant-christianization"
+        ],
+        "psg-rufinus-he-1-9": [
+          "clm-aksumite-church-at-aksum",
+          "clm-aksumite-church-controls-aksum",
+          "clm-aksumite-church-group-schism-alexandrian",
+          "clm-athanasius-coworker-ezana",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-participant-christianization",
+          "clm-bartholomew-member-india-christians",
+          "clm-christianization-aksum-at-aksum",
+          "clm-ezana-participant-christianization",
+          "clm-frumentius-active-tyre",
+          "clm-frumentius-bishop-aksum",
+          "clm-frumentius-member-aksumite",
+          "clm-frumentius-participant-christianization",
+          "clm-frumentius-teacher-ezana",
+          "clm-gregory-illum-bishop-vagharshapat",
+          "clm-person-frumentius-affirms-ethiopia",
+          "clm-rufinus-active-alexandria",
+          "clm-rufinus-active-jerusalem",
+          "clm-rufinus-active-rome",
+          "clm-rufinus-affirms-bartholomew",
+          "clm-rufinus-affirms-thomas",
+          "clm-rufinus-he-affirms-bartholomew-india",
+          "clm-rufinus-he-affirms-ethiopia-christianized",
+          "clm-rufinus-he-affirms-india",
+          "clm-rufinus-he-by-rufinus",
+          "clm-rufinus-he-mentions-bartholomew-india",
+          "clm-rufinus-he-mentions-thomas-india"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ezana-inscription-ge-ez",
+        "PARAPHRASE_RISK:psg-rufinus-he-1-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-conversion-edessa-at-edessa",
+        "subject_type": "event",
+        "subject_id": "conversion-of-edessa",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "conversion-of-edessa",
+        "event_label": "Conversion of Edessa",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Conversion of King Abgar VIII of Osroene to Christianity c. 200 AD, making Edessa likely the first Christian state; the historical kernel behind the later legendary Abgar-Jesus correspondence in Eusebius HE 1.13."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-conversion-edessa-at-edessa",
+            "passage_id": "psg-eusebius-he-1-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Conversion narrative set in Edessa."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-1-13",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 1.13",
+            "excerpt": "Paraphrase: Eusebius reproduces documents from the archives of Edessa: King Abgar writes to Jesus asking for healing; Jesus replies promising to send a disciple after his ascension; Thomas later sends Thaddaeus (Addai) who heals Abgar and evangelizes Edessa.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Abgar-Jesus correspondence and Addai tradition"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-conversion-edessa-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-1-13": [
+          "clm-abgar-in-conversion-edessa",
+          "clm-addai-active-edessa",
+          "clm-addai-coworker-thomas",
+          "clm-addai-in-conversion-edessa",
+          "clm-addai-member-edessa-church",
+          "clm-conversion-edessa-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-1-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-conversion-edessa-year",
+        "subject_type": "event",
+        "subject_id": "conversion-of-edessa",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "200",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "conversion-of-edessa",
+        "event_label": "Conversion of Edessa",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Conversion of King Abgar VIII of Osroene to Christianity c. 200 AD, making Edessa likely the first Christian state; the historical kernel behind the later legendary Abgar-Jesus correspondence in Eusebius HE 1.13."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-conversion-edessa-year",
+            "passage_id": "psg-eusebius-he-1-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Eusebius dates the correspondence to Jesus's lifetime; historical conversion c. 200."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-1-13",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 1.13",
+            "excerpt": "Paraphrase: Eusebius reproduces documents from the archives of Edessa: King Abgar writes to Jesus asking for healing; Jesus replies promising to send a disciple after his ascension; Thomas later sends Thaddaeus (Addai) who heals Abgar and evangelizes Edessa.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Abgar-Jesus correspondence and Addai tradition"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-conversion-edessa-at-edessa"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-1-13": [
+          "clm-abgar-in-conversion-edessa",
+          "clm-addai-active-edessa",
+          "clm-addai-coworker-thomas",
+          "clm-addai-in-conversion-edessa",
+          "clm-addai-member-edessa-church",
+          "clm-conversion-edessa-at-edessa"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-1-13"
+      ]
+    }
+  ]
+}

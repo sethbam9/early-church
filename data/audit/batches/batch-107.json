@@ -1,0 +1,1275 @@
+{
+  "batch_id": "batch-107",
+  "queue": "1",
+  "focus": "commentary-on-diatessaron-ephrem",
+  "claim_count": 11,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-comm-diat-by-ephrem",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "ephrem-the-syrian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "person_id": "ephrem-the-syrian",
+        "person_label": "Ephrem the Syrian",
+        "name_alt": "Mar Ephrem",
+        "name_native": "ܡܪܝ ܐܦܪܝܡ ܣܘܪܝܝܐ",
+        "birth_year_display": "306",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Pre-eminent Syriac hymnographer and theologian; deacon at Nisibis under Jacob then relocated to Edessa after 363; wrote Hymns on Faith, Paradise, Nativity, Against Heresies, Nisibis Hymns, and Commentary on the Diatessaron; Doctor of the Church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comm-diat-by-ephrem",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "This passage from the work attests its existence and authorship."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comm-diat-written-edessa",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comm-diat-written-edessa",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from commentary-on-diatessaron-ephrem contextualizes its composition at edessa."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_OMISSION:psg-ephrem-comm-diat-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-eucharist-body-blood",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "eucharist-is-body-and-blood",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "eucharist-is-body-and-blood",
+        "topic_id": "eucharist-presence",
+        "dimension_id": "real-presence",
+        "proposition_label": "The Eucharist is the body and blood of Christ",
+        "polarity_family": "eucharistic_realism",
+        "description": "The eucharistic elements are identified as the flesh and blood of Jesus.",
+        "notes": "Real-presence language"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-eucharist-body-blood",
+            "passage_id": "psg-ephrem-comm-diat-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Christ took bread and called it his body; cup is his blood."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-21",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 21",
+            "excerpt": "Paraphrase: Ephrem comments on the Last Supper in the Diatessaron: Christ took bread and called it his body; he took the cup and called it his blood of the new covenant; the eucharist is the medicine of life given to heal mortal humanity.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Last Supper — eucharistic theology"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-21": [
+          "clm-comdiat-affirms-passion"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-gospel-harmony",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "gospel-harmony-is-authoritative",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "gospel-harmony-is-authoritative",
+        "topic_id": "canon-theology",
+        "dimension_id": "gospel-harmony-authority",
+        "proposition_label": "A harmonized gospel narrative is the authoritative gospel text",
+        "polarity_family": "gospel_harmony",
+        "description": "The Diatessaron or similar gospel harmony serves as the primary authoritative gospel text for liturgy and teaching, rather than reading four separate canonical gospels; standard in the Syriac church from c. 170 until the 5th century.",
+        "notes": "Gospel harmony authority"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-gospel-harmony",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Four gospels woven into one witness reveal the single plan of salvation."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-incarnation",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Christ is the Word made flesh uniting divinity and humanity."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-logos",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Christ confessed as the Word made flesh."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-ot-authority",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-ot-authority",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "commentary-on-diatessaron-ephrem is a primary text directly relevant to old-testament-is-authoritative-scripture."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-passion",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-suffered-and-died",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-suffered-and-died",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "passion-reality",
+        "proposition_label": "Christ Truly Suffered and Died",
+        "polarity_family": "",
+        "description": "Christ's passion and death on the cross were genuine physical events, not apparent, symbolic, or borne by a substitute. Denied by docetists, Basilides (Simon Cyrene substitution), Marcion, and Cerinthus.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-passion",
+            "passage_id": "psg-ephrem-comm-diat-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Blood of the new covenant poured out at the Last Supper."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-21",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 21",
+            "excerpt": "Paraphrase: Ephrem comments on the Last Supper in the Diatessaron: Christ took bread and called it his body; he took the cup and called it his blood of the new covenant; the eucharist is the medicine of life given to heal mortal humanity.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Last Supper — eucharistic theology"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-21": [
+          "clm-comdiat-affirms-eucharist-body-blood"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-repentance",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "repentance-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "repentance-is-required",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "repentant-response",
+        "proposition_label": "Repentance is required in response to the proclamation",
+        "polarity_family": "repentance_response",
+        "description": "The proclamation of the kingdom calls hearers to repentance.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-repentance",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "commentary-on-diatessaron-ephrem is a primary text directly relevant to repentance-is-required."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-resurrection",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-resurrection",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "commentary-on-diatessaron-ephrem is a primary text directly relevant to bodies-will-be-raised-at-last-day."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-virgin-birth",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-virgin-birth",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "commentary-on-diatessaron-ephrem is a primary text directly relevant to jesus-born-of-virgin."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    }
+  ]
+}

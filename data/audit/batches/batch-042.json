@@ -1,0 +1,2462 @@
+{
+  "batch_id": "batch-042",
+  "queue": "0A",
+  "focus": "psg-origen-deprinc-pref-4(10), psg-acts-28-1-14(10)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-constantius-affirms-arabia",
+        "subject_type": "person",
+        "subject_id": "constantius-ii",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-arabia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "354",
+        "year_end": "356",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "constantius-ii",
+        "person_label": "Constantius II",
+        "name_alt": "",
+        "name_native": "Κωνστάντιος",
+        "birth_year_display": "317",
+        "death_year_display": "361",
+        "person_kind": "individual",
+        "notes": "Roman emperor 337–361; son of Constantine I; favored Arian/semi-Arian theology; exiled Athanasius; sent Theophilus the Indian on a diplomatic-missionary embassy to Himyar c. 354."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-arabia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "arabia-christianized",
+        "proposition_label": "Christian communities were established in the Arabian Peninsula",
+        "polarity_family": "arabia_christianized",
+        "description": "Christianity was established in the Arabian Peninsula including at Bostra (synod c. 244), and in Himyar through Theophilus the Indian's mission c. 354 (Philostorgius); Najran attested later.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-constantius-affirms-arabia",
+            "passage_id": "psg-vita-const-letter-constantius",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes constantius-ii's position on christianity-established-in-arabia."
+          },
+          "passage": {
+            "passage_id": "psg-vita-const-letter-constantius",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 31",
+            "excerpt": "Paraphrase: Emperor Constantius II wrote to the rulers of Aksum Ezana and Sayzana requesting that Frumentius be sent to Egypt to have his faith examined by George of Alexandria the Arian bishop replacing Athanasius. The rulers did not comply.",
+            "language": "English",
+            "passage_year": "356",
+            "url_override": "",
+            "notes": "Letter of Constantius II to Aksumite rulers; attests Frumentius as bishop and Arian pressure on Aksum."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-constantius-active-rome",
+        "clm-constantius-active-antioch",
+        "clm-constantius-coworker-theophilus",
+        "clm-constantius-participant-himyar-mission",
+        "clm-person-constantius-affirms-ethiopia"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-vita-const-letter-constantius": [
+          "clm-constantius-active-antioch",
+          "clm-constantius-active-rome",
+          "clm-person-constantius-affirms-ethiopia",
+          "clm-vita-const-affirms-ethiopia",
+          "clm-vita-const-affirms-universal",
+          "clm-vita-const-by-eusebius",
+          "clm-vita-const-mentions-arabia",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-mentions-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-vita-const-letter-constantius",
+        "PARAPHRASE_RISK:psg-vita-const-letter-constantius"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-vita-const-affirms-ethiopia",
+        "subject_type": "work",
+        "subject_id": "vita-constantini-eusebius",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-ethiopia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "339",
+        "year_end": "339",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "vita-constantini-eusebius",
+        "title_display": "Life of Constantine",
+        "title_original": "Βίος Κωνσταντίνου",
+        "work_type": "chronicle",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Eusebius of Caesarea's panegyrical biography of Emperor Constantine I (c. 337–339); four books covering Constantine's reign and religious policy; includes the letter of Constantius II to Ezana regarding Frumentius."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-ethiopia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "ethiopia-christianized",
+        "proposition_label": "Christianity was established in Ethiopia through Frumentius and the conversion of King Ezana",
+        "polarity_family": "ethiopia_christianized",
+        "description": "The Aksumite kingdom (Ethiopia) received Christianity through the mission of Frumentius, consecrated by Athanasius of Alexandria, who converted King Ezana c. 330; attested by Rufinus, Socrates, Sozomen.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-vita-const-affirms-ethiopia",
+            "passage_id": "psg-vita-const-letter-constantius",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-vita-const-letter-constantius",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 31",
+            "excerpt": "Paraphrase: Emperor Constantius II wrote to the rulers of Aksum Ezana and Sayzana requesting that Frumentius be sent to Egypt to have his faith examined by George of Alexandria the Arian bishop replacing Athanasius. The rulers did not comply.",
+            "language": "English",
+            "passage_year": "356",
+            "url_override": "",
+            "notes": "Letter of Constantius II to Aksumite rulers; attests Frumentius as bishop and Arian pressure on Aksum."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-vita-const-by-eusebius",
+        "clm-vita-const-written-caesarea",
+        "clm-vita-const-affirms-universal",
+        "clm-vita-const-mentions-arabia",
+        "clm-vita-const-mentions-ethiopia",
+        "clm-vita-const-mentions-india"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-vita-const-letter-constantius": [
+          "clm-constantius-active-antioch",
+          "clm-constantius-active-rome",
+          "clm-constantius-affirms-arabia",
+          "clm-person-constantius-affirms-ethiopia",
+          "clm-vita-const-affirms-universal",
+          "clm-vita-const-by-eusebius",
+          "clm-vita-const-mentions-arabia",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-mentions-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-vita-const-letter-constantius",
+        "PARAPHRASE_RISK:psg-vita-const-letter-constantius"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-constantius-active-antioch",
+        "subject_type": "person",
+        "subject_id": "constantius-ii",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "337",
+        "year_end": "361",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "constantius-ii",
+        "person_label": "Constantius II",
+        "name_alt": "",
+        "name_native": "Κωνστάντιος",
+        "birth_year_display": "317",
+        "death_year_display": "361",
+        "person_kind": "individual",
+        "notes": "Roman emperor 337–361; son of Constantine I; favored Arian/semi-Arian theology; exiled Athanasius; sent Theophilus the Indian on a diplomatic-missionary embassy to Himyar c. 354."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-constantius-active-antioch",
+            "passage_id": "psg-vita-const-letter-constantius",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests constantius-ii's activity in or near antioch."
+          },
+          "passage": {
+            "passage_id": "psg-vita-const-letter-constantius",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 31",
+            "excerpt": "Paraphrase: Emperor Constantius II wrote to the rulers of Aksum Ezana and Sayzana requesting that Frumentius be sent to Egypt to have his faith examined by George of Alexandria the Arian bishop replacing Athanasius. The rulers did not comply.",
+            "language": "English",
+            "passage_year": "356",
+            "url_override": "",
+            "notes": "Letter of Constantius II to Aksumite rulers; attests Frumentius as bishop and Arian pressure on Aksum."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-constantius-active-rome",
+        "clm-constantius-affirms-arabia",
+        "clm-constantius-coworker-theophilus",
+        "clm-constantius-participant-himyar-mission",
+        "clm-person-constantius-affirms-ethiopia"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-vita-const-letter-constantius": [
+          "clm-constantius-active-rome",
+          "clm-constantius-affirms-arabia",
+          "clm-person-constantius-affirms-ethiopia",
+          "clm-vita-const-affirms-ethiopia",
+          "clm-vita-const-affirms-universal",
+          "clm-vita-const-by-eusebius",
+          "clm-vita-const-mentions-arabia",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-mentions-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-vita-const-letter-constantius",
+        "PARAPHRASE_RISK:psg-vita-const-letter-constantius",
+        "PARAPHRASE_OMISSION:psg-vita-const-letter-constantius:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-vita-const-mentions-arabia",
+        "subject_type": "work",
+        "subject_id": "vita-constantini-eusebius",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-arabia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "339",
+        "year_end": "339",
+        "context_place_id": "caesarea",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "vita-constantini-eusebius",
+        "title_display": "Life of Constantine",
+        "title_original": "Βίος Κωνσταντίνου",
+        "work_type": "chronicle",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Eusebius of Caesarea's panegyrical biography of Emperor Constantine I (c. 337–339); four books covering Constantine's reign and religious policy; includes the letter of Constantius II to Ezana regarding Frumentius."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-arabia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "arabia-christianized",
+        "proposition_label": "Christian communities were established in the Arabian Peninsula",
+        "polarity_family": "arabia_christianized",
+        "description": "Christianity was established in the Arabian Peninsula including at Bostra (synod c. 244), and in Himyar through Theophilus the Indian's mission c. 354 (Philostorgius); Najran attested later.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-vita-const-mentions-arabia",
+            "passage_id": "psg-vita-const-letter-constantius",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-vita-const-letter-constantius",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 31",
+            "excerpt": "Paraphrase: Emperor Constantius II wrote to the rulers of Aksum Ezana and Sayzana requesting that Frumentius be sent to Egypt to have his faith examined by George of Alexandria the Arian bishop replacing Athanasius. The rulers did not comply.",
+            "language": "English",
+            "passage_year": "356",
+            "url_override": "",
+            "notes": "Letter of Constantius II to Aksumite rulers; attests Frumentius as bishop and Arian pressure on Aksum."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-vita-const-by-eusebius",
+        "clm-vita-const-written-caesarea",
+        "clm-vita-const-affirms-ethiopia",
+        "clm-vita-const-affirms-universal",
+        "clm-vita-const-mentions-ethiopia",
+        "clm-vita-const-mentions-india"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-vita-const-letter-constantius": [
+          "clm-constantius-active-antioch",
+          "clm-constantius-active-rome",
+          "clm-constantius-affirms-arabia",
+          "clm-person-constantius-affirms-ethiopia",
+          "clm-vita-const-affirms-ethiopia",
+          "clm-vita-const-affirms-universal",
+          "clm-vita-const-by-eusebius",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-mentions-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-vita-const-letter-constantius",
+        "PARAPHRASE_RISK:psg-vita-const-letter-constantius"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-constantius-active-rome",
+        "subject_type": "person",
+        "subject_id": "constantius-ii",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "337",
+        "year_end": "350",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "constantius-ii",
+        "person_label": "Constantius II",
+        "name_alt": "",
+        "name_native": "Κωνστάντιος",
+        "birth_year_display": "317",
+        "death_year_display": "361",
+        "person_kind": "individual",
+        "notes": "Roman emperor 337–361; son of Constantine I; favored Arian/semi-Arian theology; exiled Athanasius; sent Theophilus the Indian on a diplomatic-missionary embassy to Himyar c. 354."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-constantius-active-rome",
+            "passage_id": "psg-vita-const-letter-constantius",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests constantius-ii's activity in or near rome."
+          },
+          "passage": {
+            "passage_id": "psg-vita-const-letter-constantius",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 31",
+            "excerpt": "Paraphrase: Emperor Constantius II wrote to the rulers of Aksum Ezana and Sayzana requesting that Frumentius be sent to Egypt to have his faith examined by George of Alexandria the Arian bishop replacing Athanasius. The rulers did not comply.",
+            "language": "English",
+            "passage_year": "356",
+            "url_override": "",
+            "notes": "Letter of Constantius II to Aksumite rulers; attests Frumentius as bishop and Arian pressure on Aksum."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-constantius-active-antioch",
+        "clm-constantius-affirms-arabia",
+        "clm-constantius-coworker-theophilus",
+        "clm-constantius-participant-himyar-mission",
+        "clm-person-constantius-affirms-ethiopia"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-vita-const-letter-constantius": [
+          "clm-constantius-active-antioch",
+          "clm-constantius-affirms-arabia",
+          "clm-person-constantius-affirms-ethiopia",
+          "clm-vita-const-affirms-ethiopia",
+          "clm-vita-const-affirms-universal",
+          "clm-vita-const-by-eusebius",
+          "clm-vita-const-mentions-arabia",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-mentions-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-vita-const-letter-constantius",
+        "PARAPHRASE_RISK:psg-vita-const-letter-constantius",
+        "PARAPHRASE_OMISSION:psg-vita-const-letter-constantius:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-deprinc-affirms-rule-of-faith",
+        "subject_type": "work",
+        "subject_id": "de-principiis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-principiis",
+        "title_display": "De Principiis (On First Principles)",
+        "title_original": "Περὶ Ἀρχῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's systematic theological work composed in Alexandria c. 220–230; the first attempt at a comprehensive Christian theology; four books covering God and the Trinity, the created world, free will, and Scripture; source for the doctrines of eternal generation of the Son, pre-existence of souls, universal restoration (apokatastasis), and allegorical exegesis; preserved mostly through Rufinus's sanitized Latin translation and fragments in Justinian's condemnation."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-deprinc-affirms-rule-of-faith",
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Origen explicitly recites the apostolic rule of faith in the Preface."
+          },
+          "passage": {
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "source_id": "src-origen-de-principiis",
+            "locator_type": "source_ref",
+            "locator": "De Princ. Pref. 4",
+            "excerpt": "The following are the particular points which are clearly delivered in the teaching of the apostles: First, that there is one God who created and arranged all things; second, that Jesus Christ was begotten of the Father before all creatures, and after he had ministered to the Father in the creation of all things, in the last times emptied himself and was made man; third, that the Holy Spirit was associated in honour and dignity with the Father and the Son.",
+            "language": "English",
+            "passage_year": "225",
+            "url_override": "",
+            "notes": "Origen's rule of faith in the Preface to De Principiis; trinitarian formula and apostolic tradition"
+          },
+          "source": {
+            "source_id": "src-origen-de-principiis",
+            "work_id": "de-principiis",
+            "source_kind": "primary_text",
+            "title": "De Principiis (On First Principles)",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 220-230",
+            "year_start": "220",
+            "year_end": "230",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0412.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's systematic theology in Rufinus's Latin translation; ANF Vol. 4 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-principiis-develops-logos-preexistent",
+        "clm-deprinc-affirms-allegorical",
+        "clm-deprinc-affirms-baptism-regeneration",
+        "clm-deprinc-affirms-catechumenate",
+        "clm-deprinc-affirms-eternal-generation",
+        "clm-deprinc-affirms-free-will",
+        "clm-deprinc-affirms-incarnation",
+        "clm-deprinc-affirms-judgment",
+        "clm-deprinc-affirms-logos",
+        "clm-deprinc-affirms-ot-authority",
+        "clm-deprinc-affirms-perpetual-virginity",
+        "clm-deprinc-affirms-prayer",
+        "clm-deprinc-affirms-pre-existence-souls",
+        "clm-deprinc-affirms-resurrection",
+        "clm-deprinc-affirms-succession",
+        "clm-deprinc-affirms-trinity",
+        "clm-deprinc-affirms-universal-restoration",
+        "clm-deprinc-affirms-virgin-birth",
+        "clm-deprincipiis-written-at-alexandria",
+        "clm-deprincipiis-by-origen"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-origen-deprinc-pref-4": [
+          "clm-deprinc-affirms-baptism-regeneration",
+          "clm-deprinc-affirms-catechumenate",
+          "clm-deprinc-affirms-incarnation",
+          "clm-deprinc-affirms-ot-authority",
+          "clm-deprinc-affirms-perpetual-virginity",
+          "clm-deprinc-affirms-succession",
+          "clm-deprinc-affirms-trinity",
+          "clm-deprinc-affirms-virgin-birth",
+          "clm-deprincipiis-by-origen"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-deprinc-affirms-virgin-birth",
+        "subject_type": "work",
+        "subject_id": "de-principiis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-principiis",
+        "title_display": "De Principiis (On First Principles)",
+        "title_original": "Περὶ Ἀρχῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's systematic theological work composed in Alexandria c. 220–230; the first attempt at a comprehensive Christian theology; four books covering God and the Trinity, the created world, free will, and Scripture; source for the doctrines of eternal generation of the Son, pre-existence of souls, universal restoration (apokatastasis), and allegorical exegesis; preserved mostly through Rufinus's sanitized Latin translation and fragments in Justinian's condemnation."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-deprinc-affirms-virgin-birth",
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Rule of faith implies virgin birth in incarnation formula."
+          },
+          "passage": {
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "source_id": "src-origen-de-principiis",
+            "locator_type": "source_ref",
+            "locator": "De Princ. Pref. 4",
+            "excerpt": "The following are the particular points which are clearly delivered in the teaching of the apostles: First, that there is one God who created and arranged all things; second, that Jesus Christ was begotten of the Father before all creatures, and after he had ministered to the Father in the creation of all things, in the last times emptied himself and was made man; third, that the Holy Spirit was associated in honour and dignity with the Father and the Son.",
+            "language": "English",
+            "passage_year": "225",
+            "url_override": "",
+            "notes": "Origen's rule of faith in the Preface to De Principiis; trinitarian formula and apostolic tradition"
+          },
+          "source": {
+            "source_id": "src-origen-de-principiis",
+            "work_id": "de-principiis",
+            "source_kind": "primary_text",
+            "title": "De Principiis (On First Principles)",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 220-230",
+            "year_start": "220",
+            "year_end": "230",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0412.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's systematic theology in Rufinus's Latin translation; ANF Vol. 4 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-principiis-develops-logos-preexistent",
+        "clm-deprinc-affirms-allegorical",
+        "clm-deprinc-affirms-baptism-regeneration",
+        "clm-deprinc-affirms-catechumenate",
+        "clm-deprinc-affirms-eternal-generation",
+        "clm-deprinc-affirms-free-will",
+        "clm-deprinc-affirms-incarnation",
+        "clm-deprinc-affirms-judgment",
+        "clm-deprinc-affirms-logos",
+        "clm-deprinc-affirms-ot-authority",
+        "clm-deprinc-affirms-perpetual-virginity",
+        "clm-deprinc-affirms-prayer",
+        "clm-deprinc-affirms-pre-existence-souls",
+        "clm-deprinc-affirms-resurrection",
+        "clm-deprinc-affirms-rule-of-faith",
+        "clm-deprinc-affirms-succession",
+        "clm-deprinc-affirms-trinity",
+        "clm-deprinc-affirms-universal-restoration",
+        "clm-deprincipiis-written-at-alexandria",
+        "clm-deprincipiis-by-origen"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-origen-deprinc-pref-4": [
+          "clm-deprinc-affirms-baptism-regeneration",
+          "clm-deprinc-affirms-catechumenate",
+          "clm-deprinc-affirms-incarnation",
+          "clm-deprinc-affirms-ot-authority",
+          "clm-deprinc-affirms-perpetual-virginity",
+          "clm-deprinc-affirms-rule-of-faith",
+          "clm-deprinc-affirms-succession",
+          "clm-deprinc-affirms-trinity",
+          "clm-deprincipiis-by-origen"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-deprinc-affirms-catechumenate",
+        "subject_type": "work",
+        "subject_id": "de-principiis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "catechumenate-precedes-baptism",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-principiis",
+        "title_display": "De Principiis (On First Principles)",
+        "title_original": "Περὶ Ἀρχῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's systematic theological work composed in Alexandria c. 220–230; the first attempt at a comprehensive Christian theology; four books covering God and the Trinity, the created world, free will, and Scripture; source for the doctrines of eternal generation of the Son, pre-existence of souls, universal restoration (apokatastasis), and allegorical exegesis; preserved mostly through Rufinus's sanitized Latin translation and fragments in Justinian's condemnation."
+      },
+      "object_entity": {
+        "proposition_id": "catechumenate-precedes-baptism",
+        "topic_id": "baptism-practice",
+        "dimension_id": "catechumenate",
+        "proposition_label": "A formal catechumenate precedes baptism",
+        "polarity_family": "",
+        "description": "Candidates for baptism undergo a structured period of pre-baptismal instruction, examination, and moral formation (the catechumenate) before being admitted to the sacrament.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-deprinc-affirms-catechumenate",
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Rule of faith implies catechetical instruction."
+          },
+          "passage": {
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "source_id": "src-origen-de-principiis",
+            "locator_type": "source_ref",
+            "locator": "De Princ. Pref. 4",
+            "excerpt": "The following are the particular points which are clearly delivered in the teaching of the apostles: First, that there is one God who created and arranged all things; second, that Jesus Christ was begotten of the Father before all creatures, and after he had ministered to the Father in the creation of all things, in the last times emptied himself and was made man; third, that the Holy Spirit was associated in honour and dignity with the Father and the Son.",
+            "language": "English",
+            "passage_year": "225",
+            "url_override": "",
+            "notes": "Origen's rule of faith in the Preface to De Principiis; trinitarian formula and apostolic tradition"
+          },
+          "source": {
+            "source_id": "src-origen-de-principiis",
+            "work_id": "de-principiis",
+            "source_kind": "primary_text",
+            "title": "De Principiis (On First Principles)",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 220-230",
+            "year_start": "220",
+            "year_end": "230",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0412.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's systematic theology in Rufinus's Latin translation; ANF Vol. 4 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-principiis-develops-logos-preexistent",
+        "clm-deprinc-affirms-allegorical",
+        "clm-deprinc-affirms-baptism-regeneration",
+        "clm-deprinc-affirms-eternal-generation",
+        "clm-deprinc-affirms-free-will",
+        "clm-deprinc-affirms-incarnation",
+        "clm-deprinc-affirms-judgment",
+        "clm-deprinc-affirms-logos",
+        "clm-deprinc-affirms-ot-authority",
+        "clm-deprinc-affirms-perpetual-virginity",
+        "clm-deprinc-affirms-prayer",
+        "clm-deprinc-affirms-pre-existence-souls",
+        "clm-deprinc-affirms-resurrection",
+        "clm-deprinc-affirms-rule-of-faith",
+        "clm-deprinc-affirms-succession",
+        "clm-deprinc-affirms-trinity",
+        "clm-deprinc-affirms-universal-restoration",
+        "clm-deprinc-affirms-virgin-birth",
+        "clm-deprincipiis-written-at-alexandria",
+        "clm-deprincipiis-by-origen"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-origen-deprinc-pref-4": [
+          "clm-deprinc-affirms-baptism-regeneration",
+          "clm-deprinc-affirms-incarnation",
+          "clm-deprinc-affirms-ot-authority",
+          "clm-deprinc-affirms-perpetual-virginity",
+          "clm-deprinc-affirms-rule-of-faith",
+          "clm-deprinc-affirms-succession",
+          "clm-deprinc-affirms-trinity",
+          "clm-deprinc-affirms-virgin-birth",
+          "clm-deprincipiis-by-origen"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-deprinc-affirms-trinity",
+        "subject_type": "work",
+        "subject_id": "de-principiis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "trinity-is-three-persons-one-substance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-principiis",
+        "title_display": "De Principiis (On First Principles)",
+        "title_original": "Περὶ Ἀρχῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's systematic theological work composed in Alexandria c. 220–230; the first attempt at a comprehensive Christian theology; four books covering God and the Trinity, the created world, free will, and Scripture; source for the doctrines of eternal generation of the Son, pre-existence of souls, universal restoration (apokatastasis), and allegorical exegesis; preserved mostly through Rufinus's sanitized Latin translation and fragments in Justinian's condemnation."
+      },
+      "object_entity": {
+        "proposition_id": "trinity-is-three-persons-one-substance",
+        "topic_id": "trinitarian-theology",
+        "dimension_id": "trinitarian-formula",
+        "proposition_label": "God is three persons — Father, Son, and Holy Spirit — in one substance",
+        "polarity_family": "trinitarian_formula",
+        "description": "The one God subsists in three persons (personae) — Father, Son, and Holy Spirit — who share one substance (substantia); the Son proceeds from the Father and the Spirit from both, without dividing the divine substance.",
+        "notes": "Trinitarian formula"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-deprinc-affirms-trinity",
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Trinitarian formula stated in the Preface rule of faith."
+          },
+          "passage": {
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "source_id": "src-origen-de-principiis",
+            "locator_type": "source_ref",
+            "locator": "De Princ. Pref. 4",
+            "excerpt": "The following are the particular points which are clearly delivered in the teaching of the apostles: First, that there is one God who created and arranged all things; second, that Jesus Christ was begotten of the Father before all creatures, and after he had ministered to the Father in the creation of all things, in the last times emptied himself and was made man; third, that the Holy Spirit was associated in honour and dignity with the Father and the Son.",
+            "language": "English",
+            "passage_year": "225",
+            "url_override": "",
+            "notes": "Origen's rule of faith in the Preface to De Principiis; trinitarian formula and apostolic tradition"
+          },
+          "source": {
+            "source_id": "src-origen-de-principiis",
+            "work_id": "de-principiis",
+            "source_kind": "primary_text",
+            "title": "De Principiis (On First Principles)",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 220-230",
+            "year_start": "220",
+            "year_end": "230",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0412.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's systematic theology in Rufinus's Latin translation; ANF Vol. 4 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-principiis-develops-logos-preexistent",
+        "clm-deprinc-affirms-allegorical",
+        "clm-deprinc-affirms-baptism-regeneration",
+        "clm-deprinc-affirms-catechumenate",
+        "clm-deprinc-affirms-eternal-generation",
+        "clm-deprinc-affirms-free-will",
+        "clm-deprinc-affirms-incarnation",
+        "clm-deprinc-affirms-judgment",
+        "clm-deprinc-affirms-logos",
+        "clm-deprinc-affirms-ot-authority",
+        "clm-deprinc-affirms-perpetual-virginity",
+        "clm-deprinc-affirms-prayer",
+        "clm-deprinc-affirms-pre-existence-souls",
+        "clm-deprinc-affirms-resurrection",
+        "clm-deprinc-affirms-rule-of-faith",
+        "clm-deprinc-affirms-succession",
+        "clm-deprinc-affirms-universal-restoration",
+        "clm-deprinc-affirms-virgin-birth",
+        "clm-deprincipiis-written-at-alexandria",
+        "clm-deprincipiis-by-origen"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-origen-deprinc-pref-4": [
+          "clm-deprinc-affirms-baptism-regeneration",
+          "clm-deprinc-affirms-catechumenate",
+          "clm-deprinc-affirms-incarnation",
+          "clm-deprinc-affirms-ot-authority",
+          "clm-deprinc-affirms-perpetual-virginity",
+          "clm-deprinc-affirms-rule-of-faith",
+          "clm-deprinc-affirms-succession",
+          "clm-deprinc-affirms-virgin-birth",
+          "clm-deprincipiis-by-origen"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-deprinc-affirms-perpetual-virginity",
+        "subject_type": "work",
+        "subject_id": "de-principiis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "perpetual-virginity-of-mary",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-principiis",
+        "title_display": "De Principiis (On First Principles)",
+        "title_original": "Περὶ Ἀρχῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's systematic theological work composed in Alexandria c. 220–230; the first attempt at a comprehensive Christian theology; four books covering God and the Trinity, the created world, free will, and Scripture; source for the doctrines of eternal generation of the Son, pre-existence of souls, universal restoration (apokatastasis), and allegorical exegesis; preserved mostly through Rufinus's sanitized Latin translation and fragments in Justinian's condemnation."
+      },
+      "object_entity": {
+        "proposition_id": "perpetual-virginity-of-mary",
+        "topic_id": "mariology",
+        "dimension_id": "perpetual-virginity",
+        "proposition_label": "Mary remained ever-virgin — before, during, and after the birth of Jesus",
+        "polarity_family": "perpetual_virginity",
+        "description": "The mother of Jesus was a virgin not only in conceiving him by the Holy Spirit but remained perpetually a virgin; the 'brothers' of Jesus are not biological children of Mary.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-deprinc-affirms-perpetual-virginity",
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.4",
+            "notes": "Implied in Origen's Mariology developed elsewhere."
+          },
+          "passage": {
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "source_id": "src-origen-de-principiis",
+            "locator_type": "source_ref",
+            "locator": "De Princ. Pref. 4",
+            "excerpt": "The following are the particular points which are clearly delivered in the teaching of the apostles: First, that there is one God who created and arranged all things; second, that Jesus Christ was begotten of the Father before all creatures, and after he had ministered to the Father in the creation of all things, in the last times emptied himself and was made man; third, that the Holy Spirit was associated in honour and dignity with the Father and the Son.",
+            "language": "English",
+            "passage_year": "225",
+            "url_override": "",
+            "notes": "Origen's rule of faith in the Preface to De Principiis; trinitarian formula and apostolic tradition"
+          },
+          "source": {
+            "source_id": "src-origen-de-principiis",
+            "work_id": "de-principiis",
+            "source_kind": "primary_text",
+            "title": "De Principiis (On First Principles)",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 220-230",
+            "year_start": "220",
+            "year_end": "230",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0412.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's systematic theology in Rufinus's Latin translation; ANF Vol. 4 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-principiis-develops-logos-preexistent",
+        "clm-deprinc-affirms-allegorical",
+        "clm-deprinc-affirms-baptism-regeneration",
+        "clm-deprinc-affirms-catechumenate",
+        "clm-deprinc-affirms-eternal-generation",
+        "clm-deprinc-affirms-free-will",
+        "clm-deprinc-affirms-incarnation",
+        "clm-deprinc-affirms-judgment",
+        "clm-deprinc-affirms-logos",
+        "clm-deprinc-affirms-ot-authority",
+        "clm-deprinc-affirms-prayer",
+        "clm-deprinc-affirms-pre-existence-souls",
+        "clm-deprinc-affirms-resurrection",
+        "clm-deprinc-affirms-rule-of-faith",
+        "clm-deprinc-affirms-succession",
+        "clm-deprinc-affirms-trinity",
+        "clm-deprinc-affirms-universal-restoration",
+        "clm-deprinc-affirms-virgin-birth",
+        "clm-deprincipiis-written-at-alexandria",
+        "clm-deprincipiis-by-origen"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-origen-deprinc-pref-4": [
+          "clm-deprinc-affirms-baptism-regeneration",
+          "clm-deprinc-affirms-catechumenate",
+          "clm-deprinc-affirms-incarnation",
+          "clm-deprinc-affirms-ot-authority",
+          "clm-deprinc-affirms-rule-of-faith",
+          "clm-deprinc-affirms-succession",
+          "clm-deprinc-affirms-trinity",
+          "clm-deprinc-affirms-virgin-birth",
+          "clm-deprincipiis-by-origen"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-deprinc-affirms-ot-authority",
+        "subject_type": "work",
+        "subject_id": "de-principiis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-principiis",
+        "title_display": "De Principiis (On First Principles)",
+        "title_original": "Περὶ Ἀρχῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's systematic theological work composed in Alexandria c. 220–230; the first attempt at a comprehensive Christian theology; four books covering God and the Trinity, the created world, free will, and Scripture; source for the doctrines of eternal generation of the Son, pre-existence of souls, universal restoration (apokatastasis), and allegorical exegesis; preserved mostly through Rufinus's sanitized Latin translation and fragments in Justinian's condemnation."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-deprinc-affirms-ot-authority",
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Rule of faith presupposes OT authority."
+          },
+          "passage": {
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "source_id": "src-origen-de-principiis",
+            "locator_type": "source_ref",
+            "locator": "De Princ. Pref. 4",
+            "excerpt": "The following are the particular points which are clearly delivered in the teaching of the apostles: First, that there is one God who created and arranged all things; second, that Jesus Christ was begotten of the Father before all creatures, and after he had ministered to the Father in the creation of all things, in the last times emptied himself and was made man; third, that the Holy Spirit was associated in honour and dignity with the Father and the Son.",
+            "language": "English",
+            "passage_year": "225",
+            "url_override": "",
+            "notes": "Origen's rule of faith in the Preface to De Principiis; trinitarian formula and apostolic tradition"
+          },
+          "source": {
+            "source_id": "src-origen-de-principiis",
+            "work_id": "de-principiis",
+            "source_kind": "primary_text",
+            "title": "De Principiis (On First Principles)",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 220-230",
+            "year_start": "220",
+            "year_end": "230",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0412.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's systematic theology in Rufinus's Latin translation; ANF Vol. 4 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-principiis-develops-logos-preexistent",
+        "clm-deprinc-affirms-allegorical",
+        "clm-deprinc-affirms-baptism-regeneration",
+        "clm-deprinc-affirms-catechumenate",
+        "clm-deprinc-affirms-eternal-generation",
+        "clm-deprinc-affirms-free-will",
+        "clm-deprinc-affirms-incarnation",
+        "clm-deprinc-affirms-judgment",
+        "clm-deprinc-affirms-logos",
+        "clm-deprinc-affirms-perpetual-virginity",
+        "clm-deprinc-affirms-prayer",
+        "clm-deprinc-affirms-pre-existence-souls",
+        "clm-deprinc-affirms-resurrection",
+        "clm-deprinc-affirms-rule-of-faith",
+        "clm-deprinc-affirms-succession",
+        "clm-deprinc-affirms-trinity",
+        "clm-deprinc-affirms-universal-restoration",
+        "clm-deprinc-affirms-virgin-birth",
+        "clm-deprincipiis-written-at-alexandria",
+        "clm-deprincipiis-by-origen"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-origen-deprinc-pref-4": [
+          "clm-deprinc-affirms-baptism-regeneration",
+          "clm-deprinc-affirms-catechumenate",
+          "clm-deprinc-affirms-incarnation",
+          "clm-deprinc-affirms-perpetual-virginity",
+          "clm-deprinc-affirms-rule-of-faith",
+          "clm-deprinc-affirms-succession",
+          "clm-deprinc-affirms-trinity",
+          "clm-deprinc-affirms-virgin-birth",
+          "clm-deprincipiis-by-origen"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-deprinc-affirms-baptism-regeneration",
+        "subject_type": "work",
+        "subject_id": "de-principiis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-effects-regeneration",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-principiis",
+        "title_display": "De Principiis (On First Principles)",
+        "title_original": "Περὶ Ἀρχῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's systematic theological work composed in Alexandria c. 220–230; the first attempt at a comprehensive Christian theology; four books covering God and the Trinity, the created world, free will, and Scripture; source for the doctrines of eternal generation of the Son, pre-existence of souls, universal restoration (apokatastasis), and allegorical exegesis; preserved mostly through Rufinus's sanitized Latin translation and fragments in Justinian's condemnation."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-effects-regeneration",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-regeneration",
+        "proposition_label": "Baptism effects spiritual regeneration",
+        "polarity_family": "baptism_regeneration",
+        "description": "Baptism is not merely symbolic but effects a new birth or regeneration of the recipient.",
+        "notes": "Baptismal regeneration"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-deprinc-affirms-baptism-regeneration",
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Baptismal regeneration implied in the rule of faith."
+          },
+          "passage": {
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "source_id": "src-origen-de-principiis",
+            "locator_type": "source_ref",
+            "locator": "De Princ. Pref. 4",
+            "excerpt": "The following are the particular points which are clearly delivered in the teaching of the apostles: First, that there is one God who created and arranged all things; second, that Jesus Christ was begotten of the Father before all creatures, and after he had ministered to the Father in the creation of all things, in the last times emptied himself and was made man; third, that the Holy Spirit was associated in honour and dignity with the Father and the Son.",
+            "language": "English",
+            "passage_year": "225",
+            "url_override": "",
+            "notes": "Origen's rule of faith in the Preface to De Principiis; trinitarian formula and apostolic tradition"
+          },
+          "source": {
+            "source_id": "src-origen-de-principiis",
+            "work_id": "de-principiis",
+            "source_kind": "primary_text",
+            "title": "De Principiis (On First Principles)",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 220-230",
+            "year_start": "220",
+            "year_end": "230",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0412.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's systematic theology in Rufinus's Latin translation; ANF Vol. 4 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-principiis-develops-logos-preexistent",
+        "clm-deprinc-affirms-allegorical",
+        "clm-deprinc-affirms-catechumenate",
+        "clm-deprinc-affirms-eternal-generation",
+        "clm-deprinc-affirms-free-will",
+        "clm-deprinc-affirms-incarnation",
+        "clm-deprinc-affirms-judgment",
+        "clm-deprinc-affirms-logos",
+        "clm-deprinc-affirms-ot-authority",
+        "clm-deprinc-affirms-perpetual-virginity",
+        "clm-deprinc-affirms-prayer",
+        "clm-deprinc-affirms-pre-existence-souls",
+        "clm-deprinc-affirms-resurrection",
+        "clm-deprinc-affirms-rule-of-faith",
+        "clm-deprinc-affirms-succession",
+        "clm-deprinc-affirms-trinity",
+        "clm-deprinc-affirms-universal-restoration",
+        "clm-deprinc-affirms-virgin-birth",
+        "clm-deprincipiis-written-at-alexandria",
+        "clm-deprincipiis-by-origen"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-origen-deprinc-pref-4": [
+          "clm-deprinc-affirms-catechumenate",
+          "clm-deprinc-affirms-incarnation",
+          "clm-deprinc-affirms-ot-authority",
+          "clm-deprinc-affirms-perpetual-virginity",
+          "clm-deprinc-affirms-rule-of-faith",
+          "clm-deprinc-affirms-succession",
+          "clm-deprinc-affirms-trinity",
+          "clm-deprinc-affirms-virgin-birth",
+          "clm-deprincipiis-by-origen"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-deprinc-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "de-principiis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-principiis",
+        "title_display": "De Principiis (On First Principles)",
+        "title_original": "Περὶ Ἀρχῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's systematic theological work composed in Alexandria c. 220–230; the first attempt at a comprehensive Christian theology; four books covering God and the Trinity, the created world, free will, and Scripture; source for the doctrines of eternal generation of the Son, pre-existence of souls, universal restoration (apokatastasis), and allegorical exegesis; preserved mostly through Rufinus's sanitized Latin translation and fragments in Justinian's condemnation."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-deprinc-affirms-incarnation",
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Rule of faith includes Christ emptying himself and becoming man."
+          },
+          "passage": {
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "source_id": "src-origen-de-principiis",
+            "locator_type": "source_ref",
+            "locator": "De Princ. Pref. 4",
+            "excerpt": "The following are the particular points which are clearly delivered in the teaching of the apostles: First, that there is one God who created and arranged all things; second, that Jesus Christ was begotten of the Father before all creatures, and after he had ministered to the Father in the creation of all things, in the last times emptied himself and was made man; third, that the Holy Spirit was associated in honour and dignity with the Father and the Son.",
+            "language": "English",
+            "passage_year": "225",
+            "url_override": "",
+            "notes": "Origen's rule of faith in the Preface to De Principiis; trinitarian formula and apostolic tradition"
+          },
+          "source": {
+            "source_id": "src-origen-de-principiis",
+            "work_id": "de-principiis",
+            "source_kind": "primary_text",
+            "title": "De Principiis (On First Principles)",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 220-230",
+            "year_start": "220",
+            "year_end": "230",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0412.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's systematic theology in Rufinus's Latin translation; ANF Vol. 4 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-principiis-develops-logos-preexistent",
+        "clm-deprinc-affirms-allegorical",
+        "clm-deprinc-affirms-baptism-regeneration",
+        "clm-deprinc-affirms-catechumenate",
+        "clm-deprinc-affirms-eternal-generation",
+        "clm-deprinc-affirms-free-will",
+        "clm-deprinc-affirms-judgment",
+        "clm-deprinc-affirms-logos",
+        "clm-deprinc-affirms-ot-authority",
+        "clm-deprinc-affirms-perpetual-virginity",
+        "clm-deprinc-affirms-prayer",
+        "clm-deprinc-affirms-pre-existence-souls",
+        "clm-deprinc-affirms-resurrection",
+        "clm-deprinc-affirms-rule-of-faith",
+        "clm-deprinc-affirms-succession",
+        "clm-deprinc-affirms-trinity",
+        "clm-deprinc-affirms-universal-restoration",
+        "clm-deprinc-affirms-virgin-birth",
+        "clm-deprincipiis-written-at-alexandria",
+        "clm-deprincipiis-by-origen"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-origen-deprinc-pref-4": [
+          "clm-deprinc-affirms-baptism-regeneration",
+          "clm-deprinc-affirms-catechumenate",
+          "clm-deprinc-affirms-ot-authority",
+          "clm-deprinc-affirms-perpetual-virginity",
+          "clm-deprinc-affirms-rule-of-faith",
+          "clm-deprinc-affirms-succession",
+          "clm-deprinc-affirms-trinity",
+          "clm-deprinc-affirms-virgin-birth",
+          "clm-deprincipiis-by-origen"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-deprinc-affirms-succession",
+        "subject_type": "work",
+        "subject_id": "de-principiis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-principiis",
+        "title_display": "De Principiis (On First Principles)",
+        "title_original": "Περὶ Ἀρχῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's systematic theological work composed in Alexandria c. 220–230; the first attempt at a comprehensive Christian theology; four books covering God and the Trinity, the created world, free will, and Scripture; source for the doctrines of eternal generation of the Son, pre-existence of souls, universal restoration (apokatastasis), and allegorical exegesis; preserved mostly through Rufinus's sanitized Latin translation and fragments in Justinian's condemnation."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-deprinc-affirms-succession",
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Apostolic teaching transmission implies succession."
+          },
+          "passage": {
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "source_id": "src-origen-de-principiis",
+            "locator_type": "source_ref",
+            "locator": "De Princ. Pref. 4",
+            "excerpt": "The following are the particular points which are clearly delivered in the teaching of the apostles: First, that there is one God who created and arranged all things; second, that Jesus Christ was begotten of the Father before all creatures, and after he had ministered to the Father in the creation of all things, in the last times emptied himself and was made man; third, that the Holy Spirit was associated in honour and dignity with the Father and the Son.",
+            "language": "English",
+            "passage_year": "225",
+            "url_override": "",
+            "notes": "Origen's rule of faith in the Preface to De Principiis; trinitarian formula and apostolic tradition"
+          },
+          "source": {
+            "source_id": "src-origen-de-principiis",
+            "work_id": "de-principiis",
+            "source_kind": "primary_text",
+            "title": "De Principiis (On First Principles)",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 220-230",
+            "year_start": "220",
+            "year_end": "230",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0412.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's systematic theology in Rufinus's Latin translation; ANF Vol. 4 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-principiis-develops-logos-preexistent",
+        "clm-deprinc-affirms-allegorical",
+        "clm-deprinc-affirms-baptism-regeneration",
+        "clm-deprinc-affirms-catechumenate",
+        "clm-deprinc-affirms-eternal-generation",
+        "clm-deprinc-affirms-free-will",
+        "clm-deprinc-affirms-incarnation",
+        "clm-deprinc-affirms-judgment",
+        "clm-deprinc-affirms-logos",
+        "clm-deprinc-affirms-ot-authority",
+        "clm-deprinc-affirms-perpetual-virginity",
+        "clm-deprinc-affirms-prayer",
+        "clm-deprinc-affirms-pre-existence-souls",
+        "clm-deprinc-affirms-resurrection",
+        "clm-deprinc-affirms-rule-of-faith",
+        "clm-deprinc-affirms-trinity",
+        "clm-deprinc-affirms-universal-restoration",
+        "clm-deprinc-affirms-virgin-birth",
+        "clm-deprincipiis-written-at-alexandria",
+        "clm-deprincipiis-by-origen"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-origen-deprinc-pref-4": [
+          "clm-deprinc-affirms-baptism-regeneration",
+          "clm-deprinc-affirms-catechumenate",
+          "clm-deprinc-affirms-incarnation",
+          "clm-deprinc-affirms-ot-authority",
+          "clm-deprinc-affirms-perpetual-virginity",
+          "clm-deprinc-affirms-rule-of-faith",
+          "clm-deprinc-affirms-trinity",
+          "clm-deprinc-affirms-virgin-birth",
+          "clm-deprincipiis-by-origen"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-deprincipiis-by-origen",
+        "subject_type": "work",
+        "subject_id": "de-principiis",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "origen-of-alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-principiis",
+        "title_display": "De Principiis (On First Principles)",
+        "title_original": "Περὶ Ἀρχῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's systematic theological work composed in Alexandria c. 220–230; the first attempt at a comprehensive Christian theology; four books covering God and the Trinity, the created world, free will, and Scripture; source for the doctrines of eternal generation of the Son, pre-existence of souls, universal restoration (apokatastasis), and allegorical exegesis; preserved mostly through Rufinus's sanitized Latin translation and fragments in Justinian's condemnation."
+      },
+      "object_entity": {
+        "person_id": "origen-of-alexandria",
+        "person_label": "Origen of Alexandria",
+        "name_alt": "Origen, Adamantius",
+        "name_native": "Ὠριγένης",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Leading Alexandrian theologian and biblical scholar; student of Clement of Alexandria and eventual head of the Catechetical School. Prolific author covering exegesis, apologetics, and systematic theology. Active in Alexandria (c. 202–232) then Caesarea."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-deprincipiis-by-origen",
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "De Principiis explicitly by Origen."
+          },
+          "passage": {
+            "passage_id": "psg-origen-deprinc-pref-4",
+            "source_id": "src-origen-de-principiis",
+            "locator_type": "source_ref",
+            "locator": "De Princ. Pref. 4",
+            "excerpt": "The following are the particular points which are clearly delivered in the teaching of the apostles: First, that there is one God who created and arranged all things; second, that Jesus Christ was begotten of the Father before all creatures, and after he had ministered to the Father in the creation of all things, in the last times emptied himself and was made man; third, that the Holy Spirit was associated in honour and dignity with the Father and the Son.",
+            "language": "English",
+            "passage_year": "225",
+            "url_override": "",
+            "notes": "Origen's rule of faith in the Preface to De Principiis; trinitarian formula and apostolic tradition"
+          },
+          "source": {
+            "source_id": "src-origen-de-principiis",
+            "work_id": "de-principiis",
+            "source_kind": "primary_text",
+            "title": "De Principiis (On First Principles)",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 220-230",
+            "year_start": "220",
+            "year_end": "230",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0412.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's systematic theology in Rufinus's Latin translation; ANF Vol. 4 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-principiis-develops-logos-preexistent",
+        "clm-deprinc-affirms-allegorical",
+        "clm-deprinc-affirms-baptism-regeneration",
+        "clm-deprinc-affirms-catechumenate",
+        "clm-deprinc-affirms-eternal-generation",
+        "clm-deprinc-affirms-free-will",
+        "clm-deprinc-affirms-incarnation",
+        "clm-deprinc-affirms-judgment",
+        "clm-deprinc-affirms-logos",
+        "clm-deprinc-affirms-ot-authority",
+        "clm-deprinc-affirms-perpetual-virginity",
+        "clm-deprinc-affirms-prayer",
+        "clm-deprinc-affirms-pre-existence-souls",
+        "clm-deprinc-affirms-resurrection",
+        "clm-deprinc-affirms-rule-of-faith",
+        "clm-deprinc-affirms-succession",
+        "clm-deprinc-affirms-trinity",
+        "clm-deprinc-affirms-universal-restoration",
+        "clm-deprinc-affirms-virgin-birth",
+        "clm-deprincipiis-written-at-alexandria"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-origen-deprinc-pref-4": [
+          "clm-deprinc-affirms-baptism-regeneration",
+          "clm-deprinc-affirms-catechumenate",
+          "clm-deprinc-affirms-incarnation",
+          "clm-deprinc-affirms-ot-authority",
+          "clm-deprinc-affirms-perpetual-virginity",
+          "clm-deprinc-affirms-rule-of-faith",
+          "clm-deprinc-affirms-succession",
+          "clm-deprinc-affirms-trinity",
+          "clm-deprinc-affirms-virgin-birth"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-active-puteoli",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "puteoli",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T05:50:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "place_id": "puteoli",
+        "place_label": "Puteoli",
+        "place_label_modern": "Pozzuoli",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.8230",
+        "lon": "14.1220",
+        "location_precision": "approx_city",
+        "modern_country_label": "Italy",
+        "notes": "Italian port where Paul finds believers on the approach to Rome."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-active-puteoli",
+            "passage_id": "psg-acts-28-1-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-28-1-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.28.1-14",
+            "excerpt": "Paraphrase: Paul is received on Malta and then sails onward by way of Syracuse, Rhegium, and Puteoli toward Rome.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-acts-28-1-14": [
+          "clm-disciples-at-malta",
+          "clm-group-disciples-puteoli",
+          "clm-paul-active-malta",
+          "clm-paul-active-rhegium",
+          "clm-paul-active-syracuse",
+          "clm-place-malta-attested",
+          "clm-place-puteoli-attested",
+          "clm-place-rhegium-attested",
+          "clm-place-syracuse-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-28-1-14"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-disciples-at-malta",
+        "subject_type": "group",
+        "subject_id": "disciples-of-jesus",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "malta",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "object_entity": {
+        "place_id": "malta",
+        "place_label": "Malta",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "35.9375",
+        "lon": "14.3754",
+        "location_precision": "approx_region",
+        "modern_country_label": "Malta",
+        "notes": "Island where Paul is shipwrecked and received hospitably on the voyage to Rome."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-disciples-at-malta",
+            "passage_id": "psg-acts-28-1-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts records disciples/missionaries present at this location."
+          },
+          "passage": {
+            "passage_id": "psg-acts-28-1-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.28.1-14",
+            "excerpt": "Paraphrase: Paul is received on Malta and then sails onward by way of Syracuse, Rhegium, and Puteoli toward Rome.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-group-disciples-galilee",
+        "clm-group-disciples-judea",
+        "clm-disciples-at-jerusalem-early",
+        "clm-group-disciples-samaria",
+        "clm-disciples-at-damascus",
+        "clm-group-disciples-joppa",
+        "clm-disciples-at-lydda",
+        "clm-group-disciples-caesarea",
+        "clm-disciples-at-antioch",
+        "clm-group-disciples-paphos",
+        "clm-disciples-at-philippi",
+        "clm-disciples-at-thessalonica",
+        "clm-group-disciples-rome",
+        "clm-group-disciples-athens",
+        "clm-disciples-at-corinth",
+        "clm-group-disciples-ephesus",
+        "clm-group-disciples-achaia",
+        "clm-group-disciples-troas",
+        "clm-group-disciples-tyre",
+        "clm-disciples-at-sidon",
+        "clm-group-disciples-puteoli",
+        "clm-disciples-at-colossae",
+        "clm-disciples-at-laodicea",
+        "clm-group-disciples-hierapolis",
+        "clm-group-disciples-asia",
+        "clm-group-disciples-bithynia",
+        "clm-group-disciples-cappadocia",
+        "clm-group-disciples-galatia",
+        "clm-group-disciples-pontus",
+        "clm-group-disciples-crete"
+      ],
+      "sibling_count": 30,
+      "passage_co_users": {
+        "psg-acts-28-1-14": [
+          "clm-group-disciples-puteoli",
+          "clm-paul-active-malta",
+          "clm-paul-active-puteoli",
+          "clm-paul-active-rhegium",
+          "clm-paul-active-syracuse",
+          "clm-place-malta-attested",
+          "clm-place-puteoli-attested",
+          "clm-place-rhegium-attested",
+          "clm-place-syracuse-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-28-1-14",
+        "PARAPHRASE_RISK:psg-acts-28-1-14"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-active-malta",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "malta",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T05:50:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "place_id": "malta",
+        "place_label": "Malta",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "35.9375",
+        "lon": "14.3754",
+        "location_precision": "approx_region",
+        "modern_country_label": "Malta",
+        "notes": "Island where Paul is shipwrecked and received hospitably on the voyage to Rome."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-active-malta",
+            "passage_id": "psg-acts-28-1-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-28-1-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.28.1-14",
+            "excerpt": "Paraphrase: Paul is received on Malta and then sails onward by way of Syracuse, Rhegium, and Puteoli toward Rome.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-acts-28-1-14": [
+          "clm-disciples-at-malta",
+          "clm-group-disciples-puteoli",
+          "clm-paul-active-puteoli",
+          "clm-paul-active-rhegium",
+          "clm-paul-active-syracuse",
+          "clm-place-malta-attested",
+          "clm-place-puteoli-attested",
+          "clm-place-rhegium-attested",
+          "clm-place-syracuse-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-28-1-14"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-place-syracuse-attested",
+        "subject_type": "place",
+        "subject_id": "syracuse",
+        "predicate_id": "place_presence_status",
+        "object_mode": "text",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "attested",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T05:50:00Z"
+      },
+      "subject_entity": {
+        "place_id": "syracuse",
+        "place_label": "Syracuse",
+        "place_label_modern": "Siracusa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.0755",
+        "lon": "15.2866",
+        "location_precision": "approx_city",
+        "modern_country_label": "Italy",
+        "notes": "Sicilian city touched on Paul voyage to Rome in Acts 28."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-place-syracuse-attested",
+            "passage_id": "psg-acts-28-1-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-28-1-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.28.1-14",
+            "excerpt": "Paraphrase: Paul is received on Malta and then sails onward by way of Syracuse, Rhegium, and Puteoli toward Rome.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-acts-28-1-14": [
+          "clm-disciples-at-malta",
+          "clm-group-disciples-puteoli",
+          "clm-paul-active-malta",
+          "clm-paul-active-puteoli",
+          "clm-paul-active-rhegium",
+          "clm-paul-active-syracuse",
+          "clm-place-malta-attested",
+          "clm-place-puteoli-attested",
+          "clm-place-rhegium-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-28-1-14"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-active-rhegium",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rhegium",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T05:50:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "place_id": "rhegium",
+        "place_label": "Rhegium",
+        "place_label_modern": "Reggio Calabria",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "38.1143",
+        "lon": "15.6500",
+        "location_precision": "approx_city",
+        "modern_country_label": "Italy",
+        "notes": "Italian coastal city touched on the voyage to Rome in Acts 28."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-active-rhegium",
+            "passage_id": "psg-acts-28-1-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-28-1-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.28.1-14",
+            "excerpt": "Paraphrase: Paul is received on Malta and then sails onward by way of Syracuse, Rhegium, and Puteoli toward Rome.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-acts-28-1-14": [
+          "clm-disciples-at-malta",
+          "clm-group-disciples-puteoli",
+          "clm-paul-active-malta",
+          "clm-paul-active-puteoli",
+          "clm-paul-active-syracuse",
+          "clm-place-malta-attested",
+          "clm-place-puteoli-attested",
+          "clm-place-rhegium-attested",
+          "clm-place-syracuse-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-28-1-14"
+      ]
+    }
+  ]
+}

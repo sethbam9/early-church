@@ -1,0 +1,2025 @@
+{
+  "batch_id": "batch-163",
+  "queue": "1",
+  "focus": "neronian-persecution; epistle-to-the-hebrews; sack-of-jerusalem; alexandrian-church; second-epistle-of-john; cerinthians; antiquities-of-the-jews; antipas-of-pergamum; antipas-martyrdom; john-on-patmos",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-neronian-persecution-year",
+        "subject_type": "event",
+        "subject_id": "neronian-persecution",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "64",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:40:00Z"
+      },
+      "subject_entity": {
+        "event_id": "neronian-persecution",
+        "event_label": "Neronian Persecution",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Nero's punishment of Christians in Rome after the Great Fire, as narrated by Tacitus."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-neronian-persecution-year",
+            "passage_id": "psg-wikipedia-neronian-persecution",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-neronian-persecution",
+            "source_id": "src-wikipedia-neronian-persecution",
+            "locator_type": "source_ref",
+            "locator": "Neronian_persecution",
+            "excerpt": "The Neronian persecution of Christians began in 64 AD following the Great Fire of Rome. Christians in Rome were tortured and executed under Nero's orders.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for the Neronian persecution year evidence."
+          },
+          "source": {
+            "source_id": "src-wikipedia-neronian-persecution",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Neronian persecution - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Neronian_persecution",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the Neronian persecution of Christians (64 AD)."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-neronian-persecution-at-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {},
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-neronian-persecution",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-neronian-persecution-at-rome",
+        "subject_type": "event",
+        "subject_id": "neronian-persecution",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "64",
+        "year_end": "64",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:40:00Z"
+      },
+      "subject_entity": {
+        "event_id": "neronian-persecution",
+        "event_label": "Neronian Persecution",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Nero's punishment of Christians in Rome after the Great Fire, as narrated by Tacitus."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-neronian-persecution-at-rome",
+            "passage_id": "psg-tacitus-annals-15-38-44",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tacitus-annals-15-38-44",
+            "source_id": "src-tacitus-annals",
+            "locator_type": "source_ref",
+            "locator": "Annals 15.38-44",
+            "excerpt": "Paraphrase: Tacitus narrates the Great Fire of Rome and Nero's punishment of Christians to suppress the rumor against himself.",
+            "language": "English",
+            "passage_year": "116",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-tacitus-annals",
+            "work_id": "annals-of-tacitus",
+            "source_kind": "primary_text",
+            "title": "Annals",
+            "author": "Tacitus",
+            "editor": "",
+            "year_display": "c. 116",
+            "year_start": "116",
+            "year_end": "116",
+            "container_title": "Roman historiography",
+            "publisher": "",
+            "url": "https://penelope.uchicago.edu/thayer/e/roman/texts/tacitus/annals/15b*.html",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Roman witness for the Great Fire of Rome and Nero's persecution of Christians."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-neronian-persecution-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-tacitus-annals-15-38-44": [
+          "clm-fire-at-rome",
+          "clm-nero-active-rome",
+          "clm-nero-in-neronian-persecution"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tacitus-annals-15-38-44",
+        "PARAPHRASE_OMISSION:psg-tacitus-annals-15-38-44:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-hebrews-authored-by-paul",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-hebrews",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "",
+        "updated_at": ""
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-hebrews",
+        "title_display": "Epistle to the Hebrews",
+        "title_original": "Πρὸς Ἑβραίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Homiletic epistle traditionally transmitted within the New Testament corpus."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hebrews-authored-by-paul",
+            "passage_id": "psg-eusebius-he-6-25",
+            "evidence_role": "contextualizes",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eusebius HE 6.25 preserves Origen's famous statement on the uncertain authorship of Hebrews."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-25",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.25",
+            "excerpt": "Origen said: 'The character of the diction of the epistle entitled To the Hebrews has not the apostle's rudeness in speech, but the epistle is better Greek... But who wrote the epistle, in truth God knows.'",
+            "language": "el",
+            "passage_year": "313",
+            "url_override": "",
+            "notes": "Eusebius HE 6.25 preserves Origen's discussion of Hebrews authorship; classic locus for the disputed Pauline attribution."
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hebrews-resurrection"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {},
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-hebrews-resurrection",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-hebrews",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-proclaimed-as-raised",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "65",
+        "year_end": "65",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-hebrews",
+        "title_display": "Epistle to the Hebrews",
+        "title_original": "Πρὸς Ἑβραίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Homiletic epistle traditionally transmitted within the New Testament corpus."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-proclaimed-as-raised",
+        "topic_id": "resurrection-proclamation",
+        "dimension_id": "jesus-resurrection",
+        "proposition_label": "Jesus is proclaimed as raised",
+        "polarity_family": "resurrection_proclamation",
+        "description": "The apostolic proclamation announces that Jesus has been raised from the dead.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hebrews-resurrection",
+            "passage_id": "psg-heb-13-20",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-heb-13-20",
+            "source_id": "src-hebrews",
+            "locator_type": "bible_osis",
+            "locator": "Heb.13.20",
+            "excerpt": "Paraphrase: God brought again from the dead our Lord Jesus.",
+            "language": "English",
+            "passage_year": "65",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-hebrews",
+            "work_id": "epistle-to-the-hebrews",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Hebrews",
+            "author": "Traditionally anonymous",
+            "editor": "",
+            "year_display": "c. 60-90",
+            "year_start": "60",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Hebrews",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "General epistle witness preserved in the New Testament corpus."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hebrews-authored-by-paul"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-heb-13-20"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sack-of-jerusalem-year",
+        "subject_type": "event",
+        "subject_id": "sack-of-jerusalem",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "70",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:20:00Z"
+      },
+      "subject_entity": {
+        "event_id": "sack-of-jerusalem",
+        "event_label": "Sack of Jerusalem",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Roman destruction of Jerusalem and its temple in 70 CE."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sack-of-jerusalem-year",
+            "passage_id": "psg-wikipedia-sack-of-jerusalem-70",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-sack-of-jerusalem-70",
+            "source_id": "src-wikipedia-sack-of-jerusalem-70",
+            "locator_type": "source_ref",
+            "locator": "Siege_of_Jerusalem_(70_CE)",
+            "excerpt": "The Siege of Jerusalem in 70 CE resulted in the destruction of the Second Temple and the city by Roman forces under Titus.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for sack of Jerusalem year evidence."
+          },
+          "source": {
+            "source_id": "src-wikipedia-sack-of-jerusalem-70",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Siege of Jerusalem (70 CE) - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(70_CE)",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the Roman siege and destruction of Jerusalem in 70 CE."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sack-at-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {},
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-sack-of-jerusalem-70",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sack-at-jerusalem",
+        "subject_type": "event",
+        "subject_id": "sack-of-jerusalem",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "70",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:20:00Z"
+      },
+      "subject_entity": {
+        "event_id": "sack-of-jerusalem",
+        "event_label": "Sack of Jerusalem",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Roman destruction of Jerusalem and its temple in 70 CE."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sack-at-jerusalem",
+            "passage_id": "psg-josephus-war-6-249-266",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-josephus-war-6-249-266",
+            "source_id": "src-josephus-war",
+            "locator_type": "source_ref",
+            "locator": "War 6.249-266",
+            "excerpt": "Paraphrase: Josephus narrates the burning of the temple and the destruction of Jerusalem under the Roman assault.",
+            "language": "English",
+            "passage_year": "75",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-war",
+            "work_id": "the-jewish-war",
+            "source_kind": "primary_text",
+            "title": "The Jewish War",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "c. 75",
+            "year_start": "75",
+            "year_end": "75",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://lexundria.com/j_bj/2.117-2.166/wst",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Josephus description of Jewish sects including the Essenes."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sack-of-jerusalem-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-josephus-war-6-249-266"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-alexandrian-church-at-egypt",
+        "subject_type": "group",
+        "subject_id": "alexandrian-church",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "egypt",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "alexandrian-church",
+        "group_label": "Church in Alexandria",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Alexandria; home of the Catechetical School; major center of Greek-speaking Christianity from the late first century onward."
+      },
+      "object_entity": {
+        "place_id": "egypt",
+        "place_label": "Egypt",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "26.0000",
+        "lon": "30.0000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Egypt",
+        "notes": "Roman province encompassing the Nile valley; home of the Alexandrian church tradition and early monasticism."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-alexandrian-church-at-egypt",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts 18:24 identifies Apollos as 'a native of Alexandria' who knew Christian teaching, directly attesting an Alexandrian Christian community."
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-alexandrian-church-present"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-present",
+          "clm-apollos-active-achaia",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-alexandrian",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-active-ephesus",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-alexandria-attested",
+          "clm-place-egypt-attested",
+          "clm-priscilla-active-ephesus",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-18-24-28",
+        "PARAPHRASE_RISK:psg-acts-18-24-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-alexandrian-church-present",
+        "subject_type": "group",
+        "subject_id": "alexandrian-church",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T00:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "alexandrian-church",
+        "group_label": "Church in Alexandria",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Alexandria; home of the Catechetical School; major center of Greek-speaking Christianity from the late first century onward."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-alexandrian-church-present",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts 18:24 attests Apollos as an Alexandrian, evidencing the Alexandrian church."
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-alexandrian-church-at-egypt"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-at-egypt",
+          "clm-apollos-active-achaia",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-alexandrian",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-active-ephesus",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-alexandria-attested",
+          "clm-place-egypt-attested",
+          "clm-priscilla-active-ephesus",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-18-24-28",
+        "PARAPHRASE_RISK:psg-acts-18-24-28",
+        "PARAPHRASE_OMISSION:psg-acts-18-24-28:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-2john-by-john",
+        "subject_type": "work",
+        "subject_id": "second-epistle-of-john",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "john-son-of-zebedee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "85",
+        "year_end": "110",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T10:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "second-epistle-of-john",
+        "title_display": "Second Epistle of John",
+        "title_original": "Ἰωάννου Βʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Short Johannine epistle addressed to the elect lady and her children."
+      },
+      "object_entity": {
+        "person_id": "john-son-of-zebedee",
+        "person_label": "John son of Zebedee",
+        "name_alt": "John the Apostle",
+        "name_native": "Ἰωάννης",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "One of the first called disciples."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-2john-by-john",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "2 Jn 1:1 'the Elder'; traditionally attributed to John the Apostle but the Papias distinction between the Apostle and Elder John creates genuine uncertainty."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-second-john-christ"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-second-john-christ",
+        "subject_type": "work",
+        "subject_id": "second-epistle-of-john",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-the-christ",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "95",
+        "year_end": "95",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "second-epistle-of-john",
+        "title_display": "Second Epistle of John",
+        "title_original": "Ἰωάννου Βʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Short Johannine epistle addressed to the elect lady and her children."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-the-christ",
+        "topic_id": "messianic-identity",
+        "dimension_id": "jesus-as-messiah",
+        "proposition_label": "Jesus is the Christ",
+        "polarity_family": "jesus_as_messiah",
+        "description": "Texts or teachers explicitly identify Jesus as the Christ or Messiah.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-second-john-christ",
+            "passage_id": "psg-2john-1-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2john-1-7",
+            "source_id": "src-2john",
+            "locator_type": "bible_osis",
+            "locator": "2John.1.7",
+            "excerpt": "Paraphrase: The true confession is that Jesus Christ has come in the flesh, and those who deny it are deceivers.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2john",
+            "work_id": "second-epistle-of-john",
+            "source_kind": "primary_text",
+            "title": "Second Epistle of John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Short Johannine epistle preserved in the New Testament corpus."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-2john-by-john"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-2john-1-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cerinthians-at-ephesus",
+        "subject_type": "group",
+        "subject_id": "cerinthians",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "90",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "cerinthians",
+        "group_label": "Cerinthians",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Followers of Cerinthus active in Asia Minor c. 90-130; distinguished the earthly Jesus from the heavenly Christ who descended at baptism and departed before the crucifixion; opposed by Polycarp and the Johannine tradition in Ephesus per Irenaeus."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cerinthians-at-ephesus",
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.4",
+            "excerpt": "Paraphrase: Polycarp was instructed by apostles, conversed with many who had seen Christ, and was appointed bishop of Smyrna by apostles in Asia; Irenaeus saw him in his early youth. Polycarp came to Rome in the time of Anicetus and caused many to turn from heretics to the Church, proclaiming the one truth received from the apostles. He called Marcion the first-born of Satan.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cerinthians-schismed-from-ephesian"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-3-4": [
+          "clm-against-heresies-by-irenaeus",
+          "clm-anicetus-bishop-rome",
+          "clm-anicetus-member-roman-church",
+          "clm-eleutherus-bishop-rome",
+          "clm-eleutherus-member-roman-church",
+          "clm-irenaeus-active-smyrna",
+          "clm-irenaeus-ah-affirms-martyrdom-witness",
+          "clm-irenaeus-coworker-eleutherus",
+          "clm-irenaeus-in-ah-composition",
+          "clm-irenaeus-in-lyons-persecution",
+          "clm-john-teacher-of-polycarp",
+          "clm-john-zebedee-active-asia",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-john-zebedee-member-ephesian",
+          "clm-marcionites-at-smyrna",
+          "clm-marcionites-schismed-from-roman",
+          "clm-montanists-at-carthage",
+          "clm-montanists-at-phrygia",
+          "clm-montanists-at-rome",
+          "clm-polycarp-active-ephesus",
+          "clm-polycarp-bishop-smyrna",
+          "clm-polycarp-coworker-irenaeus",
+          "clm-polycarp-teacher-of-irenaeus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-4",
+        "PARAPHRASE_OMISSION:psg-irenaeus-ah-3-3-4:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cerinthians-schismed-from-ephesian",
+        "subject_type": "group",
+        "subject_id": "cerinthians",
+        "predicate_id": "group_schismed_from",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "ephesian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "90",
+        "year_end": "120",
+        "context_place_id": "ephesus",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "cerinthians",
+        "group_label": "Cerinthians",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Followers of Cerinthus active in Asia Minor c. 90-130; distinguished the earthly Jesus from the heavenly Christ who descended at baptism and departed before the crucifixion; opposed by Polycarp and the Johannine tradition in Ephesus per Irenaeus."
+      },
+      "object_entity": {
+        "group_id": "ephesian-church",
+        "group_label": "Church in Ephesus",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Ephesus attested in Acts and Revelation."
+      },
+      "context_place": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cerinthians-schismed-from-ephesian",
+            "passage_id": "psg-irenaeus-ah-1-26-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-26-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.26.1",
+            "excerpt": "A certain Cerinthus in Asia taught that the world was not made by the primary God, but by a Power far separated from him and ignorant of the supreme authority. He maintained that Jesus was not born of a virgin, but was the son of Joseph and Mary according to the ordinary course of human generation. After baptism, Christ descended upon him in the form of a dove from the Supreme Ruler; then he proclaimed the unknown Father and performed miracles. But at last Christ departed from Jesus, and then Jesus suffered and rose again.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cerinthians-at-ephesus"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-26-1": [
+          "clm-cerinthus-active-ephesus",
+          "clm-cerinthus-member-cerinthians",
+          "clm-cerinthus-opposes-incarnation",
+          "clm-cerinthus-opposes-logos-preexistence",
+          "clm-cerinthus-opposes-ot-scripture",
+          "clm-cerinthus-opposes-passion",
+          "clm-cerinthus-opposes-virgin-birth",
+          "clm-ebionites-at-antioch",
+          "clm-ebionites-schismed-from-jerusalem"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-antiquities-by-josephus",
+        "subject_type": "work",
+        "subject_id": "antiquities-of-the-jews",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "josephus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "93",
+        "year_end": "94",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T10:30:00Z"
+      },
+      "subject_entity": {
+        "work_id": "antiquities-of-the-jews",
+        "title_display": "Antiquities of the Jews",
+        "title_original": "Ἰουδαϊκὴ Ἀρχαιολογία",
+        "work_type": "chronicle",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Josephus used as a near-ancient contextual witness."
+      },
+      "object_entity": {
+        "person_id": "josephus",
+        "person_label": "Josephus",
+        "name_alt": "Flavius Josephus; Joseph ben Matityahu",
+        "name_native": "יוסף בן מתתיהו",
+        "birth_year_display": "c. 37",
+        "death_year_display": "c. 100",
+        "person_kind": "individual",
+        "notes": "Jewish historian and Roman citizen; author of Jewish Antiquities and Jewish War. Key non-Christian source for 1st-century Judaea, Jesus, John the Baptist, and James."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-antiquities-by-josephus",
+            "passage_id": "psg-josephus-ant-20-200",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Ant. 20.200 contains Josephus's self-identifying narration; preface explicitly names him as author."
+          },
+          "passage": {
+            "passage_id": "psg-josephus-ant-20-200",
+            "source_id": "src-josephus-ant",
+            "locator_type": "source_ref",
+            "locator": "Antiquities 20.200",
+            "excerpt": "Paraphrase: Josephus says the high priest Ananus assembled the Sanhedrin, accused James the brother of Jesus called Christ and some others, and delivered them to be stoned.",
+            "language": "English",
+            "passage_year": "94",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-ant",
+            "work_id": "antiquities-of-the-jews",
+            "source_kind": "primary_text",
+            "title": "Antiquities of the Jews",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "93/94",
+            "year_start": "93",
+            "year_end": "94",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.perseus.tufts.edu/hopper/text?doc=J.%20AJ%2018",
+            "accessed_on": "2026-03-09",
+            "isbn_issn": "",
+            "notes": "Near-ancient non-Christian witness for John the Baptist and Pontius Pilate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-antiquities-repentance"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-josephus-ant-20-200": [
+          "clm-ananus-ii-in-james-just-martyrdom",
+          "clm-james-just-in-martyrdom",
+          "clm-james-just-martyrdom-at-jerusalem",
+          "clm-james-just-martyrdom-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-josephus-ant-20-200"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-antiquities-repentance",
+        "subject_type": "work",
+        "subject_id": "antiquities-of-the-jews",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "repentance-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "94",
+        "year_end": "94",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "antiquities-of-the-jews",
+        "title_display": "Antiquities of the Jews",
+        "title_original": "Ἰουδαϊκὴ Ἀρχαιολογία",
+        "work_type": "chronicle",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Josephus used as a near-ancient contextual witness."
+      },
+      "object_entity": {
+        "proposition_id": "repentance-is-required",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "repentant-response",
+        "proposition_label": "Repentance is required in response to the proclamation",
+        "polarity_family": "repentance_response",
+        "description": "The proclamation of the kingdom calls hearers to repentance.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-antiquities-repentance",
+            "passage_id": "psg-josephus-ant-18-116-119",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-josephus-ant-18-116-119",
+            "source_id": "src-josephus-ant",
+            "locator_type": "source_ref",
+            "locator": "Antiquities 18.116-119",
+            "excerpt": "Paraphrase: Josephus describes John as a good man exhorting virtue and baptism and says Herod slew him.",
+            "language": "English",
+            "passage_year": "94",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-ant",
+            "work_id": "antiquities-of-the-jews",
+            "source_kind": "primary_text",
+            "title": "Antiquities of the Jews",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "93/94",
+            "year_start": "93",
+            "year_end": "94",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.perseus.tufts.edu/hopper/text?doc=J.%20AJ%2018",
+            "accessed_on": "2026-03-09",
+            "isbn_issn": "",
+            "notes": "Near-ancient non-Christian witness for John the Baptist and Pontius Pilate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-antiquities-by-josephus"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-josephus-ant-18-116-119": [
+          "clm-herod-antipas-in-john-baptist-martyrdom",
+          "clm-john-active-wilderness",
+          "clm-john-baptist-in-martyrdom",
+          "clm-johnb-group"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-josephus-ant-18-116-119"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-antipas-in-martyrdom",
+        "subject_type": "person",
+        "subject_id": "antipas-of-pergamum",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "antipas-martyrdom",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "95",
+        "year_end": "95",
+        "context_place_id": "pergamum",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T21:10:00Z"
+      },
+      "subject_entity": {
+        "person_id": "antipas-of-pergamum",
+        "person_label": "Antipas of Pergamum",
+        "name_alt": "Antipas",
+        "name_native": "Ἀντίπας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Faithful witness named among the believers in Pergamum in Revelation 2."
+      },
+      "object_entity": {
+        "event_id": "antipas-martyrdom",
+        "event_label": "Antipas's Martyrdom",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Revelation names Antipas as Christ's faithful witness who was killed in Pergamum."
+      },
+      "context_place": {
+        "place_id": "pergamum",
+        "place_label": "Pergamum",
+        "place_label_modern": "Bergama",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "39.1190",
+        "lon": "27.1834",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "City of one of the churches addressed in Revelation."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-antipas-in-martyrdom",
+            "passage_id": "psg-rev-2-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rev-2-13",
+            "source_id": "src-revelation",
+            "locator_type": "bible_osis",
+            "locator": "Rev.2.13",
+            "excerpt": "Paraphrase: The believers in Pergamum hold fast Christ's name even in the days when Antipas, his faithful witness, was killed among them.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-revelation",
+            "work_id": "revelation-of-john",
+            "source_kind": "primary_text",
+            "title": "Revelation of John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 95",
+            "year_start": "95",
+            "year_end": "95",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Revelation",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late first-century apocalyptic witness associated with Patmos."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-antipas-active-pergamum",
+        "clm-antipas-pergamum-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-rev-2-13": [
+          "clm-antipas-active-pergamum",
+          "clm-antipas-martyrdom-at-pergamum",
+          "clm-antipas-pergamum-church",
+          "clm-revelation-affirms-martyrdom-witness"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rev-2-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-antipas-pergamum-church",
+        "subject_type": "person",
+        "subject_id": "antipas-of-pergamum",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "pergamum-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "95",
+        "year_end": "95",
+        "context_place_id": "pergamum",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "antipas-of-pergamum",
+        "person_label": "Antipas of Pergamum",
+        "name_alt": "Antipas",
+        "name_native": "Ἀντίπας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Faithful witness named among the believers in Pergamum in Revelation 2."
+      },
+      "object_entity": {
+        "group_id": "pergamum-church",
+        "group_label": "Church in Pergamum",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Pergamum attested in Revelation."
+      },
+      "context_place": {
+        "place_id": "pergamum",
+        "place_label": "Pergamum",
+        "place_label_modern": "Bergama",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "39.1190",
+        "lon": "27.1834",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "City of one of the churches addressed in Revelation."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-antipas-pergamum-church",
+            "passage_id": "psg-rev-2-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rev-2-13",
+            "source_id": "src-revelation",
+            "locator_type": "bible_osis",
+            "locator": "Rev.2.13",
+            "excerpt": "Paraphrase: The believers in Pergamum hold fast Christ's name even in the days when Antipas, his faithful witness, was killed among them.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-revelation",
+            "work_id": "revelation-of-john",
+            "source_kind": "primary_text",
+            "title": "Revelation of John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 95",
+            "year_start": "95",
+            "year_end": "95",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Revelation",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late first-century apocalyptic witness associated with Patmos."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-antipas-active-pergamum",
+        "clm-antipas-in-martyrdom"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-rev-2-13": [
+          "clm-antipas-active-pergamum",
+          "clm-antipas-in-martyrdom",
+          "clm-antipas-martyrdom-at-pergamum",
+          "clm-revelation-affirms-martyrdom-witness"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rev-2-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-antipas-martyrdom-year",
+        "subject_type": "event",
+        "subject_id": "antipas-martyrdom",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "95",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T21:10:00Z"
+      },
+      "subject_entity": {
+        "event_id": "antipas-martyrdom",
+        "event_label": "Antipas's Martyrdom",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Revelation names Antipas as Christ's faithful witness who was killed in Pergamum."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-antipas-martyrdom-year",
+            "passage_id": "psg-mark-6-17-29",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-mark-6-17-29",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.6.17-29",
+            "excerpt": "Paraphrase: Herod imprisons John, orders his death, and John's disciples lay his body in a tomb.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-antipas-martyrdom-at-pergamum"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-mark-6-17-29": [
+          "clm-herod-antipas-in-john-baptist-martyrdom",
+          "clm-john-baptist-death-year",
+          "clm-john-baptist-in-martyrdom"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-mark-6-17-29",
+        "PARAPHRASE_RISK:psg-mark-6-17-29"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-antipas-martyrdom-at-pergamum",
+        "subject_type": "event",
+        "subject_id": "antipas-martyrdom",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "pergamum",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "95",
+        "year_end": "95",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T21:10:00Z"
+      },
+      "subject_entity": {
+        "event_id": "antipas-martyrdom",
+        "event_label": "Antipas's Martyrdom",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Revelation names Antipas as Christ's faithful witness who was killed in Pergamum."
+      },
+      "object_entity": {
+        "place_id": "pergamum",
+        "place_label": "Pergamum",
+        "place_label_modern": "Bergama",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "39.1190",
+        "lon": "27.1834",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "City of one of the churches addressed in Revelation."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-antipas-martyrdom-at-pergamum",
+            "passage_id": "psg-rev-2-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rev-2-13",
+            "source_id": "src-revelation",
+            "locator_type": "bible_osis",
+            "locator": "Rev.2.13",
+            "excerpt": "Paraphrase: The believers in Pergamum hold fast Christ's name even in the days when Antipas, his faithful witness, was killed among them.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-revelation",
+            "work_id": "revelation-of-john",
+            "source_kind": "primary_text",
+            "title": "Revelation of John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 95",
+            "year_start": "95",
+            "year_end": "95",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Revelation",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late first-century apocalyptic witness associated with Patmos."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-antipas-martyrdom-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rev-2-13": [
+          "clm-antipas-active-pergamum",
+          "clm-antipas-in-martyrdom",
+          "clm-antipas-pergamum-church",
+          "clm-revelation-affirms-martyrdom-witness"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rev-2-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-john-on-patmos-year",
+        "subject_type": "event",
+        "subject_id": "john-on-patmos",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "95",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "john-on-patmos",
+        "event_label": "John on Patmos",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Revelation situates John on the island called Patmos because of the word of God and the testimony of Jesus."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-john-on-patmos-year",
+            "passage_id": "psg-eusebius-he-3-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-18",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 3.18",
+            "excerpt": "In the time of Domitian, John the apostle and evangelist was still alive and was condemned to dwell on the island of Patmos in consequence of his testimony to the divine word.",
+            "language": "en",
+            "passage_year": "313",
+            "url_override": "",
+            "notes": "Eusebius records John's exile on Patmos under Domitian."
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-john-on-patmos-at-patmos"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-3-18": [
+          "clm-place-patmos-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-john-on-patmos-at-patmos",
+        "subject_type": "event",
+        "subject_id": "john-on-patmos",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "patmos",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "95",
+        "year_end": "95",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "john-on-patmos",
+        "event_label": "John on Patmos",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Revelation situates John on the island called Patmos because of the word of God and the testimony of Jesus."
+      },
+      "object_entity": {
+        "place_id": "patmos",
+        "place_label": "Patmos",
+        "place_label_modern": "",
+        "place_kind": "site",
+        "parent_place_id": "",
+        "lat": "37.3083",
+        "lon": "26.5481",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Island associated with the composition setting of Revelation."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-john-on-patmos-at-patmos",
+            "passage_id": "psg-rev-1-9",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rev-1-9",
+            "source_id": "src-revelation",
+            "locator_type": "bible_osis",
+            "locator": "Rev.1.9",
+            "excerpt": "Paraphrase: John says that he was on the island called Patmos because of the word of God and the testimony of Jesus.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-revelation",
+            "work_id": "revelation-of-john",
+            "source_kind": "primary_text",
+            "title": "Revelation of John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 95",
+            "year_start": "95",
+            "year_end": "95",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Revelation",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late first-century apocalyptic witness associated with Patmos."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-john-on-patmos-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rev-1-9": [
+          "clm-john-active-patmos",
+          "clm-john-in-domitian-persecution",
+          "clm-john-in-john-on-patmos",
+          "clm-revelation-judgment",
+          "clm-revelation-written-patmos"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rev-1-9"
+      ]
+    }
+  ]
+}

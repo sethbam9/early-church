@@ -1,0 +1,2402 @@
+{
+  "batch_id": "batch-136",
+  "queue": "1",
+  "focus": "philip-the-apostle; thomas; agabus; epistle-to-the-romans",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-philip-apostle-active-bethsaida",
+        "subject_type": "person",
+        "subject_id": "philip-the-apostle",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "bethsaida",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philip-the-apostle",
+        "person_label": "Philip",
+        "name_alt": "Philip the Apostle",
+        "name_native": "Φίλιππος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve; distinct from Philip the evangelist."
+      },
+      "object_entity": {
+        "place_id": "bethsaida",
+        "place_label": "Bethsaida",
+        "place_label_modern": "et-Tell / el-Araj area",
+        "place_kind": "site",
+        "parent_place_id": "galilee",
+        "lat": "32.9010",
+        "lon": "35.6150",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Fishing settlement associated with several early disciples in the Gospel narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philip-apostle-active-bethsaida",
+            "passage_id": "psg-john-1-43-49",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-1-43-49",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.1.43-49",
+            "excerpt": "Paraphrase: Jesus calls Philip, who brings Nathanael, who confesses him.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philip-apostle-active-galilee",
+        "clm-philip-apostle-disciple",
+        "clm-philip-apostle-in-pentecost",
+        "clm-philip-apostle-active-jerusalem",
+        "clm-philip-apostle-member-jerusalem"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-john-1-43-49": [
+          "clm-jesus-teacher-nathanael",
+          "clm-jesus-teacher-philip-the-apostle",
+          "clm-nathanael-active-cana",
+          "clm-nathanael-disciple",
+          "clm-philip-apostle-active-galilee",
+          "clm-philip-apostle-coworker-nathanael",
+          "clm-philip-apostle-disciple",
+          "clm-place-bethsaida-attested",
+          "clm-place-cana-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-1-43-49",
+        "PARAPHRASE_OMISSION:psg-john-1-43-49:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philip-apostle-active-galilee",
+        "subject_type": "person",
+        "subject_id": "philip-the-apostle",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galilee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philip-the-apostle",
+        "person_label": "Philip",
+        "name_alt": "Philip the Apostle",
+        "name_native": "Φίλιππος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve; distinct from Philip the evangelist."
+      },
+      "object_entity": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philip-apostle-active-galilee",
+            "passage_id": "psg-john-1-43-49",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-1-43-49",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.1.43-49",
+            "excerpt": "Paraphrase: Jesus calls Philip, who brings Nathanael, who confesses him.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philip-apostle-active-bethsaida",
+        "clm-philip-apostle-disciple",
+        "clm-philip-apostle-in-pentecost",
+        "clm-philip-apostle-active-jerusalem",
+        "clm-philip-apostle-member-jerusalem"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-john-1-43-49": [
+          "clm-jesus-teacher-nathanael",
+          "clm-jesus-teacher-philip-the-apostle",
+          "clm-nathanael-active-cana",
+          "clm-nathanael-disciple",
+          "clm-philip-apostle-active-bethsaida",
+          "clm-philip-apostle-coworker-nathanael",
+          "clm-philip-apostle-disciple",
+          "clm-place-bethsaida-attested",
+          "clm-place-cana-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-1-43-49",
+        "PARAPHRASE_OMISSION:psg-john-1-43-49:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philip-apostle-in-pentecost",
+        "subject_type": "person",
+        "subject_id": "philip-the-apostle",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "pentecost",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philip-the-apostle",
+        "person_label": "Philip",
+        "name_alt": "Philip the Apostle",
+        "name_native": "Φίλιππος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve; distinct from Philip the evangelist."
+      },
+      "object_entity": {
+        "event_id": "pentecost",
+        "event_label": "Pentecost",
+        "event_type": "liturgical",
+        "event_kind": "simple",
+        "notes": "Outpouring of the Holy Spirit on the gathered disciples in Jerusalem."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philip-apostle-in-pentecost",
+            "passage_id": "psg-acts-1-13-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-1-13-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.1.13-14",
+            "excerpt": "Paraphrase: The apostles, the women, and Mary the mother of Jesus are gathered in Jerusalem.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philip-apostle-active-bethsaida",
+        "clm-philip-apostle-active-galilee",
+        "clm-philip-apostle-disciple",
+        "clm-philip-apostle-active-jerusalem",
+        "clm-philip-apostle-member-jerusalem"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-acts-1-13-14": [
+          "clm-andrew-active-jerusalem",
+          "clm-andrew-in-pentecost",
+          "clm-andrew-member-jerusalem",
+          "clm-bartholomew-in-pentecost",
+          "clm-disciples-at-jerusalem-early",
+          "clm-james-just-in-pentecost",
+          "clm-james-zebedee-in-pentecost",
+          "clm-john-zebedee-active-jerusalem",
+          "clm-john-zebedee-in-pentecost",
+          "clm-john-zebedee-member-jerusalem",
+          "clm-mary-mother-active-galilee",
+          "clm-mary-mother-active-jerusalem",
+          "clm-mary-mother-disciple",
+          "clm-mary-mother-in-pentecost",
+          "clm-matthew-active-jerusalem",
+          "clm-matthew-in-pentecost",
+          "clm-peter-active-jerusalem",
+          "clm-peter-coworker-john-zebedee",
+          "clm-peter-member-jerusalem-church",
+          "clm-philip-apostle-active-jerusalem",
+          "clm-philip-apostle-member-jerusalem",
+          "clm-place-judea-attested-late",
+          "clm-thomas-active-jerusalem",
+          "clm-thomas-in-pentecost",
+          "clm-zealots-at-judea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-1-13-14",
+        "PARAPHRASE_OMISSION:psg-acts-1-13-14:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philip-apostle-disciple",
+        "subject_type": "person",
+        "subject_id": "philip-the-apostle",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philip-the-apostle",
+        "person_label": "Philip",
+        "name_alt": "Philip the Apostle",
+        "name_native": "Φίλιππος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve; distinct from Philip the evangelist."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philip-apostle-disciple",
+            "passage_id": "psg-john-1-43-49",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-1-43-49",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.1.43-49",
+            "excerpt": "Paraphrase: Jesus calls Philip, who brings Nathanael, who confesses him.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philip-apostle-active-bethsaida",
+        "clm-philip-apostle-active-galilee",
+        "clm-philip-apostle-in-pentecost",
+        "clm-philip-apostle-active-jerusalem",
+        "clm-philip-apostle-member-jerusalem"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-john-1-43-49": [
+          "clm-jesus-teacher-nathanael",
+          "clm-jesus-teacher-philip-the-apostle",
+          "clm-nathanael-active-cana",
+          "clm-nathanael-disciple",
+          "clm-philip-apostle-active-bethsaida",
+          "clm-philip-apostle-active-galilee",
+          "clm-philip-apostle-coworker-nathanael",
+          "clm-place-bethsaida-attested",
+          "clm-place-cana-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-1-43-49"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philip-apostle-member-jerusalem",
+        "subject_type": "person",
+        "subject_id": "philip-the-apostle",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "jerusalem-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "40",
+        "context_place_id": "jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philip-the-apostle",
+        "person_label": "Philip",
+        "name_alt": "Philip the Apostle",
+        "name_native": "Φίλιππος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve; distinct from Philip the evangelist."
+      },
+      "object_entity": {
+        "group_id": "jerusalem-church",
+        "group_label": "Church in Jerusalem",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Jerusalem community central to the earliest apostolic period."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philip-apostle-member-jerusalem",
+            "passage_id": "psg-acts-1-13-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-1-13-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.1.13-14",
+            "excerpt": "Paraphrase: The apostles, the women, and Mary the mother of Jesus are gathered in Jerusalem.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philip-apostle-active-bethsaida",
+        "clm-philip-apostle-active-galilee",
+        "clm-philip-apostle-disciple",
+        "clm-philip-apostle-in-pentecost",
+        "clm-philip-apostle-active-jerusalem"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-acts-1-13-14": [
+          "clm-andrew-active-jerusalem",
+          "clm-andrew-in-pentecost",
+          "clm-andrew-member-jerusalem",
+          "clm-bartholomew-in-pentecost",
+          "clm-disciples-at-jerusalem-early",
+          "clm-james-just-in-pentecost",
+          "clm-james-zebedee-in-pentecost",
+          "clm-john-zebedee-active-jerusalem",
+          "clm-john-zebedee-in-pentecost",
+          "clm-john-zebedee-member-jerusalem",
+          "clm-mary-mother-active-galilee",
+          "clm-mary-mother-active-jerusalem",
+          "clm-mary-mother-disciple",
+          "clm-mary-mother-in-pentecost",
+          "clm-matthew-active-jerusalem",
+          "clm-matthew-in-pentecost",
+          "clm-peter-active-jerusalem",
+          "clm-peter-coworker-john-zebedee",
+          "clm-peter-member-jerusalem-church",
+          "clm-philip-apostle-active-jerusalem",
+          "clm-philip-apostle-in-pentecost",
+          "clm-place-judea-attested-late",
+          "clm-thomas-active-jerusalem",
+          "clm-thomas-in-pentecost",
+          "clm-zealots-at-judea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-1-13-14"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-thomas-affirms-thomas-india",
+        "subject_type": "person",
+        "subject_id": "thomas",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "thomas-preached-in-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "52",
+        "year_end": "72",
+        "context_place_id": "india-malabar",
+        "certainty": "claimed_tradition",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "thomas",
+        "person_label": "Thomas",
+        "name_alt": "Didymus",
+        "name_native": "Θωμᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve and witness in the Johannine resurrection narratives."
+      },
+      "object_entity": {
+        "proposition_id": "thomas-preached-in-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "apostle-thomas-india",
+        "proposition_label": "The apostle Thomas preached in India",
+        "polarity_family": "thomas_india",
+        "description": "The Acts of Thomas (3rd c.) narrates Thomas's journey to India; the Thomas Christian tradition in Malabar claims apostolic origin; certainty is claimed_tradition.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-thomas-affirms-thomas-india",
+            "passage_id": "psg-acts-thomas-108-113",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts of Thomas is the primary source for Thomas's Indian mission tradition."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-108-113",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 108–113",
+            "excerpt": "Paraphrase: The Hymn of the Pearl tells of a prince sent to Egypt to retrieve a pearl guarded by a serpent; he forgets his mission until a letter reminds him; he seizes the pearl and returns to his father's kingdom, receiving his glorious robe; widely read as an allegory of the soul's descent and return.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Hymn of the Pearl"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-thomas-active-galilee",
+        "clm-thomas-disciple",
+        "clm-thomas-active-jerusalem",
+        "clm-thomas-in-pentecost",
+        "clm-thomas-active-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-acts-thomas-108-113": [
+          "clm-acts-thomas-affirms-prayer",
+          "clm-acts-thomas-affirms-repentance",
+          "clm-acts-thomas-affirms-virginity",
+          "clm-acts-thomas-mentions-incarnation",
+          "clm-acts-thomas-mentions-india-reached",
+          "clm-acts-thomas-written-edessa",
+          "clm-church-east-at-india",
+          "clm-place-india-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-thomas-108-113",
+        "PARAPHRASE_RISK:psg-acts-thomas-108-113"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-thomas-active-galilee",
+        "subject_type": "person",
+        "subject_id": "thomas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galilee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "thomas",
+        "person_label": "Thomas",
+        "name_alt": "Didymus",
+        "name_native": "Θωμᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve and witness in the Johannine resurrection narratives."
+      },
+      "object_entity": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-thomas-active-galilee",
+            "passage_id": "psg-matt-10-2-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-matt-10-2-4",
+            "source_id": "src-matthew",
+            "locator_type": "bible_osis",
+            "locator": "Matt.10.2-4",
+            "excerpt": "Paraphrase: Matthew lists the names of the Twelve apostles including Thomas, Matthew, Philip, and Bartholomew.",
+            "language": "English",
+            "passage_year": "28",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-matthew",
+            "work_id": "gospel-of-matthew",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Matthew",
+            "author": "Traditionally Matthew",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Matthew",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-thomas-disciple",
+        "clm-thomas-active-jerusalem",
+        "clm-thomas-in-pentecost",
+        "clm-thomas-active-india",
+        "clm-thomas-affirms-thomas-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-matt-10-2-4": [
+          "clm-bartholomew-active-galilee",
+          "clm-bartholomew-disciple",
+          "clm-matthew-active-galilee",
+          "clm-matthew-disciple",
+          "clm-thomas-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-matt-10-2-4",
+        "PARAPHRASE_OMISSION:psg-matt-10-2-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-thomas-active-india",
+        "subject_type": "person",
+        "subject_id": "thomas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "india-malabar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "52",
+        "year_end": "72",
+        "context_place_id": "india-malabar",
+        "certainty": "claimed_tradition",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "thomas",
+        "person_label": "Thomas",
+        "name_alt": "Didymus",
+        "name_native": "Θωμᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve and witness in the Johannine resurrection narratives."
+      },
+      "object_entity": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "context_place": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-thomas-active-india",
+            "passage_id": "psg-acts-thomas-27",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Acts of Thomas 27 describes Thomas's mission in India explicitly."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-27",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 27",
+            "excerpt": "Paraphrase: Thomas anoints the convert with oil, invoking the name of Christ; the anointing precedes the water baptism; oil is called the seal of the covenant and the power of the Messiah.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Baptismal anointing scene"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-thomas-active-india",
+            "passage_id": "psg-philostorgius-he-3-6",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Philostorgius mentions Indian Christians from apostolic times."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-6",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.6 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus proceeded from the Himyarites to his own country where he found Christians who had learned of Christ from the apostle Bartholomew; they held to the doctrine of other in substance.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Reports pre-existing Indian Christians with heterodox Christology; important for Thomas/Bartholomew tradition."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-thomas-active-galilee",
+        "clm-thomas-disciple",
+        "clm-thomas-active-jerusalem",
+        "clm-thomas-in-pentecost",
+        "clm-thomas-affirms-thomas-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-acts-thomas-27": [
+          "clm-acts-thomas-affirms-ascetic-covenant",
+          "clm-acts-thomas-affirms-baptism-regeneration",
+          "clm-acts-thomas-affirms-baptism-water",
+          "clm-acts-thomas-affirms-baptismal-anointing"
+        ],
+        "psg-philostorgius-he-3-6": [
+          "clm-philostorgius-he-affirms-bartholomew-india",
+          "clm-philostorgius-he-affirms-universal",
+          "clm-philostorgius-he-mentions-india-reached"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-thomas-27"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-thomas-in-pentecost",
+        "subject_type": "person",
+        "subject_id": "thomas",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "pentecost",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "thomas",
+        "person_label": "Thomas",
+        "name_alt": "Didymus",
+        "name_native": "Θωμᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve and witness in the Johannine resurrection narratives."
+      },
+      "object_entity": {
+        "event_id": "pentecost",
+        "event_label": "Pentecost",
+        "event_type": "liturgical",
+        "event_kind": "simple",
+        "notes": "Outpouring of the Holy Spirit on the gathered disciples in Jerusalem."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-thomas-in-pentecost",
+            "passage_id": "psg-acts-1-13-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-1-13-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.1.13-14",
+            "excerpt": "Paraphrase: The apostles, the women, and Mary the mother of Jesus are gathered in Jerusalem.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-thomas-active-galilee",
+        "clm-thomas-disciple",
+        "clm-thomas-active-jerusalem",
+        "clm-thomas-active-india",
+        "clm-thomas-affirms-thomas-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-acts-1-13-14": [
+          "clm-andrew-active-jerusalem",
+          "clm-andrew-in-pentecost",
+          "clm-andrew-member-jerusalem",
+          "clm-bartholomew-in-pentecost",
+          "clm-disciples-at-jerusalem-early",
+          "clm-james-just-in-pentecost",
+          "clm-james-zebedee-in-pentecost",
+          "clm-john-zebedee-active-jerusalem",
+          "clm-john-zebedee-in-pentecost",
+          "clm-john-zebedee-member-jerusalem",
+          "clm-mary-mother-active-galilee",
+          "clm-mary-mother-active-jerusalem",
+          "clm-mary-mother-disciple",
+          "clm-mary-mother-in-pentecost",
+          "clm-matthew-active-jerusalem",
+          "clm-matthew-in-pentecost",
+          "clm-peter-active-jerusalem",
+          "clm-peter-coworker-john-zebedee",
+          "clm-peter-member-jerusalem-church",
+          "clm-philip-apostle-active-jerusalem",
+          "clm-philip-apostle-in-pentecost",
+          "clm-philip-apostle-member-jerusalem",
+          "clm-place-judea-attested-late",
+          "clm-thomas-active-jerusalem",
+          "clm-zealots-at-judea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-1-13-14",
+        "PARAPHRASE_OMISSION:psg-acts-1-13-14:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-thomas-disciple",
+        "subject_type": "person",
+        "subject_id": "thomas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "thomas",
+        "person_label": "Thomas",
+        "name_alt": "Didymus",
+        "name_native": "Θωμᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve and witness in the Johannine resurrection narratives."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-thomas-disciple",
+            "passage_id": "psg-matt-10-2-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-matt-10-2-4",
+            "source_id": "src-matthew",
+            "locator_type": "bible_osis",
+            "locator": "Matt.10.2-4",
+            "excerpt": "Paraphrase: Matthew lists the names of the Twelve apostles including Thomas, Matthew, Philip, and Bartholomew.",
+            "language": "English",
+            "passage_year": "28",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-matthew",
+            "work_id": "gospel-of-matthew",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Matthew",
+            "author": "Traditionally Matthew",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Matthew",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-thomas-active-galilee",
+        "clm-thomas-active-jerusalem",
+        "clm-thomas-in-pentecost",
+        "clm-thomas-active-india",
+        "clm-thomas-affirms-thomas-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-matt-10-2-4": [
+          "clm-bartholomew-active-galilee",
+          "clm-bartholomew-disciple",
+          "clm-matthew-active-galilee",
+          "clm-matthew-disciple",
+          "clm-thomas-active-galilee"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-matt-10-2-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-agabus-active-antioch",
+        "subject_type": "person",
+        "subject_id": "agabus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "46",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "agabus",
+        "person_label": "Agabus",
+        "name_alt": "",
+        "name_native": "Ἅγαβος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet who comes down from Judea and warns Paul in Acts 21."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-agabus-active-antioch",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests agabus's activity in or near antioch."
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-agabus-member-antioch-church",
+        "clm-agabus-member-disciples",
+        "clm-agabus-active-judea",
+        "clm-agabus-member-caesarean"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-11-25-26",
+        "PARAPHRASE_RISK:psg-acts-11-25-26",
+        "PARAPHRASE_OMISSION:psg-acts-11-25-26:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-agabus-active-judea",
+        "subject_type": "person",
+        "subject_id": "agabus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "judea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T09:40:00Z"
+      },
+      "subject_entity": {
+        "person_id": "agabus",
+        "person_label": "Agabus",
+        "name_alt": "",
+        "name_native": "Ἅγαβος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet who comes down from Judea and warns Paul in Acts 21."
+      },
+      "object_entity": {
+        "place_id": "judea",
+        "place_label": "Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "31.70",
+        "lon": "35.20",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Southern region including Jerusalem and the Judean wilderness."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-agabus-active-judea",
+            "passage_id": "psg-acts-21-10-11",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-21-10-11",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.21.10-11",
+            "excerpt": "Paraphrase: A prophet named Agabus comes down from Judea and warns that Paul will be bound in Jerusalem.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-agabus-active-antioch",
+        "clm-agabus-member-antioch-church",
+        "clm-agabus-member-disciples",
+        "clm-agabus-member-caesarean"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-acts-21-10-11": [
+          "clm-agabus-member-caesarean"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-21-10-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-agabus-member-antioch-church",
+        "subject_type": "person",
+        "subject_id": "agabus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "agabus",
+        "person_label": "Agabus",
+        "name_alt": "",
+        "name_native": "Ἅγαβος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet who comes down from Judea and warns Paul in Acts 21."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-agabus-member-antioch-church",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions agabus or antioch-church."
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-agabus-active-antioch",
+        "clm-agabus-member-disciples",
+        "clm-agabus-active-judea",
+        "clm-agabus-member-caesarean"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1",
+        "PARAPHRASE_OMISSION:psg-acts-13-1:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-agabus-member-disciples",
+        "subject_type": "person",
+        "subject_id": "agabus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "agabus",
+        "person_label": "Agabus",
+        "name_alt": "",
+        "name_native": "Ἅγαβος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet who comes down from Judea and warns Paul in Acts 21."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-agabus-member-disciples",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes agabus's membership in disciples-of-jesus."
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-agabus-active-antioch",
+        "clm-agabus-member-antioch-church",
+        "clm-agabus-active-judea",
+        "clm-agabus-member-caesarean"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-11-25-26",
+        "PARAPHRASE_RISK:psg-acts-11-25-26",
+        "PARAPHRASE_OMISSION:psg-acts-11-25-26:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-agabus-member-caesarean",
+        "subject_type": "person",
+        "subject_id": "agabus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "caesarean-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "agabus",
+        "person_label": "Agabus",
+        "name_alt": "",
+        "name_native": "Ἅγαβος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet who comes down from Judea and warns Paul in Acts 21."
+      },
+      "object_entity": {
+        "group_id": "caesarean-church",
+        "group_label": "Church in Caesarea",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Caesarea Maritima; major center from the apostolic period onward; Origen relocated here c. 232 and founded a theological school and library with Alexander of Jerusalem."
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-agabus-member-caesarean",
+            "passage_id": "psg-acts-21-10-11",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-21-10-11",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.21.10-11",
+            "excerpt": "Paraphrase: A prophet named Agabus comes down from Judea and warns that Paul will be bound in Jerusalem.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-agabus-active-antioch",
+        "clm-agabus-member-antioch-church",
+        "clm-agabus-member-disciples",
+        "clm-agabus-active-judea"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-acts-21-10-11": [
+          "clm-agabus-active-judea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-21-10-11",
+        "PARAPHRASE_OMISSION:psg-acts-21-10-11:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-romans-year-end",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-romans",
+        "predicate_id": "work_year_end",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "57",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "campaignA",
+        "updated_at": ""
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-romans",
+        "title_display": "Epistle to the Romans",
+        "title_original": "Πρὸς Ῥωμαίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the believers in Rome."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-romans-year-end",
+            "passage_id": "psg-rom-1-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes the dating of epistle-to-the-romans."
+          },
+          "passage": {
+            "passage_id": "psg-rom-1-7",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.1.7",
+            "excerpt": "Paraphrase: Paul addresses all God beloved in Rome who are called to be saints.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-romans-by-paul",
+        "clm-romans-addressed-rome",
+        "clm-romans-resurrection",
+        "clm-romans-year-start"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-rom-1-7": [
+          "clm-group-disciples-rome",
+          "clm-paul-member-roman-church",
+          "clm-romans-addressed-rome",
+          "clm-romans-by-paul",
+          "clm-romans-year-start"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-rom-1-7",
+        "PARAPHRASE_RISK:psg-rom-1-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-romans-year-start",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-romans",
+        "predicate_id": "work_year_start",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "55",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "campaignA",
+        "updated_at": ""
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-romans",
+        "title_display": "Epistle to the Romans",
+        "title_original": "Πρὸς Ῥωμαίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the believers in Rome."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-romans-year-start",
+            "passage_id": "psg-rom-1-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes the dating of epistle-to-the-romans."
+          },
+          "passage": {
+            "passage_id": "psg-rom-1-7",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.1.7",
+            "excerpt": "Paraphrase: Paul addresses all God beloved in Rome who are called to be saints.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-romans-by-paul",
+        "clm-romans-addressed-rome",
+        "clm-romans-resurrection",
+        "clm-romans-year-end"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-rom-1-7": [
+          "clm-group-disciples-rome",
+          "clm-paul-member-roman-church",
+          "clm-romans-addressed-rome",
+          "clm-romans-by-paul",
+          "clm-romans-year-end"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-rom-1-7",
+        "PARAPHRASE_RISK:psg-rom-1-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-romans-by-paul",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-romans",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "55",
+        "year_end": "58",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T06:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-romans",
+        "title_display": "Epistle to the Romans",
+        "title_original": "Πρὸς Ῥωμαίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the believers in Rome."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-romans-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Rom 1:1 explicit self-identification as Paul; universally accepted as authentic."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-romans-by-paul",
+            "passage_id": "psg-rom-1-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Rom 1:1,7 — Paul explicitly identifies himself as author and apostle."
+          },
+          "passage": {
+            "passage_id": "psg-rom-1-7",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.1.7",
+            "excerpt": "Paraphrase: Paul addresses all God beloved in Rome who are called to be saints.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-romans-addressed-rome",
+        "clm-romans-resurrection",
+        "clm-romans-year-end",
+        "clm-romans-year-start"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-titus-by-paul"
+        ],
+        "psg-rom-1-7": [
+          "clm-group-disciples-rome",
+          "clm-paul-member-roman-church",
+          "clm-romans-addressed-rome",
+          "clm-romans-year-end",
+          "clm-romans-year-start"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-1-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-romans-addressed-rome",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-romans",
+        "predicate_id": "addressed_to_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-romans",
+        "title_display": "Epistle to the Romans",
+        "title_original": "Πρὸς Ῥωμαίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the believers in Rome."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-romans-addressed-rome",
+            "passage_id": "psg-rom-1-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-1-7",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.1.7",
+            "excerpt": "Paraphrase: Paul addresses all God beloved in Rome who are called to be saints.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-romans-by-paul",
+        "clm-romans-resurrection",
+        "clm-romans-year-end",
+        "clm-romans-year-start"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-rom-1-7": [
+          "clm-group-disciples-rome",
+          "clm-paul-member-roman-church",
+          "clm-romans-by-paul",
+          "clm-romans-year-end",
+          "clm-romans-year-start"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-1-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-romans-resurrection",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-romans",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-proclaimed-as-raised",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-romans",
+        "title_display": "Epistle to the Romans",
+        "title_original": "Πρὸς Ῥωμαίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the believers in Rome."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-proclaimed-as-raised",
+        "topic_id": "resurrection-proclamation",
+        "dimension_id": "jesus-resurrection",
+        "proposition_label": "Jesus is proclaimed as raised",
+        "polarity_family": "resurrection_proclamation",
+        "description": "The apostolic proclamation announces that Jesus has been raised from the dead.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-romans-resurrection",
+            "passage_id": "psg-rom-10-9",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-10-9",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.10.9",
+            "excerpt": "Paraphrase: The confession of faith centers on God raising Jesus from the dead.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-romans-by-paul",
+        "clm-romans-addressed-rome",
+        "clm-romans-year-end",
+        "clm-romans-year-start"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-rom-10-9": [
+          "clm-ephesians-resurrection",
+          "clm-philippians-resurrection"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-10-9"
+      ]
+    }
+  ]
+}

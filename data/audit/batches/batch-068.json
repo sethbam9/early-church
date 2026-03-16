@@ -1,0 +1,3262 @@
+{
+  "batch_id": "batch-068",
+  "queue": "1",
+  "focus": "apostolic-tradition",
+  "claim_count": 24,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-at-by-hippolytus",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "hippolytus-of-rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "person_id": "hippolytus-of-rome",
+        "person_label": "Hippolytus of Rome",
+        "name_alt": "Hippolytus",
+        "name_native": "Ἱππόλυτος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; prolific Greek-speaking writer in Rome; opposed the modalism of Zephyrinus and Callistus; set himself up as rival bishop c. 217 (sometimes called the first antipope); exiled with Pontian to Sardinia in 235; reconciled before death; author of the Apostolic Tradition, Refutation of All Heresies, Against Noetus, and Commentary on Daniel."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-by-hippolytus",
+            "passage_id": "psg-hippolytus-at-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "attribution",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Traditional attribution based on the statue inscription and scholarly consensus."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-2-3",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 2-3",
+            "excerpt": "Paraphrase: Let the bishop be ordained, being chosen by all the people. When he has been named and accepted, let the people assemble on the Lord's Day with the presbytery and such bishops as may attend. With the agreement of all, let the bishops lay hands on him.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Earliest known episcopal ordination rite; bishop chosen by the people and ordained by laying on of hands by bishops"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-2-3": [
+          "clm-at-affirms-bishops-govern",
+          "clm-at-affirms-ordination",
+          "clm-at-affirms-succession",
+          "clm-at-affirms-sunday-eucharist",
+          "clm-at-affirms-threefold-ministry",
+          "clm-at-written-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-2-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-written-rome",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-written-rome",
+            "passage_id": "psg-hippolytus-at-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "The Apostolic Tradition reflects Roman church order."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-2-3",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 2-3",
+            "excerpt": "Paraphrase: Let the bishop be ordained, being chosen by all the people. When he has been named and accepted, let the people assemble on the Lord's Day with the presbytery and such bishops as may attend. With the agreement of all, let the bishops lay hands on him.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Earliest known episcopal ordination rite; bishop chosen by the people and ordained by laying on of hands by bishops"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-2-3": [
+          "clm-at-affirms-bishops-govern",
+          "clm-at-affirms-ordination",
+          "clm-at-affirms-succession",
+          "clm-at-affirms-sunday-eucharist",
+          "clm-at-affirms-threefold-ministry",
+          "clm-at-by-hippolytus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-2-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-baptism-regeneration",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-effects-regeneration",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-effects-regeneration",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-regeneration",
+        "proposition_label": "Baptism effects spiritual regeneration",
+        "polarity_family": "baptism_regeneration",
+        "description": "Baptism is not merely symbolic but effects a new birth or regeneration of the recipient.",
+        "notes": "Baptismal regeneration"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-baptism-regeneration",
+            "passage_id": "psg-hippolytus-at-20",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "The baptismal rite effects new birth through immersion and confession."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-20",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 20",
+            "excerpt": "Paraphrase: At the time appointed for baptism, the bishop shall give thanks over oil and exorcise another oil. The candidates shall renounce Satan. They shall be baptized in the water, the presbyter saying: 'Do you believe in God the Father almighty? Do you believe in Christ Jesus the Son of God? Do you believe in the Holy Spirit in the holy Church?' After each question the candidate is immersed.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Triple-immersion baptism with threefold interrogatory creed; oil of exorcism and oil of thanksgiving; trinitarian structure"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-20": [
+          "clm-at-affirms-baptism-water",
+          "clm-at-affirms-infant-baptism",
+          "clm-at-affirms-rule-of-faith",
+          "clm-at-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-20"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-baptism-water",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-with-water-commanded",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-with-water-commanded",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-mode",
+        "proposition_label": "Baptism is administered with water",
+        "polarity_family": "baptism_water",
+        "description": "Baptismal practice uses water as the material element.",
+        "notes": "Core initiatory practice"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-baptism-water",
+            "passage_id": "psg-hippolytus-at-20",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "AT 20 prescribes immersion in water."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-20",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 20",
+            "excerpt": "Paraphrase: At the time appointed for baptism, the bishop shall give thanks over oil and exorcise another oil. The candidates shall renounce Satan. They shall be baptized in the water, the presbyter saying: 'Do you believe in God the Father almighty? Do you believe in Christ Jesus the Son of God? Do you believe in the Holy Spirit in the holy Church?' After each question the candidate is immersed.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Triple-immersion baptism with threefold interrogatory creed; oil of exorcism and oil of thanksgiving; trinitarian structure"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-20": [
+          "clm-at-affirms-baptism-regeneration",
+          "clm-at-affirms-infant-baptism",
+          "clm-at-affirms-rule-of-faith",
+          "clm-at-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-20"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-baptismal-anointing",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptismal-anointing-with-oil",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "baptismal-anointing-with-oil",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-anointing",
+        "proposition_label": "Baptismal Anointing with Oil",
+        "polarity_family": "",
+        "description": "After emerging from the baptismal water, the newly baptized is anointed with chrism or oil as part of the baptismal rite, signifying the reception of the Holy Spirit and incorporation into Christ.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-baptismal-anointing",
+            "passage_id": "psg-hippolytus-at-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "AT 21 prescribes post-baptismal anointing with oil of thanksgiving and episcopal chrismation."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-21",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 21",
+            "excerpt": "Paraphrase: After the baptism, the presbyter anoints the baptized with the oil of thanksgiving saying 'I anoint you with holy oil in the name of Jesus Christ.' Then the bishop lays his hand on them, anoints their forehead, and gives them the kiss of peace. From that time they shall pray together with all the people and shall share in the eucharist.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Post-baptismal anointing with chrism; episcopal hand-laying; admission to eucharist; proto-confirmation rite"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-bishop-eucharist",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bishop-authority-over-eucharist",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "bishop-authority-over-eucharist",
+        "topic_id": "episcopal-authority",
+        "dimension_id": "bishop-liturgy",
+        "proposition_label": "Valid Eucharist requires the bishop or his delegate",
+        "polarity_family": "episcopal_eucharist",
+        "description": "Proper eucharistic celebration is administered by or authorized by the bishop.",
+        "notes": "Episcopal control of sacraments"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-bishop-eucharist",
+            "passage_id": "psg-hippolytus-at-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "AT 4 prescribes the bishop as the one who gives thanks over the bread and cup."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-4",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 4",
+            "excerpt": "Paraphrase: The eucharistic prayer (anaphora): the bishop gives thanks over the bread and cup, reciting the narrative of institution; the people respond 'Amen'; the deacons present the offering. The prayer includes thanksgiving for creation, incarnation, passion, and resurrection.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Earliest surviving eucharistic prayer; structured anaphora with institution narrative and thanksgiving"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-4": [
+          "clm-at-affirms-eucharist-body-blood",
+          "clm-at-affirms-eucharist-sacrifice",
+          "clm-at-affirms-incarnation",
+          "clm-at-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-bishops-govern",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bishops-govern-local-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "bishops-govern-local-church",
+        "topic_id": "church-order",
+        "dimension_id": "monarchical-episcopate",
+        "proposition_label": "A single bishop governs the local church",
+        "polarity_family": "monarchical_episcopacy",
+        "description": "A single bishop holds authority over the local Christian community as representative of God.",
+        "notes": "Monarchical episcopate"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-bishops-govern",
+            "passage_id": "psg-hippolytus-at-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "The bishop is chosen by all the people and ordained to govern the church."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-2-3",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 2-3",
+            "excerpt": "Paraphrase: Let the bishop be ordained, being chosen by all the people. When he has been named and accepted, let the people assemble on the Lord's Day with the presbytery and such bishops as may attend. With the agreement of all, let the bishops lay hands on him.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Earliest known episcopal ordination rite; bishop chosen by the people and ordained by laying on of hands by bishops"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-2-3": [
+          "clm-at-affirms-ordination",
+          "clm-at-affirms-succession",
+          "clm-at-affirms-sunday-eucharist",
+          "clm-at-affirms-threefold-ministry",
+          "clm-at-by-hippolytus",
+          "clm-at-written-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-2-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-catechumenate",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "catechumenate-precedes-baptism",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "catechumenate-precedes-baptism",
+        "topic_id": "baptism-practice",
+        "dimension_id": "catechumenate",
+        "proposition_label": "A formal catechumenate precedes baptism",
+        "polarity_family": "",
+        "description": "Candidates for baptism undergo a structured period of pre-baptismal instruction, examination, and moral formation (the catechumenate) before being admitted to the sacrament.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-catechumenate",
+            "passage_id": "psg-hippolytus-at-15-19",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "AT 15-19 prescribes a three-year catechumenate with moral examination."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-15-19",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 15-19",
+            "excerpt": "Paraphrase: Those who come to hear the word for the first time are examined as to their manner of life. Catechumens shall hear the word for three years. They shall be examined as to whether they lived piously, honored the widows, visited the sick, and fulfilled every good work.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Three-year catechumenate with moral examination; pre-baptismal instruction period"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-15-19": [
+          "clm-at-affirms-military-refusal"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-15-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-continual-prayer",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "prayer-is-offered-without-ceasing",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "prayer-is-offered-without-ceasing",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "continual-prayer",
+        "proposition_label": "Prayer is offered without ceasing throughout all of life",
+        "polarity_family": "continual_prayer",
+        "description": "The spiritually formed Christian does not confine prayer to set times but prays continually through every word, action, and disposition, maintaining unceasing communion with God.",
+        "notes": "Continual prayer"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-continual-prayer",
+            "passage_id": "psg-hippolytus-at-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "AT 25-26 prescribes prayer at six fixed hours throughout the day plus morning prayers."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-25-26",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 25-26",
+            "excerpt": "Paraphrase: Every faithful man and woman, when they have risen from sleep in the morning, before they touch any work, shall wash their hands and pray to God. If there is instruction in the word, let each one prefer to go there. Let them pray at the third hour, the sixth hour, the ninth hour, at bedtime, at midnight, and at cockcrow.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Fixed prayer hours throughout the day; daily prayer discipline for the faithful"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-25-26": [
+          "clm-at-affirms-fasting",
+          "clm-at-affirms-virginity"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-eucharist-body-blood",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "eucharist-is-body-and-blood",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "eucharist-is-body-and-blood",
+        "topic_id": "eucharist-presence",
+        "dimension_id": "real-presence",
+        "proposition_label": "The Eucharist is the body and blood of Christ",
+        "polarity_family": "eucharistic_realism",
+        "description": "The eucharistic elements are identified as the flesh and blood of Jesus.",
+        "notes": "Real-presence language"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-eucharist-body-blood",
+            "passage_id": "psg-hippolytus-at-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "The eucharistic prayer identifies the bread and cup with Christ's body and blood."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-4",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 4",
+            "excerpt": "Paraphrase: The eucharistic prayer (anaphora): the bishop gives thanks over the bread and cup, reciting the narrative of institution; the people respond 'Amen'; the deacons present the offering. The prayer includes thanksgiving for creation, incarnation, passion, and resurrection.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Earliest surviving eucharistic prayer; structured anaphora with institution narrative and thanksgiving"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-4": [
+          "clm-at-affirms-bishop-eucharist",
+          "clm-at-affirms-eucharist-sacrifice",
+          "clm-at-affirms-incarnation",
+          "clm-at-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-eucharist-sacrifice",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "eucharist-is-sacrifice",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "eucharist-is-sacrifice",
+        "topic_id": "eucharist-practice",
+        "dimension_id": "eucharist-sacrificial",
+        "proposition_label": "The Eucharist is a sacrifice offered to God",
+        "polarity_family": "eucharistic_sacrifice",
+        "description": "The eucharistic celebration is explicitly described as a sacrifice or oblation offered to God.",
+        "notes": "Sacrifice language"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-eucharist-sacrifice",
+            "passage_id": "psg-hippolytus-at-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "The eucharistic prayer is framed as an offering/oblation."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-4",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 4",
+            "excerpt": "Paraphrase: The eucharistic prayer (anaphora): the bishop gives thanks over the bread and cup, reciting the narrative of institution; the people respond 'Amen'; the deacons present the offering. The prayer includes thanksgiving for creation, incarnation, passion, and resurrection.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Earliest surviving eucharistic prayer; structured anaphora with institution narrative and thanksgiving"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-4": [
+          "clm-at-affirms-bishop-eucharist",
+          "clm-at-affirms-eucharist-body-blood",
+          "clm-at-affirms-incarnation",
+          "clm-at-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-fasting",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "fasting-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "fasting-is-required",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "fasting-required",
+        "proposition_label": "Christians are required to fast",
+        "polarity_family": "christian_fasting",
+        "description": "Fasting is a required Christian spiritual discipline presented as obligatory, not merely optional.",
+        "notes": "Ascetic discipline"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-fasting",
+            "passage_id": "psg-hippolytus-at-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "AT prescribes fasting and prayer discipline."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-25-26",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 25-26",
+            "excerpt": "Paraphrase: Every faithful man and woman, when they have risen from sleep in the morning, before they touch any work, shall wash their hands and pray to God. If there is instruction in the word, let each one prefer to go there. Let them pray at the third hour, the sixth hour, the ninth hour, at bedtime, at midnight, and at cockcrow.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Fixed prayer hours throughout the day; daily prayer discipline for the faithful"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-25-26": [
+          "clm-at-affirms-continual-prayer",
+          "clm-at-affirms-virginity"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-frequent-eucharist",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "frequent-eucharistic-assembly",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "frequent-eucharistic-assembly",
+        "topic_id": "eucharist-practice",
+        "dimension_id": "assembly-frequency",
+        "proposition_label": "Christians should assemble frequently for Eucharist",
+        "polarity_family": "frequent_eucharist",
+        "description": "Regular gathering for eucharistic worship is normative.",
+        "notes": "Liturgical regularity"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-frequent-eucharist",
+            "passage_id": "psg-hippolytus-at-41",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "AT 41 urges faithful to receive the eucharist regularly before other food."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-41",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 41",
+            "excerpt": "Paraphrase: Every faithful person shall be careful to receive the eucharist before eating anything else, for if they receive it in faith, even if deadly poison is given them, it will not be able to harm them.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Eucharist received fasting before other food; eucharistic protection language"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-41"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-incarnation",
+            "passage_id": "psg-hippolytus-at-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "The eucharistic prayer recites the narrative of incarnation, passion, and resurrection."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-4",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 4",
+            "excerpt": "Paraphrase: The eucharistic prayer (anaphora): the bishop gives thanks over the bread and cup, reciting the narrative of institution; the people respond 'Amen'; the deacons present the offering. The prayer includes thanksgiving for creation, incarnation, passion, and resurrection.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Earliest surviving eucharistic prayer; structured anaphora with institution narrative and thanksgiving"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-4": [
+          "clm-at-affirms-bishop-eucharist",
+          "clm-at-affirms-eucharist-body-blood",
+          "clm-at-affirms-eucharist-sacrifice",
+          "clm-at-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-infant-baptism",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "infants-and-children-are-baptized",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "infants-and-children-are-baptized",
+        "topic_id": "baptism-practice",
+        "dimension_id": "infant-baptism",
+        "proposition_label": "Infants and children receive baptism",
+        "polarity_family": "infant_baptism",
+        "description": "Infant and child baptism is explicitly affirmed or presupposed as the ordinary practice of the Church.",
+        "notes": "Infant baptism"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-infant-baptism",
+            "passage_id": "psg-hippolytus-at-20",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "AT mentions baptizing little children first, then adults."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-20",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 20",
+            "excerpt": "Paraphrase: At the time appointed for baptism, the bishop shall give thanks over oil and exorcise another oil. The candidates shall renounce Satan. They shall be baptized in the water, the presbyter saying: 'Do you believe in God the Father almighty? Do you believe in Christ Jesus the Son of God? Do you believe in the Holy Spirit in the holy Church?' After each question the candidate is immersed.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Triple-immersion baptism with threefold interrogatory creed; oil of exorcism and oil of thanksgiving; trinitarian structure"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-20": [
+          "clm-at-affirms-baptism-regeneration",
+          "clm-at-affirms-baptism-water",
+          "clm-at-affirms-rule-of-faith",
+          "clm-at-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-20"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-military-refusal",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christians-must-not-serve-in-military",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "christians-must-not-serve-in-military",
+        "topic_id": "social-ethics",
+        "dimension_id": "military-refusal",
+        "proposition_label": "Christians must not serve in the military",
+        "polarity_family": "military_refusal",
+        "description": "Military service is incompatible with Christian discipleship due to the requirements of idolatrous oath-taking, bloodshed, and submission to pagan authority.",
+        "notes": "Military service refusal"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-military-refusal",
+            "passage_id": "psg-hippolytus-at-15-19",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "AT 16 lists occupations incompatible with the catechumenate including soldiers who kill."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-15-19",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 15-19",
+            "excerpt": "Paraphrase: Those who come to hear the word for the first time are examined as to their manner of life. Catechumens shall hear the word for three years. They shall be examined as to whether they lived piously, honored the widows, visited the sick, and fulfilled every good work.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Three-year catechumenate with moral examination; pre-baptismal instruction period"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-15-19": [
+          "clm-at-affirms-catechumenate"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-15-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-ordination",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "ordination-conferred-by-laying-on-of-hands",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "ordination-conferred-by-laying-on-of-hands",
+        "topic_id": "church-order",
+        "dimension_id": "ordination-rite",
+        "proposition_label": "Ordination is conferred by the laying on of hands",
+        "polarity_family": "",
+        "description": "The ministry of bishop, presbyter, and deacon is conferred through the liturgical act of laying on of hands by existing bishops (for episcopal ordination) or by the bishop (for presbyters and deacons).",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-ordination",
+            "passage_id": "psg-hippolytus-at-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "AT 2-3 prescribes episcopal ordination by laying on of hands by bishops."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-2-3",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 2-3",
+            "excerpt": "Paraphrase: Let the bishop be ordained, being chosen by all the people. When he has been named and accepted, let the people assemble on the Lord's Day with the presbytery and such bishops as may attend. With the agreement of all, let the bishops lay hands on him.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Earliest known episcopal ordination rite; bishop chosen by the people and ordained by laying on of hands by bishops"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-ordination",
+            "passage_id": "psg-hippolytus-at-7-8",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "AT 7-8 prescribes ordination of presbyters and deacons by laying on of hands."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-7-8",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 7-8",
+            "excerpt": "Paraphrase: The presbyter is ordained by the bishop laying hands on him, with the other presbyters also touching him. The deacon is ordained by the bishop alone laying hands on him, because he is not ordained to the priesthood but to the service of the bishop.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Ordination of presbyters and deacons; distinction between priestly and diaconal ordination"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-2-3": [
+          "clm-at-affirms-bishops-govern",
+          "clm-at-affirms-succession",
+          "clm-at-affirms-sunday-eucharist",
+          "clm-at-affirms-threefold-ministry",
+          "clm-at-by-hippolytus",
+          "clm-at-written-rome"
+        ],
+        "psg-hippolytus-at-7-8": [
+          "clm-at-affirms-threefold-ministry"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-2-3",
+        "PARAPHRASE_RISK:psg-hippolytus-at-7-8"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-rule-of-faith",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-rule-of-faith",
+            "passage_id": "psg-hippolytus-at-20",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "The interrogatory creed at baptism functions as a rule of faith."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-20",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 20",
+            "excerpt": "Paraphrase: At the time appointed for baptism, the bishop shall give thanks over oil and exorcise another oil. The candidates shall renounce Satan. They shall be baptized in the water, the presbyter saying: 'Do you believe in God the Father almighty? Do you believe in Christ Jesus the Son of God? Do you believe in the Holy Spirit in the holy Church?' After each question the candidate is immersed.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Triple-immersion baptism with threefold interrogatory creed; oil of exorcism and oil of thanksgiving; trinitarian structure"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-20": [
+          "clm-at-affirms-baptism-regeneration",
+          "clm-at-affirms-baptism-water",
+          "clm-at-affirms-infant-baptism",
+          "clm-at-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-20"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-succession",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-succession",
+            "passage_id": "psg-hippolytus-at-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Episcopal ordination by existing bishops presupposes apostolic succession."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-2-3",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 2-3",
+            "excerpt": "Paraphrase: Let the bishop be ordained, being chosen by all the people. When he has been named and accepted, let the people assemble on the Lord's Day with the presbytery and such bishops as may attend. With the agreement of all, let the bishops lay hands on him.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Earliest known episcopal ordination rite; bishop chosen by the people and ordained by laying on of hands by bishops"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-2-3": [
+          "clm-at-affirms-bishops-govern",
+          "clm-at-affirms-ordination",
+          "clm-at-affirms-sunday-eucharist",
+          "clm-at-affirms-threefold-ministry",
+          "clm-at-by-hippolytus",
+          "clm-at-written-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-2-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-sunday-eucharist",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "eucharist-offered-on-sunday",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "eucharist-offered-on-sunday",
+        "topic_id": "eucharist-practice",
+        "dimension_id": "sunday-assembly",
+        "proposition_label": "Christians gather on Sunday for the Eucharist",
+        "polarity_family": "sunday_eucharist",
+        "description": "The Lord's Day is the regular day for eucharistic assembly.",
+        "notes": "Weekly liturgical pattern"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-sunday-eucharist",
+            "passage_id": "psg-hippolytus-at-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "AT 2 specifies that ordination assembly occurs on the Lord's Day."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-2-3",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 2-3",
+            "excerpt": "Paraphrase: Let the bishop be ordained, being chosen by all the people. When he has been named and accepted, let the people assemble on the Lord's Day with the presbytery and such bishops as may attend. With the agreement of all, let the bishops lay hands on him.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Earliest known episcopal ordination rite; bishop chosen by the people and ordained by laying on of hands by bishops"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-2-3": [
+          "clm-at-affirms-bishops-govern",
+          "clm-at-affirms-ordination",
+          "clm-at-affirms-succession",
+          "clm-at-affirms-threefold-ministry",
+          "clm-at-by-hippolytus",
+          "clm-at-written-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-2-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-threefold-ministry",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "threefold-ministry-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "threefold-ministry-required",
+        "topic_id": "church-order",
+        "dimension_id": "bishop-presbyter-deacon",
+        "proposition_label": "Valid church order requires bishop, presbyter, and deacon",
+        "polarity_family": "threefold_ministry",
+        "description": "The threefold ministry of bishop, presbyter, and deacon is required for valid church structure.",
+        "notes": "Church order"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-threefold-ministry",
+            "passage_id": "psg-hippolytus-at-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "AT distinguishes bishop, presbyter, and deacon as the threefold order."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-2-3",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 2-3",
+            "excerpt": "Paraphrase: Let the bishop be ordained, being chosen by all the people. When he has been named and accepted, let the people assemble on the Lord's Day with the presbytery and such bishops as may attend. With the agreement of all, let the bishops lay hands on him.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Earliest known episcopal ordination rite; bishop chosen by the people and ordained by laying on of hands by bishops"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-threefold-ministry",
+            "passage_id": "psg-hippolytus-at-7-8",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "AT 7-8 details distinct ordination rites for presbyters and deacons."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-7-8",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 7-8",
+            "excerpt": "Paraphrase: The presbyter is ordained by the bishop laying hands on him, with the other presbyters also touching him. The deacon is ordained by the bishop alone laying hands on him, because he is not ordained to the priesthood but to the service of the bishop.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Ordination of presbyters and deacons; distinction between priestly and diaconal ordination"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-2-3": [
+          "clm-at-affirms-bishops-govern",
+          "clm-at-affirms-ordination",
+          "clm-at-affirms-succession",
+          "clm-at-affirms-sunday-eucharist",
+          "clm-at-by-hippolytus",
+          "clm-at-written-rome"
+        ],
+        "psg-hippolytus-at-7-8": [
+          "clm-at-affirms-ordination"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-2-3",
+        "PARAPHRASE_RISK:psg-hippolytus-at-7-8"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-trinitarian-baptism",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-administered-in-trinitarian-name",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-administered-in-trinitarian-name",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-formula",
+        "proposition_label": "Baptism is administered in the Trinitarian name of Father, Son, and Holy Spirit",
+        "polarity_family": "trinitarian_baptism",
+        "description": "Baptism uses the explicit Trinitarian formula of Father, Son, and Holy Spirit as the form of the sacrament.",
+        "notes": "Trinitarian baptismal formula"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-trinitarian-baptism",
+            "passage_id": "psg-hippolytus-at-20",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "AT 20 prescribes the threefold interrogatory creed: Father, Son, Holy Spirit."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-20",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 20",
+            "excerpt": "Paraphrase: At the time appointed for baptism, the bishop shall give thanks over oil and exorcise another oil. The candidates shall renounce Satan. They shall be baptized in the water, the presbyter saying: 'Do you believe in God the Father almighty? Do you believe in Christ Jesus the Son of God? Do you believe in the Holy Spirit in the holy Church?' After each question the candidate is immersed.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Triple-immersion baptism with threefold interrogatory creed; oil of exorcism and oil of thanksgiving; trinitarian structure"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-20": [
+          "clm-at-affirms-baptism-regeneration",
+          "clm-at-affirms-baptism-water",
+          "clm-at-affirms-infant-baptism",
+          "clm-at-affirms-rule-of-faith"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-20"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-virgin-birth",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-virgin-birth",
+            "passage_id": "psg-hippolytus-at-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "The eucharistic prayer references Christ born of the virgin."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-4",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 4",
+            "excerpt": "Paraphrase: The eucharistic prayer (anaphora): the bishop gives thanks over the bread and cup, reciting the narrative of institution; the people respond 'Amen'; the deacons present the offering. The prayer includes thanksgiving for creation, incarnation, passion, and resurrection.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Earliest surviving eucharistic prayer; structured anaphora with institution narrative and thanksgiving"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virginity",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-4": [
+          "clm-at-affirms-bishop-eucharist",
+          "clm-at-affirms-eucharist-body-blood",
+          "clm-at-affirms-eucharist-sacrifice",
+          "clm-at-affirms-incarnation"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-at-affirms-virginity",
+        "subject_type": "work",
+        "subject_id": "apostolic-tradition",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "virginity-is-honored-calling",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "215",
+        "year_end": "215",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apostolic-tradition",
+        "title_display": "Apostolic Tradition",
+        "title_original": "Ἀποστολικὴ Παράδοσις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order attributed to Hippolytus of Rome c. 215; contains the earliest known ordination rite for bishops, presbyters, and deacons; detailed baptismal liturgy including catechumenate, triple immersion, anointing, and eucharist; the earliest surviving eucharistic prayer (anaphora); regulations for church life including fasting, prayer hours, and care of the sick."
+      },
+      "object_entity": {
+        "proposition_id": "virginity-is-honored-calling",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "celibacy-honored",
+        "proposition_label": "Virginity and celibacy are honored as a positive Christian calling",
+        "polarity_family": "celibacy_honored",
+        "description": "Virginity and celibacy are not merely tolerated but positively honored as a higher calling, even while marriage is defended as legitimate and good.",
+        "notes": "Celibacy and virginity honored"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-at-affirms-virginity",
+            "passage_id": "psg-hippolytus-at-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.4",
+            "notes": "AT references virgins and widows as honored states."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-at-25-26",
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "locator_type": "source_ref",
+            "locator": "AT 25-26",
+            "excerpt": "Paraphrase: Every faithful man and woman, when they have risen from sleep in the morning, before they touch any work, shall wash their hands and pray to God. If there is instruction in the word, let each one prefer to go there. Let them pray at the third hour, the sixth hour, the ninth hour, at bedtime, at midnight, and at cockcrow.",
+            "language": "English",
+            "passage_year": "215",
+            "url_override": "",
+            "notes": "Fixed prayer hours throughout the day; daily prayer discipline for the faithful"
+          },
+          "source": {
+            "source_id": "src-hippolytus-apostolic-tradition",
+            "work_id": "apostolic-tradition",
+            "source_kind": "primary_text",
+            "title": "Apostolic Tradition",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 215",
+            "year_start": "215",
+            "year_end": "215",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0715.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Church order with ordination rites, baptismal liturgy, and eucharistic prayer; Easton translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-at-affirms-baptism-regeneration",
+        "clm-at-affirms-baptism-water",
+        "clm-at-affirms-baptismal-anointing",
+        "clm-at-affirms-bishop-eucharist",
+        "clm-at-affirms-bishops-govern",
+        "clm-at-affirms-catechumenate",
+        "clm-at-affirms-continual-prayer",
+        "clm-at-affirms-eucharist-body-blood",
+        "clm-at-affirms-eucharist-sacrifice",
+        "clm-at-affirms-fasting",
+        "clm-at-affirms-frequent-eucharist",
+        "clm-at-affirms-incarnation",
+        "clm-at-affirms-infant-baptism",
+        "clm-at-affirms-military-refusal",
+        "clm-at-affirms-ordination",
+        "clm-at-affirms-rule-of-faith",
+        "clm-at-affirms-succession",
+        "clm-at-affirms-sunday-eucharist",
+        "clm-at-affirms-threefold-ministry",
+        "clm-at-affirms-trinitarian-baptism",
+        "clm-at-affirms-virgin-birth",
+        "clm-at-written-rome",
+        "clm-at-by-hippolytus"
+      ],
+      "sibling_count": 23,
+      "passage_co_users": {
+        "psg-hippolytus-at-25-26": [
+          "clm-at-affirms-continual-prayer",
+          "clm-at-affirms-fasting"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-at-25-26"
+      ]
+    }
+  ]
+}

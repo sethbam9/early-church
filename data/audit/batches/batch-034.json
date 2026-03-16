@@ -1,0 +1,2565 @@
+{
+  "batch_id": "batch-034",
+  "queue": "0A",
+  "focus": "psg-acts-18-24-28(12)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-demas-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "demas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "demas",
+        "person_label": "Demas",
+        "name_alt": "",
+        "name_native": "Δημᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said in 2 Timothy to have gone to Thessalonica."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-demas-member-roman-church",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-demas-active-rome",
+        "clm-demas-coworker-paul",
+        "clm-demas-disciple",
+        "clm-demas-active-thessalonica-late"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24",
+        "PARAPHRASE_OMISSION:psg-phlm-23-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-epaphras-active-rome",
+        "subject_type": "person",
+        "subject_id": "epaphras",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "epaphras",
+        "person_label": "Epaphras",
+        "name_alt": "",
+        "name_native": "Ἐπαφρᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Colossian coworker associated with the churches of Colossae, Laodicea, and Hierapolis."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-epaphras-active-rome",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Philemon 23 names Epaphras as fellow prisoner."
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-epaphras-active-colossae",
+        "clm-epaphras-active-hierapolis",
+        "clm-epaphras-active-laodicea",
+        "clm-epaphras-colossian-church",
+        "clm-epaphras-coworker-paul",
+        "clm-epaphras-member-hierapolis",
+        "clm-epaphras-member-roman"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24",
+        "PARAPHRASE_OMISSION:psg-phlm-23-24:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-john-mark-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "john-mark",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "john-mark",
+        "person_label": "John Mark",
+        "name_alt": "Mark",
+        "name_native": "Ἰωάννης Μᾶρκος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Mission helper associated with Barnabas and Paul in Acts 13 and later tradition."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-john-mark-coworker-paul",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-john-mark-active-jerusalem",
+        "clm-john-mark-member-jerusalem",
+        "clm-john-mark-member-disciples",
+        "clm-john-mark-active-antioch",
+        "clm-john-mark-member-antioch",
+        "clm-john-mark-active-cyprus",
+        "clm-john-mark-active-paphos",
+        "clm-john-mark-active-salamis",
+        "clm-john-mark-coworker-peter",
+        "clm-john-mark-active-rome",
+        "clm-john-mark-member-roman"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aristarchus-active-rome",
+        "subject_type": "person",
+        "subject_id": "aristarchus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aristarchus",
+        "person_label": "Aristarchus",
+        "name_alt": "",
+        "name_native": "Ἀρίσταρχος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Thessalonian companion of Paul named among the Acts 20 travel party."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aristarchus-active-rome",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Philemon 23-24 names Aristarchus as fellow prisoner with Paul."
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aristarchus-member-thessalonian",
+        "clm-aristarchus-active-ephesus",
+        "clm-aristarchus-active-jerusalem",
+        "clm-aristarchus-active-thessalonica",
+        "clm-aristarchus-coworker-tychicus",
+        "clm-aristarchus-coworker-paul",
+        "clm-aristarchus-member-roman-church",
+        "clm-epaphras-coworker-aristarchus"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24",
+        "PARAPHRASE_OMISSION:psg-phlm-23-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-luke-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "luke-the-evangelist",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "64",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "luke-the-evangelist",
+        "person_label": "Luke",
+        "name_alt": "Luke the beloved physician",
+        "name_native": "Λουκᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline companion traditionally associated with Luke and Acts."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-luke-coworker-paul",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-luke-active-antioch",
+        "clm-luke-member-antioch-church",
+        "clm-luke-member-disciples",
+        "clm-luke-coworker-silas",
+        "clm-luke-active-philippi",
+        "clm-luke-active-troas",
+        "clm-luke-coworker-timothy",
+        "clm-luke-active-caesarea",
+        "clm-luke-active-rome",
+        "clm-luke-member-roman-church"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-demas-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "demas",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "demas",
+        "person_label": "Demas",
+        "name_alt": "",
+        "name_native": "Δημᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said in 2 Timothy to have gone to Thessalonica."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-demas-coworker-paul",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-demas-active-rome",
+        "clm-demas-member-roman-church",
+        "clm-demas-disciple",
+        "clm-demas-active-thessalonica-late"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-demas-disciple",
+        "subject_type": "person",
+        "subject_id": "demas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "66",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "demas",
+        "person_label": "Demas",
+        "name_alt": "",
+        "name_native": "Δημᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said in 2 Timothy to have gone to Thessalonica."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-demas-disciple",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-demas-active-rome",
+        "clm-demas-coworker-paul",
+        "clm-demas-member-roman-church",
+        "clm-demas-active-thessalonica-late"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24",
+        "PARAPHRASE_OMISSION:psg-phlm-23-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-epaphras-coworker-aristarchus",
+        "subject_type": "person",
+        "subject_id": "aristarchus",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "epaphras",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aristarchus",
+        "person_label": "Aristarchus",
+        "name_alt": "",
+        "name_native": "Ἀρίσταρχος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Thessalonian companion of Paul named among the Acts 20 travel party."
+      },
+      "object_entity": {
+        "person_id": "epaphras",
+        "person_label": "Epaphras",
+        "name_alt": "",
+        "name_native": "Ἐπαφρᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Colossian coworker associated with the churches of Colossae, Laodicea, and Hierapolis."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-epaphras-coworker-aristarchus",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aristarchus-member-thessalonian",
+        "clm-aristarchus-active-ephesus",
+        "clm-aristarchus-active-jerusalem",
+        "clm-aristarchus-active-thessalonica",
+        "clm-aristarchus-coworker-tychicus",
+        "clm-aristarchus-active-rome",
+        "clm-aristarchus-coworker-paul",
+        "clm-aristarchus-member-roman-church"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24",
+        "PARAPHRASE_OMISSION:psg-phlm-23-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aristarchus-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "aristarchus",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aristarchus",
+        "person_label": "Aristarchus",
+        "name_alt": "",
+        "name_native": "Ἀρίσταρχος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Thessalonian companion of Paul named among the Acts 20 travel party."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aristarchus-coworker-paul",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aristarchus-member-thessalonian",
+        "clm-aristarchus-active-ephesus",
+        "clm-aristarchus-active-jerusalem",
+        "clm-aristarchus-active-thessalonica",
+        "clm-aristarchus-coworker-tychicus",
+        "clm-aristarchus-active-rome",
+        "clm-aristarchus-member-roman-church",
+        "clm-epaphras-coworker-aristarchus"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aristarchus-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "aristarchus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aristarchus",
+        "person_label": "Aristarchus",
+        "name_alt": "",
+        "name_native": "Ἀρίσταρχος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Thessalonian companion of Paul named among the Acts 20 travel party."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aristarchus-member-roman-church",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aristarchus-member-thessalonian",
+        "clm-aristarchus-active-ephesus",
+        "clm-aristarchus-active-jerusalem",
+        "clm-aristarchus-active-thessalonica",
+        "clm-aristarchus-coworker-tychicus",
+        "clm-aristarchus-active-rome",
+        "clm-aristarchus-coworker-paul",
+        "clm-epaphras-coworker-aristarchus"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24",
+        "PARAPHRASE_OMISSION:psg-phlm-23-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-epaphras-member-roman",
+        "subject_type": "person",
+        "subject_id": "epaphras",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "epaphras",
+        "person_label": "Epaphras",
+        "name_alt": "",
+        "name_native": "Ἐπαφρᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Colossian coworker associated with the churches of Colossae, Laodicea, and Hierapolis."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-epaphras-member-roman",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-epaphras-active-colossae",
+        "clm-epaphras-active-hierapolis",
+        "clm-epaphras-active-laodicea",
+        "clm-epaphras-active-rome",
+        "clm-epaphras-colossian-church",
+        "clm-epaphras-coworker-paul",
+        "clm-epaphras-member-hierapolis"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24",
+        "PARAPHRASE_OMISSION:psg-phlm-23-24:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-he-mentions-thomas-india",
+        "subject_type": "work",
+        "subject_id": "ecclesiastical-history-of-eusebius",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "thomas-preached-in-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "325",
+        "year_end": "325",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ecclesiastical-history-of-eusebius",
+        "title_display": "Ecclesiastical History",
+        "title_original": "Ἐκκλησιαστικὴ Ἱστορία",
+        "work_type": "chronicle",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Late antique church history used here for explicit memory of Peter and Paul suffering in Rome under Nero."
+      },
+      "object_entity": {
+        "proposition_id": "thomas-preached-in-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "apostle-thomas-india",
+        "proposition_label": "The apostle Thomas preached in India",
+        "polarity_family": "thomas_india",
+        "description": "The Acts of Thomas (3rd c.) narrates Thomas's journey to India; the Thomas Christian tradition in Malabar claims apostolic origin; certainty is claimed_tradition.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-he-mentions-thomas-india",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-he-by-eusebius",
+        "clm-eusebius-he-written-caesarea",
+        "clm-eusebius-he-affirms-bartholomew-india",
+        "clm-eusebius-he-affirms-ethiopia",
+        "clm-eusebius-he-affirms-india-reached",
+        "clm-eusebius-he-affirms-universal",
+        "clm-eusebius-he-mentions-arabia",
+        "clm-eusebius-he-mentions-pantaenus-mission"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-active-antioch",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "325",
+        "year_end": "330",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-active-antioch",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests eusebius-of-caesarea's activity in or near antioch."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-active-alexandria",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "312",
+        "year_end": "315",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-active-alexandria",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests eusebius-of-caesarea's activity in or near alexandria."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-36:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-affirms-britannia",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-reached-britannia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "325",
+        "year_end": "325",
+        "context_place_id": "caesarea",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-reached-britannia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "britannia-reached",
+        "proposition_label": "Christianity reached Britannia before the end of the Roman period",
+        "polarity_family": "britannia_reached",
+        "description": "Christianity was present in Roman Britain; rhetorical attestation by Tertullian c. 200, Origen c. 244, and firm documentary evidence of 3 British bishops at the Council of Arles 314.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-affirms-britannia",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes eusebius-of-caesarea's position on christianity-reached-britannia."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-36:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-teacher-pantaenus",
+        "subject_type": "person",
+        "subject_id": "pantaenus",
+        "predicate_id": "teacher_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "clement-of-alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "180",
+        "year_end": "200",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "superseded",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pantaenus",
+        "person_label": "Pantaenus",
+        "name_alt": "Pantaenus of Alexandria",
+        "name_native": "Πάνταινος",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 200",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria before Clement; former Stoic philosopher converted to Christianity. According to Eusebius, he traveled as far as India as a missionary. He was Clement of Alexandria's primary teacher."
+      },
+      "object_entity": {
+        "person_id": "clement-of-alexandria",
+        "person_label": "Clement of Alexandria",
+        "name_alt": "Titus Flavius Clemens",
+        "name_native": "Κλήμης Ἀλεξανδρεύς",
+        "birth_year_display": "c. 150",
+        "death_year_display": "c. 215",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria; author of Protrepticus, Paedagogus, and Stromateis; synthesized Christian faith with Greek philosophy; key witness for Alexandrian baptismal theology, eucharistic practice, asceticism, and apostolic tradition."
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-teacher-pantaenus",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes pantaenus's role as teacher of clement-of-alexandria."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-active-alexandria",
+        "clm-pantaenus-member-alexandria-church",
+        "clm-pantaenus-teacher-of-clement",
+        "clm-pantaenus-active-india",
+        "clm-pantaenus-participant-india-mission",
+        "clm-person-pantaenus-affirms-bartholomew",
+        "clm-person-pantaenus-affirms-india"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ignatius-martyrdom-year",
+        "subject_type": "event",
+        "subject_id": "ignatius-martyrdom",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "110",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "event_id": "ignatius-martyrdom",
+        "event_label": "Martyrdom of Ignatius",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Ignatius of Antioch is transported to Rome and martyred in the arena under Trajan c. 108-110."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ignatius-martyrdom-year",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ignatius-martyrdom-at-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-peter-bishop-antioch",
+        "subject_type": "person",
+        "subject_id": "simon-peter",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "40",
+        "year_end": "55",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "simon-peter",
+        "person_label": "Simon Peter",
+        "name_alt": "Cephas; Simon son of Jonah",
+        "name_native": "Σίμων Πέτρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Disciple called during Galilean ministry."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-peter-bishop-antioch",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius lists Peter as bishop of Antioch."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-peter-bishop-antioch",
+            "passage_id": "psg-gal-2-11-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Galatians 2 confirms Peter active in Antioch."
+          },
+          "passage": {
+            "passage_id": "psg-gal-2-11-14",
+            "source_id": "src-galatians",
+            "locator_type": "bible_osis",
+            "locator": "Gal.2.11-14",
+            "excerpt": "But when Cephas came to Antioch, I opposed him to his face, because he stood condemned.",
+            "language": "English",
+            "passage_year": "49",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-galatians",
+            "work_id": "epistle-to-the-galatians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Galatians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 48-49",
+            "year_start": "48",
+            "year_end": "49",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Galatians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Gentile inclusion and circumcision controversy."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-peter-active-galilee",
+        "clm-peter-in-calling",
+        "clm-peter-disciple",
+        "clm-peter-in-arrest",
+        "clm-peter-in-crucifixion-witness",
+        "clm-peter-in-last-supper",
+        "clm-peter-in-pentecost",
+        "clm-peter-active-jerusalem",
+        "clm-peter-member-jerusalem-church",
+        "clm-peter-active-samaria",
+        "clm-peter-active-joppa",
+        "clm-peter-active-lydda",
+        "clm-peter-active-caesarea",
+        "clm-peter-member-antioch-church",
+        "clm-peter-in-herodian-persecution",
+        "clm-peter-gentile-inclusion",
+        "clm-peter-in-council",
+        "clm-peter-teacher-of-mark",
+        "clm-peter-bishop-rome",
+        "clm-peter-member-roman-church",
+        "clm-peter-in-neronian",
+        "clm-peter-in-peters-martyrdom"
+      ],
+      "sibling_count": 22,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india"
+        ],
+        "psg-gal-2-11-14": [
+          "clm-peter-member-antioch-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-bishop-caesarea",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "caesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "313",
+        "year_end": "339",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-bishop-caesarea",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes eusebius-of-caesarea's role as bishop of caesarea."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-36:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-person-pantaenus-affirms-bartholomew",
+        "subject_type": "person",
+        "subject_id": "pantaenus",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bartholomew-preached-in-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "180",
+        "year_end": "185",
+        "context_place_id": "india-malabar",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pantaenus",
+        "person_label": "Pantaenus",
+        "name_alt": "Pantaenus of Alexandria",
+        "name_native": "Πάνταινος",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 200",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria before Clement; former Stoic philosopher converted to Christianity. According to Eusebius, he traveled as far as India as a missionary. He was Clement of Alexandria's primary teacher."
+      },
+      "object_entity": {
+        "proposition_id": "bartholomew-preached-in-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "apostle-bartholomew-india",
+        "proposition_label": "The apostle Bartholomew preached in India and left a Hebrew Gospel of Matthew",
+        "polarity_family": "bartholomew_india",
+        "description": "Eusebius HE 5.10 reports that Pantaenus found in India Christians who possessed a Hebrew Matthew left by the apostle Bartholomew; Philostorgius HE 3.6 also mentions Bartholomew.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-person-pantaenus-affirms-bartholomew",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes pantaenus's position on bartholomew-preached-in-india."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-person-pantaenus-affirms-bartholomew",
+            "passage_id": "psg-eusebius-he-5-10-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eusebius HE 5.10.3-4 says Pantaenus found a Hebrew Matthew left by Bartholomew in India."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-3-4",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.3–4",
+            "excerpt": "Paraphrase: Pantaenus is said to have gone to India where he found persons who knew of Christ. Bartholomew one of the apostles had preached to them and left with them the writing of Matthew in the Hebrew language which they had preserved till that time.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Pantaenus finding Christians in India with a Hebrew Matthew from Bartholomew."
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-active-alexandria",
+        "clm-pantaenus-member-alexandria-church",
+        "clm-pantaenus-teacher-of-clement",
+        "clm-pantaenus-active-india",
+        "clm-pantaenus-participant-india-mission",
+        "clm-person-pantaenus-affirms-india"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ],
+        "psg-eusebius-he-5-10-3-4": [
+          "clm-acts-thomas-affirms-thomas-india",
+          "clm-bartholomew-active-india",
+          "clm-eusebius-he-affirms-bartholomew-india",
+          "clm-eusebius-he-affirms-india-reached",
+          "clm-pantaenus-active-india",
+          "clm-pantaenus-mission-at-india",
+          "clm-pantaenus-participant-india-mission",
+          "clm-place-neocaesarea-attested"
+        ]
+      },
+      "flags": [
+        "WEIGHT_CERTAINTY_TENSION:high_wt_possible:psg-eusebius-he-5-10-3-4",
+        "PARAPHRASE_RISK:psg-eusebius-he-5-10-3-4"
+      ]
+    }
+  ]
+}

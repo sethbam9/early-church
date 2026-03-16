@@ -1,0 +1,2532 @@
+{
+  "batch_id": "batch-018",
+  "queue": "0A",
+  "focus": "psg-irenaeus-ah-1-27-1-2(17)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-theophilus-mission-at-zafar",
+        "subject_type": "event",
+        "subject_id": "mission-of-theophilus-to-himyar",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "zafar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "mission-of-theophilus-to-himyar",
+        "event_label": "Mission of Theophilus to Himyar",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Emperor Constantius II sends bishop Theophilus the Indian c. 354 on a diplomatic-missionary embassy to Himyar (South Arabia); Theophilus builds churches in Zafar and Aden per Philostorgius HE 3.4–6."
+      },
+      "object_entity": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-theophilus-mission-at-zafar",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Philostorgius locates mission at Zafar."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-mission-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-person-theophilus-affirms-india",
+        "subject_type": "person",
+        "subject_id": "theophilus-the-indian",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "gospel-reached-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "356",
+        "year_end": "364",
+        "context_place_id": "india-malabar",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "theophilus-the-indian",
+        "person_label": "Theophilus the Indian",
+        "name_alt": "Theophilus Indus",
+        "name_native": "",
+        "birth_year_display": "fl. c. 354",
+        "death_year_display": "fl. c. 364",
+        "person_kind": "individual",
+        "notes": "Bishop sent by Emperor Constantius II c. 354 on a mission to Himyar (South Arabia) and possibly India; built churches in Zafar and Aden per Philostorgius HE 3.4–6; described as from Socotra island."
+      },
+      "object_entity": {
+        "proposition_id": "gospel-reached-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "india-reached",
+        "proposition_label": "The gospel reached India through early missionary or apostolic activity",
+        "polarity_family": "india_reached",
+        "description": "Christianity reached India — whether the Malabar coast or the broader \"India\" of ancient usage — through apostolic (Thomas, Bartholomew) or early missionary (Pantaenus) activity; attested by Eusebius HE 5.10 and Philostorgius.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-person-theophilus-affirms-india",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes theophilus-the-indian's position on gospel-reached-india."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-active-zafar",
+        "clm-theophilus-participant-himyar-mission",
+        "clm-person-theophilus-affirms-arabia",
+        "clm-theophilus-member-arabian",
+        "clm-theophilus-active-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-philostorgius-he-3-4",
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-constantius-participant-himyar-mission",
+        "subject_type": "person",
+        "subject_id": "constantius-ii",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "mission-of-theophilus-to-himyar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "354",
+        "year_end": "356",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "constantius-ii",
+        "person_label": "Constantius II",
+        "name_alt": "",
+        "name_native": "Κωνστάντιος",
+        "birth_year_display": "317",
+        "death_year_display": "361",
+        "person_kind": "individual",
+        "notes": "Roman emperor 337–361; son of Constantine I; favored Arian/semi-Arian theology; exiled Athanasius; sent Theophilus the Indian on a diplomatic-missionary embassy to Himyar c. 354."
+      },
+      "object_entity": {
+        "event_id": "mission-of-theophilus-to-himyar",
+        "event_label": "Mission of Theophilus to Himyar",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Emperor Constantius II sends bishop Theophilus the Indian c. 354 on a diplomatic-missionary embassy to Himyar (South Arabia); Theophilus builds churches in Zafar and Aden per Philostorgius HE 3.4–6."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-constantius-participant-himyar-mission",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Philostorgius reports Constantius sent Theophilus."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-constantius-active-rome",
+        "clm-constantius-active-antioch",
+        "clm-constantius-affirms-arabia",
+        "clm-constantius-coworker-theophilus",
+        "clm-person-constantius-affirms-ethiopia"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philostorgius-he-affirms-thomas-india",
+        "subject_type": "work",
+        "subject_id": "philostorgius-ecclesiastical-history",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "thomas-preached-in-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "425",
+        "year_end": "425",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "philostorgius-ecclesiastical-history",
+        "title_display": "Ecclesiastical History (Philostorgius)",
+        "title_original": "Ἐκκλησιαστικὴ Ἱστορία",
+        "work_type": "chronicle",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Arian church historian Philostorgius's 12-book history (c. 425) covering 300–425; survives mostly in Photius's epitome; key source for Theophilus the Indian's mission to Himyar (3.4–6) and Constantius II's religious diplomacy."
+      },
+      "object_entity": {
+        "proposition_id": "thomas-preached-in-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "apostle-thomas-india",
+        "proposition_label": "The apostle Thomas preached in India",
+        "polarity_family": "thomas_india",
+        "description": "The Acts of Thomas (3rd c.) narrates Thomas's journey to India; the Thomas Christian tradition in Malabar claims apostolic origin; certainty is claimed_tradition.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philostorgius-he-affirms-thomas-india",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philostorgius-he-by-philostorgius",
+        "clm-philostorgius-he-affirms-arabia-christianized",
+        "clm-philostorgius-he-affirms-bartholomew-india",
+        "clm-philostorgius-he-affirms-india-reached",
+        "clm-philostorgius-he-affirms-universal",
+        "clm-philostorgius-he-mentions-ethiopia",
+        "clm-philostorgius-he-mentions-india-reached"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-philostorgius-he-3-4",
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philostorgius-affirms-ethiopia",
+        "subject_type": "person",
+        "subject_id": "philostorgius",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-ethiopia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "425",
+        "year_end": "425",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philostorgius",
+        "person_label": "Philostorgius",
+        "name_alt": "Philostorgios",
+        "name_native": "Φιλοστόργιος",
+        "birth_year_display": "c. 368",
+        "death_year_display": "c. 439",
+        "person_kind": "individual",
+        "notes": "Arian church historian; wrote a 12-book Ecclesiastical History (c. 425) covering 300–425; survives mostly in Photius's epitome; key source for Theophilus the Indian's mission and Constantius II's religious diplomacy."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-ethiopia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "ethiopia-christianized",
+        "proposition_label": "Christianity was established in Ethiopia through Frumentius and the conversion of King Ezana",
+        "polarity_family": "ethiopia_christianized",
+        "description": "The Aksumite kingdom (Ethiopia) received Christianity through the mission of Frumentius, consecrated by Athanasius of Alexandria, who converted King Ezana c. 330; attested by Rufinus, Socrates, Sozomen.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philostorgius-affirms-ethiopia",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Philostorgius HE 3.4 describes Theophilus's mission to Ethiopia (Himyar/Axum region)."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philostorgius-active-constantinople"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-philostorgius-he-3-4",
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philostorgius-active-constantinople",
+        "subject_type": "person",
+        "subject_id": "philostorgius",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "390",
+        "year_end": "439",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philostorgius",
+        "person_label": "Philostorgius",
+        "name_alt": "Philostorgios",
+        "name_native": "Φιλοστόργιος",
+        "birth_year_display": "c. 368",
+        "death_year_display": "c. 439",
+        "person_kind": "individual",
+        "notes": "Arian church historian; wrote a 12-book Ecclesiastical History (c. 425) covering 300–425; survives mostly in Photius's epitome; key source for Theophilus the Indian's mission and Constantius II's religious diplomacy."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philostorgius-active-constantinople",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Philostorgius HE 3.4 was written from Constantinople by Philostorgius himself."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philostorgius-affirms-ethiopia"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-theophilus-active-zafar",
+        "subject_type": "person",
+        "subject_id": "theophilus-the-indian",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "zafar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "354",
+        "year_end": "356",
+        "context_place_id": "zafar",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "theophilus-the-indian",
+        "person_label": "Theophilus the Indian",
+        "name_alt": "Theophilus Indus",
+        "name_native": "",
+        "birth_year_display": "fl. c. 354",
+        "death_year_display": "fl. c. 364",
+        "person_kind": "individual",
+        "notes": "Bishop sent by Emperor Constantius II c. 354 on a mission to Himyar (South Arabia) and possibly India; built churches in Zafar and Aden per Philostorgius HE 3.4–6; described as from Socotra island."
+      },
+      "object_entity": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "context_place": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-theophilus-active-zafar",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Philostorgius reports Theophilus built a church in Zafar."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-participant-himyar-mission",
+        "clm-person-theophilus-affirms-arabia",
+        "clm-theophilus-member-arabian",
+        "clm-person-theophilus-affirms-india",
+        "clm-theophilus-active-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:mission-of-theophilus-to-himyar",
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philostorgius-he-mentions-ethiopia",
+        "subject_type": "work",
+        "subject_id": "philostorgius-ecclesiastical-history",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-ethiopia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "425",
+        "year_end": "425",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "philostorgius-ecclesiastical-history",
+        "title_display": "Ecclesiastical History (Philostorgius)",
+        "title_original": "Ἐκκλησιαστικὴ Ἱστορία",
+        "work_type": "chronicle",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Arian church historian Philostorgius's 12-book history (c. 425) covering 300–425; survives mostly in Photius's epitome; key source for Theophilus the Indian's mission to Himyar (3.4–6) and Constantius II's religious diplomacy."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-ethiopia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "ethiopia-christianized",
+        "proposition_label": "Christianity was established in Ethiopia through Frumentius and the conversion of King Ezana",
+        "polarity_family": "ethiopia_christianized",
+        "description": "The Aksumite kingdom (Ethiopia) received Christianity through the mission of Frumentius, consecrated by Athanasius of Alexandria, who converted King Ezana c. 330; attested by Rufinus, Socrates, Sozomen.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philostorgius-he-mentions-ethiopia",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Philostorgius mentions Theophilus visiting Aksumites."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philostorgius-he-by-philostorgius",
+        "clm-philostorgius-he-affirms-arabia-christianized",
+        "clm-philostorgius-he-affirms-bartholomew-india",
+        "clm-philostorgius-he-affirms-india-reached",
+        "clm-philostorgius-he-affirms-thomas-india",
+        "clm-philostorgius-he-affirms-universal",
+        "clm-philostorgius-he-mentions-india-reached"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philostorgius-he-affirms-india-reached",
+        "subject_type": "work",
+        "subject_id": "philostorgius-ecclesiastical-history",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "gospel-reached-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "425",
+        "year_end": "425",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "philostorgius-ecclesiastical-history",
+        "title_display": "Ecclesiastical History (Philostorgius)",
+        "title_original": "Ἐκκλησιαστικὴ Ἱστορία",
+        "work_type": "chronicle",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Arian church historian Philostorgius's 12-book history (c. 425) covering 300–425; survives mostly in Photius's epitome; key source for Theophilus the Indian's mission to Himyar (3.4–6) and Constantius II's religious diplomacy."
+      },
+      "object_entity": {
+        "proposition_id": "gospel-reached-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "india-reached",
+        "proposition_label": "The gospel reached India through early missionary or apostolic activity",
+        "polarity_family": "india_reached",
+        "description": "Christianity reached India — whether the Malabar coast or the broader \"India\" of ancient usage — through apostolic (Thomas, Bartholomew) or early missionary (Pantaenus) activity; attested by Eusebius HE 5.10 and Philostorgius.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philostorgius-he-affirms-india-reached",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philostorgius-he-by-philostorgius",
+        "clm-philostorgius-he-affirms-arabia-christianized",
+        "clm-philostorgius-he-affirms-bartholomew-india",
+        "clm-philostorgius-he-affirms-thomas-india",
+        "clm-philostorgius-he-affirms-universal",
+        "clm-philostorgius-he-mentions-ethiopia",
+        "clm-philostorgius-he-mentions-india-reached"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-philostorgius-he-3-4",
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-theophilus-participant-himyar-mission",
+        "subject_type": "person",
+        "subject_id": "theophilus-the-indian",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "mission-of-theophilus-to-himyar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "354",
+        "year_end": "356",
+        "context_place_id": "zafar",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "theophilus-the-indian",
+        "person_label": "Theophilus the Indian",
+        "name_alt": "Theophilus Indus",
+        "name_native": "",
+        "birth_year_display": "fl. c. 354",
+        "death_year_display": "fl. c. 364",
+        "person_kind": "individual",
+        "notes": "Bishop sent by Emperor Constantius II c. 354 on a mission to Himyar (South Arabia) and possibly India; built churches in Zafar and Aden per Philostorgius HE 3.4–6; described as from Socotra island."
+      },
+      "object_entity": {
+        "event_id": "mission-of-theophilus-to-himyar",
+        "event_label": "Mission of Theophilus to Himyar",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Emperor Constantius II sends bishop Theophilus the Indian c. 354 on a diplomatic-missionary embassy to Himyar (South Arabia); Theophilus builds churches in Zafar and Aden per Philostorgius HE 3.4–6."
+      },
+      "context_place": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-theophilus-participant-himyar-mission",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Philostorgius's primary account of the Himyar mission."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-active-zafar",
+        "clm-person-theophilus-affirms-arabia",
+        "clm-theophilus-member-arabian",
+        "clm-person-theophilus-affirms-india",
+        "clm-theophilus-active-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-person-theophilus-affirms-arabia",
+        "subject_type": "person",
+        "subject_id": "theophilus-the-indian",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-arabia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "354",
+        "year_end": "364",
+        "context_place_id": "zafar",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "theophilus-the-indian",
+        "person_label": "Theophilus the Indian",
+        "name_alt": "Theophilus Indus",
+        "name_native": "",
+        "birth_year_display": "fl. c. 354",
+        "death_year_display": "fl. c. 364",
+        "person_kind": "individual",
+        "notes": "Bishop sent by Emperor Constantius II c. 354 on a mission to Himyar (South Arabia) and possibly India; built churches in Zafar and Aden per Philostorgius HE 3.4–6; described as from Socotra island."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-arabia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "arabia-christianized",
+        "proposition_label": "Christian communities were established in the Arabian Peninsula",
+        "polarity_family": "arabia_christianized",
+        "description": "Christianity was established in the Arabian Peninsula including at Bostra (synod c. 244), and in Himyar through Theophilus the Indian's mission c. 354 (Philostorgius); Najran attested later.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-person-theophilus-affirms-arabia",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Theophilus's Arabian mission reported by Philostorgius."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-active-zafar",
+        "clm-theophilus-participant-himyar-mission",
+        "clm-theophilus-member-arabian",
+        "clm-person-theophilus-affirms-india",
+        "clm-theophilus-active-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-arabian-christians-at-zafar",
+        "subject_type": "group",
+        "subject_id": "arabian-christians",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "zafar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "354",
+        "year_end": "380",
+        "context_place_id": "zafar",
+        "certainty": "probable",
+        "claim_status": "deprecated",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "arabian-christians",
+        "group_label": "Arabian Christians",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian communities in the Arabian Peninsula; attested at Bostra (synod c. 244), Najran, and Himyar; Theophilus the Indian built churches in Zafar and Aden c. 354."
+      },
+      "object_entity": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "context_place": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-arabian-christians-at-zafar",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Philostorgius reports church built in Zafar."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-arabian-christians-controls-bostra",
+        "clm-arabian-christians-controls-najran",
+        "clm-arabian-christians-controls-zafar"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philostorgius-affirms-india",
+        "subject_type": "person",
+        "subject_id": "philostorgius",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "gospel-reached-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "425",
+        "year_end": "425",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "deprecated",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philostorgius",
+        "person_label": "Philostorgius",
+        "name_alt": "Philostorgios",
+        "name_native": "Φιλοστόργιος",
+        "birth_year_display": "c. 368",
+        "death_year_display": "c. 439",
+        "person_kind": "individual",
+        "notes": "Arian church historian; wrote a 12-book Ecclesiastical History (c. 425) covering 300–425; survives mostly in Photius's epitome; key source for Theophilus the Indian's mission and Constantius II's religious diplomacy."
+      },
+      "object_entity": {
+        "proposition_id": "gospel-reached-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "india-reached",
+        "proposition_label": "The gospel reached India through early missionary or apostolic activity",
+        "polarity_family": "india_reached",
+        "description": "Christianity reached India — whether the Malabar coast or the broader \"India\" of ancient usage — through apostolic (Thomas, Bartholomew) or early missionary (Pantaenus) activity; attested by Eusebius HE 5.10 and Philostorgius.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philostorgius-affirms-india",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes philostorgius's position on gospel-reached-india."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philostorgius-active-constantinople",
+        "clm-philostorgius-affirms-ethiopia"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-constantius-coworker-theophilus",
+        "subject_type": "person",
+        "subject_id": "constantius-ii",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "theophilus-the-indian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "354",
+        "year_end": "356",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "constantius-ii",
+        "person_label": "Constantius II",
+        "name_alt": "",
+        "name_native": "Κωνστάντιος",
+        "birth_year_display": "317",
+        "death_year_display": "361",
+        "person_kind": "individual",
+        "notes": "Roman emperor 337–361; son of Constantine I; favored Arian/semi-Arian theology; exiled Athanasius; sent Theophilus the Indian on a diplomatic-missionary embassy to Himyar c. 354."
+      },
+      "object_entity": {
+        "person_id": "theophilus-the-indian",
+        "person_label": "Theophilus the Indian",
+        "name_alt": "Theophilus Indus",
+        "name_native": "",
+        "birth_year_display": "fl. c. 354",
+        "death_year_display": "fl. c. 364",
+        "person_kind": "individual",
+        "notes": "Bishop sent by Emperor Constantius II c. 354 on a mission to Himyar (South Arabia) and possibly India; built churches in Zafar and Aden per Philostorgius HE 3.4–6; described as from Socotra island."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-constantius-coworker-theophilus",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Philostorgius reports Constantius sent Theophilus."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-constantius-active-rome",
+        "clm-constantius-active-antioch",
+        "clm-constantius-affirms-arabia",
+        "clm-constantius-participant-himyar-mission",
+        "clm-person-constantius-affirms-ethiopia"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-theophilus-active-india",
+        "subject_type": "person",
+        "subject_id": "theophilus-the-indian",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "india-malabar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "356",
+        "year_end": "364",
+        "context_place_id": "india-malabar",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "theophilus-the-indian",
+        "person_label": "Theophilus the Indian",
+        "name_alt": "Theophilus Indus",
+        "name_native": "",
+        "birth_year_display": "fl. c. 354",
+        "death_year_display": "fl. c. 364",
+        "person_kind": "individual",
+        "notes": "Bishop sent by Emperor Constantius II c. 354 on a mission to Himyar (South Arabia) and possibly India; built churches in Zafar and Aden per Philostorgius HE 3.4–6; described as from Socotra island."
+      },
+      "object_entity": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "context_place": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-theophilus-active-india",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests theophilus-the-indian's activity in or near india-malabar."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-active-zafar",
+        "clm-theophilus-participant-himyar-mission",
+        "clm-person-theophilus-affirms-arabia",
+        "clm-theophilus-member-arabian",
+        "clm-person-theophilus-affirms-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-philostorgius-he-3-4",
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-coworker-anicetus",
+        "subject_type": "person",
+        "subject_id": "anicetus",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "polycarp-of-smyrna",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "155",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "anicetus",
+        "person_label": "Anicetus",
+        "name_alt": "Pope Anicetus",
+        "name_native": "Ἀνίκητος",
+        "birth_year_display": "",
+        "death_year_display": "c. 166",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 155–166; of Syrian origin; met with Polycarp of Smyrna over the Quartodeciman controversy without resolving it; succeeded Pius I."
+      },
+      "object_entity": {
+        "person_id": "polycarp-of-smyrna",
+        "person_label": "Polycarp of Smyrna",
+        "name_alt": "Polycarp",
+        "name_native": "Πολύκαρπος",
+        "birth_year_display": "c. 69",
+        "death_year_display": "c. 155",
+        "person_kind": "individual",
+        "notes": "Bishop of Smyrna martyred c. 155-156; disciple of the apostle John; correspondent of Ignatius and Rome."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-coworker-anicetus",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-anicetus-bishop-rome",
+        "clm-anicetus-member-roman-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-victor-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "victor-i-of-rome",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "165",
+        "year_end": "199",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "victor-i-of-rome",
+        "person_label": "Victor I of Rome",
+        "name_alt": "Victor",
+        "name_native": "Βίκτωρ",
+        "birth_year_display": "c. 140",
+        "death_year_display": "c. 199",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 189-199; central figure in the Quartodeciman controversy; threatened to excommunicate Asian churches over Easter dating; first bishop of Rome to write in Latin."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-victor-member-roman-church",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-victor-affirms-succession",
+        "clm-victor-bishop-rome",
+        "clm-victor-person-affirms-episcopal-chair",
+        "clm-victor-in-quartodeciman"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-5-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-victor-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "victor-i-of-rome",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "189",
+        "year_end": "199",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "victor-i-of-rome",
+        "person_label": "Victor I of Rome",
+        "name_alt": "Victor",
+        "name_native": "Βίκτωρ",
+        "birth_year_display": "c. 140",
+        "death_year_display": "c. 199",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 189-199; central figure in the Quartodeciman controversy; threatened to excommunicate Asian churches over Easter dating; first bishop of Rome to write in Latin."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-victor-bishop-rome",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-victor-member-roman-church",
+        "clm-victor-affirms-succession",
+        "clm-victor-person-affirms-episcopal-chair",
+        "clm-victor-in-quartodeciman"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-member-roman-church-visit",
+        "subject_type": "person",
+        "subject_id": "polycarp-of-smyrna",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "155",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "polycarp-of-smyrna",
+        "person_label": "Polycarp of Smyrna",
+        "name_alt": "Polycarp",
+        "name_native": "Πολύκαρπος",
+        "birth_year_display": "c. 69",
+        "death_year_display": "c. 155",
+        "person_kind": "individual",
+        "notes": "Bishop of Smyrna martyred c. 155-156; disciple of the apostle John; correspondent of Ignatius and Rome."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-member-roman-church-visit",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-affirms-eucharist",
+        "clm-polycarp-affirms-fasting",
+        "clm-polycarp-bishop-smyrna",
+        "clm-polycarp-member-smyrna-church",
+        "clm-polycarp-active-ephesus",
+        "clm-polycarp-teacher-of-irenaeus",
+        "clm-polycarp-active-rome",
+        "clm-polycarp-in-martyrdom",
+        "clm-polycarp-in-quartodeciman-visit"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-5-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-irenaeus-coworker-victor",
+        "subject_type": "person",
+        "subject_id": "irenaeus-of-lyons",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "victor-i-of-rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "189",
+        "year_end": "195",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "irenaeus-of-lyons",
+        "person_label": "Irenaeus of Lyons",
+        "name_alt": "Irenaeus",
+        "name_native": "Εἰρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 202",
+        "person_kind": "individual",
+        "notes": "Bishop of Lyons (Lugdunum) and major anti-gnostic theologian; pupil of Polycarp; author of Against Heresies c. 180, the foundational work on apostolic succession, rule of faith, and refutation of Valentinianism and Marcionism."
+      },
+      "object_entity": {
+        "person_id": "victor-i-of-rome",
+        "person_label": "Victor I of Rome",
+        "name_alt": "Victor",
+        "name_native": "Βίκτωρ",
+        "birth_year_display": "c. 140",
+        "death_year_display": "c. 199",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 189-199; central figure in the Quartodeciman controversy; threatened to excommunicate Asian churches over Easter dating; first bishop of Rome to write in Latin."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-coworker-victor",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-coworker-irenaeus",
+        "clm-irenaeus-active-smyrna",
+        "clm-irenaeus-active-rome",
+        "clm-irenaeus-in-lyons-persecution",
+        "clm-irenaeus-member-roman-church-visit",
+        "clm-irenaeus-active-lyons",
+        "clm-irenaeus-in-ah-composition",
+        "clm-irenaeus-in-quartodeciman",
+        "clm-irenaeus-teacher-hippolytus",
+        "clm-irenaeus-originated-smyrna"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    }
+  ]
+}

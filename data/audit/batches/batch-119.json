@@ -1,0 +1,2497 @@
+{
+  "batch_id": "batch-119",
+  "queue": "1",
+  "focus": "irenaeus-of-lyons; dionysius-of-alexandria; ad-donatum",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-coworker-irenaeus",
+        "subject_type": "person",
+        "subject_id": "irenaeus-of-lyons",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "polycarp-of-smyrna",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "145",
+        "year_end": "155",
+        "context_place_id": "smyrna",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "irenaeus-of-lyons",
+        "person_label": "Irenaeus of Lyons",
+        "name_alt": "Irenaeus",
+        "name_native": "Εἰρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 202",
+        "person_kind": "individual",
+        "notes": "Bishop of Lyons (Lugdunum) and major anti-gnostic theologian; pupil of Polycarp; author of Against Heresies c. 180, the foundational work on apostolic succession, rule of faith, and refutation of Valentinianism and Marcionism."
+      },
+      "object_entity": {
+        "person_id": "polycarp-of-smyrna",
+        "person_label": "Polycarp of Smyrna",
+        "name_alt": "Polycarp",
+        "name_native": "Πολύκαρπος",
+        "birth_year_display": "c. 69",
+        "death_year_display": "c. 155",
+        "person_kind": "individual",
+        "notes": "Bishop of Smyrna martyred c. 155-156; disciple of the apostle John; correspondent of Ignatius and Rome."
+      },
+      "context_place": {
+        "place_id": "smyrna",
+        "place_label": "Smyrna",
+        "place_label_modern": "Izmir",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "38.4237",
+        "lon": "27.1428",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "City of one of the churches addressed in Revelation."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-coworker-irenaeus",
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Irenaeus heard Polycarp directly."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.4",
+            "excerpt": "Paraphrase: Polycarp was instructed by apostles, conversed with many who had seen Christ, and was appointed bishop of Smyrna by apostles in Asia; Irenaeus saw him in his early youth. Polycarp came to Rome in the time of Anicetus and caused many to turn from heretics to the Church, proclaiming the one truth received from the apostles. He called Marcion the first-born of Satan.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-irenaeus-active-smyrna",
+        "clm-irenaeus-active-rome",
+        "clm-irenaeus-in-lyons-persecution",
+        "clm-irenaeus-member-roman-church-visit",
+        "clm-irenaeus-active-lyons",
+        "clm-irenaeus-in-ah-composition",
+        "clm-irenaeus-coworker-victor",
+        "clm-irenaeus-in-quartodeciman",
+        "clm-irenaeus-teacher-hippolytus",
+        "clm-irenaeus-originated-smyrna"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-3-4": [
+          "clm-against-heresies-by-irenaeus",
+          "clm-anicetus-bishop-rome",
+          "clm-anicetus-member-roman-church",
+          "clm-cerinthians-at-ephesus",
+          "clm-eleutherus-bishop-rome",
+          "clm-eleutherus-member-roman-church",
+          "clm-irenaeus-active-smyrna",
+          "clm-irenaeus-ah-affirms-martyrdom-witness",
+          "clm-irenaeus-coworker-eleutherus",
+          "clm-irenaeus-in-ah-composition",
+          "clm-irenaeus-in-lyons-persecution",
+          "clm-john-teacher-of-polycarp",
+          "clm-john-zebedee-active-asia",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-john-zebedee-member-ephesian",
+          "clm-marcionites-at-smyrna",
+          "clm-marcionites-schismed-from-roman",
+          "clm-montanists-at-carthage",
+          "clm-montanists-at-phrygia",
+          "clm-montanists-at-rome",
+          "clm-polycarp-active-ephesus",
+          "clm-polycarp-bishop-smyrna",
+          "clm-polycarp-teacher-of-irenaeus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-irenaeus-coworker-victor",
+        "subject_type": "person",
+        "subject_id": "irenaeus-of-lyons",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "victor-i-of-rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "189",
+        "year_end": "195",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "irenaeus-of-lyons",
+        "person_label": "Irenaeus of Lyons",
+        "name_alt": "Irenaeus",
+        "name_native": "Εἰρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 202",
+        "person_kind": "individual",
+        "notes": "Bishop of Lyons (Lugdunum) and major anti-gnostic theologian; pupil of Polycarp; author of Against Heresies c. 180, the foundational work on apostolic succession, rule of faith, and refutation of Valentinianism and Marcionism."
+      },
+      "object_entity": {
+        "person_id": "victor-i-of-rome",
+        "person_label": "Victor I of Rome",
+        "name_alt": "Victor",
+        "name_native": "Βίκτωρ",
+        "birth_year_display": "c. 140",
+        "death_year_display": "c. 199",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 189-199; central figure in the Quartodeciman controversy; threatened to excommunicate Asian churches over Easter dating; first bishop of Rome to write in Latin."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-coworker-victor",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-coworker-irenaeus",
+        "clm-irenaeus-active-smyrna",
+        "clm-irenaeus-active-rome",
+        "clm-irenaeus-in-lyons-persecution",
+        "clm-irenaeus-member-roman-church-visit",
+        "clm-irenaeus-active-lyons",
+        "clm-irenaeus-in-ah-composition",
+        "clm-irenaeus-in-quartodeciman",
+        "clm-irenaeus-teacher-hippolytus",
+        "clm-irenaeus-originated-smyrna"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-irenaeus-teacher-hippolytus",
+        "subject_type": "person",
+        "subject_id": "irenaeus-of-lyons",
+        "predicate_id": "teacher_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "hippolytus-of-rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "190",
+        "year_end": "202",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "irenaeus-of-lyons",
+        "person_label": "Irenaeus of Lyons",
+        "name_alt": "Irenaeus",
+        "name_native": "Εἰρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 202",
+        "person_kind": "individual",
+        "notes": "Bishop of Lyons (Lugdunum) and major anti-gnostic theologian; pupil of Polycarp; author of Against Heresies c. 180, the foundational work on apostolic succession, rule of faith, and refutation of Valentinianism and Marcionism."
+      },
+      "object_entity": {
+        "person_id": "hippolytus-of-rome",
+        "person_label": "Hippolytus of Rome",
+        "name_alt": "Hippolytus",
+        "name_native": "Ἱππόλυτος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; prolific Greek-speaking writer in Rome; opposed the modalism of Zephyrinus and Callistus; set himself up as rival bishop c. 217 (sometimes called the first antipope); exiled with Pontian to Sardinia in 235; reconciled before death; author of the Apostolic Tradition, Refutation of All Heresies, Against Noetus, and Commentary on Daniel."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-teacher-hippolytus",
+            "passage_id": "psg-hippolytus-cn-10-11",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Hippolytus's Logos theology closely follows Irenaeus; scholarly consensus that Irenaeus was a formative influence."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-cn-10-11",
+            "source_id": "src-hippolytus-contra-noetum",
+            "locator_type": "source_ref",
+            "locator": "CN 10-11",
+            "excerpt": "Paraphrase: God being alone, and having nothing contemporaneous with himself, determined to create the world. He conceived the world in thought and will. He begat the Word, firstborn of all creation, not as a voice but as the internal reckoning of all things. This was the companion of the Father. The Word was made manifest and became the Son of God.",
+            "language": "English",
+            "passage_year": "205",
+            "url_override": "",
+            "notes": "Logos doctrine against modalism; Word begotten from the Father as distinct person; anti-modalist Logos theology"
+          },
+          "source": {
+            "source_id": "src-hippolytus-contra-noetum",
+            "work_id": "contra-noetum",
+            "source_kind": "primary_text",
+            "title": "Against Noetus",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200-210",
+            "year_start": "200",
+            "year_end": "210",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0521.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Anti-modalist treatise defending distinction of Father and Son; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-coworker-irenaeus",
+        "clm-irenaeus-active-smyrna",
+        "clm-irenaeus-active-rome",
+        "clm-irenaeus-in-lyons-persecution",
+        "clm-irenaeus-member-roman-church-visit",
+        "clm-irenaeus-active-lyons",
+        "clm-irenaeus-in-ah-composition",
+        "clm-irenaeus-coworker-victor",
+        "clm-irenaeus-in-quartodeciman",
+        "clm-irenaeus-originated-smyrna"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-hippolytus-cn-10-11": [
+          "clm-cn-affirms-incarnation",
+          "clm-cn-affirms-logos"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-cn-10-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-dionysius-alex-affirms-logos",
+        "subject_type": "person",
+        "subject_id": "dionysius-of-alexandria",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "248",
+        "year_end": "264",
+        "context_place_id": "alexandria",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "dionysius-of-alexandria",
+        "person_label": "Dionysius of Alexandria",
+        "name_alt": "Dionysius the Great",
+        "name_native": "Διονύσιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 264",
+        "person_kind": "individual",
+        "notes": "Student of Origen; bishop of Alexandria c. 248–264; key figure in the Trinitarian controversies after Origen; opposed Sabellianism but was himself accused of tritheism; major voice during the Decian persecution and the Novatian controversy; extensive correspondence preserved by Eusebius."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-dionysius-alex-affirms-logos",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-dionysius-alex-coworker-origen",
+        "clm-dionysius-alex-affirms-penance",
+        "clm-dionysius-alex-affirms-succession",
+        "clm-dionysius-alex-affirms-trinity",
+        "clm-dionysius-alex-bishop-of-alexandria",
+        "clm-dionysius-alex-member-alexandrian",
+        "clm-dionysius-alex-in-decian",
+        "clm-dionysius-alex-in-novatian-schism",
+        "clm-dionysius-alex-active-rome-exile"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-dionysius-alex-affirms-penance",
+        "subject_type": "person",
+        "subject_id": "dionysius-of-alexandria",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "post-baptismal-sin-forgiven-by-penance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "248",
+        "year_end": "264",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "dionysius-of-alexandria",
+        "person_label": "Dionysius of Alexandria",
+        "name_alt": "Dionysius the Great",
+        "name_native": "Διονύσιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 264",
+        "person_kind": "individual",
+        "notes": "Student of Origen; bishop of Alexandria c. 248–264; key figure in the Trinitarian controversies after Origen; opposed Sabellianism but was himself accused of tritheism; major voice during the Decian persecution and the Novatian controversy; extensive correspondence preserved by Eusebius."
+      },
+      "object_entity": {
+        "proposition_id": "post-baptismal-sin-forgiven-by-penance",
+        "topic_id": "penance-practice",
+        "dimension_id": "post-baptismal-penance",
+        "proposition_label": "Post-baptismal sin can be forgiven through penance",
+        "polarity_family": "post_baptismal_penance",
+        "description": "A second repentance after baptism is possible and administered through church discipline.",
+        "notes": "Penitential discipline"
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-dionysius-alex-affirms-penance",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Eusebius HE 6.43 reports Dionysius's letters on the lapsed and penance policy."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-dionysius-alex-coworker-origen",
+        "clm-dionysius-alex-affirms-logos",
+        "clm-dionysius-alex-affirms-succession",
+        "clm-dionysius-alex-affirms-trinity",
+        "clm-dionysius-alex-bishop-of-alexandria",
+        "clm-dionysius-alex-member-alexandrian",
+        "clm-dionysius-alex-in-decian",
+        "clm-dionysius-alex-in-novatian-schism",
+        "clm-dionysius-alex-active-rome-exile"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-dionysius-alex-affirms-succession",
+        "subject_type": "person",
+        "subject_id": "dionysius-of-alexandria",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "248",
+        "year_end": "264",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "dionysius-of-alexandria",
+        "person_label": "Dionysius of Alexandria",
+        "name_alt": "Dionysius the Great",
+        "name_native": "Διονύσιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 264",
+        "person_kind": "individual",
+        "notes": "Student of Origen; bishop of Alexandria c. 248–264; key figure in the Trinitarian controversies after Origen; opposed Sabellianism but was himself accused of tritheism; major voice during the Decian persecution and the Novatian controversy; extensive correspondence preserved by Eusebius."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-dionysius-alex-affirms-succession",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Eusebius HE 6.43 shows Dionysius functioning within the apostolic succession framework."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-dionysius-alex-coworker-origen",
+        "clm-dionysius-alex-affirms-logos",
+        "clm-dionysius-alex-affirms-penance",
+        "clm-dionysius-alex-affirms-trinity",
+        "clm-dionysius-alex-bishop-of-alexandria",
+        "clm-dionysius-alex-member-alexandrian",
+        "clm-dionysius-alex-in-decian",
+        "clm-dionysius-alex-in-novatian-schism",
+        "clm-dionysius-alex-active-rome-exile"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-dionysius-alex-affirms-trinity",
+        "subject_type": "person",
+        "subject_id": "dionysius-of-alexandria",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "trinity-is-three-persons-one-substance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "248",
+        "year_end": "264",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "dionysius-of-alexandria",
+        "person_label": "Dionysius of Alexandria",
+        "name_alt": "Dionysius the Great",
+        "name_native": "Διονύσιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 264",
+        "person_kind": "individual",
+        "notes": "Student of Origen; bishop of Alexandria c. 248–264; key figure in the Trinitarian controversies after Origen; opposed Sabellianism but was himself accused of tritheism; major voice during the Decian persecution and the Novatian controversy; extensive correspondence preserved by Eusebius."
+      },
+      "object_entity": {
+        "proposition_id": "trinity-is-three-persons-one-substance",
+        "topic_id": "trinitarian-theology",
+        "dimension_id": "trinitarian-formula",
+        "proposition_label": "God is three persons — Father, Son, and Holy Spirit — in one substance",
+        "polarity_family": "trinitarian_formula",
+        "description": "The one God subsists in three persons (personae) — Father, Son, and Holy Spirit — who share one substance (substantia); the Son proceeds from the Father and the Spirit from both, without dividing the divine substance.",
+        "notes": "Trinitarian formula"
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-dionysius-alex-affirms-trinity",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-dionysius-alex-coworker-origen",
+        "clm-dionysius-alex-affirms-logos",
+        "clm-dionysius-alex-affirms-penance",
+        "clm-dionysius-alex-affirms-succession",
+        "clm-dionysius-alex-bishop-of-alexandria",
+        "clm-dionysius-alex-member-alexandrian",
+        "clm-dionysius-alex-in-decian",
+        "clm-dionysius-alex-in-novatian-schism",
+        "clm-dionysius-alex-active-rome-exile"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-dionysius-alex-bishop-of-alexandria",
+        "subject_type": "person",
+        "subject_id": "dionysius-of-alexandria",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "248",
+        "year_end": "264",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "dionysius-of-alexandria",
+        "person_label": "Dionysius of Alexandria",
+        "name_alt": "Dionysius the Great",
+        "name_native": "Διονύσιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 264",
+        "person_kind": "individual",
+        "notes": "Student of Origen; bishop of Alexandria c. 248–264; key figure in the Trinitarian controversies after Origen; opposed Sabellianism but was himself accused of tritheism; major voice during the Decian persecution and the Novatian controversy; extensive correspondence preserved by Eusebius."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-dionysius-alex-bishop-of-alexandria",
+            "passage_id": "psg-eusebius-he-6-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Eusebius traces the Alexandrian succession."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-3",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.3",
+            "excerpt": "Paraphrase: Origen, while still very young, succeeded Clement as head of the Catechetical School in Alexandria; so many came to him, both men and women, that a multitude of heretics and not a few of the most distinguished philosophers attended his instruction; he led many to the faith and some to martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's early leadership of the Catechetical School"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-dionysius-alex-coworker-origen",
+        "clm-dionysius-alex-affirms-logos",
+        "clm-dionysius-alex-affirms-penance",
+        "clm-dionysius-alex-affirms-succession",
+        "clm-dionysius-alex-affirms-trinity",
+        "clm-dionysius-alex-member-alexandrian",
+        "clm-dionysius-alex-in-decian",
+        "clm-dionysius-alex-in-novatian-schism",
+        "clm-dionysius-alex-active-rome-exile"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-3": [
+          "clm-ambrose-alex-member-alexandrian",
+          "clm-comjohn-written-at-alexandria",
+          "clm-demetrius-bishop-of-alexandria",
+          "clm-demetrius-coworker-origen",
+          "clm-demetrius-member-alexandrian",
+          "clm-demetrius-teacher-of-origen",
+          "clm-deprincipiis-written-at-alexandria",
+          "clm-dionysius-alex-member-alexandrian",
+          "clm-heraclas-bishop-of-alexandria",
+          "clm-heraclas-coworker-origen",
+          "clm-heraclas-member-alexandrian",
+          "clm-origen-teacher-of-dionysius",
+          "clm-origen-teacher-of-heraclas"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-dionysius-alex-in-decian",
+        "subject_type": "person",
+        "subject_id": "dionysius-of-alexandria",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "decian-persecution",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "251",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "dionysius-of-alexandria",
+        "person_label": "Dionysius of Alexandria",
+        "name_alt": "Dionysius the Great",
+        "name_native": "Διονύσιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 264",
+        "person_kind": "individual",
+        "notes": "Student of Origen; bishop of Alexandria c. 248–264; key figure in the Trinitarian controversies after Origen; opposed Sabellianism but was himself accused of tritheism; major voice during the Decian persecution and the Novatian controversy; extensive correspondence preserved by Eusebius."
+      },
+      "object_entity": {
+        "event_id": "decian-persecution",
+        "event_label": "Persecution under Decius",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Empire-wide persecution under Emperor Decius c. 250–251; required all citizens to sacrifice to Roman gods and obtain a certificate (libellus); many Christians lapsed; triggered the controversy over readmission of the lapsed that led to the Novatian schism."
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-dionysius-alex-in-decian",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-dionysius-alex-coworker-origen",
+        "clm-dionysius-alex-affirms-logos",
+        "clm-dionysius-alex-affirms-penance",
+        "clm-dionysius-alex-affirms-succession",
+        "clm-dionysius-alex-affirms-trinity",
+        "clm-dionysius-alex-bishop-of-alexandria",
+        "clm-dionysius-alex-member-alexandrian",
+        "clm-dionysius-alex-in-novatian-schism",
+        "clm-dionysius-alex-active-rome-exile"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-43:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-dionysius-alex-in-novatian-schism",
+        "subject_type": "person",
+        "subject_id": "dionysius-of-alexandria",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "novatian-schism",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "251",
+        "year_end": "264",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "dionysius-of-alexandria",
+        "person_label": "Dionysius of Alexandria",
+        "name_alt": "Dionysius the Great",
+        "name_native": "Διονύσιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 264",
+        "person_kind": "individual",
+        "notes": "Student of Origen; bishop of Alexandria c. 248–264; key figure in the Trinitarian controversies after Origen; opposed Sabellianism but was himself accused of tritheism; major voice during the Decian persecution and the Novatian controversy; extensive correspondence preserved by Eusebius."
+      },
+      "object_entity": {
+        "event_id": "novatian-schism",
+        "event_label": "Schism of Novatian",
+        "event_type": "schism",
+        "event_kind": "simple",
+        "notes": "Novatian, a Roman presbyter, set himself up as rival bishop of Rome c. 251 in opposition to Pope Cornelius; refused readmission of Christians who had lapsed during the Decian persecution; condemned by a Roman synod; his followers formed the Novatianist sect which spread across the empire."
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-dionysius-alex-in-novatian-schism",
+            "passage_id": "psg-eusebius-he-7-5",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Eusebius records Dionysius mediating in the Novatian-related disputes."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-7-5",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 7.5",
+            "excerpt": "Paraphrase: Eusebius notes that Firmilian of Caesarea in Cappadocia strongly supported Cyprian's position and wrote a sharp letter (preserved as Ep. 75 in Cyprian's collection) criticizing Stephen's appeal to Peter's chair, arguing that Stephen was in fact the schismatic for threatening to break communion. Dionysius of Alexandria also wrote to Stephen urging moderation and peace.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Firmilian's support of Cyprian; Dionysius mediating; rebaptism controversy geography"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-dionysius-alex-coworker-origen",
+        "clm-dionysius-alex-affirms-logos",
+        "clm-dionysius-alex-affirms-penance",
+        "clm-dionysius-alex-affirms-succession",
+        "clm-dionysius-alex-affirms-trinity",
+        "clm-dionysius-alex-bishop-of-alexandria",
+        "clm-dionysius-alex-member-alexandrian",
+        "clm-dionysius-alex-in-decian",
+        "clm-dionysius-alex-active-rome-exile"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-7-5": [
+          "clm-dionysius-alex-coworker-cyprian",
+          "clm-firmilian-affirms-rebaptism",
+          "clm-firmilian-bishop-caesarea-capp",
+          "clm-firmilian-coworker-cyprian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-7-5"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-dionysius-alex-member-alexandrian",
+        "subject_type": "person",
+        "subject_id": "dionysius-of-alexandria",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "alexandrian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "248",
+        "year_end": "264",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "dionysius-of-alexandria",
+        "person_label": "Dionysius of Alexandria",
+        "name_alt": "Dionysius the Great",
+        "name_native": "Διονύσιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 264",
+        "person_kind": "individual",
+        "notes": "Student of Origen; bishop of Alexandria c. 248–264; key figure in the Trinitarian controversies after Origen; opposed Sabellianism but was himself accused of tritheism; major voice during the Decian persecution and the Novatian controversy; extensive correspondence preserved by Eusebius."
+      },
+      "object_entity": {
+        "group_id": "alexandrian-church",
+        "group_label": "Church in Alexandria",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Alexandria; home of the Catechetical School; major center of Greek-speaking Christianity from the late first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-dionysius-alex-member-alexandrian",
+            "passage_id": "psg-eusebius-he-6-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Alexandrian church context from Eusebius."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-3",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.3",
+            "excerpt": "Paraphrase: Origen, while still very young, succeeded Clement as head of the Catechetical School in Alexandria; so many came to him, both men and women, that a multitude of heretics and not a few of the most distinguished philosophers attended his instruction; he led many to the faith and some to martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's early leadership of the Catechetical School"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-dionysius-alex-coworker-origen",
+        "clm-dionysius-alex-affirms-logos",
+        "clm-dionysius-alex-affirms-penance",
+        "clm-dionysius-alex-affirms-succession",
+        "clm-dionysius-alex-affirms-trinity",
+        "clm-dionysius-alex-bishop-of-alexandria",
+        "clm-dionysius-alex-in-decian",
+        "clm-dionysius-alex-in-novatian-schism",
+        "clm-dionysius-alex-active-rome-exile"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-3": [
+          "clm-ambrose-alex-member-alexandrian",
+          "clm-comjohn-written-at-alexandria",
+          "clm-demetrius-bishop-of-alexandria",
+          "clm-demetrius-coworker-origen",
+          "clm-demetrius-member-alexandrian",
+          "clm-demetrius-teacher-of-origen",
+          "clm-deprincipiis-written-at-alexandria",
+          "clm-dionysius-alex-bishop-of-alexandria",
+          "clm-heraclas-bishop-of-alexandria",
+          "clm-heraclas-coworker-origen",
+          "clm-heraclas-member-alexandrian",
+          "clm-origen-teacher-of-dionysius",
+          "clm-origen-teacher-of-heraclas"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-3",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-3:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-dionysius-alex-coworker-origen",
+        "subject_type": "person",
+        "subject_id": "dionysius-of-alexandria",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "origen-of-alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "232",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "dionysius-of-alexandria",
+        "person_label": "Dionysius of Alexandria",
+        "name_alt": "Dionysius the Great",
+        "name_native": "Διονύσιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 264",
+        "person_kind": "individual",
+        "notes": "Student of Origen; bishop of Alexandria c. 248–264; key figure in the Trinitarian controversies after Origen; opposed Sabellianism but was himself accused of tritheism; major voice during the Decian persecution and the Novatian controversy; extensive correspondence preserved by Eusebius."
+      },
+      "object_entity": {
+        "person_id": "origen-of-alexandria",
+        "person_label": "Origen of Alexandria",
+        "name_alt": "Origen, Adamantius",
+        "name_native": "Ὠριγένης",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Leading Alexandrian theologian and biblical scholar; student of Clement of Alexandria and eventual head of the Catechetical School. Prolific author covering exegesis, apologetics, and systematic theology. Active in Alexandria (c. 202–232) then Caesarea."
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-dionysius-alex-coworker-origen",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-dionysius-alex-affirms-logos",
+        "clm-dionysius-alex-affirms-penance",
+        "clm-dionysius-alex-affirms-succession",
+        "clm-dionysius-alex-affirms-trinity",
+        "clm-dionysius-alex-bishop-of-alexandria",
+        "clm-dionysius-alex-member-alexandrian",
+        "clm-dionysius-alex-in-decian",
+        "clm-dionysius-alex-in-novatian-schism",
+        "clm-dionysius-alex-active-rome-exile"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-donatum-by-cyprian",
+        "subject_type": "work",
+        "subject_id": "ad-donatum",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "cyprian-of-carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-donatum",
+        "title_display": "Ad Donatum (To Donatus)",
+        "title_original": "Ad Donatum",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's earliest work c. 246, a personal letter to his friend Donatus describing his conversion and baptism; key witness for baptismal regeneration, the transformation of the Holy Spirit, and Cyprian's pre-episcopal spiritual formation."
+      },
+      "object_entity": {
+        "person_id": "cyprian-of-carthage",
+        "person_label": "Cyprian of Carthage",
+        "name_alt": "Thascius Caecilius Cyprianus",
+        "name_native": "Kυπριανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 258",
+        "person_kind": "individual",
+        "notes": "Bishop of Carthage c. 248–258; major Latin theologian of ecclesiology and sacramental theology; converted c. 246; deeply influenced by Tertullian; key figure in the Novatian controversy (supported Cornelius against Novatian); martyred under Valerian."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-donatum-by-cyprian",
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Cyprian is explicitly the author and narrator of Ad Donatum."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "source_id": "src-cyprian-ad-donatum",
+            "locator_type": "source_ref",
+            "locator": "Ad Don. 3-4",
+            "excerpt": "Paraphrase: I myself was held in bonds by the innumerable errors of my previous life and did not believe I could be freed from them. But after the stain of former years had been washed away by the aid of the water of new birth, a light from above poured itself upon my heart now cleansed and purified; after the second birth had restored me to a new man by means of the Spirit breathed from heaven, in a marvellous manner what had been doubtful became certain, what had been hidden was revealed.",
+            "language": "English",
+            "passage_year": "246",
+            "url_override": "",
+            "notes": "Cyprian's conversion and baptismal regeneration testimony; Spirit transformation"
+          },
+          "source": {
+            "source_id": "src-cyprian-ad-donatum",
+            "work_id": "ad-donatum",
+            "source_kind": "primary_text",
+            "title": "Ad Donatum (To Donatus)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 246",
+            "year_start": "246",
+            "year_end": "246",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050601.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's conversion letter; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-donatum-written-carthage",
+        "clm-ad-donatum-affirms-baptism-illumin",
+        "clm-ad-donatum-affirms-baptism-regen",
+        "clm-ad-donatum-affirms-baptism-water",
+        "clm-ad-donatum-affirms-penance",
+        "clm-ad-donatum-affirms-spectacles",
+        "clm-ad-donatum-affirms-trinitarian-baptism",
+        "clm-ad-donatum-mentions-catechumenate"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-cyprian-ad-donatum-3-4": [
+          "clm-ad-donatum-affirms-baptism-illumin",
+          "clm-ad-donatum-affirms-baptism-regen",
+          "clm-ad-donatum-affirms-baptism-water",
+          "clm-ad-donatum-affirms-penance",
+          "clm-ad-donatum-affirms-spectacles",
+          "clm-ad-donatum-affirms-trinitarian-baptism",
+          "clm-ad-donatum-mentions-catechumenate",
+          "clm-ad-donatum-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ad-donatum-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-donatum-written-carthage",
+        "subject_type": "work",
+        "subject_id": "ad-donatum",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "246",
+        "year_end": "246",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-donatum",
+        "title_display": "Ad Donatum (To Donatus)",
+        "title_original": "Ad Donatum",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's earliest work c. 246, a personal letter to his friend Donatus describing his conversion and baptism; key witness for baptismal regeneration, the transformation of the Holy Spirit, and Cyprian's pre-episcopal spiritual formation."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-donatum-written-carthage",
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Cyprian was bishop of Carthage; the work's setting is his conversion there."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "source_id": "src-cyprian-ad-donatum",
+            "locator_type": "source_ref",
+            "locator": "Ad Don. 3-4",
+            "excerpt": "Paraphrase: I myself was held in bonds by the innumerable errors of my previous life and did not believe I could be freed from them. But after the stain of former years had been washed away by the aid of the water of new birth, a light from above poured itself upon my heart now cleansed and purified; after the second birth had restored me to a new man by means of the Spirit breathed from heaven, in a marvellous manner what had been doubtful became certain, what had been hidden was revealed.",
+            "language": "English",
+            "passage_year": "246",
+            "url_override": "",
+            "notes": "Cyprian's conversion and baptismal regeneration testimony; Spirit transformation"
+          },
+          "source": {
+            "source_id": "src-cyprian-ad-donatum",
+            "work_id": "ad-donatum",
+            "source_kind": "primary_text",
+            "title": "Ad Donatum (To Donatus)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 246",
+            "year_start": "246",
+            "year_end": "246",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050601.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's conversion letter; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-donatum-affirms-baptism-illumin",
+        "clm-ad-donatum-affirms-baptism-regen",
+        "clm-ad-donatum-affirms-baptism-water",
+        "clm-ad-donatum-affirms-penance",
+        "clm-ad-donatum-affirms-spectacles",
+        "clm-ad-donatum-affirms-trinitarian-baptism",
+        "clm-ad-donatum-by-cyprian",
+        "clm-ad-donatum-mentions-catechumenate"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-cyprian-ad-donatum-3-4": [
+          "clm-ad-donatum-affirms-baptism-illumin",
+          "clm-ad-donatum-affirms-baptism-regen",
+          "clm-ad-donatum-affirms-baptism-water",
+          "clm-ad-donatum-affirms-penance",
+          "clm-ad-donatum-affirms-spectacles",
+          "clm-ad-donatum-affirms-trinitarian-baptism",
+          "clm-ad-donatum-by-cyprian",
+          "clm-ad-donatum-mentions-catechumenate"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ad-donatum-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-donatum-affirms-baptism-illumin",
+        "subject_type": "work",
+        "subject_id": "ad-donatum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-is-illumination",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-donatum",
+        "title_display": "Ad Donatum (To Donatus)",
+        "title_original": "Ad Donatum",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's earliest work c. 246, a personal letter to his friend Donatus describing his conversion and baptism; key witness for baptismal regeneration, the transformation of the Holy Spirit, and Cyprian's pre-episcopal spiritual formation."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-is-illumination",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-illumination",
+        "proposition_label": "Baptism is called illumination, by which the soul receives the light of salvation",
+        "polarity_family": "baptism_illumination",
+        "description": "Baptism is not merely a washing but an illumination of the soul — the reception of divine light, adoption as children of God, and entry into immortal life.",
+        "notes": "Baptismal illumination"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-donatum-affirms-baptism-illumin",
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Light from above poured upon the heart after baptism — illumination language."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "source_id": "src-cyprian-ad-donatum",
+            "locator_type": "source_ref",
+            "locator": "Ad Don. 3-4",
+            "excerpt": "Paraphrase: I myself was held in bonds by the innumerable errors of my previous life and did not believe I could be freed from them. But after the stain of former years had been washed away by the aid of the water of new birth, a light from above poured itself upon my heart now cleansed and purified; after the second birth had restored me to a new man by means of the Spirit breathed from heaven, in a marvellous manner what had been doubtful became certain, what had been hidden was revealed.",
+            "language": "English",
+            "passage_year": "246",
+            "url_override": "",
+            "notes": "Cyprian's conversion and baptismal regeneration testimony; Spirit transformation"
+          },
+          "source": {
+            "source_id": "src-cyprian-ad-donatum",
+            "work_id": "ad-donatum",
+            "source_kind": "primary_text",
+            "title": "Ad Donatum (To Donatus)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 246",
+            "year_start": "246",
+            "year_end": "246",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050601.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's conversion letter; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-donatum-written-carthage",
+        "clm-ad-donatum-affirms-baptism-regen",
+        "clm-ad-donatum-affirms-baptism-water",
+        "clm-ad-donatum-affirms-penance",
+        "clm-ad-donatum-affirms-spectacles",
+        "clm-ad-donatum-affirms-trinitarian-baptism",
+        "clm-ad-donatum-by-cyprian",
+        "clm-ad-donatum-mentions-catechumenate"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-cyprian-ad-donatum-3-4": [
+          "clm-ad-donatum-affirms-baptism-regen",
+          "clm-ad-donatum-affirms-baptism-water",
+          "clm-ad-donatum-affirms-penance",
+          "clm-ad-donatum-affirms-spectacles",
+          "clm-ad-donatum-affirms-trinitarian-baptism",
+          "clm-ad-donatum-by-cyprian",
+          "clm-ad-donatum-mentions-catechumenate",
+          "clm-ad-donatum-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ad-donatum-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-donatum-affirms-baptism-regen",
+        "subject_type": "work",
+        "subject_id": "ad-donatum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-effects-regeneration",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-donatum",
+        "title_display": "Ad Donatum (To Donatus)",
+        "title_original": "Ad Donatum",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's earliest work c. 246, a personal letter to his friend Donatus describing his conversion and baptism; key witness for baptismal regeneration, the transformation of the Holy Spirit, and Cyprian's pre-episcopal spiritual formation."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-effects-regeneration",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-regeneration",
+        "proposition_label": "Baptism effects spiritual regeneration",
+        "polarity_family": "baptism_regeneration",
+        "description": "Baptism is not merely symbolic but effects a new birth or regeneration of the recipient.",
+        "notes": "Baptismal regeneration"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-donatum-affirms-baptism-regen",
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Cyprian describes baptismal regeneration: stain washed away by water of new birth, light poured upon cleansed heart."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "source_id": "src-cyprian-ad-donatum",
+            "locator_type": "source_ref",
+            "locator": "Ad Don. 3-4",
+            "excerpt": "Paraphrase: I myself was held in bonds by the innumerable errors of my previous life and did not believe I could be freed from them. But after the stain of former years had been washed away by the aid of the water of new birth, a light from above poured itself upon my heart now cleansed and purified; after the second birth had restored me to a new man by means of the Spirit breathed from heaven, in a marvellous manner what had been doubtful became certain, what had been hidden was revealed.",
+            "language": "English",
+            "passage_year": "246",
+            "url_override": "",
+            "notes": "Cyprian's conversion and baptismal regeneration testimony; Spirit transformation"
+          },
+          "source": {
+            "source_id": "src-cyprian-ad-donatum",
+            "work_id": "ad-donatum",
+            "source_kind": "primary_text",
+            "title": "Ad Donatum (To Donatus)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 246",
+            "year_start": "246",
+            "year_end": "246",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050601.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's conversion letter; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-donatum-written-carthage",
+        "clm-ad-donatum-affirms-baptism-illumin",
+        "clm-ad-donatum-affirms-baptism-water",
+        "clm-ad-donatum-affirms-penance",
+        "clm-ad-donatum-affirms-spectacles",
+        "clm-ad-donatum-affirms-trinitarian-baptism",
+        "clm-ad-donatum-by-cyprian",
+        "clm-ad-donatum-mentions-catechumenate"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-cyprian-ad-donatum-3-4": [
+          "clm-ad-donatum-affirms-baptism-illumin",
+          "clm-ad-donatum-affirms-baptism-water",
+          "clm-ad-donatum-affirms-penance",
+          "clm-ad-donatum-affirms-spectacles",
+          "clm-ad-donatum-affirms-trinitarian-baptism",
+          "clm-ad-donatum-by-cyprian",
+          "clm-ad-donatum-mentions-catechumenate",
+          "clm-ad-donatum-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ad-donatum-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-donatum-affirms-baptism-water",
+        "subject_type": "work",
+        "subject_id": "ad-donatum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-with-water-commanded",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-donatum",
+        "title_display": "Ad Donatum (To Donatus)",
+        "title_original": "Ad Donatum",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's earliest work c. 246, a personal letter to his friend Donatus describing his conversion and baptism; key witness for baptismal regeneration, the transformation of the Holy Spirit, and Cyprian's pre-episcopal spiritual formation."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-with-water-commanded",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-mode",
+        "proposition_label": "Baptism is administered with water",
+        "polarity_family": "baptism_water",
+        "description": "Baptismal practice uses water as the material element.",
+        "notes": "Core initiatory practice"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-donatum-affirms-baptism-water",
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Stain washed away by the water of new birth — explicit water baptism."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "source_id": "src-cyprian-ad-donatum",
+            "locator_type": "source_ref",
+            "locator": "Ad Don. 3-4",
+            "excerpt": "Paraphrase: I myself was held in bonds by the innumerable errors of my previous life and did not believe I could be freed from them. But after the stain of former years had been washed away by the aid of the water of new birth, a light from above poured itself upon my heart now cleansed and purified; after the second birth had restored me to a new man by means of the Spirit breathed from heaven, in a marvellous manner what had been doubtful became certain, what had been hidden was revealed.",
+            "language": "English",
+            "passage_year": "246",
+            "url_override": "",
+            "notes": "Cyprian's conversion and baptismal regeneration testimony; Spirit transformation"
+          },
+          "source": {
+            "source_id": "src-cyprian-ad-donatum",
+            "work_id": "ad-donatum",
+            "source_kind": "primary_text",
+            "title": "Ad Donatum (To Donatus)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 246",
+            "year_start": "246",
+            "year_end": "246",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050601.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's conversion letter; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-donatum-written-carthage",
+        "clm-ad-donatum-affirms-baptism-illumin",
+        "clm-ad-donatum-affirms-baptism-regen",
+        "clm-ad-donatum-affirms-penance",
+        "clm-ad-donatum-affirms-spectacles",
+        "clm-ad-donatum-affirms-trinitarian-baptism",
+        "clm-ad-donatum-by-cyprian",
+        "clm-ad-donatum-mentions-catechumenate"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-cyprian-ad-donatum-3-4": [
+          "clm-ad-donatum-affirms-baptism-illumin",
+          "clm-ad-donatum-affirms-baptism-regen",
+          "clm-ad-donatum-affirms-penance",
+          "clm-ad-donatum-affirms-spectacles",
+          "clm-ad-donatum-affirms-trinitarian-baptism",
+          "clm-ad-donatum-by-cyprian",
+          "clm-ad-donatum-mentions-catechumenate",
+          "clm-ad-donatum-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ad-donatum-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-donatum-affirms-penance",
+        "subject_type": "work",
+        "subject_id": "ad-donatum",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "post-baptismal-sin-forgiven-by-penance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-donatum",
+        "title_display": "Ad Donatum (To Donatus)",
+        "title_original": "Ad Donatum",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's earliest work c. 246, a personal letter to his friend Donatus describing his conversion and baptism; key witness for baptismal regeneration, the transformation of the Holy Spirit, and Cyprian's pre-episcopal spiritual formation."
+      },
+      "object_entity": {
+        "proposition_id": "post-baptismal-sin-forgiven-by-penance",
+        "topic_id": "penance-practice",
+        "dimension_id": "post-baptismal-penance",
+        "proposition_label": "Post-baptismal sin can be forgiven through penance",
+        "polarity_family": "post_baptismal_penance",
+        "description": "A second repentance after baptism is possible and administered through church discipline.",
+        "notes": "Penitential discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-donatum-affirms-penance",
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Conversion from errors of previous life implies penitential framework."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "source_id": "src-cyprian-ad-donatum",
+            "locator_type": "source_ref",
+            "locator": "Ad Don. 3-4",
+            "excerpt": "Paraphrase: I myself was held in bonds by the innumerable errors of my previous life and did not believe I could be freed from them. But after the stain of former years had been washed away by the aid of the water of new birth, a light from above poured itself upon my heart now cleansed and purified; after the second birth had restored me to a new man by means of the Spirit breathed from heaven, in a marvellous manner what had been doubtful became certain, what had been hidden was revealed.",
+            "language": "English",
+            "passage_year": "246",
+            "url_override": "",
+            "notes": "Cyprian's conversion and baptismal regeneration testimony; Spirit transformation"
+          },
+          "source": {
+            "source_id": "src-cyprian-ad-donatum",
+            "work_id": "ad-donatum",
+            "source_kind": "primary_text",
+            "title": "Ad Donatum (To Donatus)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 246",
+            "year_start": "246",
+            "year_end": "246",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050601.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's conversion letter; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-donatum-written-carthage",
+        "clm-ad-donatum-affirms-baptism-illumin",
+        "clm-ad-donatum-affirms-baptism-regen",
+        "clm-ad-donatum-affirms-baptism-water",
+        "clm-ad-donatum-affirms-spectacles",
+        "clm-ad-donatum-affirms-trinitarian-baptism",
+        "clm-ad-donatum-by-cyprian",
+        "clm-ad-donatum-mentions-catechumenate"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-cyprian-ad-donatum-3-4": [
+          "clm-ad-donatum-affirms-baptism-illumin",
+          "clm-ad-donatum-affirms-baptism-regen",
+          "clm-ad-donatum-affirms-baptism-water",
+          "clm-ad-donatum-affirms-spectacles",
+          "clm-ad-donatum-affirms-trinitarian-baptism",
+          "clm-ad-donatum-by-cyprian",
+          "clm-ad-donatum-mentions-catechumenate",
+          "clm-ad-donatum-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ad-donatum-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-donatum-affirms-spectacles",
+        "subject_type": "work",
+        "subject_id": "ad-donatum",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christians-avoid-public-spectacles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-donatum",
+        "title_display": "Ad Donatum (To Donatus)",
+        "title_original": "Ad Donatum",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's earliest work c. 246, a personal letter to his friend Donatus describing his conversion and baptism; key witness for baptismal regeneration, the transformation of the Holy Spirit, and Cyprian's pre-episcopal spiritual formation."
+      },
+      "object_entity": {
+        "proposition_id": "christians-avoid-public-spectacles",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "public-spectacles-avoided",
+        "proposition_label": "Christians are instructed to abstain from public games, theaters, and spectacles",
+        "polarity_family": "spectacles_avoided",
+        "description": "Public games, theaters, and spectacles are morally dangerous entertainments that Christians must avoid in favor of the word of God.",
+        "notes": "Avoidance of public spectacles"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-donatum-affirms-spectacles",
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.4",
+            "notes": "Conversion from worldly life implies leaving spectacles behind."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "source_id": "src-cyprian-ad-donatum",
+            "locator_type": "source_ref",
+            "locator": "Ad Don. 3-4",
+            "excerpt": "Paraphrase: I myself was held in bonds by the innumerable errors of my previous life and did not believe I could be freed from them. But after the stain of former years had been washed away by the aid of the water of new birth, a light from above poured itself upon my heart now cleansed and purified; after the second birth had restored me to a new man by means of the Spirit breathed from heaven, in a marvellous manner what had been doubtful became certain, what had been hidden was revealed.",
+            "language": "English",
+            "passage_year": "246",
+            "url_override": "",
+            "notes": "Cyprian's conversion and baptismal regeneration testimony; Spirit transformation"
+          },
+          "source": {
+            "source_id": "src-cyprian-ad-donatum",
+            "work_id": "ad-donatum",
+            "source_kind": "primary_text",
+            "title": "Ad Donatum (To Donatus)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 246",
+            "year_start": "246",
+            "year_end": "246",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050601.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's conversion letter; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-donatum-written-carthage",
+        "clm-ad-donatum-affirms-baptism-illumin",
+        "clm-ad-donatum-affirms-baptism-regen",
+        "clm-ad-donatum-affirms-baptism-water",
+        "clm-ad-donatum-affirms-penance",
+        "clm-ad-donatum-affirms-trinitarian-baptism",
+        "clm-ad-donatum-by-cyprian",
+        "clm-ad-donatum-mentions-catechumenate"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-cyprian-ad-donatum-3-4": [
+          "clm-ad-donatum-affirms-baptism-illumin",
+          "clm-ad-donatum-affirms-baptism-regen",
+          "clm-ad-donatum-affirms-baptism-water",
+          "clm-ad-donatum-affirms-penance",
+          "clm-ad-donatum-affirms-trinitarian-baptism",
+          "clm-ad-donatum-by-cyprian",
+          "clm-ad-donatum-mentions-catechumenate",
+          "clm-ad-donatum-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ad-donatum-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-donatum-affirms-trinitarian-baptism",
+        "subject_type": "work",
+        "subject_id": "ad-donatum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-administered-in-trinitarian-name",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-donatum",
+        "title_display": "Ad Donatum (To Donatus)",
+        "title_original": "Ad Donatum",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's earliest work c. 246, a personal letter to his friend Donatus describing his conversion and baptism; key witness for baptismal regeneration, the transformation of the Holy Spirit, and Cyprian's pre-episcopal spiritual formation."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-administered-in-trinitarian-name",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-formula",
+        "proposition_label": "Baptism is administered in the Trinitarian name of Father, Son, and Holy Spirit",
+        "polarity_family": "trinitarian_baptism",
+        "description": "Baptism uses the explicit Trinitarian formula of Father, Son, and Holy Spirit as the form of the sacrament.",
+        "notes": "Trinitarian baptismal formula"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-donatum-affirms-trinitarian-baptism",
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Spirit breathed from heaven in the context of baptismal new birth implies trinitarian baptism."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ad-donatum-3-4",
+            "source_id": "src-cyprian-ad-donatum",
+            "locator_type": "source_ref",
+            "locator": "Ad Don. 3-4",
+            "excerpt": "Paraphrase: I myself was held in bonds by the innumerable errors of my previous life and did not believe I could be freed from them. But after the stain of former years had been washed away by the aid of the water of new birth, a light from above poured itself upon my heart now cleansed and purified; after the second birth had restored me to a new man by means of the Spirit breathed from heaven, in a marvellous manner what had been doubtful became certain, what had been hidden was revealed.",
+            "language": "English",
+            "passage_year": "246",
+            "url_override": "",
+            "notes": "Cyprian's conversion and baptismal regeneration testimony; Spirit transformation"
+          },
+          "source": {
+            "source_id": "src-cyprian-ad-donatum",
+            "work_id": "ad-donatum",
+            "source_kind": "primary_text",
+            "title": "Ad Donatum (To Donatus)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 246",
+            "year_start": "246",
+            "year_end": "246",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050601.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's conversion letter; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-donatum-written-carthage",
+        "clm-ad-donatum-affirms-baptism-illumin",
+        "clm-ad-donatum-affirms-baptism-regen",
+        "clm-ad-donatum-affirms-baptism-water",
+        "clm-ad-donatum-affirms-penance",
+        "clm-ad-donatum-affirms-spectacles",
+        "clm-ad-donatum-by-cyprian",
+        "clm-ad-donatum-mentions-catechumenate"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-cyprian-ad-donatum-3-4": [
+          "clm-ad-donatum-affirms-baptism-illumin",
+          "clm-ad-donatum-affirms-baptism-regen",
+          "clm-ad-donatum-affirms-baptism-water",
+          "clm-ad-donatum-affirms-penance",
+          "clm-ad-donatum-affirms-spectacles",
+          "clm-ad-donatum-by-cyprian",
+          "clm-ad-donatum-mentions-catechumenate",
+          "clm-ad-donatum-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ad-donatum-3-4"
+      ]
+    }
+  ]
+}

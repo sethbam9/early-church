@@ -1,0 +1,2375 @@
+{
+  "batch_id": "batch-033",
+  "queue": "0A",
+  "focus": "psg-eusebius-he-3-36(13)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-1apology-by-justin",
+        "subject_type": "work",
+        "subject_id": "first-apology-of-justin",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "justin-martyr",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-apology-of-justin",
+        "title_display": "First Apology",
+        "title_original": "Ἀπολογία ὑπὲρ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Justin Martyr defense of Christian faith addressed to Emperor Antoninus Pius c. 155."
+      },
+      "object_entity": {
+        "person_id": "justin-martyr",
+        "person_label": "Justin Martyr",
+        "name_alt": "Justin",
+        "name_native": "Ἰουστῖνος",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 165",
+        "person_kind": "individual",
+        "notes": "Christian apologist and philosopher martyred in Rome, rich source for mid-2nd-century liturgy."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-1apology-by-justin",
+            "passage_id": "psg-justin-apol-13",
+            "evidence_role": "supports",
+            "support_aspect": "attribution",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-justin-apol-13",
+            "source_id": "src-justin-first-apology",
+            "locator_type": "source_ref",
+            "locator": "1 Apol. 13",
+            "excerpt": "Paraphrase: Christians worship the Maker of the universe by prayer and thanksgiving without material sacrifice; Jesus Christ is the Son of the true God in the second place; the prophetic Spirit is in the third place.",
+            "language": "English",
+            "passage_year": "155",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-justin-first-apology",
+            "work_id": "first-apology-of-justin",
+            "source_kind": "primary_text",
+            "title": "First Apology",
+            "author": "Justin Martyr",
+            "editor": "",
+            "year_display": "c. 155",
+            "year_start": "155",
+            "year_end": "155",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0126.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Justin defense of Christianity with detailed baptism and eucharist descriptions."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-justin-affirms-baptism-regen",
+        "clm-justin-apol-affirms-apostolic-succession",
+        "clm-justin-apol-affirms-baptismal-anointing",
+        "clm-justin-apol-affirms-bodily-resurrection",
+        "clm-justin-apol-affirms-catechumenate",
+        "clm-justin-apol-affirms-episcopal-chair",
+        "clm-justin-apol-affirms-eucharist-malachi",
+        "clm-justin-apol-affirms-eucharist-sacrifice",
+        "clm-justin-apol-affirms-incarnation",
+        "clm-justin-apol-affirms-logos",
+        "clm-justin-apol-affirms-rule-of-faith",
+        "clm-justin-apol-affirms-trinitarian-baptism",
+        "clm-justin-apol-affirms-virgin-birth",
+        "clm-justin-baptism-water",
+        "clm-justin-eucharist-flesh",
+        "clm-justin-eucharist-sunday",
+        "clm-justin-first-apology-written-rome"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-justin-apol-13": [
+          "clm-dialogue-trypho-written-rome",
+          "clm-justin-active-flavia-neapolis",
+          "clm-justin-affirms-baptism-regen",
+          "clm-justin-apol-affirms-apostolic-succession",
+          "clm-justin-apol-affirms-baptismal-anointing",
+          "clm-justin-apol-affirms-bodily-resurrection",
+          "clm-justin-apol-affirms-catechumenate",
+          "clm-justin-apol-affirms-rule-of-faith",
+          "clm-justin-first-apology-written-rome",
+          "clm-justin-in-martyrdom",
+          "clm-justin-martyrdom-at-rome",
+          "clm-justin-person-affirms-martyrdom-witness"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-justin-apol-13",
+        "ATTESTED_NO_QUALITY"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-justin-apol-affirms-catechumenate",
+        "subject_type": "work",
+        "subject_id": "first-apology-of-justin",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "catechumenate-precedes-baptism",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "155",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-apology-of-justin",
+        "title_display": "First Apology",
+        "title_original": "Ἀπολογία ὑπὲρ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Justin Martyr defense of Christian faith addressed to Emperor Antoninus Pius c. 155."
+      },
+      "object_entity": {
+        "proposition_id": "catechumenate-precedes-baptism",
+        "topic_id": "baptism-practice",
+        "dimension_id": "catechumenate",
+        "proposition_label": "A formal catechumenate precedes baptism",
+        "polarity_family": "",
+        "description": "Candidates for baptism undergo a structured period of pre-baptismal instruction, examination, and moral formation (the catechumenate) before being admitted to the sacrament.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-justin-apol-affirms-catechumenate",
+            "passage_id": "psg-justin-apol-13",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "first-apology-of-justin is a primary text directly relevant to catechumenate-precedes-baptism."
+          },
+          "passage": {
+            "passage_id": "psg-justin-apol-13",
+            "source_id": "src-justin-first-apology",
+            "locator_type": "source_ref",
+            "locator": "1 Apol. 13",
+            "excerpt": "Paraphrase: Christians worship the Maker of the universe by prayer and thanksgiving without material sacrifice; Jesus Christ is the Son of the true God in the second place; the prophetic Spirit is in the third place.",
+            "language": "English",
+            "passage_year": "155",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-justin-first-apology",
+            "work_id": "first-apology-of-justin",
+            "source_kind": "primary_text",
+            "title": "First Apology",
+            "author": "Justin Martyr",
+            "editor": "",
+            "year_display": "c. 155",
+            "year_start": "155",
+            "year_end": "155",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0126.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Justin defense of Christianity with detailed baptism and eucharist descriptions."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-justin-affirms-baptism-regen",
+        "clm-justin-apol-affirms-apostolic-succession",
+        "clm-justin-apol-affirms-baptismal-anointing",
+        "clm-justin-apol-affirms-bodily-resurrection",
+        "clm-justin-apol-affirms-episcopal-chair",
+        "clm-justin-apol-affirms-eucharist-malachi",
+        "clm-justin-apol-affirms-eucharist-sacrifice",
+        "clm-justin-apol-affirms-incarnation",
+        "clm-justin-apol-affirms-logos",
+        "clm-justin-apol-affirms-rule-of-faith",
+        "clm-justin-apol-affirms-trinitarian-baptism",
+        "clm-justin-apol-affirms-virgin-birth",
+        "clm-justin-baptism-water",
+        "clm-justin-eucharist-flesh",
+        "clm-justin-eucharist-sunday",
+        "clm-justin-first-apology-written-rome",
+        "clm-1apology-by-justin"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-justin-apol-13": [
+          "clm-1apology-by-justin",
+          "clm-dialogue-trypho-written-rome",
+          "clm-justin-active-flavia-neapolis",
+          "clm-justin-affirms-baptism-regen",
+          "clm-justin-apol-affirms-apostolic-succession",
+          "clm-justin-apol-affirms-baptismal-anointing",
+          "clm-justin-apol-affirms-bodily-resurrection",
+          "clm-justin-apol-affirms-rule-of-faith",
+          "clm-justin-first-apology-written-rome",
+          "clm-justin-in-martyrdom",
+          "clm-justin-martyrdom-at-rome",
+          "clm-justin-person-affirms-martyrdom-witness"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-justin-apol-13",
+        "PARAPHRASE_RISK:psg-justin-apol-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-justin-first-apology-written-rome",
+        "subject_type": "work",
+        "subject_id": "first-apology-of-justin",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "155",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-apology-of-justin",
+        "title_display": "First Apology",
+        "title_original": "Ἀπολογία ὑπὲρ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Justin Martyr defense of Christian faith addressed to Emperor Antoninus Pius c. 155."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-justin-first-apology-written-rome",
+            "passage_id": "psg-justin-apol-13",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-justin-apol-13",
+            "source_id": "src-justin-first-apology",
+            "locator_type": "source_ref",
+            "locator": "1 Apol. 13",
+            "excerpt": "Paraphrase: Christians worship the Maker of the universe by prayer and thanksgiving without material sacrifice; Jesus Christ is the Son of the true God in the second place; the prophetic Spirit is in the third place.",
+            "language": "English",
+            "passage_year": "155",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-justin-first-apology",
+            "work_id": "first-apology-of-justin",
+            "source_kind": "primary_text",
+            "title": "First Apology",
+            "author": "Justin Martyr",
+            "editor": "",
+            "year_display": "c. 155",
+            "year_start": "155",
+            "year_end": "155",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0126.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Justin defense of Christianity with detailed baptism and eucharist descriptions."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-justin-affirms-baptism-regen",
+        "clm-justin-apol-affirms-apostolic-succession",
+        "clm-justin-apol-affirms-baptismal-anointing",
+        "clm-justin-apol-affirms-bodily-resurrection",
+        "clm-justin-apol-affirms-catechumenate",
+        "clm-justin-apol-affirms-episcopal-chair",
+        "clm-justin-apol-affirms-eucharist-malachi",
+        "clm-justin-apol-affirms-eucharist-sacrifice",
+        "clm-justin-apol-affirms-incarnation",
+        "clm-justin-apol-affirms-logos",
+        "clm-justin-apol-affirms-rule-of-faith",
+        "clm-justin-apol-affirms-trinitarian-baptism",
+        "clm-justin-apol-affirms-virgin-birth",
+        "clm-justin-baptism-water",
+        "clm-justin-eucharist-flesh",
+        "clm-justin-eucharist-sunday",
+        "clm-1apology-by-justin"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-justin-apol-13": [
+          "clm-1apology-by-justin",
+          "clm-dialogue-trypho-written-rome",
+          "clm-justin-active-flavia-neapolis",
+          "clm-justin-affirms-baptism-regen",
+          "clm-justin-apol-affirms-apostolic-succession",
+          "clm-justin-apol-affirms-baptismal-anointing",
+          "clm-justin-apol-affirms-bodily-resurrection",
+          "clm-justin-apol-affirms-catechumenate",
+          "clm-justin-apol-affirms-rule-of-faith",
+          "clm-justin-in-martyrdom",
+          "clm-justin-martyrdom-at-rome",
+          "clm-justin-person-affirms-martyrdom-witness"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-justin-apol-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-justin-apol-affirms-rule-of-faith",
+        "subject_type": "work",
+        "subject_id": "first-apology-of-justin",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "155",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-apology-of-justin",
+        "title_display": "First Apology",
+        "title_original": "Ἀπολογία ὑπὲρ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Justin Martyr defense of Christian faith addressed to Emperor Antoninus Pius c. 155."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-justin-apol-affirms-rule-of-faith",
+            "passage_id": "psg-justin-apol-13",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-justin-apol-13",
+            "source_id": "src-justin-first-apology",
+            "locator_type": "source_ref",
+            "locator": "1 Apol. 13",
+            "excerpt": "Paraphrase: Christians worship the Maker of the universe by prayer and thanksgiving without material sacrifice; Jesus Christ is the Son of the true God in the second place; the prophetic Spirit is in the third place.",
+            "language": "English",
+            "passage_year": "155",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-justin-first-apology",
+            "work_id": "first-apology-of-justin",
+            "source_kind": "primary_text",
+            "title": "First Apology",
+            "author": "Justin Martyr",
+            "editor": "",
+            "year_display": "c. 155",
+            "year_start": "155",
+            "year_end": "155",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0126.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Justin defense of Christianity with detailed baptism and eucharist descriptions."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-justin-affirms-baptism-regen",
+        "clm-justin-apol-affirms-apostolic-succession",
+        "clm-justin-apol-affirms-baptismal-anointing",
+        "clm-justin-apol-affirms-bodily-resurrection",
+        "clm-justin-apol-affirms-catechumenate",
+        "clm-justin-apol-affirms-episcopal-chair",
+        "clm-justin-apol-affirms-eucharist-malachi",
+        "clm-justin-apol-affirms-eucharist-sacrifice",
+        "clm-justin-apol-affirms-incarnation",
+        "clm-justin-apol-affirms-logos",
+        "clm-justin-apol-affirms-trinitarian-baptism",
+        "clm-justin-apol-affirms-virgin-birth",
+        "clm-justin-baptism-water",
+        "clm-justin-eucharist-flesh",
+        "clm-justin-eucharist-sunday",
+        "clm-justin-first-apology-written-rome",
+        "clm-1apology-by-justin"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-justin-apol-13": [
+          "clm-1apology-by-justin",
+          "clm-dialogue-trypho-written-rome",
+          "clm-justin-active-flavia-neapolis",
+          "clm-justin-affirms-baptism-regen",
+          "clm-justin-apol-affirms-apostolic-succession",
+          "clm-justin-apol-affirms-baptismal-anointing",
+          "clm-justin-apol-affirms-bodily-resurrection",
+          "clm-justin-apol-affirms-catechumenate",
+          "clm-justin-first-apology-written-rome",
+          "clm-justin-in-martyrdom",
+          "clm-justin-martyrdom-at-rome",
+          "clm-justin-person-affirms-martyrdom-witness"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-justin-apol-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-justin-apol-affirms-baptismal-anointing",
+        "subject_type": "work",
+        "subject_id": "first-apology-of-justin",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptismal-anointing-with-oil",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "155",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-apology-of-justin",
+        "title_display": "First Apology",
+        "title_original": "Ἀπολογία ὑπὲρ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Justin Martyr defense of Christian faith addressed to Emperor Antoninus Pius c. 155."
+      },
+      "object_entity": {
+        "proposition_id": "baptismal-anointing-with-oil",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-anointing",
+        "proposition_label": "Baptismal Anointing with Oil",
+        "polarity_family": "",
+        "description": "After emerging from the baptismal water, the newly baptized is anointed with chrism or oil as part of the baptismal rite, signifying the reception of the Holy Spirit and incorporation into Christ.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-justin-apol-affirms-baptismal-anointing",
+            "passage_id": "psg-justin-apol-13",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "first-apology-of-justin is a primary text directly relevant to baptismal-anointing-with-oil."
+          },
+          "passage": {
+            "passage_id": "psg-justin-apol-13",
+            "source_id": "src-justin-first-apology",
+            "locator_type": "source_ref",
+            "locator": "1 Apol. 13",
+            "excerpt": "Paraphrase: Christians worship the Maker of the universe by prayer and thanksgiving without material sacrifice; Jesus Christ is the Son of the true God in the second place; the prophetic Spirit is in the third place.",
+            "language": "English",
+            "passage_year": "155",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-justin-first-apology",
+            "work_id": "first-apology-of-justin",
+            "source_kind": "primary_text",
+            "title": "First Apology",
+            "author": "Justin Martyr",
+            "editor": "",
+            "year_display": "c. 155",
+            "year_start": "155",
+            "year_end": "155",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0126.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Justin defense of Christianity with detailed baptism and eucharist descriptions."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-justin-affirms-baptism-regen",
+        "clm-justin-apol-affirms-apostolic-succession",
+        "clm-justin-apol-affirms-bodily-resurrection",
+        "clm-justin-apol-affirms-catechumenate",
+        "clm-justin-apol-affirms-episcopal-chair",
+        "clm-justin-apol-affirms-eucharist-malachi",
+        "clm-justin-apol-affirms-eucharist-sacrifice",
+        "clm-justin-apol-affirms-incarnation",
+        "clm-justin-apol-affirms-logos",
+        "clm-justin-apol-affirms-rule-of-faith",
+        "clm-justin-apol-affirms-trinitarian-baptism",
+        "clm-justin-apol-affirms-virgin-birth",
+        "clm-justin-baptism-water",
+        "clm-justin-eucharist-flesh",
+        "clm-justin-eucharist-sunday",
+        "clm-justin-first-apology-written-rome",
+        "clm-1apology-by-justin"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-justin-apol-13": [
+          "clm-1apology-by-justin",
+          "clm-dialogue-trypho-written-rome",
+          "clm-justin-active-flavia-neapolis",
+          "clm-justin-affirms-baptism-regen",
+          "clm-justin-apol-affirms-apostolic-succession",
+          "clm-justin-apol-affirms-bodily-resurrection",
+          "clm-justin-apol-affirms-catechumenate",
+          "clm-justin-apol-affirms-rule-of-faith",
+          "clm-justin-first-apology-written-rome",
+          "clm-justin-in-martyrdom",
+          "clm-justin-martyrdom-at-rome",
+          "clm-justin-person-affirms-martyrdom-witness"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-justin-apol-13",
+        "PARAPHRASE_RISK:psg-justin-apol-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-address-origen-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "address-to-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "238",
+        "year_end": "238",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "address-to-origen",
+        "title_display": "Address of Thanksgiving to Origen",
+        "title_original": "Εἰς Ὠριγένην προσφωνητικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Gregory Thaumaturgus's farewell speech to Origen delivered c. 238 upon leaving Caesarea; describes Origen's teaching method, curriculum, and pastoral approach; key primary source for Origen's pedagogical practice and the Caesarean school."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-address-origen-affirms-logos",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Theological curriculum centered on the Logos."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-address-origen-affirms-allegorical",
+        "clm-address-origen-affirms-free-will",
+        "clm-address-origen-affirms-ot",
+        "clm-address-origen-affirms-philosophy",
+        "clm-address-origen-written-at-caesarea",
+        "clm-address-origen-by-gregory"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gregory-thaum-active-neocaesarea",
+        "subject_type": "person",
+        "subject_id": "gregory-thaumaturgus",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "neocaesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "240",
+        "year_end": "270",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gregory-thaumaturgus",
+        "person_label": "Gregory Thaumaturgus",
+        "name_alt": "Gregory the Wonderworker; Theodore",
+        "name_native": "Γρηγόριος ὁ Θαυματουργός",
+        "birth_year_display": "c. 213",
+        "death_year_display": "c. 270",
+        "person_kind": "individual",
+        "notes": "Student of Origen in Caesarea c. 233–238; bishop of Neocaesarea in Pontus c. 240–270; missionary who reportedly converted most of Pontus; his Address of Thanksgiving to Origen is a key source for Origen's teaching method; credited with many miracles."
+      },
+      "object_entity": {
+        "place_id": "neocaesarea",
+        "place_label": "Neocaesarea",
+        "place_label_modern": "Niksar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.5933",
+        "lon": "36.9536",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "City in Pontus on the Black Sea; see of Gregory Thaumaturgus c. 240–270; major early missionary center in northeastern Asia Minor."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gregory-thaum-active-neocaesarea",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Gregory's Address implies his return to Pontus after studying with Origen."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gregory-coworker-origen",
+        "clm-gregory-thaum-active-caesarea",
+        "clm-gregory-thaum-member-caesarean",
+        "clm-gregory-thaum-active-pontus"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-address-origen-affirms-ot",
+        "subject_type": "work",
+        "subject_id": "address-to-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "238",
+        "year_end": "238",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "address-to-origen",
+        "title_display": "Address of Thanksgiving to Origen",
+        "title_original": "Εἰς Ὠριγένην προσφωνητικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Gregory Thaumaturgus's farewell speech to Origen delivered c. 238 upon leaving Caesarea; describes Origen's teaching method, curriculum, and pastoral approach; key primary source for Origen's pedagogical practice and the Caesarean school."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-address-origen-affirms-ot",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Scripture study as the crown of the curriculum."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-address-origen-affirms-allegorical",
+        "clm-address-origen-affirms-free-will",
+        "clm-address-origen-affirms-logos",
+        "clm-address-origen-affirms-philosophy",
+        "clm-address-origen-written-at-caesarea",
+        "clm-address-origen-by-gregory"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-address-origen-affirms-allegorical",
+        "subject_type": "work",
+        "subject_id": "address-to-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "allegorical-interpretation-of-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "238",
+        "year_end": "238",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "address-to-origen",
+        "title_display": "Address of Thanksgiving to Origen",
+        "title_original": "Εἰς Ὠριγένην προσφωνητικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Gregory Thaumaturgus's farewell speech to Origen delivered c. 238 upon leaving Caesarea; describes Origen's teaching method, curriculum, and pastoral approach; key primary source for Origen's pedagogical practice and the Caesarean school."
+      },
+      "object_entity": {
+        "proposition_id": "allegorical-interpretation-of-scripture",
+        "topic_id": "biblical-interpretation",
+        "dimension_id": "allegorical-exegesis",
+        "proposition_label": "Scripture has a spiritual and allegorical sense beyond the literal",
+        "polarity_family": "allegorical_exegesis",
+        "description": "Scripture contains multiple layers of meaning — literal, moral, and spiritual/allegorical — and the deeper spiritual sense is often the most important for the soul's progress toward God.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-address-origen-affirms-allegorical",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Gregory describes Origen teaching Scripture with spiritual method."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-address-origen-affirms-free-will",
+        "clm-address-origen-affirms-logos",
+        "clm-address-origen-affirms-ot",
+        "clm-address-origen-affirms-philosophy",
+        "clm-address-origen-written-at-caesarea",
+        "clm-address-origen-by-gregory"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gregory-thaum-member-caesarean",
+        "subject_type": "person",
+        "subject_id": "gregory-thaumaturgus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "caesarean-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "270",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gregory-thaumaturgus",
+        "person_label": "Gregory Thaumaturgus",
+        "name_alt": "Gregory the Wonderworker; Theodore",
+        "name_native": "Γρηγόριος ὁ Θαυματουργός",
+        "birth_year_display": "c. 213",
+        "death_year_display": "c. 270",
+        "person_kind": "individual",
+        "notes": "Student of Origen in Caesarea c. 233–238; bishop of Neocaesarea in Pontus c. 240–270; missionary who reportedly converted most of Pontus; his Address of Thanksgiving to Origen is a key source for Origen's teaching method; credited with many miracles."
+      },
+      "object_entity": {
+        "group_id": "caesarean-church",
+        "group_label": "Church in Caesarea",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Caesarea Maritima; major center from the apostolic period onward; Origen relocated here c. 232 and founded a theological school and library with Alexander of Jerusalem."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gregory-thaum-member-caesarean",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Gregory was part of the Caesarean school community."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gregory-coworker-origen",
+        "clm-gregory-thaum-active-caesarea",
+        "clm-gregory-thaum-active-neocaesarea",
+        "clm-gregory-thaum-active-pontus"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gregory-thaum-active-pontus",
+        "subject_type": "person",
+        "subject_id": "gregory-thaumaturgus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "pontus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "240",
+        "year_end": "270",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gregory-thaumaturgus",
+        "person_label": "Gregory Thaumaturgus",
+        "name_alt": "Gregory the Wonderworker; Theodore",
+        "name_native": "Γρηγόριος ὁ Θαυματουργός",
+        "birth_year_display": "c. 213",
+        "death_year_display": "c. 270",
+        "person_kind": "individual",
+        "notes": "Student of Origen in Caesarea c. 233–238; bishop of Neocaesarea in Pontus c. 240–270; missionary who reportedly converted most of Pontus; his Address of Thanksgiving to Origen is a key source for Origen's teaching method; credited with many miracles."
+      },
+      "object_entity": {
+        "place_id": "pontus",
+        "place_label": "Pontus",
+        "place_label_modern": "",
+        "place_kind": "province",
+        "parent_place_id": "",
+        "lat": "40.8000",
+        "lon": "36.8000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Roman province on the Black Sea named in 1 Peter."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gregory-thaum-active-pontus",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gregory-coworker-origen",
+        "clm-gregory-thaum-active-caesarea",
+        "clm-gregory-thaum-member-caesarean",
+        "clm-gregory-thaum-active-neocaesarea"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gregory-coworker-origen",
+        "subject_type": "person",
+        "subject_id": "gregory-thaumaturgus",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "origen-of-alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "238",
+        "context_place_id": "caesarea",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gregory-thaumaturgus",
+        "person_label": "Gregory Thaumaturgus",
+        "name_alt": "Gregory the Wonderworker; Theodore",
+        "name_native": "Γρηγόριος ὁ Θαυματουργός",
+        "birth_year_display": "c. 213",
+        "death_year_display": "c. 270",
+        "person_kind": "individual",
+        "notes": "Student of Origen in Caesarea c. 233–238; bishop of Neocaesarea in Pontus c. 240–270; missionary who reportedly converted most of Pontus; his Address of Thanksgiving to Origen is a key source for Origen's teaching method; credited with many miracles."
+      },
+      "object_entity": {
+        "person_id": "origen-of-alexandria",
+        "person_label": "Origen of Alexandria",
+        "name_alt": "Origen, Adamantius",
+        "name_native": "Ὠριγένης",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Leading Alexandrian theologian and biblical scholar; student of Clement of Alexandria and eventual head of the Catechetical School. Prolific author covering exegesis, apologetics, and systematic theology. Active in Alexandria (c. 202–232) then Caesarea."
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gregory-coworker-origen",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gregory-thaum-active-caesarea",
+        "clm-gregory-thaum-member-caesarean",
+        "clm-gregory-thaum-active-neocaesarea",
+        "clm-gregory-thaum-active-pontus"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-address-origen-affirms-philosophy",
+        "subject_type": "work",
+        "subject_id": "address-to-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "greek-philosophy-prepared-gentiles-for-gospel",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "238",
+        "year_end": "238",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "address-to-origen",
+        "title_display": "Address of Thanksgiving to Origen",
+        "title_original": "Εἰς Ὠριγένην προσφωνητικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Gregory Thaumaturgus's farewell speech to Origen delivered c. 238 upon leaving Caesarea; describes Origen's teaching method, curriculum, and pastoral approach; key primary source for Origen's pedagogical practice and the Caesarean school."
+      },
+      "object_entity": {
+        "proposition_id": "greek-philosophy-prepared-gentiles-for-gospel",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "philosophy-as-schoolmaster",
+        "proposition_label": "Greek philosophy served as a preparatory schoolmaster leading Gentiles toward the Gospel",
+        "polarity_family": "philosophy_schoolmaster",
+        "description": "Before the advent of Christ, philosophy served for the Greeks as what the Law served for the Hebrews — a pedagogue preparing them for the righteousness and faith found fully in Christ.",
+        "notes": "Philosophy as preparatory schoolmaster"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-address-origen-affirms-philosophy",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Gregory explicitly describes Origen's use of philosophy as preparation."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-address-origen-affirms-allegorical",
+        "clm-address-origen-affirms-free-will",
+        "clm-address-origen-affirms-logos",
+        "clm-address-origen-affirms-ot",
+        "clm-address-origen-written-at-caesarea",
+        "clm-address-origen-by-gregory"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-origen-teacher-of-gregory",
+        "subject_type": "person",
+        "subject_id": "origen-of-alexandria",
+        "predicate_id": "teacher_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "gregory-thaumaturgus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "238",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "origen-of-alexandria",
+        "person_label": "Origen of Alexandria",
+        "name_alt": "Origen, Adamantius",
+        "name_native": "Ὠριγένης",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Leading Alexandrian theologian and biblical scholar; student of Clement of Alexandria and eventual head of the Catechetical School. Prolific author covering exegesis, apologetics, and systematic theology. Active in Alexandria (c. 202–232) then Caesarea."
+      },
+      "object_entity": {
+        "person_id": "gregory-thaumaturgus",
+        "person_label": "Gregory Thaumaturgus",
+        "name_alt": "Gregory the Wonderworker; Theodore",
+        "name_native": "Γρηγόριος ὁ Θαυματουργός",
+        "birth_year_display": "c. 213",
+        "death_year_display": "c. 270",
+        "person_kind": "individual",
+        "notes": "Student of Origen in Caesarea c. 233–238; bishop of Neocaesarea in Pontus c. 240–270; missionary who reportedly converted most of Pontus; his Address of Thanksgiving to Origen is a key source for Origen's teaching method; credited with many miracles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-origen-teacher-of-gregory",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Gregory explicitly describes Origen as his teacher."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-origen-teacher-of-heraclas",
+        "clm-origen-active-alexandria",
+        "clm-origen-member-alexandrian-church",
+        "clm-origen-teacher-of-dionysius",
+        "clm-origen-teacher-of-julius-africanus",
+        "clm-origen-develops-allegorical",
+        "clm-origen-participant-expulsion",
+        "clm-origen-active-antioch",
+        "clm-origen-teacher-of-firmilian",
+        "clm-origen-active-caesarea",
+        "clm-origen-member-caesarean",
+        "clm-origen-participant-synod-bostra",
+        "clm-origen-participant-torture-decius",
+        "clm-origen-active-tyre",
+        "clm-origen-originated-alexandria"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-address-origen-by-gregory",
+        "subject_type": "work",
+        "subject_id": "address-to-origen",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "gregory-thaumaturgus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "address-to-origen",
+        "title_display": "Address of Thanksgiving to Origen",
+        "title_original": "Εἰς Ὠριγένην προσφωνητικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Gregory Thaumaturgus's farewell speech to Origen delivered c. 238 upon leaving Caesarea; describes Origen's teaching method, curriculum, and pastoral approach; key primary source for Origen's pedagogical practice and the Caesarean school."
+      },
+      "object_entity": {
+        "person_id": "gregory-thaumaturgus",
+        "person_label": "Gregory Thaumaturgus",
+        "name_alt": "Gregory the Wonderworker; Theodore",
+        "name_native": "Γρηγόριος ὁ Θαυματουργός",
+        "birth_year_display": "c. 213",
+        "death_year_display": "c. 270",
+        "person_kind": "individual",
+        "notes": "Student of Origen in Caesarea c. 233–238; bishop of Neocaesarea in Pontus c. 240–270; missionary who reportedly converted most of Pontus; his Address of Thanksgiving to Origen is a key source for Origen's teaching method; credited with many miracles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-address-origen-by-gregory",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Address of Thanksgiving explicitly by Gregory."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-address-origen-affirms-allegorical",
+        "clm-address-origen-affirms-free-will",
+        "clm-address-origen-affirms-logos",
+        "clm-address-origen-affirms-ot",
+        "clm-address-origen-affirms-philosophy",
+        "clm-address-origen-written-at-caesarea"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-address-origen-affirms-free-will",
+        "subject_type": "work",
+        "subject_id": "address-to-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "free-will-grounds-moral-responsibility",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "238",
+        "year_end": "238",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "address-to-origen",
+        "title_display": "Address of Thanksgiving to Origen",
+        "title_original": "Εἰς Ὠριγένην προσφωνητικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Gregory Thaumaturgus's farewell speech to Origen delivered c. 238 upon leaving Caesarea; describes Origen's teaching method, curriculum, and pastoral approach; key primary source for Origen's pedagogical practice and the Caesarean school."
+      },
+      "object_entity": {
+        "proposition_id": "free-will-grounds-moral-responsibility",
+        "topic_id": "anthropology-theology",
+        "dimension_id": "free-will",
+        "proposition_label": "Human free will is the basis for moral responsibility before God",
+        "polarity_family": "free_will",
+        "description": "God created rational beings with genuine freedom of choice; this freedom is what makes praise, blame, reward, and punishment just; evil arises from the misuse of free will, not from God or from nature.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-address-origen-affirms-free-will",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Origen's moral formation implies free will pedagogy."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-address-origen-affirms-allegorical",
+        "clm-address-origen-affirms-logos",
+        "clm-address-origen-affirms-ot",
+        "clm-address-origen-affirms-philosophy",
+        "clm-address-origen-written-at-caesarea",
+        "clm-address-origen-by-gregory"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gregory-thaum-active-caesarea",
+        "subject_type": "person",
+        "subject_id": "gregory-thaumaturgus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "caesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "238",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gregory-thaumaturgus",
+        "person_label": "Gregory Thaumaturgus",
+        "name_alt": "Gregory the Wonderworker; Theodore",
+        "name_native": "Γρηγόριος ὁ Θαυματουργός",
+        "birth_year_display": "c. 213",
+        "death_year_display": "c. 270",
+        "person_kind": "individual",
+        "notes": "Student of Origen in Caesarea c. 233–238; bishop of Neocaesarea in Pontus c. 240–270; missionary who reportedly converted most of Pontus; his Address of Thanksgiving to Origen is a key source for Origen's teaching method; credited with many miracles."
+      },
+      "object_entity": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gregory-thaum-active-caesarea",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Gregory explicitly describes studying under Origen in Caesarea."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gregory-coworker-origen",
+        "clm-gregory-thaum-member-caesarean",
+        "clm-gregory-thaum-active-neocaesarea",
+        "clm-gregory-thaum-active-pontus"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:auth_written:address-to-origen",
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-address-origen-written-at-caesarea",
+        "subject_type": "work",
+        "subject_id": "address-to-origen",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "caesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "238",
+        "year_end": "238",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "address-to-origen",
+        "title_display": "Address of Thanksgiving to Origen",
+        "title_original": "Εἰς Ὠριγένην προσφωνητικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Gregory Thaumaturgus's farewell speech to Origen delivered c. 238 upon leaving Caesarea; describes Origen's teaching method, curriculum, and pastoral approach; key primary source for Origen's pedagogical practice and the Caesarean school."
+      },
+      "object_entity": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-address-origen-written-at-caesarea",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Gregory delivered this in Caesarea upon departing Origen's school."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-address-origen-affirms-allegorical",
+        "clm-address-origen-affirms-free-will",
+        "clm-address-origen-affirms-logos",
+        "clm-address-origen-affirms-ot",
+        "clm-address-origen-affirms-philosophy",
+        "clm-address-origen-by-gregory"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-caesarea",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-demas-active-rome",
+        "subject_type": "person",
+        "subject_id": "demas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "demas",
+        "person_label": "Demas",
+        "name_alt": "",
+        "name_native": "Δημᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said in 2 Timothy to have gone to Thessalonica."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-demas-active-rome",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Philemon 24 names Demas as fellow worker."
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-demas-coworker-paul",
+        "clm-demas-member-roman-church",
+        "clm-demas-disciple",
+        "clm-demas-active-thessalonica-late"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24",
+        "PARAPHRASE_OMISSION:psg-phlm-23-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-epaphras-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "epaphras",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "epaphras",
+        "person_label": "Epaphras",
+        "name_alt": "",
+        "name_native": "Ἐπαφρᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Colossian coworker associated with the churches of Colossae, Laodicea, and Hierapolis."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-epaphras-coworker-paul",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-epaphras-active-colossae",
+        "clm-epaphras-active-hierapolis",
+        "clm-epaphras-active-laodicea",
+        "clm-epaphras-active-rome",
+        "clm-epaphras-colossian-church",
+        "clm-epaphras-member-hierapolis",
+        "clm-epaphras-member-roman"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24",
+        "PARAPHRASE_OMISSION:psg-phlm-23-24:subject"
+      ]
+    }
+  ]
+}

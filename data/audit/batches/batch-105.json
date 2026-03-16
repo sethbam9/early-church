@@ -1,0 +1,1234 @@
+{
+  "batch_id": "batch-105",
+  "queue": "1",
+  "focus": "homilies-on-luke-origen",
+  "claim_count": 11,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-homluke-by-origen",
+        "subject_type": "work",
+        "subject_id": "homilies-on-luke-origen",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "origen-of-alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "homilies-on-luke-origen",
+        "title_display": "Homilies on Luke",
+        "title_original": "Εἰς τὸ κατὰ Λουκᾶν ὁμιλίαι",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's 39 homilies on Luke surviving in Jerome's Latin translation, delivered in Caesarea c. 233–234; key source for Origen's Mariology (perpetual virginity of Mary), infant baptism, and allegorical exegesis of the infancy and ministry narratives."
+      },
+      "object_entity": {
+        "person_id": "origen-of-alexandria",
+        "person_label": "Origen of Alexandria",
+        "name_alt": "Origen, Adamantius",
+        "name_native": "Ὠριγένης",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Leading Alexandrian theologian and biblical scholar; student of Clement of Alexandria and eventual head of the Catechetical School. Prolific author covering exegesis, apologetics, and systematic theology. Active in Alexandria (c. 202–232) then Caesarea."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-homluke-by-origen",
+            "passage_id": "psg-origen-homluke-14-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Homilies on Luke explicitly by Origen."
+          },
+          "passage": {
+            "passage_id": "psg-origen-homluke-14-3",
+            "source_id": "src-origen-homilies-luke",
+            "locator_type": "source_ref",
+            "locator": "Hom. Lk. 14.3",
+            "excerpt": "Let us inquire why infants are baptized. If there were nothing in infants which required the remission of sins and the grace of baptism, the grace of baptism would seem superfluous.",
+            "language": "English",
+            "passage_year": "234",
+            "url_override": "",
+            "notes": "Infant baptism presupposed — why baptize infants if no original sin?"
+          },
+          "source": {
+            "source_id": "src-origen-homilies-luke",
+            "work_id": "homilies-on-luke-origen",
+            "source_kind": "primary_text",
+            "title": "Homilies on Luke",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 233-234",
+            "year_start": "233",
+            "year_end": "234",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0510.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "39 homilies on Luke surviving in Jerome's Latin translation; key Mariology source."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-homluke-affirms-allegorical",
+        "clm-homluke-affirms-baptism-regeneration",
+        "clm-homluke-affirms-incarnation",
+        "clm-homluke-affirms-infant-baptism",
+        "clm-homluke-affirms-logos",
+        "clm-homluke-affirms-ot",
+        "clm-homluke-affirms-penance",
+        "clm-homluke-affirms-perpetual-virginity",
+        "clm-homluke-affirms-virgin-birth",
+        "clm-homluke-written-at-caesarea"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-origen-homluke-14-3": [
+          "clm-homluke-affirms-baptism-regeneration",
+          "clm-homluke-affirms-infant-baptism",
+          "clm-homluke-affirms-penance"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-homluke-written-at-caesarea",
+        "subject_type": "work",
+        "subject_id": "homilies-on-luke-origen",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "caesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "234",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "homilies-on-luke-origen",
+        "title_display": "Homilies on Luke",
+        "title_original": "Εἰς τὸ κατὰ Λουκᾶν ὁμιλίαι",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's 39 homilies on Luke surviving in Jerome's Latin translation, delivered in Caesarea c. 233–234; key source for Origen's Mariology (perpetual virginity of Mary), infant baptism, and allegorical exegesis of the infancy and ministry narratives."
+      },
+      "object_entity": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-homluke-written-at-caesarea",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Caesarean homilies per Eusebius."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-homluke-affirms-allegorical",
+        "clm-homluke-affirms-baptism-regeneration",
+        "clm-homluke-affirms-incarnation",
+        "clm-homluke-affirms-infant-baptism",
+        "clm-homluke-affirms-logos",
+        "clm-homluke-affirms-ot",
+        "clm-homluke-affirms-penance",
+        "clm-homluke-affirms-perpetual-virginity",
+        "clm-homluke-affirms-virgin-birth",
+        "clm-homluke-by-origen"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-homluke-affirms-allegorical",
+        "subject_type": "work",
+        "subject_id": "homilies-on-luke-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "allegorical-interpretation-of-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "234",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "homilies-on-luke-origen",
+        "title_display": "Homilies on Luke",
+        "title_original": "Εἰς τὸ κατὰ Λουκᾶν ὁμιλίαι",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's 39 homilies on Luke surviving in Jerome's Latin translation, delivered in Caesarea c. 233–234; key source for Origen's Mariology (perpetual virginity of Mary), infant baptism, and allegorical exegesis of the infancy and ministry narratives."
+      },
+      "object_entity": {
+        "proposition_id": "allegorical-interpretation-of-scripture",
+        "topic_id": "biblical-interpretation",
+        "dimension_id": "allegorical-exegesis",
+        "proposition_label": "Scripture has a spiritual and allegorical sense beyond the literal",
+        "polarity_family": "allegorical_exegesis",
+        "description": "Scripture contains multiple layers of meaning — literal, moral, and spiritual/allegorical — and the deeper spiritual sense is often the most important for the soul's progress toward God.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-homluke-affirms-allegorical",
+            "passage_id": "psg-origen-homluke-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Allegorical exegesis of Luke's infancy narrative."
+          },
+          "passage": {
+            "passage_id": "psg-origen-homluke-7",
+            "source_id": "src-origen-homilies-luke",
+            "locator_type": "source_ref",
+            "locator": "Hom. Lk. 7",
+            "excerpt": "Mary remained a virgin. For it was fitting that he who came into the world to restore purity to human nature should be born of a pure virgin. The brothers of Jesus mentioned in Scripture are sons of Joseph by a former wife, not children of Mary.",
+            "language": "English",
+            "passage_year": "234",
+            "url_override": "",
+            "notes": "Perpetual virginity of Mary — brothers of Jesus are Joseph's sons from prior marriage"
+          },
+          "source": {
+            "source_id": "src-origen-homilies-luke",
+            "work_id": "homilies-on-luke-origen",
+            "source_kind": "primary_text",
+            "title": "Homilies on Luke",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 233-234",
+            "year_start": "233",
+            "year_end": "234",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0510.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "39 homilies on Luke surviving in Jerome's Latin translation; key Mariology source."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-homluke-affirms-baptism-regeneration",
+        "clm-homluke-affirms-incarnation",
+        "clm-homluke-affirms-infant-baptism",
+        "clm-homluke-affirms-logos",
+        "clm-homluke-affirms-ot",
+        "clm-homluke-affirms-penance",
+        "clm-homluke-affirms-perpetual-virginity",
+        "clm-homluke-affirms-virgin-birth",
+        "clm-homluke-written-at-caesarea",
+        "clm-homluke-by-origen"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-origen-homluke-7": [
+          "clm-homluke-affirms-incarnation",
+          "clm-homluke-affirms-logos",
+          "clm-homluke-affirms-ot",
+          "clm-homluke-affirms-perpetual-virginity",
+          "clm-homluke-affirms-virgin-birth"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-homluke-affirms-baptism-regeneration",
+        "subject_type": "work",
+        "subject_id": "homilies-on-luke-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-effects-regeneration",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "234",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "homilies-on-luke-origen",
+        "title_display": "Homilies on Luke",
+        "title_original": "Εἰς τὸ κατὰ Λουκᾶν ὁμιλίαι",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's 39 homilies on Luke surviving in Jerome's Latin translation, delivered in Caesarea c. 233–234; key source for Origen's Mariology (perpetual virginity of Mary), infant baptism, and allegorical exegesis of the infancy and ministry narratives."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-effects-regeneration",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-regeneration",
+        "proposition_label": "Baptism effects spiritual regeneration",
+        "polarity_family": "baptism_regeneration",
+        "description": "Baptism is not merely symbolic but effects a new birth or regeneration of the recipient.",
+        "notes": "Baptismal regeneration"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-homluke-affirms-baptism-regeneration",
+            "passage_id": "psg-origen-homluke-14-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Baptism implies grace and remission — regeneration."
+          },
+          "passage": {
+            "passage_id": "psg-origen-homluke-14-3",
+            "source_id": "src-origen-homilies-luke",
+            "locator_type": "source_ref",
+            "locator": "Hom. Lk. 14.3",
+            "excerpt": "Let us inquire why infants are baptized. If there were nothing in infants which required the remission of sins and the grace of baptism, the grace of baptism would seem superfluous.",
+            "language": "English",
+            "passage_year": "234",
+            "url_override": "",
+            "notes": "Infant baptism presupposed — why baptize infants if no original sin?"
+          },
+          "source": {
+            "source_id": "src-origen-homilies-luke",
+            "work_id": "homilies-on-luke-origen",
+            "source_kind": "primary_text",
+            "title": "Homilies on Luke",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 233-234",
+            "year_start": "233",
+            "year_end": "234",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0510.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "39 homilies on Luke surviving in Jerome's Latin translation; key Mariology source."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-homluke-affirms-allegorical",
+        "clm-homluke-affirms-incarnation",
+        "clm-homluke-affirms-infant-baptism",
+        "clm-homluke-affirms-logos",
+        "clm-homluke-affirms-ot",
+        "clm-homluke-affirms-penance",
+        "clm-homluke-affirms-perpetual-virginity",
+        "clm-homluke-affirms-virgin-birth",
+        "clm-homluke-written-at-caesarea",
+        "clm-homluke-by-origen"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-origen-homluke-14-3": [
+          "clm-homluke-affirms-infant-baptism",
+          "clm-homluke-affirms-penance",
+          "clm-homluke-by-origen"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-homluke-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "homilies-on-luke-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "234",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "homilies-on-luke-origen",
+        "title_display": "Homilies on Luke",
+        "title_original": "Εἰς τὸ κατὰ Λουκᾶν ὁμιλίαι",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's 39 homilies on Luke surviving in Jerome's Latin translation, delivered in Caesarea c. 233–234; key source for Origen's Mariology (perpetual virginity of Mary), infant baptism, and allegorical exegesis of the infancy and ministry narratives."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-homluke-affirms-incarnation",
+            "passage_id": "psg-origen-homluke-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Virgin birth presupposes incarnation."
+          },
+          "passage": {
+            "passage_id": "psg-origen-homluke-7",
+            "source_id": "src-origen-homilies-luke",
+            "locator_type": "source_ref",
+            "locator": "Hom. Lk. 7",
+            "excerpt": "Mary remained a virgin. For it was fitting that he who came into the world to restore purity to human nature should be born of a pure virgin. The brothers of Jesus mentioned in Scripture are sons of Joseph by a former wife, not children of Mary.",
+            "language": "English",
+            "passage_year": "234",
+            "url_override": "",
+            "notes": "Perpetual virginity of Mary — brothers of Jesus are Joseph's sons from prior marriage"
+          },
+          "source": {
+            "source_id": "src-origen-homilies-luke",
+            "work_id": "homilies-on-luke-origen",
+            "source_kind": "primary_text",
+            "title": "Homilies on Luke",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 233-234",
+            "year_start": "233",
+            "year_end": "234",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0510.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "39 homilies on Luke surviving in Jerome's Latin translation; key Mariology source."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-homluke-affirms-allegorical",
+        "clm-homluke-affirms-baptism-regeneration",
+        "clm-homluke-affirms-infant-baptism",
+        "clm-homluke-affirms-logos",
+        "clm-homluke-affirms-ot",
+        "clm-homluke-affirms-penance",
+        "clm-homluke-affirms-perpetual-virginity",
+        "clm-homluke-affirms-virgin-birth",
+        "clm-homluke-written-at-caesarea",
+        "clm-homluke-by-origen"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-origen-homluke-7": [
+          "clm-homluke-affirms-allegorical",
+          "clm-homluke-affirms-logos",
+          "clm-homluke-affirms-ot",
+          "clm-homluke-affirms-perpetual-virginity",
+          "clm-homluke-affirms-virgin-birth"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-homluke-affirms-infant-baptism",
+        "subject_type": "work",
+        "subject_id": "homilies-on-luke-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "infants-and-children-are-baptized",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "234",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "homilies-on-luke-origen",
+        "title_display": "Homilies on Luke",
+        "title_original": "Εἰς τὸ κατὰ Λουκᾶν ὁμιλίαι",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's 39 homilies on Luke surviving in Jerome's Latin translation, delivered in Caesarea c. 233–234; key source for Origen's Mariology (perpetual virginity of Mary), infant baptism, and allegorical exegesis of the infancy and ministry narratives."
+      },
+      "object_entity": {
+        "proposition_id": "infants-and-children-are-baptized",
+        "topic_id": "baptism-practice",
+        "dimension_id": "infant-baptism",
+        "proposition_label": "Infants and children receive baptism",
+        "polarity_family": "infant_baptism",
+        "description": "Infant and child baptism is explicitly affirmed or presupposed as the ordinary practice of the Church.",
+        "notes": "Infant baptism"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-homluke-affirms-infant-baptism",
+            "passage_id": "psg-origen-homluke-14-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Infant baptism explicitly presupposed."
+          },
+          "passage": {
+            "passage_id": "psg-origen-homluke-14-3",
+            "source_id": "src-origen-homilies-luke",
+            "locator_type": "source_ref",
+            "locator": "Hom. Lk. 14.3",
+            "excerpt": "Let us inquire why infants are baptized. If there were nothing in infants which required the remission of sins and the grace of baptism, the grace of baptism would seem superfluous.",
+            "language": "English",
+            "passage_year": "234",
+            "url_override": "",
+            "notes": "Infant baptism presupposed — why baptize infants if no original sin?"
+          },
+          "source": {
+            "source_id": "src-origen-homilies-luke",
+            "work_id": "homilies-on-luke-origen",
+            "source_kind": "primary_text",
+            "title": "Homilies on Luke",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 233-234",
+            "year_start": "233",
+            "year_end": "234",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0510.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "39 homilies on Luke surviving in Jerome's Latin translation; key Mariology source."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-homluke-affirms-allegorical",
+        "clm-homluke-affirms-baptism-regeneration",
+        "clm-homluke-affirms-incarnation",
+        "clm-homluke-affirms-logos",
+        "clm-homluke-affirms-ot",
+        "clm-homluke-affirms-penance",
+        "clm-homluke-affirms-perpetual-virginity",
+        "clm-homluke-affirms-virgin-birth",
+        "clm-homluke-written-at-caesarea",
+        "clm-homluke-by-origen"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-origen-homluke-14-3": [
+          "clm-homluke-affirms-baptism-regeneration",
+          "clm-homluke-affirms-penance",
+          "clm-homluke-by-origen"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-homluke-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "homilies-on-luke-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "234",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "homilies-on-luke-origen",
+        "title_display": "Homilies on Luke",
+        "title_original": "Εἰς τὸ κατὰ Λουκᾶν ὁμιλίαι",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's 39 homilies on Luke surviving in Jerome's Latin translation, delivered in Caesarea c. 233–234; key source for Origen's Mariology (perpetual virginity of Mary), infant baptism, and allegorical exegesis of the infancy and ministry narratives."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-homluke-affirms-logos",
+            "passage_id": "psg-origen-homluke-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Christological framework in Luke homilies."
+          },
+          "passage": {
+            "passage_id": "psg-origen-homluke-7",
+            "source_id": "src-origen-homilies-luke",
+            "locator_type": "source_ref",
+            "locator": "Hom. Lk. 7",
+            "excerpt": "Mary remained a virgin. For it was fitting that he who came into the world to restore purity to human nature should be born of a pure virgin. The brothers of Jesus mentioned in Scripture are sons of Joseph by a former wife, not children of Mary.",
+            "language": "English",
+            "passage_year": "234",
+            "url_override": "",
+            "notes": "Perpetual virginity of Mary — brothers of Jesus are Joseph's sons from prior marriage"
+          },
+          "source": {
+            "source_id": "src-origen-homilies-luke",
+            "work_id": "homilies-on-luke-origen",
+            "source_kind": "primary_text",
+            "title": "Homilies on Luke",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 233-234",
+            "year_start": "233",
+            "year_end": "234",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0510.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "39 homilies on Luke surviving in Jerome's Latin translation; key Mariology source."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-homluke-affirms-allegorical",
+        "clm-homluke-affirms-baptism-regeneration",
+        "clm-homluke-affirms-incarnation",
+        "clm-homluke-affirms-infant-baptism",
+        "clm-homluke-affirms-ot",
+        "clm-homluke-affirms-penance",
+        "clm-homluke-affirms-perpetual-virginity",
+        "clm-homluke-affirms-virgin-birth",
+        "clm-homluke-written-at-caesarea",
+        "clm-homluke-by-origen"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-origen-homluke-7": [
+          "clm-homluke-affirms-allegorical",
+          "clm-homluke-affirms-incarnation",
+          "clm-homluke-affirms-ot",
+          "clm-homluke-affirms-perpetual-virginity",
+          "clm-homluke-affirms-virgin-birth"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-homluke-affirms-ot",
+        "subject_type": "work",
+        "subject_id": "homilies-on-luke-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "234",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "homilies-on-luke-origen",
+        "title_display": "Homilies on Luke",
+        "title_original": "Εἰς τὸ κατὰ Λουκᾶν ὁμιλίαι",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's 39 homilies on Luke surviving in Jerome's Latin translation, delivered in Caesarea c. 233–234; key source for Origen's Mariology (perpetual virginity of Mary), infant baptism, and allegorical exegesis of the infancy and ministry narratives."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-homluke-affirms-ot",
+            "passage_id": "psg-origen-homluke-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "OT presupposed in infancy narrative exegesis."
+          },
+          "passage": {
+            "passage_id": "psg-origen-homluke-7",
+            "source_id": "src-origen-homilies-luke",
+            "locator_type": "source_ref",
+            "locator": "Hom. Lk. 7",
+            "excerpt": "Mary remained a virgin. For it was fitting that he who came into the world to restore purity to human nature should be born of a pure virgin. The brothers of Jesus mentioned in Scripture are sons of Joseph by a former wife, not children of Mary.",
+            "language": "English",
+            "passage_year": "234",
+            "url_override": "",
+            "notes": "Perpetual virginity of Mary — brothers of Jesus are Joseph's sons from prior marriage"
+          },
+          "source": {
+            "source_id": "src-origen-homilies-luke",
+            "work_id": "homilies-on-luke-origen",
+            "source_kind": "primary_text",
+            "title": "Homilies on Luke",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 233-234",
+            "year_start": "233",
+            "year_end": "234",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0510.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "39 homilies on Luke surviving in Jerome's Latin translation; key Mariology source."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-homluke-affirms-allegorical",
+        "clm-homluke-affirms-baptism-regeneration",
+        "clm-homluke-affirms-incarnation",
+        "clm-homluke-affirms-infant-baptism",
+        "clm-homluke-affirms-logos",
+        "clm-homluke-affirms-penance",
+        "clm-homluke-affirms-perpetual-virginity",
+        "clm-homluke-affirms-virgin-birth",
+        "clm-homluke-written-at-caesarea",
+        "clm-homluke-by-origen"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-origen-homluke-7": [
+          "clm-homluke-affirms-allegorical",
+          "clm-homluke-affirms-incarnation",
+          "clm-homluke-affirms-logos",
+          "clm-homluke-affirms-perpetual-virginity",
+          "clm-homluke-affirms-virgin-birth"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-homluke-affirms-penance",
+        "subject_type": "work",
+        "subject_id": "homilies-on-luke-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "post-baptismal-sin-forgiven-by-penance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "234",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "homilies-on-luke-origen",
+        "title_display": "Homilies on Luke",
+        "title_original": "Εἰς τὸ κατὰ Λουκᾶν ὁμιλίαι",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's 39 homilies on Luke surviving in Jerome's Latin translation, delivered in Caesarea c. 233–234; key source for Origen's Mariology (perpetual virginity of Mary), infant baptism, and allegorical exegesis of the infancy and ministry narratives."
+      },
+      "object_entity": {
+        "proposition_id": "post-baptismal-sin-forgiven-by-penance",
+        "topic_id": "penance-practice",
+        "dimension_id": "post-baptismal-penance",
+        "proposition_label": "Post-baptismal sin can be forgiven through penance",
+        "polarity_family": "post_baptismal_penance",
+        "description": "A second repentance after baptism is possible and administered through church discipline.",
+        "notes": "Penitential discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-homluke-affirms-penance",
+            "passage_id": "psg-origen-homluke-14-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.4",
+            "notes": "Baptismal grace implies post-baptismal discipline."
+          },
+          "passage": {
+            "passage_id": "psg-origen-homluke-14-3",
+            "source_id": "src-origen-homilies-luke",
+            "locator_type": "source_ref",
+            "locator": "Hom. Lk. 14.3",
+            "excerpt": "Let us inquire why infants are baptized. If there were nothing in infants which required the remission of sins and the grace of baptism, the grace of baptism would seem superfluous.",
+            "language": "English",
+            "passage_year": "234",
+            "url_override": "",
+            "notes": "Infant baptism presupposed — why baptize infants if no original sin?"
+          },
+          "source": {
+            "source_id": "src-origen-homilies-luke",
+            "work_id": "homilies-on-luke-origen",
+            "source_kind": "primary_text",
+            "title": "Homilies on Luke",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 233-234",
+            "year_start": "233",
+            "year_end": "234",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0510.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "39 homilies on Luke surviving in Jerome's Latin translation; key Mariology source."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-homluke-affirms-allegorical",
+        "clm-homluke-affirms-baptism-regeneration",
+        "clm-homluke-affirms-incarnation",
+        "clm-homluke-affirms-infant-baptism",
+        "clm-homluke-affirms-logos",
+        "clm-homluke-affirms-ot",
+        "clm-homluke-affirms-perpetual-virginity",
+        "clm-homluke-affirms-virgin-birth",
+        "clm-homluke-written-at-caesarea",
+        "clm-homluke-by-origen"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-origen-homluke-14-3": [
+          "clm-homluke-affirms-baptism-regeneration",
+          "clm-homluke-affirms-infant-baptism",
+          "clm-homluke-by-origen"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-homluke-affirms-perpetual-virginity",
+        "subject_type": "work",
+        "subject_id": "homilies-on-luke-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "perpetual-virginity-of-mary",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "234",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "homilies-on-luke-origen",
+        "title_display": "Homilies on Luke",
+        "title_original": "Εἰς τὸ κατὰ Λουκᾶν ὁμιλίαι",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's 39 homilies on Luke surviving in Jerome's Latin translation, delivered in Caesarea c. 233–234; key source for Origen's Mariology (perpetual virginity of Mary), infant baptism, and allegorical exegesis of the infancy and ministry narratives."
+      },
+      "object_entity": {
+        "proposition_id": "perpetual-virginity-of-mary",
+        "topic_id": "mariology",
+        "dimension_id": "perpetual-virginity",
+        "proposition_label": "Mary remained ever-virgin — before, during, and after the birth of Jesus",
+        "polarity_family": "perpetual_virginity",
+        "description": "The mother of Jesus was a virgin not only in conceiving him by the Holy Spirit but remained perpetually a virgin; the 'brothers' of Jesus are not biological children of Mary.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-homluke-affirms-perpetual-virginity",
+            "passage_id": "psg-origen-homluke-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Perpetual virginity of Mary explicitly taught."
+          },
+          "passage": {
+            "passage_id": "psg-origen-homluke-7",
+            "source_id": "src-origen-homilies-luke",
+            "locator_type": "source_ref",
+            "locator": "Hom. Lk. 7",
+            "excerpt": "Mary remained a virgin. For it was fitting that he who came into the world to restore purity to human nature should be born of a pure virgin. The brothers of Jesus mentioned in Scripture are sons of Joseph by a former wife, not children of Mary.",
+            "language": "English",
+            "passage_year": "234",
+            "url_override": "",
+            "notes": "Perpetual virginity of Mary — brothers of Jesus are Joseph's sons from prior marriage"
+          },
+          "source": {
+            "source_id": "src-origen-homilies-luke",
+            "work_id": "homilies-on-luke-origen",
+            "source_kind": "primary_text",
+            "title": "Homilies on Luke",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 233-234",
+            "year_start": "233",
+            "year_end": "234",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0510.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "39 homilies on Luke surviving in Jerome's Latin translation; key Mariology source."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-homluke-affirms-allegorical",
+        "clm-homluke-affirms-baptism-regeneration",
+        "clm-homluke-affirms-incarnation",
+        "clm-homluke-affirms-infant-baptism",
+        "clm-homluke-affirms-logos",
+        "clm-homluke-affirms-ot",
+        "clm-homluke-affirms-penance",
+        "clm-homluke-affirms-virgin-birth",
+        "clm-homluke-written-at-caesarea",
+        "clm-homluke-by-origen"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-origen-homluke-7": [
+          "clm-homluke-affirms-allegorical",
+          "clm-homluke-affirms-incarnation",
+          "clm-homluke-affirms-logos",
+          "clm-homluke-affirms-ot",
+          "clm-homluke-affirms-virgin-birth"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-homluke-affirms-virgin-birth",
+        "subject_type": "work",
+        "subject_id": "homilies-on-luke-origen",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "234",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "homilies-on-luke-origen",
+        "title_display": "Homilies on Luke",
+        "title_original": "Εἰς τὸ κατὰ Λουκᾶν ὁμιλίαι",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's 39 homilies on Luke surviving in Jerome's Latin translation, delivered in Caesarea c. 233–234; key source for Origen's Mariology (perpetual virginity of Mary), infant baptism, and allegorical exegesis of the infancy and ministry narratives."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-homluke-affirms-virgin-birth",
+            "passage_id": "psg-origen-homluke-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Virgin birth explicitly affirmed."
+          },
+          "passage": {
+            "passage_id": "psg-origen-homluke-7",
+            "source_id": "src-origen-homilies-luke",
+            "locator_type": "source_ref",
+            "locator": "Hom. Lk. 7",
+            "excerpt": "Mary remained a virgin. For it was fitting that he who came into the world to restore purity to human nature should be born of a pure virgin. The brothers of Jesus mentioned in Scripture are sons of Joseph by a former wife, not children of Mary.",
+            "language": "English",
+            "passage_year": "234",
+            "url_override": "",
+            "notes": "Perpetual virginity of Mary — brothers of Jesus are Joseph's sons from prior marriage"
+          },
+          "source": {
+            "source_id": "src-origen-homilies-luke",
+            "work_id": "homilies-on-luke-origen",
+            "source_kind": "primary_text",
+            "title": "Homilies on Luke",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 233-234",
+            "year_start": "233",
+            "year_end": "234",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0510.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "39 homilies on Luke surviving in Jerome's Latin translation; key Mariology source."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-homluke-affirms-allegorical",
+        "clm-homluke-affirms-baptism-regeneration",
+        "clm-homluke-affirms-incarnation",
+        "clm-homluke-affirms-infant-baptism",
+        "clm-homluke-affirms-logos",
+        "clm-homluke-affirms-ot",
+        "clm-homluke-affirms-penance",
+        "clm-homluke-affirms-perpetual-virginity",
+        "clm-homluke-written-at-caesarea",
+        "clm-homluke-by-origen"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-origen-homluke-7": [
+          "clm-homluke-affirms-allegorical",
+          "clm-homluke-affirms-incarnation",
+          "clm-homluke-affirms-logos",
+          "clm-homluke-affirms-ot",
+          "clm-homluke-affirms-perpetual-virginity"
+        ]
+      },
+      "flags": []
+    }
+  ]
+}

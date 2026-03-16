@@ -1,0 +1,2259 @@
+{
+  "batch_id": "batch-151",
+  "queue": "1",
+  "focus": "erastus; sopater; julius; archippus; nympha; carpus; crescens; gospel-of-luke",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-erastus-disciple",
+        "subject_type": "person",
+        "subject_id": "erastus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "66",
+        "context_place_id": "corinth",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "erastus",
+        "person_label": "Erastus",
+        "name_alt": "",
+        "name_native": "Ἔραστος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said to remain at Corinth in 2 Timothy."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "corinth",
+        "place_label": "Corinth",
+        "place_label_modern": "Ancient Corinth",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9056",
+        "lon": "22.8784",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Major Achaian city associated with Paul and the Corinthian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-erastus-disciple",
+            "passage_id": "psg-rom-16-23",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Romans 16:23 names Erastus as city treasurer in Corinth."
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-23",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.23",
+            "excerpt": "Paraphrase: Gaius and Erastus, the city treasurer, send greetings with the Roman letter.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-erastus-corinthian-church",
+        "clm-erastus-active-corinth-late"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-rom-16-23": [
+          "clm-erastus-corinthian-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-23",
+        "PARAPHRASE_OMISSION:psg-rom-16-23:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sopater-active-berea",
+        "subject_type": "person",
+        "subject_id": "sopater",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "berea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T08:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "sopater",
+        "person_label": "Sopater",
+        "name_alt": "Sopater son of Pyrrhus",
+        "name_native": "Σώπατρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Companion of Paul identified as from Berea in Acts 20."
+      },
+      "object_entity": {
+        "place_id": "berea",
+        "place_label": "Berea",
+        "place_label_modern": "Veria",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.5244",
+        "lon": "22.2024",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul's mission in Acts 17."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sopater-active-berea",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sopater-active-jerusalem",
+        "clm-sopater-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sopater-active-jerusalem",
+        "subject_type": "person",
+        "subject_id": "sopater",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "sopater",
+        "person_label": "Sopater",
+        "name_alt": "Sopater son of Pyrrhus",
+        "name_native": "Σώπατρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Companion of Paul identified as from Berea in Acts 20."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sopater-active-jerusalem",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sopater-active-berea",
+        "clm-sopater-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sopater-disciple",
+        "subject_type": "person",
+        "subject_id": "sopater",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "berea",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "sopater",
+        "person_label": "Sopater",
+        "name_alt": "Sopater son of Pyrrhus",
+        "name_native": "Σώπατρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Companion of Paul identified as from Berea in Acts 20."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "berea",
+        "place_label": "Berea",
+        "place_label_modern": "Veria",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.5244",
+        "lon": "22.2024",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul's mission in Acts 17."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sopater-disciple",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sopater-active-berea",
+        "clm-sopater-active-jerusalem"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-julius-active-caesarea",
+        "subject_type": "person",
+        "subject_id": "julius",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "caesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "59",
+        "year_end": "59",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "julius",
+        "person_label": "Julius",
+        "name_alt": "",
+        "name_native": "Ἰούλιος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Roman centurion who escorts Paul and shows him kindness at Sidon in Acts 27."
+      },
+      "object_entity": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-julius-active-caesarea",
+            "passage_id": "psg-acts-27-1-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-27-1-3",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.27.1-3",
+            "excerpt": "Paraphrase: Paul is handed over to a centurion named Julius, and the party puts in at Sidon where Julius treats Paul kindly.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-julius-active-sidon",
+        "clm-julius-active-rome"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-27-1-3": [
+          "clm-julius-active-sidon"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-27-1-3",
+        "PARAPHRASE_OMISSION:psg-acts-27-1-3:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-julius-active-sidon",
+        "subject_type": "person",
+        "subject_id": "julius",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "sidon",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "59",
+        "year_end": "59",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T09:20:00Z"
+      },
+      "subject_entity": {
+        "person_id": "julius",
+        "person_label": "Julius",
+        "name_alt": "",
+        "name_native": "Ἰούλιος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Roman centurion who escorts Paul and shows him kindness at Sidon in Acts 27."
+      },
+      "object_entity": {
+        "place_id": "sidon",
+        "place_label": "Sidon",
+        "place_label_modern": "Saida",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "33.5600",
+        "lon": "35.3750",
+        "location_precision": "approx_city",
+        "modern_country_label": "Lebanon",
+        "notes": "Phoenician port touched on Paul's voyage under guard in Acts 27."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-julius-active-sidon",
+            "passage_id": "psg-acts-27-1-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-27-1-3",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.27.1-3",
+            "excerpt": "Paraphrase: Paul is handed over to a centurion named Julius, and the party puts in at Sidon where Julius treats Paul kindly.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-julius-active-caesarea",
+        "clm-julius-active-rome"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-27-1-3": [
+          "clm-julius-active-caesarea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-27-1-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-julius-active-rome",
+        "subject_type": "person",
+        "subject_id": "julius",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "julius",
+        "person_label": "Julius",
+        "name_alt": "",
+        "name_native": "Ἰούλιος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Roman centurion who escorts Paul and shows him kindness at Sidon in Acts 27."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-julius-active-rome",
+            "passage_id": "psg-acts-28-16-31",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-28-16-31",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.28.16-31",
+            "excerpt": "Paraphrase: Paul remains in Rome under guard while proclaiming the kingdom and teaching openly.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-julius-active-caesarea",
+        "clm-julius-active-sidon"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-28-16-31": [
+          "clm-paul-active-rome",
+          "clm-place-rome-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-28-16-31",
+        "PARAPHRASE_OMISSION:psg-acts-28-16-31:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-archippus-active-colossae",
+        "subject_type": "person",
+        "subject_id": "archippus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "colossae",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "archippus",
+        "person_label": "Archippus",
+        "name_alt": "",
+        "name_native": "Ἄρχιππος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Philemon and mentioned in connection with Colossae."
+      },
+      "object_entity": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-archippus-active-colossae",
+            "passage_id": "psg-col-4-17",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Archippus is addressed inside the Colossian letter context, so the Colossae location is kept probable."
+          },
+          "passage": {
+            "passage_id": "psg-col-4-17",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.4.17",
+            "excerpt": "Paraphrase: Paul tells the Colossians to say to Archippus that he should fulfill the ministry he received in the Lord.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-archippus-colossian-church",
+        "clm-archippus-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-col-4-17": [
+          "clm-archippus-colossian-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-col-4-17",
+        "PARAPHRASE_OMISSION:psg-col-4-17:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-archippus-colossian-church",
+        "subject_type": "person",
+        "subject_id": "archippus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "colossian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "colossae",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "archippus",
+        "person_label": "Archippus",
+        "name_alt": "",
+        "name_native": "Ἄρχιππος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Philemon and mentioned in connection with Colossae."
+      },
+      "object_entity": {
+        "group_id": "colossian-church",
+        "group_label": "Church in Colossae",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Colossae addressed in Pauline correspondence."
+      },
+      "context_place": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-archippus-colossian-church",
+            "passage_id": "psg-col-4-17",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Archippus is singled out in the Colossian closing instructions, supporting a probable Colossian church affiliation."
+          },
+          "passage": {
+            "passage_id": "psg-col-4-17",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.4.17",
+            "excerpt": "Paraphrase: Paul tells the Colossians to say to Archippus that he should fulfill the ministry he received in the Lord.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-archippus-colossian-church",
+            "passage_id": "psg-philemon-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Philemon names Archippus within the house-church circle, while Colossians places him in the Colossian setting."
+          },
+          "passage": {
+            "passage_id": "psg-philemon-1-2",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.1-2",
+            "excerpt": "Paraphrase: Paul addresses Philemon, Apphia, Archippus, and the church in their house.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-archippus-active-colossae",
+        "clm-archippus-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-col-4-17": [
+          "clm-archippus-active-colossae"
+        ],
+        "psg-philemon-1-2": [
+          "clm-apphia-colossian-church",
+          "clm-apphia-disciple",
+          "clm-archippus-disciple",
+          "clm-paul-coworker-philemon",
+          "clm-paul-teacher-of-philemon",
+          "clm-philemon-addressed-colossae",
+          "clm-philemon-by-paul",
+          "clm-philemon-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-col-4-17",
+        "PARAPHRASE_RISK:psg-philemon-1-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-archippus-disciple",
+        "subject_type": "person",
+        "subject_id": "archippus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "colossae",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T06:12:00Z"
+      },
+      "subject_entity": {
+        "person_id": "archippus",
+        "person_label": "Archippus",
+        "name_alt": "",
+        "name_native": "Ἄρχιππος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Philemon and mentioned in connection with Colossae."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-archippus-disciple",
+            "passage_id": "psg-philemon-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-philemon-1-2",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.1-2",
+            "excerpt": "Paraphrase: Paul addresses Philemon, Apphia, Archippus, and the church in their house.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-archippus-active-colossae",
+        "clm-archippus-colossian-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-philemon-1-2": [
+          "clm-apphia-colossian-church",
+          "clm-apphia-disciple",
+          "clm-archippus-colossian-church",
+          "clm-paul-coworker-philemon",
+          "clm-paul-teacher-of-philemon",
+          "clm-philemon-addressed-colossae",
+          "clm-philemon-by-paul",
+          "clm-philemon-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philemon-1-2",
+        "PARAPHRASE_OMISSION:psg-philemon-1-2:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nympha-active-laodicea",
+        "subject_type": "person",
+        "subject_id": "nympha",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "laodicea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "nympha",
+        "person_label": "Nympha",
+        "name_alt": "",
+        "name_native": "Νύμφα",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer in Laodicea associated with a house church in Colossians 4."
+      },
+      "object_entity": {
+        "place_id": "laodicea",
+        "place_label": "Laodicea",
+        "place_label_modern": "Laodikeia",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8350",
+        "lon": "29.1080",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "City in the Lycus valley associated with Colossians and Revelation."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nympha-active-laodicea",
+            "passage_id": "psg-col-4-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-col-4-15",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.4.15",
+            "excerpt": "Paraphrase: Paul sends greetings to the believers in Laodicea, to Nympha, and to the church in her house.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nympha-laodicean-church",
+        "clm-nympha-member-colossian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-col-4-15": [
+          "clm-nympha-laodicean-church",
+          "clm-nympha-member-colossian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-col-4-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nympha-laodicean-church",
+        "subject_type": "person",
+        "subject_id": "nympha",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "laodicean-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "laodicea",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "nympha",
+        "person_label": "Nympha",
+        "name_alt": "",
+        "name_native": "Νύμφα",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer in Laodicea associated with a house church in Colossians 4."
+      },
+      "object_entity": {
+        "group_id": "laodicean-church",
+        "group_label": "Church in Laodicea",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Laodicea attested in Colossians and Revelation."
+      },
+      "context_place": {
+        "place_id": "laodicea",
+        "place_label": "Laodicea",
+        "place_label_modern": "Laodikeia",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8350",
+        "lon": "29.1080",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "City in the Lycus valley associated with Colossians and Revelation."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nympha-laodicean-church",
+            "passage_id": "psg-col-4-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-col-4-15",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.4.15",
+            "excerpt": "Paraphrase: Paul sends greetings to the believers in Laodicea, to Nympha, and to the church in her house.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nympha-active-laodicea",
+        "clm-nympha-member-colossian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-col-4-15": [
+          "clm-nympha-active-laodicea",
+          "clm-nympha-member-colossian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-col-4-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nympha-member-colossian",
+        "subject_type": "person",
+        "subject_id": "nympha",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "colossian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "colossae",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "nympha",
+        "person_label": "Nympha",
+        "name_alt": "",
+        "name_native": "Νύμφα",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer in Laodicea associated with a house church in Colossians 4."
+      },
+      "object_entity": {
+        "group_id": "colossian-church",
+        "group_label": "Church in Colossae",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Colossae addressed in Pauline correspondence."
+      },
+      "context_place": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nympha-member-colossian",
+            "passage_id": "psg-col-4-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Col 4:15 names Nympha and the church in her house."
+          },
+          "passage": {
+            "passage_id": "psg-col-4-15",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.4.15",
+            "excerpt": "Paraphrase: Paul sends greetings to the believers in Laodicea, to Nympha, and to the church in her house.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nympha-active-laodicea",
+        "clm-nympha-laodicean-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-col-4-15": [
+          "clm-nympha-active-laodicea",
+          "clm-nympha-laodicean-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-col-4-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-carpus-active-troas",
+        "subject_type": "person",
+        "subject_id": "carpus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "troas",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "66",
+        "year_end": "66",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T07:05:00Z"
+      },
+      "subject_entity": {
+        "person_id": "carpus",
+        "person_label": "Carpus",
+        "name_alt": "",
+        "name_native": "Κάρπος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Associate in Troas with whom Paul left his cloak and books according to 2 Timothy."
+      },
+      "object_entity": {
+        "place_id": "troas",
+        "place_label": "Troas",
+        "place_label_modern": "Alexandria Troas",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "39.7900",
+        "lon": "26.1600",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Northwestern Anatolian port visited by Paul in Acts 20."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-carpus-active-troas",
+            "passage_id": "psg-2tim-4-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-4-13",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.4.13",
+            "excerpt": "Paraphrase: Paul asks Timothy to bring the cloak left with Carpus at Troas when he comes.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-carpus-disciple",
+        "clm-paul-coworker-carpus"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-2tim-4-13": [
+          "clm-carpus-disciple",
+          "clm-paul-coworker-carpus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-4-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-carpus-disciple",
+        "subject_type": "person",
+        "subject_id": "carpus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "66",
+        "context_place_id": "troas",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "carpus",
+        "person_label": "Carpus",
+        "name_alt": "",
+        "name_native": "Κάρπος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Associate in Troas with whom Paul left his cloak and books according to 2 Timothy."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "troas",
+        "place_label": "Troas",
+        "place_label_modern": "Alexandria Troas",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "39.7900",
+        "lon": "26.1600",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Northwestern Anatolian port visited by Paul in Acts 20."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-carpus-disciple",
+            "passage_id": "psg-2tim-4-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-4-13",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.4.13",
+            "excerpt": "Paraphrase: Paul asks Timothy to bring the cloak left with Carpus at Troas when he comes.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-coworker-carpus",
+        "clm-carpus-active-troas"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-2tim-4-13": [
+          "clm-carpus-active-troas",
+          "clm-paul-coworker-carpus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-4-13",
+        "PARAPHRASE_OMISSION:psg-2tim-4-13:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-coworker-carpus",
+        "subject_type": "person",
+        "subject_id": "carpus",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "66",
+        "context_place_id": "troas",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "carpus",
+        "person_label": "Carpus",
+        "name_alt": "",
+        "name_native": "Κάρπος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Associate in Troas with whom Paul left his cloak and books according to 2 Timothy."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": {
+        "place_id": "troas",
+        "place_label": "Troas",
+        "place_label_modern": "Alexandria Troas",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "39.7900",
+        "lon": "26.1600",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Northwestern Anatolian port visited by Paul in Acts 20."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-coworker-carpus",
+            "passage_id": "psg-2tim-4-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-4-13",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.4.13",
+            "excerpt": "Paraphrase: Paul asks Timothy to bring the cloak left with Carpus at Troas when he comes.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-carpus-disciple",
+        "clm-carpus-active-troas"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-2tim-4-13": [
+          "clm-carpus-active-troas",
+          "clm-carpus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-4-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-crescens-active-galatia",
+        "subject_type": "person",
+        "subject_id": "crescens",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galatia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "66",
+        "year_end": "66",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T07:15:00Z"
+      },
+      "subject_entity": {
+        "person_id": "crescens",
+        "person_label": "Crescens",
+        "name_alt": "",
+        "name_native": "Κρήσκης",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said in 2 Timothy to have gone to Galatia."
+      },
+      "object_entity": {
+        "place_id": "galatia",
+        "place_label": "Galatia",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "39.5000",
+        "lon": "32.8000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Region addressed in the Pauline letter to the Galatians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-crescens-active-galatia",
+            "passage_id": "psg-2tim-4-10-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-4-10-12",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.4.10-12",
+            "excerpt": "Paraphrase: Paul says Demas has gone to Thessalonica, Crescens to Galatia, Titus to Dalmatia, and Tychicus has been sent to Ephesus.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-crescens-disciple",
+        "clm-paul-coworker-crescens"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-2tim-4-10-12": [
+          "clm-crescens-disciple",
+          "clm-demas-active-thessalonica-late",
+          "clm-paul-coworker-crescens",
+          "clm-place-dalmatia-attested",
+          "clm-titus-active-dalmatia",
+          "clm-tychicus-active-ephesus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-4-10-12"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-crescens-disciple",
+        "subject_type": "person",
+        "subject_id": "crescens",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "64",
+        "year_end": "66",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "crescens",
+        "person_label": "Crescens",
+        "name_alt": "",
+        "name_native": "Κρήσκης",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said in 2 Timothy to have gone to Galatia."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-crescens-disciple",
+            "passage_id": "psg-2tim-4-10-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-4-10-12",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.4.10-12",
+            "excerpt": "Paraphrase: Paul says Demas has gone to Thessalonica, Crescens to Galatia, Titus to Dalmatia, and Tychicus has been sent to Ephesus.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-coworker-crescens",
+        "clm-crescens-active-galatia"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-2tim-4-10-12": [
+          "clm-crescens-active-galatia",
+          "clm-demas-active-thessalonica-late",
+          "clm-paul-coworker-crescens",
+          "clm-place-dalmatia-attested",
+          "clm-titus-active-dalmatia",
+          "clm-tychicus-active-ephesus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-4-10-12",
+        "PARAPHRASE_OMISSION:psg-2tim-4-10-12:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-coworker-crescens",
+        "subject_type": "person",
+        "subject_id": "crescens",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "64",
+        "year_end": "66",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "crescens",
+        "person_label": "Crescens",
+        "name_alt": "",
+        "name_native": "Κρήσκης",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said in 2 Timothy to have gone to Galatia."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-coworker-crescens",
+            "passage_id": "psg-2tim-4-10-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-4-10-12",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.4.10-12",
+            "excerpt": "Paraphrase: Paul says Demas has gone to Thessalonica, Crescens to Galatia, Titus to Dalmatia, and Tychicus has been sent to Ephesus.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-crescens-disciple",
+        "clm-crescens-active-galatia"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-2tim-4-10-12": [
+          "clm-crescens-active-galatia",
+          "clm-crescens-disciple",
+          "clm-demas-active-thessalonica-late",
+          "clm-place-dalmatia-attested",
+          "clm-titus-active-dalmatia",
+          "clm-tychicus-active-ephesus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-4-10-12"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gospel-luke-by-luke",
+        "subject_type": "work",
+        "subject_id": "gospel-of-luke",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "luke-the-evangelist",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "65",
+        "year_end": "90",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T09:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-luke",
+        "title_display": "Gospel according to Luke",
+        "title_original": "Κατὰ Λουκᾶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Textual witness for ministry-period claims."
+      },
+      "object_entity": {
+        "person_id": "luke-the-evangelist",
+        "person_label": "Luke",
+        "name_alt": "Luke the beloved physician",
+        "name_native": "Λουκᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline companion traditionally associated with Luke and Acts."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gospel-luke-by-luke",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Irenaeus AH 3.1.1: Luke the companion of Paul wrote the Gospel. The 'we passages' in Acts imply the same author travelled with Paul."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-luke-repentance",
+        "clm-luke-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-1-1"
+      ]
+    }
+  ]
+}

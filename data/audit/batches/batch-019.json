@@ -1,0 +1,2526 @@
+{
+  "batch_id": "batch-019",
+  "queue": "0A",
+  "focus": "psg-ignatius-smyrn-1(16)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-active-rome",
+        "subject_type": "person",
+        "subject_id": "polycarp-of-smyrna",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "150",
+        "year_end": "155",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "polycarp-of-smyrna",
+        "person_label": "Polycarp of Smyrna",
+        "name_alt": "Polycarp",
+        "name_native": "Πολύκαρπος",
+        "birth_year_display": "c. 69",
+        "death_year_display": "c. 155",
+        "person_kind": "individual",
+        "notes": "Bishop of Smyrna martyred c. 155-156; disciple of the apostle John; correspondent of Ignatius and Rome."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-active-rome",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-active-rome",
+            "passage_id": "psg-martyrdom-polycarp-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Polycarp known to have visited Anicetus in Rome before martyrdom"
+          },
+          "passage": {
+            "passage_id": "psg-martyrdom-polycarp-9",
+            "source_id": "src-martyrdom-polycarp",
+            "locator_type": "source_ref",
+            "locator": "Mart. Pol. 9",
+            "excerpt": "When Polycarp entered the stadium there came a voice from heaven saying: Be strong, Polycarp, and play the man. The proconsul asked: Are you Polycarp? He replied: I am. The proconsul urged: Take the oath and I will release you. Polycarp said: Eighty-six years have I served Him and He never did me any wrong. How can I blaspheme my King who saved me?",
+            "language": "English",
+            "passage_year": "155",
+            "url_override": "",
+            "notes": "Polycarp's witness before magistrates; identifies his 86-year discipleship"
+          },
+          "source": {
+            "source_id": "src-martyrdom-polycarp",
+            "work_id": "martyrdom-of-polycarp",
+            "source_kind": "primary_text",
+            "title": "Martyrdom of Polycarp",
+            "author": "Church of Smyrna",
+            "editor": "",
+            "year_display": "c. 155-160",
+            "year_start": "155",
+            "year_end": "160",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0102.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Earliest martyrdom acta recording Polycarp's death in Smyrna with sacrifice and eucharist resonances."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-affirms-eucharist",
+        "clm-polycarp-affirms-fasting",
+        "clm-polycarp-bishop-smyrna",
+        "clm-polycarp-member-smyrna-church",
+        "clm-polycarp-active-ephesus",
+        "clm-polycarp-teacher-of-irenaeus",
+        "clm-polycarp-in-martyrdom",
+        "clm-polycarp-in-quartodeciman-visit",
+        "clm-polycarp-member-roman-church-visit"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ],
+        "psg-martyrdom-polycarp-9": [
+          "clm-martyrdom-polycarp-affirms-martyrdom-witness",
+          "clm-polycarp-in-martyrdom",
+          "clm-polycarp-martyrdom-at-smyrna",
+          "clm-polycarp-martyrdom-year",
+          "clm-polycarp-member-smyrna-church"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:quartodeciman-controversy",
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycrates-person-affirms-rule-of-faith",
+        "subject_type": "person",
+        "subject_id": "polycrates-of-ephesus",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "170",
+        "year_end": "196",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "polycrates-of-ephesus",
+        "person_label": "Polycrates of Ephesus",
+        "name_alt": "Polycrates",
+        "name_native": "Πολυκράτης",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 196",
+        "person_kind": "individual",
+        "notes": "Bishop of Ephesus; leader of the Asian Quartodeciman tradition; wrote to Victor of Rome c. 190 defending 14 Nisan observance by appeal to Philip the Apostle, John, Polycarp, and seven of his episcopal ancestors."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycrates-person-affirms-rule-of-faith",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycrates-member-ephesian-church",
+        "clm-polycrates-bishop-ephesus",
+        "clm-polycrates-in-quartodeciman"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-irenaeus-in-quartodeciman",
+        "subject_type": "person",
+        "subject_id": "irenaeus-of-lyons",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "quartodeciman-controversy",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "190",
+        "year_end": "195",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "irenaeus-of-lyons",
+        "person_label": "Irenaeus of Lyons",
+        "name_alt": "Irenaeus",
+        "name_native": "Εἰρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 202",
+        "person_kind": "individual",
+        "notes": "Bishop of Lyons (Lugdunum) and major anti-gnostic theologian; pupil of Polycarp; author of Against Heresies c. 180, the foundational work on apostolic succession, rule of faith, and refutation of Valentinianism and Marcionism."
+      },
+      "object_entity": {
+        "event_id": "quartodeciman-controversy",
+        "event_label": "Quartodeciman Controversy",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Dispute c. 190-195 between Victor of Rome and Asian churches led by Polycrates of Ephesus over whether Easter should be observed on 14 Nisan or the Sunday following; Irenaeus of Lyons mediated and persuaded Victor not to excommunicate the Asian churches."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-in-quartodeciman",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-coworker-irenaeus",
+        "clm-irenaeus-active-smyrna",
+        "clm-irenaeus-active-rome",
+        "clm-irenaeus-in-lyons-persecution",
+        "clm-irenaeus-member-roman-church-visit",
+        "clm-irenaeus-active-lyons",
+        "clm-irenaeus-in-ah-composition",
+        "clm-irenaeus-coworker-victor",
+        "clm-irenaeus-teacher-hippolytus",
+        "clm-irenaeus-originated-smyrna"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycrates-member-ephesian-church",
+        "subject_type": "person",
+        "subject_id": "polycrates-of-ephesus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "ephesian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "150",
+        "year_end": "196",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "polycrates-of-ephesus",
+        "person_label": "Polycrates of Ephesus",
+        "name_alt": "Polycrates",
+        "name_native": "Πολυκράτης",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 196",
+        "person_kind": "individual",
+        "notes": "Bishop of Ephesus; leader of the Asian Quartodeciman tradition; wrote to Victor of Rome c. 190 defending 14 Nisan observance by appeal to Philip the Apostle, John, Polycarp, and seven of his episcopal ancestors."
+      },
+      "object_entity": {
+        "group_id": "ephesian-church",
+        "group_label": "Church in Ephesus",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Ephesus attested in Acts and Revelation."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycrates-member-ephesian-church",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycrates-bishop-ephesus",
+        "clm-polycrates-person-affirms-rule-of-faith",
+        "clm-polycrates-in-quartodeciman"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-5-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-quartodeciman-at-rome",
+        "subject_type": "event",
+        "subject_id": "quartodeciman-controversy",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "190",
+        "year_end": "195",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "quartodeciman-controversy",
+        "event_label": "Quartodeciman Controversy",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Dispute c. 190-195 between Victor of Rome and Asian churches led by Polycrates of Ephesus over whether Easter should be observed on 14 Nisan or the Sunday following; Irenaeus of Lyons mediated and persuaded Victor not to excommunicate the Asian churches."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-quartodeciman-at-rome",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-quartodeciman-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-quartodeciman-year",
+        "subject_type": "event",
+        "subject_id": "quartodeciman-controversy",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "190",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "quartodeciman-controversy",
+        "event_label": "Quartodeciman Controversy",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Dispute c. 190-195 between Victor of Rome and Asian churches led by Polycrates of Ephesus over whether Easter should be observed on 14 Nisan or the Sunday following; Irenaeus of Lyons mediated and persuaded Victor not to excommunicate the Asian churches."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-quartodeciman-year",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-quartodeciman-at-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-irenaeus-member-roman-church-visit",
+        "subject_type": "person",
+        "subject_id": "irenaeus-of-lyons",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "177",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "irenaeus-of-lyons",
+        "person_label": "Irenaeus of Lyons",
+        "name_alt": "Irenaeus",
+        "name_native": "Εἰρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 202",
+        "person_kind": "individual",
+        "notes": "Bishop of Lyons (Lugdunum) and major anti-gnostic theologian; pupil of Polycarp; author of Against Heresies c. 180, the foundational work on apostolic succession, rule of faith, and refutation of Valentinianism and Marcionism."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-member-roman-church-visit",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-coworker-irenaeus",
+        "clm-irenaeus-active-smyrna",
+        "clm-irenaeus-active-rome",
+        "clm-irenaeus-in-lyons-persecution",
+        "clm-irenaeus-active-lyons",
+        "clm-irenaeus-in-ah-composition",
+        "clm-irenaeus-coworker-victor",
+        "clm-irenaeus-in-quartodeciman",
+        "clm-irenaeus-teacher-hippolytus",
+        "clm-irenaeus-originated-smyrna"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-5-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-in-quartodeciman-visit",
+        "subject_type": "person",
+        "subject_id": "polycarp-of-smyrna",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "quartodeciman-controversy",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "155",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "polycarp-of-smyrna",
+        "person_label": "Polycarp of Smyrna",
+        "name_alt": "Polycarp",
+        "name_native": "Πολύκαρπος",
+        "birth_year_display": "c. 69",
+        "death_year_display": "c. 155",
+        "person_kind": "individual",
+        "notes": "Bishop of Smyrna martyred c. 155-156; disciple of the apostle John; correspondent of Ignatius and Rome."
+      },
+      "object_entity": {
+        "event_id": "quartodeciman-controversy",
+        "event_label": "Quartodeciman Controversy",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Dispute c. 190-195 between Victor of Rome and Asian churches led by Polycrates of Ephesus over whether Easter should be observed on 14 Nisan or the Sunday following; Irenaeus of Lyons mediated and persuaded Victor not to excommunicate the Asian churches."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-in-quartodeciman-visit",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-affirms-eucharist",
+        "clm-polycarp-affirms-fasting",
+        "clm-polycarp-bishop-smyrna",
+        "clm-polycarp-member-smyrna-church",
+        "clm-polycarp-active-ephesus",
+        "clm-polycarp-teacher-of-irenaeus",
+        "clm-polycarp-active-rome",
+        "clm-polycarp-in-martyrdom",
+        "clm-polycarp-member-roman-church-visit"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-victor-in-quartodeciman",
+        "subject_type": "person",
+        "subject_id": "victor-i-of-rome",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "quartodeciman-controversy",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "190",
+        "year_end": "195",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "victor-i-of-rome",
+        "person_label": "Victor I of Rome",
+        "name_alt": "Victor",
+        "name_native": "Βίκτωρ",
+        "birth_year_display": "c. 140",
+        "death_year_display": "c. 199",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 189-199; central figure in the Quartodeciman controversy; threatened to excommunicate Asian churches over Easter dating; first bishop of Rome to write in Latin."
+      },
+      "object_entity": {
+        "event_id": "quartodeciman-controversy",
+        "event_label": "Quartodeciman Controversy",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Dispute c. 190-195 between Victor of Rome and Asian churches led by Polycrates of Ephesus over whether Easter should be observed on 14 Nisan or the Sunday following; Irenaeus of Lyons mediated and persuaded Victor not to excommunicate the Asian churches."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-victor-in-quartodeciman",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-victor-member-roman-church",
+        "clm-victor-affirms-succession",
+        "clm-victor-bishop-rome",
+        "clm-victor-person-affirms-episcopal-chair"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-victor-person-affirms-episcopal-chair",
+        "subject_type": "person",
+        "subject_id": "victor-i-of-rome",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bishop-succession-guarantees-apostolic-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "189",
+        "year_end": "199",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "victor-i-of-rome",
+        "person_label": "Victor I of Rome",
+        "name_alt": "Victor",
+        "name_native": "Βίκτωρ",
+        "birth_year_display": "c. 140",
+        "death_year_display": "c. 199",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 189-199; central figure in the Quartodeciman controversy; threatened to excommunicate Asian churches over Easter dating; first bishop of Rome to write in Latin."
+      },
+      "object_entity": {
+        "proposition_id": "bishop-succession-guarantees-apostolic-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "episcopal-chair",
+        "proposition_label": "The succession of bishops in their see guarantees the apostolic faith",
+        "polarity_family": "episcopal_chair",
+        "description": "The see of the bishop, transmitted through orderly succession, is the locus and guarantee of the faith received from the apostles.",
+        "notes": "Episcopal chair and succession"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-victor-person-affirms-episcopal-chair",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-victor-member-roman-church",
+        "clm-victor-affirms-succession",
+        "clm-victor-bishop-rome",
+        "clm-victor-in-quartodeciman"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycrates-bishop-ephesus",
+        "subject_type": "person",
+        "subject_id": "polycrates-of-ephesus",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "170",
+        "year_end": "196",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "polycrates-of-ephesus",
+        "person_label": "Polycrates of Ephesus",
+        "name_alt": "Polycrates",
+        "name_native": "Πολυκράτης",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 196",
+        "person_kind": "individual",
+        "notes": "Bishop of Ephesus; leader of the Asian Quartodeciman tradition; wrote to Victor of Rome c. 190 defending 14 Nisan observance by appeal to Philip the Apostle, John, Polycarp, and seven of his episcopal ancestors."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycrates-bishop-ephesus",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycrates-member-ephesian-church",
+        "clm-polycrates-person-affirms-rule-of-faith",
+        "clm-polycrates-in-quartodeciman"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-5-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycrates-in-quartodeciman",
+        "subject_type": "person",
+        "subject_id": "polycrates-of-ephesus",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "quartodeciman-controversy",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "190",
+        "year_end": "195",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "polycrates-of-ephesus",
+        "person_label": "Polycrates of Ephesus",
+        "name_alt": "Polycrates",
+        "name_native": "Πολυκράτης",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 196",
+        "person_kind": "individual",
+        "notes": "Bishop of Ephesus; leader of the Asian Quartodeciman tradition; wrote to Victor of Rome c. 190 defending 14 Nisan observance by appeal to Philip the Apostle, John, Polycarp, and seven of his episcopal ancestors."
+      },
+      "object_entity": {
+        "event_id": "quartodeciman-controversy",
+        "event_label": "Quartodeciman Controversy",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Dispute c. 190-195 between Victor of Rome and Asian churches led by Polycrates of Ephesus over whether Easter should be observed on 14 Nisan or the Sunday following; Irenaeus of Lyons mediated and persuaded Victor not to excommunicate the Asian churches."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycrates-in-quartodeciman",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycrates-member-ephesian-church",
+        "clm-polycrates-bishop-ephesus",
+        "clm-polycrates-person-affirms-rule-of-faith"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-victor-affirms-succession",
+        "subject_type": "person",
+        "subject_id": "victor-i-of-rome",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "189",
+        "year_end": "199",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "victor-i-of-rome",
+        "person_label": "Victor I of Rome",
+        "name_alt": "Victor",
+        "name_native": "Βίκτωρ",
+        "birth_year_display": "c. 140",
+        "death_year_display": "c. 199",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 189-199; central figure in the Quartodeciman controversy; threatened to excommunicate Asian churches over Easter dating; first bishop of Rome to write in Latin."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-victor-affirms-succession",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-victor-member-roman-church",
+        "clm-victor-bishop-rome",
+        "clm-victor-person-affirms-episcopal-chair",
+        "clm-victor-in-quartodeciman"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-coworker-gaius",
+        "subject_type": "person",
+        "subject_id": "gaius-of-derbe",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gaius-of-derbe",
+        "person_label": "Gaius of Derbe",
+        "name_alt": "Gaius",
+        "name_native": "Γάϊος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Companion of Paul identified as from Derbe in Acts 20."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-coworker-gaius",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gaius-active-jerusalem",
+        "clm-gaius-derbe-disciple",
+        "clm-gaius-of-derbe-active-derbe"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-secundus-disciple",
+        "subject_type": "person",
+        "subject_id": "secundus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "thessalonica",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "secundus",
+        "person_label": "Secundus",
+        "name_alt": "",
+        "name_native": "Σεκοῦνδος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Thessalonian companion of Paul named among the Acts 20 travel party."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-secundus-disciple",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-secundus-active-jerusalem",
+        "clm-secundus-active-thessalonica",
+        "clm-secundus-member-thessalonian"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-secundus-active-jerusalem",
+        "subject_type": "person",
+        "subject_id": "secundus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "secundus",
+        "person_label": "Secundus",
+        "name_alt": "",
+        "name_native": "Σεκοῦνδος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Thessalonian companion of Paul named among the Acts 20 travel party."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-secundus-active-jerusalem",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-secundus-active-thessalonica",
+        "clm-secundus-disciple",
+        "clm-secundus-member-thessalonian"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sopater-active-jerusalem",
+        "subject_type": "person",
+        "subject_id": "sopater",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "sopater",
+        "person_label": "Sopater",
+        "name_alt": "Sopater son of Pyrrhus",
+        "name_native": "Σώπατρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Companion of Paul identified as from Berea in Acts 20."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sopater-active-jerusalem",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sopater-active-berea",
+        "clm-sopater-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-secundus-active-thessalonica",
+        "subject_type": "person",
+        "subject_id": "secundus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "thessalonica",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T08:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "secundus",
+        "person_label": "Secundus",
+        "name_alt": "",
+        "name_native": "Σεκοῦνδος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Thessalonian companion of Paul named among the Acts 20 travel party."
+      },
+      "object_entity": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-secundus-active-thessalonica",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-secundus-active-jerusalem",
+        "clm-secundus-disciple",
+        "clm-secundus-member-thessalonian"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gaius-derbe-disciple",
+        "subject_type": "person",
+        "subject_id": "gaius-of-derbe",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "derbe",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gaius-of-derbe",
+        "person_label": "Gaius of Derbe",
+        "name_alt": "Gaius",
+        "name_native": "Γάϊος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Companion of Paul identified as from Derbe in Acts 20."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "derbe",
+        "place_label": "Derbe",
+        "place_label_modern": "Kerti Höyük area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.2500",
+        "lon": "33.1500",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Lycaonian city named as the home of Gaius in Acts 20."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gaius-derbe-disciple",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gaius-active-jerusalem",
+        "clm-gaius-of-derbe-active-derbe",
+        "clm-paul-coworker-gaius"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aristarchus-member-thessalonian",
+        "subject_type": "person",
+        "subject_id": "aristarchus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "thessalonian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "50",
+        "year_end": "62",
+        "context_place_id": "thessalonica",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aristarchus",
+        "person_label": "Aristarchus",
+        "name_alt": "",
+        "name_native": "Ἀρίσταρχος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Thessalonian companion of Paul named among the Acts 20 travel party."
+      },
+      "object_entity": {
+        "group_id": "thessalonian-church",
+        "group_label": "Church in Thessalonica",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Thessalonica attested in Acts and the Thessalonian letters."
+      },
+      "context_place": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aristarchus-member-thessalonian",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aristarchus-active-ephesus",
+        "clm-aristarchus-active-jerusalem",
+        "clm-aristarchus-active-thessalonica",
+        "clm-aristarchus-coworker-tychicus",
+        "clm-aristarchus-active-rome",
+        "clm-aristarchus-coworker-paul",
+        "clm-aristarchus-member-roman-church",
+        "clm-epaphras-coworker-aristarchus"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:object"
+      ]
+    }
+  ]
+}

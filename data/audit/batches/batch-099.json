@@ -1,0 +1,1376 @@
+{
+  "batch_id": "batch-099",
+  "queue": "1",
+  "focus": "epistula-64-cyprian",
+  "claim_count": 12,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-ep64-by-cyprian",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "cyprian-of-carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "person_id": "cyprian-of-carthage",
+        "person_label": "Cyprian of Carthage",
+        "name_alt": "Thascius Caecilius Cyprianus",
+        "name_native": "Kυπριανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 258",
+        "person_kind": "individual",
+        "notes": "Bishop of Carthage c. 248–258; major Latin theologian of ecclesiology and sacramental theology; converted c. 246; deeply influenced by Tertullian; key figure in the Novatian controversy (supported Cornelius against Novatian); martyred under Valerian."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-by-cyprian",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Cyprian is the author of Epistula 64."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2",
+        "PARAPHRASE_OMISSION:psg-cyprian-ep64-2:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-written-carthage",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "252",
+        "year_end": "252",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-written-carthage",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "The letter reports a council ruling at Carthage."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2",
+        "PARAPHRASE_OMISSION:psg-cyprian-ep64-2:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-baptism-regen",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-effects-regeneration",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-effects-regeneration",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-regeneration",
+        "proposition_label": "Baptism effects spiritual regeneration",
+        "polarity_family": "baptism_regeneration",
+        "description": "Baptism is not merely symbolic but effects a new birth or regeneration of the recipient.",
+        "notes": "Baptismal regeneration"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-baptism-regen",
+            "passage_id": "psg-cyprian-ep64-5",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Infant receives forgiveness of sins through baptism — regeneration assumed."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-5",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.5",
+            "excerpt": "Paraphrase: For if even to the greatest sinners, and to those who had sinned much against God, when they afterwards believed, remission of sins is granted — and nobody is hindered from baptism and from grace — how much rather ought we not to hinder an infant, who being lately born has not sinned, except in that, being born after the flesh according to Adam, he has contracted the contagion of the ancient death at its earliest birth. The infant approaches more easily to the reception of the forgiveness of sins because the sins remitted are not his own but another's.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Infant baptism grounded in original sin/contagion from Adam; grace available to newborns"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-5": [
+          "clm-ep64-affirms-ot-authority",
+          "clm-ep64-affirms-penance",
+          "clm-ep64-mentions-catechumenate"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-5"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-baptism-water",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-with-water-commanded",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-with-water-commanded",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-mode",
+        "proposition_label": "Baptism is administered with water",
+        "polarity_family": "baptism_water",
+        "description": "Baptismal practice uses water as the material element.",
+        "notes": "Core initiatory practice"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-baptism-water",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Baptism and sanctification with water explicitly discussed."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-baptismal-anointing",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptismal-anointing-with-oil",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "baptismal-anointing-with-oil",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-anointing",
+        "proposition_label": "Baptismal Anointing with Oil",
+        "polarity_family": "",
+        "description": "After emerging from the baptismal water, the newly baptized is anointed with chrism or oil as part of the baptismal rite, signifying the reception of the Holy Spirit and incorporation into Christ.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-baptismal-anointing",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Baptismal sanctification context may imply anointing."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-episcopal-unity",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "episcopal-unity-grounds-church-unity",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "episcopal-unity-grounds-church-unity",
+        "topic_id": "episcopal-authority",
+        "dimension_id": "episcopal-collegiality",
+        "proposition_label": "The unity of bishops grounds the unity of the Church",
+        "polarity_family": "episcopal_unity",
+        "description": "The Church is one because the episcopate is one; each bishop holds the whole of the one episcopate in solidum; to break with the bishop is to break with the Church; there is one altar and one bishop.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-episcopal-unity",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Council ruling reflects collegial episcopal authority."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-infant-baptism",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "infants-and-children-are-baptized",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "infants-and-children-are-baptized",
+        "topic_id": "baptism-practice",
+        "dimension_id": "infant-baptism",
+        "proposition_label": "Infants and children receive baptism",
+        "polarity_family": "infant_baptism",
+        "description": "Infant and child baptism is explicitly affirmed or presupposed as the ordinary practice of the Church.",
+        "notes": "Infant baptism"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-infant-baptism",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Council unanimously ruled infant baptism not to be delayed — grace denied to none."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-ordination-hands",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "ordination-conferred-by-laying-on-of-hands",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "ordination-conferred-by-laying-on-of-hands",
+        "topic_id": "church-order",
+        "dimension_id": "ordination-rite",
+        "proposition_label": "Ordination is conferred by the laying on of hands",
+        "polarity_family": "",
+        "description": "The ministry of bishop, presbyter, and deacon is conferred through the liturgical act of laying on of hands by existing bishops (for episcopal ordination) or by the bishop (for presbyters and deacons).",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-ordination-hands",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Council bishops acting collegially presupposes ordination."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-ot-authority",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-ot-authority",
+            "passage_id": "psg-cyprian-ep64-5",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Adam's contagion — OT narrative grounding for infant baptism theology."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-5",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.5",
+            "excerpt": "Paraphrase: For if even to the greatest sinners, and to those who had sinned much against God, when they afterwards believed, remission of sins is granted — and nobody is hindered from baptism and from grace — how much rather ought we not to hinder an infant, who being lately born has not sinned, except in that, being born after the flesh according to Adam, he has contracted the contagion of the ancient death at its earliest birth. The infant approaches more easily to the reception of the forgiveness of sins because the sins remitted are not his own but another's.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Infant baptism grounded in original sin/contagion from Adam; grace available to newborns"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-5": [
+          "clm-ep64-affirms-baptism-regen",
+          "clm-ep64-affirms-penance",
+          "clm-ep64-mentions-catechumenate"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-5"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-penance",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "post-baptismal-sin-forgiven-by-penance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "post-baptismal-sin-forgiven-by-penance",
+        "topic_id": "penance-practice",
+        "dimension_id": "post-baptismal-penance",
+        "proposition_label": "Post-baptismal sin can be forgiven through penance",
+        "polarity_family": "post_baptismal_penance",
+        "description": "A second repentance after baptism is possible and administered through church discipline.",
+        "notes": "Penitential discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-penance",
+            "passage_id": "psg-cyprian-ep64-5",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Even the greatest sinners receive remission — penance framework."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-5",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.5",
+            "excerpt": "Paraphrase: For if even to the greatest sinners, and to those who had sinned much against God, when they afterwards believed, remission of sins is granted — and nobody is hindered from baptism and from grace — how much rather ought we not to hinder an infant, who being lately born has not sinned, except in that, being born after the flesh according to Adam, he has contracted the contagion of the ancient death at its earliest birth. The infant approaches more easily to the reception of the forgiveness of sins because the sins remitted are not his own but another's.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Infant baptism grounded in original sin/contagion from Adam; grace available to newborns"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-5": [
+          "clm-ep64-affirms-baptism-regen",
+          "clm-ep64-affirms-ot-authority",
+          "clm-ep64-mentions-catechumenate"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-5"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-trinitarian-baptism",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-administered-in-trinitarian-name",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-administered-in-trinitarian-name",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-formula",
+        "proposition_label": "Baptism is administered in the Trinitarian name of Father, Son, and Holy Spirit",
+        "polarity_family": "trinitarian_baptism",
+        "description": "Baptism uses the explicit Trinitarian formula of Father, Son, and Holy Spirit as the form of the sacrament.",
+        "notes": "Trinitarian baptismal formula"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-trinitarian-baptism",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Baptismal sanctification implies trinitarian formula."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-mentions-catechumenate",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "infants-and-children-are-baptized",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "infants-and-children-are-baptized",
+        "topic_id": "baptism-practice",
+        "dimension_id": "infant-baptism",
+        "proposition_label": "Infants and children receive baptism",
+        "polarity_family": "infant_baptism",
+        "description": "Infant and child baptism is explicitly affirmed or presupposed as the ordinary practice of the Church.",
+        "notes": "Infant baptism"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-mentions-catechumenate",
+            "passage_id": "psg-cyprian-ep64-5",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Infant approaches more easily to forgiveness — infant baptism reaffirmed."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-5",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.5",
+            "excerpt": "Paraphrase: For if even to the greatest sinners, and to those who had sinned much against God, when they afterwards believed, remission of sins is granted — and nobody is hindered from baptism and from grace — how much rather ought we not to hinder an infant, who being lately born has not sinned, except in that, being born after the flesh according to Adam, he has contracted the contagion of the ancient death at its earliest birth. The infant approaches more easily to the reception of the forgiveness of sins because the sins remitted are not his own but another's.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Infant baptism grounded in original sin/contagion from Adam; grace available to newborns"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-5": [
+          "clm-ep64-affirms-baptism-regen",
+          "clm-ep64-affirms-ot-authority",
+          "clm-ep64-affirms-penance"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1375 @@
+{
+  "batch_id": "batch-100",
+  "queue": "1",
+  "focus": "sententiae-episcoporum",
+  "claim_count": 12,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-sententiae-by-cyprian",
+        "subject_type": "work",
+        "subject_id": "sententiae-episcoporum",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "cyprian-of-carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sententiae-episcoporum",
+        "title_display": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+        "title_original": "Sententiae Episcoporum LXXXVII",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Minutes of the Council of Carthage held September 1, 256 under Cyprian's presidency; 87 bishops from North Africa each individually voted that heretical baptism is invalid and converts must be rebaptized; the fullest extant record of North African episcopal collegial practice; each bishop's sententium preserved verbatim; opposed by Pope Stephen I and eventually overturned by later church practice accepting heretical baptism."
+      },
+      "object_entity": {
+        "person_id": "cyprian-of-carthage",
+        "person_label": "Cyprian of Carthage",
+        "name_alt": "Thascius Caecilius Cyprianus",
+        "name_native": "Kυπριανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 258",
+        "person_kind": "individual",
+        "notes": "Bishop of Carthage c. 248–258; major Latin theologian of ecclesiology and sacramental theology; converted c. 246; deeply influenced by Tertullian; key figure in the Novatian controversy (supported Cornelius against Novatian); martyred under Valerian."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sententiae-by-cyprian",
+            "passage_id": "psg-cyprian-sent-proem",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Cyprian presides and speaks in the Sententiae."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-proem",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. Proem",
+            "excerpt": "Paraphrase: Cyprian said: You have heard, most beloved colleagues, what Jubaianus our fellow bishop wrote to me, consulting my moderate ability about the unlawful and profane baptism of heretics, and what I wrote back to him. Let each of us now bring forward what we think on this matter, judging no man nor rejecting any from the right of communion if he should think differently from us. For none of us sets himself up as a bishop of bishops or by tyrannical terror forces his colleagues to obedience.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Episcopal collegiality; no bishop of bishops; conciliar freedom of conscience"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sententiae-written-carthage",
+        "clm-sent-affirms-apostolic-succession",
+        "clm-sent-affirms-baptism-regen",
+        "clm-sent-affirms-baptism-water",
+        "clm-sent-affirms-episcopal-unity",
+        "clm-sent-affirms-ot-authority",
+        "clm-sent-affirms-rebaptism",
+        "clm-sent-affirms-rule-of-faith",
+        "clm-sent-affirms-threefold-ministry",
+        "clm-sent-affirms-trinitarian-baptism",
+        "clm-sent-mentions-penance"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-sent-proem": [
+          "clm-council-carthage-256-at-carthage",
+          "clm-council-carthage-256-year",
+          "clm-cyprian-in-council-256",
+          "clm-sent-affirms-apostolic-succession",
+          "clm-sent-affirms-episcopal-unity",
+          "clm-sent-affirms-threefold-ministry",
+          "clm-sententiae-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-sent-proem",
+        "PARAPHRASE_OMISSION:psg-cyprian-sent-proem:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sententiae-written-carthage",
+        "subject_type": "work",
+        "subject_id": "sententiae-episcoporum",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "256",
+        "year_end": "256",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sententiae-episcoporum",
+        "title_display": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+        "title_original": "Sententiae Episcoporum LXXXVII",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Minutes of the Council of Carthage held September 1, 256 under Cyprian's presidency; 87 bishops from North Africa each individually voted that heretical baptism is invalid and converts must be rebaptized; the fullest extant record of North African episcopal collegial practice; each bishop's sententium preserved verbatim; opposed by Pope Stephen I and eventually overturned by later church practice accepting heretical baptism."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sententiae-written-carthage",
+            "passage_id": "psg-cyprian-sent-proem",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "The council minutes are from Carthage September 1, 256."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-proem",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. Proem",
+            "excerpt": "Paraphrase: Cyprian said: You have heard, most beloved colleagues, what Jubaianus our fellow bishop wrote to me, consulting my moderate ability about the unlawful and profane baptism of heretics, and what I wrote back to him. Let each of us now bring forward what we think on this matter, judging no man nor rejecting any from the right of communion if he should think differently from us. For none of us sets himself up as a bishop of bishops or by tyrannical terror forces his colleagues to obedience.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Episcopal collegiality; no bishop of bishops; conciliar freedom of conscience"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sent-affirms-apostolic-succession",
+        "clm-sent-affirms-baptism-regen",
+        "clm-sent-affirms-baptism-water",
+        "clm-sent-affirms-episcopal-unity",
+        "clm-sent-affirms-ot-authority",
+        "clm-sent-affirms-rebaptism",
+        "clm-sent-affirms-rule-of-faith",
+        "clm-sent-affirms-threefold-ministry",
+        "clm-sent-affirms-trinitarian-baptism",
+        "clm-sent-mentions-penance",
+        "clm-sententiae-by-cyprian"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-sent-proem": [
+          "clm-council-carthage-256-at-carthage",
+          "clm-council-carthage-256-year",
+          "clm-cyprian-in-council-256",
+          "clm-sent-affirms-apostolic-succession",
+          "clm-sent-affirms-episcopal-unity",
+          "clm-sent-affirms-threefold-ministry",
+          "clm-sententiae-by-cyprian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-sent-proem",
+        "PARAPHRASE_OMISSION:psg-cyprian-sent-proem:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sent-affirms-apostolic-succession",
+        "subject_type": "work",
+        "subject_id": "sententiae-episcoporum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sententiae-episcoporum",
+        "title_display": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+        "title_original": "Sententiae Episcoporum LXXXVII",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Minutes of the Council of Carthage held September 1, 256 under Cyprian's presidency; 87 bishops from North Africa each individually voted that heretical baptism is invalid and converts must be rebaptized; the fullest extant record of North African episcopal collegial practice; each bishop's sententium preserved verbatim; opposed by Pope Stephen I and eventually overturned by later church practice accepting heretical baptism."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sent-affirms-apostolic-succession",
+            "passage_id": "psg-cyprian-sent-proem",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Collegial episcopal practice grounded in apostolic authority."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-proem",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. Proem",
+            "excerpt": "Paraphrase: Cyprian said: You have heard, most beloved colleagues, what Jubaianus our fellow bishop wrote to me, consulting my moderate ability about the unlawful and profane baptism of heretics, and what I wrote back to him. Let each of us now bring forward what we think on this matter, judging no man nor rejecting any from the right of communion if he should think differently from us. For none of us sets himself up as a bishop of bishops or by tyrannical terror forces his colleagues to obedience.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Episcopal collegiality; no bishop of bishops; conciliar freedom of conscience"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sententiae-written-carthage",
+        "clm-sent-affirms-baptism-regen",
+        "clm-sent-affirms-baptism-water",
+        "clm-sent-affirms-episcopal-unity",
+        "clm-sent-affirms-ot-authority",
+        "clm-sent-affirms-rebaptism",
+        "clm-sent-affirms-rule-of-faith",
+        "clm-sent-affirms-threefold-ministry",
+        "clm-sent-affirms-trinitarian-baptism",
+        "clm-sent-mentions-penance",
+        "clm-sententiae-by-cyprian"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-sent-proem": [
+          "clm-council-carthage-256-at-carthage",
+          "clm-council-carthage-256-year",
+          "clm-cyprian-in-council-256",
+          "clm-sent-affirms-episcopal-unity",
+          "clm-sent-affirms-threefold-ministry",
+          "clm-sententiae-by-cyprian",
+          "clm-sententiae-written-carthage"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sent-affirms-baptism-regen",
+        "subject_type": "work",
+        "subject_id": "sententiae-episcoporum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-effects-regeneration",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sententiae-episcoporum",
+        "title_display": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+        "title_original": "Sententiae Episcoporum LXXXVII",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Minutes of the Council of Carthage held September 1, 256 under Cyprian's presidency; 87 bishops from North Africa each individually voted that heretical baptism is invalid and converts must be rebaptized; the fullest extant record of North African episcopal collegial practice; each bishop's sententium preserved verbatim; opposed by Pope Stephen I and eventually overturned by later church practice accepting heretical baptism."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-effects-regeneration",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-regeneration",
+        "proposition_label": "Baptism effects spiritual regeneration",
+        "polarity_family": "baptism_regeneration",
+        "description": "Baptism is not merely symbolic but effects a new birth or regeneration of the recipient.",
+        "notes": "Baptismal regeneration"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sent-affirms-baptism-regen",
+            "passage_id": "psg-cyprian-sent-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "One baptism where there is true hope and certain faith — regeneration."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-1",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. 1 (Caecilius of Biltha)",
+            "excerpt": "I know only one baptism in the Church, and I know none outside the Church. This one will be where there is the true hope and the certain faith. For thus it is written: One faith, one hope, one baptism (Eph. 4:5). Not among heretics where there is no hope and a false faith.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Individual sententium affirming rebaptism; Ephesians 4:5 cited as proof text"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sententiae-written-carthage",
+        "clm-sent-affirms-apostolic-succession",
+        "clm-sent-affirms-baptism-water",
+        "clm-sent-affirms-episcopal-unity",
+        "clm-sent-affirms-ot-authority",
+        "clm-sent-affirms-rebaptism",
+        "clm-sent-affirms-rule-of-faith",
+        "clm-sent-affirms-threefold-ministry",
+        "clm-sent-affirms-trinitarian-baptism",
+        "clm-sent-mentions-penance",
+        "clm-sententiae-by-cyprian"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-sent-1": [
+          "clm-sent-affirms-baptism-water",
+          "clm-sent-affirms-ot-authority",
+          "clm-sent-affirms-rebaptism",
+          "clm-sent-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sent-affirms-baptism-water",
+        "subject_type": "work",
+        "subject_id": "sententiae-episcoporum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-with-water-commanded",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sententiae-episcoporum",
+        "title_display": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+        "title_original": "Sententiae Episcoporum LXXXVII",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Minutes of the Council of Carthage held September 1, 256 under Cyprian's presidency; 87 bishops from North Africa each individually voted that heretical baptism is invalid and converts must be rebaptized; the fullest extant record of North African episcopal collegial practice; each bishop's sententium preserved verbatim; opposed by Pope Stephen I and eventually overturned by later church practice accepting heretical baptism."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-with-water-commanded",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-mode",
+        "proposition_label": "Baptism is administered with water",
+        "polarity_family": "baptism_water",
+        "description": "Baptismal practice uses water as the material element.",
+        "notes": "Core initiatory practice"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sent-affirms-baptism-water",
+            "passage_id": "psg-cyprian-sent-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "One baptism — water baptism as the sacramental act."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-1",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. 1 (Caecilius of Biltha)",
+            "excerpt": "I know only one baptism in the Church, and I know none outside the Church. This one will be where there is the true hope and the certain faith. For thus it is written: One faith, one hope, one baptism (Eph. 4:5). Not among heretics where there is no hope and a false faith.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Individual sententium affirming rebaptism; Ephesians 4:5 cited as proof text"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sententiae-written-carthage",
+        "clm-sent-affirms-apostolic-succession",
+        "clm-sent-affirms-baptism-regen",
+        "clm-sent-affirms-episcopal-unity",
+        "clm-sent-affirms-ot-authority",
+        "clm-sent-affirms-rebaptism",
+        "clm-sent-affirms-rule-of-faith",
+        "clm-sent-affirms-threefold-ministry",
+        "clm-sent-affirms-trinitarian-baptism",
+        "clm-sent-mentions-penance",
+        "clm-sententiae-by-cyprian"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-sent-1": [
+          "clm-sent-affirms-baptism-regen",
+          "clm-sent-affirms-ot-authority",
+          "clm-sent-affirms-rebaptism",
+          "clm-sent-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sent-affirms-episcopal-unity",
+        "subject_type": "work",
+        "subject_id": "sententiae-episcoporum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "episcopal-unity-grounds-church-unity",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sententiae-episcoporum",
+        "title_display": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+        "title_original": "Sententiae Episcoporum LXXXVII",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Minutes of the Council of Carthage held September 1, 256 under Cyprian's presidency; 87 bishops from North Africa each individually voted that heretical baptism is invalid and converts must be rebaptized; the fullest extant record of North African episcopal collegial practice; each bishop's sententium preserved verbatim; opposed by Pope Stephen I and eventually overturned by later church practice accepting heretical baptism."
+      },
+      "object_entity": {
+        "proposition_id": "episcopal-unity-grounds-church-unity",
+        "topic_id": "episcopal-authority",
+        "dimension_id": "episcopal-collegiality",
+        "proposition_label": "The unity of bishops grounds the unity of the Church",
+        "polarity_family": "episcopal_unity",
+        "description": "The Church is one because the episcopate is one; each bishop holds the whole of the one episcopate in solidum; to break with the bishop is to break with the Church; there is one altar and one bishop.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sent-affirms-episcopal-unity",
+            "passage_id": "psg-cyprian-sent-proem",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "No bishop of bishops; conciliar freedom of conscience — collegial episcopacy."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-proem",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. Proem",
+            "excerpt": "Paraphrase: Cyprian said: You have heard, most beloved colleagues, what Jubaianus our fellow bishop wrote to me, consulting my moderate ability about the unlawful and profane baptism of heretics, and what I wrote back to him. Let each of us now bring forward what we think on this matter, judging no man nor rejecting any from the right of communion if he should think differently from us. For none of us sets himself up as a bishop of bishops or by tyrannical terror forces his colleagues to obedience.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Episcopal collegiality; no bishop of bishops; conciliar freedom of conscience"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sententiae-written-carthage",
+        "clm-sent-affirms-apostolic-succession",
+        "clm-sent-affirms-baptism-regen",
+        "clm-sent-affirms-baptism-water",
+        "clm-sent-affirms-ot-authority",
+        "clm-sent-affirms-rebaptism",
+        "clm-sent-affirms-rule-of-faith",
+        "clm-sent-affirms-threefold-ministry",
+        "clm-sent-affirms-trinitarian-baptism",
+        "clm-sent-mentions-penance",
+        "clm-sententiae-by-cyprian"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-sent-proem": [
+          "clm-council-carthage-256-at-carthage",
+          "clm-council-carthage-256-year",
+          "clm-cyprian-in-council-256",
+          "clm-sent-affirms-apostolic-succession",
+          "clm-sent-affirms-threefold-ministry",
+          "clm-sententiae-by-cyprian",
+          "clm-sententiae-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-sent-proem"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sent-affirms-ot-authority",
+        "subject_type": "work",
+        "subject_id": "sententiae-episcoporum",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sententiae-episcoporum",
+        "title_display": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+        "title_original": "Sententiae Episcoporum LXXXVII",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Minutes of the Council of Carthage held September 1, 256 under Cyprian's presidency; 87 bishops from North Africa each individually voted that heretical baptism is invalid and converts must be rebaptized; the fullest extant record of North African episcopal collegial practice; each bishop's sententium preserved verbatim; opposed by Pope Stephen I and eventually overturned by later church practice accepting heretical baptism."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sent-affirms-ot-authority",
+            "passage_id": "psg-cyprian-sent-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Ephesians 4:5 cited as proof text alongside OT grounding."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-1",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. 1 (Caecilius of Biltha)",
+            "excerpt": "I know only one baptism in the Church, and I know none outside the Church. This one will be where there is the true hope and the certain faith. For thus it is written: One faith, one hope, one baptism (Eph. 4:5). Not among heretics where there is no hope and a false faith.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Individual sententium affirming rebaptism; Ephesians 4:5 cited as proof text"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sententiae-written-carthage",
+        "clm-sent-affirms-apostolic-succession",
+        "clm-sent-affirms-baptism-regen",
+        "clm-sent-affirms-baptism-water",
+        "clm-sent-affirms-episcopal-unity",
+        "clm-sent-affirms-rebaptism",
+        "clm-sent-affirms-rule-of-faith",
+        "clm-sent-affirms-threefold-ministry",
+        "clm-sent-affirms-trinitarian-baptism",
+        "clm-sent-mentions-penance",
+        "clm-sententiae-by-cyprian"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-sent-1": [
+          "clm-sent-affirms-baptism-regen",
+          "clm-sent-affirms-baptism-water",
+          "clm-sent-affirms-rebaptism",
+          "clm-sent-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sent-affirms-rebaptism",
+        "subject_type": "work",
+        "subject_id": "sententiae-episcoporum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "heretic-baptism-is-invalid",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sententiae-episcoporum",
+        "title_display": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+        "title_original": "Sententiae Episcoporum LXXXVII",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Minutes of the Council of Carthage held September 1, 256 under Cyprian's presidency; 87 bishops from North Africa each individually voted that heretical baptism is invalid and converts must be rebaptized; the fullest extant record of North African episcopal collegial practice; each bishop's sententium preserved verbatim; opposed by Pope Stephen I and eventually overturned by later church practice accepting heretical baptism."
+      },
+      "object_entity": {
+        "proposition_id": "heretic-baptism-is-invalid",
+        "topic_id": "baptism-practice",
+        "dimension_id": "rebaptism-controversy",
+        "proposition_label": "Baptism administered by heretics or schismatics is invalid and must be repeated",
+        "polarity_family": "rebaptism",
+        "description": "Baptism conferred outside the one Church by heretics or schismatics is no baptism at all; converts from heretical groups must be baptized anew because the Holy Spirit operates only within the Church. Held by Cyprian and the African councils; opposed by Stephen of Rome who accepted heretical baptism if in trinitarian form.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sent-affirms-rebaptism",
+            "passage_id": "psg-cyprian-sent-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Caecilius of Biltha: one baptism in the Church, none outside."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-1",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. 1 (Caecilius of Biltha)",
+            "excerpt": "I know only one baptism in the Church, and I know none outside the Church. This one will be where there is the true hope and the certain faith. For thus it is written: One faith, one hope, one baptism (Eph. 4:5). Not among heretics where there is no hope and a false faith.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Individual sententium affirming rebaptism; Ephesians 4:5 cited as proof text"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-sent-affirms-rebaptism",
+            "passage_id": "psg-cyprian-sent-87",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Cyprian's final vote: heretics must be rebaptized with the one baptism of the Church."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-87",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. 87 (Cyprian)",
+            "excerpt": "My opinion is fully expressed in the letter which was written to our colleague Jubaianus — that heretics who according to the evangelical and apostolic testimony are called adversaries of Christ and antichrists, when they come to the Church, must be baptized with the one baptism of the Church, that they may be made of adversaries friends, and of antichrists Christians.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Cyprian's own final vote: heretics must be rebaptized; adversaries made friends by the one Church baptism"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sententiae-written-carthage",
+        "clm-sent-affirms-apostolic-succession",
+        "clm-sent-affirms-baptism-regen",
+        "clm-sent-affirms-baptism-water",
+        "clm-sent-affirms-episcopal-unity",
+        "clm-sent-affirms-ot-authority",
+        "clm-sent-affirms-rule-of-faith",
+        "clm-sent-affirms-threefold-ministry",
+        "clm-sent-affirms-trinitarian-baptism",
+        "clm-sent-mentions-penance",
+        "clm-sententiae-by-cyprian"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-sent-1": [
+          "clm-sent-affirms-baptism-regen",
+          "clm-sent-affirms-baptism-water",
+          "clm-sent-affirms-ot-authority",
+          "clm-sent-affirms-trinitarian-baptism"
+        ],
+        "psg-cyprian-sent-87": [
+          "clm-sent-affirms-rule-of-faith",
+          "clm-sent-mentions-penance"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sent-affirms-rule-of-faith",
+        "subject_type": "work",
+        "subject_id": "sententiae-episcoporum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sententiae-episcoporum",
+        "title_display": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+        "title_original": "Sententiae Episcoporum LXXXVII",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Minutes of the Council of Carthage held September 1, 256 under Cyprian's presidency; 87 bishops from North Africa each individually voted that heretical baptism is invalid and converts must be rebaptized; the fullest extant record of North African episcopal collegial practice; each bishop's sententium preserved verbatim; opposed by Pope Stephen I and eventually overturned by later church practice accepting heretical baptism."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sent-affirms-rule-of-faith",
+            "passage_id": "psg-cyprian-sent-87",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Evangelical and apostolic testimony cited as the rule."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-87",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. 87 (Cyprian)",
+            "excerpt": "My opinion is fully expressed in the letter which was written to our colleague Jubaianus — that heretics who according to the evangelical and apostolic testimony are called adversaries of Christ and antichrists, when they come to the Church, must be baptized with the one baptism of the Church, that they may be made of adversaries friends, and of antichrists Christians.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Cyprian's own final vote: heretics must be rebaptized; adversaries made friends by the one Church baptism"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sententiae-written-carthage",
+        "clm-sent-affirms-apostolic-succession",
+        "clm-sent-affirms-baptism-regen",
+        "clm-sent-affirms-baptism-water",
+        "clm-sent-affirms-episcopal-unity",
+        "clm-sent-affirms-ot-authority",
+        "clm-sent-affirms-rebaptism",
+        "clm-sent-affirms-threefold-ministry",
+        "clm-sent-affirms-trinitarian-baptism",
+        "clm-sent-mentions-penance",
+        "clm-sententiae-by-cyprian"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-sent-87": [
+          "clm-sent-affirms-rebaptism",
+          "clm-sent-mentions-penance"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sent-affirms-threefold-ministry",
+        "subject_type": "work",
+        "subject_id": "sententiae-episcoporum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "threefold-ministry-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sententiae-episcoporum",
+        "title_display": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+        "title_original": "Sententiae Episcoporum LXXXVII",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Minutes of the Council of Carthage held September 1, 256 under Cyprian's presidency; 87 bishops from North Africa each individually voted that heretical baptism is invalid and converts must be rebaptized; the fullest extant record of North African episcopal collegial practice; each bishop's sententium preserved verbatim; opposed by Pope Stephen I and eventually overturned by later church practice accepting heretical baptism."
+      },
+      "object_entity": {
+        "proposition_id": "threefold-ministry-required",
+        "topic_id": "church-order",
+        "dimension_id": "bishop-presbyter-deacon",
+        "proposition_label": "Valid church order requires bishop, presbyter, and deacon",
+        "polarity_family": "threefold_ministry",
+        "description": "The threefold ministry of bishop, presbyter, and deacon is required for valid church structure.",
+        "notes": "Church order"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sent-affirms-threefold-ministry",
+            "passage_id": "psg-cyprian-sent-proem",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "87 bishops individually voting presupposes threefold ministry."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-proem",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. Proem",
+            "excerpt": "Paraphrase: Cyprian said: You have heard, most beloved colleagues, what Jubaianus our fellow bishop wrote to me, consulting my moderate ability about the unlawful and profane baptism of heretics, and what I wrote back to him. Let each of us now bring forward what we think on this matter, judging no man nor rejecting any from the right of communion if he should think differently from us. For none of us sets himself up as a bishop of bishops or by tyrannical terror forces his colleagues to obedience.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Episcopal collegiality; no bishop of bishops; conciliar freedom of conscience"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sententiae-written-carthage",
+        "clm-sent-affirms-apostolic-succession",
+        "clm-sent-affirms-baptism-regen",
+        "clm-sent-affirms-baptism-water",
+        "clm-sent-affirms-episcopal-unity",
+        "clm-sent-affirms-ot-authority",
+        "clm-sent-affirms-rebaptism",
+        "clm-sent-affirms-rule-of-faith",
+        "clm-sent-affirms-trinitarian-baptism",
+        "clm-sent-mentions-penance",
+        "clm-sententiae-by-cyprian"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-sent-proem": [
+          "clm-council-carthage-256-at-carthage",
+          "clm-council-carthage-256-year",
+          "clm-cyprian-in-council-256",
+          "clm-sent-affirms-apostolic-succession",
+          "clm-sent-affirms-episcopal-unity",
+          "clm-sententiae-by-cyprian",
+          "clm-sententiae-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-sent-proem"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sent-affirms-trinitarian-baptism",
+        "subject_type": "work",
+        "subject_id": "sententiae-episcoporum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-administered-in-trinitarian-name",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sententiae-episcoporum",
+        "title_display": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+        "title_original": "Sententiae Episcoporum LXXXVII",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Minutes of the Council of Carthage held September 1, 256 under Cyprian's presidency; 87 bishops from North Africa each individually voted that heretical baptism is invalid and converts must be rebaptized; the fullest extant record of North African episcopal collegial practice; each bishop's sententium preserved verbatim; opposed by Pope Stephen I and eventually overturned by later church practice accepting heretical baptism."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-administered-in-trinitarian-name",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-formula",
+        "proposition_label": "Baptism is administered in the Trinitarian name of Father, Son, and Holy Spirit",
+        "polarity_family": "trinitarian_baptism",
+        "description": "Baptism uses the explicit Trinitarian formula of Father, Son, and Holy Spirit as the form of the sacrament.",
+        "notes": "Trinitarian baptismal formula"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sent-affirms-trinitarian-baptism",
+            "passage_id": "psg-cyprian-sent-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "One faith, one hope, one baptism — trinitarian formula implied."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-1",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. 1 (Caecilius of Biltha)",
+            "excerpt": "I know only one baptism in the Church, and I know none outside the Church. This one will be where there is the true hope and the certain faith. For thus it is written: One faith, one hope, one baptism (Eph. 4:5). Not among heretics where there is no hope and a false faith.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Individual sententium affirming rebaptism; Ephesians 4:5 cited as proof text"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sententiae-written-carthage",
+        "clm-sent-affirms-apostolic-succession",
+        "clm-sent-affirms-baptism-regen",
+        "clm-sent-affirms-baptism-water",
+        "clm-sent-affirms-episcopal-unity",
+        "clm-sent-affirms-ot-authority",
+        "clm-sent-affirms-rebaptism",
+        "clm-sent-affirms-rule-of-faith",
+        "clm-sent-affirms-threefold-ministry",
+        "clm-sent-mentions-penance",
+        "clm-sententiae-by-cyprian"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-sent-1": [
+          "clm-sent-affirms-baptism-regen",
+          "clm-sent-affirms-baptism-water",
+          "clm-sent-affirms-ot-authority",
+          "clm-sent-affirms-rebaptism"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sent-mentions-penance",
+        "subject_type": "work",
+        "subject_id": "sententiae-episcoporum",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "post-baptismal-sin-forgiven-by-penance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sententiae-episcoporum",
+        "title_display": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+        "title_original": "Sententiae Episcoporum LXXXVII",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Minutes of the Council of Carthage held September 1, 256 under Cyprian's presidency; 87 bishops from North Africa each individually voted that heretical baptism is invalid and converts must be rebaptized; the fullest extant record of North African episcopal collegial practice; each bishop's sententium preserved verbatim; opposed by Pope Stephen I and eventually overturned by later church practice accepting heretical baptism."
+      },
+      "object_entity": {
+        "proposition_id": "post-baptismal-sin-forgiven-by-penance",
+        "topic_id": "penance-practice",
+        "dimension_id": "post-baptismal-penance",
+        "proposition_label": "Post-baptismal sin can be forgiven through penance",
+        "polarity_family": "post_baptismal_penance",
+        "description": "A second repentance after baptism is possible and administered through church discipline.",
+        "notes": "Penitential discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sent-mentions-penance",
+            "passage_id": "psg-cyprian-sent-87",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Heretics made friends by baptism implies a reconciliation framework."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-87",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. 87 (Cyprian)",
+            "excerpt": "My opinion is fully expressed in the letter which was written to our colleague Jubaianus — that heretics who according to the evangelical and apostolic testimony are called adversaries of Christ and antichrists, when they come to the Church, must be baptized with the one baptism of the Church, that they may be made of adversaries friends, and of antichrists Christians.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Cyprian's own final vote: heretics must be rebaptized; adversaries made friends by the one Church baptism"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sententiae-written-carthage",
+        "clm-sent-affirms-apostolic-succession",
+        "clm-sent-affirms-baptism-regen",
+        "clm-sent-affirms-baptism-water",
+        "clm-sent-affirms-episcopal-unity",
+        "clm-sent-affirms-ot-authority",
+        "clm-sent-affirms-rebaptism",
+        "clm-sent-affirms-rule-of-faith",
+        "clm-sent-affirms-threefold-ministry",
+        "clm-sent-affirms-trinitarian-baptism",
+        "clm-sententiae-by-cyprian"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-sent-87": [
+          "clm-sent-affirms-rebaptism",
+          "clm-sent-affirms-rule-of-faith"
+        ]
+      },
+      "flags": []
+    }
+  ]
+}

@@ -1,0 +1,2286 @@
+{
+  "batch_id": "batch-137",
+  "queue": "1",
+  "focus": "onesiphorus; demas; papias-fragments; bardaisan-of-edessa",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-onesiphorus-active-ephesus",
+        "subject_type": "person",
+        "subject_id": "onesiphorus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "55",
+        "year_end": "66",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "onesiphorus",
+        "person_label": "Onesiphorus",
+        "name_alt": "",
+        "name_native": "Ὀνησίφορος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Christian commended by Paul in 2 Timothy 1:16–18 for visiting him in Rome during imprisonment and not being ashamed of his chains; also greeted in 2 Tim 4:19."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-onesiphorus-active-ephesus",
+            "passage_id": "psg-2tim-4-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-4-19",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.4.19",
+            "excerpt": "Paraphrase: Paul sends greetings to Prisca and Aquila and the household of Onesiphorus.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-onesiphorus-active-rome",
+        "clm-onesiphorus-member-ephesian",
+        "clm-onesiphorus-member-roman",
+        "clm-paul-coworker-onesiphorus"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-2tim-4-19": [
+          "clm-onesiphorus-member-ephesian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-4-19",
+        "PARAPHRASE_OMISSION:psg-2tim-4-19:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-onesiphorus-active-rome",
+        "subject_type": "person",
+        "subject_id": "onesiphorus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "66",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "onesiphorus",
+        "person_label": "Onesiphorus",
+        "name_alt": "",
+        "name_native": "Ὀνησίφορος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Christian commended by Paul in 2 Timothy 1:16–18 for visiting him in Rome during imprisonment and not being ashamed of his chains; also greeted in 2 Tim 4:19."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-onesiphorus-active-rome",
+            "passage_id": "psg-2tim-1-16-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-1-16-18",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.1.16-18",
+            "excerpt": "Paraphrase: Paul commends Onesiphorus who was not ashamed of his chains and searched for him in Rome.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-onesiphorus-active-ephesus",
+        "clm-onesiphorus-member-ephesian",
+        "clm-onesiphorus-member-roman",
+        "clm-paul-coworker-onesiphorus"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-2tim-1-16-18": [
+          "clm-onesiphorus-member-roman",
+          "clm-paul-coworker-onesiphorus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-1-16-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-onesiphorus-member-ephesian",
+        "subject_type": "person",
+        "subject_id": "onesiphorus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "ephesian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "66",
+        "context_place_id": "ephesus",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "onesiphorus",
+        "person_label": "Onesiphorus",
+        "name_alt": "",
+        "name_native": "Ὀνησίφορος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Christian commended by Paul in 2 Timothy 1:16–18 for visiting him in Rome during imprisonment and not being ashamed of his chains; also greeted in 2 Tim 4:19."
+      },
+      "object_entity": {
+        "group_id": "ephesian-church",
+        "group_label": "Church in Ephesus",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Ephesus attested in Acts and Revelation."
+      },
+      "context_place": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-onesiphorus-member-ephesian",
+            "passage_id": "psg-2tim-4-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-4-19",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.4.19",
+            "excerpt": "Paraphrase: Paul sends greetings to Prisca and Aquila and the household of Onesiphorus.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-onesiphorus-active-ephesus",
+        "clm-onesiphorus-active-rome",
+        "clm-onesiphorus-member-roman",
+        "clm-paul-coworker-onesiphorus"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-2tim-4-19": [
+          "clm-onesiphorus-active-ephesus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-4-19",
+        "PARAPHRASE_OMISSION:psg-2tim-4-19:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-onesiphorus-member-roman",
+        "subject_type": "person",
+        "subject_id": "onesiphorus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "66",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "onesiphorus",
+        "person_label": "Onesiphorus",
+        "name_alt": "",
+        "name_native": "Ὀνησίφορος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Christian commended by Paul in 2 Timothy 1:16–18 for visiting him in Rome during imprisonment and not being ashamed of his chains; also greeted in 2 Tim 4:19."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-onesiphorus-member-roman",
+            "passage_id": "psg-2tim-1-16-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-1-16-18",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.1.16-18",
+            "excerpt": "Paraphrase: Paul commends Onesiphorus who was not ashamed of his chains and searched for him in Rome.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-onesiphorus-active-ephesus",
+        "clm-onesiphorus-active-rome",
+        "clm-onesiphorus-member-ephesian",
+        "clm-paul-coworker-onesiphorus"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-2tim-1-16-18": [
+          "clm-onesiphorus-active-rome",
+          "clm-paul-coworker-onesiphorus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-1-16-18",
+        "PARAPHRASE_OMISSION:psg-2tim-1-16-18:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-coworker-onesiphorus",
+        "subject_type": "person",
+        "subject_id": "onesiphorus",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "66",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "onesiphorus",
+        "person_label": "Onesiphorus",
+        "name_alt": "",
+        "name_native": "Ὀνησίφορος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Christian commended by Paul in 2 Timothy 1:16–18 for visiting him in Rome during imprisonment and not being ashamed of his chains; also greeted in 2 Tim 4:19."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-coworker-onesiphorus",
+            "passage_id": "psg-2tim-1-16-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-1-16-18",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.1.16-18",
+            "excerpt": "Paraphrase: Paul commends Onesiphorus who was not ashamed of his chains and searched for him in Rome.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-onesiphorus-active-ephesus",
+        "clm-onesiphorus-active-rome",
+        "clm-onesiphorus-member-ephesian",
+        "clm-onesiphorus-member-roman"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-2tim-1-16-18": [
+          "clm-onesiphorus-active-rome",
+          "clm-onesiphorus-member-roman"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-1-16-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-demas-active-rome",
+        "subject_type": "person",
+        "subject_id": "demas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "demas",
+        "person_label": "Demas",
+        "name_alt": "",
+        "name_native": "Δημᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said in 2 Timothy to have gone to Thessalonica."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-demas-active-rome",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Philemon 24 names Demas as fellow worker."
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-demas-coworker-paul",
+        "clm-demas-member-roman-church",
+        "clm-demas-disciple",
+        "clm-demas-active-thessalonica-late"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24",
+        "PARAPHRASE_OMISSION:psg-phlm-23-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-demas-active-thessalonica-late",
+        "subject_type": "person",
+        "subject_id": "demas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "thessalonica",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "66",
+        "year_end": "66",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T07:15:00Z"
+      },
+      "subject_entity": {
+        "person_id": "demas",
+        "person_label": "Demas",
+        "name_alt": "",
+        "name_native": "Δημᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said in 2 Timothy to have gone to Thessalonica."
+      },
+      "object_entity": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-demas-active-thessalonica-late",
+            "passage_id": "psg-2tim-4-10-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-4-10-12",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.4.10-12",
+            "excerpt": "Paraphrase: Paul says Demas has gone to Thessalonica, Crescens to Galatia, Titus to Dalmatia, and Tychicus has been sent to Ephesus.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-demas-active-rome",
+        "clm-demas-coworker-paul",
+        "clm-demas-member-roman-church",
+        "clm-demas-disciple"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-2tim-4-10-12": [
+          "clm-crescens-active-galatia",
+          "clm-crescens-disciple",
+          "clm-paul-coworker-crescens",
+          "clm-place-dalmatia-attested",
+          "clm-titus-active-dalmatia",
+          "clm-tychicus-active-ephesus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-4-10-12"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-demas-disciple",
+        "subject_type": "person",
+        "subject_id": "demas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "66",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "demas",
+        "person_label": "Demas",
+        "name_alt": "",
+        "name_native": "Δημᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said in 2 Timothy to have gone to Thessalonica."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-demas-disciple",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-demas-active-rome",
+        "clm-demas-coworker-paul",
+        "clm-demas-member-roman-church",
+        "clm-demas-active-thessalonica-late"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24",
+        "PARAPHRASE_OMISSION:psg-phlm-23-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-demas-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "demas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "demas",
+        "person_label": "Demas",
+        "name_alt": "",
+        "name_native": "Δημᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said in 2 Timothy to have gone to Thessalonica."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-demas-member-roman-church",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-demas-active-rome",
+        "clm-demas-coworker-paul",
+        "clm-demas-disciple",
+        "clm-demas-active-thessalonica-late"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-coworker-paul",
+          "clm-demas-disciple",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24",
+        "PARAPHRASE_OMISSION:psg-phlm-23-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-demas-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "demas",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "demas",
+        "person_label": "Demas",
+        "name_alt": "",
+        "name_native": "Δημᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said in 2 Timothy to have gone to Thessalonica."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-demas-coworker-paul",
+            "passage_id": "psg-phlm-23-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phlm-23-24",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.23-24",
+            "excerpt": "Paraphrase: Paul names Mark, Aristarchus, Demas, and Luke as fellow workers.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-demas-active-rome",
+        "clm-demas-member-roman-church",
+        "clm-demas-disciple",
+        "clm-demas-active-thessalonica-late"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-phlm-23-24": [
+          "clm-aristarchus-active-rome",
+          "clm-aristarchus-coworker-paul",
+          "clm-aristarchus-member-roman-church",
+          "clm-demas-active-rome",
+          "clm-demas-disciple",
+          "clm-demas-member-roman-church",
+          "clm-epaphras-active-rome",
+          "clm-epaphras-coworker-aristarchus",
+          "clm-epaphras-coworker-paul",
+          "clm-epaphras-member-roman",
+          "clm-john-mark-coworker-paul",
+          "clm-luke-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phlm-23-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-papias-fragments-by-papias",
+        "subject_type": "work",
+        "subject_id": "papias-fragments",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "papias-of-hierapolis",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "papias-fragments",
+        "title_display": "Exposition of Dominical Oracles",
+        "title_original": "Λογίων κυριακῶν ἐξηγήσεως",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Papias of Hierapolis's five-book exposition c. 95-110 preserved in fragments by Eusebius and Irenaeus; key witness for oral apostolic tradition, teacher succession, Matthew's logia, and millenarianism."
+      },
+      "object_entity": {
+        "person_id": "papias-of-hierapolis",
+        "person_label": "Papias of Hierapolis",
+        "name_alt": "Papias",
+        "name_native": "Παπίας",
+        "birth_year_display": "c. 60",
+        "death_year_display": "c. 130",
+        "person_kind": "individual",
+        "notes": "Bishop of Hierapolis in Asia Minor; wrote the Exposition of Dominical Oracles (5 books) c. 95-110, preserved by Eusebius; heard John the elder directly; key early witness for oral apostolic tradition and millenarianism."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-papias-fragments-by-papias",
+            "passage_id": "psg-papias-frag-1",
+            "evidence_role": "supports",
+            "support_aspect": "attribution",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-papias-frag-1",
+            "source_id": "src-papias-fragments",
+            "locator_type": "source_ref",
+            "locator": "Papias, apud Eusebius HE 3.39.3-4",
+            "excerpt": "Paraphrase: Papias says he would not hesitate to expound along with the interpretations whatever he had ever learned from the elders and preserved in memory. He inquired about what the elders said — what Andrew or Peter said, what Philip or Thomas or James, what John or Matthew or any of the Lord's disciples.",
+            "language": "English",
+            "passage_year": "105",
+            "url_override": "",
+            "notes": "Papias deliberately prefers oral tradition from those who knew the apostles; evidence for tradition-reception chain"
+          },
+          "source": {
+            "source_id": "src-papias-fragments",
+            "work_id": "papias-fragments",
+            "source_kind": "primary_text",
+            "title": "Fragments of Papias",
+            "author": "Papias of Hierapolis",
+            "editor": "",
+            "year_display": "c. 95-110",
+            "year_start": "95",
+            "year_end": "110",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/papias.html",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Fragments of Papias's Exposition of Dominical Oracles preserved by Eusebius and Irenaeus."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-papias-fragments-written-hierapolis",
+        "clm-papias-frags-affirms-apostolic-succession",
+        "clm-papias-frags-affirms-bodily-resurrection",
+        "clm-papias-frags-affirms-rule-of-faith"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-papias-frag-1": [
+          "clm-john-teacher-of-papias",
+          "clm-papias-fragments-written-hierapolis",
+          "clm-papias-frags-affirms-apostolic-succession",
+          "clm-papias-frags-affirms-rule-of-faith"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-papias-frag-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-papias-fragments-written-hierapolis",
+        "subject_type": "work",
+        "subject_id": "papias-fragments",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "hierapolis",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "95",
+        "year_end": "110",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "papias-fragments",
+        "title_display": "Exposition of Dominical Oracles",
+        "title_original": "Λογίων κυριακῶν ἐξηγήσεως",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Papias of Hierapolis's five-book exposition c. 95-110 preserved in fragments by Eusebius and Irenaeus; key witness for oral apostolic tradition, teacher succession, Matthew's logia, and millenarianism."
+      },
+      "object_entity": {
+        "place_id": "hierapolis",
+        "place_label": "Hierapolis",
+        "place_label_modern": "Pamukkale",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9256",
+        "lon": "29.1219",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Lycus valley city linked with Laodicea and Colossae in Colossians 4."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-papias-fragments-written-hierapolis",
+            "passage_id": "psg-papias-frag-1",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-papias-frag-1",
+            "source_id": "src-papias-fragments",
+            "locator_type": "source_ref",
+            "locator": "Papias, apud Eusebius HE 3.39.3-4",
+            "excerpt": "Paraphrase: Papias says he would not hesitate to expound along with the interpretations whatever he had ever learned from the elders and preserved in memory. He inquired about what the elders said — what Andrew or Peter said, what Philip or Thomas or James, what John or Matthew or any of the Lord's disciples.",
+            "language": "English",
+            "passage_year": "105",
+            "url_override": "",
+            "notes": "Papias deliberately prefers oral tradition from those who knew the apostles; evidence for tradition-reception chain"
+          },
+          "source": {
+            "source_id": "src-papias-fragments",
+            "work_id": "papias-fragments",
+            "source_kind": "primary_text",
+            "title": "Fragments of Papias",
+            "author": "Papias of Hierapolis",
+            "editor": "",
+            "year_display": "c. 95-110",
+            "year_start": "95",
+            "year_end": "110",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/papias.html",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Fragments of Papias's Exposition of Dominical Oracles preserved by Eusebius and Irenaeus."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-papias-frags-affirms-apostolic-succession",
+        "clm-papias-frags-affirms-bodily-resurrection",
+        "clm-papias-frags-affirms-rule-of-faith",
+        "clm-papias-fragments-by-papias"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-papias-frag-1": [
+          "clm-john-teacher-of-papias",
+          "clm-papias-fragments-by-papias",
+          "clm-papias-frags-affirms-apostolic-succession",
+          "clm-papias-frags-affirms-rule-of-faith"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-papias-frag-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-papias-frags-affirms-apostolic-succession",
+        "subject_type": "work",
+        "subject_id": "papias-fragments",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "95",
+        "year_end": "110",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "papias-fragments",
+        "title_display": "Exposition of Dominical Oracles",
+        "title_original": "Λογίων κυριακῶν ἐξηγήσεως",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Papias of Hierapolis's five-book exposition c. 95-110 preserved in fragments by Eusebius and Irenaeus; key witness for oral apostolic tradition, teacher succession, Matthew's logia, and millenarianism."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-papias-frags-affirms-apostolic-succession",
+            "passage_id": "psg-papias-frag-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-papias-frag-1",
+            "source_id": "src-papias-fragments",
+            "locator_type": "source_ref",
+            "locator": "Papias, apud Eusebius HE 3.39.3-4",
+            "excerpt": "Paraphrase: Papias says he would not hesitate to expound along with the interpretations whatever he had ever learned from the elders and preserved in memory. He inquired about what the elders said — what Andrew or Peter said, what Philip or Thomas or James, what John or Matthew or any of the Lord's disciples.",
+            "language": "English",
+            "passage_year": "105",
+            "url_override": "",
+            "notes": "Papias deliberately prefers oral tradition from those who knew the apostles; evidence for tradition-reception chain"
+          },
+          "source": {
+            "source_id": "src-papias-fragments",
+            "work_id": "papias-fragments",
+            "source_kind": "primary_text",
+            "title": "Fragments of Papias",
+            "author": "Papias of Hierapolis",
+            "editor": "",
+            "year_display": "c. 95-110",
+            "year_start": "95",
+            "year_end": "110",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/papias.html",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Fragments of Papias's Exposition of Dominical Oracles preserved by Eusebius and Irenaeus."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-papias-frags-affirms-apostolic-succession",
+            "passage_id": "psg-papias-frag-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Papias Frag.2 records Matthew's composition directly from the apostle — apostolic source claim."
+          },
+          "passage": {
+            "passage_id": "psg-papias-frag-2",
+            "source_id": "src-papias-fragments",
+            "locator_type": "source_ref",
+            "locator": "Papias, apud Eusebius HE 3.39.16",
+            "excerpt": "Matthew composed the oracles (logia) in the Hebrew language, and each person interpreted them as best he could.",
+            "language": "English",
+            "passage_year": "105",
+            "url_override": "",
+            "notes": "Papias attests Matthew's Hebrew logia; key text for apostolic authorship and canonical tradition"
+          },
+          "source": {
+            "source_id": "src-papias-fragments",
+            "work_id": "papias-fragments",
+            "source_kind": "primary_text",
+            "title": "Fragments of Papias",
+            "author": "Papias of Hierapolis",
+            "editor": "",
+            "year_display": "c. 95-110",
+            "year_start": "95",
+            "year_end": "110",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/papias.html",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Fragments of Papias's Exposition of Dominical Oracles preserved by Eusebius and Irenaeus."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-papias-fragments-written-hierapolis",
+        "clm-papias-frags-affirms-bodily-resurrection",
+        "clm-papias-frags-affirms-rule-of-faith",
+        "clm-papias-fragments-by-papias"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-papias-frag-1": [
+          "clm-john-teacher-of-papias",
+          "clm-papias-fragments-by-papias",
+          "clm-papias-fragments-written-hierapolis",
+          "clm-papias-frags-affirms-rule-of-faith"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-papias-frag-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-papias-frags-affirms-bodily-resurrection",
+        "subject_type": "work",
+        "subject_id": "papias-fragments",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "95",
+        "year_end": "110",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "papias-fragments",
+        "title_display": "Exposition of Dominical Oracles",
+        "title_original": "Λογίων κυριακῶν ἐξηγήσεως",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Papias of Hierapolis's five-book exposition c. 95-110 preserved in fragments by Eusebius and Irenaeus; key witness for oral apostolic tradition, teacher succession, Matthew's logia, and millenarianism."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-papias-frags-affirms-bodily-resurrection",
+            "passage_id": "psg-irenaeus-ah-5-33-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-5-33-3",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 5.33.3-4",
+            "excerpt": "Irenaeus cites Papias: The days will come in which vines shall grow, each having ten thousand branches, each branch having ten thousand twigs, each twig ten thousand shoots, and in each shoot ten thousand clusters. Papias indicates in writing that these things will take place in the time of the kingdom and that they are credible to those who believe them.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": "Irenaeus cites Papias for millenarian bodily resurrection hope; confirms Papias learned this from elders who saw John"
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-papias-fragments-written-hierapolis",
+        "clm-papias-frags-affirms-apostolic-succession",
+        "clm-papias-frags-affirms-rule-of-faith",
+        "clm-papias-fragments-by-papias"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {},
+      "flags": [
+        "INDIRECT_TESTIMONIUM:psg-irenaeus-ah-5-33-3:against-heresies"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-papias-frags-affirms-rule-of-faith",
+        "subject_type": "work",
+        "subject_id": "papias-fragments",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "95",
+        "year_end": "110",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "papias-fragments",
+        "title_display": "Exposition of Dominical Oracles",
+        "title_original": "Λογίων κυριακῶν ἐξηγήσεως",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Papias of Hierapolis's five-book exposition c. 95-110 preserved in fragments by Eusebius and Irenaeus; key witness for oral apostolic tradition, teacher succession, Matthew's logia, and millenarianism."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-papias-frags-affirms-rule-of-faith",
+            "passage_id": "psg-papias-frag-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-papias-frag-1",
+            "source_id": "src-papias-fragments",
+            "locator_type": "source_ref",
+            "locator": "Papias, apud Eusebius HE 3.39.3-4",
+            "excerpt": "Paraphrase: Papias says he would not hesitate to expound along with the interpretations whatever he had ever learned from the elders and preserved in memory. He inquired about what the elders said — what Andrew or Peter said, what Philip or Thomas or James, what John or Matthew or any of the Lord's disciples.",
+            "language": "English",
+            "passage_year": "105",
+            "url_override": "",
+            "notes": "Papias deliberately prefers oral tradition from those who knew the apostles; evidence for tradition-reception chain"
+          },
+          "source": {
+            "source_id": "src-papias-fragments",
+            "work_id": "papias-fragments",
+            "source_kind": "primary_text",
+            "title": "Fragments of Papias",
+            "author": "Papias of Hierapolis",
+            "editor": "",
+            "year_display": "c. 95-110",
+            "year_start": "95",
+            "year_end": "110",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/papias.html",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Fragments of Papias's Exposition of Dominical Oracles preserved by Eusebius and Irenaeus."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-papias-fragments-written-hierapolis",
+        "clm-papias-frags-affirms-apostolic-succession",
+        "clm-papias-frags-affirms-bodily-resurrection",
+        "clm-papias-fragments-by-papias"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-papias-frag-1": [
+          "clm-john-teacher-of-papias",
+          "clm-papias-fragments-by-papias",
+          "clm-papias-fragments-written-hierapolis",
+          "clm-papias-frags-affirms-apostolic-succession"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-papias-frag-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-bardaisan-affirms-incarnation",
+        "subject_type": "person",
+        "subject_id": "bardaisan-of-edessa",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "190",
+        "year_end": "222",
+        "context_place_id": "edessa",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "bardaisan-of-edessa",
+        "person_label": "Bardaisan of Edessa",
+        "name_alt": "Bar Daisan",
+        "name_native": "ܒܪ ܕܝܨܢ",
+        "birth_year_display": "c. 154",
+        "death_year_display": "c. 222",
+        "person_kind": "individual",
+        "notes": "Syriac philosopher-theologian born in Edessa; wrote the Book of Laws of Countries defending free will against fate; initially associated with Valentinian Gnosticism per Eusebius HE 4.30 but later opposed it; founded an influential school at Edessa; refuted by Ephrem."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-bardaisan-affirms-incarnation",
+            "passage_id": "psg-eusebius-he-4-30",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions bardaisan-of-edessa or christ-truly-became-flesh."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-4-30",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 4.30",
+            "excerpt": "Paraphrase: Eusebius reports that Bardaisan of Edessa was at first a follower of Valentinus but later turned against the Valentinian heresy; he composed many dialogues in Syriac and Greek against the Marcionites and other heretics; despite his eloquent defense of the faith, he did not wholly purge himself of the old heresy.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Bardaisan of Edessa"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-bardaisan-active-edessa",
+        "clm-bardaisan-member-bardesanites",
+        "clm-bardaisan-member-edessa-church",
+        "clm-bardaisan-active-armenia",
+        "clm-bardaisan-in-conversion"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-eusebius-he-4-30": [
+          "clm-bardaisan-active-armenia",
+          "clm-bardaisan-active-edessa",
+          "clm-bardaisan-in-conversion",
+          "clm-bardaisan-member-edessa-church",
+          "clm-bardesanites-schismed-from-edessa",
+          "clm-tatian-active-edessa",
+          "clm-tatian-affirms-encratism",
+          "clm-tatian-affirms-gospel-harmony"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-4-30"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-bardaisan-active-armenia",
+        "subject_type": "person",
+        "subject_id": "bardaisan-of-edessa",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "armenia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "190",
+        "year_end": "222",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "bardaisan-of-edessa",
+        "person_label": "Bardaisan of Edessa",
+        "name_alt": "Bar Daisan",
+        "name_native": "ܒܪ ܕܝܨܢ",
+        "birth_year_display": "c. 154",
+        "death_year_display": "c. 222",
+        "person_kind": "individual",
+        "notes": "Syriac philosopher-theologian born in Edessa; wrote the Book of Laws of Countries defending free will against fate; initially associated with Valentinian Gnosticism per Eusebius HE 4.30 but later opposed it; founded an influential school at Edessa; refuted by Ephrem."
+      },
+      "object_entity": {
+        "place_id": "armenia",
+        "place_label": "Armenia",
+        "place_label_modern": "Armenia",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "40.0000",
+        "lon": "45.0000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Armenia",
+        "notes": "Kingdom/region east of Cappadocia; Bardaisan of Edessa reportedly sent missionaries there; first Christian kingdom c. 301 CE under Tiridates III."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-bardaisan-active-armenia",
+            "passage_id": "psg-eusebius-he-4-30",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.4",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions bardaisan-of-edessa or edessa."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-4-30",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 4.30",
+            "excerpt": "Paraphrase: Eusebius reports that Bardaisan of Edessa was at first a follower of Valentinus but later turned against the Valentinian heresy; he composed many dialogues in Syriac and Greek against the Marcionites and other heretics; despite his eloquent defense of the faith, he did not wholly purge himself of the old heresy.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Bardaisan of Edessa"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-bardaisan-active-edessa",
+        "clm-bardaisan-member-bardesanites",
+        "clm-bardaisan-member-edessa-church",
+        "clm-bardaisan-affirms-incarnation",
+        "clm-bardaisan-in-conversion"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-eusebius-he-4-30": [
+          "clm-bardaisan-active-edessa",
+          "clm-bardaisan-affirms-incarnation",
+          "clm-bardaisan-in-conversion",
+          "clm-bardaisan-member-edessa-church",
+          "clm-bardesanites-schismed-from-edessa",
+          "clm-tatian-active-edessa",
+          "clm-tatian-affirms-encratism",
+          "clm-tatian-affirms-gospel-harmony"
+        ]
+      },
+      "flags": [
+        "WEIGHT_CERTAINTY_TENSION:low_wt_attested:psg-eusebius-he-4-30",
+        "PARAPHRASE_RISK:psg-eusebius-he-4-30",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-4-30:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-bardaisan-in-conversion",
+        "subject_type": "person",
+        "subject_id": "bardaisan-of-edessa",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "conversion-of-edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "200",
+        "context_place_id": "edessa",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "bardaisan-of-edessa",
+        "person_label": "Bardaisan of Edessa",
+        "name_alt": "Bar Daisan",
+        "name_native": "ܒܪ ܕܝܨܢ",
+        "birth_year_display": "c. 154",
+        "death_year_display": "c. 222",
+        "person_kind": "individual",
+        "notes": "Syriac philosopher-theologian born in Edessa; wrote the Book of Laws of Countries defending free will against fate; initially associated with Valentinian Gnosticism per Eusebius HE 4.30 but later opposed it; founded an influential school at Edessa; refuted by Ephrem."
+      },
+      "object_entity": {
+        "event_id": "conversion-of-edessa",
+        "event_label": "Conversion of Edessa",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Conversion of King Abgar VIII of Osroene to Christianity c. 200 AD, making Edessa likely the first Christian state; the historical kernel behind the later legendary Abgar-Jesus correspondence in Eusebius HE 1.13."
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-bardaisan-in-conversion",
+            "passage_id": "psg-eusebius-he-4-30",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-4-30",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 4.30",
+            "excerpt": "Paraphrase: Eusebius reports that Bardaisan of Edessa was at first a follower of Valentinus but later turned against the Valentinian heresy; he composed many dialogues in Syriac and Greek against the Marcionites and other heretics; despite his eloquent defense of the faith, he did not wholly purge himself of the old heresy.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Bardaisan of Edessa"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-bardaisan-active-edessa",
+        "clm-bardaisan-member-bardesanites",
+        "clm-bardaisan-member-edessa-church",
+        "clm-bardaisan-active-armenia",
+        "clm-bardaisan-affirms-incarnation"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-eusebius-he-4-30": [
+          "clm-bardaisan-active-armenia",
+          "clm-bardaisan-active-edessa",
+          "clm-bardaisan-affirms-incarnation",
+          "clm-bardaisan-member-edessa-church",
+          "clm-bardesanites-schismed-from-edessa",
+          "clm-tatian-active-edessa",
+          "clm-tatian-affirms-encratism",
+          "clm-tatian-affirms-gospel-harmony"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-4-30"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-bardaisan-member-bardesanites",
+        "subject_type": "person",
+        "subject_id": "bardaisan-of-edessa",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "bardesanites",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "154",
+        "year_end": "222",
+        "context_place_id": "edessa",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "bardaisan-of-edessa",
+        "person_label": "Bardaisan of Edessa",
+        "name_alt": "Bar Daisan",
+        "name_native": "ܒܪ ܕܝܨܢ",
+        "birth_year_display": "c. 154",
+        "death_year_display": "c. 222",
+        "person_kind": "individual",
+        "notes": "Syriac philosopher-theologian born in Edessa; wrote the Book of Laws of Countries defending free will against fate; initially associated with Valentinian Gnosticism per Eusebius HE 4.30 but later opposed it; founded an influential school at Edessa; refuted by Ephrem."
+      },
+      "object_entity": {
+        "group_id": "bardesanites",
+        "group_label": "Bardesanites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Followers of Bardaisan of Edessa; active in Edessa and Mesopotamia from the late 2nd century; taught a modified cosmology with elements of astrology and free will; eventually suppressed by Bishop Rabbula of Edessa in the 5th century; refuted by Ephrem the Syrian."
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-bardaisan-member-bardesanites",
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes bardaisan-of-edessa's membership in bardesanites."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "source_id": "src-wikipedia-early-church-geography",
+            "locator_type": "source_ref",
+            "locator": "Early_centers_of_Christianity",
+            "excerpt": "Early centers of Christianity included Jerusalem, Antioch, Alexandria, Rome, Carthage, and Edessa. Communities spread to Persia, India, and Ethiopia by the 4th century.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for general early Christian presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-early-church-geography",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Early centers of Christianity - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Early_centers_of_Christianity",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Survey of early Christian communities and geographic spread."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-bardaisan-active-edessa",
+        "clm-bardaisan-member-edessa-church",
+        "clm-bardaisan-active-armenia",
+        "clm-bardaisan-affirms-incarnation",
+        "clm-bardaisan-in-conversion"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-wikipedia-early-church-geography": [
+          "clm-abgar-member-edessa-church",
+          "clm-abgar-viii-active-edessa",
+          "clm-const381-event-year",
+          "clm-cyprian-originated-carthage",
+          "clm-cyril-participant-ephesus-431",
+          "clm-dura-church-at-dura",
+          "clm-dura-church-construction-year",
+          "clm-dura-church-year",
+          "clm-ebionites-at-egypt",
+          "clm-edessa-church-at-edessa",
+          "clm-ephesus-431-event-year",
+          "clm-hippolytus-callistus-schism-year",
+          "clm-irenaeus-ah-year",
+          "clm-montanus-coworker-priscilla-montanist",
+          "clm-place-bostra-attested",
+          "clm-place-caesarea-cappadocia-attested",
+          "clm-place-carthage-attested",
+          "clm-place-dalmatia-attested-late",
+          "clm-place-dura-europos-attested",
+          "clm-place-edessa-attested",
+          "clm-place-neocaesarea-attested",
+          "clm-place-sardinia-attested",
+          "clm-priscilla-montanist-affirms-prophecy",
+          "clm-priscilla-montanist-member-montanists"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-early-church-geography",
+        "TERTIARY_ONLY_SUPPORT",
+        "TERTIARY_DOCTRINAL"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-bardaisan-member-edessa-church",
+        "subject_type": "person",
+        "subject_id": "bardaisan-of-edessa",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "edessa-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "154",
+        "year_end": "222",
+        "context_place_id": "edessa",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "bardaisan-of-edessa",
+        "person_label": "Bardaisan of Edessa",
+        "name_alt": "Bar Daisan",
+        "name_native": "ܒܪ ܕܝܨܢ",
+        "birth_year_display": "c. 154",
+        "death_year_display": "c. 222",
+        "person_kind": "individual",
+        "notes": "Syriac philosopher-theologian born in Edessa; wrote the Book of Laws of Countries defending free will against fate; initially associated with Valentinian Gnosticism per Eusebius HE 4.30 but later opposed it; founded an influential school at Edessa; refuted by Ephrem."
+      },
+      "object_entity": {
+        "group_id": "edessa-church",
+        "group_label": "Church in Edessa",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Edessa (Osroene); spiritual capital of Syriac Christianity from at least c. 200 AD; home of the Abgar/Addai tradition, Bardaisan, and later Ephrem the Syrian; center of Syriac literary and theological culture."
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-bardaisan-member-edessa-church",
+            "passage_id": "psg-eusebius-he-4-30",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Eusebius: Bardaisan composed dialogues and defended the faith in Edessa."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-4-30",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 4.30",
+            "excerpt": "Paraphrase: Eusebius reports that Bardaisan of Edessa was at first a follower of Valentinus but later turned against the Valentinian heresy; he composed many dialogues in Syriac and Greek against the Marcionites and other heretics; despite his eloquent defense of the faith, he did not wholly purge himself of the old heresy.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Bardaisan of Edessa"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-bardaisan-active-edessa",
+        "clm-bardaisan-member-bardesanites",
+        "clm-bardaisan-active-armenia",
+        "clm-bardaisan-affirms-incarnation",
+        "clm-bardaisan-in-conversion"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-eusebius-he-4-30": [
+          "clm-bardaisan-active-armenia",
+          "clm-bardaisan-active-edessa",
+          "clm-bardaisan-affirms-incarnation",
+          "clm-bardaisan-in-conversion",
+          "clm-bardesanites-schismed-from-edessa",
+          "clm-tatian-active-edessa",
+          "clm-tatian-affirms-encratism",
+          "clm-tatian-affirms-gospel-harmony"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-4-30"
+      ]
+    }
+  ]
+}

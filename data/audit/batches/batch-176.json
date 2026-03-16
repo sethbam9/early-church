@@ -1,0 +1,190 @@
+{
+  "batch_id": "batch-176",
+  "queue": "1",
+  "focus": "gregory-of-nazianzus; john-the-baptists-martyrdom",
+  "claim_count": 2,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-gregory-naz-participant-const381",
+        "subject_type": "person",
+        "subject_id": "gregory-of-nazianzus",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "council-of-constantinople-381",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "",
+        "updated_at": ""
+      },
+      "subject_entity": {
+        "person_id": "gregory-of-nazianzus",
+        "person_label": "",
+        "name_alt": "",
+        "name_native": "",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Cappadocian Father; presided briefly at First Council of Constantinople 381; bishop of Constantinople 379-381; theologian of the Trinity; Doctor of the Church."
+      },
+      "object_entity": {
+        "event_id": "council-of-constantinople-381",
+        "event_label": "First Council of Constantinople (381)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Second ecumenical council convened by Emperor Theodosius I at Constantinople, 381 CE. Affirmed Nicene theology against Arianism; expanded the Creed to include the full divinity of the Holy Spirit (against Macedonianism/Pneumatomachians); issued 15 anathemas against 'Origenism' (553 CE council also did this). Gregory of Nazianzus presided briefly; Gregory of Nyssa attended. Declared Constantinople second in honor after Rome."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gregory-naz-participant-const381",
+            "passage_id": "psg-socrates-he-1-19",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Socrates HE 1.19 covers the Nicene-era church events leading to Constantinople 381."
+          },
+          "passage": {
+            "passage_id": "psg-socrates-he-1-19",
+            "source_id": "src-socrates-he",
+            "locator_type": "source_ref",
+            "locator": "HE 1.19",
+            "excerpt": "Paraphrase: Socrates narrates how Frumentius, shipwrecked in Ethiopia, gained the king's trust, introduced Christianity, and was later consecrated bishop by Athanasius of Alexandria — an independent Greek confirmation of Rufinus's Latin account.",
+            "language": "English",
+            "passage_year": "439",
+            "url_override": "",
+            "notes": "Socrates Scholasticus HE 1.19; NPNF2 translation."
+          },
+          "source": {
+            "source_id": "src-socrates-he",
+            "work_id": "socrates-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Socrates Scholasticus – Ecclesiastical History",
+            "author": "Socrates Scholasticus",
+            "editor": "",
+            "year_display": "c. 439",
+            "year_start": "439",
+            "year_end": "439",
+            "container_title": "NPNF2-02",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/26011.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Online English translation (NPNF2 series)."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-socrates-he-1-19": [
+          "clm-gregory-illum-bishop-vagharshapat",
+          "clm-socrates-he-affirms-ethiopia",
+          "clm-socrates-he-by-socrates"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-john-baptist-death-year",
+        "subject_type": "event",
+        "subject_id": "john-the-baptists-martyrdom",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "29",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "john-the-baptists-martyrdom",
+        "event_label": "John the Baptist's Death",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Herod Antipas imprisons and kills John, as narrated in Mark 6 and contextualized by Josephus."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-john-baptist-death-year",
+            "passage_id": "psg-mark-6-17-29",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-mark-6-17-29",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.6.17-29",
+            "excerpt": "Paraphrase: Herod imprisons John, orders his death, and John's disciples lay his body in a tomb.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-mark-6-17-29": [
+          "clm-antipas-martyrdom-year",
+          "clm-herod-antipas-in-john-baptist-martyrdom",
+          "clm-john-baptist-in-martyrdom"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-mark-6-17-29",
+        "PARAPHRASE_RISK:psg-mark-6-17-29"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1870 @@
+{
+  "batch_id": "batch-083",
+  "queue": "1",
+  "focus": "acts-of-thomas",
+  "claim_count": 16,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-written-edessa",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-written-edessa",
+            "passage_id": "psg-acts-thomas-108-113",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from acts-of-thomas contextualizes its composition at edessa."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-108-113",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 108–113",
+            "excerpt": "Paraphrase: The Hymn of the Pearl tells of a prince sent to Egypt to retrieve a pearl guarded by a serpent; he forgets his mission until a letter reminds him; he seizes the pearl and returns to his father's kingdom, receiving his glorious robe; widely read as an allegory of the soul's descent and return.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Hymn of the Pearl"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-108-113": [
+          "clm-acts-thomas-affirms-prayer",
+          "clm-acts-thomas-affirms-repentance",
+          "clm-acts-thomas-affirms-virginity",
+          "clm-acts-thomas-mentions-incarnation",
+          "clm-acts-thomas-mentions-india-reached",
+          "clm-church-east-at-india",
+          "clm-place-india-attested",
+          "clm-thomas-affirms-thomas-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-thomas-108-113",
+        "PARAPHRASE_RISK:psg-acts-thomas-108-113",
+        "PARAPHRASE_OMISSION:psg-acts-thomas-108-113:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-affirms-ascetic-covenant",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "ascetic-covenant-is-normative",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "ascetic-covenant-is-normative",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "ascetic-covenant",
+        "proposition_label": "The ascetic covenant (bnay qyama) is the normative Christian calling",
+        "polarity_family": "ascetic_covenant",
+        "description": "Baptized Christians are called to a consecrated ascetic life as members of a covenant community (bnay qyama / bnat qyama); this is the normative rather than exceptional form of Christian discipleship in early Syriac tradition.",
+        "notes": "Ascetic covenant"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-affirms-ascetic-covenant",
+            "passage_id": "psg-acts-thomas-27",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Oil called seal of the covenant; renunciation context."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-27",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 27",
+            "excerpt": "Paraphrase: Thomas anoints the convert with oil, invoking the name of Christ; the anointing precedes the water baptism; oil is called the seal of the covenant and the power of the Messiah.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Baptismal anointing scene"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-27": [
+          "clm-acts-thomas-affirms-baptism-regeneration",
+          "clm-acts-thomas-affirms-baptism-water",
+          "clm-acts-thomas-affirms-baptismal-anointing",
+          "clm-thomas-active-india"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-thomas-27"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-affirms-baptism-regeneration",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-effects-regeneration",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-effects-regeneration",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-regeneration",
+        "proposition_label": "Baptism effects spiritual regeneration",
+        "polarity_family": "baptism_regeneration",
+        "description": "Baptism is not merely symbolic but effects a new birth or regeneration of the recipient.",
+        "notes": "Baptismal regeneration"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-affirms-baptism-regeneration",
+            "passage_id": "psg-acts-thomas-27",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Anointing and water baptism initiate the convert."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-27",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 27",
+            "excerpt": "Paraphrase: Thomas anoints the convert with oil, invoking the name of Christ; the anointing precedes the water baptism; oil is called the seal of the covenant and the power of the Messiah.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Baptismal anointing scene"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-27": [
+          "clm-acts-thomas-affirms-ascetic-covenant",
+          "clm-acts-thomas-affirms-baptism-water",
+          "clm-acts-thomas-affirms-baptismal-anointing",
+          "clm-thomas-active-india"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-thomas-27"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-affirms-baptism-water",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-with-water-commanded",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-with-water-commanded",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-mode",
+        "proposition_label": "Baptism is administered with water",
+        "polarity_family": "baptism_water",
+        "description": "Baptismal practice uses water as the material element.",
+        "notes": "Core initiatory practice"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-affirms-baptism-water",
+            "passage_id": "psg-acts-thomas-27",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Water baptism follows the anointing."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-27",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 27",
+            "excerpt": "Paraphrase: Thomas anoints the convert with oil, invoking the name of Christ; the anointing precedes the water baptism; oil is called the seal of the covenant and the power of the Messiah.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Baptismal anointing scene"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-27": [
+          "clm-acts-thomas-affirms-ascetic-covenant",
+          "clm-acts-thomas-affirms-baptism-regeneration",
+          "clm-acts-thomas-affirms-baptismal-anointing",
+          "clm-thomas-active-india"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-thomas-27"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-affirms-baptismal-anointing",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptismal-anointing-with-oil",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "baptismal-anointing-with-oil",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-anointing",
+        "proposition_label": "Baptismal Anointing with Oil",
+        "polarity_family": "",
+        "description": "After emerging from the baptismal water, the newly baptized is anointed with chrism or oil as part of the baptismal rite, signifying the reception of the Holy Spirit and incorporation into Christ.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-affirms-baptismal-anointing",
+            "passage_id": "psg-acts-thomas-27",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Thomas anoints with oil before water baptism; oil is seal of the covenant."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-27",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 27",
+            "excerpt": "Paraphrase: Thomas anoints the convert with oil, invoking the name of Christ; the anointing precedes the water baptism; oil is called the seal of the covenant and the power of the Messiah.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Baptismal anointing scene"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-27": [
+          "clm-acts-thomas-affirms-ascetic-covenant",
+          "clm-acts-thomas-affirms-baptism-regeneration",
+          "clm-acts-thomas-affirms-baptism-water",
+          "clm-thomas-active-india"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-thomas-27"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-affirms-encratism",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "encratism-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "encratism-is-required",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "encratism",
+        "proposition_label": "Radical continence is required of all Christians",
+        "polarity_family": "encratism",
+        "description": "Sexual continence, abstinence from meat, and/or abstinence from wine are required — not merely counseled — for all Christians; associated with Tatian, the Acts of Thomas, and some early Syriac communities.",
+        "notes": "Encratism"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-affirms-encratism",
+            "passage_id": "psg-acts-thomas-49-50",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Continence and renunciation required of communicants."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-49-50",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 49–50",
+            "excerpt": "Paraphrase: Thomas breaks bread and gives thanks over the eucharist; the elements are bread and water (not wine in the Syriac recension); continence and renunciation of the world are required of those who receive.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Eucharist and encratite practice"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-49-50": [
+          "clm-acts-thomas-affirms-fasting",
+          "clm-acts-thomas-affirms-second-marriage-forbidden",
+          "clm-acts-thomas-mentions-baptismal-anointing",
+          "clm-acts-thomas-mentions-eucharist"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-thomas-49-50"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-affirms-fasting",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "fasting-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "fasting-is-required",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "fasting-required",
+        "proposition_label": "Christians are required to fast",
+        "polarity_family": "christian_fasting",
+        "description": "Fasting is a required Christian spiritual discipline presented as obligatory, not merely optional.",
+        "notes": "Ascetic discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-affirms-fasting",
+            "passage_id": "psg-acts-thomas-49-50",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Renunciation of the world includes fasting discipline."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-49-50",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 49–50",
+            "excerpt": "Paraphrase: Thomas breaks bread and gives thanks over the eucharist; the elements are bread and water (not wine in the Syriac recension); continence and renunciation of the world are required of those who receive.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Eucharist and encratite practice"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-49-50": [
+          "clm-acts-thomas-affirms-encratism",
+          "clm-acts-thomas-affirms-second-marriage-forbidden",
+          "clm-acts-thomas-mentions-baptismal-anointing",
+          "clm-acts-thomas-mentions-eucharist"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-thomas-49-50"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-affirms-prayer",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "prayer-is-offered-without-ceasing",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "prayer-is-offered-without-ceasing",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "continual-prayer",
+        "proposition_label": "Prayer is offered without ceasing throughout all of life",
+        "polarity_family": "continual_prayer",
+        "description": "The spiritually formed Christian does not confine prayer to set times but prays continually through every word, action, and disposition, maintaining unceasing communion with God.",
+        "notes": "Continual prayer"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-affirms-prayer",
+            "passage_id": "psg-acts-thomas-108-113",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "acts-of-thomas is a primary text directly relevant to prayer-is-offered-without-ceasing."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-108-113",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 108–113",
+            "excerpt": "Paraphrase: The Hymn of the Pearl tells of a prince sent to Egypt to retrieve a pearl guarded by a serpent; he forgets his mission until a letter reminds him; he seizes the pearl and returns to his father's kingdom, receiving his glorious robe; widely read as an allegory of the soul's descent and return.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Hymn of the Pearl"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-108-113": [
+          "clm-acts-thomas-affirms-repentance",
+          "clm-acts-thomas-affirms-virginity",
+          "clm-acts-thomas-mentions-incarnation",
+          "clm-acts-thomas-mentions-india-reached",
+          "clm-acts-thomas-written-edessa",
+          "clm-church-east-at-india",
+          "clm-place-india-attested",
+          "clm-thomas-affirms-thomas-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-thomas-108-113",
+        "PARAPHRASE_RISK:psg-acts-thomas-108-113"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-affirms-repentance",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "repentance-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "repentance-is-required",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "repentant-response",
+        "proposition_label": "Repentance is required in response to the proclamation",
+        "polarity_family": "repentance_response",
+        "description": "The proclamation of the kingdom calls hearers to repentance.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-affirms-repentance",
+            "passage_id": "psg-acts-thomas-108-113",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "acts-of-thomas is a primary text directly relevant to repentance-is-required."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-108-113",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 108–113",
+            "excerpt": "Paraphrase: The Hymn of the Pearl tells of a prince sent to Egypt to retrieve a pearl guarded by a serpent; he forgets his mission until a letter reminds him; he seizes the pearl and returns to his father's kingdom, receiving his glorious robe; widely read as an allegory of the soul's descent and return.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Hymn of the Pearl"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-108-113": [
+          "clm-acts-thomas-affirms-prayer",
+          "clm-acts-thomas-affirms-virginity",
+          "clm-acts-thomas-mentions-incarnation",
+          "clm-acts-thomas-mentions-india-reached",
+          "clm-acts-thomas-written-edessa",
+          "clm-church-east-at-india",
+          "clm-place-india-attested",
+          "clm-thomas-affirms-thomas-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-thomas-108-113",
+        "PARAPHRASE_RISK:psg-acts-thomas-108-113"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "second-marriage-is-forbidden",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "second-marriage-is-forbidden",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "monogamy-strict",
+        "proposition_label": "Second marriage after the death of a spouse is forbidden",
+        "polarity_family": "strict_monogamy",
+        "description": "Remarriage after the death of a spouse constitutes a species of adultery; Christians must practice strict monogamy, marrying only once.",
+        "notes": "Strict monogamy"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-affirms-second-marriage-forbidden",
+            "passage_id": "psg-acts-thomas-49-50",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Continence required; encratite stance on marriage."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-49-50",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 49–50",
+            "excerpt": "Paraphrase: Thomas breaks bread and gives thanks over the eucharist; the elements are bread and water (not wine in the Syriac recension); continence and renunciation of the world are required of those who receive.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Eucharist and encratite practice"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-49-50": [
+          "clm-acts-thomas-affirms-encratism",
+          "clm-acts-thomas-affirms-fasting",
+          "clm-acts-thomas-mentions-baptismal-anointing",
+          "clm-acts-thomas-mentions-eucharist"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-thomas-49-50"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-affirms-virginity",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "virginity-is-honored-calling",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "virginity-is-honored-calling",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "celibacy-honored",
+        "proposition_label": "Virginity and celibacy are honored as a positive Christian calling",
+        "polarity_family": "celibacy_honored",
+        "description": "Virginity and celibacy are not merely tolerated but positively honored as a higher calling, even while marriage is defended as legitimate and good.",
+        "notes": "Celibacy and virginity honored"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-affirms-virginity",
+            "passage_id": "psg-acts-thomas-108-113",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "acts-of-thomas is a primary text directly relevant to virginity-is-honored-calling."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-108-113",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 108–113",
+            "excerpt": "Paraphrase: The Hymn of the Pearl tells of a prince sent to Egypt to retrieve a pearl guarded by a serpent; he forgets his mission until a letter reminds him; he seizes the pearl and returns to his father's kingdom, receiving his glorious robe; widely read as an allegory of the soul's descent and return.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Hymn of the Pearl"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-108-113": [
+          "clm-acts-thomas-affirms-prayer",
+          "clm-acts-thomas-affirms-repentance",
+          "clm-acts-thomas-mentions-incarnation",
+          "clm-acts-thomas-mentions-india-reached",
+          "clm-acts-thomas-written-edessa",
+          "clm-church-east-at-india",
+          "clm-place-india-attested",
+          "clm-thomas-affirms-thomas-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-thomas-108-113",
+        "PARAPHRASE_RISK:psg-acts-thomas-108-113"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-mentions-eucharist",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "eucharist-is-body-and-blood",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "eucharist-is-body-and-blood",
+        "topic_id": "eucharist-presence",
+        "dimension_id": "real-presence",
+        "proposition_label": "The Eucharist is the body and blood of Christ",
+        "polarity_family": "eucharistic_realism",
+        "description": "The eucharistic elements are identified as the flesh and blood of Jesus.",
+        "notes": "Real-presence language"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-mentions-eucharist",
+            "passage_id": "psg-acts-thomas-49-50",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Thomas breaks bread and gives thanks; bread and water (not wine) in Syriac recension."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-49-50",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 49–50",
+            "excerpt": "Paraphrase: Thomas breaks bread and gives thanks over the eucharist; the elements are bread and water (not wine in the Syriac recension); continence and renunciation of the world are required of those who receive.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Eucharist and encratite practice"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-49-50": [
+          "clm-acts-thomas-affirms-encratism",
+          "clm-acts-thomas-affirms-fasting",
+          "clm-acts-thomas-affirms-second-marriage-forbidden",
+          "clm-acts-thomas-mentions-baptismal-anointing"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-thomas-49-50"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-mentions-incarnation",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-mentions-incarnation",
+            "passage_id": "psg-acts-thomas-108-113",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Hymn of the Pearl as allegory of soul's descent and return; christological reading debated."
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-108-113",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 108–113",
+            "excerpt": "Paraphrase: The Hymn of the Pearl tells of a prince sent to Egypt to retrieve a pearl guarded by a serpent; he forgets his mission until a letter reminds him; he seizes the pearl and returns to his father's kingdom, receiving his glorious robe; widely read as an allegory of the soul's descent and return.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Hymn of the Pearl"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-108-113": [
+          "clm-acts-thomas-affirms-prayer",
+          "clm-acts-thomas-affirms-repentance",
+          "clm-acts-thomas-affirms-virginity",
+          "clm-acts-thomas-mentions-india-reached",
+          "clm-acts-thomas-written-edessa",
+          "clm-church-east-at-india",
+          "clm-place-india-attested",
+          "clm-thomas-affirms-thomas-india"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-thomas-108-113"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-affirms-thomas-india",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "thomas-preached-in-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "claimed_tradition",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "thomas-preached-in-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "apostle-thomas-india",
+        "proposition_label": "The apostle Thomas preached in India",
+        "polarity_family": "thomas_india",
+        "description": "The Acts of Thomas (3rd c.) narrates Thomas's journey to India; the Thomas Christian tradition in Malabar claims apostolic origin; certainty is claimed_tradition.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-affirms-thomas-india",
+            "passage_id": "psg-eusebius-he-5-10-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Eusebius's Indian context supports the tradition background."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-3-4",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.3–4",
+            "excerpt": "Paraphrase: Pantaenus is said to have gone to India where he found persons who knew of Christ. Bartholomew one of the apostles had preached to them and left with them the writing of Matthew in the Hebrew language which they had preserved till that time.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Pantaenus finding Christians in India with a Hebrew Matthew from Bartholomew."
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-mentions-baptismal-anointing",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-eusebius-he-5-10-3-4": [
+          "clm-bartholomew-active-india",
+          "clm-eusebius-he-affirms-bartholomew-india",
+          "clm-eusebius-he-affirms-india-reached",
+          "clm-pantaenus-active-india",
+          "clm-pantaenus-mission-at-india",
+          "clm-pantaenus-participant-india-mission",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-place-neocaesarea-attested"
+        ]
+      },
+      "flags": [
+        "SOURCE_MISMATCH:psg-eusebius-he-5-10-3-4:ecclesiastical-history-of-eusebius",
+        "PARAPHRASE_RISK:psg-eusebius-he-5-10-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-mentions-baptismal-anointing",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptismal-anointing-with-oil",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "baptismal-anointing-with-oil",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-anointing",
+        "proposition_label": "Baptismal Anointing with Oil",
+        "polarity_family": "",
+        "description": "After emerging from the baptismal water, the newly baptized is anointed with chrism or oil as part of the baptismal rite, signifying the reception of the Holy Spirit and incorporation into Christ.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-mentions-baptismal-anointing",
+            "passage_id": "psg-acts-thomas-49-50",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-49-50",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 49–50",
+            "excerpt": "Paraphrase: Thomas breaks bread and gives thanks over the eucharist; the elements are bread and water (not wine in the Syriac recension); continence and renunciation of the world are required of those who receive.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Eucharist and encratite practice"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-india-reached"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-49-50": [
+          "clm-acts-thomas-affirms-encratism",
+          "clm-acts-thomas-affirms-fasting",
+          "clm-acts-thomas-affirms-second-marriage-forbidden",
+          "clm-acts-thomas-mentions-eucharist"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-thomas-49-50"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-thomas-mentions-india-reached",
+        "subject_type": "work",
+        "subject_id": "acts-of-thomas",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "gospel-reached-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "claimed_tradition",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "acts-of-thomas",
+        "title_display": "Acts of Thomas",
+        "title_original": "ܦܪܟܣܝܣ ܕܬܐܘܡܐ",
+        "work_type": "acta",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Early 3rd-century apocryphal acts (c. 220–240) composed in Syriac; narrates the apostle Thomas's journey to India; includes the Hymn of the Pearl and the Hymn of the Bride; emphasizes baptismal anointing, encratite continence, and eucharist; reflects eastern Syrian liturgical practice."
+      },
+      "object_entity": {
+        "proposition_id": "gospel-reached-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "india-reached",
+        "proposition_label": "The gospel reached India through early missionary or apostolic activity",
+        "polarity_family": "india_reached",
+        "description": "Christianity reached India — whether the Malabar coast or the broader \"India\" of ancient usage — through apostolic (Thomas, Bartholomew) or early missionary (Pantaenus) activity; attested by Eusebius HE 5.10 and Philostorgius.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-thomas-mentions-india-reached",
+            "passage_id": "psg-acts-thomas-108-113",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-thomas-108-113",
+            "source_id": "src-acts-of-thomas",
+            "locator_type": "source_ref",
+            "locator": "Acts of Thomas 108–113",
+            "excerpt": "Paraphrase: The Hymn of the Pearl tells of a prince sent to Egypt to retrieve a pearl guarded by a serpent; he forgets his mission until a letter reminds him; he seizes the pearl and returns to his father's kingdom, receiving his glorious robe; widely read as an allegory of the soul's descent and return.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Hymn of the Pearl"
+          },
+          "source": {
+            "source_id": "src-acts-of-thomas",
+            "work_id": "acts-of-thomas",
+            "source_kind": "primary_text",
+            "title": "Acts of Thomas",
+            "author": "Anonymous (Syriac)",
+            "editor": "",
+            "year_display": "c. 220–240",
+            "year_start": "220",
+            "year_end": "240",
+            "container_title": "New Testament Apocrypha",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/actsthomas.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Early Syriac apocryphal acts narrating Thomas's mission to India."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-thomas-affirms-ascetic-covenant",
+        "clm-acts-thomas-affirms-baptism-regeneration",
+        "clm-acts-thomas-affirms-baptism-water",
+        "clm-acts-thomas-affirms-baptismal-anointing",
+        "clm-acts-thomas-affirms-encratism",
+        "clm-acts-thomas-affirms-fasting",
+        "clm-acts-thomas-affirms-prayer",
+        "clm-acts-thomas-affirms-repentance",
+        "clm-acts-thomas-affirms-second-marriage-forbidden",
+        "clm-acts-thomas-affirms-virginity",
+        "clm-acts-thomas-mentions-eucharist",
+        "clm-acts-thomas-mentions-incarnation",
+        "clm-acts-thomas-written-edessa",
+        "clm-acts-thomas-affirms-thomas-india",
+        "clm-acts-thomas-mentions-baptismal-anointing"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-acts-thomas-108-113": [
+          "clm-acts-thomas-affirms-prayer",
+          "clm-acts-thomas-affirms-repentance",
+          "clm-acts-thomas-affirms-virginity",
+          "clm-acts-thomas-mentions-incarnation",
+          "clm-acts-thomas-written-edessa",
+          "clm-church-east-at-india",
+          "clm-place-india-attested",
+          "clm-thomas-affirms-thomas-india"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-thomas-108-113",
+        "PARAPHRASE_RISK:psg-acts-thomas-108-113"
+      ]
+    }
+  ]
+}

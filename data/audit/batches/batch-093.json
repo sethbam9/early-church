@@ -1,0 +1,1428 @@
+{
+  "batch_id": "batch-093",
+  "queue": "1",
+  "focus": "epistle-of-barnabas",
+  "claim_count": 13,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-ep-by-barnabas",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "barnabas",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T06:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-ep-by-barnabas",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Traditional attribution to Barnabas of Cyprus rejected by Origen and most moderns; pseudonymous Alexandrian Christian c. 70-135 CE."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-regen",
+        "clm-barnabas-affirms-baptism-water",
+        "clm-barnabas-affirms-bodily-resurrection",
+        "clm-barnabas-affirms-catechumenate",
+        "clm-barnabas-affirms-fasting",
+        "clm-barnabas-affirms-incarnation",
+        "clm-barnabas-affirms-judgment",
+        "clm-barnabas-affirms-logos",
+        "clm-barnabas-affirms-martyrdom-witness",
+        "clm-barnabas-affirms-ot-scripture",
+        "clm-barnabas-affirms-repentance",
+        "clm-barnabas-affirms-virgin-birth"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-affirms-baptism-regen",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-effects-regeneration",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-effects-regeneration",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-regeneration",
+        "proposition_label": "Baptism effects spiritual regeneration",
+        "polarity_family": "baptism_regeneration",
+        "description": "Baptism is not merely symbolic but effects a new birth or regeneration of the recipient.",
+        "notes": "Baptismal regeneration"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-affirms-baptism-regen",
+            "passage_id": "psg-barnabas-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Descent into water laden with sin, rise bearing fruit"
+          },
+          "passage": {
+            "passage_id": "psg-barnabas-11",
+            "source_id": "src-barnabas",
+            "locator_type": "source_ref",
+            "locator": "Barn. 11",
+            "excerpt": "Regarding water, the Scripture speaks concerning Israel: woe to those who have abandoned the living spring and dug themselves cisterns. Baptism is a holy spring of life. We descend into the water laden with sin but come up bearing fruit.",
+            "language": "English",
+            "passage_year": "100",
+            "url_override": "",
+            "notes": "OT baptism typology; water as life-giving spring; regeneration language"
+          },
+          "source": {
+            "source_id": "src-barnabas",
+            "work_id": "epistle-of-barnabas",
+            "source_kind": "primary_text",
+            "title": "Epistle of Barnabas",
+            "author": "Anonymous early church",
+            "editor": "",
+            "year_display": "c. 70-130",
+            "year_start": "70",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0124.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Baptismal typology, two-ways teaching, anti-Jewish exegesis; important witness for baptism as new creation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-water",
+        "clm-barnabas-affirms-bodily-resurrection",
+        "clm-barnabas-affirms-catechumenate",
+        "clm-barnabas-affirms-fasting",
+        "clm-barnabas-affirms-incarnation",
+        "clm-barnabas-affirms-judgment",
+        "clm-barnabas-affirms-logos",
+        "clm-barnabas-affirms-martyrdom-witness",
+        "clm-barnabas-affirms-ot-scripture",
+        "clm-barnabas-affirms-repentance",
+        "clm-barnabas-affirms-virgin-birth",
+        "clm-barnabas-ep-by-barnabas"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-barnabas-11": [
+          "clm-barnabas-affirms-baptism-water",
+          "clm-barnabas-affirms-ot-scripture",
+          "clm-barnabas-affirms-virgin-birth"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-affirms-baptism-water",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-with-water-commanded",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-with-water-commanded",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-mode",
+        "proposition_label": "Baptism is administered with water",
+        "polarity_family": "baptism_water",
+        "description": "Baptismal practice uses water as the material element.",
+        "notes": "Core initiatory practice"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-affirms-baptism-water",
+            "passage_id": "psg-barnabas-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Baptism explicitly associated with life-giving water"
+          },
+          "passage": {
+            "passage_id": "psg-barnabas-11",
+            "source_id": "src-barnabas",
+            "locator_type": "source_ref",
+            "locator": "Barn. 11",
+            "excerpt": "Regarding water, the Scripture speaks concerning Israel: woe to those who have abandoned the living spring and dug themselves cisterns. Baptism is a holy spring of life. We descend into the water laden with sin but come up bearing fruit.",
+            "language": "English",
+            "passage_year": "100",
+            "url_override": "",
+            "notes": "OT baptism typology; water as life-giving spring; regeneration language"
+          },
+          "source": {
+            "source_id": "src-barnabas",
+            "work_id": "epistle-of-barnabas",
+            "source_kind": "primary_text",
+            "title": "Epistle of Barnabas",
+            "author": "Anonymous early church",
+            "editor": "",
+            "year_display": "c. 70-130",
+            "year_start": "70",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0124.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Baptismal typology, two-ways teaching, anti-Jewish exegesis; important witness for baptism as new creation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-regen",
+        "clm-barnabas-affirms-bodily-resurrection",
+        "clm-barnabas-affirms-catechumenate",
+        "clm-barnabas-affirms-fasting",
+        "clm-barnabas-affirms-incarnation",
+        "clm-barnabas-affirms-judgment",
+        "clm-barnabas-affirms-logos",
+        "clm-barnabas-affirms-martyrdom-witness",
+        "clm-barnabas-affirms-ot-scripture",
+        "clm-barnabas-affirms-repentance",
+        "clm-barnabas-affirms-virgin-birth",
+        "clm-barnabas-ep-by-barnabas"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-barnabas-11": [
+          "clm-barnabas-affirms-baptism-regen",
+          "clm-barnabas-affirms-ot-scripture",
+          "clm-barnabas-affirms-virgin-birth"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-affirms-bodily-resurrection",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-affirms-bodily-resurrection",
+            "passage_id": "psg-barnabas-19",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-barnabas-19",
+            "source_id": "src-barnabas",
+            "locator_type": "source_ref",
+            "locator": "Barn. 19.1-8",
+            "excerpt": "The way of light: love your Creator, glorify him who redeemed you from death. You shall fast and pray for the salvation of your soul. You shall not forsake the commandments of the Lord. You shall confess your transgressions.",
+            "language": "English",
+            "passage_year": "100",
+            "url_override": "",
+            "notes": "Two-ways instruction with fasting as explicit requirement"
+          },
+          "source": {
+            "source_id": "src-barnabas",
+            "work_id": "epistle-of-barnabas",
+            "source_kind": "primary_text",
+            "title": "Epistle of Barnabas",
+            "author": "Anonymous early church",
+            "editor": "",
+            "year_display": "c. 70-130",
+            "year_start": "70",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0124.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Baptismal typology, two-ways teaching, anti-Jewish exegesis; important witness for baptism as new creation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-regen",
+        "clm-barnabas-affirms-baptism-water",
+        "clm-barnabas-affirms-catechumenate",
+        "clm-barnabas-affirms-fasting",
+        "clm-barnabas-affirms-incarnation",
+        "clm-barnabas-affirms-judgment",
+        "clm-barnabas-affirms-logos",
+        "clm-barnabas-affirms-martyrdom-witness",
+        "clm-barnabas-affirms-ot-scripture",
+        "clm-barnabas-affirms-repentance",
+        "clm-barnabas-affirms-virgin-birth",
+        "clm-barnabas-ep-by-barnabas"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-barnabas-19": [
+          "clm-barnabas-affirms-fasting",
+          "clm-barnabas-affirms-martyrdom-witness"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-affirms-catechumenate",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "catechumenate-precedes-baptism",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "proposition_id": "catechumenate-precedes-baptism",
+        "topic_id": "baptism-practice",
+        "dimension_id": "catechumenate",
+        "proposition_label": "A formal catechumenate precedes baptism",
+        "polarity_family": "",
+        "description": "Candidates for baptism undergo a structured period of pre-baptismal instruction, examination, and moral formation (the catechumenate) before being admitted to the sacrament.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-affirms-catechumenate",
+            "passage_id": "psg-barnabas-18-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Barnabas's Two Ways section (chs. 18-20) functions as pre-baptismal catechesis."
+          },
+          "passage": {
+            "passage_id": "psg-barnabas-18-1",
+            "source_id": "src-barnabas",
+            "locator_type": "source_ref",
+            "locator": "Barn. 18.1",
+            "excerpt": "There are two ways of teaching and of power, the one of light and the other of darkness; and there is a great difference between the two ways. For on the one are stationed the light-giving angels of God, on the other the angels of Satan.",
+            "language": "English",
+            "passage_year": "100",
+            "url_override": "",
+            "notes": "Opening of the Two Ways catechesis (chs. 18-20); functions as pre-baptismal moral instruction"
+          },
+          "source": {
+            "source_id": "src-barnabas",
+            "work_id": "epistle-of-barnabas",
+            "source_kind": "primary_text",
+            "title": "Epistle of Barnabas",
+            "author": "Anonymous early church",
+            "editor": "",
+            "year_display": "c. 70-130",
+            "year_start": "70",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0124.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Baptismal typology, two-ways teaching, anti-Jewish exegesis; important witness for baptism as new creation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-regen",
+        "clm-barnabas-affirms-baptism-water",
+        "clm-barnabas-affirms-bodily-resurrection",
+        "clm-barnabas-affirms-fasting",
+        "clm-barnabas-affirms-incarnation",
+        "clm-barnabas-affirms-judgment",
+        "clm-barnabas-affirms-logos",
+        "clm-barnabas-affirms-martyrdom-witness",
+        "clm-barnabas-affirms-ot-scripture",
+        "clm-barnabas-affirms-repentance",
+        "clm-barnabas-affirms-virgin-birth",
+        "clm-barnabas-ep-by-barnabas"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-barnabas-18-1": [
+          "clm-barnabas-affirms-judgment",
+          "clm-barnabas-affirms-repentance"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-affirms-fasting",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "fasting-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "proposition_id": "fasting-is-required",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "fasting-required",
+        "proposition_label": "Christians are required to fast",
+        "polarity_family": "christian_fasting",
+        "description": "Fasting is a required Christian spiritual discipline presented as obligatory, not merely optional.",
+        "notes": "Ascetic discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-affirms-fasting",
+            "passage_id": "psg-barnabas-19",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "You shall fast and pray for the salvation of your soul"
+          },
+          "passage": {
+            "passage_id": "psg-barnabas-19",
+            "source_id": "src-barnabas",
+            "locator_type": "source_ref",
+            "locator": "Barn. 19.1-8",
+            "excerpt": "The way of light: love your Creator, glorify him who redeemed you from death. You shall fast and pray for the salvation of your soul. You shall not forsake the commandments of the Lord. You shall confess your transgressions.",
+            "language": "English",
+            "passage_year": "100",
+            "url_override": "",
+            "notes": "Two-ways instruction with fasting as explicit requirement"
+          },
+          "source": {
+            "source_id": "src-barnabas",
+            "work_id": "epistle-of-barnabas",
+            "source_kind": "primary_text",
+            "title": "Epistle of Barnabas",
+            "author": "Anonymous early church",
+            "editor": "",
+            "year_display": "c. 70-130",
+            "year_start": "70",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0124.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Baptismal typology, two-ways teaching, anti-Jewish exegesis; important witness for baptism as new creation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-regen",
+        "clm-barnabas-affirms-baptism-water",
+        "clm-barnabas-affirms-bodily-resurrection",
+        "clm-barnabas-affirms-catechumenate",
+        "clm-barnabas-affirms-incarnation",
+        "clm-barnabas-affirms-judgment",
+        "clm-barnabas-affirms-logos",
+        "clm-barnabas-affirms-martyrdom-witness",
+        "clm-barnabas-affirms-ot-scripture",
+        "clm-barnabas-affirms-repentance",
+        "clm-barnabas-affirms-virgin-birth",
+        "clm-barnabas-ep-by-barnabas"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-barnabas-19": [
+          "clm-barnabas-affirms-bodily-resurrection",
+          "clm-barnabas-affirms-martyrdom-witness"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-affirms-incarnation",
+            "passage_id": "psg-barnabas-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-barnabas-6",
+            "source_id": "src-barnabas",
+            "locator_type": "source_ref",
+            "locator": "Barn. 6.9",
+            "excerpt": "Since therefore He was about to be made manifest in the flesh and to suffer, His suffering was foreordained. The prophet speaks: Spare my soul from the sword, and fasten my flesh with nails; for the congregation of evildoers hath risen up against me.",
+            "language": "English",
+            "passage_year": "100",
+            "url_override": "",
+            "notes": "Christ's suffering in the flesh as prophetically foreordained; incarnation theology"
+          },
+          "source": {
+            "source_id": "src-barnabas",
+            "work_id": "epistle-of-barnabas",
+            "source_kind": "primary_text",
+            "title": "Epistle of Barnabas",
+            "author": "Anonymous early church",
+            "editor": "",
+            "year_display": "c. 70-130",
+            "year_start": "70",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0124.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Baptismal typology, two-ways teaching, anti-Jewish exegesis; important witness for baptism as new creation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-regen",
+        "clm-barnabas-affirms-baptism-water",
+        "clm-barnabas-affirms-bodily-resurrection",
+        "clm-barnabas-affirms-catechumenate",
+        "clm-barnabas-affirms-fasting",
+        "clm-barnabas-affirms-judgment",
+        "clm-barnabas-affirms-logos",
+        "clm-barnabas-affirms-martyrdom-witness",
+        "clm-barnabas-affirms-ot-scripture",
+        "clm-barnabas-affirms-repentance",
+        "clm-barnabas-affirms-virgin-birth",
+        "clm-barnabas-ep-by-barnabas"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-barnabas-6": [
+          "clm-barnabas-affirms-logos"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-affirms-judgment",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "final-judgment-is-coming",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "proposition_id": "final-judgment-is-coming",
+        "topic_id": "final-judgment",
+        "dimension_id": "coming-judgment",
+        "proposition_label": "A final judgment is coming",
+        "polarity_family": "coming_judgment",
+        "description": "Texts or teachers present a climactic future judgment of the wicked and vindication of the righteous.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-affirms-judgment",
+            "passage_id": "psg-barnabas-18-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Barnabas teaches the way of light vs the way of darkness with eschatological consequences."
+          },
+          "passage": {
+            "passage_id": "psg-barnabas-18-1",
+            "source_id": "src-barnabas",
+            "locator_type": "source_ref",
+            "locator": "Barn. 18.1",
+            "excerpt": "There are two ways of teaching and of power, the one of light and the other of darkness; and there is a great difference between the two ways. For on the one are stationed the light-giving angels of God, on the other the angels of Satan.",
+            "language": "English",
+            "passage_year": "100",
+            "url_override": "",
+            "notes": "Opening of the Two Ways catechesis (chs. 18-20); functions as pre-baptismal moral instruction"
+          },
+          "source": {
+            "source_id": "src-barnabas",
+            "work_id": "epistle-of-barnabas",
+            "source_kind": "primary_text",
+            "title": "Epistle of Barnabas",
+            "author": "Anonymous early church",
+            "editor": "",
+            "year_display": "c. 70-130",
+            "year_start": "70",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0124.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Baptismal typology, two-ways teaching, anti-Jewish exegesis; important witness for baptism as new creation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-regen",
+        "clm-barnabas-affirms-baptism-water",
+        "clm-barnabas-affirms-bodily-resurrection",
+        "clm-barnabas-affirms-catechumenate",
+        "clm-barnabas-affirms-fasting",
+        "clm-barnabas-affirms-incarnation",
+        "clm-barnabas-affirms-logos",
+        "clm-barnabas-affirms-martyrdom-witness",
+        "clm-barnabas-affirms-ot-scripture",
+        "clm-barnabas-affirms-repentance",
+        "clm-barnabas-affirms-virgin-birth",
+        "clm-barnabas-ep-by-barnabas"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-barnabas-18-1": [
+          "clm-barnabas-affirms-catechumenate",
+          "clm-barnabas-affirms-repentance"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-affirms-logos",
+            "passage_id": "psg-barnabas-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-barnabas-6",
+            "source_id": "src-barnabas",
+            "locator_type": "source_ref",
+            "locator": "Barn. 6.9",
+            "excerpt": "Since therefore He was about to be made manifest in the flesh and to suffer, His suffering was foreordained. The prophet speaks: Spare my soul from the sword, and fasten my flesh with nails; for the congregation of evildoers hath risen up against me.",
+            "language": "English",
+            "passage_year": "100",
+            "url_override": "",
+            "notes": "Christ's suffering in the flesh as prophetically foreordained; incarnation theology"
+          },
+          "source": {
+            "source_id": "src-barnabas",
+            "work_id": "epistle-of-barnabas",
+            "source_kind": "primary_text",
+            "title": "Epistle of Barnabas",
+            "author": "Anonymous early church",
+            "editor": "",
+            "year_display": "c. 70-130",
+            "year_start": "70",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0124.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Baptismal typology, two-ways teaching, anti-Jewish exegesis; important witness for baptism as new creation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-regen",
+        "clm-barnabas-affirms-baptism-water",
+        "clm-barnabas-affirms-bodily-resurrection",
+        "clm-barnabas-affirms-catechumenate",
+        "clm-barnabas-affirms-fasting",
+        "clm-barnabas-affirms-incarnation",
+        "clm-barnabas-affirms-judgment",
+        "clm-barnabas-affirms-martyrdom-witness",
+        "clm-barnabas-affirms-ot-scripture",
+        "clm-barnabas-affirms-repentance",
+        "clm-barnabas-affirms-virgin-birth",
+        "clm-barnabas-ep-by-barnabas"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-barnabas-6": [
+          "clm-barnabas-affirms-incarnation"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-affirms-martyrdom-witness",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "martyrdom-witnesses-to-christ",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "proposition_id": "martyrdom-witnesses-to-christ",
+        "topic_id": "martyrdom-theology",
+        "dimension_id": "martyr-witness",
+        "proposition_label": "Martyrdom is bearing faithful witness to Christ before authorities",
+        "polarity_family": "martyr_witness",
+        "description": "The martyr's death is presented as a form of witness to Christ, conforming to his passion and declaring undivided fidelity before earthly powers.",
+        "notes": "Martyrdom theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-affirms-martyrdom-witness",
+            "passage_id": "psg-barnabas-19",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-barnabas-19",
+            "source_id": "src-barnabas",
+            "locator_type": "source_ref",
+            "locator": "Barn. 19.1-8",
+            "excerpt": "The way of light: love your Creator, glorify him who redeemed you from death. You shall fast and pray for the salvation of your soul. You shall not forsake the commandments of the Lord. You shall confess your transgressions.",
+            "language": "English",
+            "passage_year": "100",
+            "url_override": "",
+            "notes": "Two-ways instruction with fasting as explicit requirement"
+          },
+          "source": {
+            "source_id": "src-barnabas",
+            "work_id": "epistle-of-barnabas",
+            "source_kind": "primary_text",
+            "title": "Epistle of Barnabas",
+            "author": "Anonymous early church",
+            "editor": "",
+            "year_display": "c. 70-130",
+            "year_start": "70",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0124.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Baptismal typology, two-ways teaching, anti-Jewish exegesis; important witness for baptism as new creation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-regen",
+        "clm-barnabas-affirms-baptism-water",
+        "clm-barnabas-affirms-bodily-resurrection",
+        "clm-barnabas-affirms-catechumenate",
+        "clm-barnabas-affirms-fasting",
+        "clm-barnabas-affirms-incarnation",
+        "clm-barnabas-affirms-judgment",
+        "clm-barnabas-affirms-logos",
+        "clm-barnabas-affirms-ot-scripture",
+        "clm-barnabas-affirms-repentance",
+        "clm-barnabas-affirms-virgin-birth",
+        "clm-barnabas-ep-by-barnabas"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-barnabas-19": [
+          "clm-barnabas-affirms-bodily-resurrection",
+          "clm-barnabas-affirms-fasting"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-affirms-ot-scripture",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-affirms-ot-scripture",
+            "passage_id": "psg-barnabas-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "epistle-of-barnabas is a primary text directly relevant to old-testament-is-authoritative-scripture."
+          },
+          "passage": {
+            "passage_id": "psg-barnabas-11",
+            "source_id": "src-barnabas",
+            "locator_type": "source_ref",
+            "locator": "Barn. 11",
+            "excerpt": "Regarding water, the Scripture speaks concerning Israel: woe to those who have abandoned the living spring and dug themselves cisterns. Baptism is a holy spring of life. We descend into the water laden with sin but come up bearing fruit.",
+            "language": "English",
+            "passage_year": "100",
+            "url_override": "",
+            "notes": "OT baptism typology; water as life-giving spring; regeneration language"
+          },
+          "source": {
+            "source_id": "src-barnabas",
+            "work_id": "epistle-of-barnabas",
+            "source_kind": "primary_text",
+            "title": "Epistle of Barnabas",
+            "author": "Anonymous early church",
+            "editor": "",
+            "year_display": "c. 70-130",
+            "year_start": "70",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0124.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Baptismal typology, two-ways teaching, anti-Jewish exegesis; important witness for baptism as new creation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-regen",
+        "clm-barnabas-affirms-baptism-water",
+        "clm-barnabas-affirms-bodily-resurrection",
+        "clm-barnabas-affirms-catechumenate",
+        "clm-barnabas-affirms-fasting",
+        "clm-barnabas-affirms-incarnation",
+        "clm-barnabas-affirms-judgment",
+        "clm-barnabas-affirms-logos",
+        "clm-barnabas-affirms-martyrdom-witness",
+        "clm-barnabas-affirms-repentance",
+        "clm-barnabas-affirms-virgin-birth",
+        "clm-barnabas-ep-by-barnabas"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-barnabas-11": [
+          "clm-barnabas-affirms-baptism-regen",
+          "clm-barnabas-affirms-baptism-water",
+          "clm-barnabas-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-barnabas-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-affirms-repentance",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "repentance-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "proposition_id": "repentance-is-required",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "repentant-response",
+        "proposition_label": "Repentance is required in response to the proclamation",
+        "polarity_family": "repentance_response",
+        "description": "The proclamation of the kingdom calls hearers to repentance.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-affirms-repentance",
+            "passage_id": "psg-barnabas-18-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Barnabas's Two Ways implies moral conversion before baptism."
+          },
+          "passage": {
+            "passage_id": "psg-barnabas-18-1",
+            "source_id": "src-barnabas",
+            "locator_type": "source_ref",
+            "locator": "Barn. 18.1",
+            "excerpt": "There are two ways of teaching and of power, the one of light and the other of darkness; and there is a great difference between the two ways. For on the one are stationed the light-giving angels of God, on the other the angels of Satan.",
+            "language": "English",
+            "passage_year": "100",
+            "url_override": "",
+            "notes": "Opening of the Two Ways catechesis (chs. 18-20); functions as pre-baptismal moral instruction"
+          },
+          "source": {
+            "source_id": "src-barnabas",
+            "work_id": "epistle-of-barnabas",
+            "source_kind": "primary_text",
+            "title": "Epistle of Barnabas",
+            "author": "Anonymous early church",
+            "editor": "",
+            "year_display": "c. 70-130",
+            "year_start": "70",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0124.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Baptismal typology, two-ways teaching, anti-Jewish exegesis; important witness for baptism as new creation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-regen",
+        "clm-barnabas-affirms-baptism-water",
+        "clm-barnabas-affirms-bodily-resurrection",
+        "clm-barnabas-affirms-catechumenate",
+        "clm-barnabas-affirms-fasting",
+        "clm-barnabas-affirms-incarnation",
+        "clm-barnabas-affirms-judgment",
+        "clm-barnabas-affirms-logos",
+        "clm-barnabas-affirms-martyrdom-witness",
+        "clm-barnabas-affirms-ot-scripture",
+        "clm-barnabas-affirms-virgin-birth",
+        "clm-barnabas-ep-by-barnabas"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-barnabas-18-1": [
+          "clm-barnabas-affirms-catechumenate",
+          "clm-barnabas-affirms-judgment"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-affirms-virgin-birth",
+        "subject_type": "work",
+        "subject_id": "epistle-of-barnabas",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-barnabas",
+        "title_display": "Epistle of Barnabas",
+        "title_original": "Βαρνάβα Ἐπιστολή",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Early Christian letter of uncertain authorship c. 70-130 with extensive baptismal typology and anti-Jewish exegesis."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-affirms-virgin-birth",
+            "passage_id": "psg-barnabas-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-barnabas-11",
+            "source_id": "src-barnabas",
+            "locator_type": "source_ref",
+            "locator": "Barn. 11",
+            "excerpt": "Regarding water, the Scripture speaks concerning Israel: woe to those who have abandoned the living spring and dug themselves cisterns. Baptism is a holy spring of life. We descend into the water laden with sin but come up bearing fruit.",
+            "language": "English",
+            "passage_year": "100",
+            "url_override": "",
+            "notes": "OT baptism typology; water as life-giving spring; regeneration language"
+          },
+          "source": {
+            "source_id": "src-barnabas",
+            "work_id": "epistle-of-barnabas",
+            "source_kind": "primary_text",
+            "title": "Epistle of Barnabas",
+            "author": "Anonymous early church",
+            "editor": "",
+            "year_display": "c. 70-130",
+            "year_start": "70",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0124.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Baptismal typology, two-ways teaching, anti-Jewish exegesis; important witness for baptism as new creation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-affirms-baptism-regen",
+        "clm-barnabas-affirms-baptism-water",
+        "clm-barnabas-affirms-bodily-resurrection",
+        "clm-barnabas-affirms-catechumenate",
+        "clm-barnabas-affirms-fasting",
+        "clm-barnabas-affirms-incarnation",
+        "clm-barnabas-affirms-judgment",
+        "clm-barnabas-affirms-logos",
+        "clm-barnabas-affirms-martyrdom-witness",
+        "clm-barnabas-affirms-ot-scripture",
+        "clm-barnabas-affirms-repentance",
+        "clm-barnabas-ep-by-barnabas"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-barnabas-11": [
+          "clm-barnabas-affirms-baptism-regen",
+          "clm-barnabas-affirms-baptism-water",
+          "clm-barnabas-affirms-ot-scripture"
+        ]
+      },
+      "flags": []
+    }
+  ]
+}

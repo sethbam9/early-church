@@ -1,0 +1,2492 @@
+{
+  "batch_id": "batch-046",
+  "queue": "0B",
+  "focus": "structural purge",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-clement-active-in-alexandria",
+        "subject_type": "person",
+        "subject_id": "clement-of-alexandria",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "170",
+        "year_end": "202",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "clement-of-alexandria",
+        "person_label": "Clement of Alexandria",
+        "name_alt": "Titus Flavius Clemens",
+        "name_native": "Κλήμης Ἀλεξανδρεύς",
+        "birth_year_display": "c. 150",
+        "death_year_display": "c. 215",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria; author of Protrepticus, Paedagogus, and Stromateis; synthesized Christian faith with Greek philosophy; key witness for Alexandrian baptismal theology, eucharistic practice, asceticism, and apostolic tradition."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-clement-active-in-alexandria",
+            "passage_id": "psg-clement-strom-7-17-105-108",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Clement's Stromateis written in Alexandria; he explicitly locates himself there."
+          },
+          "passage": {
+            "passage_id": "psg-clement-strom-7-17-105-108",
+            "source_id": "src-clement-stromateis",
+            "locator_type": "source_ref",
+            "locator": "Strom. 7.17.105-108",
+            "excerpt": "They preserve the tradition of the blessed teaching derived directly from the holy apostles, Peter, James, John, and Paul, the son receiving it from the father; came by God's will to us also to deposit those ancestral and apostolic seeds. And they are rightly called gnostics who have been nurtured in this ecclesiastical and apostolic tradition. The true gnostic, in my opinion, is he who has grown old in the Scriptures, and maintains the apostolic and ecclesiastical standard of doctrine.",
+            "language": "English",
+            "passage_year": "198",
+            "url_override": "",
+            "notes": "Apostolic tradition preserved through teacher succession from Peter, James, John, and Paul; rule of faith"
+          },
+          "source": {
+            "source_id": "src-clement-stromateis",
+            "work_id": "stromateis",
+            "source_kind": "primary_text",
+            "title": "The Stromata (Stromateis)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "c. 198-203",
+            "year_start": "198",
+            "year_end": "203",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0210.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Clement's eight-book synthesis of Christian faith and philosophy; ANF Vol. 2, Wilson translation, revised for New Advent."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-clement-alex-active-athens",
+        "clm-clement-alex-member-alexandrian",
+        "clm-clement-alex-affirms-incarnation",
+        "clm-clement-alex-affirms-ot-scripture",
+        "clm-clement-teacher-of-origen"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-clement-strom-7-17-105-108": [
+          "clm-strom-affirms-apostolic-succession",
+          "clm-strom-affirms-rule-of-faith"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:auth_written:quis-dives-salvetur",
+        "UNSCORED_WEIGHT:psg-clement-strom-7-17-105-108"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-tatian-active-edessa",
+        "subject_type": "person",
+        "subject_id": "tatian-the-assyrian",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "172",
+        "year_end": "180",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tatian-the-assyrian",
+        "person_label": "Tatian the Assyrian",
+        "name_alt": "Tatian",
+        "name_native": "Τατιανός",
+        "birth_year_display": "c. 120",
+        "death_year_display": "c. 180",
+        "person_kind": "individual",
+        "notes": "Student of Justin Martyr in Rome; wrote the Oration to the Greeks c. 155-165 and compiled the Diatessaron (harmony of four Gospels); later became an encratite ascetic and returned to the East."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tatian-active-edessa",
+            "passage_id": "psg-eusebius-he-4-30",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions tatian-the-assyrian or edessa."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-4-30",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 4.30",
+            "excerpt": "Paraphrase: Eusebius reports that Bardaisan of Edessa was at first a follower of Valentinus but later turned against the Valentinian heresy; he composed many dialogues in Syriac and Greek against the Marcionites and other heretics; despite his eloquent defense of the faith, he did not wholly purge himself of the old heresy.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Bardaisan of Edessa"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tatian-active-rome",
+        "clm-tatian-member-roman-church",
+        "clm-tatian-active-antioch",
+        "clm-tatian-affirms-encratism",
+        "clm-tatian-affirms-gospel-harmony"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-eusebius-he-4-30": [
+          "clm-bardaisan-active-armenia",
+          "clm-bardaisan-active-edessa",
+          "clm-bardaisan-affirms-incarnation",
+          "clm-bardaisan-in-conversion",
+          "clm-bardaisan-member-edessa-church",
+          "clm-bardesanites-schismed-from-edessa",
+          "clm-tatian-affirms-encratism",
+          "clm-tatian-affirms-gospel-harmony"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:auth_written:diatessaron",
+        "PARAPHRASE_RISK:psg-eusebius-he-4-30"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-irenaeus-active-rome",
+        "subject_type": "person",
+        "subject_id": "irenaeus-of-lyons",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "177",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T20:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "irenaeus-of-lyons",
+        "person_label": "Irenaeus of Lyons",
+        "name_alt": "Irenaeus",
+        "name_native": "Εἰρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 202",
+        "person_kind": "individual",
+        "notes": "Bishop of Lyons (Lugdunum) and major anti-gnostic theologian; pupil of Polycarp; author of Against Heresies c. 180, the foundational work on apostolic succession, rule of faith, and refutation of Valentinianism and Marcionism."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-active-rome",
+            "passage_id": "psg-irenaeus-ah-3-3-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.2",
+            "excerpt": "Paraphrase: The tradition derived from the apostles of the very great, very ancient, universally known Church founded at Rome by Peter and Paul — every Church must agree with this Church on account of its preeminent authority (potiorem principalitatem); the faith preached to men comes down to our time by means of the successions of the bishops.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-coworker-irenaeus",
+        "clm-irenaeus-active-smyrna",
+        "clm-irenaeus-in-lyons-persecution",
+        "clm-irenaeus-member-roman-church-visit",
+        "clm-irenaeus-active-lyons",
+        "clm-irenaeus-in-ah-composition",
+        "clm-irenaeus-coworker-victor",
+        "clm-irenaeus-in-quartodeciman",
+        "clm-irenaeus-teacher-hippolytus",
+        "clm-irenaeus-originated-smyrna"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-3-2": [
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-irenaeus-ah-affirms-episcopal-chair",
+          "clm-polycarp-bishop-smyrna"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:quartodeciman-controversy",
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-abgar-viii-active-edessa",
+        "subject_type": "person",
+        "subject_id": "abgar-viii-of-edessa",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "212",
+        "context_place_id": "edessa",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "abgar-viii-of-edessa",
+        "person_label": "Abgar VIII of Edessa",
+        "name_alt": "Abgar the Great",
+        "name_native": "ܐܒܓܪ",
+        "birth_year_display": "c. 177",
+        "death_year_display": "c. 212",
+        "person_kind": "individual",
+        "notes": "King of Osroene (c. 177–212) who converted to Christianity c. 200, making Edessa likely the first Christian state; distinct from the legendary Abgar V of the Eusebius HE 1.13 correspondence tradition."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-abgar-viii-active-edessa",
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests abgar-viii-of-edessa's activity in or near edessa."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "source_id": "src-wikipedia-early-church-geography",
+            "locator_type": "source_ref",
+            "locator": "Early_centers_of_Christianity",
+            "excerpt": "Early centers of Christianity included Jerusalem, Antioch, Alexandria, Rome, Carthage, and Edessa. Communities spread to Persia, India, and Ethiopia by the 4th century.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for general early Christian presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-early-church-geography",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Early centers of Christianity - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Early_centers_of_Christianity",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Survey of early Christian communities and geographic spread."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-abgar-in-conversion-edessa",
+        "clm-abgar-member-edessa-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-wikipedia-early-church-geography": [
+          "clm-abgar-member-edessa-church",
+          "clm-bardaisan-member-bardesanites",
+          "clm-const381-event-year",
+          "clm-cyprian-originated-carthage",
+          "clm-cyril-participant-ephesus-431",
+          "clm-dura-church-at-dura",
+          "clm-dura-church-construction-year",
+          "clm-dura-church-year",
+          "clm-ebionites-at-egypt",
+          "clm-edessa-church-at-edessa",
+          "clm-ephesus-431-event-year",
+          "clm-hippolytus-callistus-schism-year",
+          "clm-irenaeus-ah-year",
+          "clm-montanus-coworker-priscilla-montanist",
+          "clm-place-bostra-attested",
+          "clm-place-caesarea-cappadocia-attested",
+          "clm-place-carthage-attested",
+          "clm-place-dalmatia-attested-late",
+          "clm-place-dura-europos-attested",
+          "clm-place-edessa-attested",
+          "clm-place-neocaesarea-attested",
+          "clm-place-sardinia-attested",
+          "clm-priscilla-montanist-affirms-prophecy",
+          "clm-priscilla-montanist-member-montanists"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:conversion-of-edessa",
+        "UNSCORED_WEIGHT:psg-wikipedia-early-church-geography",
+        "TERTIARY_ONLY_SUPPORT",
+        "TERTIARY_DOCTRINAL"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-irenaeus-active-lyons",
+        "subject_type": "person",
+        "subject_id": "irenaeus-of-lyons",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "lyons",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "178",
+        "year_end": "202",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T20:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "irenaeus-of-lyons",
+        "person_label": "Irenaeus of Lyons",
+        "name_alt": "Irenaeus",
+        "name_native": "Εἰρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 202",
+        "person_kind": "individual",
+        "notes": "Bishop of Lyons (Lugdunum) and major anti-gnostic theologian; pupil of Polycarp; author of Against Heresies c. 180, the foundational work on apostolic succession, rule of faith, and refutation of Valentinianism and Marcionism."
+      },
+      "object_entity": {
+        "place_id": "lyons",
+        "place_label": "Lyons",
+        "place_label_modern": "Lyon",
+        "place_kind": "city",
+        "parent_place_id": "gaul",
+        "lat": "45.7640",
+        "lon": "4.8357",
+        "location_precision": "approx_city",
+        "modern_country_label": "France",
+        "notes": "City in Gaul (Lugdunum) where Irenaeus was bishop from c. 178; site of the 177 AD persecution under Marcus Aurelius attested in the letter preserved by Eusebius."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-active-lyons",
+            "passage_id": "psg-irenaeus-ah-3-3-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.1",
+            "excerpt": "Paraphrase: It is within the power of all in every Church to contemplate the tradition of the apostles manifested throughout the whole world and to reckon up those who were instituted bishops by the apostles and their succession to our own times; those who taught nothing like what the heretics rave about.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-coworker-irenaeus",
+        "clm-irenaeus-active-smyrna",
+        "clm-irenaeus-active-rome",
+        "clm-irenaeus-in-lyons-persecution",
+        "clm-irenaeus-member-roman-church-visit",
+        "clm-irenaeus-in-ah-composition",
+        "clm-irenaeus-coworker-victor",
+        "clm-irenaeus-in-quartodeciman",
+        "clm-irenaeus-teacher-hippolytus",
+        "clm-irenaeus-originated-smyrna"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-3-1": [
+          "clm-against-heresies-written-lyons",
+          "clm-ah-affirms-ordination",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-irenaeus-ah-affirms-episcopal-chair",
+          "clm-lyons-persecution-at-lyons",
+          "clm-peter-bishop-rome"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:auth_written:against-heresies",
+        "REDUNDANT_DERIVED_PRESENCE:part_event:irenaeus-writes-against-heresies",
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-1",
+        "PARAPHRASE_OMISSION:psg-irenaeus-ah-3-3-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pantaenus-active-india",
+        "subject_type": "person",
+        "subject_id": "pantaenus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "india-malabar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "180",
+        "year_end": "185",
+        "context_place_id": "india-malabar",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pantaenus",
+        "person_label": "Pantaenus",
+        "name_alt": "Pantaenus of Alexandria",
+        "name_native": "Πάνταινος",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 200",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria before Clement; former Stoic philosopher converted to Christianity. According to Eusebius, he traveled as far as India as a missionary. He was Clement of Alexandria's primary teacher."
+      },
+      "object_entity": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "context_place": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pantaenus-active-india",
+            "passage_id": "psg-eusebius-he-5-10-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius reports Pantaenus went to India."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-3-4",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.3–4",
+            "excerpt": "Paraphrase: Pantaenus is said to have gone to India where he found persons who knew of Christ. Bartholomew one of the apostles had preached to them and left with them the writing of Matthew in the Hebrew language which they had preserved till that time.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Pantaenus finding Christians in India with a Hebrew Matthew from Bartholomew."
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-active-alexandria",
+        "clm-pantaenus-member-alexandria-church",
+        "clm-pantaenus-teacher-of-clement",
+        "clm-pantaenus-participant-india-mission",
+        "clm-person-pantaenus-affirms-bartholomew",
+        "clm-person-pantaenus-affirms-india"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-eusebius-he-5-10-3-4": [
+          "clm-acts-thomas-affirms-thomas-india",
+          "clm-bartholomew-active-india",
+          "clm-eusebius-he-affirms-bartholomew-india",
+          "clm-eusebius-he-affirms-india-reached",
+          "clm-pantaenus-mission-at-india",
+          "clm-pantaenus-participant-india-mission",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-place-neocaesarea-attested"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:mission-of-pantaenus-to-india",
+        "PARAPHRASE_RISK:psg-eusebius-he-5-10-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-clement-alex-affirms-incarnation",
+        "subject_type": "person",
+        "subject_id": "clement-of-alexandria",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "190",
+        "year_end": "202",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "clement-of-alexandria",
+        "person_label": "Clement of Alexandria",
+        "name_alt": "Titus Flavius Clemens",
+        "name_native": "Κλήμης Ἀλεξανδρεύς",
+        "birth_year_display": "c. 150",
+        "death_year_display": "c. 215",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria; author of Protrepticus, Paedagogus, and Stromateis; synthesized Christian faith with Greek philosophy; key witness for Alexandrian baptismal theology, eucharistic practice, asceticism, and apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-clement-alex-affirms-incarnation",
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions clement-of-alexandria or christ-truly-became-flesh."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.1–2",
+            "excerpt": "A man named Pantaenus was put in charge of the catechetical school at Alexandria, a school whose existence is attested from ancient times. This man had been trained in the Stoic system of philosophy; tradition reports he went as far as India to preach Christ to the Brahmans. Clement of Alexandria names him in his own writings as his instructor, showing that Pantaenus stood in the succession of teachers at Alexandria.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-clement-alex-active-athens",
+        "clm-clement-active-in-alexandria",
+        "clm-clement-alex-member-alexandrian",
+        "clm-clement-alex-affirms-ot-scripture",
+        "clm-clement-teacher-of-origen"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-eusebius-he-5-10-1-2": [
+          "clm-arabian-christians-at-bostra",
+          "clm-clement-alex-active-athens",
+          "clm-clement-alex-affirms-ot-scripture",
+          "clm-clement-alex-member-alexandrian",
+          "clm-clement-teacher-of-origen",
+          "clm-eusebius-he-mentions-pantaenus-mission",
+          "clm-eusebius-he-written-caesarea",
+          "clm-origen-active-alexandria",
+          "clm-origen-member-alexandrian-church",
+          "clm-pantaenus-active-alexandria",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-pantaenus-mission-year",
+          "clm-pantaenus-teacher-of-clement",
+          "clm-person-pantaenus-affirms-india"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_PERSON_PROP:clm-paed-affirms-incarnation"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-tertullian-active-carthage",
+        "subject_type": "person",
+        "subject_id": "tertullian",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "195",
+        "year_end": "220",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tertullian",
+        "person_label": "Tertullian",
+        "name_alt": "Quintus Septimius Florens Tertullianus",
+        "name_native": "Tertullianus",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 220",
+        "person_kind": "individual",
+        "notes": "First major Latin Christian author; active in Carthage c. 195–220. Wrote at least 31 works spanning apologetics, anti-heretical polemic, and moral discipline. Coined 'trinitas' and 'tres personae una substantia'. Defender of apostolic succession, rule of faith, incarnation, and bodily resurrection. Later attracted to Montanist rigorism c. 207; teacher of Cyprian by doctrinal influence."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tertullian-active-carthage",
+            "passage_id": "psg-tertullian-apol-39",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.85",
+            "notes": "Describes assembly life in Carthage implying direct involvement"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-apol-39",
+            "source_id": "src-tertullian-apologeticum",
+            "locator_type": "source_ref",
+            "locator": "Apol. 39",
+            "excerpt": "We are a body knit together by a common religious profession, by unity of discipline, and by the bond of a common hope. We meet together as an assembly and a congregation. We pray together, we read scripture, we offer exhortation. Our presidents are elders, approved men. There is no buying and selling of any sort in the things of God. Even if there is a chest of sorts, it is not made up of purchase-money. On the monthly day, each puts in a small donation, if he will, and only if he be willing; for no one is compelled. These gifts are not spent on feasts or drinking bouts but to support and bury poor people, to supply the wants of boys and girls destitute of means and parents, and of old persons confined to the house.",
+            "language": "English",
+            "passage_year": "197",
+            "url_override": "",
+            "notes": "Description of Christian assembly, common fund, and community life in Carthage"
+          },
+          "source": {
+            "source_id": "src-tertullian-apologeticum",
+            "work_id": "apologeticum",
+            "source_kind": "primary_text",
+            "title": "Apologeticum",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 197",
+            "year_start": "197",
+            "year_end": "197",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0301.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's defense of Christianity; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tertullian-active-rome",
+        "clm-tertullian-member-carthage",
+        "clm-tertullian-affirms-catechumenate",
+        "clm-tertullian-affirms-eucharist-sacrifice",
+        "clm-tertullian-affirms-fasting",
+        "clm-tertullian-affirms-succession",
+        "clm-tertullian-affirms-threefold-ministry",
+        "clm-tertullian-develops-trinitarian-formula",
+        "clm-tertullian-teacher-cyprian",
+        "clm-tertullian-member-montanists",
+        "clm-tertullian-originated-carthage"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-tertullian-apol-39": [
+          "clm-apologeticum-written-carthage",
+          "clm-carthage-church-at-carthage",
+          "clm-tertullian-affirms-catechumenate",
+          "clm-tertullian-affirms-fasting",
+          "clm-tertullian-member-carthage"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:auth_written:de-praescriptione-haereticorum"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-tertullian-affirms-catechumenate",
+        "subject_type": "person",
+        "subject_id": "tertullian",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "catechumenate-precedes-baptism",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "195",
+        "year_end": "220",
+        "context_place_id": "carthage",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tertullian",
+        "person_label": "Tertullian",
+        "name_alt": "Quintus Septimius Florens Tertullianus",
+        "name_native": "Tertullianus",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 220",
+        "person_kind": "individual",
+        "notes": "First major Latin Christian author; active in Carthage c. 195–220. Wrote at least 31 works spanning apologetics, anti-heretical polemic, and moral discipline. Coined 'trinitas' and 'tres personae una substantia'. Defender of apostolic succession, rule of faith, incarnation, and bodily resurrection. Later attracted to Montanist rigorism c. 207; teacher of Cyprian by doctrinal influence."
+      },
+      "object_entity": {
+        "proposition_id": "catechumenate-precedes-baptism",
+        "topic_id": "baptism-practice",
+        "dimension_id": "catechumenate",
+        "proposition_label": "A formal catechumenate precedes baptism",
+        "polarity_family": "",
+        "description": "Candidates for baptism undergo a structured period of pre-baptismal instruction, examination, and moral formation (the catechumenate) before being admitted to the sacrament.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tertullian-affirms-catechumenate",
+            "passage_id": "psg-tertullian-apol-39",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-apol-39",
+            "source_id": "src-tertullian-apologeticum",
+            "locator_type": "source_ref",
+            "locator": "Apol. 39",
+            "excerpt": "We are a body knit together by a common religious profession, by unity of discipline, and by the bond of a common hope. We meet together as an assembly and a congregation. We pray together, we read scripture, we offer exhortation. Our presidents are elders, approved men. There is no buying and selling of any sort in the things of God. Even if there is a chest of sorts, it is not made up of purchase-money. On the monthly day, each puts in a small donation, if he will, and only if he be willing; for no one is compelled. These gifts are not spent on feasts or drinking bouts but to support and bury poor people, to supply the wants of boys and girls destitute of means and parents, and of old persons confined to the house.",
+            "language": "English",
+            "passage_year": "197",
+            "url_override": "",
+            "notes": "Description of Christian assembly, common fund, and community life in Carthage"
+          },
+          "source": {
+            "source_id": "src-tertullian-apologeticum",
+            "work_id": "apologeticum",
+            "source_kind": "primary_text",
+            "title": "Apologeticum",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 197",
+            "year_start": "197",
+            "year_end": "197",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0301.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's defense of Christianity; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-tertullian-affirms-catechumenate",
+            "passage_id": "psg-tertullian-de-bapt-18",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Tertullian De Bapt. 18 explicitly describes the catechumenate process before baptism."
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-bapt-18",
+            "source_id": "src-tertullian-de-baptismo",
+            "locator_type": "source_ref",
+            "locator": "De Bapt. 18",
+            "excerpt": "And so, according to the circumstances and disposition, and even age, of each individual, the delay of baptism is preferable; principally, however, in the case of little children. For why is it necessary — if baptism itself be not so necessary — that the sponsors likewise should be thrust into danger? Let them come, then, while they are growing up; let them come while they are learning, while they are being taught whither to come; let them become Christians when they have become able to know Christ.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Recommends delaying baptism of children; earliest explicit argument against routine infant baptism"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-baptismo",
+            "work_id": "de-baptismo",
+            "source_kind": "primary_text",
+            "title": "De Baptismo",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198-200",
+            "year_start": "198",
+            "year_end": "200",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0321.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's baptism treatise; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tertullian-active-rome",
+        "clm-tertullian-member-carthage",
+        "clm-tertullian-active-carthage",
+        "clm-tertullian-affirms-eucharist-sacrifice",
+        "clm-tertullian-affirms-fasting",
+        "clm-tertullian-affirms-succession",
+        "clm-tertullian-affirms-threefold-ministry",
+        "clm-tertullian-develops-trinitarian-formula",
+        "clm-tertullian-teacher-cyprian",
+        "clm-tertullian-member-montanists",
+        "clm-tertullian-originated-carthage"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-tertullian-apol-39": [
+          "clm-apologeticum-written-carthage",
+          "clm-carthage-church-at-carthage",
+          "clm-tertullian-active-carthage",
+          "clm-tertullian-affirms-fasting",
+          "clm-tertullian-member-carthage"
+        ],
+        "psg-tertullian-de-bapt-18": [
+          "clm-de-bapt-opposes-infant-baptism"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_PERSON_PROP:clm-de-bapt-affirms-catechumenate"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-origen-active-alexandria",
+        "subject_type": "person",
+        "subject_id": "origen-of-alexandria",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "202",
+        "year_end": "232",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign5-heretics",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "person_id": "origen-of-alexandria",
+        "person_label": "Origen of Alexandria",
+        "name_alt": "Origen, Adamantius",
+        "name_native": "Ὠριγένης",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Leading Alexandrian theologian and biblical scholar; student of Clement of Alexandria and eventual head of the Catechetical School. Prolific author covering exegesis, apologetics, and systematic theology. Active in Alexandria (c. 202–232) then Caesarea."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-origen-active-alexandria",
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius' school context establishes Alexandria as the center of Clement→Origen succession."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.1–2",
+            "excerpt": "A man named Pantaenus was put in charge of the catechetical school at Alexandria, a school whose existence is attested from ancient times. This man had been trained in the Stoic system of philosophy; tradition reports he went as far as India to preach Christ to the Brahmans. Clement of Alexandria names him in his own writings as his instructor, showing that Pantaenus stood in the succession of teachers at Alexandria.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-origen-teacher-of-heraclas",
+        "clm-origen-member-alexandrian-church",
+        "clm-origen-teacher-of-dionysius",
+        "clm-origen-teacher-of-julius-africanus",
+        "clm-origen-develops-allegorical",
+        "clm-origen-participant-expulsion",
+        "clm-origen-active-antioch",
+        "clm-origen-teacher-of-firmilian",
+        "clm-origen-active-caesarea",
+        "clm-origen-member-caesarean",
+        "clm-origen-teacher-of-gregory",
+        "clm-origen-participant-synod-bostra",
+        "clm-origen-participant-torture-decius",
+        "clm-origen-active-tyre",
+        "clm-origen-originated-alexandria"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {
+        "psg-eusebius-he-5-10-1-2": [
+          "clm-arabian-christians-at-bostra",
+          "clm-clement-alex-active-athens",
+          "clm-clement-alex-affirms-incarnation",
+          "clm-clement-alex-affirms-ot-scripture",
+          "clm-clement-alex-member-alexandrian",
+          "clm-clement-teacher-of-origen",
+          "clm-eusebius-he-mentions-pantaenus-mission",
+          "clm-eusebius-he-written-caesarea",
+          "clm-origen-member-alexandrian-church",
+          "clm-pantaenus-active-alexandria",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-pantaenus-mission-year",
+          "clm-pantaenus-teacher-of-clement",
+          "clm-person-pantaenus-affirms-india"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:auth_written:commentary-on-john-origen",
+        "REDUNDANT_DERIVED_PRESENCE:part_event:origen-expulsion-from-alexandria"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-origen-active-caesarea",
+        "subject_type": "person",
+        "subject_id": "origen-of-alexandria",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "caesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "232",
+        "year_end": "254",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign5b-connections",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "person_id": "origen-of-alexandria",
+        "person_label": "Origen of Alexandria",
+        "name_alt": "Origen, Adamantius",
+        "name_native": "Ὠριγένης",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Leading Alexandrian theologian and biblical scholar; student of Clement of Alexandria and eventual head of the Catechetical School. Prolific author covering exegesis, apologetics, and systematic theology. Active in Alexandria (c. 202–232) then Caesarea."
+      },
+      "object_entity": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-origen-active-caesarea",
+            "passage_id": "psg-eusebius-he-6-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.85",
+            "notes": "Eusebius describes Origen's departure from Alexandria and continuation of ministry in Caesarea."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-6",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.6",
+            "excerpt": "At this time, while Origen was conducting catechetical instruction at Alexandria, a deed was done which shows most clearly the immature age at which he was then still to be reckoned. Clement of Alexandria had taught him; and when Clement withdrew, Origen continued the school at the request of Demetrius the bishop.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-origen-teacher-of-heraclas",
+        "clm-origen-active-alexandria",
+        "clm-origen-member-alexandrian-church",
+        "clm-origen-teacher-of-dionysius",
+        "clm-origen-teacher-of-julius-africanus",
+        "clm-origen-develops-allegorical",
+        "clm-origen-participant-expulsion",
+        "clm-origen-active-antioch",
+        "clm-origen-teacher-of-firmilian",
+        "clm-origen-member-caesarean",
+        "clm-origen-teacher-of-gregory",
+        "clm-origen-participant-synod-bostra",
+        "clm-origen-participant-torture-decius",
+        "clm-origen-active-tyre",
+        "clm-origen-originated-alexandria"
+      ],
+      "sibling_count": 15,
+      "passage_co_users": {},
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:auth_written:contra-celsum",
+        "REDUNDANT_DERIVED_PRESENCE:part_event:origen-torture-under-decius"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gregory-thaum-active-caesarea",
+        "subject_type": "person",
+        "subject_id": "gregory-thaumaturgus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "caesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "233",
+        "year_end": "238",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gregory-thaumaturgus",
+        "person_label": "Gregory Thaumaturgus",
+        "name_alt": "Gregory the Wonderworker; Theodore",
+        "name_native": "Γρηγόριος ὁ Θαυματουργός",
+        "birth_year_display": "c. 213",
+        "death_year_display": "c. 270",
+        "person_kind": "individual",
+        "notes": "Student of Origen in Caesarea c. 233–238; bishop of Neocaesarea in Pontus c. 240–270; missionary who reportedly converted most of Pontus; his Address of Thanksgiving to Origen is a key source for Origen's teaching method; credited with many miracles."
+      },
+      "object_entity": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gregory-thaum-active-caesarea",
+            "passage_id": "psg-gregory-address-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Gregory explicitly describes studying under Origen in Caesarea."
+          },
+          "passage": {
+            "passage_id": "psg-gregory-address-6",
+            "source_id": "src-gregory-address-to-origen",
+            "locator_type": "source_ref",
+            "locator": "Address 6",
+            "excerpt": "Paraphrase: Origen led us first through the disciplines of logic, then natural philosophy, then geometry and astronomy, and finally theology and the study of Scripture; he taught us not by mere lecture but by the example of his life, guiding our souls as a skilled physician guides the sick toward health.",
+            "language": "English",
+            "passage_year": "238",
+            "url_override": "",
+            "notes": "Gregory describes Origen's curriculum and pedagogical method at Caesarea"
+          },
+          "source": {
+            "source_id": "src-gregory-address-to-origen",
+            "work_id": "address-to-origen",
+            "source_kind": "primary_text",
+            "title": "Address of Thanksgiving to Origen",
+            "author": "Gregory Thaumaturgus",
+            "editor": "",
+            "year_display": "c. 238",
+            "year_start": "238",
+            "year_end": "238",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0604.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Gregory's farewell panegyric to Origen describing his teaching method; ANF Vol. 6 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gregory-coworker-origen",
+        "clm-gregory-thaum-member-caesarean",
+        "clm-gregory-thaum-active-neocaesarea",
+        "clm-gregory-thaum-active-pontus"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-gregory-address-6": [
+          "clm-address-origen-affirms-allegorical",
+          "clm-address-origen-affirms-free-will",
+          "clm-address-origen-affirms-logos",
+          "clm-address-origen-affirms-ot",
+          "clm-address-origen-affirms-philosophy",
+          "clm-address-origen-by-gregory",
+          "clm-address-origen-written-at-caesarea",
+          "clm-gregory-coworker-origen",
+          "clm-gregory-thaum-active-neocaesarea",
+          "clm-gregory-thaum-active-pontus",
+          "clm-gregory-thaum-member-caesarean",
+          "clm-origen-teacher-of-gregory"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:auth_written:address-to-origen",
+        "PARAPHRASE_RISK:psg-gregory-address-6",
+        "PARAPHRASE_OMISSION:psg-gregory-address-6:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatian-active-rome",
+        "subject_type": "person",
+        "subject_id": "novatian",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "240",
+        "year_end": "258",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "novatian",
+        "person_label": "Novatian",
+        "name_alt": "Novatianus",
+        "name_native": "Νοβατιανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 258",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; author of De Trinitate (c. 250), the first systematic Latin treatise on the Trinity; rigorist who opposed the readmission of the lapsed after the Decian persecution; set up a rival church c. 251 against Pope Cornelius; his followers (Novatianists) persisted for centuries."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatian-active-rome",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius preserves Cornelius's letter describing Novatian as a Roman presbyter."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatian-member-roman-church",
+        "clm-novatian-in-decian",
+        "clm-novatian-in-novatian-schism",
+        "clm-novatian-member-novatianists",
+        "clm-novatian-person-opposes-penance",
+        "clm-novatian-active-carthage-mission"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:auth_written:de-trinitate-novatian",
+        "REDUNDANT_DERIVED_PRESENCE:part_event:decian-persecution",
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pontius-active-carthage",
+        "subject_type": "person",
+        "subject_id": "pontius-deacon",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "248",
+        "year_end": "258",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pontius-deacon",
+        "person_label": "Pontius the Deacon",
+        "name_alt": "Pontius",
+        "name_native": "",
+        "birth_year_display": "c. 220",
+        "death_year_display": "c. 260",
+        "person_kind": "individual",
+        "notes": "Deacon of Cyprian of Carthage; accompanied Cyprian into exile and was present at his martyrdom in 258; author of the Vita Cypriani, the earliest Latin Christian biography; provides key details about Cyprian's conversion, episcopate, and death."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pontius-active-carthage",
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Cyprian De Laps. 15-16 is addressed from Carthage; Pontius as Cyprian's deacon was there."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 15-16",
+            "excerpt": "Paraphrase: But to those who have stood firm and have not been overthrown, what great joy! To those who have lapsed, medicine is not to be denied; but the lapsed must not assume that peace can be given them hastily by anyone. Let them knock at the door of the Church, but not with violence to break it down; let them beg but not presumptuously demand. Proper penance under the bishop's authority must precede reconciliation.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Graded penance under episcopal authority; against hasty reconciliation by confessors"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pontius-member-carthage-church",
+        "clm-pontius-in-cyprians-martyrdom"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-15-16": [
+          "clm-celerinus-active-carthage",
+          "clm-celerinus-member-carthage-church",
+          "clm-council-carthage-251-at-carthage",
+          "clm-council-carthage-251-year",
+          "clm-cyprian-coworker-celerinus",
+          "clm-cyprian-in-council-251",
+          "clm-cyprian-teacher-of-pontius",
+          "clm-de-lapsis-affirms-baptism-regen",
+          "clm-de-lapsis-affirms-baptism-water",
+          "clm-de-lapsis-affirms-episcopal-unity",
+          "clm-de-lapsis-affirms-martyrdom-witness",
+          "clm-de-lapsis-affirms-penance",
+          "clm-de-lapsis-mentions-almsgiving"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:cyprians-martyrdom"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-celerinus-active-rome",
+        "subject_type": "person",
+        "subject_id": "celerinus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "252",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "celerinus",
+        "person_label": "Celerinus",
+        "name_alt": "",
+        "name_native": "Κελερῖνος",
+        "birth_year_display": "c. 220",
+        "death_year_display": "c. 260",
+        "person_kind": "individual",
+        "notes": "North African confessor during the Decian persecution c. 250; endured prolonged imprisonment and torture; his grandmother, uncle, and another uncle had earlier been martyred; Cyprian later appointed him as reader in the Carthaginian church; exemplar of the confessor phenomenon that complicated the lapsed controversy."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-celerinus-active-rome",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions celerinus or rome."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-celerinus-in-decian-persecution",
+        "clm-cyprian-coworker-celerinus",
+        "clm-celerinus-active-carthage",
+        "clm-celerinus-member-carthage-church"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:decian-persecution",
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-43:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-celerinus-active-carthage",
+        "subject_type": "person",
+        "subject_id": "celerinus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "260",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "celerinus",
+        "person_label": "Celerinus",
+        "name_alt": "",
+        "name_native": "Κελερῖνος",
+        "birth_year_display": "c. 220",
+        "death_year_display": "c. 260",
+        "person_kind": "individual",
+        "notes": "North African confessor during the Decian persecution c. 250; endured prolonged imprisonment and torture; his grandmother, uncle, and another uncle had earlier been martyred; Cyprian later appointed him as reader in the Carthaginian church; exemplar of the confessor phenomenon that complicated the lapsed controversy."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-celerinus-active-carthage",
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 15-16",
+            "excerpt": "Paraphrase: But to those who have stood firm and have not been overthrown, what great joy! To those who have lapsed, medicine is not to be denied; but the lapsed must not assume that peace can be given them hastily by anyone. Let them knock at the door of the Church, but not with violence to break it down; let them beg but not presumptuously demand. Proper penance under the bishop's authority must precede reconciliation.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Graded penance under episcopal authority; against hasty reconciliation by confessors"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-celerinus-in-decian-persecution",
+        "clm-celerinus-active-rome",
+        "clm-cyprian-coworker-celerinus",
+        "clm-celerinus-member-carthage-church"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-15-16": [
+          "clm-celerinus-member-carthage-church",
+          "clm-council-carthage-251-at-carthage",
+          "clm-council-carthage-251-year",
+          "clm-cyprian-coworker-celerinus",
+          "clm-cyprian-in-council-251",
+          "clm-cyprian-teacher-of-pontius",
+          "clm-de-lapsis-affirms-baptism-regen",
+          "clm-de-lapsis-affirms-baptism-water",
+          "clm-de-lapsis-affirms-episcopal-unity",
+          "clm-de-lapsis-affirms-martyrdom-witness",
+          "clm-de-lapsis-affirms-penance",
+          "clm-de-lapsis-mentions-almsgiving",
+          "clm-pontius-active-carthage"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:decian-persecution",
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-15-16",
+        "PARAPHRASE_OMISSION:psg-cyprian-lapsis-15-16:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-alban-active-britannia",
+        "subject_type": "person",
+        "subject_id": "alban-of-britain",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "britannia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "305",
+        "context_place_id": "britannia",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "alban-of-britain",
+        "person_label": "Alban of Britain",
+        "name_alt": "St Alban",
+        "name_native": "",
+        "birth_year_display": "unknown",
+        "death_year_display": "c. 250–305",
+        "person_kind": "individual",
+        "notes": "Proto-martyr of Britain; Roman soldier or citizen who sheltered a Christian priest and was executed; traditionally the first British martyr; date debated between Severan (c. 209) and Diocletianic (c. 304) persecution."
+      },
+      "object_entity": {
+        "place_id": "britannia",
+        "place_label": "Britannia",
+        "place_label_modern": "Britain",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "52.0000",
+        "lon": "-1.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "United Kingdom",
+        "notes": "Roman province; Christianity attested by Tertullian c. 200 and 3 bishops at Council of Arles 314; proto-martyr Alban."
+      },
+      "context_place": {
+        "place_id": "britannia",
+        "place_label": "Britannia",
+        "place_label_modern": "Britain",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "52.0000",
+        "lon": "-1.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "United Kingdom",
+        "notes": "Roman province; Christianity attested by Tertullian c. 200 and 3 bishops at Council of Arles 314; proto-martyr Alban."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-alban-active-britannia",
+            "passage_id": "psg-gildas-de-excidio-10",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Gildas De Excidio 10 explicitly places Alban's martyrdom in Verulamium, Britannia."
+          },
+          "passage": {
+            "passage_id": "psg-gildas-de-excidio-10",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Gildas De Excidio Britanniae 10",
+            "excerpt": "Paraphrase: Meanwhile these islands received the beams of light that is the holy precepts of Christ at the latter part of the reign of Tiberius Caesar.",
+            "language": "English",
+            "passage_year": "540",
+            "url_override": "",
+            "notes": "Gildas 6th-century claim that Christianity reached Britain during Tiberius; late and legendary but influential."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-alban-participant-martyrdom",
+        "clm-person-alban-affirms-britannia"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-gildas-de-excidio-10": [
+          "clm-alban-participant-martyrdom",
+          "clm-martyrdom-alban-at-britannia",
+          "clm-martyrdom-alban-year",
+          "clm-place-britannia-attested"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:martyrdom-of-alban",
+        "PARAPHRASE_RISK:psg-gildas-de-excidio-10"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatian-active-carthage-mission",
+        "subject_type": "person",
+        "subject_id": "novatian",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "252",
+        "year_end": "258",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "novatian",
+        "person_label": "Novatian",
+        "name_alt": "Novatianus",
+        "name_native": "Νοβατιανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 258",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; author of De Trinitate (c. 250), the first systematic Latin treatise on the Trinity; rigorist who opposed the readmission of the lapsed after the Decian persecution; set up a rival church c. 251 against Pope Cornelius; his followers (Novatianists) persisted for centuries."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatian-active-carthage-mission",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions novatian or carthage."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatian-member-roman-church",
+        "clm-novatian-active-rome",
+        "clm-novatian-in-decian",
+        "clm-novatian-in-novatian-schism",
+        "clm-novatian-member-novatianists",
+        "clm-novatian-person-opposes-penance"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:decian-persecution",
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-43:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-dionysius-alex-active-rome-exile",
+        "subject_type": "person",
+        "subject_id": "dionysius-of-alexandria",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "257",
+        "year_end": "260",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "dionysius-of-alexandria",
+        "person_label": "Dionysius of Alexandria",
+        "name_alt": "Dionysius the Great",
+        "name_native": "Διονύσιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 264",
+        "person_kind": "individual",
+        "notes": "Student of Origen; bishop of Alexandria c. 248–264; key figure in the Trinitarian controversies after Origen; opposed Sabellianism but was himself accused of tritheism; major voice during the Decian persecution and the Novatian controversy; extensive correspondence preserved by Eusebius."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-dionysius-alex-active-rome-exile",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions dionysius-of-alexandria or rome."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-dionysius-alex-coworker-origen",
+        "clm-dionysius-alex-affirms-logos",
+        "clm-dionysius-alex-affirms-penance",
+        "clm-dionysius-alex-affirms-succession",
+        "clm-dionysius-alex-affirms-trinity",
+        "clm-dionysius-alex-bishop-of-alexandria",
+        "clm-dionysius-alex-member-alexandrian",
+        "clm-dionysius-alex-in-decian",
+        "clm-dionysius-alex-in-novatian-schism"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:decian-persecution",
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aphrahat-active-seleucia",
+        "subject_type": "person",
+        "subject_id": "aphrahat",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "seleucia-ctesiphon",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "280",
+        "year_end": "345",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aphrahat",
+        "person_label": "Aphrahat",
+        "name_alt": "Aphrahat the Persian Sage",
+        "name_native": "ܐܦܪܗܛ",
+        "birth_year_display": "c. 280",
+        "death_year_display": "c. 345",
+        "person_kind": "individual",
+        "notes": "Syriac church father in the Persian Empire; wrote 23 Demonstrations (337–345) on Christian faith and practice; possibly a bishop; used the Diatessaron as his gospel text; his theology is notably independent of Greek influence."
+      },
+      "object_entity": {
+        "place_id": "seleucia-ctesiphon",
+        "place_label": "Seleucia-Ctesiphon",
+        "place_label_modern": "Al-Mada'in",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "33.0925",
+        "lon": "44.5775",
+        "location_precision": "approx_site",
+        "modern_country_label": "Iraq",
+        "notes": "Twin cities on the Tigris; capital of the Parthian and Sasanian empires; seat of the Catholicos of the Church of the East from the early 4th century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aphrahat-active-seleucia",
+            "passage_id": "psg-aphrahat-dem-1",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Aphrahat's Demonstrations were composed at the Persian church center of Seleucia-Ctesiphon."
+          },
+          "passage": {
+            "passage_id": "psg-aphrahat-dem-1",
+            "source_id": "src-demonstrations-of-aphrahat",
+            "locator_type": "source_ref",
+            "locator": "Demonstration 1 (On Faith)",
+            "excerpt": "Paraphrase: Faith is the foundation upon which all the structure of Christian life is built; faith is the tree from which the fruits of good works grow; faith rests on the rock of Christ and is watered by baptism; the faithful must believe in God, his Christ, the Holy Spirit, baptism, resurrection, and eternal life.",
+            "language": "English",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "On Faith — foundation of Christian life"
+          },
+          "source": {
+            "source_id": "src-demonstrations-of-aphrahat",
+            "work_id": "demonstrations-of-aphrahat",
+            "source_kind": "primary_text",
+            "title": "Demonstrations",
+            "author": "Aphrahat",
+            "editor": "",
+            "year_display": "337–345",
+            "year_start": "337",
+            "year_end": "345",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/370101.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "23 Syriac homilies on faith and practice from the Persian church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aphrahat-member-church-east",
+        "clm-aphrahat-in-persecution"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-aphrahat-dem-1": [
+          "clm-aphrahat-affirms-baptism-regeneration",
+          "clm-aphrahat-affirms-baptism-water",
+          "clm-aphrahat-affirms-baptismal-anointing",
+          "clm-aphrahat-affirms-bishops-govern",
+          "clm-aphrahat-affirms-catechumenate",
+          "clm-aphrahat-affirms-free-will",
+          "clm-aphrahat-affirms-gentile-inclusion",
+          "clm-aphrahat-affirms-gospel-harmony",
+          "clm-aphrahat-affirms-judgment",
+          "clm-aphrahat-affirms-ot-authority",
+          "clm-aphrahat-affirms-resurrection",
+          "clm-aphrahat-affirms-rule-of-faith",
+          "clm-aphrahat-affirms-trinitarian-baptism",
+          "clm-aphrahat-member-church-east",
+          "clm-demonstrations-by-aphrahat"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:persecution-of-shapur-ii",
+        "UNSCORED_WEIGHT:psg-aphrahat-dem-1"
+      ]
+    }
+  ]
+}

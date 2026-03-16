@@ -1,0 +1,2243 @@
+{
+  "batch_id": "batch-072",
+  "queue": "1",
+  "focus": "didascalia-apostolorum",
+  "claim_count": 19,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-written-syria",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-written-syria",
+            "passage_id": "psg-didascalia-12-21",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from didascalia-apostolorum contextualizes its composition at edessa."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-12-21",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 12, 21",
+            "excerpt": "Paraphrase: Concerning fasting, Christians should fast during the days of the Passion; the proper place in the church-building is prescribed; the Sabbath rest is given symbolic content and Christians are admonished to treat every day as belonging to the Lord.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Fasting and liturgical rules"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-12-21": [
+          "clm-didascalia-affirms-almsgiving",
+          "clm-didascalia-affirms-eucharist-sacrifice",
+          "clm-didascalia-affirms-eucharist-sunday",
+          "clm-didascalia-affirms-fasting",
+          "clm-didascalia-affirms-ot-authority",
+          "clm-didascalia-affirms-resurrection",
+          "clm-didascalia-affirms-spectacles"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-didascalia-12-21",
+        "PARAPHRASE_RISK:psg-didascalia-12-21",
+        "PARAPHRASE_OMISSION:psg-didascalia-12-21:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-almsgiving",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "almsgiving-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "almsgiving-is-required",
+        "topic_id": "social-ethics",
+        "dimension_id": "almsgiving-required",
+        "proposition_label": "Almsgiving is Required",
+        "polarity_family": "",
+        "description": "Christians are obligated to give alms to the poor as stewards of God's gifts; wealth deployed through giving redeems sins and fulfills the commandment of love.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-almsgiving",
+            "passage_id": "psg-didascalia-12-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "didascalia-apostolorum is a primary text directly relevant to almsgiving-is-required."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-12-21",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 12, 21",
+            "excerpt": "Paraphrase: Concerning fasting, Christians should fast during the days of the Passion; the proper place in the church-building is prescribed; the Sabbath rest is given symbolic content and Christians are admonished to treat every day as belonging to the Lord.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Fasting and liturgical rules"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-12-21": [
+          "clm-didascalia-affirms-eucharist-sacrifice",
+          "clm-didascalia-affirms-eucharist-sunday",
+          "clm-didascalia-affirms-fasting",
+          "clm-didascalia-affirms-ot-authority",
+          "clm-didascalia-affirms-resurrection",
+          "clm-didascalia-affirms-spectacles",
+          "clm-didascalia-written-syria"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-didascalia-12-21",
+        "PARAPHRASE_RISK:psg-didascalia-12-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-baptism-regeneration",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-effects-regeneration",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-effects-regeneration",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-regeneration",
+        "proposition_label": "Baptism effects spiritual regeneration",
+        "polarity_family": "baptism_regeneration",
+        "description": "Baptism is not merely symbolic but effects a new birth or regeneration of the recipient.",
+        "notes": "Baptismal regeneration"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-baptism-regeneration",
+            "passage_id": "psg-didascalia-9-16",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Convert baptized and admitted to eucharist."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-9-16",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 9, 16",
+            "excerpt": "Paraphrase: Before baptism, the catechumen is anointed with oil by the laying on of hands by the bishop; after anointing the convert is baptized with the proper trinitarian invocation; deaconesses anoint women candidates; the convert is then permitted to partake of the eucharist.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Baptismal anointing and deaconesses"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-9-16": [
+          "clm-didascalia-affirms-baptismal-anointing",
+          "clm-didascalia-affirms-catechumenate",
+          "clm-didascalia-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-9-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-baptismal-anointing",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptismal-anointing-with-oil",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "baptismal-anointing-with-oil",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-anointing",
+        "proposition_label": "Baptismal Anointing with Oil",
+        "polarity_family": "",
+        "description": "After emerging from the baptismal water, the newly baptized is anointed with chrism or oil as part of the baptismal rite, signifying the reception of the Holy Spirit and incorporation into Christ.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-baptismal-anointing",
+            "passage_id": "psg-didascalia-9-16",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Anointing with oil by bishop before baptism; deaconesses anoint women."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-9-16",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 9, 16",
+            "excerpt": "Paraphrase: Before baptism, the catechumen is anointed with oil by the laying on of hands by the bishop; after anointing the convert is baptized with the proper trinitarian invocation; deaconesses anoint women candidates; the convert is then permitted to partake of the eucharist.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Baptismal anointing and deaconesses"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-9-16": [
+          "clm-didascalia-affirms-baptism-regeneration",
+          "clm-didascalia-affirms-catechumenate",
+          "clm-didascalia-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-9-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-bishop-eucharist",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bishop-authority-over-eucharist",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "bishop-authority-over-eucharist",
+        "topic_id": "episcopal-authority",
+        "dimension_id": "bishop-liturgy",
+        "proposition_label": "Valid Eucharist requires the bishop or his delegate",
+        "polarity_family": "episcopal_eucharist",
+        "description": "Proper eucharistic celebration is administered by or authorized by the bishop.",
+        "notes": "Episcopal control of sacraments"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-bishop-eucharist",
+            "passage_id": "psg-didascalia-2-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Bishop presides over the community and its worship."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-2-4",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 2–4",
+            "excerpt": "Paraphrase: The bishop must be blameless, a shepherd who feeds the flock with the word of God; he judges sinners and receives penitents; he is the mediator between God and the people; the most salient feature is the exaltation of episcopal authority.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Bishops' authority and qualifications"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-2-4": [
+          "clm-didascalia-affirms-bishops-govern",
+          "clm-didascalia-affirms-threefold-ministry"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-2-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-bishops-govern",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bishops-govern-local-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "bishops-govern-local-church",
+        "topic_id": "church-order",
+        "dimension_id": "monarchical-episcopate",
+        "proposition_label": "A single bishop governs the local church",
+        "polarity_family": "monarchical_episcopacy",
+        "description": "A single bishop holds authority over the local Christian community as representative of God.",
+        "notes": "Monarchical episcopate"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-bishops-govern",
+            "passage_id": "psg-didascalia-2-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Didascalia 2-4 exalts the bishop as shepherd, judge, and mediator."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-2-4",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 2–4",
+            "excerpt": "Paraphrase: The bishop must be blameless, a shepherd who feeds the flock with the word of God; he judges sinners and receives penitents; he is the mediator between God and the people; the most salient feature is the exaltation of episcopal authority.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Bishops' authority and qualifications"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-2-4": [
+          "clm-didascalia-affirms-bishop-eucharist",
+          "clm-didascalia-affirms-threefold-ministry"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-2-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-catechumenate",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "catechumenate-precedes-baptism",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "catechumenate-precedes-baptism",
+        "topic_id": "baptism-practice",
+        "dimension_id": "catechumenate",
+        "proposition_label": "A formal catechumenate precedes baptism",
+        "polarity_family": "",
+        "description": "Candidates for baptism undergo a structured period of pre-baptismal instruction, examination, and moral formation (the catechumenate) before being admitted to the sacrament.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-catechumenate",
+            "passage_id": "psg-didascalia-9-16",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Catechumen anointed and instructed before baptism."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-9-16",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 9, 16",
+            "excerpt": "Paraphrase: Before baptism, the catechumen is anointed with oil by the laying on of hands by the bishop; after anointing the convert is baptized with the proper trinitarian invocation; deaconesses anoint women candidates; the convert is then permitted to partake of the eucharist.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Baptismal anointing and deaconesses"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-9-16": [
+          "clm-didascalia-affirms-baptism-regeneration",
+          "clm-didascalia-affirms-baptismal-anointing",
+          "clm-didascalia-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-9-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-eucharist-sacrifice",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "eucharist-is-sacrifice",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "eucharist-is-sacrifice",
+        "topic_id": "eucharist-practice",
+        "dimension_id": "eucharist-sacrificial",
+        "proposition_label": "The Eucharist is a sacrifice offered to God",
+        "polarity_family": "eucharistic_sacrifice",
+        "description": "The eucharistic celebration is explicitly described as a sacrifice or oblation offered to God.",
+        "notes": "Sacrifice language"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-eucharist-sacrifice",
+            "passage_id": "psg-didascalia-12-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "didascalia-apostolorum is a primary text directly relevant to eucharist-is-sacrifice."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-12-21",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 12, 21",
+            "excerpt": "Paraphrase: Concerning fasting, Christians should fast during the days of the Passion; the proper place in the church-building is prescribed; the Sabbath rest is given symbolic content and Christians are admonished to treat every day as belonging to the Lord.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Fasting and liturgical rules"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-12-21": [
+          "clm-didascalia-affirms-almsgiving",
+          "clm-didascalia-affirms-eucharist-sunday",
+          "clm-didascalia-affirms-fasting",
+          "clm-didascalia-affirms-ot-authority",
+          "clm-didascalia-affirms-resurrection",
+          "clm-didascalia-affirms-spectacles",
+          "clm-didascalia-written-syria"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-didascalia-12-21",
+        "PARAPHRASE_RISK:psg-didascalia-12-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-eucharist-sunday",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "eucharist-offered-on-sunday",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "eucharist-offered-on-sunday",
+        "topic_id": "eucharist-practice",
+        "dimension_id": "sunday-assembly",
+        "proposition_label": "Christians gather on Sunday for the Eucharist",
+        "polarity_family": "sunday_eucharist",
+        "description": "The Lord's Day is the regular day for eucharistic assembly.",
+        "notes": "Weekly liturgical pattern"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-eucharist-sunday",
+            "passage_id": "psg-didascalia-12-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Proper assembly and Sabbath reinterpretation."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-12-21",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 12, 21",
+            "excerpt": "Paraphrase: Concerning fasting, Christians should fast during the days of the Passion; the proper place in the church-building is prescribed; the Sabbath rest is given symbolic content and Christians are admonished to treat every day as belonging to the Lord.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Fasting and liturgical rules"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-12-21": [
+          "clm-didascalia-affirms-almsgiving",
+          "clm-didascalia-affirms-eucharist-sacrifice",
+          "clm-didascalia-affirms-fasting",
+          "clm-didascalia-affirms-ot-authority",
+          "clm-didascalia-affirms-resurrection",
+          "clm-didascalia-affirms-spectacles",
+          "clm-didascalia-written-syria"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-12-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-fasting",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "fasting-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "fasting-is-required",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "fasting-required",
+        "proposition_label": "Christians are required to fast",
+        "polarity_family": "christian_fasting",
+        "description": "Fasting is a required Christian spiritual discipline presented as obligatory, not merely optional.",
+        "notes": "Ascetic discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-fasting",
+            "passage_id": "psg-didascalia-12-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Fasting during the Passion; liturgical calendar rules."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-12-21",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 12, 21",
+            "excerpt": "Paraphrase: Concerning fasting, Christians should fast during the days of the Passion; the proper place in the church-building is prescribed; the Sabbath rest is given symbolic content and Christians are admonished to treat every day as belonging to the Lord.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Fasting and liturgical rules"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-12-21": [
+          "clm-didascalia-affirms-almsgiving",
+          "clm-didascalia-affirms-eucharist-sacrifice",
+          "clm-didascalia-affirms-eucharist-sunday",
+          "clm-didascalia-affirms-ot-authority",
+          "clm-didascalia-affirms-resurrection",
+          "clm-didascalia-affirms-spectacles",
+          "clm-didascalia-written-syria"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-12-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-ordination",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "ordination-conferred-by-laying-on-of-hands",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "ordination-conferred-by-laying-on-of-hands",
+        "topic_id": "church-order",
+        "dimension_id": "ordination-rite",
+        "proposition_label": "Ordination is conferred by the laying on of hands",
+        "polarity_family": "",
+        "description": "The ministry of bishop, presbyter, and deacon is conferred through the liturgical act of laying on of hands by existing bishops (for episcopal ordination) or by the bishop (for presbyters and deacons).",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-ordination",
+            "passage_id": "psg-didascalia-14-16",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Appointment of deacons and deaconesses."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-14-16",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 14–16",
+            "excerpt": "Paraphrase: Rules about deacons and deaconesses and widows; deaconesses are appointed for the ministry to women, especially for baptismal anointing; widows are maintained by the church and must devote themselves to prayer.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Deacons, deaconesses, and widows"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-14-16": [
+          "clm-didascalia-affirms-virginity"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-14-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-ot-authority",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-ot-authority",
+            "passage_id": "psg-didascalia-12-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "didascalia-apostolorum is a primary text directly relevant to old-testament-is-authoritative-scripture."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-12-21",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 12, 21",
+            "excerpt": "Paraphrase: Concerning fasting, Christians should fast during the days of the Passion; the proper place in the church-building is prescribed; the Sabbath rest is given symbolic content and Christians are admonished to treat every day as belonging to the Lord.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Fasting and liturgical rules"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-12-21": [
+          "clm-didascalia-affirms-almsgiving",
+          "clm-didascalia-affirms-eucharist-sacrifice",
+          "clm-didascalia-affirms-eucharist-sunday",
+          "clm-didascalia-affirms-fasting",
+          "clm-didascalia-affirms-resurrection",
+          "clm-didascalia-affirms-spectacles",
+          "clm-didascalia-written-syria"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-didascalia-12-21",
+        "PARAPHRASE_RISK:psg-didascalia-12-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-penance",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "post-baptismal-sin-forgiven-by-penance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "post-baptismal-sin-forgiven-by-penance",
+        "topic_id": "penance-practice",
+        "dimension_id": "post-baptismal-penance",
+        "proposition_label": "Post-baptismal sin can be forgiven through penance",
+        "polarity_family": "post_baptismal_penance",
+        "description": "A second repentance after baptism is possible and administered through church discipline.",
+        "notes": "Penitential discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-penance",
+            "passage_id": "psg-didascalia-6-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Canonical penance of 2-7 weeks; bishop imitates God who forgives."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-6-7",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 6–7",
+            "excerpt": "Paraphrase: Even great sinners, upon repentance, are to be received with kindness; no sins are excepted; the canonical penance is to be of two to seven weeks; the bishop must imitate God who forgives.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Penance and reconciliation"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-6-7": [
+          "clm-didascalia-affirms-repentance"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-6-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-repentance",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "repentance-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "repentance-is-required",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "repentant-response",
+        "proposition_label": "Repentance is required in response to the proclamation",
+        "polarity_family": "repentance_response",
+        "description": "The proclamation of the kingdom calls hearers to repentance.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-repentance",
+            "passage_id": "psg-didascalia-6-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Even great sinners received upon repentance."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-6-7",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 6–7",
+            "excerpt": "Paraphrase: Even great sinners, upon repentance, are to be received with kindness; no sins are excepted; the canonical penance is to be of two to seven weeks; the bishop must imitate God who forgives.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Penance and reconciliation"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-6-7": [
+          "clm-didascalia-affirms-penance"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-6-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-resurrection",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-resurrection",
+            "passage_id": "psg-didascalia-12-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "didascalia-apostolorum is a primary text directly relevant to bodies-will-be-raised-at-last-day."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-12-21",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 12, 21",
+            "excerpt": "Paraphrase: Concerning fasting, Christians should fast during the days of the Passion; the proper place in the church-building is prescribed; the Sabbath rest is given symbolic content and Christians are admonished to treat every day as belonging to the Lord.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Fasting and liturgical rules"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-12-21": [
+          "clm-didascalia-affirms-almsgiving",
+          "clm-didascalia-affirms-eucharist-sacrifice",
+          "clm-didascalia-affirms-eucharist-sunday",
+          "clm-didascalia-affirms-fasting",
+          "clm-didascalia-affirms-ot-authority",
+          "clm-didascalia-affirms-spectacles",
+          "clm-didascalia-written-syria"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-didascalia-12-21",
+        "PARAPHRASE_RISK:psg-didascalia-12-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-spectacles",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christians-avoid-public-spectacles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "christians-avoid-public-spectacles",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "public-spectacles-avoided",
+        "proposition_label": "Christians are instructed to abstain from public games, theaters, and spectacles",
+        "polarity_family": "spectacles_avoided",
+        "description": "Public games, theaters, and spectacles are morally dangerous entertainments that Christians must avoid in favor of the word of God.",
+        "notes": "Avoidance of public spectacles"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-spectacles",
+            "passage_id": "psg-didascalia-12-21",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "didascalia-apostolorum is a primary text directly relevant to christians-avoid-public-spectacles."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-12-21",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 12, 21",
+            "excerpt": "Paraphrase: Concerning fasting, Christians should fast during the days of the Passion; the proper place in the church-building is prescribed; the Sabbath rest is given symbolic content and Christians are admonished to treat every day as belonging to the Lord.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Fasting and liturgical rules"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-12-21": [
+          "clm-didascalia-affirms-almsgiving",
+          "clm-didascalia-affirms-eucharist-sacrifice",
+          "clm-didascalia-affirms-eucharist-sunday",
+          "clm-didascalia-affirms-fasting",
+          "clm-didascalia-affirms-ot-authority",
+          "clm-didascalia-affirms-resurrection",
+          "clm-didascalia-written-syria"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-didascalia-12-21",
+        "PARAPHRASE_RISK:psg-didascalia-12-21"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-threefold-ministry",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "threefold-ministry-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "threefold-ministry-required",
+        "topic_id": "church-order",
+        "dimension_id": "bishop-presbyter-deacon",
+        "proposition_label": "Valid church order requires bishop, presbyter, and deacon",
+        "polarity_family": "threefold_ministry",
+        "description": "The threefold ministry of bishop, presbyter, and deacon is required for valid church structure.",
+        "notes": "Church order"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-threefold-ministry",
+            "passage_id": "psg-didascalia-2-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Bishop, deacon, and deaconess offices described."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-2-4",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 2–4",
+            "excerpt": "Paraphrase: The bishop must be blameless, a shepherd who feeds the flock with the word of God; he judges sinners and receives penitents; he is the mediator between God and the people; the most salient feature is the exaltation of episcopal authority.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Bishops' authority and qualifications"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-2-4": [
+          "clm-didascalia-affirms-bishop-eucharist",
+          "clm-didascalia-affirms-bishops-govern"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-2-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-trinitarian-baptism",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-administered-in-trinitarian-name",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-administered-in-trinitarian-name",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-formula",
+        "proposition_label": "Baptism is administered in the Trinitarian name of Father, Son, and Holy Spirit",
+        "polarity_family": "trinitarian_baptism",
+        "description": "Baptism uses the explicit Trinitarian formula of Father, Son, and Holy Spirit as the form of the sacrament.",
+        "notes": "Trinitarian baptismal formula"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-trinitarian-baptism",
+            "passage_id": "psg-didascalia-9-16",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Baptism with proper trinitarian invocation."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-9-16",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 9, 16",
+            "excerpt": "Paraphrase: Before baptism, the catechumen is anointed with oil by the laying on of hands by the bishop; after anointing the convert is baptized with the proper trinitarian invocation; deaconesses anoint women candidates; the convert is then permitted to partake of the eucharist.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Baptismal anointing and deaconesses"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-virginity",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-9-16": [
+          "clm-didascalia-affirms-baptism-regeneration",
+          "clm-didascalia-affirms-baptismal-anointing",
+          "clm-didascalia-affirms-catechumenate"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-9-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-didascalia-affirms-virginity",
+        "subject_type": "work",
+        "subject_id": "didascalia-apostolorum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "virginity-is-honored-calling",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "didascalia-apostolorum",
+        "title_display": "Didascalia Apostolorum",
+        "title_original": "ܕܝܕܣܩܠܝܐ ܕܫܠܝ̈ܚܐ",
+        "work_type": "rule",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Church order composed c. 230 in Syria; survives complete only in Syriac translation; covers bishops' authority, deacons, deaconesses, penance, baptismal anointing, fasting, eucharist, and catechumenate; later incorporated into the first six books of the Apostolic Constitutions."
+      },
+      "object_entity": {
+        "proposition_id": "virginity-is-honored-calling",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "celibacy-honored",
+        "proposition_label": "Virginity and celibacy are honored as a positive Christian calling",
+        "polarity_family": "celibacy_honored",
+        "description": "Virginity and celibacy are not merely tolerated but positively honored as a higher calling, even while marriage is defended as legitimate and good.",
+        "notes": "Celibacy and virginity honored"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-didascalia-affirms-virginity",
+            "passage_id": "psg-didascalia-14-16",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Widows maintained by the church and devoted to prayer."
+          },
+          "passage": {
+            "passage_id": "psg-didascalia-14-16",
+            "source_id": "src-didascalia-apostolorum",
+            "locator_type": "source_ref",
+            "locator": "Didascalia 14–16",
+            "excerpt": "Paraphrase: Rules about deacons and deaconesses and widows; deaconesses are appointed for the ministry to women, especially for baptismal anointing; widows are maintained by the church and must devote themselves to prayer.",
+            "language": "English",
+            "passage_year": "230",
+            "url_override": "",
+            "notes": "Deacons, deaconesses, and widows"
+          },
+          "source": {
+            "source_id": "src-didascalia-apostolorum",
+            "work_id": "didascalia-apostolorum",
+            "source_kind": "primary_text",
+            "title": "Didascalia Apostolorum",
+            "author": "Anonymous (Syrian)",
+            "editor": "R. H. Connolly",
+            "year_display": "c. 230",
+            "year_start": "230",
+            "year_end": "230",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/didascalia.html",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "3rd-century Syrian church order surviving complete in Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-didascalia-affirms-almsgiving",
+        "clm-didascalia-affirms-baptism-regeneration",
+        "clm-didascalia-affirms-baptismal-anointing",
+        "clm-didascalia-affirms-bishop-eucharist",
+        "clm-didascalia-affirms-bishops-govern",
+        "clm-didascalia-affirms-catechumenate",
+        "clm-didascalia-affirms-eucharist-sacrifice",
+        "clm-didascalia-affirms-eucharist-sunday",
+        "clm-didascalia-affirms-fasting",
+        "clm-didascalia-affirms-ordination",
+        "clm-didascalia-affirms-ot-authority",
+        "clm-didascalia-affirms-penance",
+        "clm-didascalia-affirms-repentance",
+        "clm-didascalia-affirms-resurrection",
+        "clm-didascalia-affirms-spectacles",
+        "clm-didascalia-affirms-threefold-ministry",
+        "clm-didascalia-affirms-trinitarian-baptism",
+        "clm-didascalia-written-syria"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-didascalia-14-16": [
+          "clm-didascalia-affirms-ordination"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-didascalia-14-16"
+      ]
+    }
+  ]
+}

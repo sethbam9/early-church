@@ -1,0 +1,2178 @@
+{
+  "batch_id": "batch-079",
+  "queue": "1",
+  "focus": "de-lapsis",
+  "claim_count": 18,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-by-cyprian",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "cyprian-of-carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "person_id": "cyprian-of-carthage",
+        "person_label": "Cyprian of Carthage",
+        "name_alt": "Thascius Caecilius Cyprianus",
+        "name_native": "Kυπριανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 258",
+        "person_kind": "individual",
+        "notes": "Bishop of Carthage c. 248–258; major Latin theologian of ecclesiology and sacramental theology; converted c. 246; deeply influenced by Tertullian; key figure in the Novatian controversy (supported Cornelius against Novatian); martyred under Valerian."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-by-cyprian",
+            "passage_id": "psg-cyprian-lapsis-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Cyprian is the author of De Lapsis."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-6",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 6",
+            "excerpt": "Paraphrase: How many bishops who ought to have been an encouragement and example to others, despising their divine stewardship, became agents of secular affairs, forsook their thrones, deserted their people, wandered about over foreign provinces, sought the markets for trade. While their brethren were starving in the Church, they wished to have money in abundance.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Bishops who lapsed through worldly accommodation; failure of episcopal leadership during Decian crisis"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-6": [
+          "clm-de-lapsis-affirms-apostolic-succession",
+          "clm-de-lapsis-affirms-ordination-hands",
+          "clm-de-lapsis-affirms-threefold-ministry",
+          "clm-de-lapsis-written-carthage",
+          "clm-decian-persecution-at-carthage",
+          "clm-decian-persecution-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-written-carthage",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "251",
+        "year_end": "251",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-written-carthage",
+            "passage_id": "psg-cyprian-lapsis-6",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Written during Cyprian's episcopate at Carthage c. 251."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-6",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 6",
+            "excerpt": "Paraphrase: How many bishops who ought to have been an encouragement and example to others, despising their divine stewardship, became agents of secular affairs, forsook their thrones, deserted their people, wandered about over foreign provinces, sought the markets for trade. While their brethren were starving in the Church, they wished to have money in abundance.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Bishops who lapsed through worldly accommodation; failure of episcopal leadership during Decian crisis"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-6": [
+          "clm-de-lapsis-affirms-apostolic-succession",
+          "clm-de-lapsis-affirms-ordination-hands",
+          "clm-de-lapsis-affirms-threefold-ministry",
+          "clm-de-lapsis-by-cyprian",
+          "clm-decian-persecution-at-carthage",
+          "clm-decian-persecution-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-apostolic-succession",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-apostolic-succession",
+            "passage_id": "psg-cyprian-lapsis-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Bishops as stewards of divine trust presupposes succession."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-6",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 6",
+            "excerpt": "Paraphrase: How many bishops who ought to have been an encouragement and example to others, despising their divine stewardship, became agents of secular affairs, forsook their thrones, deserted their people, wandered about over foreign provinces, sought the markets for trade. While their brethren were starving in the Church, they wished to have money in abundance.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Bishops who lapsed through worldly accommodation; failure of episcopal leadership during Decian crisis"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-6": [
+          "clm-de-lapsis-affirms-ordination-hands",
+          "clm-de-lapsis-affirms-threefold-ministry",
+          "clm-de-lapsis-by-cyprian",
+          "clm-de-lapsis-written-carthage",
+          "clm-decian-persecution-at-carthage",
+          "clm-decian-persecution-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-baptism-regen",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-effects-regeneration",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-effects-regeneration",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-regeneration",
+        "proposition_label": "Baptism effects spiritual regeneration",
+        "polarity_family": "baptism_regeneration",
+        "description": "Baptism is not merely symbolic but effects a new birth or regeneration of the recipient.",
+        "notes": "Baptismal regeneration"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-baptism-regen",
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Reconciliation after lapse presupposes initial baptismal regeneration."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 15-16",
+            "excerpt": "Paraphrase: But to those who have stood firm and have not been overthrown, what great joy! To those who have lapsed, medicine is not to be denied; but the lapsed must not assume that peace can be given them hastily by anyone. Let them knock at the door of the Church, but not with violence to break it down; let them beg but not presumptuously demand. Proper penance under the bishop's authority must precede reconciliation.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Graded penance under episcopal authority; against hasty reconciliation by confessors"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-15-16": [
+          "clm-celerinus-active-carthage",
+          "clm-celerinus-member-carthage-church",
+          "clm-council-carthage-251-at-carthage",
+          "clm-council-carthage-251-year",
+          "clm-cyprian-coworker-celerinus",
+          "clm-cyprian-in-council-251",
+          "clm-cyprian-teacher-of-pontius",
+          "clm-de-lapsis-affirms-baptism-water",
+          "clm-de-lapsis-affirms-episcopal-unity",
+          "clm-de-lapsis-affirms-martyrdom-witness",
+          "clm-de-lapsis-affirms-penance",
+          "clm-de-lapsis-mentions-almsgiving",
+          "clm-pontius-active-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-15-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-baptism-water",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-with-water-commanded",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-with-water-commanded",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-mode",
+        "proposition_label": "Baptism is administered with water",
+        "polarity_family": "baptism_water",
+        "description": "Baptismal practice uses water as the material element.",
+        "notes": "Core initiatory practice"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-baptism-water",
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Baptismal entry into the Church presupposed throughout."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 15-16",
+            "excerpt": "Paraphrase: But to those who have stood firm and have not been overthrown, what great joy! To those who have lapsed, medicine is not to be denied; but the lapsed must not assume that peace can be given them hastily by anyone. Let them knock at the door of the Church, but not with violence to break it down; let them beg but not presumptuously demand. Proper penance under the bishop's authority must precede reconciliation.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Graded penance under episcopal authority; against hasty reconciliation by confessors"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-15-16": [
+          "clm-celerinus-active-carthage",
+          "clm-celerinus-member-carthage-church",
+          "clm-council-carthage-251-at-carthage",
+          "clm-council-carthage-251-year",
+          "clm-cyprian-coworker-celerinus",
+          "clm-cyprian-in-council-251",
+          "clm-cyprian-teacher-of-pontius",
+          "clm-de-lapsis-affirms-baptism-regen",
+          "clm-de-lapsis-affirms-episcopal-unity",
+          "clm-de-lapsis-affirms-martyrdom-witness",
+          "clm-de-lapsis-affirms-penance",
+          "clm-de-lapsis-mentions-almsgiving",
+          "clm-pontius-active-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-15-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-bishop-eucharist",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bishop-authority-over-eucharist",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "bishop-authority-over-eucharist",
+        "topic_id": "episcopal-authority",
+        "dimension_id": "bishop-liturgy",
+        "proposition_label": "Valid Eucharist requires the bishop or his delegate",
+        "polarity_family": "episcopal_eucharist",
+        "description": "Proper eucharistic celebration is administered by or authorized by the bishop.",
+        "notes": "Episcopal control of sacraments"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-bishop-eucharist",
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eucharistic discipline enforced through episcopal authority; unworthy communion punished."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 25-26",
+            "excerpt": "Paraphrase: Some who had received libelli from the confessors or who came to communion without proper reconciliation through the bishop — when they approached the altar to receive, they were stricken: one woman who tried to open the chest containing the Lord's reserved sacrament was deterred by fire rising from it; another who received unworthily vomited up the sanctified cup.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Eucharistic discipline; divine punishment for unworthy communion; reserved sacrament reference"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-25-26": [
+          "clm-de-lapsis-affirms-eucharist-body-blood",
+          "clm-de-lapsis-affirms-eucharist-sacrifice",
+          "clm-de-lapsis-affirms-eucharist-sunday",
+          "clm-de-lapsis-affirms-frequent-eucharist",
+          "clm-de-lapsis-affirms-relics-honored",
+          "clm-de-lapsis-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-episcopal-unity",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "episcopal-unity-grounds-church-unity",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "episcopal-unity-grounds-church-unity",
+        "topic_id": "episcopal-authority",
+        "dimension_id": "episcopal-collegiality",
+        "proposition_label": "The unity of bishops grounds the unity of the Church",
+        "polarity_family": "episcopal_unity",
+        "description": "The Church is one because the episcopate is one; each bishop holds the whole of the one episcopate in solidum; to break with the bishop is to break with the Church; there is one altar and one bishop.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-episcopal-unity",
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Reconciliation must go through the bishop — episcopal unity governs penance."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 15-16",
+            "excerpt": "Paraphrase: But to those who have stood firm and have not been overthrown, what great joy! To those who have lapsed, medicine is not to be denied; but the lapsed must not assume that peace can be given them hastily by anyone. Let them knock at the door of the Church, but not with violence to break it down; let them beg but not presumptuously demand. Proper penance under the bishop's authority must precede reconciliation.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Graded penance under episcopal authority; against hasty reconciliation by confessors"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-15-16": [
+          "clm-celerinus-active-carthage",
+          "clm-celerinus-member-carthage-church",
+          "clm-council-carthage-251-at-carthage",
+          "clm-council-carthage-251-year",
+          "clm-cyprian-coworker-celerinus",
+          "clm-cyprian-in-council-251",
+          "clm-cyprian-teacher-of-pontius",
+          "clm-de-lapsis-affirms-baptism-regen",
+          "clm-de-lapsis-affirms-baptism-water",
+          "clm-de-lapsis-affirms-martyrdom-witness",
+          "clm-de-lapsis-affirms-penance",
+          "clm-de-lapsis-mentions-almsgiving",
+          "clm-pontius-active-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-15-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-eucharist-body-blood",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "eucharist-is-body-and-blood",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "eucharist-is-body-and-blood",
+        "topic_id": "eucharist-presence",
+        "dimension_id": "real-presence",
+        "proposition_label": "The Eucharist is the body and blood of Christ",
+        "polarity_family": "eucharistic_realism",
+        "description": "The eucharistic elements are identified as the flesh and blood of Jesus.",
+        "notes": "Real-presence language"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-eucharist-body-blood",
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "The sanctified cup and reserved sacrament treated as the Lord's body and blood."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 25-26",
+            "excerpt": "Paraphrase: Some who had received libelli from the confessors or who came to communion without proper reconciliation through the bishop — when they approached the altar to receive, they were stricken: one woman who tried to open the chest containing the Lord's reserved sacrament was deterred by fire rising from it; another who received unworthily vomited up the sanctified cup.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Eucharistic discipline; divine punishment for unworthy communion; reserved sacrament reference"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-25-26": [
+          "clm-de-lapsis-affirms-bishop-eucharist",
+          "clm-de-lapsis-affirms-eucharist-sacrifice",
+          "clm-de-lapsis-affirms-eucharist-sunday",
+          "clm-de-lapsis-affirms-frequent-eucharist",
+          "clm-de-lapsis-affirms-relics-honored",
+          "clm-de-lapsis-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "eucharist-is-sacrifice",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "eucharist-is-sacrifice",
+        "topic_id": "eucharist-practice",
+        "dimension_id": "eucharist-sacrificial",
+        "proposition_label": "The Eucharist is a sacrifice offered to God",
+        "polarity_family": "eucharistic_sacrifice",
+        "description": "The eucharistic celebration is explicitly described as a sacrifice or oblation offered to God.",
+        "notes": "Sacrifice language"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-eucharist-sacrifice",
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "The altar and reserved sacrament presuppose sacrificial eucharistic theology."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 25-26",
+            "excerpt": "Paraphrase: Some who had received libelli from the confessors or who came to communion without proper reconciliation through the bishop — when they approached the altar to receive, they were stricken: one woman who tried to open the chest containing the Lord's reserved sacrament was deterred by fire rising from it; another who received unworthily vomited up the sanctified cup.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Eucharistic discipline; divine punishment for unworthy communion; reserved sacrament reference"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-25-26": [
+          "clm-de-lapsis-affirms-bishop-eucharist",
+          "clm-de-lapsis-affirms-eucharist-body-blood",
+          "clm-de-lapsis-affirms-eucharist-sunday",
+          "clm-de-lapsis-affirms-frequent-eucharist",
+          "clm-de-lapsis-affirms-relics-honored",
+          "clm-de-lapsis-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-eucharist-sunday",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "eucharist-offered-on-sunday",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "eucharist-offered-on-sunday",
+        "topic_id": "eucharist-practice",
+        "dimension_id": "sunday-assembly",
+        "proposition_label": "Christians gather on Sunday for the Eucharist",
+        "polarity_family": "sunday_eucharist",
+        "description": "The Lord's Day is the regular day for eucharistic assembly.",
+        "notes": "Weekly liturgical pattern"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-eucharist-sunday",
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Approaching the altar to receive implies regular eucharistic assembly."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 25-26",
+            "excerpt": "Paraphrase: Some who had received libelli from the confessors or who came to communion without proper reconciliation through the bishop — when they approached the altar to receive, they were stricken: one woman who tried to open the chest containing the Lord's reserved sacrament was deterred by fire rising from it; another who received unworthily vomited up the sanctified cup.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Eucharistic discipline; divine punishment for unworthy communion; reserved sacrament reference"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-25-26": [
+          "clm-de-lapsis-affirms-bishop-eucharist",
+          "clm-de-lapsis-affirms-eucharist-body-blood",
+          "clm-de-lapsis-affirms-eucharist-sacrifice",
+          "clm-de-lapsis-affirms-frequent-eucharist",
+          "clm-de-lapsis-affirms-relics-honored",
+          "clm-de-lapsis-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-frequent-eucharist",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "frequent-eucharistic-assembly",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "frequent-eucharistic-assembly",
+        "topic_id": "eucharist-practice",
+        "dimension_id": "assembly-frequency",
+        "proposition_label": "Christians should assemble frequently for Eucharist",
+        "polarity_family": "frequent_eucharist",
+        "description": "Regular gathering for eucharistic worship is normative.",
+        "notes": "Liturgical regularity"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-frequent-eucharist",
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Regular approach to communion presupposes frequent eucharistic practice."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 25-26",
+            "excerpt": "Paraphrase: Some who had received libelli from the confessors or who came to communion without proper reconciliation through the bishop — when they approached the altar to receive, they were stricken: one woman who tried to open the chest containing the Lord's reserved sacrament was deterred by fire rising from it; another who received unworthily vomited up the sanctified cup.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Eucharistic discipline; divine punishment for unworthy communion; reserved sacrament reference"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-25-26": [
+          "clm-de-lapsis-affirms-bishop-eucharist",
+          "clm-de-lapsis-affirms-eucharist-body-blood",
+          "clm-de-lapsis-affirms-eucharist-sacrifice",
+          "clm-de-lapsis-affirms-eucharist-sunday",
+          "clm-de-lapsis-affirms-relics-honored",
+          "clm-de-lapsis-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-martyrdom-witness",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "martyrdom-witnesses-to-christ",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "martyrdom-witnesses-to-christ",
+        "topic_id": "martyrdom-theology",
+        "dimension_id": "martyr-witness",
+        "proposition_label": "Martyrdom is bearing faithful witness to Christ before authorities",
+        "polarity_family": "martyr_witness",
+        "description": "The martyr's death is presented as a form of witness to Christ, conforming to his passion and declaring undivided fidelity before earthly powers.",
+        "notes": "Martyrdom theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-martyrdom-witness",
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Those who stood firm are celebrated; confessors' witness honored."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 15-16",
+            "excerpt": "Paraphrase: But to those who have stood firm and have not been overthrown, what great joy! To those who have lapsed, medicine is not to be denied; but the lapsed must not assume that peace can be given them hastily by anyone. Let them knock at the door of the Church, but not with violence to break it down; let them beg but not presumptuously demand. Proper penance under the bishop's authority must precede reconciliation.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Graded penance under episcopal authority; against hasty reconciliation by confessors"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-15-16": [
+          "clm-celerinus-active-carthage",
+          "clm-celerinus-member-carthage-church",
+          "clm-council-carthage-251-at-carthage",
+          "clm-council-carthage-251-year",
+          "clm-cyprian-coworker-celerinus",
+          "clm-cyprian-in-council-251",
+          "clm-cyprian-teacher-of-pontius",
+          "clm-de-lapsis-affirms-baptism-regen",
+          "clm-de-lapsis-affirms-baptism-water",
+          "clm-de-lapsis-affirms-episcopal-unity",
+          "clm-de-lapsis-affirms-penance",
+          "clm-de-lapsis-mentions-almsgiving",
+          "clm-pontius-active-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-15-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-ordination-hands",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "ordination-conferred-by-laying-on-of-hands",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "ordination-conferred-by-laying-on-of-hands",
+        "topic_id": "church-order",
+        "dimension_id": "ordination-rite",
+        "proposition_label": "Ordination is conferred by the laying on of hands",
+        "polarity_family": "",
+        "description": "The ministry of bishop, presbyter, and deacon is conferred through the liturgical act of laying on of hands by existing bishops (for episcopal ordination) or by the bishop (for presbyters and deacons).",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-ordination-hands",
+            "passage_id": "psg-cyprian-lapsis-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Bishops holding divine stewardship presupposes ordination."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-6",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 6",
+            "excerpt": "Paraphrase: How many bishops who ought to have been an encouragement and example to others, despising their divine stewardship, became agents of secular affairs, forsook their thrones, deserted their people, wandered about over foreign provinces, sought the markets for trade. While their brethren were starving in the Church, they wished to have money in abundance.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Bishops who lapsed through worldly accommodation; failure of episcopal leadership during Decian crisis"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-6": [
+          "clm-de-lapsis-affirms-apostolic-succession",
+          "clm-de-lapsis-affirms-threefold-ministry",
+          "clm-de-lapsis-by-cyprian",
+          "clm-de-lapsis-written-carthage",
+          "clm-decian-persecution-at-carthage",
+          "clm-decian-persecution-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-penance",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "post-baptismal-sin-forgiven-by-penance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "post-baptismal-sin-forgiven-by-penance",
+        "topic_id": "penance-practice",
+        "dimension_id": "post-baptismal-penance",
+        "proposition_label": "Post-baptismal sin can be forgiven through penance",
+        "polarity_family": "post_baptismal_penance",
+        "description": "A second repentance after baptism is possible and administered through church discipline.",
+        "notes": "Penitential discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-penance",
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Proper penance under bishop's authority must precede reconciliation."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 15-16",
+            "excerpt": "Paraphrase: But to those who have stood firm and have not been overthrown, what great joy! To those who have lapsed, medicine is not to be denied; but the lapsed must not assume that peace can be given them hastily by anyone. Let them knock at the door of the Church, but not with violence to break it down; let them beg but not presumptuously demand. Proper penance under the bishop's authority must precede reconciliation.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Graded penance under episcopal authority; against hasty reconciliation by confessors"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-15-16": [
+          "clm-celerinus-active-carthage",
+          "clm-celerinus-member-carthage-church",
+          "clm-council-carthage-251-at-carthage",
+          "clm-council-carthage-251-year",
+          "clm-cyprian-coworker-celerinus",
+          "clm-cyprian-in-council-251",
+          "clm-cyprian-teacher-of-pontius",
+          "clm-de-lapsis-affirms-baptism-regen",
+          "clm-de-lapsis-affirms-baptism-water",
+          "clm-de-lapsis-affirms-episcopal-unity",
+          "clm-de-lapsis-affirms-martyrdom-witness",
+          "clm-de-lapsis-mentions-almsgiving",
+          "clm-pontius-active-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-15-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-relics-honored",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "martyrs-relics-honored",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "martyrs-relics-honored",
+        "topic_id": "holy-matter",
+        "dimension_id": "relic-veneration",
+        "proposition_label": "The bones of martyrs are precious and gathered for commemoration",
+        "polarity_family": "relic_honor",
+        "description": "The bodily remains of martyrs are treated as precious, gathered for custody, and commemorated at annual anniversary gatherings.",
+        "notes": "Relic veneration"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-relics-honored",
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Reserved sacrament and altar veneration context."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 25-26",
+            "excerpt": "Paraphrase: Some who had received libelli from the confessors or who came to communion without proper reconciliation through the bishop — when they approached the altar to receive, they were stricken: one woman who tried to open the chest containing the Lord's reserved sacrament was deterred by fire rising from it; another who received unworthily vomited up the sanctified cup.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Eucharistic discipline; divine punishment for unworthy communion; reserved sacrament reference"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-25-26": [
+          "clm-de-lapsis-affirms-bishop-eucharist",
+          "clm-de-lapsis-affirms-eucharist-body-blood",
+          "clm-de-lapsis-affirms-eucharist-sacrifice",
+          "clm-de-lapsis-affirms-eucharist-sunday",
+          "clm-de-lapsis-affirms-frequent-eucharist",
+          "clm-de-lapsis-affirms-trinitarian-baptism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-threefold-ministry",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "threefold-ministry-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "threefold-ministry-required",
+        "topic_id": "church-order",
+        "dimension_id": "bishop-presbyter-deacon",
+        "proposition_label": "Valid church order requires bishop, presbyter, and deacon",
+        "polarity_family": "threefold_ministry",
+        "description": "The threefold ministry of bishop, presbyter, and deacon is required for valid church structure.",
+        "notes": "Church order"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-threefold-ministry",
+            "passage_id": "psg-cyprian-lapsis-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Bishops described as holding divine stewardship with distinct authority over the lapsed."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-6",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 6",
+            "excerpt": "Paraphrase: How many bishops who ought to have been an encouragement and example to others, despising their divine stewardship, became agents of secular affairs, forsook their thrones, deserted their people, wandered about over foreign provinces, sought the markets for trade. While their brethren were starving in the Church, they wished to have money in abundance.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Bishops who lapsed through worldly accommodation; failure of episcopal leadership during Decian crisis"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-6": [
+          "clm-de-lapsis-affirms-apostolic-succession",
+          "clm-de-lapsis-affirms-ordination-hands",
+          "clm-de-lapsis-by-cyprian",
+          "clm-de-lapsis-written-carthage",
+          "clm-decian-persecution-at-carthage",
+          "clm-decian-persecution-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-affirms-trinitarian-baptism",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-administered-in-trinitarian-name",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-administered-in-trinitarian-name",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-formula",
+        "proposition_label": "Baptism is administered in the Trinitarian name of Father, Son, and Holy Spirit",
+        "polarity_family": "trinitarian_baptism",
+        "description": "Baptism uses the explicit Trinitarian formula of Father, Son, and Holy Spirit as the form of the sacrament.",
+        "notes": "Trinitarian baptismal formula"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-affirms-trinitarian-baptism",
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Eucharistic discipline presupposes baptism in trinitarian form."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-25-26",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 25-26",
+            "excerpt": "Paraphrase: Some who had received libelli from the confessors or who came to communion without proper reconciliation through the bishop — when they approached the altar to receive, they were stricken: one woman who tried to open the chest containing the Lord's reserved sacrament was deterred by fire rising from it; another who received unworthily vomited up the sanctified cup.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Eucharistic discipline; divine punishment for unworthy communion; reserved sacrament reference"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-by-cyprian",
+        "clm-de-lapsis-mentions-almsgiving"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-25-26": [
+          "clm-de-lapsis-affirms-bishop-eucharist",
+          "clm-de-lapsis-affirms-eucharist-body-blood",
+          "clm-de-lapsis-affirms-eucharist-sacrifice",
+          "clm-de-lapsis-affirms-eucharist-sunday",
+          "clm-de-lapsis-affirms-frequent-eucharist",
+          "clm-de-lapsis-affirms-relics-honored"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-lapsis-mentions-almsgiving",
+        "subject_type": "work",
+        "subject_id": "de-lapsis",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "almsgiving-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-lapsis",
+        "title_display": "De Lapsis (On the Lapsed)",
+        "title_original": "De Lapsis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's treatise c. 251 on the readmission of Christians who lapsed during the Decian persecution; distinguishes categories of lapse (sacrificati, thurificati, libellatici); insists on proper penance under episcopal authority before reconciliation; opposes both the rigorist denial of readmission (Novatian) and the lax granting of peace by confessors without episcopal sanction."
+      },
+      "object_entity": {
+        "proposition_id": "almsgiving-is-required",
+        "topic_id": "social-ethics",
+        "dimension_id": "almsgiving-required",
+        "proposition_label": "Almsgiving is Required",
+        "polarity_family": "",
+        "description": "Christians are obligated to give alms to the poor as stewards of God's gifts; wealth deployed through giving redeems sins and fulfills the commandment of love.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-lapsis-mentions-almsgiving",
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Penance context includes charitable works."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 15-16",
+            "excerpt": "Paraphrase: But to those who have stood firm and have not been overthrown, what great joy! To those who have lapsed, medicine is not to be denied; but the lapsed must not assume that peace can be given them hastily by anyone. Let them knock at the door of the Church, but not with violence to break it down; let them beg but not presumptuously demand. Proper penance under the bishop's authority must precede reconciliation.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Graded penance under episcopal authority; against hasty reconciliation by confessors"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-lapsis-written-carthage",
+        "clm-de-lapsis-affirms-apostolic-succession",
+        "clm-de-lapsis-affirms-baptism-regen",
+        "clm-de-lapsis-affirms-baptism-water",
+        "clm-de-lapsis-affirms-bishop-eucharist",
+        "clm-de-lapsis-affirms-episcopal-unity",
+        "clm-de-lapsis-affirms-eucharist-body-blood",
+        "clm-de-lapsis-affirms-eucharist-sacrifice",
+        "clm-de-lapsis-affirms-eucharist-sunday",
+        "clm-de-lapsis-affirms-frequent-eucharist",
+        "clm-de-lapsis-affirms-martyrdom-witness",
+        "clm-de-lapsis-affirms-ordination-hands",
+        "clm-de-lapsis-affirms-penance",
+        "clm-de-lapsis-affirms-relics-honored",
+        "clm-de-lapsis-affirms-threefold-ministry",
+        "clm-de-lapsis-affirms-trinitarian-baptism",
+        "clm-de-lapsis-by-cyprian"
+      ],
+      "sibling_count": 17,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-15-16": [
+          "clm-celerinus-active-carthage",
+          "clm-celerinus-member-carthage-church",
+          "clm-council-carthage-251-at-carthage",
+          "clm-council-carthage-251-year",
+          "clm-cyprian-coworker-celerinus",
+          "clm-cyprian-in-council-251",
+          "clm-cyprian-teacher-of-pontius",
+          "clm-de-lapsis-affirms-baptism-regen",
+          "clm-de-lapsis-affirms-baptism-water",
+          "clm-de-lapsis-affirms-episcopal-unity",
+          "clm-de-lapsis-affirms-martyrdom-witness",
+          "clm-de-lapsis-affirms-penance",
+          "clm-pontius-active-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-15-16"
+      ]
+    }
+  ]
+}

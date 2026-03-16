@@ -1,0 +1,1189 @@
+{
+  "batch_id": "batch-050",
+  "queue": "1",
+  "focus": "paul",
+  "claim_count": 8,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-paul-disciple",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "34",
+        "year_end": "64",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-disciple",
+            "passage_id": "psg-acts-9-1-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-9-1-19",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.9.1-19",
+            "excerpt": "Paraphrase: Saul encounter on the way to Damascus leads to his reversal, healing, and baptism.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church",
+        "clm-paul-coworker-stephanas"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-acts-9-1-19": [
+          "clm-conversion-at-damascus",
+          "clm-conversion-year",
+          "clm-disciples-at-damascus",
+          "clm-paul-active-damascus",
+          "clm-paul-in-conversion",
+          "clm-place-damascus-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-9-1-19",
+        "PARAPHRASE_OMISSION:psg-acts-9-1-19:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-member-jerusalem-church",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "jerusalem-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "36",
+        "year_end": "49",
+        "context_place_id": "jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "group_id": "jerusalem-church",
+        "group_label": "Church in Jerusalem",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Jerusalem community central to the earliest apostolic period."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-member-jerusalem-church",
+            "passage_id": "psg-acts-9-26-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-9-26-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.9.26-28",
+            "excerpt": "Paraphrase: Barnabas brings Saul to the apostles in Jerusalem and vouches for him.",
+            "language": "English",
+            "passage_year": "36",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church",
+        "clm-paul-coworker-stephanas"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-acts-9-26-28": [
+          "clm-barnabas-active-jerusalem",
+          "clm-barnabas-member-jerusalem",
+          "clm-paul-active-galatia",
+          "clm-paul-active-galilee-area",
+          "clm-paul-active-jerusalem",
+          "clm-paul-active-judea-late",
+          "clm-paul-in-pentecost",
+          "clm-peter-coworker-barnabas"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-9-26-28",
+        "PARAPHRASE_OMISSION:psg-acts-9-26-28:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-member-antioch-church",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "48",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-member-antioch-church",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church",
+        "clm-paul-coworker-stephanas"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1",
+        "PARAPHRASE_OMISSION:psg-acts-13-1:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-member-philippian",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "philippian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "57",
+        "context_place_id": "philippi",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "group_id": "philippian-church",
+        "group_label": "Church in Philippi",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Philippi associated with Lydia and Pauline mission."
+      },
+      "context_place": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-member-philippian",
+            "passage_id": "psg-phil-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phil-1-1",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.1.1",
+            "excerpt": "Paraphrase: Paul and Timothy address all the saints in Christ Jesus who are in Philippi, with the overseers and deacons.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church",
+        "clm-paul-coworker-stephanas"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-phil-1-1": [
+          "clm-paul-coworker-timothy",
+          "clm-philippians-addressed-philippi",
+          "clm-philippians-by-paul",
+          "clm-timothy-active-rome",
+          "clm-timothy-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phil-1-1",
+        "PARAPHRASE_OMISSION:psg-phil-1-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-member-thessalonian",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "thessalonian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "50",
+        "context_place_id": "thessalonica",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "group_id": "thessalonian-church",
+        "group_label": "Church in Thessalonica",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Thessalonica attested in Acts and the Thessalonian letters."
+      },
+      "context_place": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-member-thessalonian",
+            "passage_id": "psg-1thess-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-1thess-1-1",
+            "source_id": "src-1thess",
+            "locator_type": "bible_osis",
+            "locator": "1Thess.1.1",
+            "excerpt": "Paraphrase: Paul, Silvanus, and Timothy address the church of the Thessalonians in God the Father and the Lord Jesus Christ.",
+            "language": "English",
+            "passage_year": "50",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1thess",
+            "work_id": "first-epistle-to-the-thessalonians",
+            "source_kind": "primary_text",
+            "title": "First Epistle to the Thessalonians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 50-51",
+            "year_start": "50",
+            "year_end": "51",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=1%20Thessalonians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Thessalonian church and resurrection proclamation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church",
+        "clm-paul-coworker-stephanas"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-1thess-1-1": [
+          "clm-1thess-by-paul",
+          "clm-first-thessalonians-addressed-thessalonica",
+          "clm-group-thessalonian-church-thessalonica",
+          "clm-paul-coworker-timothy",
+          "clm-place-thessalonica-attested",
+          "clm-silas-coworker-timothy",
+          "clm-timothy-active-corinth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-1thess-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-member-corinthian-church",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "corinthian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "50",
+        "year_end": "52",
+        "context_place_id": "corinth",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "group_id": "corinthian-church",
+        "group_label": "Church in Corinth",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Corinth addressed in Pauline correspondence."
+      },
+      "context_place": {
+        "place_id": "corinth",
+        "place_label": "Corinth",
+        "place_label_modern": "Ancient Corinth",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9056",
+        "lon": "22.8784",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Major Achaian city associated with Paul and the Corinthian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-member-corinthian-church",
+            "passage_id": "psg-1cor-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-1cor-1-2",
+            "source_id": "src-1cor",
+            "locator_type": "bible_osis",
+            "locator": "1Cor.1.2",
+            "excerpt": "Paraphrase: Paul addresses the church of God that is in Corinth.",
+            "language": "English",
+            "passage_year": "54",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1cor",
+            "work_id": "first-epistle-to-the-corinthians",
+            "source_kind": "primary_text",
+            "title": "First Epistle to the Corinthians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 53-55",
+            "year_start": "53",
+            "year_end": "55",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=1%20Corinthians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Corinth and resurrection proclamation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-coworker-stephanas"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-1cor-1-2": [
+          "clm-1cor-year-end",
+          "clm-1cor-year-start",
+          "clm-1corinthians-by-paul",
+          "clm-first-corinthians-addressed-corinth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-1cor-1-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-member-ephesian-church",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "ephesian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "52",
+        "year_end": "55",
+        "context_place_id": "ephesus",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "group_id": "ephesian-church",
+        "group_label": "Church in Ephesus",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Ephesus attested in Acts and Revelation."
+      },
+      "context_place": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-member-ephesian-church",
+            "passage_id": "psg-1cor-16-8",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-1cor-16-8",
+            "source_id": "src-1cor",
+            "locator_type": "bible_osis",
+            "locator": "1Cor.16.8",
+            "excerpt": "Paraphrase: Paul states that he will remain in Ephesus until Pentecost.",
+            "language": "English",
+            "passage_year": "54",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1cor",
+            "work_id": "first-epistle-to-the-corinthians",
+            "source_kind": "primary_text",
+            "title": "First Epistle to the Corinthians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 53-55",
+            "year_start": "53",
+            "year_end": "55",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=1%20Corinthians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Corinth and resurrection proclamation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-1cor-16-8": [
+          "clm-first-corinthians-written-ephesus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-1cor-16-8",
+        "PARAPHRASE_OMISSION:psg-1cor-16-8:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "64",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-member-roman-church",
+            "passage_id": "psg-1clement-5-1-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-1clement-5-1-7",
+            "source_id": "src-1clement",
+            "locator_type": "source_ref",
+            "locator": "1 Clem. 5.1-7",
+            "excerpt": "Paraphrase: Clement presents Peter and Paul as recent exemplary sufferers, saying Peter endured many labors and Paul bore witness and departed from the world after noble endurance.",
+            "language": "English",
+            "passage_year": "96",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1clement",
+            "work_id": "first-epistle-of-clement",
+            "source_kind": "primary_text",
+            "title": "First Epistle of Clement",
+            "author": "Clement of Rome",
+            "editor": "",
+            "year_display": "c. 95-96",
+            "year_start": "95",
+            "year_end": "96",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/text/1clement-roberts.html",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Early Roman Christian witness frequently used for late first-century apostolic memory."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-paul-member-roman-church",
+            "passage_id": "psg-rom-1-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-1-7",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.1.7",
+            "excerpt": "Paraphrase: Paul addresses all God beloved in Rome who are called to be saints.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-1clement-5-1-7": [
+          "clm-1clement-affirms-martyrdom-witness",
+          "clm-paul-in-martyrdom",
+          "clm-paul-in-neronian",
+          "clm-paul-in-pauls-martyrdom",
+          "clm-peter-bishop-rome",
+          "clm-peter-in-martyrdom",
+          "clm-peter-in-neronian",
+          "clm-peter-in-peters-martyrdom",
+          "clm-peter-member-roman-church"
+        ],
+        "psg-rom-1-7": [
+          "clm-group-disciples-rome",
+          "clm-romans-addressed-rome",
+          "clm-romans-by-paul",
+          "clm-romans-year-end",
+          "clm-romans-year-start"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-1clement-5-1-7",
+        "PARAPHRASE_OMISSION:psg-1clement-5-1-7:object",
+        "PARAPHRASE_RISK:psg-rom-1-7",
+        "PARAPHRASE_OMISSION:psg-rom-1-7:object"
+      ]
+    }
+  ]
+}

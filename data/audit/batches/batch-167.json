@@ -1,0 +1,2196 @@
+{
+  "batch_id": "batch-167",
+  "queue": "1",
+  "focus": "council-of-arles-314; council-of-carthage-251; council-of-carthage-252; council-of-carthage-256; council-of-ephesus-431; cyprians-martyrdom; dura-europos-church-construction; origen-expulsion-from-alexandria; fall-of-nisibis-363; martyrdom-of-alban",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-council-arles-at-arles",
+        "subject_type": "event",
+        "subject_id": "council-of-arles-314",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "arles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-arles-314",
+        "event_label": "Council of Arles (314)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Church council convened by Emperor Constantine at Arles in Gaul, 314; addressed the Donatist controversy; attended by 3 British bishops (Eborius of York, Restitutus of London, Adelfius of Colchester/Lincoln); earliest firm attestation of organized British Christianity."
+      },
+      "object_entity": {
+        "place_id": "arles",
+        "place_label": "Arles",
+        "place_label_modern": "Arles",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "43.6767",
+        "lon": "4.6278",
+        "location_precision": "approx_city",
+        "modern_country_label": "France",
+        "notes": "Roman Arelate in southern Gaul; site of the Council of Arles 314 addressing the Donatist controversy; attended by bishops from across the Western empire including 3 from Britain."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-council-arles-at-arles",
+            "passage_id": "psg-council-arles-subscriptions",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Council subscription list from Arles."
+          },
+          "passage": {
+            "passage_id": "psg-council-arles-subscriptions",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Council of Arles 314 subscriptions",
+            "excerpt": "Paraphrase: Among the bishops who signed the acts of the Council of Arles in 314 were three from Britain: Eborius bishop of York, Restitutus bishop of London, and Adelfius bishop of a third see, accompanied by a priest Sacerdos and a deacon Arminius.",
+            "language": "English",
+            "passage_year": "314",
+            "url_override": "",
+            "notes": "Earliest firm documentary attestation of organized British Christianity with 3 episcopal sees."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-council-arles-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-council-arles-subscriptions": [
+          "clm-british-church-at-britannia",
+          "clm-british-church-at-londinium",
+          "clm-british-church-controls-londinium",
+          "clm-british-church-group-present-arles",
+          "clm-council-arles-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-council-arles-subscriptions"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-council-arles-year",
+        "subject_type": "event",
+        "subject_id": "council-of-arles-314",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "314",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-arles-314",
+        "event_label": "Council of Arles (314)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Church council convened by Emperor Constantine at Arles in Gaul, 314; addressed the Donatist controversy; attended by 3 British bishops (Eborius of York, Restitutus of London, Adelfius of Colchester/Lincoln); earliest firm attestation of organized British Christianity."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-council-arles-year",
+            "passage_id": "psg-council-arles-subscriptions",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Council dated 314 in subscriptions."
+          },
+          "passage": {
+            "passage_id": "psg-council-arles-subscriptions",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Council of Arles 314 subscriptions",
+            "excerpt": "Paraphrase: Among the bishops who signed the acts of the Council of Arles in 314 were three from Britain: Eborius bishop of York, Restitutus bishop of London, and Adelfius bishop of a third see, accompanied by a priest Sacerdos and a deacon Arminius.",
+            "language": "English",
+            "passage_year": "314",
+            "url_override": "",
+            "notes": "Earliest firm documentary attestation of organized British Christianity with 3 episcopal sees."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-council-arles-at-arles"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-council-arles-subscriptions": [
+          "clm-british-church-at-britannia",
+          "clm-british-church-at-londinium",
+          "clm-british-church-controls-londinium",
+          "clm-british-church-group-present-arles",
+          "clm-council-arles-at-arles"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-council-arles-subscriptions"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-council-carthage-251-at-carthage",
+        "subject_type": "event",
+        "subject_id": "council-of-carthage-251",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-carthage-251",
+        "event_label": "Council of Carthage (251)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "North African council convened under Cyprian c. 251 after the Decian persecution to establish policy on the readmission of the lapsed; distinguished categories of lapse and mandated graded penance under episcopal authority; opposed both the rigorist position (Novatian) and the lax granting of peace by confessors."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-council-carthage-251-at-carthage",
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "De Lapsis reflects the council's policy on readmission of the lapsed at Carthage."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 15-16",
+            "excerpt": "Paraphrase: But to those who have stood firm and have not been overthrown, what great joy! To those who have lapsed, medicine is not to be denied; but the lapsed must not assume that peace can be given them hastily by anyone. Let them knock at the door of the Church, but not with violence to break it down; let them beg but not presumptuously demand. Proper penance under the bishop's authority must precede reconciliation.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Graded penance under episcopal authority; against hasty reconciliation by confessors"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-council-carthage-251-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-15-16": [
+          "clm-celerinus-active-carthage",
+          "clm-celerinus-member-carthage-church",
+          "clm-council-carthage-251-year",
+          "clm-cyprian-coworker-celerinus",
+          "clm-cyprian-in-council-251",
+          "clm-cyprian-teacher-of-pontius",
+          "clm-de-lapsis-affirms-baptism-regen",
+          "clm-de-lapsis-affirms-baptism-water",
+          "clm-de-lapsis-affirms-episcopal-unity",
+          "clm-de-lapsis-affirms-martyrdom-witness",
+          "clm-de-lapsis-affirms-penance",
+          "clm-de-lapsis-mentions-almsgiving",
+          "clm-pontius-active-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-15-16",
+        "PARAPHRASE_OMISSION:psg-cyprian-lapsis-15-16:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-council-carthage-251-year",
+        "subject_type": "event",
+        "subject_id": "council-of-carthage-251",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "251",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-carthage-251",
+        "event_label": "Council of Carthage (251)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "North African council convened under Cyprian c. 251 after the Decian persecution to establish policy on the readmission of the lapsed; distinguished categories of lapse and mandated graded penance under episcopal authority; opposed both the rigorist position (Novatian) and the lax granting of peace by confessors."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-council-carthage-251-year",
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "De Lapsis written c. 251 in connection with the council."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-lapsis-15-16",
+            "source_id": "src-cyprian-de-lapsis",
+            "locator_type": "source_ref",
+            "locator": "De Laps. 15-16",
+            "excerpt": "Paraphrase: But to those who have stood firm and have not been overthrown, what great joy! To those who have lapsed, medicine is not to be denied; but the lapsed must not assume that peace can be given them hastily by anyone. Let them knock at the door of the Church, but not with violence to break it down; let them beg but not presumptuously demand. Proper penance under the bishop's authority must precede reconciliation.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Graded penance under episcopal authority; against hasty reconciliation by confessors"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-lapsis",
+            "work_id": "de-lapsis",
+            "source_kind": "primary_text",
+            "title": "De Lapsis (On the Lapsed)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050703.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's treatise on the lapsed; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-council-carthage-251-at-carthage"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-cyprian-lapsis-15-16": [
+          "clm-celerinus-active-carthage",
+          "clm-celerinus-member-carthage-church",
+          "clm-council-carthage-251-at-carthage",
+          "clm-cyprian-coworker-celerinus",
+          "clm-cyprian-in-council-251",
+          "clm-cyprian-teacher-of-pontius",
+          "clm-de-lapsis-affirms-baptism-regen",
+          "clm-de-lapsis-affirms-baptism-water",
+          "clm-de-lapsis-affirms-episcopal-unity",
+          "clm-de-lapsis-affirms-martyrdom-witness",
+          "clm-de-lapsis-affirms-penance",
+          "clm-de-lapsis-mentions-almsgiving",
+          "clm-pontius-active-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-lapsis-15-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-council-carthage-252-at-carthage",
+        "subject_type": "event",
+        "subject_id": "council-of-carthage-252",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-carthage-252",
+        "event_label": "Council of Carthage (252) on Infant Baptism",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "North African council convened under Cyprian c. 252 responding to Bishop Fidus's question about delaying infant baptism until the eighth day; the council unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day after birth; key witness for infant baptism as assumed standard practice."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-council-carthage-252-at-carthage",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Ep. 64 explicitly reports the council's ruling at Carthage."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-council-carthage-252-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2",
+        "PARAPHRASE_OMISSION:psg-cyprian-ep64-2:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-council-carthage-252-year",
+        "subject_type": "event",
+        "subject_id": "council-of-carthage-252",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "252",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-carthage-252",
+        "event_label": "Council of Carthage (252) on Infant Baptism",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "North African council convened under Cyprian c. 252 responding to Bishop Fidus's question about delaying infant baptism until the eighth day; the council unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day after birth; key witness for infant baptism as assumed standard practice."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-council-carthage-252-year",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Ep. 64 dates from the council of c. 252."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-council-carthage-252-at-carthage"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-council-carthage-256-at-carthage",
+        "subject_type": "event",
+        "subject_id": "council-of-carthage-256",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-carthage-256",
+        "event_label": "Council of Carthage (256) on Rebaptism",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Council held September 1, 256 under Cyprian's presidency with 87 North African bishops present; each bishop individually declared heretical baptism invalid and mandated rebaptism of converts from heretical groups; the fullest surviving example of North African collegial episcopal practice; opposed by Pope Stephen I of Rome."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-council-carthage-256-at-carthage",
+            "passage_id": "psg-cyprian-sent-proem",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "The Sententiae proem opens the council session at Carthage."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-proem",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. Proem",
+            "excerpt": "Paraphrase: Cyprian said: You have heard, most beloved colleagues, what Jubaianus our fellow bishop wrote to me, consulting my moderate ability about the unlawful and profane baptism of heretics, and what I wrote back to him. Let each of us now bring forward what we think on this matter, judging no man nor rejecting any from the right of communion if he should think differently from us. For none of us sets himself up as a bishop of bishops or by tyrannical terror forces his colleagues to obedience.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Episcopal collegiality; no bishop of bishops; conciliar freedom of conscience"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-council-carthage-256-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-cyprian-sent-proem": [
+          "clm-council-carthage-256-year",
+          "clm-cyprian-in-council-256",
+          "clm-sent-affirms-apostolic-succession",
+          "clm-sent-affirms-episcopal-unity",
+          "clm-sent-affirms-threefold-ministry",
+          "clm-sententiae-by-cyprian",
+          "clm-sententiae-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-sent-proem",
+        "PARAPHRASE_OMISSION:psg-cyprian-sent-proem:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-council-carthage-256-year",
+        "subject_type": "event",
+        "subject_id": "council-of-carthage-256",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "256",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-carthage-256",
+        "event_label": "Council of Carthage (256) on Rebaptism",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Council held September 1, 256 under Cyprian's presidency with 87 North African bishops present; each bishop individually declared heretical baptism invalid and mandated rebaptism of converts from heretical groups; the fullest surviving example of North African collegial episcopal practice; opposed by Pope Stephen I of Rome."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-council-carthage-256-year",
+            "passage_id": "psg-cyprian-sent-proem",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Council held September 1, 256 as recorded in the Sententiae."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-sent-proem",
+            "source_id": "src-cyprian-sententiae",
+            "locator_type": "source_ref",
+            "locator": "Sent. Proem",
+            "excerpt": "Paraphrase: Cyprian said: You have heard, most beloved colleagues, what Jubaianus our fellow bishop wrote to me, consulting my moderate ability about the unlawful and profane baptism of heretics, and what I wrote back to him. Let each of us now bring forward what we think on this matter, judging no man nor rejecting any from the right of communion if he should think differently from us. For none of us sets himself up as a bishop of bishops or by tyrannical terror forces his colleagues to obedience.",
+            "language": "English",
+            "passage_year": "256",
+            "url_override": "",
+            "notes": "Episcopal collegiality; no bishop of bishops; conciliar freedom of conscience"
+          },
+          "source": {
+            "source_id": "src-cyprian-sententiae",
+            "work_id": "sententiae-episcoporum",
+            "source_kind": "primary_text",
+            "title": "Sententiae Episcoporum (Sentences of the 87 Bishops)",
+            "author": "Cyprian (president)",
+            "editor": "",
+            "year_display": "256",
+            "year_start": "256",
+            "year_end": "256",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050607.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Verbatim minutes of the Council of Carthage 256; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-council-carthage-256-at-carthage"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-cyprian-sent-proem": [
+          "clm-council-carthage-256-at-carthage",
+          "clm-cyprian-in-council-256",
+          "clm-sent-affirms-apostolic-succession",
+          "clm-sent-affirms-episcopal-unity",
+          "clm-sent-affirms-threefold-ministry",
+          "clm-sententiae-by-cyprian",
+          "clm-sententiae-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-sent-proem"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-council-ephesus-431-year",
+        "subject_type": "event",
+        "subject_id": "council-of-ephesus-431",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "431",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-ephesus-431",
+        "event_label": "Council of Ephesus (431)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Third ecumenical council held at Ephesus in 431; condemned Nestorianism and affirmed the title Theotokos for the Virgin Mary; presided over by Cyril of Alexandria."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-council-ephesus-431-year",
+            "passage_id": "psg-wikipedia-council-ephesus-431",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-council-ephesus-431",
+            "source_id": "src-wikipedia-council-ephesus-431",
+            "locator_type": "source_ref",
+            "locator": "Council_of_Ephesus",
+            "excerpt": "The Council of Ephesus was held in 431 AD and condemned Nestorius, affirming Mary as Theotokos (God-bearer).",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Council of Ephesus 431 year evidence."
+          },
+          "source": {
+            "source_id": "src-wikipedia-council-ephesus-431",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Council of Ephesus - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Council_of_Ephesus",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the Council of Ephesus (431 AD)."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-council-ephesus-at-ephesus"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-wikipedia-council-ephesus-431": [
+          "clm-council-ephesus-at-ephesus"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-council-ephesus-431",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-council-ephesus-at-ephesus",
+        "subject_type": "event",
+        "subject_id": "council-of-ephesus-431",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-ephesus-431",
+        "event_label": "Council of Ephesus (431)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Third ecumenical council held at Ephesus in 431; condemned Nestorianism and affirmed the title Theotokos for the Virgin Mary; presided over by Cyril of Alexandria."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-council-ephesus-at-ephesus",
+            "passage_id": "psg-wikipedia-council-ephesus-431",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes the location of council-of-ephesus-431."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-council-ephesus-431",
+            "source_id": "src-wikipedia-council-ephesus-431",
+            "locator_type": "source_ref",
+            "locator": "Council_of_Ephesus",
+            "excerpt": "The Council of Ephesus was held in 431 AD and condemned Nestorius, affirming Mary as Theotokos (God-bearer).",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Council of Ephesus 431 year evidence."
+          },
+          "source": {
+            "source_id": "src-wikipedia-council-ephesus-431",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Council of Ephesus - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Council_of_Ephesus",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the Council of Ephesus (431 AD)."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-council-ephesus-431-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-wikipedia-council-ephesus-431": [
+          "clm-council-ephesus-431-year"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-council-ephesus-431",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cyprians-martyrdom-at-carthage",
+        "subject_type": "event",
+        "subject_id": "cyprians-martyrdom",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "cyprians-martyrdom",
+        "event_label": "Martyrdom of Cyprian",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Cyprian of Carthage was arrested, tried before the proconsul Galerius Maximus, and beheaded on September 14, 258 during the Valerianic persecution; the Acta Proconsularia preserve the trial proceedings; Pontius the Deacon wrote the earliest Latin Christian biography (Vita Cypriani) describing his death; Cyprian was the first African bishop to be martyred."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cyprians-martyrdom-at-carthage",
+            "passage_id": "psg-eusebius-he-7-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius places Cyprian's martyrdom in his North African bishopric."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-7-9",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 7.9",
+            "excerpt": "Paraphrase: Eusebius records that Cyprian was banished under the Emperor Valerian and thereafter summoned back only to be executed. Pontius the deacon, who was with him, wrote an account of his life and death.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cyprian's exile and martyrdom under Valerian; Pontius as witness and biographer"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cyprians-martyrdom-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-7-9": [
+          "clm-cyprian-in-cyprians-martyrdom",
+          "clm-cyprians-martyrdom-year",
+          "clm-pontius-coworker-cyprian",
+          "clm-pontius-in-cyprians-martyrdom",
+          "clm-pontius-member-carthage-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-7-9",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-7-9:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cyprians-martyrdom-year",
+        "subject_type": "event",
+        "subject_id": "cyprians-martyrdom",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "258",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "cyprians-martyrdom",
+        "event_label": "Martyrdom of Cyprian",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Cyprian of Carthage was arrested, tried before the proconsul Galerius Maximus, and beheaded on September 14, 258 during the Valerianic persecution; the Acta Proconsularia preserve the trial proceedings; Pontius the Deacon wrote the earliest Latin Christian biography (Vita Cypriani) describing his death; Cyprian was the first African bishop to be martyred."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cyprians-martyrdom-year",
+            "passage_id": "psg-eusebius-he-7-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eusebius dates Cyprian's death to the Valerianic persecution c. 258."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-7-9",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 7.9",
+            "excerpt": "Paraphrase: Eusebius records that Cyprian was banished under the Emperor Valerian and thereafter summoned back only to be executed. Pontius the deacon, who was with him, wrote an account of his life and death.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cyprian's exile and martyrdom under Valerian; Pontius as witness and biographer"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cyprians-martyrdom-at-carthage"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-7-9": [
+          "clm-cyprian-in-cyprians-martyrdom",
+          "clm-cyprians-martyrdom-at-carthage",
+          "clm-pontius-coworker-cyprian",
+          "clm-pontius-in-cyprians-martyrdom",
+          "clm-pontius-member-carthage-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-7-9",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-7-9:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-dura-church-at-dura",
+        "subject_type": "event",
+        "subject_id": "dura-europos-church-construction",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "dura-europos",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "dura-europos-church-construction",
+        "event_label": "Dura-Europos Church Construction",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Construction of the earliest archaeologically identified Christian house-church at Dura-Europos c. 232 AD; includes a baptistery with wall paintings depicting biblical scenes; destroyed when Sasanians besieged the city c. 256."
+      },
+      "object_entity": {
+        "place_id": "dura-europos",
+        "place_label": "Dura-Europos",
+        "place_label_modern": "Salhiyé",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "34.7489",
+        "lon": "40.7289",
+        "location_precision": "approx_site",
+        "modern_country_label": "Syria",
+        "notes": "Euphrates garrison town; site of the earliest identified Christian house-church (c. 232 AD) with baptistery and wall paintings; destroyed by Sasanian siege c. 256."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-dura-church-at-dura",
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes the location of dura-europos-church-construction."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "source_id": "src-wikipedia-early-church-geography",
+            "locator_type": "source_ref",
+            "locator": "Early_centers_of_Christianity",
+            "excerpt": "Early centers of Christianity included Jerusalem, Antioch, Alexandria, Rome, Carthage, and Edessa. Communities spread to Persia, India, and Ethiopia by the 4th century.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for general early Christian presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-early-church-geography",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Early centers of Christianity - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Early_centers_of_Christianity",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Survey of early Christian communities and geographic spread."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-dura-church-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-wikipedia-early-church-geography": [
+          "clm-abgar-member-edessa-church",
+          "clm-abgar-viii-active-edessa",
+          "clm-bardaisan-member-bardesanites",
+          "clm-const381-event-year",
+          "clm-cyprian-originated-carthage",
+          "clm-cyril-participant-ephesus-431",
+          "clm-dura-church-construction-year",
+          "clm-dura-church-year",
+          "clm-ebionites-at-egypt",
+          "clm-edessa-church-at-edessa",
+          "clm-ephesus-431-event-year",
+          "clm-hippolytus-callistus-schism-year",
+          "clm-irenaeus-ah-year",
+          "clm-montanus-coworker-priscilla-montanist",
+          "clm-place-bostra-attested",
+          "clm-place-caesarea-cappadocia-attested",
+          "clm-place-carthage-attested",
+          "clm-place-dalmatia-attested-late",
+          "clm-place-dura-europos-attested",
+          "clm-place-edessa-attested",
+          "clm-place-neocaesarea-attested",
+          "clm-place-sardinia-attested",
+          "clm-priscilla-montanist-affirms-prophecy",
+          "clm-priscilla-montanist-member-montanists"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-dura-church-year",
+        "subject_type": "event",
+        "subject_id": "dura-europos-church-construction",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "232",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "dura-europos-church-construction",
+        "event_label": "Dura-Europos Church Construction",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Construction of the earliest archaeologically identified Christian house-church at Dura-Europos c. 232 AD; includes a baptistery with wall paintings depicting biblical scenes; destroyed when Sasanians besieged the city c. 256."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-dura-church-year",
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "source_id": "src-wikipedia-early-church-geography",
+            "locator_type": "source_ref",
+            "locator": "Early_centers_of_Christianity",
+            "excerpt": "Early centers of Christianity included Jerusalem, Antioch, Alexandria, Rome, Carthage, and Edessa. Communities spread to Persia, India, and Ethiopia by the 4th century.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for general early Christian presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-early-church-geography",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Early centers of Christianity - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Early_centers_of_Christianity",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Survey of early Christian communities and geographic spread."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-dura-church-at-dura"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-wikipedia-early-church-geography": [
+          "clm-abgar-member-edessa-church",
+          "clm-abgar-viii-active-edessa",
+          "clm-bardaisan-member-bardesanites",
+          "clm-const381-event-year",
+          "clm-cyprian-originated-carthage",
+          "clm-cyril-participant-ephesus-431",
+          "clm-dura-church-at-dura",
+          "clm-dura-church-construction-year",
+          "clm-ebionites-at-egypt",
+          "clm-edessa-church-at-edessa",
+          "clm-ephesus-431-event-year",
+          "clm-hippolytus-callistus-schism-year",
+          "clm-irenaeus-ah-year",
+          "clm-montanus-coworker-priscilla-montanist",
+          "clm-place-bostra-attested",
+          "clm-place-caesarea-cappadocia-attested",
+          "clm-place-carthage-attested",
+          "clm-place-dalmatia-attested-late",
+          "clm-place-dura-europos-attested",
+          "clm-place-edessa-attested",
+          "clm-place-neocaesarea-attested",
+          "clm-place-sardinia-attested",
+          "clm-priscilla-montanist-affirms-prophecy",
+          "clm-priscilla-montanist-member-montanists"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-early-church-geography",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-expulsion-occurs-at-alexandria",
+        "subject_type": "event",
+        "subject_id": "origen-expulsion-from-alexandria",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "origen-expulsion-from-alexandria",
+        "event_label": "Origen's Expulsion from Alexandria",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Bishop Demetrius of Alexandria convened two synods c. 231–232 condemning Origen's irregular ordination in Caesarea and expelling him from the Alexandrian church; Origen relocated permanently to Caesarea where he continued teaching and writing for over twenty years."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-expulsion-occurs-at-alexandria",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eusebius records the expulsion from Alexandria."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-expulsion-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-expulsion-year",
+        "subject_type": "event",
+        "subject_id": "origen-expulsion-from-alexandria",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "231",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "origen-expulsion-from-alexandria",
+        "event_label": "Origen's Expulsion from Alexandria",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Bishop Demetrius of Alexandria convened two synods c. 231–232 condemning Origen's irregular ordination in Caesarea and expelling him from the Alexandrian church; Origen relocated permanently to Caesarea where he continued teaching and writing for over twenty years."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-expulsion-year",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius dates the expulsion c. 231."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-expulsion-occurs-at-alexandria"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-fall-nisibis-at-nisibis",
+        "subject_type": "event",
+        "subject_id": "fall-of-nisibis-363",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "nisibis",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "fall-of-nisibis-363",
+        "event_label": "Fall of Nisibis",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Emperor Jovian ceded Nisibis to Sasanian Persia by treaty in 363 after Julian's failed campaign; the Christian population including Ephrem the Syrian was forced to relocate, most moving to Edessa."
+      },
+      "object_entity": {
+        "place_id": "nisibis",
+        "place_label": "Nisibis",
+        "place_label_modern": "Nusaybin",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.0700",
+        "lon": "41.2150",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major frontier city between Rome and Persia; home of Ephrem the Syrian until 363; seat of Bishop Jacob of Nisibis; ceded to Persia by Jovian's treaty of 363."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-fall-nisibis-at-nisibis",
+            "passage_id": "psg-ephrem-carm-nis-14",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Ephrem Carmina Nisibena 14 is Ephrem's firsthand lament over the cession of Nisibis in 363 CE."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-carm-nis-14",
+            "source_id": "src-hymns-on-faith-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Carmina Nisibena 14",
+            "excerpt": "Woe to you, Nisibis, for you have been handed over to the Persians! The cross is removed from your towers and the sound of prayer is silenced.",
+            "language": "syr",
+            "passage_year": "363",
+            "url_override": "",
+            "notes": "Ephrem Carmina Nisibena 14: lament over the Roman cession of Nisibis to Persia in 363 CE following Julian's failed campaign."
+          },
+          "source": {
+            "source_id": "src-hymns-on-faith-ephrem",
+            "work_id": "hymns-on-faith-ephrem",
+            "source_kind": "primary_text",
+            "title": "Hymns on Faith",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 363–373",
+            "year_start": "363",
+            "year_end": "373",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3702.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Hymn cycle on Trinity, incarnation, baptism, and eucharist."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-fall-nisibis-at-nisibis",
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "VC 3.6-14",
+            "excerpt": "Constantine convened the universal synod at Nicaea in Bithynia, gathering bishops from all regions of the empire.",
+            "language": "el",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "Vita Constantini 3.6-14; primary narrative source for Nicaea."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-fall-nisibis-at-nisibis",
+            "passage_id": "psg-wikipedia-church-of-east-spread",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes the location of fall-of-nisibis-363."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-church-of-east-spread",
+            "source_id": "src-wikipedia-church-of-east",
+            "locator_type": "source_ref",
+            "locator": "Church_of_the_East#History",
+            "excerpt": "The Church of the East was centered at Seleucia-Ctesiphon and extended through Persia, Mesopotamia (Edessa, Arbela), and eventually reached India.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Church of the East presence at Edessa, Arbela, Seleucia-Ctesiphon, and India."
+          },
+          "source": {
+            "source_id": "src-wikipedia-church-of-east",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Church of the East - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Church_of_the_East",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the geographic extent of the Church of the East."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-fall-nisibis-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-vita-const-3-6": [
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-participant-nicaea",
+          "clm-church-east-at-nisibis",
+          "clm-constantine-convenes-nicaea",
+          "clm-ephrem-coworker-jacob",
+          "clm-eusebius-participant-nicaea",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-participant-nicaea",
+          "clm-jacob-teacher-ephrem",
+          "clm-nicaea-occurs-at-nicaea",
+          "clm-nicaea-year-325"
+        ],
+        "psg-wikipedia-church-of-east-spread": [
+          "clm-bardesanites-at-edessa",
+          "clm-bardesanites-at-mesopotamia",
+          "clm-church-east-at-arbela",
+          "clm-church-east-at-edessa",
+          "clm-church-east-at-seleucia",
+          "clm-fall-nisibis-year",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-teacher-ephrem",
+          "clm-place-arbela-attested",
+          "clm-place-nisibis-attested",
+          "clm-place-seleucia-ctesiphon-attested",
+          "clm-shapur-in-persecution",
+          "clm-shapur-persecution-at-seleucia",
+          "clm-shapur-persecution-year"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-fall-nisibis-year",
+        "subject_type": "event",
+        "subject_id": "fall-of-nisibis-363",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "363",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "fall-of-nisibis-363",
+        "event_label": "Fall of Nisibis",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Emperor Jovian ceded Nisibis to Sasanian Persia by treaty in 363 after Julian's failed campaign; the Christian population including Ephrem the Syrian was forced to relocate, most moving to Edessa."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-fall-nisibis-year",
+            "passage_id": "psg-wikipedia-church-of-east-spread",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-church-of-east-spread",
+            "source_id": "src-wikipedia-church-of-east",
+            "locator_type": "source_ref",
+            "locator": "Church_of_the_East#History",
+            "excerpt": "The Church of the East was centered at Seleucia-Ctesiphon and extended through Persia, Mesopotamia (Edessa, Arbela), and eventually reached India.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Church of the East presence at Edessa, Arbela, Seleucia-Ctesiphon, and India."
+          },
+          "source": {
+            "source_id": "src-wikipedia-church-of-east",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Church of the East - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Church_of_the_East",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the geographic extent of the Church of the East."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-fall-nisibis-at-nisibis"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-wikipedia-church-of-east-spread": [
+          "clm-bardesanites-at-edessa",
+          "clm-bardesanites-at-mesopotamia",
+          "clm-church-east-at-arbela",
+          "clm-church-east-at-edessa",
+          "clm-church-east-at-seleucia",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-teacher-ephrem",
+          "clm-place-arbela-attested",
+          "clm-place-nisibis-attested",
+          "clm-place-seleucia-ctesiphon-attested",
+          "clm-shapur-in-persecution",
+          "clm-shapur-persecution-at-seleucia",
+          "clm-shapur-persecution-year"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-church-of-east-spread",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-martyrdom-alban-at-britannia",
+        "subject_type": "event",
+        "subject_id": "martyrdom-of-alban",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "britannia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "martyrdom-of-alban",
+        "event_label": "Martyrdom of Alban",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Execution of Alban, proto-martyr of Britain; date debated between the Severan persecution (c. 209) and the Diocletianic persecution (c. 304); earliest witness is Gildas (6th c.)."
+      },
+      "object_entity": {
+        "place_id": "britannia",
+        "place_label": "Britannia",
+        "place_label_modern": "Britain",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "52.0000",
+        "lon": "-1.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "United Kingdom",
+        "notes": "Roman province; Christianity attested by Tertullian c. 200 and 3 bishops at Council of Arles 314; proto-martyr Alban."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-martyrdom-alban-at-britannia",
+            "passage_id": "psg-gildas-de-excidio-10",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Gildas places the martyrdom in Britain."
+          },
+          "passage": {
+            "passage_id": "psg-gildas-de-excidio-10",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Gildas De Excidio Britanniae 10",
+            "excerpt": "Paraphrase: Meanwhile these islands received the beams of light that is the holy precepts of Christ at the latter part of the reign of Tiberius Caesar.",
+            "language": "English",
+            "passage_year": "540",
+            "url_override": "",
+            "notes": "Gildas 6th-century claim that Christianity reached Britain during Tiberius; late and legendary but influential."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-martyrdom-alban-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-gildas-de-excidio-10": [
+          "clm-alban-active-britannia",
+          "clm-alban-participant-martyrdom",
+          "clm-martyrdom-alban-year",
+          "clm-place-britannia-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gildas-de-excidio-10"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-martyrdom-alban-year",
+        "subject_type": "event",
+        "subject_id": "martyrdom-of-alban",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "305",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "martyrdom-of-alban",
+        "event_label": "Martyrdom of Alban",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Execution of Alban, proto-martyr of Britain; date debated between the Severan persecution (c. 209) and the Diocletianic persecution (c. 304); earliest witness is Gildas (6th c.)."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-martyrdom-alban-year",
+            "passage_id": "psg-gildas-de-excidio-10",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Gildas De Excidio 10 is the earliest source for Alban's martyrdom; date inferred from context."
+          },
+          "passage": {
+            "passage_id": "psg-gildas-de-excidio-10",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Gildas De Excidio Britanniae 10",
+            "excerpt": "Paraphrase: Meanwhile these islands received the beams of light that is the holy precepts of Christ at the latter part of the reign of Tiberius Caesar.",
+            "language": "English",
+            "passage_year": "540",
+            "url_override": "",
+            "notes": "Gildas 6th-century claim that Christianity reached Britain during Tiberius; late and legendary but influential."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-martyrdom-alban-at-britannia"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-gildas-de-excidio-10": [
+          "clm-alban-active-britannia",
+          "clm-alban-participant-martyrdom",
+          "clm-martyrdom-alban-at-britannia",
+          "clm-place-britannia-attested"
+        ]
+      },
+      "flags": []
+    }
+  ]
+}

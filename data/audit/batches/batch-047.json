@@ -1,0 +1,858 @@
+{
+  "batch_id": "batch-047",
+  "queue": "0B",
+  "focus": "structural purge",
+  "claim_count": 7,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-ephrem-active-nisibis",
+        "subject_type": "person",
+        "subject_id": "ephrem-the-syrian",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "nisibis",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "306",
+        "year_end": "363",
+        "context_place_id": "nisibis",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ephrem-the-syrian",
+        "person_label": "Ephrem the Syrian",
+        "name_alt": "Mar Ephrem",
+        "name_native": "ܡܪܝ ܐܦܪܝܡ ܣܘܪܝܝܐ",
+        "birth_year_display": "306",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Pre-eminent Syriac hymnographer and theologian; deacon at Nisibis under Jacob then relocated to Edessa after 363; wrote Hymns on Faith, Paradise, Nativity, Against Heresies, Nisibis Hymns, and Commentary on the Diatessaron; Doctor of the Church."
+      },
+      "object_entity": {
+        "place_id": "nisibis",
+        "place_label": "Nisibis",
+        "place_label_modern": "Nusaybin",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.0700",
+        "lon": "41.2150",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major frontier city between Rome and Persia; home of Ephrem the Syrian until 363; seat of Bishop Jacob of Nisibis; ceded to Persia by Jovian's treaty of 363."
+      },
+      "context_place": {
+        "place_id": "nisibis",
+        "place_label": "Nisibis",
+        "place_label_modern": "Nusaybin",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.0700",
+        "lon": "41.2150",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major frontier city between Rome and Persia; home of Ephrem the Syrian until 363; seat of Bishop Jacob of Nisibis; ceded to Persia by Jovian's treaty of 363."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephrem-active-nisibis",
+            "passage_id": "psg-ephrem-faith-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests ephrem-the-syrian's activity in or near nisibis."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-faith-3",
+            "source_id": "src-hymns-on-faith-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Hymns on Faith 3",
+            "excerpt": "Paraphrase: Ephrem explores the mystery of the Trinity through paradox: the Father begets the Son without division; the Spirit proceeds without separation; the three are one nature yet three persons; human language fails before the divine mystery but faith embraces what reason cannot grasp.",
+            "language": "English",
+            "passage_year": "370",
+            "url_override": "",
+            "notes": "Trinity — paradox and mystery"
+          },
+          "source": {
+            "source_id": "src-hymns-on-faith-ephrem",
+            "work_id": "hymns-on-faith-ephrem",
+            "source_kind": "primary_text",
+            "title": "Hymns on Faith",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 363–373",
+            "year_start": "363",
+            "year_end": "373",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3702.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Hymn cycle on Trinity, incarnation, baptism, and eucharist."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephrem-coworker-jacob",
+        "clm-ephrem-in-fall-nisibis",
+        "clm-ephrem-active-edessa",
+        "clm-ephrem-affirms-fasting",
+        "clm-ephrem-affirms-prayer",
+        "clm-ephrem-member-edessa-church"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-ephrem-faith-3": [
+          "clm-ephrem-in-fall-nisibis",
+          "clm-ephrem-member-edessa-church",
+          "clm-hof-affirms-eternal-generation",
+          "clm-hof-affirms-prayer",
+          "clm-hof-affirms-rule-of-faith",
+          "clm-hof-affirms-trinity"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:fall-of-nisibis-363",
+        "UNSCORED_WEIGHT:psg-ephrem-faith-3",
+        "PARAPHRASE_RISK:psg-ephrem-faith-3",
+        "PARAPHRASE_OMISSION:psg-ephrem-faith-3:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-shapur-active-seleucia",
+        "subject_type": "person",
+        "subject_id": "shapur-ii",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "seleucia-ctesiphon",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "309",
+        "year_end": "379",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "shapur-ii",
+        "person_label": "Shapur II",
+        "name_alt": "Shapur the Great",
+        "name_native": "",
+        "birth_year_display": "309",
+        "death_year_display": "379",
+        "person_kind": "individual",
+        "notes": "Sasanian emperor (309–379) who persecuted Christians in the Persian Empire beginning c. 340, partly motivated by Constantine declaring Rome a Christian empire; Aphrahat wrote during this persecution."
+      },
+      "object_entity": {
+        "place_id": "seleucia-ctesiphon",
+        "place_label": "Seleucia-Ctesiphon",
+        "place_label_modern": "Al-Mada'in",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "33.0925",
+        "lon": "44.5775",
+        "location_precision": "approx_site",
+        "modern_country_label": "Iraq",
+        "notes": "Twin cities on the Tigris; capital of the Parthian and Sasanian empires; seat of the Catholicos of the Church of the East from the early 4th century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-shapur-active-seleucia",
+            "passage_id": "psg-aphrahat-dem-21",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions shapur-ii or seleucia-ctesiphon."
+          },
+          "passage": {
+            "passage_id": "psg-aphrahat-dem-21",
+            "source_id": "src-demonstrations-of-aphrahat",
+            "locator_type": "source_ref",
+            "locator": "Demonstration 21 (On Persecution)",
+            "excerpt": "Paraphrase: Aphrahat addresses the Christians suffering under Shapur II's persecution; he encourages steadfastness, reminding them that persecution purifies the church; the martyrs receive a crown; God will vindicate his people as he did Israel in Egypt.",
+            "language": "English",
+            "passage_year": "344",
+            "url_override": "",
+            "notes": "On Persecution under Shapur II"
+          },
+          "source": {
+            "source_id": "src-demonstrations-of-aphrahat",
+            "work_id": "demonstrations-of-aphrahat",
+            "source_kind": "primary_text",
+            "title": "Demonstrations",
+            "author": "Aphrahat",
+            "editor": "",
+            "year_display": "337–345",
+            "year_start": "337",
+            "year_end": "345",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/370101.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "23 Syriac homilies on faith and practice from the Persian church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-shapur-in-persecution"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-aphrahat-dem-21": [
+          "clm-aphrahat-affirms-martyrdom",
+          "clm-aphrahat-in-persecution"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:persecution-of-shapur-ii",
+        "PARAPHRASE_RISK:psg-aphrahat-dem-21",
+        "PARAPHRASE_OMISSION:psg-aphrahat-dem-21:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ezana-active-aksum",
+        "subject_type": "person",
+        "subject_id": "ezana-of-aksum",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "aksum",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "330",
+        "year_end": "356",
+        "context_place_id": "aksum",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ezana-of-aksum",
+        "person_label": "Ezana of Aksum",
+        "name_alt": "King Ezana",
+        "name_native": "",
+        "birth_year_display": "c. 303",
+        "death_year_display": "c. 356",
+        "person_kind": "individual",
+        "notes": "King of the Aksumite Empire c. 330–356; converted to Christianity under Frumentius's influence; made Christianity the state religion of Aksum; known from inscriptions and coins."
+      },
+      "object_entity": {
+        "place_id": "aksum",
+        "place_label": "Aksum",
+        "place_label_modern": "Axum",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.1308",
+        "lon": "38.7225",
+        "location_precision": "approx_city",
+        "modern_country_label": "Ethiopia",
+        "notes": "Capital of the Aksumite Empire; site of Frumentius's episcopal see; Christianity became state religion under King Ezana c. 330; major Red Sea trade hub."
+      },
+      "context_place": {
+        "place_id": "aksum",
+        "place_label": "Aksum",
+        "place_label_modern": "Axum",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.1308",
+        "lon": "38.7225",
+        "location_precision": "approx_city",
+        "modern_country_label": "Ethiopia",
+        "notes": "Capital of the Aksumite Empire; site of Frumentius's episcopal see; Christianity became state religion under King Ezana c. 330; major Red Sea trade hub."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ezana-active-aksum",
+            "passage_id": "psg-ezana-inscription-ge-ez",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Ezana's inscriptions from Aksum attest his rule there."
+          },
+          "passage": {
+            "passage_id": "psg-ezana-inscription-ge-ez",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Ezana Ge'ez inscription (RIE 271)",
+            "excerpt": "Paraphrase: King Ezana of Aksum dedicates his military victory to the Lord of Heaven Lord of Earth using explicitly Christian formulae replacing earlier pagan invocations of Mahrem.",
+            "language": "English",
+            "passage_year": "340",
+            "url_override": "",
+            "notes": "Archaeological evidence: Ezana's later inscriptions use Christian language confirming his conversion."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ezana-participant-christianization",
+        "clm-ezana-member-aksumite",
+        "clm-ezana-affirms-ethiopia",
+        "clm-person-ezana-affirms-dominion",
+        "clm-ezana-participant-mission-himyar"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-ezana-inscription-ge-ez": [
+          "clm-aksumite-church-controls-aksum",
+          "clm-christianization-aksum-year",
+          "clm-ezana-affirms-ethiopia",
+          "clm-ezana-member-aksumite",
+          "clm-ezana-participant-christianization"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:christianization-of-aksum",
+        "PARAPHRASE_RISK:psg-ezana-inscription-ge-ez"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-theophilus-active-zafar",
+        "subject_type": "person",
+        "subject_id": "theophilus-the-indian",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "zafar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "354",
+        "year_end": "356",
+        "context_place_id": "zafar",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "theophilus-the-indian",
+        "person_label": "Theophilus the Indian",
+        "name_alt": "Theophilus Indus",
+        "name_native": "",
+        "birth_year_display": "fl. c. 354",
+        "death_year_display": "fl. c. 364",
+        "person_kind": "individual",
+        "notes": "Bishop sent by Emperor Constantius II c. 354 on a mission to Himyar (South Arabia) and possibly India; built churches in Zafar and Aden per Philostorgius HE 3.4–6; described as from Socotra island."
+      },
+      "object_entity": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "context_place": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-theophilus-active-zafar",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Philostorgius reports Theophilus built a church in Zafar."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-participant-himyar-mission",
+        "clm-person-theophilus-affirms-arabia",
+        "clm-theophilus-member-arabian",
+        "clm-person-theophilus-affirms-india",
+        "clm-theophilus-active-india"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:mission-of-theophilus-to-himyar",
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ephrem-active-edessa",
+        "subject_type": "person",
+        "subject_id": "ephrem-the-syrian",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "363",
+        "year_end": "373",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ephrem-the-syrian",
+        "person_label": "Ephrem the Syrian",
+        "name_alt": "Mar Ephrem",
+        "name_native": "ܡܪܝ ܐܦܪܝܡ ܣܘܪܝܝܐ",
+        "birth_year_display": "306",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Pre-eminent Syriac hymnographer and theologian; deacon at Nisibis under Jacob then relocated to Edessa after 363; wrote Hymns on Faith, Paradise, Nativity, Against Heresies, Nisibis Hymns, and Commentary on the Diatessaron; Doctor of the Church."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephrem-active-edessa",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephrem-coworker-jacob",
+        "clm-ephrem-active-nisibis",
+        "clm-ephrem-in-fall-nisibis",
+        "clm-ephrem-affirms-fasting",
+        "clm-ephrem-affirms-prayer",
+        "clm-ephrem-member-edessa-church"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:auth_written:hymns-on-paradise-ephrem",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_OMISSION:psg-ephrem-comm-diat-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ephrem-affirms-prayer",
+        "subject_type": "person",
+        "subject_id": "ephrem-the-syrian",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "prayer-is-offered-without-ceasing",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "363",
+        "year_end": "373",
+        "context_place_id": "edessa",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ephrem-the-syrian",
+        "person_label": "Ephrem the Syrian",
+        "name_alt": "Mar Ephrem",
+        "name_native": "ܡܪܝ ܐܦܪܝܡ ܣܘܪܝܝܐ",
+        "birth_year_display": "306",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Pre-eminent Syriac hymnographer and theologian; deacon at Nisibis under Jacob then relocated to Edessa after 363; wrote Hymns on Faith, Paradise, Nativity, Against Heresies, Nisibis Hymns, and Commentary on the Diatessaron; Doctor of the Church."
+      },
+      "object_entity": {
+        "proposition_id": "prayer-is-offered-without-ceasing",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "continual-prayer",
+        "proposition_label": "Prayer is offered without ceasing throughout all of life",
+        "polarity_family": "continual_prayer",
+        "description": "The spiritually formed Christian does not confine prayer to set times but prays continually through every word, action, and disposition, maintaining unceasing communion with God.",
+        "notes": "Continual prayer"
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephrem-affirms-prayer",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephrem-coworker-jacob",
+        "clm-ephrem-active-nisibis",
+        "clm-ephrem-in-fall-nisibis",
+        "clm-ephrem-active-edessa",
+        "clm-ephrem-affirms-fasting",
+        "clm-ephrem-member-edessa-church"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_PERSON_PROP:clm-hof-affirms-prayer",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-addai-active-edessa",
+        "subject_type": "person",
+        "subject_id": "addai-of-edessa",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "edessa",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "addai-of-edessa",
+        "person_label": "Addai of Edessa",
+        "name_alt": "Thaddaeus",
+        "name_native": "ܐܕܝ",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Traditional evangelist of Edessa sent by the apostle Thomas according to Eusebius HE 1.13; identified with Thaddaeus in some traditions; subject of the later Doctrine of Addai (c. 390–400)."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-addai-active-edessa",
+            "passage_id": "psg-eusebius-he-1-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius: Thomas sends Thaddaeus (Addai) who evangelizes Edessa."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-1-13",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 1.13",
+            "excerpt": "Paraphrase: Eusebius reproduces documents from the archives of Edessa: King Abgar writes to Jesus asking for healing; Jesus replies promising to send a disciple after his ascension; Thomas later sends Thaddaeus (Addai) who heals Abgar and evangelizes Edessa.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Abgar-Jesus correspondence and Addai tradition"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-addai-coworker-thomas",
+        "clm-addai-in-conversion-edessa",
+        "clm-addai-member-edessa-church"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-eusebius-he-1-13": [
+          "clm-abgar-in-conversion-edessa",
+          "clm-addai-coworker-thomas",
+          "clm-addai-in-conversion-edessa",
+          "clm-addai-member-edessa-church",
+          "clm-conversion-edessa-at-edessa",
+          "clm-conversion-edessa-year"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:conversion-of-edessa",
+        "PARAPHRASE_RISK:psg-eusebius-he-1-13"
+      ]
+    }
+  ]
+}

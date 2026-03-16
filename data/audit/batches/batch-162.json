@@ -1,0 +1,2045 @@
+{
+  "batch_id": "batch-162",
+  "queue": "1",
+  "focus": "roman-church; laodicea; apphia; euodia; philemon; syntyche; epistle-of-jude; second-epistle-of-peter; james-the-just-martyrdom; great-fire-of-rome",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-group-roman-church-rome",
+        "subject_type": "group",
+        "subject_id": "roman-church",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:15:00Z"
+      },
+      "subject_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-roman-church-rome",
+            "passage_id": "psg-rom-16-3-5",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-3-5",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.3-5",
+            "excerpt": "Paraphrase: Paul greets Prisca and Aquila and also the church in their house.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-roman-church-at-puteoli"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-3-5": [
+          "clm-aquila-roman-church",
+          "clm-priscilla-active-rome",
+          "clm-priscilla-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-3-5",
+        "PARAPHRASE_OMISSION:psg-rom-16-3-5:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-roman-church-at-puteoli",
+        "subject_type": "group",
+        "subject_id": "roman-church",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "puteoli",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "200",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "object_entity": {
+        "place_id": "puteoli",
+        "place_label": "Puteoli",
+        "place_label_modern": "Pozzuoli",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.8230",
+        "lon": "14.1220",
+        "location_precision": "approx_city",
+        "modern_country_label": "Italy",
+        "notes": "Italian port where Paul finds believers on the approach to Rome."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-roman-church-at-puteoli",
+            "passage_id": "psg-acts-28-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts 28:15 records brethren at Puteoli greeting Paul."
+          },
+          "passage": {
+            "passage_id": "psg-acts-28-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.28.15",
+            "excerpt": "Paraphrase: Believers come from Rome to meet Paul as far as Appii Forum and Three Taverns.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-group-roman-church-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-28-15": [
+          "clm-paul-active-appii-forum",
+          "clm-paul-active-three-taverns",
+          "clm-place-appii-forum-attested",
+          "clm-place-three-taverns-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-28-15",
+        "PARAPHRASE_RISK:psg-acts-28-15",
+        "PARAPHRASE_OMISSION:psg-acts-28-15:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-place-laodicea-attested-col",
+        "subject_type": "place",
+        "subject_id": "laodicea",
+        "predicate_id": "place_presence_status",
+        "object_mode": "text",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "attested",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "place_id": "laodicea",
+        "place_label": "Laodicea",
+        "place_label_modern": "Laodikeia",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8350",
+        "lon": "29.1080",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "City in the Lycus valley associated with Colossians and Revelation."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-place-laodicea-attested-col",
+            "passage_id": "psg-col-4-16",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-col-4-16",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.4.16",
+            "excerpt": "Paraphrase: Paul instructs that the letter be read in Laodicea and that the Colossians also read the letter from Laodicea.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-place-laodicea-attested-late"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-col-4-16": [
+          "clm-group-laodicean-church-laodicea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-col-4-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-place-laodicea-attested-late",
+        "subject_type": "place",
+        "subject_id": "laodicea",
+        "predicate_id": "place_presence_status",
+        "object_mode": "text",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "attested",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "95",
+        "year_end": "200",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "place_id": "laodicea",
+        "place_label": "Laodicea",
+        "place_label_modern": "Laodikeia",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8350",
+        "lon": "29.1080",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "City in the Lycus valley associated with Colossians and Revelation."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-place-laodicea-attested-late",
+            "passage_id": "psg-rev-3-14-22",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Revelation 3:14 addresses the church at Laodicea."
+          },
+          "passage": {
+            "passage_id": "psg-rev-3-14-22",
+            "source_id": "src-revelation",
+            "locator_type": "bible_osis",
+            "locator": "Rev.3.14-22",
+            "excerpt": "To the angel of the church in Laodicea write...",
+            "language": "en",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-revelation",
+            "work_id": "revelation-of-john",
+            "source_kind": "primary_text",
+            "title": "Revelation of John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 95",
+            "year_start": "95",
+            "year_end": "95",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Revelation",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late first-century apocalyptic witness associated with Patmos."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-place-laodicea-attested-col"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rev-3-14-22": [
+          "clm-disciples-at-laodicea"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-rev-3-14-22"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-apphia-colossian-church",
+        "subject_type": "person",
+        "subject_id": "apphia",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "colossian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "colossae",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "apphia",
+        "person_label": "Apphia",
+        "name_alt": "",
+        "name_native": "Ἀπφία",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted alongside Philemon and Archippus in the Epistle to Philemon."
+      },
+      "object_entity": {
+        "group_id": "colossian-church",
+        "group_label": "Church in Colossae",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Colossae addressed in Pauline correspondence."
+      },
+      "context_place": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-apphia-colossian-church",
+            "passage_id": "psg-philemon-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Apphia is part of the house-church circle in Philemon; the Colossae localization is a probable contextual inference."
+          },
+          "passage": {
+            "passage_id": "psg-philemon-1-2",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.1-2",
+            "excerpt": "Paraphrase: Paul addresses Philemon, Apphia, Archippus, and the church in their house.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-apphia-disciple"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-philemon-1-2": [
+          "clm-apphia-disciple",
+          "clm-archippus-colossian-church",
+          "clm-archippus-disciple",
+          "clm-paul-coworker-philemon",
+          "clm-paul-teacher-of-philemon",
+          "clm-philemon-addressed-colossae",
+          "clm-philemon-by-paul",
+          "clm-philemon-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philemon-1-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-apphia-disciple",
+        "subject_type": "person",
+        "subject_id": "apphia",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "colossae",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T06:12:00Z"
+      },
+      "subject_entity": {
+        "person_id": "apphia",
+        "person_label": "Apphia",
+        "name_alt": "",
+        "name_native": "Ἀπφία",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted alongside Philemon and Archippus in the Epistle to Philemon."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-apphia-disciple",
+            "passage_id": "psg-philemon-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-philemon-1-2",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.1-2",
+            "excerpt": "Paraphrase: Paul addresses Philemon, Apphia, Archippus, and the church in their house.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-apphia-colossian-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-philemon-1-2": [
+          "clm-apphia-colossian-church",
+          "clm-archippus-colossian-church",
+          "clm-archippus-disciple",
+          "clm-paul-coworker-philemon",
+          "clm-paul-teacher-of-philemon",
+          "clm-philemon-addressed-colossae",
+          "clm-philemon-by-paul",
+          "clm-philemon-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philemon-1-2",
+        "PARAPHRASE_OMISSION:psg-philemon-1-2:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-euodia-active-philippi",
+        "subject_type": "person",
+        "subject_id": "euodia",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "philippi",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "euodia",
+        "person_label": "Euodia",
+        "name_alt": "",
+        "name_native": "Εὐοδία",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Philippian woman urged to live in harmony in Philippians."
+      },
+      "object_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-euodia-active-philippi",
+            "passage_id": "psg-phil-4-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phil-4-2-3",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.4.2-3",
+            "excerpt": "Paraphrase: Euodia and Syntyche labored side by side with Paul in the gospel.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-euodia-philippian-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-phil-4-2-3": [
+          "clm-euodia-philippian-church",
+          "clm-syntyche-active-philippi",
+          "clm-syntyche-philippian-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phil-4-2-3",
+        "PARAPHRASE_OMISSION:psg-phil-4-2-3:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-euodia-philippian-church",
+        "subject_type": "person",
+        "subject_id": "euodia",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "philippian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "euodia",
+        "person_label": "Euodia",
+        "name_alt": "",
+        "name_native": "Εὐοδία",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Philippian woman urged to live in harmony in Philippians."
+      },
+      "object_entity": {
+        "group_id": "philippian-church",
+        "group_label": "Church in Philippi",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Philippi associated with Lydia and Pauline mission."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-euodia-philippian-church",
+            "passage_id": "psg-phil-4-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phil-4-2-3",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.4.2-3",
+            "excerpt": "Paraphrase: Euodia and Syntyche labored side by side with Paul in the gospel.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-euodia-active-philippi"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-phil-4-2-3": [
+          "clm-euodia-active-philippi",
+          "clm-syntyche-active-philippi",
+          "clm-syntyche-philippian-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phil-4-2-3",
+        "PARAPHRASE_OMISSION:psg-phil-4-2-3:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philemon-colossian-church",
+        "subject_type": "person",
+        "subject_id": "philemon",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "colossian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "colossae",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philemon",
+        "person_label": "Philemon",
+        "name_alt": "",
+        "name_native": "Φιλήμων",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer addressed by Paul in the personal letter concerning Onesimus."
+      },
+      "object_entity": {
+        "group_id": "colossian-church",
+        "group_label": "Church in Colossae",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Colossae addressed in Pauline correspondence."
+      },
+      "context_place": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philemon-colossian-church",
+            "passage_id": "psg-col-4-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes philemon's membership in colossian-church."
+          },
+          "passage": {
+            "passage_id": "psg-col-4-9",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.4.9",
+            "excerpt": "Paraphrase: Onesimus, one of the Colossians, is sent with Tychicus and identified as a faithful and beloved brother.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philemon-disciple"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-col-4-9": [
+          "clm-onesimus-active-colossae",
+          "clm-onesimus-colossian-church",
+          "clm-onesimus-disciple"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-col-4-9",
+        "PARAPHRASE_RISK:psg-col-4-9",
+        "PARAPHRASE_OMISSION:psg-col-4-9:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philemon-disciple",
+        "subject_type": "person",
+        "subject_id": "philemon",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "colossae",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T06:12:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philemon",
+        "person_label": "Philemon",
+        "name_alt": "",
+        "name_native": "Φιλήμων",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer addressed by Paul in the personal letter concerning Onesimus."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philemon-disciple",
+            "passage_id": "psg-philemon-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-philemon-1-2",
+            "source_id": "src-philemon",
+            "locator_type": "bible_osis",
+            "locator": "Phlm.1.1-2",
+            "excerpt": "Paraphrase: Paul addresses Philemon, Apphia, Archippus, and the church in their house.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philemon",
+            "work_id": "epistle-to-philemon",
+            "source_kind": "primary_text",
+            "title": "Epistle to Philemon",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philemon",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Personal Pauline witness concerning Onesimus and Philemon."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philemon-colossian-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-philemon-1-2": [
+          "clm-apphia-colossian-church",
+          "clm-apphia-disciple",
+          "clm-archippus-colossian-church",
+          "clm-archippus-disciple",
+          "clm-paul-coworker-philemon",
+          "clm-paul-teacher-of-philemon",
+          "clm-philemon-addressed-colossae",
+          "clm-philemon-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philemon-1-2",
+        "PARAPHRASE_OMISSION:psg-philemon-1-2:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-syntyche-active-philippi",
+        "subject_type": "person",
+        "subject_id": "syntyche",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "philippi",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "syntyche",
+        "person_label": "Syntyche",
+        "name_alt": "",
+        "name_native": "Συντύχη",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Philippian woman urged to live in harmony in Philippians."
+      },
+      "object_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-syntyche-active-philippi",
+            "passage_id": "psg-phil-4-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phil-4-2-3",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.4.2-3",
+            "excerpt": "Paraphrase: Euodia and Syntyche labored side by side with Paul in the gospel.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-syntyche-philippian-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-phil-4-2-3": [
+          "clm-euodia-active-philippi",
+          "clm-euodia-philippian-church",
+          "clm-syntyche-philippian-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phil-4-2-3",
+        "PARAPHRASE_OMISSION:psg-phil-4-2-3:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-syntyche-philippian-church",
+        "subject_type": "person",
+        "subject_id": "syntyche",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "philippian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "syntyche",
+        "person_label": "Syntyche",
+        "name_alt": "",
+        "name_native": "Συντύχη",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Philippian woman urged to live in harmony in Philippians."
+      },
+      "object_entity": {
+        "group_id": "philippian-church",
+        "group_label": "Church in Philippi",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Philippi associated with Lydia and Pauline mission."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-syntyche-philippian-church",
+            "passage_id": "psg-phil-4-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phil-4-2-3",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.4.2-3",
+            "excerpt": "Paraphrase: Euodia and Syntyche labored side by side with Paul in the gospel.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-syntyche-active-philippi"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-phil-4-2-3": [
+          "clm-euodia-active-philippi",
+          "clm-euodia-philippian-church",
+          "clm-syntyche-active-philippi"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phil-4-2-3",
+        "PARAPHRASE_OMISSION:psg-phil-4-2-3:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-jude-by-jude",
+        "subject_type": "work",
+        "subject_id": "epistle-of-jude",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "jude-thaddaeus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "100",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "",
+        "updated_at": ""
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-jude",
+        "title_display": "Epistle of Jude",
+        "title_original": "Ἰούδα",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Short general epistle associated with Jude and exhorting believers to contend for the faith."
+      },
+      "object_entity": {
+        "person_id": "jude-thaddaeus",
+        "person_label": "Jude (Brother of James)",
+        "name_alt": "Thaddaeus; Lebbaeus; Judas",
+        "name_native": "",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Traditionally identified with Jude, brother of James and Jesus (Jude 1:1; cf. Mk 6:3). Also called Thaddaeus in the apostolic lists (Mk 3:18; Mt 10:3). Attributed author of the Epistle of Jude; most scholars regard this as pseudonymous."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-jude-by-jude",
+            "passage_id": "psg-jude-1-14-15",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Jude 1:1 self-identifies as 'Jude, servant of Jesus Christ and brother of James.'"
+          },
+          "passage": {
+            "passage_id": "psg-jude-1-14-15",
+            "source_id": "src-jude",
+            "locator_type": "bible_osis",
+            "locator": "Jude.1.14-15",
+            "excerpt": "Paraphrase: The Lord comes with holy myriads to execute judgment against all the ungodly.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-jude",
+            "work_id": "epistle-of-jude",
+            "source_kind": "primary_text",
+            "title": "Epistle of Jude",
+            "author": "Traditionally Jude",
+            "editor": "",
+            "year_display": "c. 60-80",
+            "year_start": "60",
+            "year_end": "80",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Jude",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Short general epistle preserved in the New Testament corpus."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-jude-judgment"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-jude-1-14-15": [
+          "clm-jude-judgment"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-jude-judgment",
+        "subject_type": "work",
+        "subject_id": "epistle-of-jude",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "final-judgment-is-coming",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "70",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-jude",
+        "title_display": "Epistle of Jude",
+        "title_original": "Ἰούδα",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Short general epistle associated with Jude and exhorting believers to contend for the faith."
+      },
+      "object_entity": {
+        "proposition_id": "final-judgment-is-coming",
+        "topic_id": "final-judgment",
+        "dimension_id": "coming-judgment",
+        "proposition_label": "A final judgment is coming",
+        "polarity_family": "coming_judgment",
+        "description": "Texts or teachers present a climactic future judgment of the wicked and vindication of the righteous.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-jude-judgment",
+            "passage_id": "psg-jude-1-14-15",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-jude-1-14-15",
+            "source_id": "src-jude",
+            "locator_type": "bible_osis",
+            "locator": "Jude.1.14-15",
+            "excerpt": "Paraphrase: The Lord comes with holy myriads to execute judgment against all the ungodly.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-jude",
+            "work_id": "epistle-of-jude",
+            "source_kind": "primary_text",
+            "title": "Epistle of Jude",
+            "author": "Traditionally Jude",
+            "editor": "",
+            "year_display": "c. 60-80",
+            "year_start": "60",
+            "year_end": "80",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Jude",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Short general epistle preserved in the New Testament corpus."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-jude-by-jude"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-jude-1-14-15": [
+          "clm-jude-by-jude"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-jude-1-14-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-2peter-by-peter",
+        "subject_type": "work",
+        "subject_id": "second-epistle-of-peter",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "simon-peter",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "150",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T10:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "second-epistle-of-peter",
+        "title_display": "Second Epistle of Peter",
+        "title_original": "Πέτρου Βʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "General epistle associated with Peter and warning against false teachers."
+      },
+      "object_entity": {
+        "person_id": "simon-peter",
+        "person_label": "Simon Peter",
+        "name_alt": "Cephas; Simon son of Jonah",
+        "name_native": "Σίμων Πέτρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Disciple called during Galilean ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-2peter-by-peter",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "2 Pet 1:1 claims Peter authorship; widely regarded as the latest NT writing (c. 100-150 CE) and pseudonymous; dependent on Jude; not attested before Origen."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-second-peter-judgment"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-second-peter-judgment",
+        "subject_type": "work",
+        "subject_id": "second-epistle-of-peter",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "final-judgment-is-coming",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "67",
+        "year_end": "67",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "second-epistle-of-peter",
+        "title_display": "Second Epistle of Peter",
+        "title_original": "Πέτρου Βʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "General epistle associated with Peter and warning against false teachers."
+      },
+      "object_entity": {
+        "proposition_id": "final-judgment-is-coming",
+        "topic_id": "final-judgment",
+        "dimension_id": "coming-judgment",
+        "proposition_label": "A final judgment is coming",
+        "polarity_family": "coming_judgment",
+        "description": "Texts or teachers present a climactic future judgment of the wicked and vindication of the righteous.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-second-peter-judgment",
+            "passage_id": "psg-2pet-3-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2pet-3-7",
+            "source_id": "src-2pet",
+            "locator_type": "bible_osis",
+            "locator": "2Pet.3.7",
+            "excerpt": "Paraphrase: The present heavens and earth are reserved for fire until the day of judgment and destruction of the ungodly.",
+            "language": "English",
+            "passage_year": "67",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2pet",
+            "work_id": "second-epistle-of-peter",
+            "source_kind": "primary_text",
+            "title": "Second Epistle of Peter",
+            "author": "Traditionally Peter",
+            "editor": "",
+            "year_display": "c. 64-68",
+            "year_start": "64",
+            "year_end": "68",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Peter",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "General epistle witness associated with Petrine tradition."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-2peter-by-peter"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-2pet-3-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-james-just-martyrdom-year",
+        "subject_type": "event",
+        "subject_id": "james-the-just-martyrdom",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "62",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T20:40:00Z"
+      },
+      "subject_entity": {
+        "event_id": "james-the-just-martyrdom",
+        "event_label": "James the Just's Death",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Josephus reports James the brother of Jesus being delivered to be stoned during the high priesthood of Ananus."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-james-just-martyrdom-year",
+            "passage_id": "psg-josephus-ant-20-200",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-josephus-ant-20-200",
+            "source_id": "src-josephus-ant",
+            "locator_type": "source_ref",
+            "locator": "Antiquities 20.200",
+            "excerpt": "Paraphrase: Josephus says the high priest Ananus assembled the Sanhedrin, accused James the brother of Jesus called Christ and some others, and delivered them to be stoned.",
+            "language": "English",
+            "passage_year": "94",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-ant",
+            "work_id": "antiquities-of-the-jews",
+            "source_kind": "primary_text",
+            "title": "Antiquities of the Jews",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "93/94",
+            "year_start": "93",
+            "year_end": "94",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.perseus.tufts.edu/hopper/text?doc=J.%20AJ%2018",
+            "accessed_on": "2026-03-09",
+            "isbn_issn": "",
+            "notes": "Near-ancient non-Christian witness for John the Baptist and Pontius Pilate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-james-just-martyrdom-at-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-josephus-ant-20-200": [
+          "clm-ananus-ii-in-james-just-martyrdom",
+          "clm-antiquities-by-josephus",
+          "clm-james-just-in-martyrdom",
+          "clm-james-just-martyrdom-at-jerusalem"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-josephus-ant-20-200",
+        "PARAPHRASE_RISK:psg-josephus-ant-20-200"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-james-just-martyrdom-at-jerusalem",
+        "subject_type": "event",
+        "subject_id": "james-the-just-martyrdom",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "62",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T20:40:00Z"
+      },
+      "subject_entity": {
+        "event_id": "james-the-just-martyrdom",
+        "event_label": "James the Just's Death",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Josephus reports James the brother of Jesus being delivered to be stoned during the high priesthood of Ananus."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-james-just-martyrdom-at-jerusalem",
+            "passage_id": "psg-josephus-ant-20-200",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "The Sanhedrin and high-priest context point to Jerusalem, though the verse does not restate the city name explicitly."
+          },
+          "passage": {
+            "passage_id": "psg-josephus-ant-20-200",
+            "source_id": "src-josephus-ant",
+            "locator_type": "source_ref",
+            "locator": "Antiquities 20.200",
+            "excerpt": "Paraphrase: Josephus says the high priest Ananus assembled the Sanhedrin, accused James the brother of Jesus called Christ and some others, and delivered them to be stoned.",
+            "language": "English",
+            "passage_year": "94",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-ant",
+            "work_id": "antiquities-of-the-jews",
+            "source_kind": "primary_text",
+            "title": "Antiquities of the Jews",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "93/94",
+            "year_start": "93",
+            "year_end": "94",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.perseus.tufts.edu/hopper/text?doc=J.%20AJ%2018",
+            "accessed_on": "2026-03-09",
+            "isbn_issn": "",
+            "notes": "Near-ancient non-Christian witness for John the Baptist and Pontius Pilate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-james-just-martyrdom-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-josephus-ant-20-200": [
+          "clm-ananus-ii-in-james-just-martyrdom",
+          "clm-antiquities-by-josephus",
+          "clm-james-just-in-martyrdom",
+          "clm-james-just-martyrdom-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-josephus-ant-20-200"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-fire-of-rome-year",
+        "subject_type": "event",
+        "subject_id": "great-fire-of-rome",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "64",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:40:00Z"
+      },
+      "subject_entity": {
+        "event_id": "great-fire-of-rome",
+        "event_label": "Great Fire of Rome",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Fire that devastated much of Rome in 64 CE under Nero."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-fire-of-rome-year",
+            "passage_id": "psg-tacitus-ann-15-44",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-tacitus-ann-15-44",
+            "source_id": "src-tacitus-annals",
+            "locator_type": "source_ref",
+            "locator": "Annals 15.44",
+            "excerpt": "To scotch the rumour, Nero substituted as culprits, and punished with the utmost refinements of cruelty, a class of men, loathed for their vices, whom the crowd styled Christians.",
+            "language": "en",
+            "passage_year": "117",
+            "url_override": "",
+            "notes": "Tacitus records Nero's persecution of Christians after the Great Fire of Rome (64 AD)."
+          },
+          "source": {
+            "source_id": "src-tacitus-annals",
+            "work_id": "annals-of-tacitus",
+            "source_kind": "primary_text",
+            "title": "Annals",
+            "author": "Tacitus",
+            "editor": "",
+            "year_display": "c. 116",
+            "year_start": "116",
+            "year_end": "116",
+            "container_title": "Roman historiography",
+            "publisher": "",
+            "url": "https://penelope.uchicago.edu/thayer/e/roman/texts/tacitus/annals/15b*.html",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Roman witness for the Great Fire of Rome and Nero's persecution of Christians."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-fire-at-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-tacitus-ann-15-44": [
+          "clm-annals-by-tacitus"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tacitus-ann-15-44"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-fire-at-rome",
+        "subject_type": "event",
+        "subject_id": "great-fire-of-rome",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "64",
+        "year_end": "64",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:40:00Z"
+      },
+      "subject_entity": {
+        "event_id": "great-fire-of-rome",
+        "event_label": "Great Fire of Rome",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Fire that devastated much of Rome in 64 CE under Nero."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-fire-at-rome",
+            "passage_id": "psg-tacitus-annals-15-38-44",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tacitus-annals-15-38-44",
+            "source_id": "src-tacitus-annals",
+            "locator_type": "source_ref",
+            "locator": "Annals 15.38-44",
+            "excerpt": "Paraphrase: Tacitus narrates the Great Fire of Rome and Nero's punishment of Christians to suppress the rumor against himself.",
+            "language": "English",
+            "passage_year": "116",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-tacitus-annals",
+            "work_id": "annals-of-tacitus",
+            "source_kind": "primary_text",
+            "title": "Annals",
+            "author": "Tacitus",
+            "editor": "",
+            "year_display": "c. 116",
+            "year_start": "116",
+            "year_end": "116",
+            "container_title": "Roman historiography",
+            "publisher": "",
+            "url": "https://penelope.uchicago.edu/thayer/e/roman/texts/tacitus/annals/15b*.html",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Roman witness for the Great Fire of Rome and Nero's persecution of Christians."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-fire-of-rome-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-tacitus-annals-15-38-44": [
+          "clm-nero-active-rome",
+          "clm-nero-in-neronian-persecution",
+          "clm-neronian-persecution-at-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tacitus-annals-15-38-44"
+      ]
+    }
+  ]
+}

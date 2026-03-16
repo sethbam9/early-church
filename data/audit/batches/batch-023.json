@@ -1,0 +1,2824 @@
+{
+  "batch_id": "batch-023",
+  "queue": "0A",
+  "focus": "psg-matt-10-1-4(16)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-athanasius-affirms-trinity",
+        "subject_type": "person",
+        "subject_id": "athanasius-of-alexandria",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "trinity-is-three-persons-one-substance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "328",
+        "year_end": "373",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "athanasius-of-alexandria",
+        "person_label": "Athanasius of Alexandria",
+        "name_alt": "Athanasius the Great",
+        "name_native": "Ἀθανάσιος",
+        "birth_year_display": "c. 296",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Bishop (Patriarch) of Alexandria c. 328–373; chief defender of Nicene Trinitarian orthodoxy against Arianism; exiled five times; consecrated Frumentius as bishop of Aksum; author of Life of Antony, On the Incarnation, and Festal Letters."
+      },
+      "object_entity": {
+        "proposition_id": "trinity-is-three-persons-one-substance",
+        "topic_id": "trinitarian-theology",
+        "dimension_id": "trinitarian-formula",
+        "proposition_label": "God is three persons — Father, Son, and Holy Spirit — in one substance",
+        "polarity_family": "trinitarian_formula",
+        "description": "The one God subsists in three persons (personae) — Father, Son, and Holy Spirit — who share one substance (substantia); the Son proceeds from the Father and the Spirit from both, without dividing the divine substance.",
+        "notes": "Trinitarian formula"
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athanasius-affirms-trinity",
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 29–31",
+            "excerpt": "Paraphrase: Athanasius recounts how Frumentius was consecrated bishop for the Indians (Aksumites) and how Constantius demanded Frumentius be sent for re-examination by the Arian bishop George.",
+            "language": "English",
+            "passage_year": "357",
+            "url_override": "",
+            "notes": "Athanasius's own account of Frumentius's consecration and Constantius's letter."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athanasius-participant-nicaea",
+        "clm-athanasius-coworker-eusebius",
+        "clm-athanasius-participant-christianization",
+        "clm-athanasius-teacher-frumentius",
+        "clm-athanasius-affirms-bodily-resurrection",
+        "clm-athanasius-affirms-eternal-generation",
+        "clm-athanasius-affirms-incarnation",
+        "clm-athanasius-affirms-logos",
+        "clm-athanasius-affirms-succession",
+        "clm-athanasius-affirms-virgin-birth",
+        "clm-athanasius-bishop-alexandria",
+        "clm-athanasius-coworker-frumentius",
+        "clm-athanasius-member-alexandrian",
+        "clm-person-athanasius-affirms-ethiopia",
+        "clm-athanasius-coworker-ezana",
+        "clm-athanasius-active-trier",
+        "clm-athanasius-coworker-constantius",
+        "clm-athanasius-active-rome"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-athanasius-apol-const-29-31": [
+          "clm-athanasius-active-rome",
+          "clm-athanasius-active-trier",
+          "clm-athanasius-affirms-bodily-resurrection",
+          "clm-athanasius-affirms-eternal-generation",
+          "clm-athanasius-affirms-incarnation",
+          "clm-athanasius-affirms-logos",
+          "clm-athanasius-affirms-succession",
+          "clm-athanasius-affirms-virgin-birth",
+          "clm-athanasius-coworker-constantius",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-member-alexandrian",
+          "clm-athanasius-participant-christianization",
+          "clm-frumentius-bishop-aksum",
+          "clm-person-athanasius-affirms-ethiopia",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-written-caesarea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athanasius-apol-const-29-31"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athanasius-affirms-virgin-birth",
+        "subject_type": "person",
+        "subject_id": "athanasius-of-alexandria",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "328",
+        "year_end": "373",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "athanasius-of-alexandria",
+        "person_label": "Athanasius of Alexandria",
+        "name_alt": "Athanasius the Great",
+        "name_native": "Ἀθανάσιος",
+        "birth_year_display": "c. 296",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Bishop (Patriarch) of Alexandria c. 328–373; chief defender of Nicene Trinitarian orthodoxy against Arianism; exiled five times; consecrated Frumentius as bishop of Aksum; author of Life of Antony, On the Incarnation, and Festal Letters."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athanasius-affirms-virgin-birth",
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 29–31",
+            "excerpt": "Paraphrase: Athanasius recounts how Frumentius was consecrated bishop for the Indians (Aksumites) and how Constantius demanded Frumentius be sent for re-examination by the Arian bishop George.",
+            "language": "English",
+            "passage_year": "357",
+            "url_override": "",
+            "notes": "Athanasius's own account of Frumentius's consecration and Constantius's letter."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athanasius-participant-nicaea",
+        "clm-athanasius-coworker-eusebius",
+        "clm-athanasius-participant-christianization",
+        "clm-athanasius-teacher-frumentius",
+        "clm-athanasius-affirms-bodily-resurrection",
+        "clm-athanasius-affirms-eternal-generation",
+        "clm-athanasius-affirms-incarnation",
+        "clm-athanasius-affirms-logos",
+        "clm-athanasius-affirms-succession",
+        "clm-athanasius-affirms-trinity",
+        "clm-athanasius-bishop-alexandria",
+        "clm-athanasius-coworker-frumentius",
+        "clm-athanasius-member-alexandrian",
+        "clm-person-athanasius-affirms-ethiopia",
+        "clm-athanasius-coworker-ezana",
+        "clm-athanasius-active-trier",
+        "clm-athanasius-coworker-constantius",
+        "clm-athanasius-active-rome"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-athanasius-apol-const-29-31": [
+          "clm-athanasius-active-rome",
+          "clm-athanasius-active-trier",
+          "clm-athanasius-affirms-bodily-resurrection",
+          "clm-athanasius-affirms-eternal-generation",
+          "clm-athanasius-affirms-incarnation",
+          "clm-athanasius-affirms-logos",
+          "clm-athanasius-affirms-succession",
+          "clm-athanasius-affirms-trinity",
+          "clm-athanasius-coworker-constantius",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-member-alexandrian",
+          "clm-athanasius-participant-christianization",
+          "clm-frumentius-bishop-aksum",
+          "clm-person-athanasius-affirms-ethiopia",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-written-caesarea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athanasius-apol-const-29-31",
+        "PARAPHRASE_OMISSION:psg-athanasius-apol-const-29-31:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athanasius-affirms-bodily-resurrection",
+        "subject_type": "person",
+        "subject_id": "athanasius-of-alexandria",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "328",
+        "year_end": "373",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "athanasius-of-alexandria",
+        "person_label": "Athanasius of Alexandria",
+        "name_alt": "Athanasius the Great",
+        "name_native": "Ἀθανάσιος",
+        "birth_year_display": "c. 296",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Bishop (Patriarch) of Alexandria c. 328–373; chief defender of Nicene Trinitarian orthodoxy against Arianism; exiled five times; consecrated Frumentius as bishop of Aksum; author of Life of Antony, On the Incarnation, and Festal Letters."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athanasius-affirms-bodily-resurrection",
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 29–31",
+            "excerpt": "Paraphrase: Athanasius recounts how Frumentius was consecrated bishop for the Indians (Aksumites) and how Constantius demanded Frumentius be sent for re-examination by the Arian bishop George.",
+            "language": "English",
+            "passage_year": "357",
+            "url_override": "",
+            "notes": "Athanasius's own account of Frumentius's consecration and Constantius's letter."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athanasius-participant-nicaea",
+        "clm-athanasius-coworker-eusebius",
+        "clm-athanasius-participant-christianization",
+        "clm-athanasius-teacher-frumentius",
+        "clm-athanasius-affirms-eternal-generation",
+        "clm-athanasius-affirms-incarnation",
+        "clm-athanasius-affirms-logos",
+        "clm-athanasius-affirms-succession",
+        "clm-athanasius-affirms-trinity",
+        "clm-athanasius-affirms-virgin-birth",
+        "clm-athanasius-bishop-alexandria",
+        "clm-athanasius-coworker-frumentius",
+        "clm-athanasius-member-alexandrian",
+        "clm-person-athanasius-affirms-ethiopia",
+        "clm-athanasius-coworker-ezana",
+        "clm-athanasius-active-trier",
+        "clm-athanasius-coworker-constantius",
+        "clm-athanasius-active-rome"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-athanasius-apol-const-29-31": [
+          "clm-athanasius-active-rome",
+          "clm-athanasius-active-trier",
+          "clm-athanasius-affirms-eternal-generation",
+          "clm-athanasius-affirms-incarnation",
+          "clm-athanasius-affirms-logos",
+          "clm-athanasius-affirms-succession",
+          "clm-athanasius-affirms-trinity",
+          "clm-athanasius-affirms-virgin-birth",
+          "clm-athanasius-coworker-constantius",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-member-alexandrian",
+          "clm-athanasius-participant-christianization",
+          "clm-frumentius-bishop-aksum",
+          "clm-person-athanasius-affirms-ethiopia",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-written-caesarea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athanasius-apol-const-29-31"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athanasius-coworker-constantius",
+        "subject_type": "person",
+        "subject_id": "athanasius-of-alexandria",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "constantius-ii",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "337",
+        "year_end": "361",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "athanasius-of-alexandria",
+        "person_label": "Athanasius of Alexandria",
+        "name_alt": "Athanasius the Great",
+        "name_native": "Ἀθανάσιος",
+        "birth_year_display": "c. 296",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Bishop (Patriarch) of Alexandria c. 328–373; chief defender of Nicene Trinitarian orthodoxy against Arianism; exiled five times; consecrated Frumentius as bishop of Aksum; author of Life of Antony, On the Incarnation, and Festal Letters."
+      },
+      "object_entity": {
+        "person_id": "constantius-ii",
+        "person_label": "Constantius II",
+        "name_alt": "",
+        "name_native": "Κωνστάντιος",
+        "birth_year_display": "317",
+        "death_year_display": "361",
+        "person_kind": "individual",
+        "notes": "Roman emperor 337–361; son of Constantine I; favored Arian/semi-Arian theology; exiled Athanasius; sent Theophilus the Indian on a diplomatic-missionary embassy to Himyar c. 354."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athanasius-coworker-constantius",
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 29–31",
+            "excerpt": "Paraphrase: Athanasius recounts how Frumentius was consecrated bishop for the Indians (Aksumites) and how Constantius demanded Frumentius be sent for re-examination by the Arian bishop George.",
+            "language": "English",
+            "passage_year": "357",
+            "url_override": "",
+            "notes": "Athanasius's own account of Frumentius's consecration and Constantius's letter."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athanasius-participant-nicaea",
+        "clm-athanasius-coworker-eusebius",
+        "clm-athanasius-participant-christianization",
+        "clm-athanasius-teacher-frumentius",
+        "clm-athanasius-affirms-bodily-resurrection",
+        "clm-athanasius-affirms-eternal-generation",
+        "clm-athanasius-affirms-incarnation",
+        "clm-athanasius-affirms-logos",
+        "clm-athanasius-affirms-succession",
+        "clm-athanasius-affirms-trinity",
+        "clm-athanasius-affirms-virgin-birth",
+        "clm-athanasius-bishop-alexandria",
+        "clm-athanasius-coworker-frumentius",
+        "clm-athanasius-member-alexandrian",
+        "clm-person-athanasius-affirms-ethiopia",
+        "clm-athanasius-coworker-ezana",
+        "clm-athanasius-active-trier",
+        "clm-athanasius-active-rome"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-athanasius-apol-const-29-31": [
+          "clm-athanasius-active-rome",
+          "clm-athanasius-active-trier",
+          "clm-athanasius-affirms-bodily-resurrection",
+          "clm-athanasius-affirms-eternal-generation",
+          "clm-athanasius-affirms-incarnation",
+          "clm-athanasius-affirms-logos",
+          "clm-athanasius-affirms-succession",
+          "clm-athanasius-affirms-trinity",
+          "clm-athanasius-affirms-virgin-birth",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-member-alexandrian",
+          "clm-athanasius-participant-christianization",
+          "clm-frumentius-bishop-aksum",
+          "clm-person-athanasius-affirms-ethiopia",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-written-caesarea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athanasius-apol-const-29-31"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-person-athanasius-affirms-ethiopia",
+        "subject_type": "person",
+        "subject_id": "athanasius-of-alexandria",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-ethiopia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "328",
+        "year_end": "373",
+        "context_place_id": "alexandria",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "athanasius-of-alexandria",
+        "person_label": "Athanasius of Alexandria",
+        "name_alt": "Athanasius the Great",
+        "name_native": "Ἀθανάσιος",
+        "birth_year_display": "c. 296",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Bishop (Patriarch) of Alexandria c. 328–373; chief defender of Nicene Trinitarian orthodoxy against Arianism; exiled five times; consecrated Frumentius as bishop of Aksum; author of Life of Antony, On the Incarnation, and Festal Letters."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-ethiopia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "ethiopia-christianized",
+        "proposition_label": "Christianity was established in Ethiopia through Frumentius and the conversion of King Ezana",
+        "polarity_family": "ethiopia_christianized",
+        "description": "The Aksumite kingdom (Ethiopia) received Christianity through the mission of Frumentius, consecrated by Athanasius of Alexandria, who converted King Ezana c. 330; attested by Rufinus, Socrates, Sozomen.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-person-athanasius-affirms-ethiopia",
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Athanasius's own account."
+          },
+          "passage": {
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 29–31",
+            "excerpt": "Paraphrase: Athanasius recounts how Frumentius was consecrated bishop for the Indians (Aksumites) and how Constantius demanded Frumentius be sent for re-examination by the Arian bishop George.",
+            "language": "English",
+            "passage_year": "357",
+            "url_override": "",
+            "notes": "Athanasius's own account of Frumentius's consecration and Constantius's letter."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athanasius-participant-nicaea",
+        "clm-athanasius-coworker-eusebius",
+        "clm-athanasius-participant-christianization",
+        "clm-athanasius-teacher-frumentius",
+        "clm-athanasius-affirms-bodily-resurrection",
+        "clm-athanasius-affirms-eternal-generation",
+        "clm-athanasius-affirms-incarnation",
+        "clm-athanasius-affirms-logos",
+        "clm-athanasius-affirms-succession",
+        "clm-athanasius-affirms-trinity",
+        "clm-athanasius-affirms-virgin-birth",
+        "clm-athanasius-bishop-alexandria",
+        "clm-athanasius-coworker-frumentius",
+        "clm-athanasius-member-alexandrian",
+        "clm-athanasius-coworker-ezana",
+        "clm-athanasius-active-trier",
+        "clm-athanasius-coworker-constantius",
+        "clm-athanasius-active-rome"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-athanasius-apol-const-29-31": [
+          "clm-athanasius-active-rome",
+          "clm-athanasius-active-trier",
+          "clm-athanasius-affirms-bodily-resurrection",
+          "clm-athanasius-affirms-eternal-generation",
+          "clm-athanasius-affirms-incarnation",
+          "clm-athanasius-affirms-logos",
+          "clm-athanasius-affirms-succession",
+          "clm-athanasius-affirms-trinity",
+          "clm-athanasius-affirms-virgin-birth",
+          "clm-athanasius-coworker-constantius",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-member-alexandrian",
+          "clm-athanasius-participant-christianization",
+          "clm-frumentius-bishop-aksum",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-written-caesarea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athanasius-apol-const-29-31"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athanasius-member-alexandrian",
+        "subject_type": "person",
+        "subject_id": "athanasius-of-alexandria",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "alexandrian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "328",
+        "year_end": "373",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "athanasius-of-alexandria",
+        "person_label": "Athanasius of Alexandria",
+        "name_alt": "Athanasius the Great",
+        "name_native": "Ἀθανάσιος",
+        "birth_year_display": "c. 296",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Bishop (Patriarch) of Alexandria c. 328–373; chief defender of Nicene Trinitarian orthodoxy against Arianism; exiled five times; consecrated Frumentius as bishop of Aksum; author of Life of Antony, On the Incarnation, and Festal Letters."
+      },
+      "object_entity": {
+        "group_id": "alexandrian-church",
+        "group_label": "Church in Alexandria",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Alexandria; home of the Catechetical School; major center of Greek-speaking Christianity from the late first century onward."
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athanasius-member-alexandrian",
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Athanasius was bishop of Alexandria; Apol. ad Const. documents his Alexandrian episcopate."
+          },
+          "passage": {
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 29–31",
+            "excerpt": "Paraphrase: Athanasius recounts how Frumentius was consecrated bishop for the Indians (Aksumites) and how Constantius demanded Frumentius be sent for re-examination by the Arian bishop George.",
+            "language": "English",
+            "passage_year": "357",
+            "url_override": "",
+            "notes": "Athanasius's own account of Frumentius's consecration and Constantius's letter."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-athanasius-member-alexandrian",
+            "passage_id": "psg-rufinus-he-1-10",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes athanasius-of-alexandria's membership in alexandrian-church."
+          },
+          "passage": {
+            "passage_id": "psg-rufinus-he-1-10",
+            "source_id": "src-rufinus-he",
+            "locator_type": "source_ref",
+            "locator": "Rufinus HE 1.10 (=10.10)",
+            "excerpt": "Paraphrase: The Indian philosopher Metrodorus had earlier traveled to farther India and returned telling of those regions. The gospel had reached these parts through earlier apostolic mission.",
+            "language": "English",
+            "passage_year": "402",
+            "url_override": "",
+            "notes": "Brief notice on earlier Indian Christian presence; context for Pantaenus and Thomas traditions."
+          },
+          "source": {
+            "source_id": "src-rufinus-he",
+            "work_id": "rufinus-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (Books 10–11)",
+            "author": "Rufinus of Aquileia",
+            "editor": "",
+            "year_display": "c. 402",
+            "year_start": "402",
+            "year_end": "402",
+            "container_title": "Rufinus's Church History",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/2707.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Rufinus's continuation of Eusebius; translation by Amidon (OUP 1997) is standard."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athanasius-participant-nicaea",
+        "clm-athanasius-coworker-eusebius",
+        "clm-athanasius-participant-christianization",
+        "clm-athanasius-teacher-frumentius",
+        "clm-athanasius-affirms-bodily-resurrection",
+        "clm-athanasius-affirms-eternal-generation",
+        "clm-athanasius-affirms-incarnation",
+        "clm-athanasius-affirms-logos",
+        "clm-athanasius-affirms-succession",
+        "clm-athanasius-affirms-trinity",
+        "clm-athanasius-affirms-virgin-birth",
+        "clm-athanasius-bishop-alexandria",
+        "clm-athanasius-coworker-frumentius",
+        "clm-person-athanasius-affirms-ethiopia",
+        "clm-athanasius-coworker-ezana",
+        "clm-athanasius-active-trier",
+        "clm-athanasius-coworker-constantius",
+        "clm-athanasius-active-rome"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-athanasius-apol-const-29-31": [
+          "clm-athanasius-active-rome",
+          "clm-athanasius-active-trier",
+          "clm-athanasius-affirms-bodily-resurrection",
+          "clm-athanasius-affirms-eternal-generation",
+          "clm-athanasius-affirms-incarnation",
+          "clm-athanasius-affirms-logos",
+          "clm-athanasius-affirms-succession",
+          "clm-athanasius-affirms-trinity",
+          "clm-athanasius-affirms-virgin-birth",
+          "clm-athanasius-coworker-constantius",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-participant-christianization",
+          "clm-frumentius-bishop-aksum",
+          "clm-person-athanasius-affirms-ethiopia",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-written-caesarea"
+        ],
+        "psg-rufinus-he-1-10": [
+          "clm-athanasius-active-rome",
+          "clm-athanasius-bishop-alexandria",
+          "clm-athanasius-teacher-frumentius",
+          "clm-frumentius-active-tyre",
+          "clm-frumentius-affirms-dominion",
+          "clm-frumentius-member-alexandrian",
+          "clm-rufinus-he-affirms-universal",
+          "clm-rufinus-he-mentions-frumentius-bishop",
+          "clm-rufinus-he-mentions-india-reached"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athanasius-apol-const-29-31"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athanasius-affirms-eternal-generation",
+        "subject_type": "person",
+        "subject_id": "athanasius-of-alexandria",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "son-is-eternally-generated",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "328",
+        "year_end": "373",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "athanasius-of-alexandria",
+        "person_label": "Athanasius of Alexandria",
+        "name_alt": "Athanasius the Great",
+        "name_native": "Ἀθανάσιος",
+        "birth_year_display": "c. 296",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Bishop (Patriarch) of Alexandria c. 328–373; chief defender of Nicene Trinitarian orthodoxy against Arianism; exiled five times; consecrated Frumentius as bishop of Aksum; author of Life of Antony, On the Incarnation, and Festal Letters."
+      },
+      "object_entity": {
+        "proposition_id": "son-is-eternally-generated",
+        "topic_id": "trinitarian-theology",
+        "dimension_id": "eternal-generation",
+        "proposition_label": "The Son is eternally begotten from the Father",
+        "polarity_family": "eternal_generation",
+        "description": "The Son/Logos is not a creature brought into being at a point in time but is eternally generated from the substance of the Father — there was never a time when the Son was not. Key Origenian contribution that became foundational for Nicene orthodoxy.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athanasius-affirms-eternal-generation",
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 29–31",
+            "excerpt": "Paraphrase: Athanasius recounts how Frumentius was consecrated bishop for the Indians (Aksumites) and how Constantius demanded Frumentius be sent for re-examination by the Arian bishop George.",
+            "language": "English",
+            "passage_year": "357",
+            "url_override": "",
+            "notes": "Athanasius's own account of Frumentius's consecration and Constantius's letter."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athanasius-participant-nicaea",
+        "clm-athanasius-coworker-eusebius",
+        "clm-athanasius-participant-christianization",
+        "clm-athanasius-teacher-frumentius",
+        "clm-athanasius-affirms-bodily-resurrection",
+        "clm-athanasius-affirms-incarnation",
+        "clm-athanasius-affirms-logos",
+        "clm-athanasius-affirms-succession",
+        "clm-athanasius-affirms-trinity",
+        "clm-athanasius-affirms-virgin-birth",
+        "clm-athanasius-bishop-alexandria",
+        "clm-athanasius-coworker-frumentius",
+        "clm-athanasius-member-alexandrian",
+        "clm-person-athanasius-affirms-ethiopia",
+        "clm-athanasius-coworker-ezana",
+        "clm-athanasius-active-trier",
+        "clm-athanasius-coworker-constantius",
+        "clm-athanasius-active-rome"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-athanasius-apol-const-29-31": [
+          "clm-athanasius-active-rome",
+          "clm-athanasius-active-trier",
+          "clm-athanasius-affirms-bodily-resurrection",
+          "clm-athanasius-affirms-incarnation",
+          "clm-athanasius-affirms-logos",
+          "clm-athanasius-affirms-succession",
+          "clm-athanasius-affirms-trinity",
+          "clm-athanasius-affirms-virgin-birth",
+          "clm-athanasius-coworker-constantius",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-member-alexandrian",
+          "clm-athanasius-participant-christianization",
+          "clm-frumentius-bishop-aksum",
+          "clm-person-athanasius-affirms-ethiopia",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-written-caesarea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athanasius-apol-const-29-31"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athanasius-affirms-succession",
+        "subject_type": "person",
+        "subject_id": "athanasius-of-alexandria",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "328",
+        "year_end": "373",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "athanasius-of-alexandria",
+        "person_label": "Athanasius of Alexandria",
+        "name_alt": "Athanasius the Great",
+        "name_native": "Ἀθανάσιος",
+        "birth_year_display": "c. 296",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Bishop (Patriarch) of Alexandria c. 328–373; chief defender of Nicene Trinitarian orthodoxy against Arianism; exiled five times; consecrated Frumentius as bishop of Aksum; author of Life of Antony, On the Incarnation, and Festal Letters."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athanasius-affirms-succession",
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athanasius-apol-const-29-31",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "Athanasius Apol. ad Const. 29–31",
+            "excerpt": "Paraphrase: Athanasius recounts how Frumentius was consecrated bishop for the Indians (Aksumites) and how Constantius demanded Frumentius be sent for re-examination by the Arian bishop George.",
+            "language": "English",
+            "passage_year": "357",
+            "url_override": "",
+            "notes": "Athanasius's own account of Frumentius's consecration and Constantius's letter."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athanasius-participant-nicaea",
+        "clm-athanasius-coworker-eusebius",
+        "clm-athanasius-participant-christianization",
+        "clm-athanasius-teacher-frumentius",
+        "clm-athanasius-affirms-bodily-resurrection",
+        "clm-athanasius-affirms-eternal-generation",
+        "clm-athanasius-affirms-incarnation",
+        "clm-athanasius-affirms-logos",
+        "clm-athanasius-affirms-trinity",
+        "clm-athanasius-affirms-virgin-birth",
+        "clm-athanasius-bishop-alexandria",
+        "clm-athanasius-coworker-frumentius",
+        "clm-athanasius-member-alexandrian",
+        "clm-person-athanasius-affirms-ethiopia",
+        "clm-athanasius-coworker-ezana",
+        "clm-athanasius-active-trier",
+        "clm-athanasius-coworker-constantius",
+        "clm-athanasius-active-rome"
+      ],
+      "sibling_count": 18,
+      "passage_co_users": {
+        "psg-athanasius-apol-const-29-31": [
+          "clm-athanasius-active-rome",
+          "clm-athanasius-active-trier",
+          "clm-athanasius-affirms-bodily-resurrection",
+          "clm-athanasius-affirms-eternal-generation",
+          "clm-athanasius-affirms-incarnation",
+          "clm-athanasius-affirms-logos",
+          "clm-athanasius-affirms-trinity",
+          "clm-athanasius-affirms-virgin-birth",
+          "clm-athanasius-coworker-constantius",
+          "clm-athanasius-coworker-frumentius",
+          "clm-athanasius-member-alexandrian",
+          "clm-athanasius-participant-christianization",
+          "clm-frumentius-bishop-aksum",
+          "clm-person-athanasius-affirms-ethiopia",
+          "clm-vita-const-mentions-ethiopia",
+          "clm-vita-const-written-caesarea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athanasius-apol-const-29-31",
+        "PARAPHRASE_OMISSION:psg-athanasius-apol-const-29-31:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcionites-at-galatia",
+        "subject_type": "group",
+        "subject_id": "marcionites",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galatia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "150",
+        "year_end": "300",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "marcionites",
+        "group_label": "Marcionites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Movement founded by Marcion of Sinope c. 144 AD; rejected the OT God and canon; active in Rome; refuted by Irenaeus, Tertullian, and others."
+      },
+      "object_entity": {
+        "place_id": "galatia",
+        "place_label": "Galatia",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "39.5000",
+        "lon": "32.8000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Region addressed in the Pauline letter to the Galatians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcionites-at-galatia",
+            "passage_id": "psg-gal-1-6-9",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Gal 1:6-9 warns Galatian churches against a 'different gospel'; Marcionites exploited Pauline letters."
+          },
+          "passage": {
+            "passage_id": "psg-gal-1-6-9",
+            "source_id": "src-galatians",
+            "locator_type": "bible_osis",
+            "locator": "Gal.1.6-9",
+            "excerpt": "I am astonished that you are so quickly deserting him who called you in the grace of Christ and are turning to a different gospel.",
+            "language": "el",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Paul's rebuke to the Galatian churches for turning to a different gospel; attests Paul's active engagement with Galatia."
+          },
+          "source": {
+            "source_id": "src-galatians",
+            "work_id": "epistle-to-the-galatians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Galatians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 48-49",
+            "year_start": "48",
+            "year_end": "49",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Galatians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Gentile inclusion and circumcision controversy."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-marcionites-at-galatia",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Irenaeus AH 1.27.1-2 describes Marcionite spread across regions including Asia Minor/Galatia area."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-marcionites-at-galatia",
+            "passage_id": "psg-wikipedia-marcionites-spread",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Marcionism spread to Galatia."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-marcionites-spread",
+            "source_id": "src-wikipedia-marcionites",
+            "locator_type": "source_ref",
+            "locator": "Marcionism#Geographical_spread",
+            "excerpt": "Marcionism spread rapidly throughout the Roman Empire during the 2nd century, with communities documented in Asia Minor, Egypt, Syria, and Gaul.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Marcionite presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-marcionites",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Marcionism - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Marcionism",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the spread of Marcionism across the Roman Empire."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcionites-schismed-from-roman",
+        "clm-marcionites-at-asia",
+        "clm-marcionites-at-pontus",
+        "clm-marcionites-present-rome",
+        "clm-marcionites-at-alexandria",
+        "clm-marcionites-at-antioch",
+        "clm-marcionites-at-carthage",
+        "clm-marcionites-at-egypt",
+        "clm-marcionites-at-ephesus",
+        "clm-marcionites-at-smyrna"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ],
+        "psg-wikipedia-marcionites-spread": [
+          "clm-marcion-excommunication-year",
+          "clm-marcionites-at-asia",
+          "clm-marcionites-at-egypt",
+          "clm-marcionites-at-smyrna",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcion-active-pontus",
+        "subject_type": "person",
+        "subject_id": "marcion-of-sinope",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "pontus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "100",
+        "year_end": "140",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "marcion-of-sinope",
+        "person_label": "Marcion of Sinope",
+        "name_alt": "Marcion",
+        "name_native": "Μαρκίων",
+        "birth_year_display": "c. 85",
+        "death_year_display": "c. 160",
+        "person_kind": "individual",
+        "notes": "Wealthy shipowner from Sinope in Pontus; came to Rome c. 140; rejected the OT and constructed a reduced canon; excommunicated from the Roman church c. 144; major polemical target of Justin, Irenaeus, and Tertullian."
+      },
+      "object_entity": {
+        "place_id": "pontus",
+        "place_label": "Pontus",
+        "place_label_modern": "",
+        "place_kind": "province",
+        "parent_place_id": "",
+        "lat": "40.8000",
+        "lon": "36.8000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Roman province on the Black Sea named in 1 Peter."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcion-active-pontus",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcion-active-sinope",
+        "clm-marcion-opposes-apostolic-succession",
+        "clm-marcion-opposes-passion",
+        "clm-marcion-opposes-resurrection",
+        "clm-marcion-opposes-rule-of-faith",
+        "clm-marcion-opposes-virgin-birth",
+        "clm-marcion-member-roman-church",
+        "clm-marcion-active-rome",
+        "clm-marcion-in-excommunication"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcion-opposes-virgin-birth",
+        "subject_type": "person",
+        "subject_id": "marcion-of-sinope",
+        "predicate_id": "person_opposes_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "130",
+        "year_end": "160",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "marcion-of-sinope",
+        "person_label": "Marcion of Sinope",
+        "name_alt": "Marcion",
+        "name_native": "Μαρκίων",
+        "birth_year_display": "c. 85",
+        "death_year_display": "c. 160",
+        "person_kind": "individual",
+        "notes": "Wealthy shipowner from Sinope in Pontus; came to Rome c. 140; rejected the OT and constructed a reduced canon; excommunicated from the Roman church c. 144; major polemical target of Justin, Irenaeus, and Tertullian."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcion-opposes-virgin-birth",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcion-active-pontus",
+        "clm-marcion-active-sinope",
+        "clm-marcion-opposes-apostolic-succession",
+        "clm-marcion-opposes-passion",
+        "clm-marcion-opposes-resurrection",
+        "clm-marcion-opposes-rule-of-faith",
+        "clm-marcion-member-roman-church",
+        "clm-marcion-active-rome",
+        "clm-marcion-in-excommunication"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcionites-schismed-from-roman",
+        "subject_type": "group",
+        "subject_id": "marcionites",
+        "predicate_id": "group_schismed_from",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "144",
+        "year_end": "144",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "marcionites",
+        "group_label": "Marcionites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Movement founded by Marcion of Sinope c. 144 AD; rejected the OT God and canon; active in Rome; refuted by Irenaeus, Tertullian, and others."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcionites-schismed-from-roman",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-marcionites-schismed-from-roman",
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.4",
+            "excerpt": "Paraphrase: Polycarp was instructed by apostles, conversed with many who had seen Christ, and was appointed bishop of Smyrna by apostles in Asia; Irenaeus saw him in his early youth. Polycarp came to Rome in the time of Anicetus and caused many to turn from heretics to the Church, proclaiming the one truth received from the apostles. He called Marcion the first-born of Satan.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcionites-at-asia",
+        "clm-marcionites-at-pontus",
+        "clm-marcionites-present-rome",
+        "clm-marcionites-at-alexandria",
+        "clm-marcionites-at-antioch",
+        "clm-marcionites-at-carthage",
+        "clm-marcionites-at-egypt",
+        "clm-marcionites-at-ephesus",
+        "clm-marcionites-at-galatia",
+        "clm-marcionites-at-smyrna"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-place-sinope-attested"
+        ],
+        "psg-irenaeus-ah-3-3-4": [
+          "clm-against-heresies-by-irenaeus",
+          "clm-anicetus-bishop-rome",
+          "clm-anicetus-member-roman-church",
+          "clm-cerinthians-at-ephesus",
+          "clm-eleutherus-bishop-rome",
+          "clm-eleutherus-member-roman-church",
+          "clm-irenaeus-active-smyrna",
+          "clm-irenaeus-ah-affirms-martyrdom-witness",
+          "clm-irenaeus-coworker-eleutherus",
+          "clm-irenaeus-in-ah-composition",
+          "clm-irenaeus-in-lyons-persecution",
+          "clm-john-teacher-of-polycarp",
+          "clm-john-zebedee-active-asia",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-john-zebedee-member-ephesian",
+          "clm-marcionites-at-smyrna",
+          "clm-montanists-at-carthage",
+          "clm-montanists-at-phrygia",
+          "clm-montanists-at-rome",
+          "clm-polycarp-active-ephesus",
+          "clm-polycarp-bishop-smyrna",
+          "clm-polycarp-coworker-irenaeus",
+          "clm-polycarp-teacher-of-irenaeus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-4",
+        "PARAPHRASE_OMISSION:psg-irenaeus-ah-3-3-4:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-place-sinope-attested",
+        "subject_type": "place",
+        "subject_id": "sinope",
+        "predicate_id": "place_presence_status",
+        "object_mode": "text",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "attested",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "100",
+        "year_end": "160",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "place_id": "sinope",
+        "place_label": "Sinope",
+        "place_label_modern": "Sinop",
+        "place_kind": "city",
+        "parent_place_id": "pontus",
+        "lat": "42.0333",
+        "lon": "35.1333",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Black Sea port city in Pontus."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-place-sinope-attested",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Irenaeus AH 1.27.1-2 places Marcion as from Sinope in Pontus — direct place attestation."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-place-sinope-attested",
+            "passage_id": "psg-wikipedia-marcionites-spread",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Marcion's birthplace; attested as a city in Pontus."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-marcionites-spread",
+            "source_id": "src-wikipedia-marcionites",
+            "locator_type": "source_ref",
+            "locator": "Marcionism#Geographical_spread",
+            "excerpt": "Marcionism spread rapidly throughout the Roman Empire during the 2nd century, with communities documented in Asia Minor, Egypt, Syria, and Gaul.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Marcionite presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-marcionites",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Marcionism - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Marcionism",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the spread of Marcionism across the Roman Empire."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman"
+        ],
+        "psg-wikipedia-marcionites-spread": [
+          "clm-marcion-excommunication-year",
+          "clm-marcionites-at-asia",
+          "clm-marcionites-at-egypt",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-at-smyrna"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcion-antitheses-by-marcion",
+        "subject_type": "work",
+        "subject_id": "marcion-antitheses",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "marcion-of-sinope",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "140",
+        "year_end": "144",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign5c-final",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "work_id": "marcion-antitheses",
+        "title_display": "Antitheses",
+        "title_original": "Ἀντιθέσεις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Lost work by Marcion of Sinope, c. 140–144 AD. A systematic presentation of contradictions between the God of the Old Testament (just, wrathful) and the God revealed by Jesus (good, merciful). Foundational document of Marcionite theology. Known through refutations by Irenaeus (AH 1.27) and Tertullian (Against Marcion)."
+      },
+      "object_entity": {
+        "person_id": "marcion-of-sinope",
+        "person_label": "Marcion of Sinope",
+        "name_alt": "Marcion",
+        "name_native": "Μαρκίων",
+        "birth_year_display": "c. 85",
+        "death_year_display": "c. 160",
+        "person_kind": "individual",
+        "notes": "Wealthy shipowner from Sinope in Pontus; came to Rome c. 140; rejected the OT and constructed a reduced canon; excommunicated from the Roman church c. 144; major polemical target of Justin, Irenaeus, and Tertullian."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcion-antitheses-by-marcion",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Irenaeus describes Marcion composing his Antitheses to contrast the two gods."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcion-antitheses-opposes-ot-scripture",
+        "clm-marcion-antitheses-written-rome"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcion-opposes-rule-of-faith",
+        "subject_type": "person",
+        "subject_id": "marcion-of-sinope",
+        "predicate_id": "person_opposes_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "130",
+        "year_end": "160",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "campaign5-heretics",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "person_id": "marcion-of-sinope",
+        "person_label": "Marcion of Sinope",
+        "name_alt": "Marcion",
+        "name_native": "Μαρκίων",
+        "birth_year_display": "c. 85",
+        "death_year_display": "c. 160",
+        "person_kind": "individual",
+        "notes": "Wealthy shipowner from Sinope in Pontus; came to Rome c. 140; rejected the OT and constructed a reduced canon; excommunicated from the Roman church c. 144; major polemical target of Justin, Irenaeus, and Tertullian."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcion-opposes-rule-of-faith",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "Marcion mutilated Luke and rejected all apostolic writings except a modified Pauline corpus."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcion-active-pontus",
+        "clm-marcion-active-sinope",
+        "clm-marcion-opposes-apostolic-succession",
+        "clm-marcion-opposes-passion",
+        "clm-marcion-opposes-resurrection",
+        "clm-marcion-opposes-virgin-birth",
+        "clm-marcion-member-roman-church",
+        "clm-marcion-active-rome",
+        "clm-marcion-in-excommunication"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcion-opposes-resurrection",
+        "subject_type": "person",
+        "subject_id": "marcion-of-sinope",
+        "predicate_id": "person_opposes_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "130",
+        "year_end": "160",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "marcion-of-sinope",
+        "person_label": "Marcion of Sinope",
+        "name_alt": "Marcion",
+        "name_native": "Μαρκίων",
+        "birth_year_display": "c. 85",
+        "death_year_display": "c. 160",
+        "person_kind": "individual",
+        "notes": "Wealthy shipowner from Sinope in Pontus; came to Rome c. 140; rejected the OT and constructed a reduced canon; excommunicated from the Roman church c. 144; major polemical target of Justin, Irenaeus, and Tertullian."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcion-opposes-resurrection",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcion-active-pontus",
+        "clm-marcion-active-sinope",
+        "clm-marcion-opposes-apostolic-succession",
+        "clm-marcion-opposes-passion",
+        "clm-marcion-opposes-rule-of-faith",
+        "clm-marcion-opposes-virgin-birth",
+        "clm-marcion-member-roman-church",
+        "clm-marcion-active-rome",
+        "clm-marcion-in-excommunication"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcionites-at-ephesus",
+        "subject_type": "group",
+        "subject_id": "marcionites",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "150",
+        "year_end": "300",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "marcionites",
+        "group_label": "Marcionites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Movement founded by Marcion of Sinope c. 144 AD; rejected the OT God and canon; active in Rome; refuted by Irenaeus, Tertullian, and others."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcionites-at-ephesus",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Irenaeus AH 1.27 describes Marcion's teaching spreading across Asia Minor including Ephesus area."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcionites-schismed-from-roman",
+        "clm-marcionites-at-asia",
+        "clm-marcionites-at-pontus",
+        "clm-marcionites-present-rome",
+        "clm-marcionites-at-alexandria",
+        "clm-marcionites-at-antioch",
+        "clm-marcionites-at-carthage",
+        "clm-marcionites-at-egypt",
+        "clm-marcionites-at-galatia",
+        "clm-marcionites-at-smyrna"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcion-antitheses-written-rome",
+        "subject_type": "work",
+        "subject_id": "marcion-antitheses",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "140",
+        "year_end": "144",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "campaign5c-final",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "work_id": "marcion-antitheses",
+        "title_display": "Antitheses",
+        "title_original": "Ἀντιθέσεις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Lost work by Marcion of Sinope, c. 140–144 AD. A systematic presentation of contradictions between the God of the Old Testament (just, wrathful) and the God revealed by Jesus (good, merciful). Foundational document of Marcionite theology. Known through refutations by Irenaeus (AH 1.27) and Tertullian (Against Marcion)."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcion-antitheses-written-rome",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Marcion composed his system in Rome after arriving there c. 140."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcion-antitheses-by-marcion",
+        "clm-marcion-antitheses-opposes-ot-scripture"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcionites-at-alexandria",
+        "subject_type": "group",
+        "subject_id": "marcionites",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "150",
+        "year_end": "300",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "campaign5b-connections",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "group_id": "marcionites",
+        "group_label": "Marcionites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Movement founded by Marcion of Sinope c. 144 AD; rejected the OT God and canon; active in Rome; refuted by Irenaeus, Tertullian, and others."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcionites-at-alexandria",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.65",
+            "notes": "Marcionite presence in Alexandria attested by Origen's anti-Marcionite writings."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcionites-schismed-from-roman",
+        "clm-marcionites-at-asia",
+        "clm-marcionites-at-pontus",
+        "clm-marcionites-present-rome",
+        "clm-marcionites-at-antioch",
+        "clm-marcionites-at-carthage",
+        "clm-marcionites-at-egypt",
+        "clm-marcionites-at-ephesus",
+        "clm-marcionites-at-galatia",
+        "clm-marcionites-at-smyrna"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcion-opposes-passion",
+        "subject_type": "person",
+        "subject_id": "marcion-of-sinope",
+        "predicate_id": "person_opposes_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-suffered-and-died",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "130",
+        "year_end": "160",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign5-heretics",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "person_id": "marcion-of-sinope",
+        "person_label": "Marcion of Sinope",
+        "name_alt": "Marcion",
+        "name_native": "Μαρκίων",
+        "birth_year_display": "c. 85",
+        "death_year_display": "c. 160",
+        "person_kind": "individual",
+        "notes": "Wealthy shipowner from Sinope in Pontus; came to Rome c. 140; rejected the OT and constructed a reduced canon; excommunicated from the Roman church c. 144; major polemical target of Justin, Irenaeus, and Tertullian."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-suffered-and-died",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "passion-reality",
+        "proposition_label": "Christ Truly Suffered and Died",
+        "polarity_family": "",
+        "description": "Christ's passion and death on the cross were genuine physical events, not apparent, symbolic, or borne by a substitute. Denied by docetists, Basilides (Simon Cyrene substitution), Marcion, and Cerinthus.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcion-opposes-passion",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Irenaeus: Jesus was manifested 'not truly taking flesh' — Marcion's docetism negates real suffering."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcion-active-pontus",
+        "clm-marcion-active-sinope",
+        "clm-marcion-opposes-apostolic-succession",
+        "clm-marcion-opposes-resurrection",
+        "clm-marcion-opposes-rule-of-faith",
+        "clm-marcion-opposes-virgin-birth",
+        "clm-marcion-member-roman-church",
+        "clm-marcion-active-rome",
+        "clm-marcion-in-excommunication"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": []
+    }
+  ]
+}

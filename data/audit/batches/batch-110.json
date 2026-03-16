@@ -1,0 +1,1098 @@
+{
+  "batch_id": "batch-110",
+  "queue": "1",
+  "focus": "stromateis",
+  "claim_count": 10,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-stromata-by-clement",
+        "subject_type": "work",
+        "subject_id": "stromateis",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "clement-of-alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "stromateis",
+        "title_display": "Stromateis (Miscellanies)",
+        "title_original": "Στρώματα",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "collection",
+        "notes": "Clement of Alexandria's eight-book synthesis c. 198–203 AD of Christian faith and Greek philosophy; key source for apostolic tradition, rule of faith, succession, virginity, continual prayer, and philosophy as a preparatory schoolmaster for the gospel."
+      },
+      "object_entity": {
+        "person_id": "clement-of-alexandria",
+        "person_label": "Clement of Alexandria",
+        "name_alt": "Titus Flavius Clemens",
+        "name_native": "Κλήμης Ἀλεξανδρεύς",
+        "birth_year_display": "c. 150",
+        "death_year_display": "c. 215",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria; author of Protrepticus, Paedagogus, and Stromateis; synthesized Christian faith with Greek philosophy; key witness for Alexandrian baptismal theology, eucharistic practice, asceticism, and apostolic tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stromata-by-clement",
+            "passage_id": "psg-clement-strom-1-5-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "This passage from the work attests its existence and authorship."
+          },
+          "passage": {
+            "passage_id": "psg-clement-strom-1-5-28",
+            "source_id": "src-clement-stromateis",
+            "locator_type": "source_ref",
+            "locator": "Strom. 1.5.28",
+            "excerpt": "Before the advent of the Lord, philosophy was necessary to the Greeks for righteousness. And now it becomes conducive to piety; being a kind of preparatory training to those who attain to faith through demonstration. For God is the cause of all good things; but of some primarily, as of the Old and the New Testament; and of others by consequence, as philosophy. Perchance, too, philosophy was given to the Greeks directly and primarily, till the Lord should call the Greeks. For this was a schoolmaster to bring the Hellenic mind, as the law the Hebrews, to Christ.",
+            "language": "English",
+            "passage_year": "198",
+            "url_override": "",
+            "notes": "Greek philosophy as divinely permitted preparatory schoolmaster for Gentiles; parallel to Mosaic Law"
+          },
+          "source": {
+            "source_id": "src-clement-stromateis",
+            "work_id": "stromateis",
+            "source_kind": "primary_text",
+            "title": "The Stromata (Stromateis)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "c. 198-203",
+            "year_start": "198",
+            "year_end": "203",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0210.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Clement's eight-book synthesis of Christian faith and philosophy; ANF Vol. 2, Wilson translation, revised for New Advent."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-strom-affirms-apostolic-succession",
+        "clm-strom-affirms-continual-prayer",
+        "clm-strom-affirms-fasting",
+        "clm-strom-affirms-incarnation",
+        "clm-strom-affirms-logos",
+        "clm-strom-affirms-philosophy-schoolmaster",
+        "clm-strom-affirms-rule-of-faith",
+        "clm-strom-affirms-virginity-honored",
+        "clm-stromateis-written-at-alexandria"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-clement-strom-1-5-28": [
+          "clm-strom-affirms-logos",
+          "clm-strom-affirms-philosophy-schoolmaster",
+          "clm-stromateis-written-at-alexandria"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-clement-strom-1-5-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stromateis-written-at-alexandria",
+        "subject_type": "work",
+        "subject_id": "stromateis",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "203",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T00:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "stromateis",
+        "title_display": "Stromateis (Miscellanies)",
+        "title_original": "Στρώματα",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "collection",
+        "notes": "Clement of Alexandria's eight-book synthesis c. 198–203 AD of Christian faith and Greek philosophy; key source for apostolic tradition, rule of faith, succession, virginity, continual prayer, and philosophy as a preparatory schoolmaster for the gospel."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stromateis-written-at-alexandria",
+            "passage_id": "psg-clement-strom-1-5-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from stromateis contextualizes its composition at alexandria."
+          },
+          "passage": {
+            "passage_id": "psg-clement-strom-1-5-28",
+            "source_id": "src-clement-stromateis",
+            "locator_type": "source_ref",
+            "locator": "Strom. 1.5.28",
+            "excerpt": "Before the advent of the Lord, philosophy was necessary to the Greeks for righteousness. And now it becomes conducive to piety; being a kind of preparatory training to those who attain to faith through demonstration. For God is the cause of all good things; but of some primarily, as of the Old and the New Testament; and of others by consequence, as philosophy. Perchance, too, philosophy was given to the Greeks directly and primarily, till the Lord should call the Greeks. For this was a schoolmaster to bring the Hellenic mind, as the law the Hebrews, to Christ.",
+            "language": "English",
+            "passage_year": "198",
+            "url_override": "",
+            "notes": "Greek philosophy as divinely permitted preparatory schoolmaster for Gentiles; parallel to Mosaic Law"
+          },
+          "source": {
+            "source_id": "src-clement-stromateis",
+            "work_id": "stromateis",
+            "source_kind": "primary_text",
+            "title": "The Stromata (Stromateis)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "c. 198-203",
+            "year_start": "198",
+            "year_end": "203",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0210.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Clement's eight-book synthesis of Christian faith and philosophy; ANF Vol. 2, Wilson translation, revised for New Advent."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-strom-affirms-apostolic-succession",
+        "clm-strom-affirms-continual-prayer",
+        "clm-strom-affirms-fasting",
+        "clm-strom-affirms-incarnation",
+        "clm-strom-affirms-logos",
+        "clm-strom-affirms-philosophy-schoolmaster",
+        "clm-strom-affirms-rule-of-faith",
+        "clm-strom-affirms-virginity-honored",
+        "clm-stromata-by-clement"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-clement-strom-1-5-28": [
+          "clm-strom-affirms-logos",
+          "clm-strom-affirms-philosophy-schoolmaster",
+          "clm-stromata-by-clement"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-clement-strom-1-5-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-strom-affirms-apostolic-succession",
+        "subject_type": "work",
+        "subject_id": "stromateis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "203",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T00:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "stromateis",
+        "title_display": "Stromateis (Miscellanies)",
+        "title_original": "Στρώματα",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "collection",
+        "notes": "Clement of Alexandria's eight-book synthesis c. 198–203 AD of Christian faith and Greek philosophy; key source for apostolic tradition, rule of faith, succession, virginity, continual prayer, and philosophy as a preparatory schoolmaster for the gospel."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-strom-affirms-apostolic-succession",
+            "passage_id": "psg-clement-strom-7-17-105-108",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-clement-strom-7-17-105-108",
+            "source_id": "src-clement-stromateis",
+            "locator_type": "source_ref",
+            "locator": "Strom. 7.17.105-108",
+            "excerpt": "They preserve the tradition of the blessed teaching derived directly from the holy apostles, Peter, James, John, and Paul, the son receiving it from the father; came by God's will to us also to deposit those ancestral and apostolic seeds. And they are rightly called gnostics who have been nurtured in this ecclesiastical and apostolic tradition. The true gnostic, in my opinion, is he who has grown old in the Scriptures, and maintains the apostolic and ecclesiastical standard of doctrine.",
+            "language": "English",
+            "passage_year": "198",
+            "url_override": "",
+            "notes": "Apostolic tradition preserved through teacher succession from Peter, James, John, and Paul; rule of faith"
+          },
+          "source": {
+            "source_id": "src-clement-stromateis",
+            "work_id": "stromateis",
+            "source_kind": "primary_text",
+            "title": "The Stromata (Stromateis)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "c. 198-203",
+            "year_start": "198",
+            "year_end": "203",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0210.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Clement's eight-book synthesis of Christian faith and philosophy; ANF Vol. 2, Wilson translation, revised for New Advent."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-strom-affirms-continual-prayer",
+        "clm-strom-affirms-fasting",
+        "clm-strom-affirms-incarnation",
+        "clm-strom-affirms-logos",
+        "clm-strom-affirms-philosophy-schoolmaster",
+        "clm-strom-affirms-rule-of-faith",
+        "clm-strom-affirms-virginity-honored",
+        "clm-stromateis-written-at-alexandria",
+        "clm-stromata-by-clement"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-clement-strom-7-17-105-108": [
+          "clm-clement-active-in-alexandria",
+          "clm-strom-affirms-rule-of-faith"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-strom-affirms-continual-prayer",
+        "subject_type": "work",
+        "subject_id": "stromateis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "prayer-is-offered-without-ceasing",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "203",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T00:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "stromateis",
+        "title_display": "Stromateis (Miscellanies)",
+        "title_original": "Στρώματα",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "collection",
+        "notes": "Clement of Alexandria's eight-book synthesis c. 198–203 AD of Christian faith and Greek philosophy; key source for apostolic tradition, rule of faith, succession, virginity, continual prayer, and philosophy as a preparatory schoolmaster for the gospel."
+      },
+      "object_entity": {
+        "proposition_id": "prayer-is-offered-without-ceasing",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "continual-prayer",
+        "proposition_label": "Prayer is offered without ceasing throughout all of life",
+        "polarity_family": "continual_prayer",
+        "description": "The spiritually formed Christian does not confine prayer to set times but prays continually through every word, action, and disposition, maintaining unceasing communion with God.",
+        "notes": "Continual prayer"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-strom-affirms-continual-prayer",
+            "passage_id": "psg-clement-strom-7-7-43-45",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-clement-strom-7-7-43-45",
+            "source_id": "src-clement-stromateis",
+            "locator_type": "source_ref",
+            "locator": "Strom. 7.7.43-45",
+            "excerpt": "The spiritual person prays in thought during every hour, being united with God through love. And throughout his whole life he sings hymns to the Almighty, speaking in the Holy Spirit; not in a fixed place, or selected temple, or at certain festivals and appointed days, but during his whole life, in every place — whether walking, conversing, in silence, in reading or in works, he offers prayer in every way.",
+            "language": "English",
+            "passage_year": "198",
+            "url_override": "",
+            "notes": "Continual unceasing prayer as the mark of the spiritually formed Christian; prayer in all places at all times"
+          },
+          "source": {
+            "source_id": "src-clement-stromateis",
+            "work_id": "stromateis",
+            "source_kind": "primary_text",
+            "title": "The Stromata (Stromateis)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "c. 198-203",
+            "year_start": "198",
+            "year_end": "203",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0210.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Clement's eight-book synthesis of Christian faith and philosophy; ANF Vol. 2, Wilson translation, revised for New Advent."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-strom-affirms-apostolic-succession",
+        "clm-strom-affirms-fasting",
+        "clm-strom-affirms-incarnation",
+        "clm-strom-affirms-logos",
+        "clm-strom-affirms-philosophy-schoolmaster",
+        "clm-strom-affirms-rule-of-faith",
+        "clm-strom-affirms-virginity-honored",
+        "clm-stromateis-written-at-alexandria",
+        "clm-stromata-by-clement"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-clement-strom-7-7-43-45": [
+          "clm-strom-affirms-incarnation"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-strom-affirms-fasting",
+        "subject_type": "work",
+        "subject_id": "stromateis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "fasting-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "203",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "stromateis",
+        "title_display": "Stromateis (Miscellanies)",
+        "title_original": "Στρώματα",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "collection",
+        "notes": "Clement of Alexandria's eight-book synthesis c. 198–203 AD of Christian faith and Greek philosophy; key source for apostolic tradition, rule of faith, succession, virginity, continual prayer, and philosophy as a preparatory schoolmaster for the gospel."
+      },
+      "object_entity": {
+        "proposition_id": "fasting-is-required",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "fasting-required",
+        "proposition_label": "Christians are required to fast",
+        "polarity_family": "christian_fasting",
+        "description": "Fasting is a required Christian spiritual discipline presented as obligatory, not merely optional.",
+        "notes": "Ascetic discipline"
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-strom-affirms-fasting",
+            "passage_id": "psg-clement-strom-3-18-109",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-clement-strom-3-18-109",
+            "source_id": "src-clement-stromateis",
+            "locator_type": "source_ref",
+            "locator": "Strom. 3.18.109",
+            "excerpt": "Paraphrase: Clement rejects the encratite condemnation of marriage while explicitly praising virginity undertaken for God as the nobler vocation; both marriage practised with self-restraint and celibacy freely chosen are honored as legitimate Christian callings; neither creation nor the body is to be despised.",
+            "language": "English",
+            "passage_year": "198",
+            "url_override": "",
+            "notes": "Both marriage and celibacy are legitimate; virginity explicitly honored as higher calling; against encratite extremes"
+          },
+          "source": {
+            "source_id": "src-clement-stromateis",
+            "work_id": "stromateis",
+            "source_kind": "primary_text",
+            "title": "The Stromata (Stromateis)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "c. 198-203",
+            "year_start": "198",
+            "year_end": "203",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0210.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Clement's eight-book synthesis of Christian faith and philosophy; ANF Vol. 2, Wilson translation, revised for New Advent."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-strom-affirms-apostolic-succession",
+        "clm-strom-affirms-continual-prayer",
+        "clm-strom-affirms-incarnation",
+        "clm-strom-affirms-logos",
+        "clm-strom-affirms-philosophy-schoolmaster",
+        "clm-strom-affirms-rule-of-faith",
+        "clm-strom-affirms-virginity-honored",
+        "clm-stromateis-written-at-alexandria",
+        "clm-stromata-by-clement"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-clement-strom-3-18-109": [
+          "clm-strom-affirms-virginity-honored"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-clement-strom-3-18-109",
+        "PARAPHRASE_RISK:psg-clement-strom-3-18-109"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-strom-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "stromateis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "203",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "stromateis",
+        "title_display": "Stromateis (Miscellanies)",
+        "title_original": "Στρώματα",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "collection",
+        "notes": "Clement of Alexandria's eight-book synthesis c. 198–203 AD of Christian faith and Greek philosophy; key source for apostolic tradition, rule of faith, succession, virginity, continual prayer, and philosophy as a preparatory schoolmaster for the gospel."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-strom-affirms-incarnation",
+            "passage_id": "psg-clement-strom-7-7-43-45",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-clement-strom-7-7-43-45",
+            "source_id": "src-clement-stromateis",
+            "locator_type": "source_ref",
+            "locator": "Strom. 7.7.43-45",
+            "excerpt": "The spiritual person prays in thought during every hour, being united with God through love. And throughout his whole life he sings hymns to the Almighty, speaking in the Holy Spirit; not in a fixed place, or selected temple, or at certain festivals and appointed days, but during his whole life, in every place — whether walking, conversing, in silence, in reading or in works, he offers prayer in every way.",
+            "language": "English",
+            "passage_year": "198",
+            "url_override": "",
+            "notes": "Continual unceasing prayer as the mark of the spiritually formed Christian; prayer in all places at all times"
+          },
+          "source": {
+            "source_id": "src-clement-stromateis",
+            "work_id": "stromateis",
+            "source_kind": "primary_text",
+            "title": "The Stromata (Stromateis)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "c. 198-203",
+            "year_start": "198",
+            "year_end": "203",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0210.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Clement's eight-book synthesis of Christian faith and philosophy; ANF Vol. 2, Wilson translation, revised for New Advent."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-strom-affirms-apostolic-succession",
+        "clm-strom-affirms-continual-prayer",
+        "clm-strom-affirms-fasting",
+        "clm-strom-affirms-logos",
+        "clm-strom-affirms-philosophy-schoolmaster",
+        "clm-strom-affirms-rule-of-faith",
+        "clm-strom-affirms-virginity-honored",
+        "clm-stromateis-written-at-alexandria",
+        "clm-stromata-by-clement"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-clement-strom-7-7-43-45": [
+          "clm-strom-affirms-continual-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-clement-strom-7-7-43-45"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-strom-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "stromateis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "203",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "stromateis",
+        "title_display": "Stromateis (Miscellanies)",
+        "title_original": "Στρώματα",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "collection",
+        "notes": "Clement of Alexandria's eight-book synthesis c. 198–203 AD of Christian faith and Greek philosophy; key source for apostolic tradition, rule of faith, succession, virginity, continual prayer, and philosophy as a preparatory schoolmaster for the gospel."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-strom-affirms-logos",
+            "passage_id": "psg-clement-strom-1-5-28",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-clement-strom-1-5-28",
+            "source_id": "src-clement-stromateis",
+            "locator_type": "source_ref",
+            "locator": "Strom. 1.5.28",
+            "excerpt": "Before the advent of the Lord, philosophy was necessary to the Greeks for righteousness. And now it becomes conducive to piety; being a kind of preparatory training to those who attain to faith through demonstration. For God is the cause of all good things; but of some primarily, as of the Old and the New Testament; and of others by consequence, as philosophy. Perchance, too, philosophy was given to the Greeks directly and primarily, till the Lord should call the Greeks. For this was a schoolmaster to bring the Hellenic mind, as the law the Hebrews, to Christ.",
+            "language": "English",
+            "passage_year": "198",
+            "url_override": "",
+            "notes": "Greek philosophy as divinely permitted preparatory schoolmaster for Gentiles; parallel to Mosaic Law"
+          },
+          "source": {
+            "source_id": "src-clement-stromateis",
+            "work_id": "stromateis",
+            "source_kind": "primary_text",
+            "title": "The Stromata (Stromateis)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "c. 198-203",
+            "year_start": "198",
+            "year_end": "203",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0210.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Clement's eight-book synthesis of Christian faith and philosophy; ANF Vol. 2, Wilson translation, revised for New Advent."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-strom-affirms-apostolic-succession",
+        "clm-strom-affirms-continual-prayer",
+        "clm-strom-affirms-fasting",
+        "clm-strom-affirms-incarnation",
+        "clm-strom-affirms-philosophy-schoolmaster",
+        "clm-strom-affirms-rule-of-faith",
+        "clm-strom-affirms-virginity-honored",
+        "clm-stromateis-written-at-alexandria",
+        "clm-stromata-by-clement"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-clement-strom-1-5-28": [
+          "clm-strom-affirms-philosophy-schoolmaster",
+          "clm-stromata-by-clement",
+          "clm-stromateis-written-at-alexandria"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-clement-strom-1-5-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-strom-affirms-philosophy-schoolmaster",
+        "subject_type": "work",
+        "subject_id": "stromateis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "greek-philosophy-prepared-gentiles-for-gospel",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "203",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T00:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "stromateis",
+        "title_display": "Stromateis (Miscellanies)",
+        "title_original": "Στρώματα",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "collection",
+        "notes": "Clement of Alexandria's eight-book synthesis c. 198–203 AD of Christian faith and Greek philosophy; key source for apostolic tradition, rule of faith, succession, virginity, continual prayer, and philosophy as a preparatory schoolmaster for the gospel."
+      },
+      "object_entity": {
+        "proposition_id": "greek-philosophy-prepared-gentiles-for-gospel",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "philosophy-as-schoolmaster",
+        "proposition_label": "Greek philosophy served as a preparatory schoolmaster leading Gentiles toward the Gospel",
+        "polarity_family": "philosophy_schoolmaster",
+        "description": "Before the advent of Christ, philosophy served for the Greeks as what the Law served for the Hebrews — a pedagogue preparing them for the righteousness and faith found fully in Christ.",
+        "notes": "Philosophy as preparatory schoolmaster"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-strom-affirms-philosophy-schoolmaster",
+            "passage_id": "psg-clement-strom-1-5-28",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-clement-strom-1-5-28",
+            "source_id": "src-clement-stromateis",
+            "locator_type": "source_ref",
+            "locator": "Strom. 1.5.28",
+            "excerpt": "Before the advent of the Lord, philosophy was necessary to the Greeks for righteousness. And now it becomes conducive to piety; being a kind of preparatory training to those who attain to faith through demonstration. For God is the cause of all good things; but of some primarily, as of the Old and the New Testament; and of others by consequence, as philosophy. Perchance, too, philosophy was given to the Greeks directly and primarily, till the Lord should call the Greeks. For this was a schoolmaster to bring the Hellenic mind, as the law the Hebrews, to Christ.",
+            "language": "English",
+            "passage_year": "198",
+            "url_override": "",
+            "notes": "Greek philosophy as divinely permitted preparatory schoolmaster for Gentiles; parallel to Mosaic Law"
+          },
+          "source": {
+            "source_id": "src-clement-stromateis",
+            "work_id": "stromateis",
+            "source_kind": "primary_text",
+            "title": "The Stromata (Stromateis)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "c. 198-203",
+            "year_start": "198",
+            "year_end": "203",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0210.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Clement's eight-book synthesis of Christian faith and philosophy; ANF Vol. 2, Wilson translation, revised for New Advent."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-strom-affirms-apostolic-succession",
+        "clm-strom-affirms-continual-prayer",
+        "clm-strom-affirms-fasting",
+        "clm-strom-affirms-incarnation",
+        "clm-strom-affirms-logos",
+        "clm-strom-affirms-rule-of-faith",
+        "clm-strom-affirms-virginity-honored",
+        "clm-stromateis-written-at-alexandria",
+        "clm-stromata-by-clement"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-clement-strom-1-5-28": [
+          "clm-strom-affirms-logos",
+          "clm-stromata-by-clement",
+          "clm-stromateis-written-at-alexandria"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-strom-affirms-rule-of-faith",
+        "subject_type": "work",
+        "subject_id": "stromateis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "203",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T00:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "stromateis",
+        "title_display": "Stromateis (Miscellanies)",
+        "title_original": "Στρώματα",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "collection",
+        "notes": "Clement of Alexandria's eight-book synthesis c. 198–203 AD of Christian faith and Greek philosophy; key source for apostolic tradition, rule of faith, succession, virginity, continual prayer, and philosophy as a preparatory schoolmaster for the gospel."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-strom-affirms-rule-of-faith",
+            "passage_id": "psg-clement-strom-7-17-105-108",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-clement-strom-7-17-105-108",
+            "source_id": "src-clement-stromateis",
+            "locator_type": "source_ref",
+            "locator": "Strom. 7.17.105-108",
+            "excerpt": "They preserve the tradition of the blessed teaching derived directly from the holy apostles, Peter, James, John, and Paul, the son receiving it from the father; came by God's will to us also to deposit those ancestral and apostolic seeds. And they are rightly called gnostics who have been nurtured in this ecclesiastical and apostolic tradition. The true gnostic, in my opinion, is he who has grown old in the Scriptures, and maintains the apostolic and ecclesiastical standard of doctrine.",
+            "language": "English",
+            "passage_year": "198",
+            "url_override": "",
+            "notes": "Apostolic tradition preserved through teacher succession from Peter, James, John, and Paul; rule of faith"
+          },
+          "source": {
+            "source_id": "src-clement-stromateis",
+            "work_id": "stromateis",
+            "source_kind": "primary_text",
+            "title": "The Stromata (Stromateis)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "c. 198-203",
+            "year_start": "198",
+            "year_end": "203",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0210.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Clement's eight-book synthesis of Christian faith and philosophy; ANF Vol. 2, Wilson translation, revised for New Advent."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-strom-affirms-apostolic-succession",
+        "clm-strom-affirms-continual-prayer",
+        "clm-strom-affirms-fasting",
+        "clm-strom-affirms-incarnation",
+        "clm-strom-affirms-logos",
+        "clm-strom-affirms-philosophy-schoolmaster",
+        "clm-strom-affirms-virginity-honored",
+        "clm-stromateis-written-at-alexandria",
+        "clm-stromata-by-clement"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-clement-strom-7-17-105-108": [
+          "clm-clement-active-in-alexandria",
+          "clm-strom-affirms-apostolic-succession"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-strom-affirms-virginity-honored",
+        "subject_type": "work",
+        "subject_id": "stromateis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "virginity-is-honored-calling",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "203",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T00:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "stromateis",
+        "title_display": "Stromateis (Miscellanies)",
+        "title_original": "Στρώματα",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "collection",
+        "notes": "Clement of Alexandria's eight-book synthesis c. 198–203 AD of Christian faith and Greek philosophy; key source for apostolic tradition, rule of faith, succession, virginity, continual prayer, and philosophy as a preparatory schoolmaster for the gospel."
+      },
+      "object_entity": {
+        "proposition_id": "virginity-is-honored-calling",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "celibacy-honored",
+        "proposition_label": "Virginity and celibacy are honored as a positive Christian calling",
+        "polarity_family": "celibacy_honored",
+        "description": "Virginity and celibacy are not merely tolerated but positively honored as a higher calling, even while marriage is defended as legitimate and good.",
+        "notes": "Celibacy and virginity honored"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-strom-affirms-virginity-honored",
+            "passage_id": "psg-clement-strom-3-18-109",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-clement-strom-3-18-109",
+            "source_id": "src-clement-stromateis",
+            "locator_type": "source_ref",
+            "locator": "Strom. 3.18.109",
+            "excerpt": "Paraphrase: Clement rejects the encratite condemnation of marriage while explicitly praising virginity undertaken for God as the nobler vocation; both marriage practised with self-restraint and celibacy freely chosen are honored as legitimate Christian callings; neither creation nor the body is to be despised.",
+            "language": "English",
+            "passage_year": "198",
+            "url_override": "",
+            "notes": "Both marriage and celibacy are legitimate; virginity explicitly honored as higher calling; against encratite extremes"
+          },
+          "source": {
+            "source_id": "src-clement-stromateis",
+            "work_id": "stromateis",
+            "source_kind": "primary_text",
+            "title": "The Stromata (Stromateis)",
+            "author": "Clement of Alexandria",
+            "editor": "",
+            "year_display": "c. 198-203",
+            "year_start": "198",
+            "year_end": "203",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0210.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Clement's eight-book synthesis of Christian faith and philosophy; ANF Vol. 2, Wilson translation, revised for New Advent."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-strom-affirms-apostolic-succession",
+        "clm-strom-affirms-continual-prayer",
+        "clm-strom-affirms-fasting",
+        "clm-strom-affirms-incarnation",
+        "clm-strom-affirms-logos",
+        "clm-strom-affirms-philosophy-schoolmaster",
+        "clm-strom-affirms-rule-of-faith",
+        "clm-stromateis-written-at-alexandria",
+        "clm-stromata-by-clement"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-clement-strom-3-18-109": [
+          "clm-strom-affirms-fasting"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-clement-strom-3-18-109"
+      ]
+    }
+  ]
+}

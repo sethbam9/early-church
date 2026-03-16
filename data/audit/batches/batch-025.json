@@ -1,0 +1,2671 @@
+{
+  "batch_id": "batch-025",
+  "queue": "0A",
+  "focus": "psg-wikipedia-church-of-east-spread(15)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-ignatius-affirms-fasting",
+        "subject_type": "work",
+        "subject_id": "epistles-of-ignatius",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "fasting-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "110",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistles-of-ignatius",
+        "title_display": "Epistles of Ignatius",
+        "title_original": "Ἰγνατίου Ἐπιστολαί",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "collection",
+        "notes": "Seven epistles written by Ignatius of Antioch en route to martyrdom in Rome c. 110."
+      },
+      "object_entity": {
+        "proposition_id": "fasting-is-required",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "fasting-required",
+        "proposition_label": "Christians are required to fast",
+        "polarity_family": "christian_fasting",
+        "description": "Fasting is a required Christian spiritual discipline presented as obligatory, not merely optional.",
+        "notes": "Ascetic discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ignatius-affirms-fasting",
+            "passage_id": "psg-ignatius-smyrn-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions epistles-of-ignatius or fasting-is-required."
+          },
+          "passage": {
+            "passage_id": "psg-ignatius-smyrn-1",
+            "source_id": "src-ignatius-smyrnaeans",
+            "locator_type": "source_ref",
+            "locator": "Smyrn.1",
+            "excerpt": "Paraphrase: Ignatius confesses that Christ was truly of the seed of David, truly born of a virgin, baptized by John that all righteousness might be fulfilled, truly crucified under Pontius Pilate.",
+            "language": "English",
+            "passage_year": "110",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-ignatius-smyrnaeans",
+            "work_id": "epistles-of-ignatius",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Smyrnaeans",
+            "author": "Ignatius of Antioch",
+            "editor": "",
+            "year_display": "c. 110",
+            "year_start": "110",
+            "year_end": "110",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0109.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Ignatius letter to Smyrna addressing docetism and eucharistic practice."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ignatius-smyrn-affirms-passion",
+        "clm-epistles-ignatius-addressed-ephesus",
+        "clm-epistles-ignatius-addressed-philadelphia",
+        "clm-epistles-ignatius-addressed-rome",
+        "clm-epistles-ignatius-addressed-smyrna",
+        "clm-epistles-ignatius-written-smyrna",
+        "clm-ignatius-affirms-baptism-regen",
+        "clm-ignatius-affirms-bodily-resurrection",
+        "clm-ignatius-affirms-episcopal-chair",
+        "clm-ignatius-affirms-incarnation",
+        "clm-ignatius-affirms-judgment",
+        "clm-ignatius-affirms-logos",
+        "clm-ignatius-affirms-martyrdom-witness",
+        "clm-ignatius-affirms-monarchical-bishop",
+        "clm-ignatius-affirms-ordination",
+        "clm-ignatius-affirms-ot-scripture",
+        "clm-ignatius-affirms-repentance",
+        "clm-ignatius-affirms-rule-of-faith",
+        "clm-ignatius-affirms-succession",
+        "clm-ignatius-affirms-threefold",
+        "clm-ignatius-bishop-eucharist",
+        "clm-ignatius-eph-affirms-eucharist-immortality",
+        "clm-ignatius-eph-affirms-virgin-birth",
+        "clm-ignatius-eucharist-flesh",
+        "clm-ignatius-frequent-assembly",
+        "clm-epistles-ignatius-by-ignatius"
+      ],
+      "sibling_count": 26,
+      "passage_co_users": {
+        "psg-ignatius-smyrn-1": [
+          "clm-1john-affirms-incarnation",
+          "clm-docetists-at-phrygia",
+          "clm-docetists-at-rome",
+          "clm-docetists-schismed-from-antioch",
+          "clm-ignatius-affirms-baptism-regen",
+          "clm-ignatius-affirms-bodily-resurrection",
+          "clm-ignatius-affirms-episcopal-unity",
+          "clm-ignatius-affirms-incarnation",
+          "clm-ignatius-affirms-logos",
+          "clm-ignatius-affirms-threefold",
+          "clm-ignatius-eph-affirms-virgin-birth",
+          "clm-ignatius-member-smyrna-route",
+          "clm-ignatius-smyrn-affirms-passion",
+          "clm-polycarp-affirms-eucharist",
+          "clm-polycarp-affirms-fasting"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ignatius-smyrn-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-agabus-member-disciples",
+        "subject_type": "person",
+        "subject_id": "agabus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "agabus",
+        "person_label": "Agabus",
+        "name_alt": "",
+        "name_native": "Ἅγαβος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet who comes down from Judea and warns Paul in Acts 21."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-agabus-member-disciples",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes agabus's membership in disciples-of-jesus."
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-agabus-active-antioch",
+        "clm-agabus-member-antioch-church",
+        "clm-agabus-active-judea",
+        "clm-agabus-member-caesarean"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-11-25-26",
+        "PARAPHRASE_RISK:psg-acts-11-25-26",
+        "PARAPHRASE_OMISSION:psg-acts-11-25-26:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-luke-member-antioch-church",
+        "subject_type": "person",
+        "subject_id": "luke-the-evangelist",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "50",
+        "context_place_id": "antioch",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "luke-the-evangelist",
+        "person_label": "Luke",
+        "name_alt": "Luke the beloved physician",
+        "name_native": "Λουκᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline companion traditionally associated with Luke and Acts."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-luke-member-antioch-church",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions luke-the-evangelist or antioch-church."
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-luke-active-antioch",
+        "clm-luke-member-disciples",
+        "clm-luke-coworker-silas",
+        "clm-luke-active-philippi",
+        "clm-luke-active-troas",
+        "clm-luke-coworker-timothy",
+        "clm-luke-active-caesarea",
+        "clm-luke-coworker-paul",
+        "clm-luke-active-rome",
+        "clm-luke-member-roman-church"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-11-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-agabus-active-antioch",
+        "subject_type": "person",
+        "subject_id": "agabus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "46",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "agabus",
+        "person_label": "Agabus",
+        "name_alt": "",
+        "name_native": "Ἅγαβος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet who comes down from Judea and warns Paul in Acts 21."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-agabus-active-antioch",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests agabus's activity in or near antioch."
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-agabus-member-antioch-church",
+        "clm-agabus-member-disciples",
+        "clm-agabus-active-judea",
+        "clm-agabus-member-caesarean"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-11-25-26",
+        "PARAPHRASE_RISK:psg-acts-11-25-26",
+        "PARAPHRASE_OMISSION:psg-acts-11-25-26:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-disciples-at-antioch",
+        "subject_type": "group",
+        "subject_id": "disciples-of-jesus",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "40",
+        "year_end": "70",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-disciples-at-antioch",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts records disciples/missionaries present at this location."
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-group-disciples-galilee",
+        "clm-group-disciples-judea",
+        "clm-disciples-at-jerusalem-early",
+        "clm-group-disciples-samaria",
+        "clm-disciples-at-damascus",
+        "clm-group-disciples-joppa",
+        "clm-disciples-at-lydda",
+        "clm-group-disciples-caesarea",
+        "clm-group-disciples-paphos",
+        "clm-disciples-at-philippi",
+        "clm-disciples-at-thessalonica",
+        "clm-group-disciples-rome",
+        "clm-group-disciples-athens",
+        "clm-disciples-at-corinth",
+        "clm-group-disciples-ephesus",
+        "clm-group-disciples-achaia",
+        "clm-group-disciples-troas",
+        "clm-group-disciples-tyre",
+        "clm-disciples-at-sidon",
+        "clm-disciples-at-malta",
+        "clm-group-disciples-puteoli",
+        "clm-disciples-at-colossae",
+        "clm-disciples-at-laodicea",
+        "clm-group-disciples-hierapolis",
+        "clm-group-disciples-asia",
+        "clm-group-disciples-bithynia",
+        "clm-group-disciples-cappadocia",
+        "clm-group-disciples-galatia",
+        "clm-group-disciples-pontus",
+        "clm-group-disciples-crete"
+      ],
+      "sibling_count": 30,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-11-25-26",
+        "PARAPHRASE_RISK:psg-acts-11-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-active-antioch",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "48",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-active-antioch",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church",
+        "clm-paul-coworker-stephanas"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-11-25-26",
+        "PARAPHRASE_OMISSION:psg-acts-11-25-26:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-place-antioch-attested",
+        "subject_type": "place",
+        "subject_id": "antioch",
+        "predicate_id": "place_presence_status",
+        "object_mode": "text",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "attested",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "40",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-place-antioch-attested",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts 11:26 records disciples at Antioch."
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-11-25-26",
+        "PARAPHRASE_RISK:psg-acts-11-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-luke-active-antioch",
+        "subject_type": "person",
+        "subject_id": "luke-the-evangelist",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "50",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "luke-the-evangelist",
+        "person_label": "Luke",
+        "name_alt": "Luke the beloved physician",
+        "name_native": "Λουκᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline companion traditionally associated with Luke and Acts."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-luke-active-antioch",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Tradition places Luke at Antioch."
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-luke-member-antioch-church",
+        "clm-luke-member-disciples",
+        "clm-luke-coworker-silas",
+        "clm-luke-active-philippi",
+        "clm-luke-active-troas",
+        "clm-luke-coworker-timothy",
+        "clm-luke-active-caesarea",
+        "clm-luke-coworker-paul",
+        "clm-luke-active-rome",
+        "clm-luke-member-roman-church"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-11-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-disciple",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "42",
+        "year_end": "61",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-disciple",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-11-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-member-antioch-2",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "42",
+        "year_end": "48",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-member-antioch-2",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes barnabas's membership in antioch-church."
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-11-25-26",
+        "PARAPHRASE_RISK:psg-acts-11-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-member-jerusalem",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "jerusalem-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "33",
+        "year_end": "42",
+        "context_place_id": "jerusalem",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "group_id": "jerusalem-church",
+        "group_label": "Church in Jerusalem",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Jerusalem community central to the earliest apostolic period."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-member-jerusalem",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-member-jerusalem",
+            "passage_id": "psg-acts-9-26-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-9-26-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.9.26-28",
+            "excerpt": "Paraphrase: Barnabas brings Saul to the apostles in Jerusalem and vouches for him.",
+            "language": "English",
+            "passage_year": "36",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ],
+        "psg-acts-9-26-28": [
+          "clm-barnabas-active-jerusalem",
+          "clm-paul-active-galatia",
+          "clm-paul-active-galilee-area",
+          "clm-paul-active-jerusalem",
+          "clm-paul-active-judea-late",
+          "clm-paul-in-pentecost",
+          "clm-paul-member-jerusalem-church",
+          "clm-peter-coworker-barnabas"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-11-25-26",
+        "PARAPHRASE_RISK:psg-acts-9-26-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-john-mark-coworker-barnabas-early",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "john-mark",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "46",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "superseded",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "person_id": "john-mark",
+        "person_label": "John Mark",
+        "name_alt": "Mark",
+        "name_native": "Ἰωάννης Μᾶρκος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Mission helper associated with Barnabas and Paul in Acts 13 and later tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-john-mark-coworker-barnabas-early",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes barnabas's association with john-mark."
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 21,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "48",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "superseded",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-coworker-paul",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 21,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-coworker-john-mark-cyprus",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "john-mark",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "48",
+        "context_place_id": "cyprus",
+        "certainty": "attested",
+        "claim_status": "superseded",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "person_id": "john-mark",
+        "person_label": "John Mark",
+        "name_alt": "Mark",
+        "name_native": "Ἰωάννης Μᾶρκος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Mission helper associated with Barnabas and Paul in Acts 13 and later tradition."
+      },
+      "context_place": {
+        "place_id": "cyprus",
+        "place_label": "Cyprus",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "35.0000",
+        "lon": "33.0000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Cyprus",
+        "notes": "Mediterranean island visited on the first missionary journey in Acts 13."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-coworker-john-mark-cyprus",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes barnabas's association with john-mark."
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 21,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-coworker-barnabas-jerusalem",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "36",
+        "year_end": "48",
+        "context_place_id": "jerusalem",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-coworker-barnabas-jerusalem",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes barnabas's association with paul."
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-11-25-26",
+        "PARAPHRASE_RISK:psg-acts-11-25-26",
+        "PARAPHRASE_OMISSION:psg-acts-11-25-26:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-antioch-church-antioch",
+        "subject_type": "group",
+        "subject_id": "antioch-church",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "40",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-antioch-church-antioch",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-active-antioch",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-11-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-active-antioch",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "42",
+        "year_end": "48",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-active-antioch",
+            "passage_id": "psg-acts-11-25-26",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-11-25-26",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.11.25-26",
+            "excerpt": "Paraphrase: Barnabas brings Saul to Antioch, where they teach with the church and the disciples are first called Christians.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-acts-11-25-26": [
+          "clm-agabus-active-antioch",
+          "clm-agabus-member-disciples",
+          "clm-barnabas-coworker-john-mark-cyprus",
+          "clm-barnabas-coworker-paul",
+          "clm-barnabas-disciple",
+          "clm-barnabas-member-antioch-2",
+          "clm-barnabas-member-jerusalem",
+          "clm-disciples-at-antioch",
+          "clm-group-antioch-church-antioch",
+          "clm-john-mark-coworker-barnabas-early",
+          "clm-luke-active-antioch",
+          "clm-luke-member-antioch-church",
+          "clm-paul-active-antioch",
+          "clm-paul-coworker-barnabas-jerusalem",
+          "clm-place-antioch-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-11-25-26"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-simeon-called-niger-active-antioch",
+        "subject_type": "person",
+        "subject_id": "simeon-called-niger",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "simeon-called-niger",
+        "person_label": "Simeon called Niger",
+        "name_alt": "Simeon Niger",
+        "name_native": "Συμεὼν ὁ καλούμενος Νίγερ",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher named in the church at Antioch in Acts 13."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-simeon-called-niger-active-antioch",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-simeon-called-niger-antioch-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-coworker-manaen",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "manaen",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "person_id": "manaen",
+        "person_label": "Manaen",
+        "name_alt": "Menaen",
+        "name_native": "Μαναήν",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher at Antioch said to have been brought up with Herod the tetrarch in Acts 13."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-coworker-manaen",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-simeon-called-niger-antioch-church",
+        "subject_type": "person",
+        "subject_id": "simeon-called-niger",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "simeon-called-niger",
+        "person_label": "Simeon called Niger",
+        "name_alt": "Simeon Niger",
+        "name_native": "Συμεὼν ὁ καλούμενος Νίγερ",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher named in the church at Antioch in Acts 13."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-simeon-called-niger-antioch-church",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-simeon-called-niger-active-antioch"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    }
+  ]
+}

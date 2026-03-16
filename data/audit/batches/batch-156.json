@@ -1,0 +1,2248 @@
+{
+  "batch_id": "batch-156",
+  "queue": "1",
+  "focus": "sirach; essenes; zealots; herod-antipas; baptism-of-jesus; calling-of-the-first-disciples; sermon-on-the-mount; lazarus-of-bethany; martha-of-bethany; arrest-of-jesus",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-sirach-authored-by-ben-sira",
+        "subject_type": "work",
+        "subject_id": "sirach",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "ben-sira",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "",
+        "updated_at": ""
+      },
+      "subject_entity": {
+        "work_id": "sirach",
+        "title_display": "Sirach",
+        "title_original": "Σοφία Ἰησοῦ υἱοῦ Σειράχ",
+        "work_type": "other",
+        "language_original": "Hebrew / Greek",
+        "work_kind": "single_work",
+        "notes": "Wisdom work emphasizing repentance, almsgiving, and practical piety."
+      },
+      "object_entity": {
+        "person_id": "ben-sira",
+        "person_label": "",
+        "name_alt": "",
+        "name_native": "",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Scribe and sage who composed Sirach (Ecclesiasticus) in Jerusalem c. 180 BCE; his grandson translated it into Greek c. 132 BCE."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sirach-authored-by-ben-sira",
+            "passage_id": "psg-sirach-prologue",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Sirach Prologue explicitly names the work's author as the translator's grandfather Jesus (Ben Sira)."
+          },
+          "passage": {
+            "passage_id": "psg-sirach-prologue",
+            "source_id": "src-sirach",
+            "locator_type": "source_ref",
+            "locator": "Sirach Prologue",
+            "excerpt": "My grandfather Jesus, after devoting himself especially to the reading of the law and the prophets... composed a book of his own.",
+            "language": "el",
+            "passage_year": "-132",
+            "url_override": "",
+            "notes": "Sirach Prologue (LXX): translator's preface by Ben Sira's grandson, explicitly attributing the work to 'my grandfather Jesus'."
+          },
+          "source": {
+            "source_id": "src-sirach",
+            "work_id": "sirach",
+            "source_kind": "primary_text",
+            "title": "Sirach",
+            "author": "Jesus ben Sira",
+            "editor": "",
+            "year_display": "early 2nd c. BCE",
+            "year_start": "-200",
+            "year_end": "-175",
+            "container_title": "Second Temple Jewish literature",
+            "publisher": "",
+            "url": "https://pseudepigrapha.com/apocrypha_ot/sirac.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Wisdom instruction associated with repentance and practical piety."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sirach-repentance"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {},
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sirach-repentance",
+        "subject_type": "work",
+        "subject_id": "sirach",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "repentance-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "-180",
+        "year_end": "-180",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "sirach",
+        "title_display": "Sirach",
+        "title_original": "Σοφία Ἰησοῦ υἱοῦ Σειράχ",
+        "work_type": "other",
+        "language_original": "Hebrew / Greek",
+        "work_kind": "single_work",
+        "notes": "Wisdom work emphasizing repentance, almsgiving, and practical piety."
+      },
+      "object_entity": {
+        "proposition_id": "repentance-is-required",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "repentant-response",
+        "proposition_label": "Repentance is required in response to the proclamation",
+        "polarity_family": "repentance_response",
+        "description": "The proclamation of the kingdom calls hearers to repentance.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sirach-repentance",
+            "passage_id": "psg-sirach-5-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-sirach-5-7",
+            "source_id": "src-sirach",
+            "locator_type": "source_ref",
+            "locator": "Sir.5.7",
+            "excerpt": "Paraphrase: Do not delay turning to the Lord and do not postpone repentance.",
+            "language": "English",
+            "passage_year": "-180",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-sirach",
+            "work_id": "sirach",
+            "source_kind": "primary_text",
+            "title": "Sirach",
+            "author": "Jesus ben Sira",
+            "editor": "",
+            "year_display": "early 2nd c. BCE",
+            "year_start": "-200",
+            "year_end": "-175",
+            "container_title": "Second Temple Jewish literature",
+            "publisher": "",
+            "url": "https://pseudepigrapha.com/apocrypha_ot/sirac.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Wisdom instruction associated with repentance and practical piety."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sirach-authored-by-ben-sira"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-sirach-5-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-essenes-at-qumran",
+        "subject_type": "group",
+        "subject_id": "essenes",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "qumran",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "-150",
+        "year_end": "68",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "essenes",
+        "group_label": "Essenes",
+        "group_kind": "sect",
+        "is_christian": "false",
+        "notes": "Second Temple Jewish sect described by Josephus as a distinct school among the Jews."
+      },
+      "object_entity": {
+        "place_id": "qumran",
+        "place_label": "Qumran",
+        "place_label_modern": "Qumran",
+        "place_kind": "site",
+        "parent_place_id": "judea",
+        "lat": "31.7439",
+        "lon": "35.4583",
+        "location_precision": "approx_site",
+        "modern_country_label": "West Bank",
+        "notes": "Dead Sea site associated with the Yahad and the preservation of sectarian literature."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-essenes-at-qumran",
+            "passage_id": "psg-josephus-war-2-119-166",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Josephus War 2.119-166 describes Essenes; Pliny NH 5.73 places them at the Dead Sea = Qumran."
+          },
+          "passage": {
+            "passage_id": "psg-josephus-war-2-119-166",
+            "source_id": "src-josephus-war",
+            "locator_type": "source_ref",
+            "locator": "War 2.119-166",
+            "excerpt": "Paraphrase: Josephus describes the Pharisees, Sadducees, and Essenes as distinct schools among the Jews and gives an extended portrait of the Essenes.",
+            "language": "English",
+            "passage_year": "75",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-war",
+            "work_id": "the-jewish-war",
+            "source_kind": "primary_text",
+            "title": "The Jewish War",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "c. 75",
+            "year_start": "75",
+            "year_end": "75",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://lexundria.com/j_bj/2.117-2.166/wst",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Josephus description of Jewish sects including the Essenes."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-essenes-at-qumran",
+            "passage_id": "psg-wikipedia-roman-empire-provinces",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Dead Sea Scrolls community at Qumran."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-roman-empire-provinces",
+            "source_id": "src-wikipedia-roman-empire",
+            "locator_type": "source_ref",
+            "locator": "Roman_Empire#Provinces",
+            "excerpt": "The Roman Empire controlled provinces throughout the Mediterranean basin, Near East, North Africa, and much of Europe. Roman governors administered these territories from the late 1st century BC through the 4th and 5th centuries AD.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used as contextualizing evidence for Roman imperial control of individual provinces and cities."
+          },
+          "source": {
+            "source_id": "src-wikipedia-roman-empire",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Roman Empire - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Roman_Empire",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "General encyclopedic reference for Roman imperial control of provinces."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-group-essenes-judea"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-josephus-war-2-119-166": [
+          "clm-group-essenes-judea",
+          "clm-jewish-war-by-josephus",
+          "clm-zealots-at-judea"
+        ],
+        "psg-wikipedia-roman-empire-provinces": [
+          "clm-rome-controls-achaia",
+          "clm-rome-controls-alexandria",
+          "clm-rome-controls-antioch",
+          "clm-rome-controls-asia",
+          "clm-rome-controls-athens",
+          "clm-rome-controls-berea",
+          "clm-rome-controls-bethany",
+          "clm-rome-controls-bethsaida",
+          "clm-rome-controls-bithynia",
+          "clm-rome-controls-bostra",
+          "clm-rome-controls-britannia",
+          "clm-rome-controls-caesarea",
+          "clm-rome-controls-caesarea-cappadocia",
+          "clm-rome-controls-capernaum",
+          "clm-rome-controls-cappadocia",
+          "clm-rome-controls-carthage",
+          "clm-rome-controls-colossae",
+          "clm-rome-controls-crete",
+          "clm-rome-controls-cyprus",
+          "clm-rome-controls-damascus",
+          "clm-rome-controls-derbe",
+          "clm-rome-controls-edessa",
+          "clm-rome-controls-egypt",
+          "clm-rome-controls-ephesus",
+          "clm-rome-controls-galatia",
+          "clm-rome-controls-galilee",
+          "clm-rome-controls-gaul",
+          "clm-rome-controls-hierapolis",
+          "clm-rome-controls-jericho",
+          "clm-rome-controls-jerusalem",
+          "clm-rome-controls-joppa",
+          "clm-rome-controls-laodicea",
+          "clm-rome-controls-lydda",
+          "clm-rome-controls-lyons",
+          "clm-rome-controls-lystra",
+          "clm-rome-controls-malta",
+          "clm-rome-controls-miletus",
+          "clm-rome-controls-nazareth",
+          "clm-rome-controls-neocaesarea",
+          "clm-rome-controls-nicopolis",
+          "clm-rome-controls-patmos",
+          "clm-rome-controls-pergamum",
+          "clm-rome-controls-philadelphia",
+          "clm-rome-controls-phrygia",
+          "clm-rome-controls-pontus",
+          "clm-rome-controls-rome-city",
+          "clm-rome-controls-samaria",
+          "clm-rome-controls-sardinia",
+          "clm-rome-controls-sardis",
+          "clm-rome-controls-sidon",
+          "clm-rome-controls-smyrna",
+          "clm-rome-controls-thessalonica",
+          "clm-rome-controls-thyatira",
+          "clm-rome-controls-troas",
+          "clm-rome-controls-tyre"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-essenes-judea",
+        "subject_type": "group",
+        "subject_id": "essenes",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "judea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "-150",
+        "year_end": "70",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "group_id": "essenes",
+        "group_label": "Essenes",
+        "group_kind": "sect",
+        "is_christian": "false",
+        "notes": "Second Temple Jewish sect described by Josephus as a distinct school among the Jews."
+      },
+      "object_entity": {
+        "place_id": "judea",
+        "place_label": "Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "31.70",
+        "lon": "35.20",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Southern region including Jerusalem and the Judean wilderness."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-essenes-judea",
+            "passage_id": "psg-josephus-war-2-119-166",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Josephus identifies the Essenes as a Jewish school; the Judea placement is a conservative regional contextualization."
+          },
+          "passage": {
+            "passage_id": "psg-josephus-war-2-119-166",
+            "source_id": "src-josephus-war",
+            "locator_type": "source_ref",
+            "locator": "War 2.119-166",
+            "excerpt": "Paraphrase: Josephus describes the Pharisees, Sadducees, and Essenes as distinct schools among the Jews and gives an extended portrait of the Essenes.",
+            "language": "English",
+            "passage_year": "75",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-war",
+            "work_id": "the-jewish-war",
+            "source_kind": "primary_text",
+            "title": "The Jewish War",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "c. 75",
+            "year_start": "75",
+            "year_end": "75",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://lexundria.com/j_bj/2.117-2.166/wst",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Josephus description of Jewish sects including the Essenes."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-essenes-at-qumran"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-josephus-war-2-119-166": [
+          "clm-essenes-at-qumran",
+          "clm-jewish-war-by-josephus",
+          "clm-zealots-at-judea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-josephus-war-2-119-166",
+        "PARAPHRASE_OMISSION:psg-josephus-war-2-119-166:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-zealots-at-judea",
+        "subject_type": "group",
+        "subject_id": "zealots",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "judea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "6",
+        "year_end": "70",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "zealots",
+        "group_label": "Zealots",
+        "group_kind": "faction",
+        "is_christian": "false",
+        "notes": "Late Second Temple revolutionary faction prominent in Jerusalem during the Jewish war according to Josephus."
+      },
+      "object_entity": {
+        "place_id": "judea",
+        "place_label": "Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "31.70",
+        "lon": "35.20",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Southern region including Jerusalem and the Judean wilderness."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-zealots-at-judea",
+            "passage_id": "psg-acts-1-13-14",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Simon the Zealot listed among Jerusalem disciples."
+          },
+          "passage": {
+            "passage_id": "psg-acts-1-13-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.1.13-14",
+            "excerpt": "Paraphrase: The apostles, the women, and Mary the mother of Jesus are gathered in Jerusalem.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-zealots-at-judea",
+            "passage_id": "psg-josephus-war-2-119-166",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Josephus War 2.119-166 explicitly locates the Zealot movement in Judea."
+          },
+          "passage": {
+            "passage_id": "psg-josephus-war-2-119-166",
+            "source_id": "src-josephus-war",
+            "locator_type": "source_ref",
+            "locator": "War 2.119-166",
+            "excerpt": "Paraphrase: Josephus describes the Pharisees, Sadducees, and Essenes as distinct schools among the Jews and gives an extended portrait of the Essenes.",
+            "language": "English",
+            "passage_year": "75",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-war",
+            "work_id": "the-jewish-war",
+            "source_kind": "primary_text",
+            "title": "The Jewish War",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "c. 75",
+            "year_start": "75",
+            "year_end": "75",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://lexundria.com/j_bj/2.117-2.166/wst",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Josephus description of Jewish sects including the Essenes."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-group-zealots-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-1-13-14": [
+          "clm-andrew-active-jerusalem",
+          "clm-andrew-in-pentecost",
+          "clm-andrew-member-jerusalem",
+          "clm-bartholomew-in-pentecost",
+          "clm-disciples-at-jerusalem-early",
+          "clm-james-just-in-pentecost",
+          "clm-james-zebedee-in-pentecost",
+          "clm-john-zebedee-active-jerusalem",
+          "clm-john-zebedee-in-pentecost",
+          "clm-john-zebedee-member-jerusalem",
+          "clm-mary-mother-active-galilee",
+          "clm-mary-mother-active-jerusalem",
+          "clm-mary-mother-disciple",
+          "clm-mary-mother-in-pentecost",
+          "clm-matthew-active-jerusalem",
+          "clm-matthew-in-pentecost",
+          "clm-peter-active-jerusalem",
+          "clm-peter-coworker-john-zebedee",
+          "clm-peter-member-jerusalem-church",
+          "clm-philip-apostle-active-jerusalem",
+          "clm-philip-apostle-in-pentecost",
+          "clm-philip-apostle-member-jerusalem",
+          "clm-place-judea-attested-late",
+          "clm-thomas-active-jerusalem",
+          "clm-thomas-in-pentecost"
+        ],
+        "psg-josephus-war-2-119-166": [
+          "clm-essenes-at-qumran",
+          "clm-group-essenes-judea",
+          "clm-jewish-war-by-josephus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-josephus-war-2-119-166"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-zealots-jerusalem",
+        "subject_type": "group",
+        "subject_id": "zealots",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "66",
+        "year_end": "70",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T05:20:00Z"
+      },
+      "subject_entity": {
+        "group_id": "zealots",
+        "group_label": "Zealots",
+        "group_kind": "faction",
+        "is_christian": "false",
+        "notes": "Late Second Temple revolutionary faction prominent in Jerusalem during the Jewish war according to Josephus."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-zealots-jerusalem",
+            "passage_id": "psg-josephus-war-4-zealots",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-josephus-war-4-zealots",
+            "source_id": "src-josephus-war",
+            "locator_type": "source_ref",
+            "locator": "War 4",
+            "excerpt": "Paraphrase: Josephus portrays the Zealots as a violent faction dominating Jerusalem during the war.",
+            "language": "English",
+            "passage_year": "75",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-war",
+            "work_id": "the-jewish-war",
+            "source_kind": "primary_text",
+            "title": "The Jewish War",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "c. 75",
+            "year_start": "75",
+            "year_end": "75",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://lexundria.com/j_bj/2.117-2.166/wst",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Josephus description of Jewish sects including the Essenes."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-zealots-at-judea"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-josephus-war-4-zealots"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-herod-antipas-active-galilee",
+        "subject_type": "person",
+        "subject_id": "herod-antipas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galilee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "26",
+        "year_end": "39",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "herod-antipas",
+        "person_label": "Herod Antipas",
+        "name_alt": "Antipas",
+        "name_native": "Ἥρῴδης Ἀντίπας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Tetrarch of Galilee and Perea in the ministry narratives."
+      },
+      "object_entity": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-herod-antipas-active-galilee",
+            "passage_id": "psg-luke-3-1-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-luke-3-1-3",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.3.1-3",
+            "excerpt": "Paraphrase: John appears in the region around the Jordan proclaiming a baptism of repentance.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-herod-antipas-in-john-baptist-martyrdom"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-luke-3-1-3": [
+          "clm-group-john-judea",
+          "clm-john-active-wilderness",
+          "clm-johnb-group"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-luke-3-1-3",
+        "PARAPHRASE_OMISSION:psg-luke-3-1-3:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-herod-antipas-in-john-baptist-martyrdom",
+        "subject_type": "person",
+        "subject_id": "herod-antipas",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "john-the-baptists-martyrdom",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T21:25:00Z"
+      },
+      "subject_entity": {
+        "person_id": "herod-antipas",
+        "person_label": "Herod Antipas",
+        "name_alt": "Antipas",
+        "name_native": "Ἥρῴδης Ἀντίπας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Tetrarch of Galilee and Perea in the ministry narratives."
+      },
+      "object_entity": {
+        "event_id": "john-the-baptists-martyrdom",
+        "event_label": "John the Baptist's Death",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Herod Antipas imprisons and kills John, as narrated in Mark 6 and contextualized by Josephus."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-herod-antipas-in-john-baptist-martyrdom",
+            "passage_id": "psg-josephus-ant-18-116-119",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Josephus independently confirms that Herod slew John, though his narrative emphasis differs from Mark's banquet account."
+          },
+          "passage": {
+            "passage_id": "psg-josephus-ant-18-116-119",
+            "source_id": "src-josephus-ant",
+            "locator_type": "source_ref",
+            "locator": "Antiquities 18.116-119",
+            "excerpt": "Paraphrase: Josephus describes John as a good man exhorting virtue and baptism and says Herod slew him.",
+            "language": "English",
+            "passage_year": "94",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-ant",
+            "work_id": "antiquities-of-the-jews",
+            "source_kind": "primary_text",
+            "title": "Antiquities of the Jews",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "93/94",
+            "year_start": "93",
+            "year_end": "94",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.perseus.tufts.edu/hopper/text?doc=J.%20AJ%2018",
+            "accessed_on": "2026-03-09",
+            "isbn_issn": "",
+            "notes": "Near-ancient non-Christian witness for John the Baptist and Pontius Pilate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-herod-antipas-in-john-baptist-martyrdom",
+            "passage_id": "psg-mark-6-17-29",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-6-17-29",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.6.17-29",
+            "excerpt": "Paraphrase: Herod imprisons John, orders his death, and John's disciples lay his body in a tomb.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-herod-antipas-active-galilee"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-josephus-ant-18-116-119": [
+          "clm-antiquities-repentance",
+          "clm-john-active-wilderness",
+          "clm-john-baptist-in-martyrdom",
+          "clm-johnb-group"
+        ],
+        "psg-mark-6-17-29": [
+          "clm-antipas-martyrdom-year",
+          "clm-john-baptist-death-year",
+          "clm-john-baptist-in-martyrdom"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-6-17-29"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-baptism-year",
+        "subject_type": "event",
+        "subject_id": "baptism-of-jesus",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "27",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "baptism-of-jesus",
+        "event_label": "Baptism of Jesus",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Opening public-ministry event in the Gospel narratives."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-baptism-year",
+            "passage_id": "psg-john-1-28-34",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-john-1-28-34",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.1.28-34",
+            "excerpt": "Paraphrase: John testifies about Jesus at Bethany beyond the Jordan where he was baptizing.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-baptism-at-bethany"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-john-1-28-34": [
+          "clm-baptism-at-bethany",
+          "clm-followers-john-at-bethany",
+          "clm-followers-john-at-judea",
+          "clm-jesus-in-baptism",
+          "clm-john-baptist-in-own-death",
+          "clm-john-in-baptism",
+          "clm-place-bethany-jordan-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-john-1-28-34",
+        "PARAPHRASE_RISK:psg-john-1-28-34"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-baptism-at-bethany",
+        "subject_type": "event",
+        "subject_id": "baptism-of-jesus",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "bethany-beyond-the-jordan",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "27",
+        "year_end": "27",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "baptism-of-jesus",
+        "event_label": "Baptism of Jesus",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Opening public-ministry event in the Gospel narratives."
+      },
+      "object_entity": {
+        "place_id": "bethany-beyond-the-jordan",
+        "place_label": "Bethany beyond the Jordan",
+        "place_label_modern": "",
+        "place_kind": "site",
+        "parent_place_id": "",
+        "lat": "31.8370",
+        "lon": "35.5500",
+        "location_precision": "approx_site",
+        "modern_country_label": "Jordan",
+        "notes": "Traditional site associated in John with John the Baptist activity."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-baptism-at-bethany",
+            "passage_id": "psg-john-1-28-34",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-1-28-34",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.1.28-34",
+            "excerpt": "Paraphrase: John testifies about Jesus at Bethany beyond the Jordan where he was baptizing.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-baptism-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-john-1-28-34": [
+          "clm-baptism-year",
+          "clm-followers-john-at-bethany",
+          "clm-followers-john-at-judea",
+          "clm-jesus-in-baptism",
+          "clm-john-baptist-in-own-death",
+          "clm-john-in-baptism",
+          "clm-place-bethany-jordan-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-1-28-34"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-calling-year",
+        "subject_type": "event",
+        "subject_id": "calling-of-the-first-disciples",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "28",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "calling-of-the-first-disciples",
+        "event_label": "Calling of the First Disciples",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Calling of Simon, Andrew, James, and John in Galilee."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-calling-year",
+            "passage_id": "psg-mark-1-16-20",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-mark-1-16-20",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.1.16-20",
+            "excerpt": "Paraphrase: Jesus calls Simon, Andrew, James, and John, and they leave their work to follow him.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-calling-at-capernaum"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-mark-1-16-20": [
+          "clm-andrew-active-galilee",
+          "clm-andrew-coworker-peter",
+          "clm-andrew-disciple",
+          "clm-andrew-in-calling",
+          "clm-calling-at-capernaum",
+          "clm-group-disciples-galilee",
+          "clm-james-disciple",
+          "clm-james-in-calling",
+          "clm-james-zebedee-active-galilee",
+          "clm-james-zebedee-coworker-john-zebedee",
+          "clm-jesus-follow",
+          "clm-jesus-in-calling",
+          "clm-jesus-teacher-james-son-of-zebedee",
+          "clm-jesus-teacher-john-son-of-zebedee",
+          "clm-jesus-teacher-simon-peter",
+          "clm-john-disciple",
+          "clm-john-in-calling",
+          "clm-john-zebedee-active-galilee",
+          "clm-peter-active-galilee",
+          "clm-peter-disciple",
+          "clm-peter-in-calling"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-mark-1-16-20",
+        "PARAPHRASE_RISK:psg-mark-1-16-20"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-calling-at-capernaum",
+        "subject_type": "event",
+        "subject_id": "calling-of-the-first-disciples",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "capernaum",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "28",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "calling-of-the-first-disciples",
+        "event_label": "Calling of the First Disciples",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Calling of Simon, Andrew, James, and John in Galilee."
+      },
+      "object_entity": {
+        "place_id": "capernaum",
+        "place_label": "Capernaum",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "galilee",
+        "lat": "32.8803",
+        "lon": "35.5736",
+        "location_precision": "approx_city",
+        "modern_country_label": "Israel",
+        "notes": "Galilean base of operations in early ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-calling-at-capernaum",
+            "passage_id": "psg-mark-1-16-20",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-1-16-20",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.1.16-20",
+            "excerpt": "Paraphrase: Jesus calls Simon, Andrew, James, and John, and they leave their work to follow him.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-calling-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-mark-1-16-20": [
+          "clm-andrew-active-galilee",
+          "clm-andrew-coworker-peter",
+          "clm-andrew-disciple",
+          "clm-andrew-in-calling",
+          "clm-calling-year",
+          "clm-group-disciples-galilee",
+          "clm-james-disciple",
+          "clm-james-in-calling",
+          "clm-james-zebedee-active-galilee",
+          "clm-james-zebedee-coworker-john-zebedee",
+          "clm-jesus-follow",
+          "clm-jesus-in-calling",
+          "clm-jesus-teacher-james-son-of-zebedee",
+          "clm-jesus-teacher-john-son-of-zebedee",
+          "clm-jesus-teacher-simon-peter",
+          "clm-john-disciple",
+          "clm-john-in-calling",
+          "clm-john-zebedee-active-galilee",
+          "clm-peter-active-galilee",
+          "clm-peter-disciple",
+          "clm-peter-in-calling"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-1-16-20"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sermon-year",
+        "subject_type": "event",
+        "subject_id": "sermon-on-the-mount",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "28",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "sermon-on-the-mount",
+        "event_label": "Sermon on the Mount",
+        "event_type": "literary",
+        "event_kind": "simple",
+        "notes": "Representative teaching scene in Galilee."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sermon-year",
+            "passage_id": "psg-matt-7-28-29",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Matt 7:28-29 concludes the Sermon on the Mount; year inferred from Galilean ministry timeline."
+          },
+          "passage": {
+            "passage_id": "psg-matt-7-28-29",
+            "source_id": "src-matthew",
+            "locator_type": "bible_osis",
+            "locator": "Matt.7.28-29",
+            "excerpt": "Paraphrase: The crowds recognize that Jesus teaches with authority unlike the scribes.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-matthew",
+            "work_id": "gospel-of-matthew",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Matthew",
+            "author": "Traditionally Matthew",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Matthew",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sermon-at-galilee"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-matt-7-28-29": [
+          "clm-jesus-authority",
+          "clm-jesus-in-sermon",
+          "clm-sermon-at-galilee"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-matt-7-28-29"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sermon-at-galilee",
+        "subject_type": "event",
+        "subject_id": "sermon-on-the-mount",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galilee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "28",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "sermon-on-the-mount",
+        "event_label": "Sermon on the Mount",
+        "event_type": "literary",
+        "event_kind": "simple",
+        "notes": "Representative teaching scene in Galilee."
+      },
+      "object_entity": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sermon-at-galilee",
+            "passage_id": "psg-matt-7-28-29",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-matt-7-28-29",
+            "source_id": "src-matthew",
+            "locator_type": "bible_osis",
+            "locator": "Matt.7.28-29",
+            "excerpt": "Paraphrase: The crowds recognize that Jesus teaches with authority unlike the scribes.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-matthew",
+            "work_id": "gospel-of-matthew",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Matthew",
+            "author": "Traditionally Matthew",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Matthew",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sermon-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-matt-7-28-29": [
+          "clm-jesus-authority",
+          "clm-jesus-in-sermon",
+          "clm-sermon-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-matt-7-28-29",
+        "PARAPHRASE_OMISSION:psg-matt-7-28-29:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lazarus-active-bethany",
+        "subject_type": "person",
+        "subject_id": "lazarus-of-bethany",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "bethany-near-jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "29",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lazarus-of-bethany",
+        "person_label": "Lazarus of Bethany",
+        "name_alt": "Lazarus",
+        "name_native": "Λάζαρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Brother of Mary and Martha in Bethany."
+      },
+      "object_entity": {
+        "place_id": "bethany-near-jerusalem",
+        "place_label": "Bethany",
+        "place_label_modern": "al-Eizariya",
+        "place_kind": "site",
+        "parent_place_id": "judea",
+        "lat": "31.7717",
+        "lon": "35.2635",
+        "location_precision": "approx_site",
+        "modern_country_label": "Palestine",
+        "notes": "Village on the eastern slope of the Mount of Olives associated with Mary, Martha, and Lazarus."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lazarus-active-bethany",
+            "passage_id": "psg-john-11-1-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-11-1-18",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.11.1-18",
+            "excerpt": "Paraphrase: Lazarus, Martha, and Mary are introduced at Bethany near Jerusalem.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-martha-coworker-mary-bethany"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-john-11-1-18": [
+          "clm-group-disciples-judea",
+          "clm-jesus-active-judea",
+          "clm-martha-active-bethany",
+          "clm-martha-active-jerusalem",
+          "clm-martha-coworker-mary-bethany",
+          "clm-place-bethany-near-jerusalem-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-11-1-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-martha-coworker-mary-bethany",
+        "subject_type": "person",
+        "subject_id": "lazarus-of-bethany",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "martha-of-bethany",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "29",
+        "year_end": "30",
+        "context_place_id": "bethany-near-jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lazarus-of-bethany",
+        "person_label": "Lazarus of Bethany",
+        "name_alt": "Lazarus",
+        "name_native": "Λάζαρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Brother of Mary and Martha in Bethany."
+      },
+      "object_entity": {
+        "person_id": "martha-of-bethany",
+        "person_label": "Martha of Bethany",
+        "name_alt": "Martha",
+        "name_native": "Μάρθα",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Sister of Mary and Lazarus in Bethany."
+      },
+      "context_place": {
+        "place_id": "bethany-near-jerusalem",
+        "place_label": "Bethany",
+        "place_label_modern": "al-Eizariya",
+        "place_kind": "site",
+        "parent_place_id": "judea",
+        "lat": "31.7717",
+        "lon": "35.2635",
+        "location_precision": "approx_site",
+        "modern_country_label": "Palestine",
+        "notes": "Village on the eastern slope of the Mount of Olives associated with Mary, Martha, and Lazarus."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-martha-coworker-mary-bethany",
+            "passage_id": "psg-john-11-1-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes lazarus-of-bethany's association with martha-of-bethany."
+          },
+          "passage": {
+            "passage_id": "psg-john-11-1-18",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.11.1-18",
+            "excerpt": "Paraphrase: Lazarus, Martha, and Mary are introduced at Bethany near Jerusalem.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lazarus-active-bethany"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-john-11-1-18": [
+          "clm-group-disciples-judea",
+          "clm-jesus-active-judea",
+          "clm-lazarus-active-bethany",
+          "clm-martha-active-bethany",
+          "clm-martha-active-jerusalem",
+          "clm-place-bethany-near-jerusalem-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-john-11-1-18",
+        "PARAPHRASE_RISK:psg-john-11-1-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-martha-active-bethany",
+        "subject_type": "person",
+        "subject_id": "martha-of-bethany",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "bethany-near-jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "29",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "martha-of-bethany",
+        "person_label": "Martha of Bethany",
+        "name_alt": "Martha",
+        "name_native": "Μάρθα",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Sister of Mary and Lazarus in Bethany."
+      },
+      "object_entity": {
+        "place_id": "bethany-near-jerusalem",
+        "place_label": "Bethany",
+        "place_label_modern": "al-Eizariya",
+        "place_kind": "site",
+        "parent_place_id": "judea",
+        "lat": "31.7717",
+        "lon": "35.2635",
+        "location_precision": "approx_site",
+        "modern_country_label": "Palestine",
+        "notes": "Village on the eastern slope of the Mount of Olives associated with Mary, Martha, and Lazarus."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-martha-active-bethany",
+            "passage_id": "psg-john-11-1-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-11-1-18",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.11.1-18",
+            "excerpt": "Paraphrase: Lazarus, Martha, and Mary are introduced at Bethany near Jerusalem.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-martha-active-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-john-11-1-18": [
+          "clm-group-disciples-judea",
+          "clm-jesus-active-judea",
+          "clm-lazarus-active-bethany",
+          "clm-martha-active-jerusalem",
+          "clm-martha-coworker-mary-bethany",
+          "clm-place-bethany-near-jerusalem-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-11-1-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-martha-active-jerusalem",
+        "subject_type": "person",
+        "subject_id": "martha-of-bethany",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "29",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "martha-of-bethany",
+        "person_label": "Martha of Bethany",
+        "name_alt": "Martha",
+        "name_native": "Μάρθα",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Sister of Mary and Lazarus in Bethany."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-martha-active-jerusalem",
+            "passage_id": "psg-john-11-1-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests martha-of-bethany's activity in or near jerusalem."
+          },
+          "passage": {
+            "passage_id": "psg-john-11-1-18",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.11.1-18",
+            "excerpt": "Paraphrase: Lazarus, Martha, and Mary are introduced at Bethany near Jerusalem.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-martha-active-bethany"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-john-11-1-18": [
+          "clm-group-disciples-judea",
+          "clm-jesus-active-judea",
+          "clm-lazarus-active-bethany",
+          "clm-martha-active-bethany",
+          "clm-martha-coworker-mary-bethany",
+          "clm-place-bethany-near-jerusalem-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-john-11-1-18",
+        "PARAPHRASE_RISK:psg-john-11-1-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-arrest-year",
+        "subject_type": "event",
+        "subject_id": "arrest-of-jesus",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "30",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T22:45:00Z"
+      },
+      "subject_entity": {
+        "event_id": "arrest-of-jesus",
+        "event_label": "Arrest of Jesus",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Jesus is seized in the passion narratives after Judas arrives with those who came to take him."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-arrest-year",
+            "passage_id": "psg-john-18-1-11",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-john-18-1-11",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.18.1-11",
+            "excerpt": "Paraphrase: Judas arrives with officers, Jesus is arrested in the garden, and he restrains violent resistance.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-arrest-at-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-john-18-1-11": [
+          "clm-caiaphas-active-jerusalem",
+          "clm-caiaphas-in-temple-era",
+          "clm-jesus-in-arrest",
+          "clm-john-zebedee-in-arrest",
+          "clm-judas-iscariot-in-arrest",
+          "clm-nicodemus-disciple",
+          "clm-peter-in-arrest",
+          "clm-peter-in-crucifixion-witness"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-john-18-1-11",
+        "PARAPHRASE_RISK:psg-john-18-1-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-arrest-at-jerusalem",
+        "subject_type": "event",
+        "subject_id": "arrest-of-jesus",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T22:45:00Z"
+      },
+      "subject_entity": {
+        "event_id": "arrest-of-jesus",
+        "event_label": "Arrest of Jesus",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Jesus is seized in the passion narratives after Judas arrives with those who came to take him."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-arrest-at-jerusalem",
+            "passage_id": "psg-luke-22-47-53",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Luke places the arrest scene inside the Jerusalem passion setting even though the immediate locale is the night arrest scene outside the city center."
+          },
+          "passage": {
+            "passage_id": "psg-luke-22-47-53",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.22.47-53",
+            "excerpt": "Paraphrase: Judas approaches Jesus with the crowd, Jesus is seized, and he speaks about their coming with swords and clubs.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-arrest-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-luke-22-47-53": [
+          "clm-jesus-in-arrest",
+          "clm-judas-iscariot-active-jerusalem",
+          "clm-judas-iscariot-in-arrest"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-luke-22-47-53"
+      ]
+    }
+  ]
+}

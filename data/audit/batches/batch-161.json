@@ -1,0 +1,2196 @@
+{
+  "batch_id": "batch-161",
+  "queue": "1",
+  "focus": "olympas; patrobas; persis; philologus; phlegon; rufus-of-rome; stachys; tryphaena; tryphosa; urbanus",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-olympas-active-rome",
+        "subject_type": "person",
+        "subject_id": "olympas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "olympas",
+        "person_label": "Olympas",
+        "name_alt": "",
+        "name_native": "Ὀλυμπᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 among the Roman saints."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-olympas-active-rome",
+            "passage_id": "psg-rom-16-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-15",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.15",
+            "excerpt": "Paraphrase: Paul greets Philologus, Julia, Nereus and his sister, Olympas, and all the saints with them.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-olympas-roman-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-15": [
+          "clm-julia-of-rome-active-rome",
+          "clm-julia-of-rome-roman-church",
+          "clm-nereus-of-rome-active-rome",
+          "clm-nereus-of-rome-roman-church",
+          "clm-olympas-roman-church",
+          "clm-philologus-active-rome",
+          "clm-philologus-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-15",
+        "PARAPHRASE_OMISSION:psg-rom-16-15:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-olympas-roman-church",
+        "subject_type": "person",
+        "subject_id": "olympas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "olympas",
+        "person_label": "Olympas",
+        "name_alt": "",
+        "name_native": "Ὀλυμπᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 among the Roman saints."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-olympas-roman-church",
+            "passage_id": "psg-rom-16-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-15",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.15",
+            "excerpt": "Paraphrase: Paul greets Philologus, Julia, Nereus and his sister, Olympas, and all the saints with them.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-olympas-active-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-15": [
+          "clm-julia-of-rome-active-rome",
+          "clm-julia-of-rome-roman-church",
+          "clm-nereus-of-rome-active-rome",
+          "clm-nereus-of-rome-roman-church",
+          "clm-olympas-active-rome",
+          "clm-philologus-active-rome",
+          "clm-philologus-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-15",
+        "PARAPHRASE_OMISSION:psg-rom-16-15:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-patrobas-active-rome",
+        "subject_type": "person",
+        "subject_id": "patrobas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "patrobas",
+        "person_label": "Patrobas",
+        "name_alt": "",
+        "name_native": "Πατρόβας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 among the Rome-network households."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-patrobas-active-rome",
+            "passage_id": "psg-rom-16-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-14",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.14",
+            "excerpt": "Paraphrase: Paul greets Asyncritus, Phlegon, Hermes, Patrobas, Hermas, and the brothers with them.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-patrobas-roman-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-14": [
+          "clm-asyncritus-active-rome",
+          "clm-asyncritus-roman-church",
+          "clm-hermas-active-rome",
+          "clm-hermas-roman-church",
+          "clm-hermes-active-rome",
+          "clm-hermes-roman-church",
+          "clm-patrobas-roman-church",
+          "clm-phlegon-active-rome",
+          "clm-phlegon-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-14",
+        "PARAPHRASE_OMISSION:psg-rom-16-14:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-patrobas-roman-church",
+        "subject_type": "person",
+        "subject_id": "patrobas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "patrobas",
+        "person_label": "Patrobas",
+        "name_alt": "",
+        "name_native": "Πατρόβας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 among the Rome-network households."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-patrobas-roman-church",
+            "passage_id": "psg-rom-16-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-14",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.14",
+            "excerpt": "Paraphrase: Paul greets Asyncritus, Phlegon, Hermes, Patrobas, Hermas, and the brothers with them.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-patrobas-active-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-14": [
+          "clm-asyncritus-active-rome",
+          "clm-asyncritus-roman-church",
+          "clm-hermas-active-rome",
+          "clm-hermas-roman-church",
+          "clm-hermes-active-rome",
+          "clm-hermes-roman-church",
+          "clm-patrobas-active-rome",
+          "clm-phlegon-active-rome",
+          "clm-phlegon-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-14",
+        "PARAPHRASE_OMISSION:psg-rom-16-14:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-persis-active-rome",
+        "subject_type": "person",
+        "subject_id": "persis",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "persis",
+        "person_label": "Persis",
+        "name_alt": "",
+        "name_native": "Περσίς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Beloved believer greeted in Romans 16 as one who labored much in the Lord."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-persis-active-rome",
+            "passage_id": "psg-rom-16-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-12",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.12",
+            "excerpt": "Paraphrase: Paul greets Tryphaena, Tryphosa, and Persis, women who labored much in the Lord.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-persis-roman-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-12": [
+          "clm-persis-roman-church",
+          "clm-tryphaena-active-rome",
+          "clm-tryphaena-roman-church",
+          "clm-tryphosa-active-rome",
+          "clm-tryphosa-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-12",
+        "PARAPHRASE_OMISSION:psg-rom-16-12:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-persis-roman-church",
+        "subject_type": "person",
+        "subject_id": "persis",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "persis",
+        "person_label": "Persis",
+        "name_alt": "",
+        "name_native": "Περσίς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Beloved believer greeted in Romans 16 as one who labored much in the Lord."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-persis-roman-church",
+            "passage_id": "psg-rom-16-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-12",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.12",
+            "excerpt": "Paraphrase: Paul greets Tryphaena, Tryphosa, and Persis, women who labored much in the Lord.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-persis-active-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-12": [
+          "clm-persis-active-rome",
+          "clm-tryphaena-active-rome",
+          "clm-tryphaena-roman-church",
+          "clm-tryphosa-active-rome",
+          "clm-tryphosa-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-12",
+        "PARAPHRASE_OMISSION:psg-rom-16-12:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philologus-active-rome",
+        "subject_type": "person",
+        "subject_id": "philologus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philologus",
+        "person_label": "Philologus",
+        "name_alt": "",
+        "name_native": "Φιλόλογος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 among the Rome-network households."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philologus-active-rome",
+            "passage_id": "psg-rom-16-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-15",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.15",
+            "excerpt": "Paraphrase: Paul greets Philologus, Julia, Nereus and his sister, Olympas, and all the saints with them.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philologus-roman-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-15": [
+          "clm-julia-of-rome-active-rome",
+          "clm-julia-of-rome-roman-church",
+          "clm-nereus-of-rome-active-rome",
+          "clm-nereus-of-rome-roman-church",
+          "clm-olympas-active-rome",
+          "clm-olympas-roman-church",
+          "clm-philologus-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-15",
+        "PARAPHRASE_OMISSION:psg-rom-16-15:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philologus-roman-church",
+        "subject_type": "person",
+        "subject_id": "philologus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "philologus",
+        "person_label": "Philologus",
+        "name_alt": "",
+        "name_native": "Φιλόλογος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 among the Rome-network households."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philologus-roman-church",
+            "passage_id": "psg-rom-16-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-15",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.15",
+            "excerpt": "Paraphrase: Paul greets Philologus, Julia, Nereus and his sister, Olympas, and all the saints with them.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philologus-active-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-15": [
+          "clm-julia-of-rome-active-rome",
+          "clm-julia-of-rome-roman-church",
+          "clm-nereus-of-rome-active-rome",
+          "clm-nereus-of-rome-roman-church",
+          "clm-olympas-active-rome",
+          "clm-olympas-roman-church",
+          "clm-philologus-active-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-15",
+        "PARAPHRASE_OMISSION:psg-rom-16-15:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-phlegon-active-rome",
+        "subject_type": "person",
+        "subject_id": "phlegon",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "phlegon",
+        "person_label": "Phlegon",
+        "name_alt": "",
+        "name_native": "Φλέγων",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 among the Rome-network households."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-phlegon-active-rome",
+            "passage_id": "psg-rom-16-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-14",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.14",
+            "excerpt": "Paraphrase: Paul greets Asyncritus, Phlegon, Hermes, Patrobas, Hermas, and the brothers with them.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-phlegon-roman-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-14": [
+          "clm-asyncritus-active-rome",
+          "clm-asyncritus-roman-church",
+          "clm-hermas-active-rome",
+          "clm-hermas-roman-church",
+          "clm-hermes-active-rome",
+          "clm-hermes-roman-church",
+          "clm-patrobas-active-rome",
+          "clm-patrobas-roman-church",
+          "clm-phlegon-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-14",
+        "PARAPHRASE_OMISSION:psg-rom-16-14:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-phlegon-roman-church",
+        "subject_type": "person",
+        "subject_id": "phlegon",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "phlegon",
+        "person_label": "Phlegon",
+        "name_alt": "",
+        "name_native": "Φλέγων",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 among the Rome-network households."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-phlegon-roman-church",
+            "passage_id": "psg-rom-16-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-14",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.14",
+            "excerpt": "Paraphrase: Paul greets Asyncritus, Phlegon, Hermes, Patrobas, Hermas, and the brothers with them.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-phlegon-active-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-14": [
+          "clm-asyncritus-active-rome",
+          "clm-asyncritus-roman-church",
+          "clm-hermas-active-rome",
+          "clm-hermas-roman-church",
+          "clm-hermes-active-rome",
+          "clm-hermes-roman-church",
+          "clm-patrobas-active-rome",
+          "clm-patrobas-roman-church",
+          "clm-phlegon-active-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-14",
+        "PARAPHRASE_OMISSION:psg-rom-16-14:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-rufus-of-rome-active-rome",
+        "subject_type": "person",
+        "subject_id": "rufus-of-rome",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "rufus-of-rome",
+        "person_label": "Rufus of Rome",
+        "name_alt": "Rufus",
+        "name_native": "Ῥοῦφος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 as chosen in the Lord."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-rufus-of-rome-active-rome",
+            "passage_id": "psg-rom-16-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-13",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.13",
+            "excerpt": "Paraphrase: Paul greets Rufus, chosen in the Lord, and Rufus's mother.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-rufus-of-rome-roman-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-13": [
+          "clm-rufus-of-rome-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-13",
+        "PARAPHRASE_OMISSION:psg-rom-16-13:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-rufus-of-rome-roman-church",
+        "subject_type": "person",
+        "subject_id": "rufus-of-rome",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "rufus-of-rome",
+        "person_label": "Rufus of Rome",
+        "name_alt": "Rufus",
+        "name_native": "Ῥοῦφος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 as chosen in the Lord."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-rufus-of-rome-roman-church",
+            "passage_id": "psg-rom-16-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-13",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.13",
+            "excerpt": "Paraphrase: Paul greets Rufus, chosen in the Lord, and Rufus's mother.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-rufus-of-rome-active-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-13": [
+          "clm-rufus-of-rome-active-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-13",
+        "PARAPHRASE_OMISSION:psg-rom-16-13:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stachys-active-rome",
+        "subject_type": "person",
+        "subject_id": "stachys",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stachys",
+        "person_label": "Stachys",
+        "name_alt": "",
+        "name_native": "Στάχυς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 as beloved by Paul."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stachys-active-rome",
+            "passage_id": "psg-rom-16-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-9",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.9",
+            "excerpt": "Paraphrase: Paul greets Urbanus, a fellow worker in Christ, and Stachys, his beloved.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stachys-roman-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-9": [
+          "clm-stachys-roman-church",
+          "clm-urbanus-active-rome",
+          "clm-urbanus-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-9",
+        "PARAPHRASE_OMISSION:psg-rom-16-9:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stachys-roman-church",
+        "subject_type": "person",
+        "subject_id": "stachys",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stachys",
+        "person_label": "Stachys",
+        "name_alt": "",
+        "name_native": "Στάχυς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 as beloved by Paul."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stachys-roman-church",
+            "passage_id": "psg-rom-16-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-9",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.9",
+            "excerpt": "Paraphrase: Paul greets Urbanus, a fellow worker in Christ, and Stachys, his beloved.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stachys-active-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-9": [
+          "clm-stachys-active-rome",
+          "clm-urbanus-active-rome",
+          "clm-urbanus-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-9",
+        "PARAPHRASE_OMISSION:psg-rom-16-9:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-tryphaena-active-rome",
+        "subject_type": "person",
+        "subject_id": "tryphaena",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tryphaena",
+        "person_label": "Tryphaena",
+        "name_alt": "",
+        "name_native": "Τρύφαινα",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 as one who labors in the Lord."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tryphaena-active-rome",
+            "passage_id": "psg-rom-16-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-12",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.12",
+            "excerpt": "Paraphrase: Paul greets Tryphaena, Tryphosa, and Persis, women who labored much in the Lord.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tryphaena-roman-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-12": [
+          "clm-persis-active-rome",
+          "clm-persis-roman-church",
+          "clm-tryphaena-roman-church",
+          "clm-tryphosa-active-rome",
+          "clm-tryphosa-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-12",
+        "PARAPHRASE_OMISSION:psg-rom-16-12:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-tryphaena-roman-church",
+        "subject_type": "person",
+        "subject_id": "tryphaena",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tryphaena",
+        "person_label": "Tryphaena",
+        "name_alt": "",
+        "name_native": "Τρύφαινα",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 as one who labors in the Lord."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tryphaena-roman-church",
+            "passage_id": "psg-rom-16-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-12",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.12",
+            "excerpt": "Paraphrase: Paul greets Tryphaena, Tryphosa, and Persis, women who labored much in the Lord.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tryphaena-active-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-12": [
+          "clm-persis-active-rome",
+          "clm-persis-roman-church",
+          "clm-tryphaena-active-rome",
+          "clm-tryphosa-active-rome",
+          "clm-tryphosa-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-12",
+        "PARAPHRASE_OMISSION:psg-rom-16-12:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-tryphosa-active-rome",
+        "subject_type": "person",
+        "subject_id": "tryphosa",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tryphosa",
+        "person_label": "Tryphosa",
+        "name_alt": "",
+        "name_native": "Τρυφῶσα",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 as one who labors in the Lord."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tryphosa-active-rome",
+            "passage_id": "psg-rom-16-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-12",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.12",
+            "excerpt": "Paraphrase: Paul greets Tryphaena, Tryphosa, and Persis, women who labored much in the Lord.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tryphosa-roman-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-12": [
+          "clm-persis-active-rome",
+          "clm-persis-roman-church",
+          "clm-tryphaena-active-rome",
+          "clm-tryphaena-roman-church",
+          "clm-tryphosa-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-12",
+        "PARAPHRASE_OMISSION:psg-rom-16-12:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-tryphosa-roman-church",
+        "subject_type": "person",
+        "subject_id": "tryphosa",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tryphosa",
+        "person_label": "Tryphosa",
+        "name_alt": "",
+        "name_native": "Τρυφῶσα",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 as one who labors in the Lord."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tryphosa-roman-church",
+            "passage_id": "psg-rom-16-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-12",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.12",
+            "excerpt": "Paraphrase: Paul greets Tryphaena, Tryphosa, and Persis, women who labored much in the Lord.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tryphosa-active-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-12": [
+          "clm-persis-active-rome",
+          "clm-persis-roman-church",
+          "clm-tryphaena-active-rome",
+          "clm-tryphaena-roman-church",
+          "clm-tryphosa-active-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-12",
+        "PARAPHRASE_OMISSION:psg-rom-16-12:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-urbanus-active-rome",
+        "subject_type": "person",
+        "subject_id": "urbanus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "urbanus",
+        "person_label": "Urbanus",
+        "name_alt": "",
+        "name_native": "Οὐρβανός",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 as a fellow worker in Christ."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-urbanus-active-rome",
+            "passage_id": "psg-rom-16-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-9",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.9",
+            "excerpt": "Paraphrase: Paul greets Urbanus, a fellow worker in Christ, and Stachys, his beloved.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-urbanus-roman-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-9": [
+          "clm-stachys-active-rome",
+          "clm-stachys-roman-church",
+          "clm-urbanus-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-9",
+        "PARAPHRASE_OMISSION:psg-rom-16-9:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-urbanus-roman-church",
+        "subject_type": "person",
+        "subject_id": "urbanus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "urbanus",
+        "person_label": "Urbanus",
+        "name_alt": "",
+        "name_native": "Οὐρβανός",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer greeted in Romans 16 as a fellow worker in Christ."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-urbanus-roman-church",
+            "passage_id": "psg-rom-16-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-9",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.9",
+            "excerpt": "Paraphrase: Paul greets Urbanus, a fellow worker in Christ, and Stachys, his beloved.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-urbanus-active-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-rom-16-9": [
+          "clm-stachys-active-rome",
+          "clm-stachys-roman-church",
+          "clm-urbanus-active-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-9",
+        "PARAPHRASE_OMISSION:psg-rom-16-9:object"
+      ]
+    }
+  ]
+}

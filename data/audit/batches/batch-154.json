@@ -1,0 +1,2437 @@
+{
+  "batch_id": "batch-154",
+  "queue": "1",
+  "focus": "de-paenitentia; zephyrinus; julius-africanus; heraclas; de-resurrectione-carnis; de-corona; pontian; arabian-christians",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-de-paen-affirms-penance",
+        "subject_type": "work",
+        "subject_id": "de-paenitentia",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "post-baptismal-sin-forgiven-by-penance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "200",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-paenitentia",
+        "title_display": "De Paenitentia",
+        "title_original": "De Poenitentia",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's early treatise on repentance c. 198-200; allows one post-baptismal repentance through church discipline; important early witness for penitential practice."
+      },
+      "object_entity": {
+        "proposition_id": "post-baptismal-sin-forgiven-by-penance",
+        "topic_id": "penance-practice",
+        "dimension_id": "post-baptismal-penance",
+        "proposition_label": "Post-baptismal sin can be forgiven through penance",
+        "polarity_family": "post_baptismal_penance",
+        "description": "A second repentance after baptism is possible and administered through church discipline.",
+        "notes": "Penitential discipline"
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-paen-affirms-penance",
+            "passage_id": "psg-tertullian-de-paen-7-9",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "Exomologesis — one post-baptismal repentance through public confession"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-paen-7-9",
+            "source_id": "src-tertullian-de-paenitentia",
+            "locator_type": "source_ref",
+            "locator": "De Paen. 7-9",
+            "excerpt": "Paraphrase: Tertullian teaches that after baptism, God has provided one further repentance (exomologesis) for those who fall into grave sin. This second repentance is a painful public confession before the congregation, including fasting, weeping, and prostration; it is the last remaining refuge for the sinner, but it does exist.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "One post-baptismal repentance allowed through exomologesis (public confession); early penitential discipline"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-paenitentia",
+            "work_id": "de-paenitentia",
+            "source_kind": "primary_text",
+            "title": "De Paenitentia",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198-200",
+            "year_start": "198",
+            "year_end": "200",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0323.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's treatise on repentance; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-paen-written-carthage",
+        "clm-de-paen-by-tertullian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-de-paen-7-9": [
+          "clm-de-paen-by-tertullian",
+          "clm-de-paen-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-de-paen-7-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-zephyrinus-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "zephyrinus",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "199",
+        "year_end": "217",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "zephyrinus",
+        "person_label": "Zephyrinus",
+        "name_alt": "Pope Zephyrinus",
+        "name_native": "Ζεφυρῖνος",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 217",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 199–217; accused by Hippolytus of modalist sympathies and of being manipulated by his deacon Callistus; his pontificate saw the rise of the Logos-modalism controversy in Rome."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-zephyrinus-bishop-rome",
+            "passage_id": "psg-hippolytus-ref-9-12-zeph",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Hippolytus names Zephyrinus as bishop of Rome in Refutation 9.12."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-12-zeph",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.12",
+            "excerpt": "Paraphrase: Zephyrinus was an ignorant and illiterate individual, and one unskilled in the definitions of the Church. Callistus, who was crafty in dealing with evil, and versed in knavery, urged Zephyrinus on, and taught him that the Father and Son are the same. This is the way the wretched man Zephyrinus was beguiled.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus accuses Zephyrinus of modalism under Callistus's influence; polemical context"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-zephyrinus-in-schism",
+        "clm-zephyrinus-member-roman-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-12-zeph": [
+          "clm-refutation-affirms-logos",
+          "clm-zephyrinus-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-12-zeph",
+        "PARAPHRASE_OMISSION:psg-hippolytus-ref-9-12-zeph:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-zephyrinus-in-schism",
+        "subject_type": "person",
+        "subject_id": "zephyrinus",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "hippolytus-callistus-schism",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "199",
+        "year_end": "217",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "zephyrinus",
+        "person_label": "Zephyrinus",
+        "name_alt": "Pope Zephyrinus",
+        "name_native": "Ζεφυρῖνος",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 217",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 199–217; accused by Hippolytus of modalist sympathies and of being manipulated by his deacon Callistus; his pontificate saw the rise of the Logos-modalism controversy in Rome."
+      },
+      "object_entity": {
+        "event_id": "hippolytus-callistus-schism",
+        "event_label": "Schism of Hippolytus and Callistus",
+        "event_type": "schism",
+        "event_kind": "simple",
+        "notes": "Hippolytus set himself up as rival bishop of Rome c. 217 after the election of Callistus I, whom he accused of modalism and moral laxity; sometimes called the first antipope; the schism persisted through the pontificates of Urban I and Pontian until reconciliation in Sardinian exile c. 235."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-zephyrinus-in-schism",
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.7",
+            "excerpt": "Paraphrase: Callistus, having been appointed over the cemetery by Zephyrinus, brought many into his following. He was the first to invent the device of conniving at the sensual pleasures of men, saying that all men had their sins forgiven by himself. For he even permitted women of rank, if they were unmarried and burned with lust, to have a companion of the rank of slave or freedman.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus attacks Callistus for moral laxity; permitting marriages between social classes; forgiving grave sins"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-zephyrinus-bishop-rome",
+        "clm-zephyrinus-member-roman-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-7": [
+          "clm-callistus-bishop-rome",
+          "clm-callistus-in-schism",
+          "clm-callistus-member-roman-church",
+          "clm-hippolytus-callistus-schism-at-rome",
+          "clm-hippolytus-in-schism",
+          "clm-hippolytus-rival-bishop-rome",
+          "clm-hippolytus-teacher-of-novatian",
+          "clm-refutation-affirms-rule-of-faith",
+          "clm-refutation-affirms-succession",
+          "clm-refutation-by-hippolytus",
+          "clm-refutation-written-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-zephyrinus-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "zephyrinus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "199",
+        "year_end": "217",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "zephyrinus",
+        "person_label": "Zephyrinus",
+        "name_alt": "Pope Zephyrinus",
+        "name_native": "Ζεφυρῖνος",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 217",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 199–217; accused by Hippolytus of modalist sympathies and of being manipulated by his deacon Callistus; his pontificate saw the rise of the Logos-modalism controversy in Rome."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-zephyrinus-member-roman-church",
+            "passage_id": "psg-hippolytus-ref-9-12-zeph",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Zephyrinus identified as bishop of the Roman church."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-12-zeph",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.12",
+            "excerpt": "Paraphrase: Zephyrinus was an ignorant and illiterate individual, and one unskilled in the definitions of the Church. Callistus, who was crafty in dealing with evil, and versed in knavery, urged Zephyrinus on, and taught him that the Father and Son are the same. This is the way the wretched man Zephyrinus was beguiled.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus accuses Zephyrinus of modalism under Callistus's influence; polemical context"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-zephyrinus-bishop-rome",
+        "clm-zephyrinus-in-schism"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-12-zeph": [
+          "clm-refutation-affirms-logos",
+          "clm-zephyrinus-bishop-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-12-zeph"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-julius-africanus-active-alexandria",
+        "subject_type": "person",
+        "subject_id": "julius-africanus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "220",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "julius-africanus",
+        "person_label": "Julius Africanus",
+        "name_alt": "Sextus Julius Africanus",
+        "name_native": "Ἰούλιος Ἀφρικανός",
+        "birth_year_display": "c. 160",
+        "death_year_display": "c. 240",
+        "person_kind": "individual",
+        "notes": "Christian chronographer and polymath; compiled the Chronographiae (five books covering world history to 221); correspondent of Origen on the Susanna question; active in Emmaus-Nicopolis; designed the library at the Pantheon in Rome for Emperor Alexander Severus."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-julius-africanus-active-alexandria",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.4",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions julius-africanus or alexandria."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-julius-africanus-active-emmaus",
+        "clm-julius-africanus-active-rome"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-19:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-julius-africanus-active-emmaus",
+        "subject_type": "person",
+        "subject_id": "julius-africanus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "emmaus-nicopolis",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "240",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "julius-africanus",
+        "person_label": "Julius Africanus",
+        "name_alt": "Sextus Julius Africanus",
+        "name_native": "Ἰούλιος Ἀφρικανός",
+        "birth_year_display": "c. 160",
+        "death_year_display": "c. 240",
+        "person_kind": "individual",
+        "notes": "Christian chronographer and polymath; compiled the Chronographiae (five books covering world history to 221); correspondent of Origen on the Susanna question; active in Emmaus-Nicopolis; designed the library at the Pantheon in Rome for Emperor Alexander Severus."
+      },
+      "object_entity": {
+        "place_id": "emmaus-nicopolis",
+        "place_label": "Emmaus-Nicopolis",
+        "place_label_modern": "Amwas",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "31.8389",
+        "lon": "34.9889",
+        "location_precision": "approx_city",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "City in Judea; home of Julius Africanus who petitioned for its rebuilding as Nicopolis; identified with the Emmaus of Luke 24 in some traditions."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-julius-africanus-active-emmaus",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Eusebius mentions Julius Africanus in Origen's network."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-julius-africanus-active-emmaus",
+            "passage_id": "psg-eusebius-he-6-31",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eusebius HE 6.31 explicitly says Julius Africanus built a library at Rome and was associated with Emmaus-Nicopolis."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-31",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.31",
+            "excerpt": "Julius Africanus was a man of distinguished historical learning; he wrote a letter to Origen; he also built a library at the Pantheon for the Emperor Alexander at Rome.",
+            "language": "el",
+            "passage_year": "313",
+            "url_override": "",
+            "notes": "Eusebius HE 6.31: Julius Africanus active in Rome under Emperor Alexander Severus; also associated with Emmaus-Nicopolis."
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-julius-africanus-active-alexandria",
+        "clm-julius-africanus-active-rome"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ],
+        "psg-eusebius-he-6-31": [
+          "clm-julius-africanus-active-rome"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-julius-africanus-active-rome",
+        "subject_type": "person",
+        "subject_id": "julius-africanus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "julius-africanus",
+        "person_label": "Julius Africanus",
+        "name_alt": "Sextus Julius Africanus",
+        "name_native": "Ἰούλιος Ἀφρικανός",
+        "birth_year_display": "c. 160",
+        "death_year_display": "c. 240",
+        "person_kind": "individual",
+        "notes": "Christian chronographer and polymath; compiled the Chronographiae (five books covering world history to 221); correspondent of Origen on the Susanna question; active in Emmaus-Nicopolis; designed the library at the Pantheon in Rome for Emperor Alexander Severus."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-julius-africanus-active-rome",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-julius-africanus-active-rome",
+            "passage_id": "psg-eusebius-he-6-31",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eusebius HE 6.31: Julius Africanus built a library at Rome's Pantheon for Emperor Alexander."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-31",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.31",
+            "excerpt": "Julius Africanus was a man of distinguished historical learning; he wrote a letter to Origen; he also built a library at the Pantheon for the Emperor Alexander at Rome.",
+            "language": "el",
+            "passage_year": "313",
+            "url_override": "",
+            "notes": "Eusebius HE 6.31: Julius Africanus active in Rome under Emperor Alexander Severus; also associated with Emmaus-Nicopolis."
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-julius-africanus-active-alexandria",
+        "clm-julius-africanus-active-emmaus"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ],
+        "psg-eusebius-he-6-31": [
+          "clm-julius-africanus-active-emmaus"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-heraclas-bishop-of-alexandria",
+        "subject_type": "person",
+        "subject_id": "heraclas",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "232",
+        "year_end": "248",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "heraclas",
+        "person_label": "Heraclas",
+        "name_alt": "",
+        "name_native": "Ἡρακλᾶς",
+        "birth_year_display": "c. 180",
+        "death_year_display": "c. 248",
+        "person_kind": "individual",
+        "notes": "Student of Origen and his assistant at the Catechetical School; bishop of Alexandria c. 232–248 after Demetrius; first Alexandrian bishop to use the title 'pope'; continued Origen's theological legacy in Alexandria."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-heraclas-bishop-of-alexandria",
+            "passage_id": "psg-eusebius-he-6-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius records Heraclas as Origen's assistant and later bishop."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-3",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.3",
+            "excerpt": "Paraphrase: Origen, while still very young, succeeded Clement as head of the Catechetical School in Alexandria; so many came to him, both men and women, that a multitude of heretics and not a few of the most distinguished philosophers attended his instruction; he led many to the faith and some to martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's early leadership of the Catechetical School"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-heraclas-coworker-origen",
+        "clm-heraclas-member-alexandrian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-6-3": [
+          "clm-ambrose-alex-member-alexandrian",
+          "clm-comjohn-written-at-alexandria",
+          "clm-demetrius-bishop-of-alexandria",
+          "clm-demetrius-coworker-origen",
+          "clm-demetrius-member-alexandrian",
+          "clm-demetrius-teacher-of-origen",
+          "clm-deprincipiis-written-at-alexandria",
+          "clm-dionysius-alex-bishop-of-alexandria",
+          "clm-dionysius-alex-member-alexandrian",
+          "clm-heraclas-coworker-origen",
+          "clm-heraclas-member-alexandrian",
+          "clm-origen-teacher-of-dionysius",
+          "clm-origen-teacher-of-heraclas"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-3",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-3:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-heraclas-member-alexandrian",
+        "subject_type": "person",
+        "subject_id": "heraclas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "alexandrian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "202",
+        "year_end": "248",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "heraclas",
+        "person_label": "Heraclas",
+        "name_alt": "",
+        "name_native": "Ἡρακλᾶς",
+        "birth_year_display": "c. 180",
+        "death_year_display": "c. 248",
+        "person_kind": "individual",
+        "notes": "Student of Origen and his assistant at the Catechetical School; bishop of Alexandria c. 232–248 after Demetrius; first Alexandrian bishop to use the title 'pope'; continued Origen's theological legacy in Alexandria."
+      },
+      "object_entity": {
+        "group_id": "alexandrian-church",
+        "group_label": "Church in Alexandria",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Alexandria; home of the Catechetical School; major center of Greek-speaking Christianity from the late first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-heraclas-member-alexandrian",
+            "passage_id": "psg-eusebius-he-6-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius identifies Heraclas with the Alexandrian church."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-3",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.3",
+            "excerpt": "Paraphrase: Origen, while still very young, succeeded Clement as head of the Catechetical School in Alexandria; so many came to him, both men and women, that a multitude of heretics and not a few of the most distinguished philosophers attended his instruction; he led many to the faith and some to martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's early leadership of the Catechetical School"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-heraclas-coworker-origen",
+        "clm-heraclas-bishop-of-alexandria"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-6-3": [
+          "clm-ambrose-alex-member-alexandrian",
+          "clm-comjohn-written-at-alexandria",
+          "clm-demetrius-bishop-of-alexandria",
+          "clm-demetrius-coworker-origen",
+          "clm-demetrius-member-alexandrian",
+          "clm-demetrius-teacher-of-origen",
+          "clm-deprincipiis-written-at-alexandria",
+          "clm-dionysius-alex-bishop-of-alexandria",
+          "clm-dionysius-alex-member-alexandrian",
+          "clm-heraclas-bishop-of-alexandria",
+          "clm-heraclas-coworker-origen",
+          "clm-origen-teacher-of-dionysius",
+          "clm-origen-teacher-of-heraclas"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-3",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-3:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-heraclas-coworker-origen",
+        "subject_type": "person",
+        "subject_id": "heraclas",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "origen-of-alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "202",
+        "year_end": "232",
+        "context_place_id": "alexandria",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "heraclas",
+        "person_label": "Heraclas",
+        "name_alt": "",
+        "name_native": "Ἡρακλᾶς",
+        "birth_year_display": "c. 180",
+        "death_year_display": "c. 248",
+        "person_kind": "individual",
+        "notes": "Student of Origen and his assistant at the Catechetical School; bishop of Alexandria c. 232–248 after Demetrius; first Alexandrian bishop to use the title 'pope'; continued Origen's theological legacy in Alexandria."
+      },
+      "object_entity": {
+        "person_id": "origen-of-alexandria",
+        "person_label": "Origen of Alexandria",
+        "name_alt": "Origen, Adamantius",
+        "name_native": "Ὠριγένης",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Leading Alexandrian theologian and biblical scholar; student of Clement of Alexandria and eventual head of the Catechetical School. Prolific author covering exegesis, apologetics, and systematic theology. Active in Alexandria (c. 202–232) then Caesarea."
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-heraclas-coworker-origen",
+            "passage_id": "psg-eusebius-he-6-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-3",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.3",
+            "excerpt": "Paraphrase: Origen, while still very young, succeeded Clement as head of the Catechetical School in Alexandria; so many came to him, both men and women, that a multitude of heretics and not a few of the most distinguished philosophers attended his instruction; he led many to the faith and some to martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's early leadership of the Catechetical School"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-heraclas-member-alexandrian",
+        "clm-heraclas-bishop-of-alexandria"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-6-3": [
+          "clm-ambrose-alex-member-alexandrian",
+          "clm-comjohn-written-at-alexandria",
+          "clm-demetrius-bishop-of-alexandria",
+          "clm-demetrius-coworker-origen",
+          "clm-demetrius-member-alexandrian",
+          "clm-demetrius-teacher-of-origen",
+          "clm-deprincipiis-written-at-alexandria",
+          "clm-dionysius-alex-bishop-of-alexandria",
+          "clm-dionysius-alex-member-alexandrian",
+          "clm-heraclas-bishop-of-alexandria",
+          "clm-heraclas-member-alexandrian",
+          "clm-origen-teacher-of-dionysius",
+          "clm-origen-teacher-of-heraclas"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-3",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-3:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-res-by-tertullian",
+        "subject_type": "work",
+        "subject_id": "de-resurrectione-carnis",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "tertullian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-resurrectione-carnis",
+        "title_display": "De Resurrectione Carnis",
+        "title_original": "De Resurrectione Carnis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 206-212 defending the literal bodily resurrection of the flesh against Gnostic spiritualizers."
+      },
+      "object_entity": {
+        "person_id": "tertullian",
+        "person_label": "Tertullian",
+        "name_alt": "Quintus Septimius Florens Tertullianus",
+        "name_native": "Tertullianus",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 220",
+        "person_kind": "individual",
+        "notes": "First major Latin Christian author; active in Carthage c. 195–220. Wrote at least 31 works spanning apologetics, anti-heretical polemic, and moral discipline. Coined 'trinitas' and 'tres personae una substantia'. Defender of apostolic succession, rule of faith, incarnation, and bodily resurrection. Later attracted to Montanist rigorism c. 207; teacher of Cyprian by doctrinal influence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-res-by-tertullian",
+            "passage_id": "psg-tertullian-de-res-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-res-1",
+            "source_id": "src-tertullian-de-res",
+            "locator_type": "source_ref",
+            "locator": "De Res. 1",
+            "excerpt": "The resurrection of the dead is the Christian's trust. By believing it we are what we claim to be. It is the truth which compels faith. And the truth God reveals. But the vulgar, and especially the heretics, disparage the resurrection.",
+            "language": "English",
+            "passage_year": "210",
+            "url_override": "",
+            "notes": "Bodily resurrection as central Christian identity; truth revealed by God; against heretical deniers"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-res",
+            "work_id": "de-resurrectione-carnis",
+            "source_kind": "primary_text",
+            "title": "De Resurrectione Carnis",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 206-212",
+            "year_start": "206",
+            "year_end": "212",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0316.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's defense of bodily resurrection; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-res-affirms-resurrection",
+        "clm-de-res-written-carthage"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-de-res-1": [
+          "clm-de-res-affirms-resurrection",
+          "clm-de-res-written-carthage"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-res-written-carthage",
+        "subject_type": "work",
+        "subject_id": "de-resurrectione-carnis",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "206",
+        "year_end": "212",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-resurrectione-carnis",
+        "title_display": "De Resurrectione Carnis",
+        "title_original": "De Resurrectione Carnis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 206-212 defending the literal bodily resurrection of the flesh against Gnostic spiritualizers."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-res-written-carthage",
+            "passage_id": "psg-tertullian-de-res-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from de-resurrectione-carnis contextualizes its composition at carthage."
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-res-1",
+            "source_id": "src-tertullian-de-res",
+            "locator_type": "source_ref",
+            "locator": "De Res. 1",
+            "excerpt": "The resurrection of the dead is the Christian's trust. By believing it we are what we claim to be. It is the truth which compels faith. And the truth God reveals. But the vulgar, and especially the heretics, disparage the resurrection.",
+            "language": "English",
+            "passage_year": "210",
+            "url_override": "",
+            "notes": "Bodily resurrection as central Christian identity; truth revealed by God; against heretical deniers"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-res",
+            "work_id": "de-resurrectione-carnis",
+            "source_kind": "primary_text",
+            "title": "De Resurrectione Carnis",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 206-212",
+            "year_start": "206",
+            "year_end": "212",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0316.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's defense of bodily resurrection; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-res-affirms-resurrection",
+        "clm-de-res-by-tertullian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-de-res-1": [
+          "clm-de-res-affirms-resurrection",
+          "clm-de-res-by-tertullian"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tertullian-de-res-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-res-affirms-resurrection",
+        "subject_type": "work",
+        "subject_id": "de-resurrectione-carnis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "206",
+        "year_end": "212",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-resurrectione-carnis",
+        "title_display": "De Resurrectione Carnis",
+        "title_original": "De Resurrectione Carnis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 206-212 defending the literal bodily resurrection of the flesh against Gnostic spiritualizers."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-res-affirms-resurrection",
+            "passage_id": "psg-tertullian-de-res-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Bodily resurrection as the Christian's trust and identity"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-res-1",
+            "source_id": "src-tertullian-de-res",
+            "locator_type": "source_ref",
+            "locator": "De Res. 1",
+            "excerpt": "The resurrection of the dead is the Christian's trust. By believing it we are what we claim to be. It is the truth which compels faith. And the truth God reveals. But the vulgar, and especially the heretics, disparage the resurrection.",
+            "language": "English",
+            "passage_year": "210",
+            "url_override": "",
+            "notes": "Bodily resurrection as central Christian identity; truth revealed by God; against heretical deniers"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-res",
+            "work_id": "de-resurrectione-carnis",
+            "source_kind": "primary_text",
+            "title": "De Resurrectione Carnis",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 206-212",
+            "year_start": "206",
+            "year_end": "212",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0316.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's defense of bodily resurrection; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-res-written-carthage",
+        "clm-de-res-by-tertullian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-de-res-1": [
+          "clm-de-res-by-tertullian",
+          "clm-de-res-written-carthage"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-corona-by-tertullian",
+        "subject_type": "work",
+        "subject_id": "de-corona",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "tertullian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-corona",
+        "title_display": "De Corona Militis",
+        "title_original": "De Corona Militis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 211 on whether a Christian soldier may wear a military crown; argues that military service is incompatible with Christian faith due to idolatry and bloodshed."
+      },
+      "object_entity": {
+        "person_id": "tertullian",
+        "person_label": "Tertullian",
+        "name_alt": "Quintus Septimius Florens Tertullianus",
+        "name_native": "Tertullianus",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 220",
+        "person_kind": "individual",
+        "notes": "First major Latin Christian author; active in Carthage c. 195–220. Wrote at least 31 works spanning apologetics, anti-heretical polemic, and moral discipline. Coined 'trinitas' and 'tres personae una substantia'. Defender of apostolic succession, rule of faith, incarnation, and bodily resurrection. Later attracted to Montanist rigorism c. 207; teacher of Cyprian by doctrinal influence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-corona-by-tertullian",
+            "passage_id": "psg-tertullian-de-corona-11",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-corona-11",
+            "source_id": "src-tertullian-de-corona",
+            "locator_type": "source_ref",
+            "locator": "De Cor. 11",
+            "excerpt": "Shall it be held lawful to make an occupation of the sword, when the Lord proclaims that he who uses the sword shall perish by the sword? And shall the son of peace take part in the battle when it does not become him even to sue at law? Shall he apply the chain, and the prison, and the torture, and the punishment, who is not the avenger even of his own wrongs? Shall he stand guard for others more than for Christ? Do we believe it lawful for a human oath to be superadded to one divine?",
+            "language": "English",
+            "passage_year": "211",
+            "url_override": "",
+            "notes": "Christians must not serve in the military; incompatibility of military oath, sword, and punishment with Christian faith"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-corona",
+            "work_id": "de-corona",
+            "source_kind": "primary_text",
+            "title": "De Corona Militis",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 211",
+            "year_start": "211",
+            "year_end": "211",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0304.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's treatise on the soldier's crown; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-corona-affirms-military-refusal",
+        "clm-de-corona-written-carthage"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-de-corona-11": [
+          "clm-de-corona-affirms-military-refusal",
+          "clm-de-corona-written-carthage"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-corona-written-carthage",
+        "subject_type": "work",
+        "subject_id": "de-corona",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "211",
+        "year_end": "211",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-corona",
+        "title_display": "De Corona Militis",
+        "title_original": "De Corona Militis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 211 on whether a Christian soldier may wear a military crown; argues that military service is incompatible with Christian faith due to idolatry and bloodshed."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-corona-written-carthage",
+            "passage_id": "psg-tertullian-de-corona-11",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from de-corona contextualizes its composition at carthage."
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-corona-11",
+            "source_id": "src-tertullian-de-corona",
+            "locator_type": "source_ref",
+            "locator": "De Cor. 11",
+            "excerpt": "Shall it be held lawful to make an occupation of the sword, when the Lord proclaims that he who uses the sword shall perish by the sword? And shall the son of peace take part in the battle when it does not become him even to sue at law? Shall he apply the chain, and the prison, and the torture, and the punishment, who is not the avenger even of his own wrongs? Shall he stand guard for others more than for Christ? Do we believe it lawful for a human oath to be superadded to one divine?",
+            "language": "English",
+            "passage_year": "211",
+            "url_override": "",
+            "notes": "Christians must not serve in the military; incompatibility of military oath, sword, and punishment with Christian faith"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-corona",
+            "work_id": "de-corona",
+            "source_kind": "primary_text",
+            "title": "De Corona Militis",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 211",
+            "year_start": "211",
+            "year_end": "211",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0304.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's treatise on the soldier's crown; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-corona-affirms-military-refusal",
+        "clm-de-corona-by-tertullian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-de-corona-11": [
+          "clm-de-corona-affirms-military-refusal",
+          "clm-de-corona-by-tertullian"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tertullian-de-corona-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-corona-affirms-military-refusal",
+        "subject_type": "work",
+        "subject_id": "de-corona",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christians-must-not-serve-in-military",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "211",
+        "year_end": "211",
+        "context_place_id": "carthage",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-corona",
+        "title_display": "De Corona Militis",
+        "title_original": "De Corona Militis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 211 on whether a Christian soldier may wear a military crown; argues that military service is incompatible with Christian faith due to idolatry and bloodshed."
+      },
+      "object_entity": {
+        "proposition_id": "christians-must-not-serve-in-military",
+        "topic_id": "social-ethics",
+        "dimension_id": "military-refusal",
+        "proposition_label": "Christians must not serve in the military",
+        "polarity_family": "military_refusal",
+        "description": "Military service is incompatible with Christian discipleship due to the requirements of idolatrous oath-taking, bloodshed, and submission to pagan authority.",
+        "notes": "Military service refusal"
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-corona-affirms-military-refusal",
+            "passage_id": "psg-tertullian-de-corona-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "Son of peace cannot bear the sword or apply chains and punishment"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-corona-11",
+            "source_id": "src-tertullian-de-corona",
+            "locator_type": "source_ref",
+            "locator": "De Cor. 11",
+            "excerpt": "Shall it be held lawful to make an occupation of the sword, when the Lord proclaims that he who uses the sword shall perish by the sword? And shall the son of peace take part in the battle when it does not become him even to sue at law? Shall he apply the chain, and the prison, and the torture, and the punishment, who is not the avenger even of his own wrongs? Shall he stand guard for others more than for Christ? Do we believe it lawful for a human oath to be superadded to one divine?",
+            "language": "English",
+            "passage_year": "211",
+            "url_override": "",
+            "notes": "Christians must not serve in the military; incompatibility of military oath, sword, and punishment with Christian faith"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-corona",
+            "work_id": "de-corona",
+            "source_kind": "primary_text",
+            "title": "De Corona Militis",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 211",
+            "year_start": "211",
+            "year_end": "211",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0304.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's treatise on the soldier's crown; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-corona-written-carthage",
+        "clm-de-corona-by-tertullian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-de-corona-11": [
+          "clm-de-corona-by-tertullian",
+          "clm-de-corona-written-carthage"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pontian-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "pontian",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pontian",
+        "person_label": "Pontian",
+        "name_alt": "Pope Pontian",
+        "name_native": "Ποντιανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 230–235; exiled with Hippolytus to Sardinia under Maximinus Thrax in 235; resigned the papacy before death; bodies of both were brought back to Rome under Fabian."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pontian-bishop-rome",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius and the Liberian Catalogue attest Pontian as bishop of Rome."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pontian-member-roman-church",
+        "clm-pontian-in-sardinian-exile"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pontian-in-sardinian-exile",
+        "subject_type": "person",
+        "subject_id": "pontian",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "sardinian-exile",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "235",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pontian",
+        "person_label": "Pontian",
+        "name_alt": "Pope Pontian",
+        "name_native": "Ποντιανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 230–235; exiled with Hippolytus to Sardinia under Maximinus Thrax in 235; resigned the papacy before death; bodies of both were brought back to Rome under Fabian."
+      },
+      "object_entity": {
+        "event_id": "sardinian-exile",
+        "event_label": "Sardinian Exile of Hippolytus and Pontian",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Bishop Pontian and the schismatic Hippolytus were both exiled to the mines of Sardinia in 235 under Emperor Maximinus Thrax; they were reconciled before death; their bodies were brought back to Rome by Pope Fabian c. 236."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pontian-in-sardinian-exile",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Both Pontian and Hippolytus exiled to Sardinia per Liberian Catalogue preserved by Eusebius."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pontian-bishop-rome",
+        "clm-pontian-member-roman-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pontian-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "pontian",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pontian",
+        "person_label": "Pontian",
+        "name_alt": "Pope Pontian",
+        "name_native": "Ποντιανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 230–235; exiled with Hippolytus to Sardinia under Maximinus Thrax in 235; resigned the papacy before death; bodies of both were brought back to Rome under Fabian."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pontian-member-roman-church",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Pontian as bishop implies membership in the Roman church."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pontian-bishop-rome",
+        "clm-pontian-in-sardinian-exile"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-arabian-christians-controls-bostra",
+        "subject_type": "group",
+        "subject_id": "arabian-christians",
+        "predicate_id": "controls_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "bostra",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "244",
+        "year_end": "380",
+        "context_place_id": "bostra",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "arabian-christians",
+        "group_label": "Arabian Christians",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian communities in the Arabian Peninsula; attested at Bostra (synod c. 244), Najran, and Himyar; Theophilus the Indian built churches in Zafar and Aden c. 354."
+      },
+      "object_entity": {
+        "place_id": "bostra",
+        "place_label": "Bostra",
+        "place_label_modern": "Busra esh-Sham",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5172",
+        "lon": "36.4817",
+        "location_precision": "approx_city",
+        "modern_country_label": "Syria",
+        "notes": "Capital of the Roman province of Arabia; seat of Bishop Beryllus; site of the synod c. 244 where Origen corrected Beryllus's monarchian views."
+      },
+      "context_place": {
+        "place_id": "bostra",
+        "place_label": "Bostra",
+        "place_label_modern": "Busra esh-Sham",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5172",
+        "lon": "36.4817",
+        "location_precision": "approx_city",
+        "modern_country_label": "Syria",
+        "notes": "Capital of the Roman province of Arabia; seat of Bishop Beryllus; site of the synod c. 244 where Origen corrected Beryllus's monarchian views."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-arabian-christians-controls-bostra",
+            "passage_id": "psg-wikipedia-arab-christian-presence",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Arabian Christian communities exercised local influence in these territories."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-arab-christian-presence",
+            "source_id": "src-wikipedia-arab-church",
+            "locator_type": "source_ref",
+            "locator": "Christianity_in_the_Arab_world",
+            "excerpt": "Christianity was present in the Arab world from the earliest centuries, with communities in Arabia, the Negev, and surrounding regions. Arabian Christian leaders exercised influence over local territories.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used as contextualizing evidence for Arabian Christian presence."
+          },
+          "source": {
+            "source_id": "src-wikipedia-arab-church",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Christianity in the Arab World - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Christianity_in_the_Arab_world",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for Arabian Christian communities and territorial influence."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-arabian-christians-controls-najran",
+        "clm-arabian-christians-controls-zafar"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-wikipedia-arab-christian-presence": [
+          "clm-arabian-christians-controls-najran",
+          "clm-arabian-christians-controls-zafar",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-arab-christian-presence",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    }
+  ]
+}

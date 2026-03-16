@@ -1,0 +1,2387 @@
+{
+  "batch_id": "batch-153",
+  "queue": "1",
+  "focus": "anicetus; eleutherus; bardesanites; book-of-laws-of-countries; apologeticum; de-spectaculis; de-paenitentia",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-anicetus-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "anicetus",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "166",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "anicetus",
+        "person_label": "Anicetus",
+        "name_alt": "Pope Anicetus",
+        "name_native": "Ἀνίκητος",
+        "birth_year_display": "",
+        "death_year_display": "c. 166",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 155–166; of Syrian origin; met with Polycarp of Smyrna over the Quartodeciman controversy without resolving it; succeeded Pius I."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-anicetus-bishop-rome",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-anicetus-bishop-rome",
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Irenaeus lists Anicetus in Roman succession."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.4",
+            "excerpt": "Paraphrase: Polycarp was instructed by apostles, conversed with many who had seen Christ, and was appointed bishop of Smyrna by apostles in Asia; Irenaeus saw him in his early youth. Polycarp came to Rome in the time of Anicetus and caused many to turn from heretics to the Church, proclaiming the one truth received from the apostles. He called Marcion the first-born of Satan.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-coworker-anicetus",
+        "clm-anicetus-member-roman-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ],
+        "psg-irenaeus-ah-3-3-4": [
+          "clm-against-heresies-by-irenaeus",
+          "clm-anicetus-member-roman-church",
+          "clm-cerinthians-at-ephesus",
+          "clm-eleutherus-bishop-rome",
+          "clm-eleutherus-member-roman-church",
+          "clm-irenaeus-active-smyrna",
+          "clm-irenaeus-ah-affirms-martyrdom-witness",
+          "clm-irenaeus-coworker-eleutherus",
+          "clm-irenaeus-in-ah-composition",
+          "clm-irenaeus-in-lyons-persecution",
+          "clm-john-teacher-of-polycarp",
+          "clm-john-zebedee-active-asia",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-john-zebedee-member-ephesian",
+          "clm-marcionites-at-smyrna",
+          "clm-marcionites-schismed-from-roman",
+          "clm-montanists-at-carthage",
+          "clm-montanists-at-phrygia",
+          "clm-montanists-at-rome",
+          "clm-polycarp-active-ephesus",
+          "clm-polycarp-bishop-smyrna",
+          "clm-polycarp-coworker-irenaeus",
+          "clm-polycarp-teacher-of-irenaeus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24",
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-anicetus-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "anicetus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "166",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "anicetus",
+        "person_label": "Anicetus",
+        "name_alt": "Pope Anicetus",
+        "name_native": "Ἀνίκητος",
+        "birth_year_display": "",
+        "death_year_display": "c. 166",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 155–166; of Syrian origin; met with Polycarp of Smyrna over the Quartodeciman controversy without resolving it; succeeded Pius I."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-anicetus-member-roman-church",
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.4",
+            "excerpt": "Paraphrase: Polycarp was instructed by apostles, conversed with many who had seen Christ, and was appointed bishop of Smyrna by apostles in Asia; Irenaeus saw him in his early youth. Polycarp came to Rome in the time of Anicetus and caused many to turn from heretics to the Church, proclaiming the one truth received from the apostles. He called Marcion the first-born of Satan.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-coworker-anicetus",
+        "clm-anicetus-bishop-rome"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-3-4": [
+          "clm-against-heresies-by-irenaeus",
+          "clm-anicetus-bishop-rome",
+          "clm-cerinthians-at-ephesus",
+          "clm-eleutherus-bishop-rome",
+          "clm-eleutherus-member-roman-church",
+          "clm-irenaeus-active-smyrna",
+          "clm-irenaeus-ah-affirms-martyrdom-witness",
+          "clm-irenaeus-coworker-eleutherus",
+          "clm-irenaeus-in-ah-composition",
+          "clm-irenaeus-in-lyons-persecution",
+          "clm-john-teacher-of-polycarp",
+          "clm-john-zebedee-active-asia",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-john-zebedee-member-ephesian",
+          "clm-marcionites-at-smyrna",
+          "clm-marcionites-schismed-from-roman",
+          "clm-montanists-at-carthage",
+          "clm-montanists-at-phrygia",
+          "clm-montanists-at-rome",
+          "clm-polycarp-active-ephesus",
+          "clm-polycarp-bishop-smyrna",
+          "clm-polycarp-coworker-irenaeus",
+          "clm-polycarp-teacher-of-irenaeus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-coworker-anicetus",
+        "subject_type": "person",
+        "subject_id": "anicetus",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "polycarp-of-smyrna",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "155",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "anicetus",
+        "person_label": "Anicetus",
+        "name_alt": "Pope Anicetus",
+        "name_native": "Ἀνίκητος",
+        "birth_year_display": "",
+        "death_year_display": "c. 166",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 155–166; of Syrian origin; met with Polycarp of Smyrna over the Quartodeciman controversy without resolving it; succeeded Pius I."
+      },
+      "object_entity": {
+        "person_id": "polycarp-of-smyrna",
+        "person_label": "Polycarp of Smyrna",
+        "name_alt": "Polycarp",
+        "name_native": "Πολύκαρπος",
+        "birth_year_display": "c. 69",
+        "death_year_display": "c. 155",
+        "person_kind": "individual",
+        "notes": "Bishop of Smyrna martyred c. 155-156; disciple of the apostle John; correspondent of Ignatius and Rome."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-coworker-anicetus",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-anicetus-bishop-rome",
+        "clm-anicetus-member-roman-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eleutherus-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "eleutherus",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "174",
+        "year_end": "189",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eleutherus",
+        "person_label": "Eleutherus",
+        "name_alt": "Pope Eleutherius",
+        "name_native": "Ἐλεύθερος",
+        "birth_year_display": "",
+        "death_year_display": "189",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 174–189; received Irenaeus as envoy from Lyons; last bishop listed in Irenaeus's Roman succession in Against Heresies 3.3.3."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eleutherus-bishop-rome",
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.4",
+            "excerpt": "Paraphrase: Polycarp was instructed by apostles, conversed with many who had seen Christ, and was appointed bishop of Smyrna by apostles in Asia; Irenaeus saw him in his early youth. Polycarp came to Rome in the time of Anicetus and caused many to turn from heretics to the Church, proclaiming the one truth received from the apostles. He called Marcion the first-born of Satan.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eleutherus-member-roman-church",
+        "clm-irenaeus-coworker-eleutherus"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-3-4": [
+          "clm-against-heresies-by-irenaeus",
+          "clm-anicetus-bishop-rome",
+          "clm-anicetus-member-roman-church",
+          "clm-cerinthians-at-ephesus",
+          "clm-eleutherus-member-roman-church",
+          "clm-irenaeus-active-smyrna",
+          "clm-irenaeus-ah-affirms-martyrdom-witness",
+          "clm-irenaeus-coworker-eleutherus",
+          "clm-irenaeus-in-ah-composition",
+          "clm-irenaeus-in-lyons-persecution",
+          "clm-john-teacher-of-polycarp",
+          "clm-john-zebedee-active-asia",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-john-zebedee-member-ephesian",
+          "clm-marcionites-at-smyrna",
+          "clm-marcionites-schismed-from-roman",
+          "clm-montanists-at-carthage",
+          "clm-montanists-at-phrygia",
+          "clm-montanists-at-rome",
+          "clm-polycarp-active-ephesus",
+          "clm-polycarp-bishop-smyrna",
+          "clm-polycarp-coworker-irenaeus",
+          "clm-polycarp-teacher-of-irenaeus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-4",
+        "PARAPHRASE_OMISSION:psg-irenaeus-ah-3-3-4:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eleutherus-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "eleutherus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "174",
+        "year_end": "189",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eleutherus",
+        "person_label": "Eleutherus",
+        "name_alt": "Pope Eleutherius",
+        "name_native": "Ἐλεύθερος",
+        "birth_year_display": "",
+        "death_year_display": "189",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 174–189; received Irenaeus as envoy from Lyons; last bishop listed in Irenaeus's Roman succession in Against Heresies 3.3.3."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eleutherus-member-roman-church",
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.4",
+            "excerpt": "Paraphrase: Polycarp was instructed by apostles, conversed with many who had seen Christ, and was appointed bishop of Smyrna by apostles in Asia; Irenaeus saw him in his early youth. Polycarp came to Rome in the time of Anicetus and caused many to turn from heretics to the Church, proclaiming the one truth received from the apostles. He called Marcion the first-born of Satan.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eleutherus-bishop-rome",
+        "clm-irenaeus-coworker-eleutherus"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-3-4": [
+          "clm-against-heresies-by-irenaeus",
+          "clm-anicetus-bishop-rome",
+          "clm-anicetus-member-roman-church",
+          "clm-cerinthians-at-ephesus",
+          "clm-eleutherus-bishop-rome",
+          "clm-irenaeus-active-smyrna",
+          "clm-irenaeus-ah-affirms-martyrdom-witness",
+          "clm-irenaeus-coworker-eleutherus",
+          "clm-irenaeus-in-ah-composition",
+          "clm-irenaeus-in-lyons-persecution",
+          "clm-john-teacher-of-polycarp",
+          "clm-john-zebedee-active-asia",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-john-zebedee-member-ephesian",
+          "clm-marcionites-at-smyrna",
+          "clm-marcionites-schismed-from-roman",
+          "clm-montanists-at-carthage",
+          "clm-montanists-at-phrygia",
+          "clm-montanists-at-rome",
+          "clm-polycarp-active-ephesus",
+          "clm-polycarp-bishop-smyrna",
+          "clm-polycarp-coworker-irenaeus",
+          "clm-polycarp-teacher-of-irenaeus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-4",
+        "PARAPHRASE_OMISSION:psg-irenaeus-ah-3-3-4:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-irenaeus-coworker-eleutherus",
+        "subject_type": "person",
+        "subject_id": "eleutherus",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "irenaeus-of-lyons",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "189",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eleutherus",
+        "person_label": "Eleutherus",
+        "name_alt": "Pope Eleutherius",
+        "name_native": "Ἐλεύθερος",
+        "birth_year_display": "",
+        "death_year_display": "189",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 174–189; received Irenaeus as envoy from Lyons; last bishop listed in Irenaeus's Roman succession in Against Heresies 3.3.3."
+      },
+      "object_entity": {
+        "person_id": "irenaeus-of-lyons",
+        "person_label": "Irenaeus of Lyons",
+        "name_alt": "Irenaeus",
+        "name_native": "Εἰρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 202",
+        "person_kind": "individual",
+        "notes": "Bishop of Lyons (Lugdunum) and major anti-gnostic theologian; pupil of Polycarp; author of Against Heresies c. 180, the foundational work on apostolic succession, rule of faith, and refutation of Valentinianism and Marcionism."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-coworker-eleutherus",
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-4",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.4",
+            "excerpt": "Paraphrase: Polycarp was instructed by apostles, conversed with many who had seen Christ, and was appointed bishop of Smyrna by apostles in Asia; Irenaeus saw him in his early youth. Polycarp came to Rome in the time of Anicetus and caused many to turn from heretics to the Church, proclaiming the one truth received from the apostles. He called Marcion the first-born of Satan.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eleutherus-bishop-rome",
+        "clm-eleutherus-member-roman-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-3-4": [
+          "clm-against-heresies-by-irenaeus",
+          "clm-anicetus-bishop-rome",
+          "clm-anicetus-member-roman-church",
+          "clm-cerinthians-at-ephesus",
+          "clm-eleutherus-bishop-rome",
+          "clm-eleutherus-member-roman-church",
+          "clm-irenaeus-active-smyrna",
+          "clm-irenaeus-ah-affirms-martyrdom-witness",
+          "clm-irenaeus-in-ah-composition",
+          "clm-irenaeus-in-lyons-persecution",
+          "clm-john-teacher-of-polycarp",
+          "clm-john-zebedee-active-asia",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-john-zebedee-member-ephesian",
+          "clm-marcionites-at-smyrna",
+          "clm-marcionites-schismed-from-roman",
+          "clm-montanists-at-carthage",
+          "clm-montanists-at-phrygia",
+          "clm-montanists-at-rome",
+          "clm-polycarp-active-ephesus",
+          "clm-polycarp-bishop-smyrna",
+          "clm-polycarp-coworker-irenaeus",
+          "clm-polycarp-teacher-of-irenaeus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-4",
+        "PARAPHRASE_OMISSION:psg-irenaeus-ah-3-3-4:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-bardesanites-at-edessa",
+        "subject_type": "group",
+        "subject_id": "bardesanites",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "190",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "bardesanites",
+        "group_label": "Bardesanites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Followers of Bardaisan of Edessa; active in Edessa and Mesopotamia from the late 2nd century; taught a modified cosmology with elements of astrology and free will; eventually suppressed by Bishop Rabbula of Edessa in the 5th century; refuted by Ephrem the Syrian."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-bardesanites-at-edessa",
+            "passage_id": "psg-wikipedia-church-of-east-spread",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Bardesanes was active in Edessa."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-church-of-east-spread",
+            "source_id": "src-wikipedia-church-of-east",
+            "locator_type": "source_ref",
+            "locator": "Church_of_the_East#History",
+            "excerpt": "The Church of the East was centered at Seleucia-Ctesiphon and extended through Persia, Mesopotamia (Edessa, Arbela), and eventually reached India.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Church of the East presence at Edessa, Arbela, Seleucia-Ctesiphon, and India."
+          },
+          "source": {
+            "source_id": "src-wikipedia-church-of-east",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Church of the East - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Church_of_the_East",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the geographic extent of the Church of the East."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-bardesanites-schismed-from-edessa",
+        "clm-bardesanites-at-mesopotamia"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-wikipedia-church-of-east-spread": [
+          "clm-bardesanites-at-mesopotamia",
+          "clm-church-east-at-arbela",
+          "clm-church-east-at-edessa",
+          "clm-church-east-at-seleucia",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-fall-nisibis-year",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-teacher-ephrem",
+          "clm-place-arbela-attested",
+          "clm-place-nisibis-attested",
+          "clm-place-seleucia-ctesiphon-attested",
+          "clm-shapur-in-persecution",
+          "clm-shapur-persecution-at-seleucia",
+          "clm-shapur-persecution-year"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-church-of-east-spread",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-bardesanites-at-mesopotamia",
+        "subject_type": "group",
+        "subject_id": "bardesanites",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "seleucia-ctesiphon",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "bardesanites",
+        "group_label": "Bardesanites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Followers of Bardaisan of Edessa; active in Edessa and Mesopotamia from the late 2nd century; taught a modified cosmology with elements of astrology and free will; eventually suppressed by Bishop Rabbula of Edessa in the 5th century; refuted by Ephrem the Syrian."
+      },
+      "object_entity": {
+        "place_id": "seleucia-ctesiphon",
+        "place_label": "Seleucia-Ctesiphon",
+        "place_label_modern": "Al-Mada'in",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "33.0925",
+        "lon": "44.5775",
+        "location_precision": "approx_site",
+        "modern_country_label": "Iraq",
+        "notes": "Twin cities on the Tigris; capital of the Parthian and Sasanian empires; seat of the Catholicos of the Church of the East from the early 4th century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-bardesanites-at-mesopotamia",
+            "passage_id": "psg-wikipedia-church-of-east-spread",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Bardesanite influence spread through Mesopotamia."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-church-of-east-spread",
+            "source_id": "src-wikipedia-church-of-east",
+            "locator_type": "source_ref",
+            "locator": "Church_of_the_East#History",
+            "excerpt": "The Church of the East was centered at Seleucia-Ctesiphon and extended through Persia, Mesopotamia (Edessa, Arbela), and eventually reached India.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Church of the East presence at Edessa, Arbela, Seleucia-Ctesiphon, and India."
+          },
+          "source": {
+            "source_id": "src-wikipedia-church-of-east",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Church of the East - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Church_of_the_East",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the geographic extent of the Church of the East."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-bardesanites-at-edessa",
+        "clm-bardesanites-schismed-from-edessa"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-wikipedia-church-of-east-spread": [
+          "clm-bardesanites-at-edessa",
+          "clm-church-east-at-arbela",
+          "clm-church-east-at-edessa",
+          "clm-church-east-at-seleucia",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-fall-nisibis-year",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-teacher-ephrem",
+          "clm-place-arbela-attested",
+          "clm-place-nisibis-attested",
+          "clm-place-seleucia-ctesiphon-attested",
+          "clm-shapur-in-persecution",
+          "clm-shapur-persecution-at-seleucia",
+          "clm-shapur-persecution-year"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-church-of-east-spread",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-bardesanites-schismed-from-edessa",
+        "subject_type": "group",
+        "subject_id": "bardesanites",
+        "predicate_id": "group_schismed_from",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "edessa-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "196",
+        "year_end": "222",
+        "context_place_id": "edessa",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "bardesanites",
+        "group_label": "Bardesanites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Followers of Bardaisan of Edessa; active in Edessa and Mesopotamia from the late 2nd century; taught a modified cosmology with elements of astrology and free will; eventually suppressed by Bishop Rabbula of Edessa in the 5th century; refuted by Ephrem the Syrian."
+      },
+      "object_entity": {
+        "group_id": "edessa-church",
+        "group_label": "Church in Edessa",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Edessa (Osroene); spiritual capital of Syriac Christianity from at least c. 200 AD; home of the Abgar/Addai tradition, Bardaisan, and later Ephrem the Syrian; center of Syriac literary and theological culture."
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-bardesanites-schismed-from-edessa",
+            "passage_id": "psg-eusebius-he-4-30",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-4-30",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 4.30",
+            "excerpt": "Paraphrase: Eusebius reports that Bardaisan of Edessa was at first a follower of Valentinus but later turned against the Valentinian heresy; he composed many dialogues in Syriac and Greek against the Marcionites and other heretics; despite his eloquent defense of the faith, he did not wholly purge himself of the old heresy.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Bardaisan of Edessa"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-bardesanites-at-edessa",
+        "clm-bardesanites-at-mesopotamia"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-4-30": [
+          "clm-bardaisan-active-armenia",
+          "clm-bardaisan-active-edessa",
+          "clm-bardaisan-affirms-incarnation",
+          "clm-bardaisan-in-conversion",
+          "clm-bardaisan-member-edessa-church",
+          "clm-tatian-active-edessa",
+          "clm-tatian-affirms-encratism",
+          "clm-tatian-affirms-gospel-harmony"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-4-30",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-4-30:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-laws-countries-by-bardaisan",
+        "subject_type": "work",
+        "subject_id": "book-of-laws-of-countries",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "bardaisan-of-edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "196",
+        "year_end": "196",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "book-of-laws-of-countries",
+        "title_display": "Book of the Laws of Countries",
+        "title_original": "ܟܬܒܐ ܕܢܡܘ̈ܣܐ ܕܐܬܪ̈ܘܬܐ",
+        "work_type": "dialogue",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Dialogue attributed to Bardaisan of Edessa (c. 196); defends human free will against astrological determinism; argues that diverse human customs across nations disprove fate; the earliest surviving Syriac literary composition."
+      },
+      "object_entity": {
+        "person_id": "bardaisan-of-edessa",
+        "person_label": "Bardaisan of Edessa",
+        "name_alt": "Bar Daisan",
+        "name_native": "ܒܪ ܕܝܨܢ",
+        "birth_year_display": "c. 154",
+        "death_year_display": "c. 222",
+        "person_kind": "individual",
+        "notes": "Syriac philosopher-theologian born in Edessa; wrote the Book of Laws of Countries defending free will against fate; initially associated with Valentinian Gnosticism per Eusebius HE 4.30 but later opposed it; founded an influential school at Edessa; refuted by Ephrem."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-laws-countries-by-bardaisan",
+            "passage_id": "psg-laws-countries-customs",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "This passage from the work attests its existence and authorship."
+          },
+          "passage": {
+            "passage_id": "psg-laws-countries-customs",
+            "source_id": "src-book-of-laws-of-countries",
+            "locator_type": "source_ref",
+            "locator": "Book of Laws of Countries (central argument)",
+            "excerpt": "Paraphrase: Bardaisan catalogs the diverse laws and customs of nations — Brahmins in India, Persians, Britons, Chinese — demonstrating that human behavior differs by culture, not by zodiac; if fate determined all, customs would be uniform; therefore free will prevails over astral determinism.",
+            "language": "English",
+            "passage_year": "196",
+            "url_override": "",
+            "notes": "Diversity of customs disproves fate"
+          },
+          "source": {
+            "source_id": "src-book-of-laws-of-countries",
+            "work_id": "book-of-laws-of-countries",
+            "source_kind": "primary_text",
+            "title": "Book of the Laws of Countries",
+            "author": "Bardaisan of Edessa (via Philip his disciple)",
+            "editor": "",
+            "year_display": "c. 196",
+            "year_start": "196",
+            "year_end": "196",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://archive.org/details/bardaisan-book-of-the-laws-of-countries-alcock-2018",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Earliest surviving Syriac literary text; dialogue on free will vs fate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-laws-countries-affirms-free-will",
+        "clm-laws-countries-written-edessa"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-laws-countries-customs": [
+          "clm-laws-countries-affirms-free-will",
+          "clm-laws-countries-written-edessa"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-laws-countries-customs",
+        "PARAPHRASE_RISK:psg-laws-countries-customs"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-laws-countries-written-edessa",
+        "subject_type": "work",
+        "subject_id": "book-of-laws-of-countries",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "196",
+        "year_end": "196",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "book-of-laws-of-countries",
+        "title_display": "Book of the Laws of Countries",
+        "title_original": "ܟܬܒܐ ܕܢܡܘ̈ܣܐ ܕܐܬܪ̈ܘܬܐ",
+        "work_type": "dialogue",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Dialogue attributed to Bardaisan of Edessa (c. 196); defends human free will against astrological determinism; argues that diverse human customs across nations disprove fate; the earliest surviving Syriac literary composition."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-laws-countries-written-edessa",
+            "passage_id": "psg-laws-countries-customs",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from book-of-laws-of-countries contextualizes its composition at edessa."
+          },
+          "passage": {
+            "passage_id": "psg-laws-countries-customs",
+            "source_id": "src-book-of-laws-of-countries",
+            "locator_type": "source_ref",
+            "locator": "Book of Laws of Countries (central argument)",
+            "excerpt": "Paraphrase: Bardaisan catalogs the diverse laws and customs of nations — Brahmins in India, Persians, Britons, Chinese — demonstrating that human behavior differs by culture, not by zodiac; if fate determined all, customs would be uniform; therefore free will prevails over astral determinism.",
+            "language": "English",
+            "passage_year": "196",
+            "url_override": "",
+            "notes": "Diversity of customs disproves fate"
+          },
+          "source": {
+            "source_id": "src-book-of-laws-of-countries",
+            "work_id": "book-of-laws-of-countries",
+            "source_kind": "primary_text",
+            "title": "Book of the Laws of Countries",
+            "author": "Bardaisan of Edessa (via Philip his disciple)",
+            "editor": "",
+            "year_display": "c. 196",
+            "year_start": "196",
+            "year_end": "196",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://archive.org/details/bardaisan-book-of-the-laws-of-countries-alcock-2018",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Earliest surviving Syriac literary text; dialogue on free will vs fate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-laws-countries-affirms-free-will",
+        "clm-laws-countries-by-bardaisan"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-laws-countries-customs": [
+          "clm-laws-countries-affirms-free-will",
+          "clm-laws-countries-by-bardaisan"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-laws-countries-customs",
+        "PARAPHRASE_RISK:psg-laws-countries-customs",
+        "PARAPHRASE_OMISSION:psg-laws-countries-customs:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-laws-countries-affirms-free-will",
+        "subject_type": "work",
+        "subject_id": "book-of-laws-of-countries",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "free-will-grounds-moral-responsibility",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "196",
+        "year_end": "196",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "book-of-laws-of-countries",
+        "title_display": "Book of the Laws of Countries",
+        "title_original": "ܟܬܒܐ ܕܢܡܘ̈ܣܐ ܕܐܬܪ̈ܘܬܐ",
+        "work_type": "dialogue",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Dialogue attributed to Bardaisan of Edessa (c. 196); defends human free will against astrological determinism; argues that diverse human customs across nations disprove fate; the earliest surviving Syriac literary composition."
+      },
+      "object_entity": {
+        "proposition_id": "free-will-grounds-moral-responsibility",
+        "topic_id": "anthropology-theology",
+        "dimension_id": "free-will",
+        "proposition_label": "Human free will is the basis for moral responsibility before God",
+        "polarity_family": "free_will",
+        "description": "God created rational beings with genuine freedom of choice; this freedom is what makes praise, blame, reward, and punishment just; evil arises from the misuse of free will, not from God or from nature.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-laws-countries-affirms-free-will",
+            "passage_id": "psg-laws-countries-customs",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Diversity of customs disproves astral determinism."
+          },
+          "passage": {
+            "passage_id": "psg-laws-countries-customs",
+            "source_id": "src-book-of-laws-of-countries",
+            "locator_type": "source_ref",
+            "locator": "Book of Laws of Countries (central argument)",
+            "excerpt": "Paraphrase: Bardaisan catalogs the diverse laws and customs of nations — Brahmins in India, Persians, Britons, Chinese — demonstrating that human behavior differs by culture, not by zodiac; if fate determined all, customs would be uniform; therefore free will prevails over astral determinism.",
+            "language": "English",
+            "passage_year": "196",
+            "url_override": "",
+            "notes": "Diversity of customs disproves fate"
+          },
+          "source": {
+            "source_id": "src-book-of-laws-of-countries",
+            "work_id": "book-of-laws-of-countries",
+            "source_kind": "primary_text",
+            "title": "Book of the Laws of Countries",
+            "author": "Bardaisan of Edessa (via Philip his disciple)",
+            "editor": "",
+            "year_display": "c. 196",
+            "year_start": "196",
+            "year_end": "196",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://archive.org/details/bardaisan-book-of-the-laws-of-countries-alcock-2018",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Earliest surviving Syriac literary text; dialogue on free will vs fate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-laws-countries-affirms-free-will",
+            "passage_id": "psg-laws-countries-free-will",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Bardaisan argues humans possess free will (heruta) given by God."
+          },
+          "passage": {
+            "passage_id": "psg-laws-countries-free-will",
+            "source_id": "src-book-of-laws-of-countries",
+            "locator_type": "source_ref",
+            "locator": "Book of Laws of Countries (opening)",
+            "excerpt": "Paraphrase: Bardaisan argues that human beings possess free will (heruta) given by God; fate and the stars influence the body and nature, but the soul's rational choices are free; God is good and created humans with the capacity to choose between good and evil.",
+            "language": "English",
+            "passage_year": "196",
+            "url_override": "",
+            "notes": "Free will argument"
+          },
+          "source": {
+            "source_id": "src-book-of-laws-of-countries",
+            "work_id": "book-of-laws-of-countries",
+            "source_kind": "primary_text",
+            "title": "Book of the Laws of Countries",
+            "author": "Bardaisan of Edessa (via Philip his disciple)",
+            "editor": "",
+            "year_display": "c. 196",
+            "year_start": "196",
+            "year_end": "196",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://archive.org/details/bardaisan-book-of-the-laws-of-countries-alcock-2018",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Earliest surviving Syriac literary text; dialogue on free will vs fate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-laws-countries-by-bardaisan",
+        "clm-laws-countries-written-edessa"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-laws-countries-customs": [
+          "clm-laws-countries-by-bardaisan",
+          "clm-laws-countries-written-edessa"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-laws-countries-customs",
+        "PARAPHRASE_RISK:psg-laws-countries-free-will"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-apologeticum-by-tertullian",
+        "subject_type": "work",
+        "subject_id": "apologeticum",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "tertullian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apologeticum",
+        "title_display": "Apologeticum",
+        "title_original": "Apologeticum pro Christianis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's defense of Christianity addressed to Roman magistrates c. 197; argues for freedom of religion and the innocence of Christians; source of the famous semen est sanguis Christianorum (the blood of Christians is seed)."
+      },
+      "object_entity": {
+        "person_id": "tertullian",
+        "person_label": "Tertullian",
+        "name_alt": "Quintus Septimius Florens Tertullianus",
+        "name_native": "Tertullianus",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 220",
+        "person_kind": "individual",
+        "notes": "First major Latin Christian author; active in Carthage c. 195–220. Wrote at least 31 works spanning apologetics, anti-heretical polemic, and moral discipline. Coined 'trinitas' and 'tres personae una substantia'. Defender of apostolic succession, rule of faith, incarnation, and bodily resurrection. Later attracted to Montanist rigorism c. 207; teacher of Cyprian by doctrinal influence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-apologeticum-by-tertullian",
+            "passage_id": "psg-tertullian-apol-50",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-apol-50",
+            "source_id": "src-tertullian-apologeticum",
+            "locator_type": "source_ref",
+            "locator": "Apol. 50",
+            "excerpt": "We multiply whenever we are mown down by you: the blood of Christians is seed. Your cruelty, though each act of it ever so extravagant, does not avail you; it is rather a temptation to the sect. We spring up in greater numbers the more we are cut down.",
+            "language": "English",
+            "passage_year": "197",
+            "url_override": "",
+            "notes": "Semen est sanguis Christianorum; martyrdom as witness and growth of the church"
+          },
+          "source": {
+            "source_id": "src-tertullian-apologeticum",
+            "work_id": "apologeticum",
+            "source_kind": "primary_text",
+            "title": "Apologeticum",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 197",
+            "year_start": "197",
+            "year_end": "197",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0301.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's defense of Christianity; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-apol-affirms-martyrdom",
+        "clm-apologeticum-written-carthage"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-apol-50": [
+          "clm-apol-affirms-martyrdom"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-apologeticum-written-carthage",
+        "subject_type": "work",
+        "subject_id": "apologeticum",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "197",
+        "year_end": "197",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apologeticum",
+        "title_display": "Apologeticum",
+        "title_original": "Apologeticum pro Christianis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's defense of Christianity addressed to Roman magistrates c. 197; argues for freedom of religion and the innocence of Christians; source of the famous semen est sanguis Christianorum (the blood of Christians is seed)."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-apologeticum-written-carthage",
+            "passage_id": "psg-tertullian-apol-39",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Addressed to Roman governors of Carthage province; describes local community"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-apol-39",
+            "source_id": "src-tertullian-apologeticum",
+            "locator_type": "source_ref",
+            "locator": "Apol. 39",
+            "excerpt": "We are a body knit together by a common religious profession, by unity of discipline, and by the bond of a common hope. We meet together as an assembly and a congregation. We pray together, we read scripture, we offer exhortation. Our presidents are elders, approved men. There is no buying and selling of any sort in the things of God. Even if there is a chest of sorts, it is not made up of purchase-money. On the monthly day, each puts in a small donation, if he will, and only if he be willing; for no one is compelled. These gifts are not spent on feasts or drinking bouts but to support and bury poor people, to supply the wants of boys and girls destitute of means and parents, and of old persons confined to the house.",
+            "language": "English",
+            "passage_year": "197",
+            "url_override": "",
+            "notes": "Description of Christian assembly, common fund, and community life in Carthage"
+          },
+          "source": {
+            "source_id": "src-tertullian-apologeticum",
+            "work_id": "apologeticum",
+            "source_kind": "primary_text",
+            "title": "Apologeticum",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 197",
+            "year_start": "197",
+            "year_end": "197",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0301.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's defense of Christianity; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-apol-affirms-martyrdom",
+        "clm-apologeticum-by-tertullian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-apol-39": [
+          "clm-carthage-church-at-carthage",
+          "clm-tertullian-active-carthage",
+          "clm-tertullian-affirms-catechumenate",
+          "clm-tertullian-affirms-fasting",
+          "clm-tertullian-member-carthage"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-apol-affirms-martyrdom",
+        "subject_type": "work",
+        "subject_id": "apologeticum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "martyrdom-witnesses-to-christ",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "197",
+        "year_end": "197",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apologeticum",
+        "title_display": "Apologeticum",
+        "title_original": "Apologeticum pro Christianis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's defense of Christianity addressed to Roman magistrates c. 197; argues for freedom of religion and the innocence of Christians; source of the famous semen est sanguis Christianorum (the blood of Christians is seed)."
+      },
+      "object_entity": {
+        "proposition_id": "martyrdom-witnesses-to-christ",
+        "topic_id": "martyrdom-theology",
+        "dimension_id": "martyr-witness",
+        "proposition_label": "Martyrdom is bearing faithful witness to Christ before authorities",
+        "polarity_family": "martyr_witness",
+        "description": "The martyr's death is presented as a form of witness to Christ, conforming to his passion and declaring undivided fidelity before earthly powers.",
+        "notes": "Martyrdom theology"
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-apol-affirms-martyrdom",
+            "passage_id": "psg-tertullian-apol-50",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "Semen est sanguis Christianorum — martyrdom as witness and engine of church growth"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-apol-50",
+            "source_id": "src-tertullian-apologeticum",
+            "locator_type": "source_ref",
+            "locator": "Apol. 50",
+            "excerpt": "We multiply whenever we are mown down by you: the blood of Christians is seed. Your cruelty, though each act of it ever so extravagant, does not avail you; it is rather a temptation to the sect. We spring up in greater numbers the more we are cut down.",
+            "language": "English",
+            "passage_year": "197",
+            "url_override": "",
+            "notes": "Semen est sanguis Christianorum; martyrdom as witness and growth of the church"
+          },
+          "source": {
+            "source_id": "src-tertullian-apologeticum",
+            "work_id": "apologeticum",
+            "source_kind": "primary_text",
+            "title": "Apologeticum",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 197",
+            "year_start": "197",
+            "year_end": "197",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0301.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's defense of Christianity; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-apologeticum-written-carthage",
+        "clm-apologeticum-by-tertullian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-apol-50": [
+          "clm-apologeticum-by-tertullian"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-spect-by-tertullian",
+        "subject_type": "work",
+        "subject_id": "de-spectaculis",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "tertullian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-spectaculis",
+        "title_display": "De Spectaculis",
+        "title_original": "De Spectaculis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 197-202 arguing that Christians must abstain from public games, theater, and gladiatorial combat as incompatible with their baptismal vow."
+      },
+      "object_entity": {
+        "person_id": "tertullian",
+        "person_label": "Tertullian",
+        "name_alt": "Quintus Septimius Florens Tertullianus",
+        "name_native": "Tertullianus",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 220",
+        "person_kind": "individual",
+        "notes": "First major Latin Christian author; active in Carthage c. 195–220. Wrote at least 31 works spanning apologetics, anti-heretical polemic, and moral discipline. Coined 'trinitas' and 'tres personae una substantia'. Defender of apostolic succession, rule of faith, incarnation, and bodily resurrection. Later attracted to Montanist rigorism c. 207; teacher of Cyprian by doctrinal influence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-spect-by-tertullian",
+            "passage_id": "psg-tertullian-de-spect-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-spect-4",
+            "source_id": "src-tertullian-de-spectaculis",
+            "locator_type": "source_ref",
+            "locator": "De Spect. 4",
+            "excerpt": "When entering the water, we professed the Christian faith in the words of its rule; we testified with our own mouth that we renounced the devil and his pomp and his angels. Well, is it not in connection with this engagement that we are forbidden the spectacles? The shows belong to the pomp and works of the devil.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Baptismal renunciation includes spectacles; spectacles are the devil's pomp"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-spectaculis",
+            "work_id": "de-spectaculis",
+            "source_kind": "primary_text",
+            "title": "De Spectaculis",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 197-202",
+            "year_start": "197",
+            "year_end": "202",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0303.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's treatise on public shows; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-spect-affirms-spectacles",
+        "clm-de-spect-written-carthage"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-de-spect-4": [
+          "clm-de-spect-affirms-spectacles"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-spect-written-carthage",
+        "subject_type": "work",
+        "subject_id": "de-spectaculis",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "197",
+        "year_end": "202",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-spectaculis",
+        "title_display": "De Spectaculis",
+        "title_original": "De Spectaculis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 197-202 arguing that Christians must abstain from public games, theater, and gladiatorial combat as incompatible with their baptismal vow."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-spect-written-carthage",
+            "passage_id": "psg-tertullian-de-spect-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from de-spectaculis contextualizes its composition at carthage."
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-spect-24",
+            "source_id": "src-tertullian-de-spectaculis",
+            "locator_type": "source_ref",
+            "locator": "De Spect. 24-26",
+            "excerpt": "Paraphrase: Tertullian contrasts the pagan spectacles with the eschatological spectacle that awaits believers — the coming of the Lord, the resurrection, the judgment — urging Christians to wait for these true spectacles rather than debasing themselves in the arena and theater.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Eschatological spectacle vs earthly spectacles; moral argument for abstaining from games"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-spectaculis",
+            "work_id": "de-spectaculis",
+            "source_kind": "primary_text",
+            "title": "De Spectaculis",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 197-202",
+            "year_start": "197",
+            "year_end": "202",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0303.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's treatise on public shows; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-spect-affirms-spectacles",
+        "clm-de-spect-by-tertullian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-de-spect-24": [
+          "clm-de-spect-affirms-spectacles"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tertullian-de-spect-24",
+        "PARAPHRASE_RISK:psg-tertullian-de-spect-24",
+        "PARAPHRASE_OMISSION:psg-tertullian-de-spect-24:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-spect-affirms-spectacles",
+        "subject_type": "work",
+        "subject_id": "de-spectaculis",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christians-avoid-public-spectacles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "197",
+        "year_end": "202",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-spectaculis",
+        "title_display": "De Spectaculis",
+        "title_original": "De Spectaculis",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise c. 197-202 arguing that Christians must abstain from public games, theater, and gladiatorial combat as incompatible with their baptismal vow."
+      },
+      "object_entity": {
+        "proposition_id": "christians-avoid-public-spectacles",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "public-spectacles-avoided",
+        "proposition_label": "Christians are instructed to abstain from public games, theaters, and spectacles",
+        "polarity_family": "spectacles_avoided",
+        "description": "Public games, theaters, and spectacles are morally dangerous entertainments that Christians must avoid in favor of the word of God.",
+        "notes": "Avoidance of public spectacles"
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-spect-affirms-spectacles",
+            "passage_id": "psg-tertullian-de-spect-24",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.85",
+            "notes": "Eschatological spectacle contrasted with pagan spectacles"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-spect-24",
+            "source_id": "src-tertullian-de-spectaculis",
+            "locator_type": "source_ref",
+            "locator": "De Spect. 24-26",
+            "excerpt": "Paraphrase: Tertullian contrasts the pagan spectacles with the eschatological spectacle that awaits believers — the coming of the Lord, the resurrection, the judgment — urging Christians to wait for these true spectacles rather than debasing themselves in the arena and theater.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Eschatological spectacle vs earthly spectacles; moral argument for abstaining from games"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-spectaculis",
+            "work_id": "de-spectaculis",
+            "source_kind": "primary_text",
+            "title": "De Spectaculis",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 197-202",
+            "year_start": "197",
+            "year_end": "202",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0303.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's treatise on public shows; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-de-spect-affirms-spectacles",
+            "passage_id": "psg-tertullian-de-spect-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "Baptismal renunciation includes the devil's pomp i.e. spectacles"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-spect-4",
+            "source_id": "src-tertullian-de-spectaculis",
+            "locator_type": "source_ref",
+            "locator": "De Spect. 4",
+            "excerpt": "When entering the water, we professed the Christian faith in the words of its rule; we testified with our own mouth that we renounced the devil and his pomp and his angels. Well, is it not in connection with this engagement that we are forbidden the spectacles? The shows belong to the pomp and works of the devil.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Baptismal renunciation includes spectacles; spectacles are the devil's pomp"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-spectaculis",
+            "work_id": "de-spectaculis",
+            "source_kind": "primary_text",
+            "title": "De Spectaculis",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 197-202",
+            "year_start": "197",
+            "year_end": "202",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0303.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's treatise on public shows; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-spect-written-carthage",
+        "clm-de-spect-by-tertullian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-de-spect-24": [
+          "clm-de-spect-written-carthage"
+        ],
+        "psg-tertullian-de-spect-4": [
+          "clm-de-spect-by-tertullian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-de-spect-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-paen-by-tertullian",
+        "subject_type": "work",
+        "subject_id": "de-paenitentia",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "tertullian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-paenitentia",
+        "title_display": "De Paenitentia",
+        "title_original": "De Poenitentia",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's early treatise on repentance c. 198-200; allows one post-baptismal repentance through church discipline; important early witness for penitential practice."
+      },
+      "object_entity": {
+        "person_id": "tertullian",
+        "person_label": "Tertullian",
+        "name_alt": "Quintus Septimius Florens Tertullianus",
+        "name_native": "Tertullianus",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 220",
+        "person_kind": "individual",
+        "notes": "First major Latin Christian author; active in Carthage c. 195–220. Wrote at least 31 works spanning apologetics, anti-heretical polemic, and moral discipline. Coined 'trinitas' and 'tres personae una substantia'. Defender of apostolic succession, rule of faith, incarnation, and bodily resurrection. Later attracted to Montanist rigorism c. 207; teacher of Cyprian by doctrinal influence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-paen-by-tertullian",
+            "passage_id": "psg-tertullian-de-paen-7-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-paen-7-9",
+            "source_id": "src-tertullian-de-paenitentia",
+            "locator_type": "source_ref",
+            "locator": "De Paen. 7-9",
+            "excerpt": "Paraphrase: Tertullian teaches that after baptism, God has provided one further repentance (exomologesis) for those who fall into grave sin. This second repentance is a painful public confession before the congregation, including fasting, weeping, and prostration; it is the last remaining refuge for the sinner, but it does exist.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "One post-baptismal repentance allowed through exomologesis (public confession); early penitential discipline"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-paenitentia",
+            "work_id": "de-paenitentia",
+            "source_kind": "primary_text",
+            "title": "De Paenitentia",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198-200",
+            "year_start": "198",
+            "year_end": "200",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0323.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's treatise on repentance; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-paen-affirms-penance",
+        "clm-de-paen-written-carthage"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-de-paen-7-9": [
+          "clm-de-paen-affirms-penance",
+          "clm-de-paen-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-de-paen-7-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-paen-written-carthage",
+        "subject_type": "work",
+        "subject_id": "de-paenitentia",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "200",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-paenitentia",
+        "title_display": "De Paenitentia",
+        "title_original": "De Poenitentia",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's early treatise on repentance c. 198-200; allows one post-baptismal repentance through church discipline; important early witness for penitential practice."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-paen-written-carthage",
+            "passage_id": "psg-tertullian-de-paen-7-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from de-paenitentia contextualizes its composition at carthage."
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-paen-7-9",
+            "source_id": "src-tertullian-de-paenitentia",
+            "locator_type": "source_ref",
+            "locator": "De Paen. 7-9",
+            "excerpt": "Paraphrase: Tertullian teaches that after baptism, God has provided one further repentance (exomologesis) for those who fall into grave sin. This second repentance is a painful public confession before the congregation, including fasting, weeping, and prostration; it is the last remaining refuge for the sinner, but it does exist.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "One post-baptismal repentance allowed through exomologesis (public confession); early penitential discipline"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-paenitentia",
+            "work_id": "de-paenitentia",
+            "source_kind": "primary_text",
+            "title": "De Paenitentia",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198-200",
+            "year_start": "198",
+            "year_end": "200",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0323.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's treatise on repentance; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-paen-affirms-penance",
+        "clm-de-paen-by-tertullian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-tertullian-de-paen-7-9": [
+          "clm-de-paen-affirms-penance",
+          "clm-de-paen-by-tertullian"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tertullian-de-paen-7-9",
+        "PARAPHRASE_RISK:psg-tertullian-de-paen-7-9",
+        "PARAPHRASE_OMISSION:psg-tertullian-de-paen-7-9:object"
+      ]
+    }
+  ]
+}

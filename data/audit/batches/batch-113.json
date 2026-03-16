@@ -1,0 +1,1154 @@
+{
+  "batch_id": "batch-113",
+  "queue": "1",
+  "focus": "de-trinitate-novatian",
+  "claim_count": 10,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-detrin-by-novatian",
+        "subject_type": "work",
+        "subject_id": "de-trinitate-novatian",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "novatian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-trinitate-novatian",
+        "title_display": "De Trinitate",
+        "title_original": "De Trinitate",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Novatian's treatise on the Trinity c. 250; the first systematic Latin work on trinitarian theology; affirms the full divinity of Father, Son, and Holy Spirit; defends Christ's true incarnation and real suffering; orthodox in doctrine despite its author's later schism."
+      },
+      "object_entity": {
+        "person_id": "novatian",
+        "person_label": "Novatian",
+        "name_alt": "Novatianus",
+        "name_native": "Νοβατιανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 258",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; author of De Trinitate (c. 250), the first systematic Latin treatise on the Trinity; rigorist who opposed the readmission of the lapsed after the Decian persecution; set up a rival church c. 251 against Pope Cornelius; his followers (Novatianists) persisted for centuries."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-detrin-by-novatian",
+            "passage_id": "psg-novatian-trin-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "De Trinitate is universally attributed to Novatian."
+          },
+          "passage": {
+            "passage_id": "psg-novatian-trin-1",
+            "source_id": "src-novatian-de-trinitate",
+            "locator_type": "source_ref",
+            "locator": "De Trin. 1",
+            "excerpt": "The rule of truth requires that we should first of all things believe in God the Father and Lord Almighty, that is, the most perfect Creator of all things, who has hung the heavens in lofty sublimity, has laid the solid foundations of the earth, has spread out the seas, and has distributed all things with their fitting ornaments.",
+            "language": "English",
+            "passage_year": "250",
+            "url_override": "",
+            "notes": "Rule of faith opening; God the Father as Creator; creedal structure"
+          },
+          "source": {
+            "source_id": "src-novatian-de-trinitate",
+            "work_id": "de-trinitate-novatian",
+            "source_kind": "primary_text",
+            "title": "De Trinitate",
+            "author": "Novatian",
+            "editor": "",
+            "year_display": "c. 250",
+            "year_start": "250",
+            "year_end": "250",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0522.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "First systematic Latin trinitarian treatise; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-detrin-affirms-incarnation",
+        "clm-detrin-affirms-logos",
+        "clm-detrin-affirms-ot-scripture",
+        "clm-detrin-affirms-passion",
+        "clm-detrin-affirms-resurrection",
+        "clm-detrin-affirms-rule-of-faith",
+        "clm-detrin-affirms-trinity",
+        "clm-detrin-affirms-virgin-birth",
+        "clm-detrin-written-rome"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-novatian-trin-1": [
+          "clm-detrin-affirms-rule-of-faith",
+          "clm-detrin-written-rome"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-detrin-written-rome",
+        "subject_type": "work",
+        "subject_id": "de-trinitate-novatian",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-trinitate-novatian",
+        "title_display": "De Trinitate",
+        "title_original": "De Trinitate",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Novatian's treatise on the Trinity c. 250; the first systematic Latin work on trinitarian theology; affirms the full divinity of Father, Son, and Holy Spirit; defends Christ's true incarnation and real suffering; orthodox in doctrine despite its author's later schism."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-detrin-written-rome",
+            "passage_id": "psg-novatian-trin-1",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Written in Rome where Novatian was a presbyter."
+          },
+          "passage": {
+            "passage_id": "psg-novatian-trin-1",
+            "source_id": "src-novatian-de-trinitate",
+            "locator_type": "source_ref",
+            "locator": "De Trin. 1",
+            "excerpt": "The rule of truth requires that we should first of all things believe in God the Father and Lord Almighty, that is, the most perfect Creator of all things, who has hung the heavens in lofty sublimity, has laid the solid foundations of the earth, has spread out the seas, and has distributed all things with their fitting ornaments.",
+            "language": "English",
+            "passage_year": "250",
+            "url_override": "",
+            "notes": "Rule of faith opening; God the Father as Creator; creedal structure"
+          },
+          "source": {
+            "source_id": "src-novatian-de-trinitate",
+            "work_id": "de-trinitate-novatian",
+            "source_kind": "primary_text",
+            "title": "De Trinitate",
+            "author": "Novatian",
+            "editor": "",
+            "year_display": "c. 250",
+            "year_start": "250",
+            "year_end": "250",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0522.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "First systematic Latin trinitarian treatise; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-detrin-affirms-incarnation",
+        "clm-detrin-affirms-logos",
+        "clm-detrin-affirms-ot-scripture",
+        "clm-detrin-affirms-passion",
+        "clm-detrin-affirms-resurrection",
+        "clm-detrin-affirms-rule-of-faith",
+        "clm-detrin-affirms-trinity",
+        "clm-detrin-affirms-virgin-birth",
+        "clm-detrin-by-novatian"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-novatian-trin-1": [
+          "clm-detrin-affirms-rule-of-faith",
+          "clm-detrin-by-novatian"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-detrin-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "de-trinitate-novatian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "250",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-trinitate-novatian",
+        "title_display": "De Trinitate",
+        "title_original": "De Trinitate",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Novatian's treatise on the Trinity c. 250; the first systematic Latin work on trinitarian theology; affirms the full divinity of Father, Son, and Holy Spirit; defends Christ's true incarnation and real suffering; orthodox in doctrine despite its author's later schism."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-detrin-affirms-incarnation",
+            "passage_id": "psg-novatian-trin-9-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "De Trin. 9-11 affirms Christ took our flesh, was truly born, truly crucified, truly died."
+          },
+          "passage": {
+            "passage_id": "psg-novatian-trin-9-11",
+            "source_id": "src-novatian-de-trinitate",
+            "locator_type": "source_ref",
+            "locator": "De Trin. 9-11",
+            "excerpt": "Paraphrase: Scripture teaches that the Son of God, the Word, was with the Father before the creation of the world. By him all things were made. He is the same who was foretold by the prophets, who took upon himself our flesh, who was truly born of a virgin, who was truly crucified, who truly died, who truly rose again.",
+            "language": "English",
+            "passage_year": "250",
+            "url_override": "",
+            "notes": "Logos pre-existence; true incarnation; real suffering and death; bodily resurrection; anti-docetist"
+          },
+          "source": {
+            "source_id": "src-novatian-de-trinitate",
+            "work_id": "de-trinitate-novatian",
+            "source_kind": "primary_text",
+            "title": "De Trinitate",
+            "author": "Novatian",
+            "editor": "",
+            "year_display": "c. 250",
+            "year_start": "250",
+            "year_end": "250",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0522.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "First systematic Latin trinitarian treatise; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-detrin-affirms-logos",
+        "clm-detrin-affirms-ot-scripture",
+        "clm-detrin-affirms-passion",
+        "clm-detrin-affirms-resurrection",
+        "clm-detrin-affirms-rule-of-faith",
+        "clm-detrin-affirms-trinity",
+        "clm-detrin-affirms-virgin-birth",
+        "clm-detrin-written-rome",
+        "clm-detrin-by-novatian"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-novatian-trin-9-11": [
+          "clm-detrin-affirms-logos",
+          "clm-detrin-affirms-passion",
+          "clm-detrin-affirms-resurrection",
+          "clm-detrin-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-novatian-trin-9-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-detrin-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "de-trinitate-novatian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "250",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-trinitate-novatian",
+        "title_display": "De Trinitate",
+        "title_original": "De Trinitate",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Novatian's treatise on the Trinity c. 250; the first systematic Latin work on trinitarian theology; affirms the full divinity of Father, Son, and Holy Spirit; defends Christ's true incarnation and real suffering; orthodox in doctrine despite its author's later schism."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-detrin-affirms-logos",
+            "passage_id": "psg-novatian-trin-9-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "De Trin. 9-11 teaches the Word was with the Father before creation and all things were made through him."
+          },
+          "passage": {
+            "passage_id": "psg-novatian-trin-9-11",
+            "source_id": "src-novatian-de-trinitate",
+            "locator_type": "source_ref",
+            "locator": "De Trin. 9-11",
+            "excerpt": "Paraphrase: Scripture teaches that the Son of God, the Word, was with the Father before the creation of the world. By him all things were made. He is the same who was foretold by the prophets, who took upon himself our flesh, who was truly born of a virgin, who was truly crucified, who truly died, who truly rose again.",
+            "language": "English",
+            "passage_year": "250",
+            "url_override": "",
+            "notes": "Logos pre-existence; true incarnation; real suffering and death; bodily resurrection; anti-docetist"
+          },
+          "source": {
+            "source_id": "src-novatian-de-trinitate",
+            "work_id": "de-trinitate-novatian",
+            "source_kind": "primary_text",
+            "title": "De Trinitate",
+            "author": "Novatian",
+            "editor": "",
+            "year_display": "c. 250",
+            "year_start": "250",
+            "year_end": "250",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0522.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "First systematic Latin trinitarian treatise; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-detrin-affirms-incarnation",
+        "clm-detrin-affirms-ot-scripture",
+        "clm-detrin-affirms-passion",
+        "clm-detrin-affirms-resurrection",
+        "clm-detrin-affirms-rule-of-faith",
+        "clm-detrin-affirms-trinity",
+        "clm-detrin-affirms-virgin-birth",
+        "clm-detrin-written-rome",
+        "clm-detrin-by-novatian"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-novatian-trin-9-11": [
+          "clm-detrin-affirms-incarnation",
+          "clm-detrin-affirms-passion",
+          "clm-detrin-affirms-resurrection",
+          "clm-detrin-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-novatian-trin-9-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-detrin-affirms-ot-scripture",
+        "subject_type": "work",
+        "subject_id": "de-trinitate-novatian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "250",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-trinitate-novatian",
+        "title_display": "De Trinitate",
+        "title_original": "De Trinitate",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Novatian's treatise on the Trinity c. 250; the first systematic Latin work on trinitarian theology; affirms the full divinity of Father, Son, and Holy Spirit; defends Christ's true incarnation and real suffering; orthodox in doctrine despite its author's later schism."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-detrin-affirms-ot-scripture",
+            "passage_id": "psg-novatian-trin-26-29",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "De Trin. appeals extensively to OT prophets as authoritative scripture."
+          },
+          "passage": {
+            "passage_id": "psg-novatian-trin-26-29",
+            "source_id": "src-novatian-de-trinitate",
+            "locator_type": "source_ref",
+            "locator": "De Trin. 26-29",
+            "excerpt": "Paraphrase: The Holy Spirit is the same who was promised by the prophets and poured out on the apostles. He is the sanctifier of the faith of those who believe in the Father, Son, and Holy Spirit. He is the same Spirit who worked in the prophets, who was afterward breathed upon the apostles, and who is the bond of the unity of the Church.",
+            "language": "English",
+            "passage_year": "250",
+            "url_override": "",
+            "notes": "Holy Spirit as sanctifier; trinitarian faith; Spirit's role in Church unity; pneumatology"
+          },
+          "source": {
+            "source_id": "src-novatian-de-trinitate",
+            "work_id": "de-trinitate-novatian",
+            "source_kind": "primary_text",
+            "title": "De Trinitate",
+            "author": "Novatian",
+            "editor": "",
+            "year_display": "c. 250",
+            "year_start": "250",
+            "year_end": "250",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0522.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "First systematic Latin trinitarian treatise; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-detrin-affirms-incarnation",
+        "clm-detrin-affirms-logos",
+        "clm-detrin-affirms-passion",
+        "clm-detrin-affirms-resurrection",
+        "clm-detrin-affirms-rule-of-faith",
+        "clm-detrin-affirms-trinity",
+        "clm-detrin-affirms-virgin-birth",
+        "clm-detrin-written-rome",
+        "clm-detrin-by-novatian"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-novatian-trin-26-29"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-detrin-affirms-passion",
+        "subject_type": "work",
+        "subject_id": "de-trinitate-novatian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-suffered-and-died",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "250",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-trinitate-novatian",
+        "title_display": "De Trinitate",
+        "title_original": "De Trinitate",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Novatian's treatise on the Trinity c. 250; the first systematic Latin work on trinitarian theology; affirms the full divinity of Father, Son, and Holy Spirit; defends Christ's true incarnation and real suffering; orthodox in doctrine despite its author's later schism."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-suffered-and-died",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "passion-reality",
+        "proposition_label": "Christ Truly Suffered and Died",
+        "polarity_family": "",
+        "description": "Christ's passion and death on the cross were genuine physical events, not apparent, symbolic, or borne by a substitute. Denied by docetists, Basilides (Simon Cyrene substitution), Marcion, and Cerinthus.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-detrin-affirms-passion",
+            "passage_id": "psg-novatian-trin-9-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "De Trin. 9-11 explicitly states Christ was truly crucified and truly died."
+          },
+          "passage": {
+            "passage_id": "psg-novatian-trin-9-11",
+            "source_id": "src-novatian-de-trinitate",
+            "locator_type": "source_ref",
+            "locator": "De Trin. 9-11",
+            "excerpt": "Paraphrase: Scripture teaches that the Son of God, the Word, was with the Father before the creation of the world. By him all things were made. He is the same who was foretold by the prophets, who took upon himself our flesh, who was truly born of a virgin, who was truly crucified, who truly died, who truly rose again.",
+            "language": "English",
+            "passage_year": "250",
+            "url_override": "",
+            "notes": "Logos pre-existence; true incarnation; real suffering and death; bodily resurrection; anti-docetist"
+          },
+          "source": {
+            "source_id": "src-novatian-de-trinitate",
+            "work_id": "de-trinitate-novatian",
+            "source_kind": "primary_text",
+            "title": "De Trinitate",
+            "author": "Novatian",
+            "editor": "",
+            "year_display": "c. 250",
+            "year_start": "250",
+            "year_end": "250",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0522.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "First systematic Latin trinitarian treatise; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-detrin-affirms-incarnation",
+        "clm-detrin-affirms-logos",
+        "clm-detrin-affirms-ot-scripture",
+        "clm-detrin-affirms-resurrection",
+        "clm-detrin-affirms-rule-of-faith",
+        "clm-detrin-affirms-trinity",
+        "clm-detrin-affirms-virgin-birth",
+        "clm-detrin-written-rome",
+        "clm-detrin-by-novatian"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-novatian-trin-9-11": [
+          "clm-detrin-affirms-incarnation",
+          "clm-detrin-affirms-logos",
+          "clm-detrin-affirms-resurrection",
+          "clm-detrin-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-novatian-trin-9-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-detrin-affirms-resurrection",
+        "subject_type": "work",
+        "subject_id": "de-trinitate-novatian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "250",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-trinitate-novatian",
+        "title_display": "De Trinitate",
+        "title_original": "De Trinitate",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Novatian's treatise on the Trinity c. 250; the first systematic Latin work on trinitarian theology; affirms the full divinity of Father, Son, and Holy Spirit; defends Christ's true incarnation and real suffering; orthodox in doctrine despite its author's later schism."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-detrin-affirms-resurrection",
+            "passage_id": "psg-novatian-trin-9-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "De Trin. 9-11 affirms Christ truly rose again."
+          },
+          "passage": {
+            "passage_id": "psg-novatian-trin-9-11",
+            "source_id": "src-novatian-de-trinitate",
+            "locator_type": "source_ref",
+            "locator": "De Trin. 9-11",
+            "excerpt": "Paraphrase: Scripture teaches that the Son of God, the Word, was with the Father before the creation of the world. By him all things were made. He is the same who was foretold by the prophets, who took upon himself our flesh, who was truly born of a virgin, who was truly crucified, who truly died, who truly rose again.",
+            "language": "English",
+            "passage_year": "250",
+            "url_override": "",
+            "notes": "Logos pre-existence; true incarnation; real suffering and death; bodily resurrection; anti-docetist"
+          },
+          "source": {
+            "source_id": "src-novatian-de-trinitate",
+            "work_id": "de-trinitate-novatian",
+            "source_kind": "primary_text",
+            "title": "De Trinitate",
+            "author": "Novatian",
+            "editor": "",
+            "year_display": "c. 250",
+            "year_start": "250",
+            "year_end": "250",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0522.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "First systematic Latin trinitarian treatise; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-detrin-affirms-incarnation",
+        "clm-detrin-affirms-logos",
+        "clm-detrin-affirms-ot-scripture",
+        "clm-detrin-affirms-passion",
+        "clm-detrin-affirms-rule-of-faith",
+        "clm-detrin-affirms-trinity",
+        "clm-detrin-affirms-virgin-birth",
+        "clm-detrin-written-rome",
+        "clm-detrin-by-novatian"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-novatian-trin-9-11": [
+          "clm-detrin-affirms-incarnation",
+          "clm-detrin-affirms-logos",
+          "clm-detrin-affirms-passion",
+          "clm-detrin-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-novatian-trin-9-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-detrin-affirms-rule-of-faith",
+        "subject_type": "work",
+        "subject_id": "de-trinitate-novatian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "250",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-trinitate-novatian",
+        "title_display": "De Trinitate",
+        "title_original": "De Trinitate",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Novatian's treatise on the Trinity c. 250; the first systematic Latin work on trinitarian theology; affirms the full divinity of Father, Son, and Holy Spirit; defends Christ's true incarnation and real suffering; orthodox in doctrine despite its author's later schism."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-detrin-affirms-rule-of-faith",
+            "passage_id": "psg-novatian-trin-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "De Trin. 1 opens with 'the rule of truth requires' — an explicit creedal framework."
+          },
+          "passage": {
+            "passage_id": "psg-novatian-trin-1",
+            "source_id": "src-novatian-de-trinitate",
+            "locator_type": "source_ref",
+            "locator": "De Trin. 1",
+            "excerpt": "The rule of truth requires that we should first of all things believe in God the Father and Lord Almighty, that is, the most perfect Creator of all things, who has hung the heavens in lofty sublimity, has laid the solid foundations of the earth, has spread out the seas, and has distributed all things with their fitting ornaments.",
+            "language": "English",
+            "passage_year": "250",
+            "url_override": "",
+            "notes": "Rule of faith opening; God the Father as Creator; creedal structure"
+          },
+          "source": {
+            "source_id": "src-novatian-de-trinitate",
+            "work_id": "de-trinitate-novatian",
+            "source_kind": "primary_text",
+            "title": "De Trinitate",
+            "author": "Novatian",
+            "editor": "",
+            "year_display": "c. 250",
+            "year_start": "250",
+            "year_end": "250",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0522.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "First systematic Latin trinitarian treatise; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-detrin-affirms-incarnation",
+        "clm-detrin-affirms-logos",
+        "clm-detrin-affirms-ot-scripture",
+        "clm-detrin-affirms-passion",
+        "clm-detrin-affirms-resurrection",
+        "clm-detrin-affirms-trinity",
+        "clm-detrin-affirms-virgin-birth",
+        "clm-detrin-written-rome",
+        "clm-detrin-by-novatian"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-novatian-trin-1": [
+          "clm-detrin-by-novatian",
+          "clm-detrin-written-rome"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-detrin-affirms-trinity",
+        "subject_type": "work",
+        "subject_id": "de-trinitate-novatian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "trinity-is-three-persons-one-substance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "250",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-trinitate-novatian",
+        "title_display": "De Trinitate",
+        "title_original": "De Trinitate",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Novatian's treatise on the Trinity c. 250; the first systematic Latin work on trinitarian theology; affirms the full divinity of Father, Son, and Holy Spirit; defends Christ's true incarnation and real suffering; orthodox in doctrine despite its author's later schism."
+      },
+      "object_entity": {
+        "proposition_id": "trinity-is-three-persons-one-substance",
+        "topic_id": "trinitarian-theology",
+        "dimension_id": "trinitarian-formula",
+        "proposition_label": "God is three persons — Father, Son, and Holy Spirit — in one substance",
+        "polarity_family": "trinitarian_formula",
+        "description": "The one God subsists in three persons (personae) — Father, Son, and Holy Spirit — who share one substance (substantia); the Son proceeds from the Father and the Spirit from both, without dividing the divine substance.",
+        "notes": "Trinitarian formula"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-detrin-affirms-trinity",
+            "passage_id": "psg-novatian-trin-31",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "De Trin. 31 concludes that Father, Son, and Holy Spirit are one God in three distinct persons."
+          },
+          "passage": {
+            "passage_id": "psg-novatian-trin-31",
+            "source_id": "src-novatian-de-trinitate",
+            "locator_type": "source_ref",
+            "locator": "De Trin. 31",
+            "excerpt": "Paraphrase: If we consider the teaching of the whole of Scripture, we must necessarily conclude that the Father is God, that the Son is God, and that the Holy Spirit is God; and yet they are not three Gods but one God. The substance is one but the persons are distinct. He proceeds from the Father, as the Son also himself testifies.",
+            "language": "English",
+            "passage_year": "250",
+            "url_override": "",
+            "notes": "One God in three persons; distinct persons, one substance; Latin trinitarian synthesis"
+          },
+          "source": {
+            "source_id": "src-novatian-de-trinitate",
+            "work_id": "de-trinitate-novatian",
+            "source_kind": "primary_text",
+            "title": "De Trinitate",
+            "author": "Novatian",
+            "editor": "",
+            "year_display": "c. 250",
+            "year_start": "250",
+            "year_end": "250",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0522.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "First systematic Latin trinitarian treatise; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-detrin-affirms-incarnation",
+        "clm-detrin-affirms-logos",
+        "clm-detrin-affirms-ot-scripture",
+        "clm-detrin-affirms-passion",
+        "clm-detrin-affirms-resurrection",
+        "clm-detrin-affirms-rule-of-faith",
+        "clm-detrin-affirms-virgin-birth",
+        "clm-detrin-written-rome",
+        "clm-detrin-by-novatian"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-novatian-trin-31"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-detrin-affirms-virgin-birth",
+        "subject_type": "work",
+        "subject_id": "de-trinitate-novatian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "250",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-trinitate-novatian",
+        "title_display": "De Trinitate",
+        "title_original": "De Trinitate",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Novatian's treatise on the Trinity c. 250; the first systematic Latin work on trinitarian theology; affirms the full divinity of Father, Son, and Holy Spirit; defends Christ's true incarnation and real suffering; orthodox in doctrine despite its author's later schism."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-detrin-affirms-virgin-birth",
+            "passage_id": "psg-novatian-trin-9-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "De Trin. 9-11 affirms Christ was truly born of a virgin."
+          },
+          "passage": {
+            "passage_id": "psg-novatian-trin-9-11",
+            "source_id": "src-novatian-de-trinitate",
+            "locator_type": "source_ref",
+            "locator": "De Trin. 9-11",
+            "excerpt": "Paraphrase: Scripture teaches that the Son of God, the Word, was with the Father before the creation of the world. By him all things were made. He is the same who was foretold by the prophets, who took upon himself our flesh, who was truly born of a virgin, who was truly crucified, who truly died, who truly rose again.",
+            "language": "English",
+            "passage_year": "250",
+            "url_override": "",
+            "notes": "Logos pre-existence; true incarnation; real suffering and death; bodily resurrection; anti-docetist"
+          },
+          "source": {
+            "source_id": "src-novatian-de-trinitate",
+            "work_id": "de-trinitate-novatian",
+            "source_kind": "primary_text",
+            "title": "De Trinitate",
+            "author": "Novatian",
+            "editor": "",
+            "year_display": "c. 250",
+            "year_start": "250",
+            "year_end": "250",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0522.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "First systematic Latin trinitarian treatise; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-detrin-affirms-incarnation",
+        "clm-detrin-affirms-logos",
+        "clm-detrin-affirms-ot-scripture",
+        "clm-detrin-affirms-passion",
+        "clm-detrin-affirms-resurrection",
+        "clm-detrin-affirms-rule-of-faith",
+        "clm-detrin-affirms-trinity",
+        "clm-detrin-written-rome",
+        "clm-detrin-by-novatian"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-novatian-trin-9-11": [
+          "clm-detrin-affirms-incarnation",
+          "clm-detrin-affirms-logos",
+          "clm-detrin-affirms-passion",
+          "clm-detrin-affirms-resurrection"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-novatian-trin-9-11"
+      ]
+    }
+  ]
+}

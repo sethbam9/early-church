@@ -1,0 +1,2061 @@
+{
+  "batch_id": "batch-157",
+  "queue": "1",
+  "focus": "ascension-of-jesus; burial-of-jesus; crucifixion-of-jesus; jesus-before-pilate; triumphal-entry-into-jerusalem; last-supper; pentecost; resurrection-of-jesus; temple-cleansing; ananias-of-damascus",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-ascension-year",
+        "subject_type": "event",
+        "subject_id": "ascension-of-jesus",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "30",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T22:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "ascension-of-jesus",
+        "event_label": "Ascension of Jesus",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Luke-Acts narrates Jesus being taken up after the resurrection appearances."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ascension-year",
+            "passage_id": "psg-acts-1-9-11",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-acts-1-9-11",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.1.9-11",
+            "excerpt": "Paraphrase: Jesus is taken up as the disciples watch, and messengers tell them he will come in the same way.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ascension-at-bethany"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-1-9-11": [
+          "clm-jesus-in-ascension"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-1-9-11",
+        "PARAPHRASE_RISK:psg-acts-1-9-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ascension-at-bethany",
+        "subject_type": "event",
+        "subject_id": "ascension-of-jesus",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "bethany-near-jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T22:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "ascension-of-jesus",
+        "event_label": "Ascension of Jesus",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Luke-Acts narrates Jesus being taken up after the resurrection appearances."
+      },
+      "object_entity": {
+        "place_id": "bethany-near-jerusalem",
+        "place_label": "Bethany",
+        "place_label_modern": "al-Eizariya",
+        "place_kind": "site",
+        "parent_place_id": "judea",
+        "lat": "31.7717",
+        "lon": "35.2635",
+        "location_precision": "approx_site",
+        "modern_country_label": "Palestine",
+        "notes": "Village on the eastern slope of the Mount of Olives associated with Mary, Martha, and Lazarus."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ascension-at-bethany",
+            "passage_id": "psg-luke-24-50-53",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Luke places the ascension movement toward Bethany, which anchors the location claim."
+          },
+          "passage": {
+            "passage_id": "psg-luke-24-50-53",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.24.50-53",
+            "excerpt": "Paraphrase: Jesus leads the disciples out toward Bethany, blesses them, and is carried up into heaven.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ascension-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-luke-24-50-53": [
+          "clm-jesus-in-ascension"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-luke-24-50-53"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-burial-year",
+        "subject_type": "event",
+        "subject_id": "burial-of-jesus",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "30",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T22:15:00Z"
+      },
+      "subject_entity": {
+        "event_id": "burial-of-jesus",
+        "event_label": "Burial of Jesus",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Joseph of Arimathea and Nicodemus bury Jesus in a tomb after the crucifixion."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-burial-year",
+            "passage_id": "psg-john-19-38-42",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-john-19-38-42",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.19.38-42",
+            "excerpt": "Paraphrase: Joseph of Arimathea and Nicodemus bury Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-burial-at-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-john-19-38-42": [
+          "clm-burial-at-jerusalem",
+          "clm-jesus-in-burial",
+          "clm-john-zebedee-in-crucifixion",
+          "clm-joseph-arimathea-active-jerusalem",
+          "clm-joseph-arimathea-disciple",
+          "clm-joseph-arimathea-disciple-area",
+          "clm-joseph-arimathea-in-burial",
+          "clm-mary-magdalene-in-crucifixion",
+          "clm-mary-mother-in-crucifixion",
+          "clm-nicodemus-active-jerusalem",
+          "clm-nicodemus-active-judea",
+          "clm-nicodemus-in-burial",
+          "clm-resurrection-at-jerusalem"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-john-19-38-42",
+        "PARAPHRASE_RISK:psg-john-19-38-42"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-burial-at-jerusalem",
+        "subject_type": "event",
+        "subject_id": "burial-of-jesus",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T22:15:00Z"
+      },
+      "subject_entity": {
+        "event_id": "burial-of-jesus",
+        "event_label": "Burial of Jesus",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Joseph of Arimathea and Nicodemus bury Jesus in a tomb after the crucifixion."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-burial-at-jerusalem",
+            "passage_id": "psg-john-19-38-42",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-19-38-42",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.19.38-42",
+            "excerpt": "Paraphrase: Joseph of Arimathea and Nicodemus bury Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-burial-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-john-19-38-42": [
+          "clm-burial-year",
+          "clm-jesus-in-burial",
+          "clm-john-zebedee-in-crucifixion",
+          "clm-joseph-arimathea-active-jerusalem",
+          "clm-joseph-arimathea-disciple",
+          "clm-joseph-arimathea-disciple-area",
+          "clm-joseph-arimathea-in-burial",
+          "clm-mary-magdalene-in-crucifixion",
+          "clm-mary-mother-in-crucifixion",
+          "clm-nicodemus-active-jerusalem",
+          "clm-nicodemus-active-judea",
+          "clm-nicodemus-in-burial",
+          "clm-resurrection-at-jerusalem"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-19-38-42"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-crucifixion-year",
+        "subject_type": "event",
+        "subject_id": "crucifixion-of-jesus",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "30",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:20:00Z"
+      },
+      "subject_entity": {
+        "event_id": "crucifixion-of-jesus",
+        "event_label": "Crucifixion of Jesus",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Execution of Jesus under Roman authority in Jerusalem."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-crucifixion-year",
+            "passage_id": "psg-mark-15-24-39",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-mark-15-24-39",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.15.24-39",
+            "excerpt": "Paraphrase: Jesus is crucified, mocked, and dies, and the centurion witnesses the manner of his death.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-crucifixion-at-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-mark-15-24-39": [
+          "clm-crucifixion-at-jerusalem",
+          "clm-jesus-in-crucifixion"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-mark-15-24-39",
+        "PARAPHRASE_RISK:psg-mark-15-24-39"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-crucifixion-at-jerusalem",
+        "subject_type": "event",
+        "subject_id": "crucifixion-of-jesus",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:20:00Z"
+      },
+      "subject_entity": {
+        "event_id": "crucifixion-of-jesus",
+        "event_label": "Crucifixion of Jesus",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Execution of Jesus under Roman authority in Jerusalem."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-crucifixion-at-jerusalem",
+            "passage_id": "psg-mark-15-24-39",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-15-24-39",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.15.24-39",
+            "excerpt": "Paraphrase: Jesus is crucified, mocked, and dies, and the centurion witnesses the manner of his death.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-crucifixion-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-mark-15-24-39": [
+          "clm-crucifixion-year",
+          "clm-jesus-in-crucifixion"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-15-24-39",
+        "PARAPHRASE_OMISSION:psg-mark-15-24-39:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-jesus-before-pilate-year",
+        "subject_type": "event",
+        "subject_id": "jesus-before-pilate",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "30",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T23:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "jesus-before-pilate",
+        "event_label": "Jesus before Pilate",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Jesus is handed over to Pontius Pilate, examined, and condemned in the passion narrative."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-jesus-before-pilate-year",
+            "passage_id": "psg-mark-15-1-15",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-mark-15-1-15",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.15.1-15",
+            "excerpt": "Paraphrase: Jesus is handed over to Pilate, examined, and condemned to be crucified.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-jesus-before-pilate-at-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-mark-15-1-15": [
+          "clm-jesus-before-pilate-at-jerusalem",
+          "clm-jesus-in-pilate-trial",
+          "clm-pilate-in-crucifixion",
+          "clm-pilate-in-pilate-trial"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-mark-15-1-15",
+        "PARAPHRASE_RISK:psg-mark-15-1-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-jesus-before-pilate-at-jerusalem",
+        "subject_type": "event",
+        "subject_id": "jesus-before-pilate",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T23:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "jesus-before-pilate",
+        "event_label": "Jesus before Pilate",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Jesus is handed over to Pontius Pilate, examined, and condemned in the passion narrative."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-jesus-before-pilate-at-jerusalem",
+            "passage_id": "psg-mark-15-1-15",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Mark's trial narrative is embedded in the Jerusalem passion setting even though the immediate scene centers on Pilate's hearing."
+          },
+          "passage": {
+            "passage_id": "psg-mark-15-1-15",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.15.1-15",
+            "excerpt": "Paraphrase: Jesus is handed over to Pilate, examined, and condemned to be crucified.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-jesus-before-pilate-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-mark-15-1-15": [
+          "clm-jesus-before-pilate-year",
+          "clm-jesus-in-pilate-trial",
+          "clm-pilate-in-crucifixion",
+          "clm-pilate-in-pilate-trial"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-15-1-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-jesus-entry-year",
+        "subject_type": "event",
+        "subject_id": "triumphal-entry-into-jerusalem",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "30",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T23:15:00Z"
+      },
+      "subject_entity": {
+        "event_id": "triumphal-entry-into-jerusalem",
+        "event_label": "Triumphal Entry into Jerusalem",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Jesus enters Jerusalem in a publicly acclaimed approach before the passion week."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-jesus-entry-year",
+            "passage_id": "psg-mark-11-1-11",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-mark-11-1-11",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.11.1-11",
+            "excerpt": "Paraphrase: Jesus approaches Jerusalem, rides in with acclamation, and enters the city and temple precincts.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-jesus-entry-at-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-mark-11-1-11": [
+          "clm-jesus-entry-at-jerusalem",
+          "clm-jesus-in-entry"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-mark-11-1-11",
+        "PARAPHRASE_RISK:psg-mark-11-1-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-jesus-entry-at-jerusalem",
+        "subject_type": "event",
+        "subject_id": "triumphal-entry-into-jerusalem",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T23:15:00Z"
+      },
+      "subject_entity": {
+        "event_id": "triumphal-entry-into-jerusalem",
+        "event_label": "Triumphal Entry into Jerusalem",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Jesus enters Jerusalem in a publicly acclaimed approach before the passion week."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-jesus-entry-at-jerusalem",
+            "passage_id": "psg-mark-11-1-11",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-11-1-11",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.11.1-11",
+            "excerpt": "Paraphrase: Jesus approaches Jerusalem, rides in with acclamation, and enters the city and temple precincts.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-jesus-entry-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-mark-11-1-11": [
+          "clm-jesus-entry-year",
+          "clm-jesus-in-entry"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-11-1-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-last-supper-year",
+        "subject_type": "event",
+        "subject_id": "last-supper",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "30",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "event_id": "last-supper",
+        "event_label": "Last Supper",
+        "event_type": "liturgical",
+        "event_kind": "simple",
+        "notes": "Jesus shares the final meal with his disciples before the passion and gives the bread and cup tradition."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-last-supper-year",
+            "passage_id": "psg-luke-22-7-23",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-luke-22-7-23",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.22.7-23",
+            "excerpt": "Paraphrase: Jesus shares the Passover meal with his disciples, gives the bread and cup, and speaks of betrayal.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-last-supper-at-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-luke-22-7-23": [
+          "clm-jesus-in-last-supper",
+          "clm-john-zebedee-in-last-supper",
+          "clm-judas-in-last-supper",
+          "clm-last-supper-at-jerusalem",
+          "clm-peter-in-last-supper"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-luke-22-7-23",
+        "PARAPHRASE_RISK:psg-luke-22-7-23"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-last-supper-at-jerusalem",
+        "subject_type": "event",
+        "subject_id": "last-supper",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "event_id": "last-supper",
+        "event_label": "Last Supper",
+        "event_type": "liturgical",
+        "event_kind": "simple",
+        "notes": "Jesus shares the final meal with his disciples before the passion and gives the bread and cup tradition."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-last-supper-at-jerusalem",
+            "passage_id": "psg-luke-22-7-23",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Luke places the meal in the Jerusalem passion setting even though the verse cluster centers on the upper-room meal rather than a city label formula."
+          },
+          "passage": {
+            "passage_id": "psg-luke-22-7-23",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.22.7-23",
+            "excerpt": "Paraphrase: Jesus shares the Passover meal with his disciples, gives the bread and cup, and speaks of betrayal.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-last-supper-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-luke-22-7-23": [
+          "clm-jesus-in-last-supper",
+          "clm-john-zebedee-in-last-supper",
+          "clm-judas-in-last-supper",
+          "clm-last-supper-year",
+          "clm-peter-in-last-supper"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-luke-22-7-23"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pentecost-year",
+        "subject_type": "event",
+        "subject_id": "pentecost",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "30",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:20:00Z"
+      },
+      "subject_entity": {
+        "event_id": "pentecost",
+        "event_label": "Pentecost",
+        "event_type": "liturgical",
+        "event_kind": "simple",
+        "notes": "Outpouring of the Holy Spirit on the gathered disciples in Jerusalem."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pentecost-year",
+            "passage_id": "psg-acts-2-1-4",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-acts-2-1-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.2.1-4",
+            "excerpt": "Paraphrase: On the day of Pentecost the gathered disciples are filled with the Holy Spirit and begin speaking in other tongues.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pentecost-at-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-2-1-4": [
+          "clm-acts-affirms-baptism-regen",
+          "clm-acts-affirms-baptism-water",
+          "clm-pentecost-at-jerusalem"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-2-1-4",
+        "PARAPHRASE_RISK:psg-acts-2-1-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pentecost-at-jerusalem",
+        "subject_type": "event",
+        "subject_id": "pentecost",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:20:00Z"
+      },
+      "subject_entity": {
+        "event_id": "pentecost",
+        "event_label": "Pentecost",
+        "event_type": "liturgical",
+        "event_kind": "simple",
+        "notes": "Outpouring of the Holy Spirit on the gathered disciples in Jerusalem."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pentecost-at-jerusalem",
+            "passage_id": "psg-acts-2-1-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-2-1-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.2.1-4",
+            "excerpt": "Paraphrase: On the day of Pentecost the gathered disciples are filled with the Holy Spirit and begin speaking in other tongues.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pentecost-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-2-1-4": [
+          "clm-acts-affirms-baptism-regen",
+          "clm-acts-affirms-baptism-water",
+          "clm-pentecost-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-2-1-4",
+        "PARAPHRASE_OMISSION:psg-acts-2-1-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-resurrection-year",
+        "subject_type": "event",
+        "subject_id": "resurrection-of-jesus",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "30",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T21:45:00Z"
+      },
+      "subject_entity": {
+        "event_id": "resurrection-of-jesus",
+        "event_label": "Resurrection of Jesus",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Earliest Christian proclamation and Gospel narratives report that Jesus was raised after his death and burial."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-resurrection-year",
+            "passage_id": "psg-john-20-1-18",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-john-20-1-18",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.20.1-18",
+            "excerpt": "Paraphrase: Mary Magdalene comes to the tomb and encounters the risen Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-resurrection-at-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-john-20-1-18": [
+          "clm-jesus-in-resurrection",
+          "clm-john-resurrection",
+          "clm-mary-magdalene-active-jerusalem",
+          "clm-mary-magdalene-in-resurrection",
+          "clm-resurrection-at-jerusalem"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-john-20-1-18",
+        "PARAPHRASE_RISK:psg-john-20-1-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-resurrection-at-jerusalem",
+        "subject_type": "event",
+        "subject_id": "resurrection-of-jesus",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T21:45:00Z"
+      },
+      "subject_entity": {
+        "event_id": "resurrection-of-jesus",
+        "event_label": "Resurrection of Jesus",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Earliest Christian proclamation and Gospel narratives report that Jesus was raised after his death and burial."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-resurrection-at-jerusalem",
+            "passage_id": "psg-john-19-38-42",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "John places the burial site near Jerusalem, providing the immediate setting for the resurrection narrative of John 20."
+          },
+          "passage": {
+            "passage_id": "psg-john-19-38-42",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.19.38-42",
+            "excerpt": "Paraphrase: Joseph of Arimathea and Nicodemus bury Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-resurrection-at-jerusalem",
+            "passage_id": "psg-john-20-1-18",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "The resurrection narrative continues at the tomb scene tied to the Jerusalem passion setting."
+          },
+          "passage": {
+            "passage_id": "psg-john-20-1-18",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.20.1-18",
+            "excerpt": "Paraphrase: Mary Magdalene comes to the tomb and encounters the risen Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-resurrection-at-jerusalem",
+            "passage_id": "psg-john-21-1-14",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "John 21 post-resurrection appearance by Sea of Tiberias provides regional context."
+          },
+          "passage": {
+            "passage_id": "psg-john-21-1-14",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.21.1-14",
+            "excerpt": "Paraphrase: Jesus appears to the disciples by the Sea of Tiberias; Peter, Thomas, Nathanael, James and John, and two others are present.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-resurrection-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-john-19-38-42": [
+          "clm-burial-at-jerusalem",
+          "clm-burial-year",
+          "clm-jesus-in-burial",
+          "clm-john-zebedee-in-crucifixion",
+          "clm-joseph-arimathea-active-jerusalem",
+          "clm-joseph-arimathea-disciple",
+          "clm-joseph-arimathea-disciple-area",
+          "clm-joseph-arimathea-in-burial",
+          "clm-mary-magdalene-in-crucifixion",
+          "clm-mary-mother-in-crucifixion",
+          "clm-nicodemus-active-jerusalem",
+          "clm-nicodemus-active-judea",
+          "clm-nicodemus-in-burial"
+        ],
+        "psg-john-20-1-18": [
+          "clm-jesus-in-resurrection",
+          "clm-john-resurrection",
+          "clm-mary-magdalene-active-jerusalem",
+          "clm-mary-magdalene-in-resurrection",
+          "clm-resurrection-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-19-38-42",
+        "PARAPHRASE_RISK:psg-john-20-1-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-temple-year",
+        "subject_type": "event",
+        "subject_id": "temple-cleansing",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "30",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "temple-cleansing",
+        "event_label": "Temple Cleansing",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Jerusalem confrontation during the final phase of ministry."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-temple-year",
+            "passage_id": "psg-mark-11-15-18",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-mark-11-15-18",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.11.15-18",
+            "excerpt": "Paraphrase: Jesus enters the temple precincts in Jerusalem and disrupts buying and selling.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-temple-at-jerusalem"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-mark-11-15-18": [
+          "clm-group-pharisees-judea",
+          "clm-group-sadducees-jerusalem",
+          "clm-jesus-in-temple",
+          "clm-pharisees-at-jerusalem",
+          "clm-place-jerusalem-attested",
+          "clm-place-judea-attested",
+          "clm-temple-at-jerusalem"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-mark-11-15-18",
+        "PARAPHRASE_RISK:psg-mark-11-15-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-temple-at-jerusalem",
+        "subject_type": "event",
+        "subject_id": "temple-cleansing",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "temple-cleansing",
+        "event_label": "Temple Cleansing",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Jerusalem confrontation during the final phase of ministry."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-temple-at-jerusalem",
+            "passage_id": "psg-mark-11-15-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-11-15-18",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.11.15-18",
+            "excerpt": "Paraphrase: Jesus enters the temple precincts in Jerusalem and disrupts buying and selling.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-temple-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-mark-11-15-18": [
+          "clm-group-pharisees-judea",
+          "clm-group-sadducees-jerusalem",
+          "clm-jesus-in-temple",
+          "clm-pharisees-at-jerusalem",
+          "clm-place-jerusalem-attested",
+          "clm-place-judea-attested",
+          "clm-temple-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-11-15-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ananias-of-damascus-active-damascus",
+        "subject_type": "person",
+        "subject_id": "ananias-of-damascus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "damascus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "34",
+        "year_end": "34",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ananias-of-damascus",
+        "person_label": "Ananias of Damascus",
+        "name_alt": "Ananias",
+        "name_native": "Ἀνανίας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Disciple in Damascus who restores Saul's sight and baptizes him in Acts 9."
+      },
+      "object_entity": {
+        "place_id": "damascus",
+        "place_label": "Damascus",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "33.5138",
+        "lon": "36.2765",
+        "location_precision": "exact",
+        "modern_country_label": "Syria",
+        "notes": "City associated with Paul conversion and earliest post-conversion activity."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ananias-of-damascus-active-damascus",
+            "passage_id": "psg-acts-9-10-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-9-10-19",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.9.10-19",
+            "excerpt": "Paraphrase: In Damascus, the disciple Ananias restores Saul's sight, addresses his calling, and baptizes him.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ananias-of-damascus-disciple"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-9-10-19": [
+          "clm-ananias-of-damascus-disciple",
+          "clm-judas-damascus-householder-active-damascus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-9-10-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ananias-of-damascus-disciple",
+        "subject_type": "person",
+        "subject_id": "ananias-of-damascus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "34",
+        "year_end": "34",
+        "context_place_id": "damascus",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ananias-of-damascus",
+        "person_label": "Ananias of Damascus",
+        "name_alt": "Ananias",
+        "name_native": "Ἀνανίας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Disciple in Damascus who restores Saul's sight and baptizes him in Acts 9."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "damascus",
+        "place_label": "Damascus",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "33.5138",
+        "lon": "36.2765",
+        "location_precision": "exact",
+        "modern_country_label": "Syria",
+        "notes": "City associated with Paul conversion and earliest post-conversion activity."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ananias-of-damascus-disciple",
+            "passage_id": "psg-acts-9-10-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-9-10-19",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.9.10-19",
+            "excerpt": "Paraphrase: In Damascus, the disciple Ananias restores Saul's sight, addresses his calling, and baptizes him.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ananias-of-damascus-active-damascus"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-9-10-19": [
+          "clm-ananias-of-damascus-active-damascus",
+          "clm-judas-damascus-householder-active-damascus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-9-10-19",
+        "PARAPHRASE_OMISSION:psg-acts-9-10-19:object"
+      ]
+    }
+  ]
+}

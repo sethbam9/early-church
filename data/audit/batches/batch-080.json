@@ -1,0 +1,1969 @@
+{
+  "batch_id": "batch-080",
+  "queue": "1",
+  "focus": "epistle-of-polycarp-to-philippians",
+  "claim_count": 17,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-phil-by-polycarp",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "polycarp-of-smyrna",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "person_id": "polycarp-of-smyrna",
+        "person_label": "Polycarp of Smyrna",
+        "name_alt": "Polycarp",
+        "name_native": "Πολύκαρπος",
+        "birth_year_display": "c. 69",
+        "death_year_display": "c. 155",
+        "person_kind": "individual",
+        "notes": "Bishop of Smyrna martyred c. 155-156; disciple of the apostle John; correspondent of Ignatius and Rome."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-phil-by-polycarp",
+            "passage_id": "psg-polycarp-phil-7",
+            "evidence_role": "supports",
+            "support_aspect": "attribution",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-7",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 7.1",
+            "excerpt": "For every one who shall not confess that Jesus Christ is come in the flesh, is antichrist; and whosoever shall not confess the testimony of the Cross, is of the devil.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Explicit anti-docetist test: confession of Christ come in the flesh is the mark of orthodoxy; 1 John 4:2 applied"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-7": [
+          "clm-polycarp-letter-affirms-apostolic-succession",
+          "clm-polycarp-letter-affirms-incarnation",
+          "clm-polycarp-letter-affirms-logos",
+          "clm-polycarp-letter-affirms-martyrdom-witness",
+          "clm-polycarp-letter-affirms-rule-of-faith",
+          "clm-polycarp-letter-written-smyrna",
+          "clm-polycarp-phil-affirms-passion",
+          "clm-polycarp-phil-affirms-virgin-birth"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-letter-addressed-philippi",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "addressed_to_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "philippi",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-letter-addressed-philippi",
+            "passage_id": "psg-polycarp-phil-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Polycarp transmits received resurrection faith to Philippians"
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-2",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 2.1-2",
+            "excerpt": "Who raised him from the dead, and gave him glory, and a throne at His right hand. To Him are all things in heaven and on earth subjected; Whom every spirit serves; Who comes as the Judge of living and dead; Whose blood God will require of them that are disobedient to Him.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Resurrection, judgment, and lordship of Christ; creedal summary"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-2": [
+          "clm-polycarp-letter-affirms-bodily-resurrection",
+          "clm-polycarp-phil-affirms-judgment",
+          "clm-polycarp-phil-affirms-ot-scripture",
+          "clm-polycarp-phil-affirms-repentance"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-letter-written-smyrna",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "smyrna",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "place_id": "smyrna",
+        "place_label": "Smyrna",
+        "place_label_modern": "Izmir",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "38.4237",
+        "lon": "27.1428",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "City of one of the churches addressed in Revelation."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-letter-written-smyrna",
+            "passage_id": "psg-polycarp-phil-7",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-7",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 7.1",
+            "excerpt": "For every one who shall not confess that Jesus Christ is come in the flesh, is antichrist; and whosoever shall not confess the testimony of the Cross, is of the devil.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Explicit anti-docetist test: confession of Christ come in the flesh is the mark of orthodoxy; 1 John 4:2 applied"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-7": [
+          "clm-polycarp-letter-affirms-apostolic-succession",
+          "clm-polycarp-letter-affirms-incarnation",
+          "clm-polycarp-letter-affirms-logos",
+          "clm-polycarp-letter-affirms-martyrdom-witness",
+          "clm-polycarp-letter-affirms-rule-of-faith",
+          "clm-polycarp-phil-affirms-passion",
+          "clm-polycarp-phil-affirms-virgin-birth",
+          "clm-polycarp-phil-by-polycarp"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-letter-affirms-apostolic-succession",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-letter-affirms-apostolic-succession",
+            "passage_id": "psg-polycarp-phil-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-7",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 7.1",
+            "excerpt": "For every one who shall not confess that Jesus Christ is come in the flesh, is antichrist; and whosoever shall not confess the testimony of the Cross, is of the devil.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Explicit anti-docetist test: confession of Christ come in the flesh is the mark of orthodoxy; 1 John 4:2 applied"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-7": [
+          "clm-polycarp-letter-affirms-incarnation",
+          "clm-polycarp-letter-affirms-logos",
+          "clm-polycarp-letter-affirms-martyrdom-witness",
+          "clm-polycarp-letter-affirms-rule-of-faith",
+          "clm-polycarp-letter-written-smyrna",
+          "clm-polycarp-phil-affirms-passion",
+          "clm-polycarp-phil-affirms-virgin-birth",
+          "clm-polycarp-phil-by-polycarp"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-letter-affirms-bodily-resurrection",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-letter-affirms-bodily-resurrection",
+            "passage_id": "psg-polycarp-phil-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-2",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 2.1-2",
+            "excerpt": "Who raised him from the dead, and gave him glory, and a throne at His right hand. To Him are all things in heaven and on earth subjected; Whom every spirit serves; Who comes as the Judge of living and dead; Whose blood God will require of them that are disobedient to Him.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Resurrection, judgment, and lordship of Christ; creedal summary"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-2": [
+          "clm-polycarp-letter-addressed-philippi",
+          "clm-polycarp-phil-affirms-judgment",
+          "clm-polycarp-phil-affirms-ot-scripture",
+          "clm-polycarp-phil-affirms-repentance"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-letter-affirms-eucharist",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "eucharist-is-body-and-blood",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "eucharist-is-body-and-blood",
+        "topic_id": "eucharist-presence",
+        "dimension_id": "real-presence",
+        "proposition_label": "The Eucharist is the body and blood of Christ",
+        "polarity_family": "eucharistic_realism",
+        "description": "The eucharistic elements are identified as the flesh and blood of Jesus.",
+        "notes": "Real-presence language"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-letter-affirms-eucharist",
+            "passage_id": "psg-polycarp-phil-2-b",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-2-b",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Pol. Phil. 2",
+            "excerpt": "Believing in him who raised our Lord Jesus Christ from the dead and gave him glory and a throne at his right hand: to him every thing in heaven and on earth is subject, every spirit serves him. He is coming as judge of the living and the dead. His blood will God require of those who do not believe in him.",
+            "language": "English",
+            "passage_year": "120",
+            "url_override": "",
+            "notes": "Resurrection and lordship of Christ; apostolic tradition received and transmitted"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {},
+      "flags": [
+        "UNSCORED_WEIGHT:psg-polycarp-phil-2-b"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-letter-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-letter-affirms-incarnation",
+            "passage_id": "psg-polycarp-phil-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-7",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 7.1",
+            "excerpt": "For every one who shall not confess that Jesus Christ is come in the flesh, is antichrist; and whosoever shall not confess the testimony of the Cross, is of the devil.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Explicit anti-docetist test: confession of Christ come in the flesh is the mark of orthodoxy; 1 John 4:2 applied"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-7": [
+          "clm-polycarp-letter-affirms-apostolic-succession",
+          "clm-polycarp-letter-affirms-logos",
+          "clm-polycarp-letter-affirms-martyrdom-witness",
+          "clm-polycarp-letter-affirms-rule-of-faith",
+          "clm-polycarp-letter-written-smyrna",
+          "clm-polycarp-phil-affirms-passion",
+          "clm-polycarp-phil-affirms-virgin-birth",
+          "clm-polycarp-phil-by-polycarp"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-letter-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-letter-affirms-logos",
+            "passage_id": "psg-polycarp-phil-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-7",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 7.1",
+            "excerpt": "For every one who shall not confess that Jesus Christ is come in the flesh, is antichrist; and whosoever shall not confess the testimony of the Cross, is of the devil.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Explicit anti-docetist test: confession of Christ come in the flesh is the mark of orthodoxy; 1 John 4:2 applied"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-7": [
+          "clm-polycarp-letter-affirms-apostolic-succession",
+          "clm-polycarp-letter-affirms-incarnation",
+          "clm-polycarp-letter-affirms-martyrdom-witness",
+          "clm-polycarp-letter-affirms-rule-of-faith",
+          "clm-polycarp-letter-written-smyrna",
+          "clm-polycarp-phil-affirms-passion",
+          "clm-polycarp-phil-affirms-virgin-birth",
+          "clm-polycarp-phil-by-polycarp"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-polycarp-phil-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-letter-affirms-martyrdom-witness",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "martyrdom-witnesses-to-christ",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "martyrdom-witnesses-to-christ",
+        "topic_id": "martyrdom-theology",
+        "dimension_id": "martyr-witness",
+        "proposition_label": "Martyrdom is bearing faithful witness to Christ before authorities",
+        "polarity_family": "martyr_witness",
+        "description": "The martyr's death is presented as a form of witness to Christ, conforming to his passion and declaring undivided fidelity before earthly powers.",
+        "notes": "Martyrdom theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-letter-affirms-martyrdom-witness",
+            "passage_id": "psg-polycarp-phil-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-7",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 7.1",
+            "excerpt": "For every one who shall not confess that Jesus Christ is come in the flesh, is antichrist; and whosoever shall not confess the testimony of the Cross, is of the devil.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Explicit anti-docetist test: confession of Christ come in the flesh is the mark of orthodoxy; 1 John 4:2 applied"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-7": [
+          "clm-polycarp-letter-affirms-apostolic-succession",
+          "clm-polycarp-letter-affirms-incarnation",
+          "clm-polycarp-letter-affirms-logos",
+          "clm-polycarp-letter-affirms-rule-of-faith",
+          "clm-polycarp-letter-written-smyrna",
+          "clm-polycarp-phil-affirms-passion",
+          "clm-polycarp-phil-affirms-virgin-birth",
+          "clm-polycarp-phil-by-polycarp"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-letter-affirms-rule-of-faith",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-letter-affirms-rule-of-faith",
+            "passage_id": "psg-polycarp-phil-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Defense of received oracles against perversion"
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-7",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 7.1",
+            "excerpt": "For every one who shall not confess that Jesus Christ is come in the flesh, is antichrist; and whosoever shall not confess the testimony of the Cross, is of the devil.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Explicit anti-docetist test: confession of Christ come in the flesh is the mark of orthodoxy; 1 John 4:2 applied"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-7": [
+          "clm-polycarp-letter-affirms-apostolic-succession",
+          "clm-polycarp-letter-affirms-incarnation",
+          "clm-polycarp-letter-affirms-logos",
+          "clm-polycarp-letter-affirms-martyrdom-witness",
+          "clm-polycarp-letter-written-smyrna",
+          "clm-polycarp-phil-affirms-passion",
+          "clm-polycarp-phil-affirms-virgin-birth",
+          "clm-polycarp-phil-by-polycarp"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-letter-affirms-threefold",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "threefold-ministry-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "threefold-ministry-required",
+        "topic_id": "church-order",
+        "dimension_id": "bishop-presbyter-deacon",
+        "proposition_label": "Valid church order requires bishop, presbyter, and deacon",
+        "polarity_family": "threefold_ministry",
+        "description": "The threefold ministry of bishop, presbyter, and deacon is required for valid church structure.",
+        "notes": "Church order"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-letter-affirms-threefold",
+            "passage_id": "psg-polycarp-phil-5-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-5-6",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 5-6",
+            "excerpt": "The deacons must be blameless before the face of His righteousness as deacons of God and Christ. The presbyters must be compassionate, merciful to all, turning back those who have gone astray, caring for all the weak, neglecting neither widow nor orphan.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Distinct roles of deacons and presbyters; clear threefold-order presupposition"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-5-6": [
+          "clm-polycarp-affirms-fasting"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-phil-affirms-fasting",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "fasting-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "fasting-is-required",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "fasting-required",
+        "proposition_label": "Christians are required to fast",
+        "polarity_family": "christian_fasting",
+        "description": "Fasting is a required Christian spiritual discipline presented as obligatory, not merely optional.",
+        "notes": "Ascetic discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-phil-affirms-fasting",
+            "passage_id": "psg-polycarp-phil-7-b",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-7-b",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Pol. Phil. 7",
+            "excerpt": "For whosoever does not confess that Jesus Christ has come in the flesh is antichrist; and whoever does not confess the testimony of the cross is of the devil; and whosoever shall pervert the oracles of the Lord to his own lusts and say there is neither resurrection nor judgment, he is the firstborn of Satan.",
+            "language": "English",
+            "passage_year": "120",
+            "url_override": "",
+            "notes": "Anti-docetist confession of incarnation and resurrection as received rule of faith"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {},
+      "flags": [
+        "UNSCORED_WEIGHT:psg-polycarp-phil-7-b"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-phil-affirms-judgment",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "final-judgment-is-coming",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "final-judgment-is-coming",
+        "topic_id": "final-judgment",
+        "dimension_id": "coming-judgment",
+        "proposition_label": "A final judgment is coming",
+        "polarity_family": "coming_judgment",
+        "description": "Texts or teachers present a climactic future judgment of the wicked and vindication of the righteous.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-phil-affirms-judgment",
+            "passage_id": "psg-polycarp-phil-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-2",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 2.1-2",
+            "excerpt": "Who raised him from the dead, and gave him glory, and a throne at His right hand. To Him are all things in heaven and on earth subjected; Whom every spirit serves; Who comes as the Judge of living and dead; Whose blood God will require of them that are disobedient to Him.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Resurrection, judgment, and lordship of Christ; creedal summary"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-2": [
+          "clm-polycarp-letter-addressed-philippi",
+          "clm-polycarp-letter-affirms-bodily-resurrection",
+          "clm-polycarp-phil-affirms-ot-scripture",
+          "clm-polycarp-phil-affirms-repentance"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-polycarp-phil-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-phil-affirms-ot-scripture",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-phil-affirms-ot-scripture",
+            "passage_id": "psg-polycarp-phil-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-2",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 2.1-2",
+            "excerpt": "Who raised him from the dead, and gave him glory, and a throne at His right hand. To Him are all things in heaven and on earth subjected; Whom every spirit serves; Who comes as the Judge of living and dead; Whose blood God will require of them that are disobedient to Him.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Resurrection, judgment, and lordship of Christ; creedal summary"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-2": [
+          "clm-polycarp-letter-addressed-philippi",
+          "clm-polycarp-letter-affirms-bodily-resurrection",
+          "clm-polycarp-phil-affirms-judgment",
+          "clm-polycarp-phil-affirms-repentance"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-polycarp-phil-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-phil-affirms-passion",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-suffered-and-died",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "120",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign5-heretics",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-suffered-and-died",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "passion-reality",
+        "proposition_label": "Christ Truly Suffered and Died",
+        "polarity_family": "",
+        "description": "Christ's passion and death on the cross were genuine physical events, not apparent, symbolic, or borne by a substitute. Denied by docetists, Basilides (Simon Cyrene substitution), Marcion, and Cerinthus.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-phil-affirms-passion",
+            "passage_id": "psg-polycarp-phil-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "Polycarp Phil 7: 'whosoever does not confess the testimony of the cross is of the devil' — direct anti-docetism."
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-7",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 7.1",
+            "excerpt": "For every one who shall not confess that Jesus Christ is come in the flesh, is antichrist; and whosoever shall not confess the testimony of the Cross, is of the devil.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Explicit anti-docetist test: confession of Christ come in the flesh is the mark of orthodoxy; 1 John 4:2 applied"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-7": [
+          "clm-polycarp-letter-affirms-apostolic-succession",
+          "clm-polycarp-letter-affirms-incarnation",
+          "clm-polycarp-letter-affirms-logos",
+          "clm-polycarp-letter-affirms-martyrdom-witness",
+          "clm-polycarp-letter-affirms-rule-of-faith",
+          "clm-polycarp-letter-written-smyrna",
+          "clm-polycarp-phil-affirms-virgin-birth",
+          "clm-polycarp-phil-by-polycarp"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-phil-affirms-repentance",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "repentance-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "repentance-is-required",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "repentant-response",
+        "proposition_label": "Repentance is required in response to the proclamation",
+        "polarity_family": "repentance_response",
+        "description": "The proclamation of the kingdom calls hearers to repentance.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-phil-affirms-repentance",
+            "passage_id": "psg-polycarp-phil-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-2",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 2.1-2",
+            "excerpt": "Who raised him from the dead, and gave him glory, and a throne at His right hand. To Him are all things in heaven and on earth subjected; Whom every spirit serves; Who comes as the Judge of living and dead; Whose blood God will require of them that are disobedient to Him.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Resurrection, judgment, and lordship of Christ; creedal summary"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-virgin-birth",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-2": [
+          "clm-polycarp-letter-addressed-philippi",
+          "clm-polycarp-letter-affirms-bodily-resurrection",
+          "clm-polycarp-phil-affirms-judgment",
+          "clm-polycarp-phil-affirms-ot-scripture"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-polycarp-phil-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-polycarp-phil-affirms-virgin-birth",
+        "subject_type": "work",
+        "subject_id": "epistle-of-polycarp-to-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "110",
+        "year_end": "135",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-polycarp-to-philippians",
+        "title_display": "Epistle of Polycarp to the Philippians",
+        "title_original": "Πολυκάρπου πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Letter of Polycarp of Smyrna to the church at Philippi c. 110-135, warning against heresy and preserving apostolic tradition."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-polycarp-phil-affirms-virgin-birth",
+            "passage_id": "psg-polycarp-phil-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-polycarp-phil-7",
+            "source_id": "src-polycarp-philippians",
+            "locator_type": "source_ref",
+            "locator": "Phil. 7.1",
+            "excerpt": "For every one who shall not confess that Jesus Christ is come in the flesh, is antichrist; and whosoever shall not confess the testimony of the Cross, is of the devil.",
+            "language": "English",
+            "passage_year": "115",
+            "url_override": "",
+            "notes": "Explicit anti-docetist test: confession of Christ come in the flesh is the mark of orthodoxy; 1 John 4:2 applied"
+          },
+          "source": {
+            "source_id": "src-polycarp-philippians",
+            "work_id": "epistle-of-polycarp-to-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Polycarp of Smyrna",
+            "editor": "",
+            "year_display": "c. 110-135",
+            "year_start": "110",
+            "year_end": "135",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0136.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Polycarp letter to Philippi with apostolic tradition, anti-heresy, eucharist, and resurrection teaching."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-polycarp-phil-affirms-passion",
+        "clm-polycarp-letter-addressed-philippi",
+        "clm-polycarp-letter-affirms-apostolic-succession",
+        "clm-polycarp-letter-affirms-bodily-resurrection",
+        "clm-polycarp-letter-affirms-eucharist",
+        "clm-polycarp-letter-affirms-incarnation",
+        "clm-polycarp-letter-affirms-logos",
+        "clm-polycarp-letter-affirms-martyrdom-witness",
+        "clm-polycarp-letter-affirms-rule-of-faith",
+        "clm-polycarp-letter-affirms-threefold",
+        "clm-polycarp-letter-written-smyrna",
+        "clm-polycarp-phil-affirms-fasting",
+        "clm-polycarp-phil-affirms-judgment",
+        "clm-polycarp-phil-affirms-ot-scripture",
+        "clm-polycarp-phil-affirms-repentance",
+        "clm-polycarp-phil-by-polycarp"
+      ],
+      "sibling_count": 16,
+      "passage_co_users": {
+        "psg-polycarp-phil-7": [
+          "clm-polycarp-letter-affirms-apostolic-succession",
+          "clm-polycarp-letter-affirms-incarnation",
+          "clm-polycarp-letter-affirms-logos",
+          "clm-polycarp-letter-affirms-martyrdom-witness",
+          "clm-polycarp-letter-affirms-rule-of-faith",
+          "clm-polycarp-letter-written-smyrna",
+          "clm-polycarp-phil-affirms-passion",
+          "clm-polycarp-phil-by-polycarp"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-polycarp-phil-7"
+      ]
+    }
+  ]
+}

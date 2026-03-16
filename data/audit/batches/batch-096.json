@@ -1,0 +1,1667 @@
+{
+  "batch_id": "batch-096",
+  "queue": "1",
+  "focus": "eusebius-of-caesarea",
+  "claim_count": 13,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-affirms-bodily-resurrection",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "313",
+        "year_end": "339",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-affirms-bodily-resurrection",
+            "passage_id": "psg-eusebius-he-3-39-1-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-39-1-4",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.39.1-4",
+            "excerpt": "Paraphrase: Eusebius preserves Papias saying he inquired what Andrew, Peter, Philip, Thomas, James, John, Matthew and other elders said.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-39-1-4": [
+          "clm-eusebius-affirms-incarnation",
+          "clm-eusebius-affirms-logos",
+          "clm-eusebius-affirms-ot-scripture",
+          "clm-eusebius-affirms-rule-of-faith",
+          "clm-eusebius-affirms-succession",
+          "clm-peter-teacher-of-mark"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-3-39-1-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-affirms-incarnation",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "313",
+        "year_end": "339",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-affirms-incarnation",
+            "passage_id": "psg-eusebius-he-3-39-1-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-39-1-4",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.39.1-4",
+            "excerpt": "Paraphrase: Eusebius preserves Papias saying he inquired what Andrew, Peter, Philip, Thomas, James, John, Matthew and other elders said.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-39-1-4": [
+          "clm-eusebius-affirms-bodily-resurrection",
+          "clm-eusebius-affirms-logos",
+          "clm-eusebius-affirms-ot-scripture",
+          "clm-eusebius-affirms-rule-of-faith",
+          "clm-eusebius-affirms-succession",
+          "clm-peter-teacher-of-mark"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-3-39-1-4",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-39-1-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-affirms-logos",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "313",
+        "year_end": "339",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-affirms-logos",
+            "passage_id": "psg-eusebius-he-3-39-1-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-39-1-4",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.39.1-4",
+            "excerpt": "Paraphrase: Eusebius preserves Papias saying he inquired what Andrew, Peter, Philip, Thomas, James, John, Matthew and other elders said.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-39-1-4": [
+          "clm-eusebius-affirms-bodily-resurrection",
+          "clm-eusebius-affirms-incarnation",
+          "clm-eusebius-affirms-ot-scripture",
+          "clm-eusebius-affirms-rule-of-faith",
+          "clm-eusebius-affirms-succession",
+          "clm-peter-teacher-of-mark"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-3-39-1-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-affirms-ot-scripture",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "313",
+        "year_end": "339",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-affirms-ot-scripture",
+            "passage_id": "psg-eusebius-he-3-39-1-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-39-1-4",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.39.1-4",
+            "excerpt": "Paraphrase: Eusebius preserves Papias saying he inquired what Andrew, Peter, Philip, Thomas, James, John, Matthew and other elders said.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-39-1-4": [
+          "clm-eusebius-affirms-bodily-resurrection",
+          "clm-eusebius-affirms-incarnation",
+          "clm-eusebius-affirms-logos",
+          "clm-eusebius-affirms-rule-of-faith",
+          "clm-eusebius-affirms-succession",
+          "clm-peter-teacher-of-mark"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-3-39-1-4",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-39-1-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-affirms-rule-of-faith",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "313",
+        "year_end": "339",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-affirms-rule-of-faith",
+            "passage_id": "psg-eusebius-he-3-39-1-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-39-1-4",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.39.1-4",
+            "excerpt": "Paraphrase: Eusebius preserves Papias saying he inquired what Andrew, Peter, Philip, Thomas, James, John, Matthew and other elders said.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-39-1-4": [
+          "clm-eusebius-affirms-bodily-resurrection",
+          "clm-eusebius-affirms-incarnation",
+          "clm-eusebius-affirms-logos",
+          "clm-eusebius-affirms-ot-scripture",
+          "clm-eusebius-affirms-succession",
+          "clm-peter-teacher-of-mark"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-3-39-1-4",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-39-1-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-affirms-succession",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "313",
+        "year_end": "339",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-affirms-succession",
+            "passage_id": "psg-eusebius-he-3-39-1-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-39-1-4",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.39.1-4",
+            "excerpt": "Paraphrase: Eusebius preserves Papias saying he inquired what Andrew, Peter, Philip, Thomas, James, John, Matthew and other elders said.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-39-1-4": [
+          "clm-eusebius-affirms-bodily-resurrection",
+          "clm-eusebius-affirms-incarnation",
+          "clm-eusebius-affirms-logos",
+          "clm-eusebius-affirms-ot-scripture",
+          "clm-eusebius-affirms-rule-of-faith",
+          "clm-peter-teacher-of-mark"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-3-39-1-4",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-39-1-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-affirms-britannia",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-reached-britannia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "325",
+        "year_end": "325",
+        "context_place_id": "caesarea",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-reached-britannia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "britannia-reached",
+        "proposition_label": "Christianity reached Britannia before the end of the Roman period",
+        "polarity_family": "britannia_reached",
+        "description": "Christianity was present in Roman Britain; rhetorical attestation by Tertullian c. 200, Origen c. 244, and firm documentary evidence of 3 British bishops at the Council of Arles 314.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-affirms-britannia",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes eusebius-of-caesarea's position on christianity-reached-britannia."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-36:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-bishop-caesarea",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "caesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "313",
+        "year_end": "339",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-bishop-caesarea",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes eusebius-of-caesarea's role as bishop of caesarea."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-36:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-active-alexandria",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "312",
+        "year_end": "315",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-active-alexandria",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests eusebius-of-caesarea's activity in or near alexandria."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-36:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-active-antioch",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "325",
+        "year_end": "330",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-active-antioch",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests eusebius-of-caesarea's activity in or near antioch."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-participant-council-nicaea",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "council-of-arles-314",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "314",
+        "year_end": "314",
+        "context_place_id": "arles",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "event_id": "council-of-arles-314",
+        "event_label": "Council of Arles (314)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Church council convened by Emperor Constantine at Arles in Gaul, 314; addressed the Donatist controversy; attended by 3 British bishops (Eborius of York, Restitutus of London, Adelfius of Colchester/Lincoln); earliest firm attestation of organized British Christianity."
+      },
+      "context_place": {
+        "place_id": "arles",
+        "place_label": "Arles",
+        "place_label_modern": "Arles",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "43.6767",
+        "lon": "4.6278",
+        "location_precision": "approx_city",
+        "modern_country_label": "France",
+        "notes": "Roman Arelate in southern Gaul; site of the Council of Arles 314 addressing the Donatist controversy; attended by bishops from across the Western empire including 3 from Britain."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-participant-council-nicaea",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes eusebius-of-caesarea's participation in council-of-arles-314."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-participant-nicaea",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "council-of-nicaea-325",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "325",
+        "year_end": "325",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T11:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "event_id": "council-of-nicaea-325",
+        "event_label": "First Council of Nicaea (325)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "First ecumenical council convened by Emperor Constantine at Nicaea in Bithynia, May–August 325 CE. Addressed the Arian controversy; produced the original Nicene Creed affirming the Son as homoousios (same substance) with the Father; condemned Arius; standardized Easter dating; addressed the Meletian schism in Egypt. Attended by ~300 bishops, mostly from the East. Jacob of Nisibis and Eusebius of Caesarea were among the attendees."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-participant-nicaea",
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eusebius of Caesarea attended and wrote an account of Nicaea in his letter to his church (apud Theodoret HE 1.11) and in Vita Constantini 3."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "VC 3.6-14",
+            "excerpt": "Constantine convened the universal synod at Nicaea in Bithynia, gathering bishops from all regions of the empire.",
+            "language": "el",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "Vita Constantini 3.6-14; primary narrative source for Nicaea."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-vita-const-3-6": [
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-participant-nicaea",
+          "clm-church-east-at-nisibis",
+          "clm-constantine-convenes-nicaea",
+          "clm-ephrem-coworker-jacob",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-participant-nicaea",
+          "clm-jacob-teacher-ephrem",
+          "clm-nicaea-occurs-at-nicaea",
+          "clm-nicaea-year-325"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-member-caesarea",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "caesarean-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "313",
+        "year_end": "339",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "group_id": "caesarean-church",
+        "group_label": "Church in Caesarea",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Caesarea Maritima; major center from the apostolic period onward; Origen relocated here c. 232 and founded a theological school and library with Alexander of Jerusalem."
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-member-caesarea",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes eusebius-of-caesarea's membership in caesarean-church."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-36:object"
+      ]
+    }
+  ]
+}

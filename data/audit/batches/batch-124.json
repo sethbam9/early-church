@@ -1,0 +1,2402 @@
+{
+  "batch_id": "batch-124",
+  "queue": "1",
+  "focus": "hegesippus; embassy-for-the-christians; adversus-judaeos-tertullian; contra-noetum",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-hegesippus-active-rome",
+        "subject_type": "person",
+        "subject_id": "hegesippus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "175",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "hegesippus",
+        "person_label": "Hegesippus",
+        "name_alt": "",
+        "name_native": "Ἡγήσιππος",
+        "birth_year_display": "c. 110",
+        "death_year_display": "c. 180",
+        "person_kind": "individual",
+        "notes": "Jewish-Christian historian who traveled from Corinth to Rome under Bishop Anicetus; compiled succession lists of Roman bishops; five books of Memoirs (Ὑπομνήματα) preserved in fragments by Eusebius."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hegesippus-active-rome",
+            "passage_id": "psg-eusebius-he-4-22",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-4-22",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 4.22",
+            "excerpt": "Hegesippus, in his five Memoirs, states that on a journey to Rome he met many bishops along the way and received the same doctrine from all of them. At Rome he compiled a succession list and remained through the episcopate of Anicetus. He found the same law, the prophets, and the Lord preached everywhere.",
+            "language": "English",
+            "passage_year": "313",
+            "url_override": "",
+            "notes": "Hegesippus travels from Jerusalem to Rome; compiles succession lists verifying apostolic faith; stays through Anicetus"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hegesippus-active-jerusalem",
+        "clm-hegesippus-member-jerusalem-church",
+        "clm-hegesippus-active-antioch",
+        "clm-hegesippus-active-corinth",
+        "clm-hegesippus-member-roman-church",
+        "clm-hegesippus-person-affirms-apostolic-succession",
+        "clm-hegesippus-person-affirms-rule-of-faith"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-eusebius-he-4-22": [
+          "clm-hegesippus-active-antioch",
+          "clm-hegesippus-active-jerusalem",
+          "clm-hegesippus-member-jerusalem-church",
+          "clm-hegesippus-member-roman-church",
+          "clm-hegesippus-person-affirms-apostolic-succession",
+          "clm-hegesippus-person-affirms-rule-of-faith"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-hegesippus-member-jerusalem-church",
+        "subject_type": "person",
+        "subject_id": "hegesippus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "jerusalem-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "140",
+        "year_end": "160",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "hegesippus",
+        "person_label": "Hegesippus",
+        "name_alt": "",
+        "name_native": "Ἡγήσιππος",
+        "birth_year_display": "c. 110",
+        "death_year_display": "c. 180",
+        "person_kind": "individual",
+        "notes": "Jewish-Christian historian who traveled from Corinth to Rome under Bishop Anicetus; compiled succession lists of Roman bishops; five books of Memoirs (Ὑπομνήματα) preserved in fragments by Eusebius."
+      },
+      "object_entity": {
+        "group_id": "jerusalem-church",
+        "group_label": "Church in Jerusalem",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Jerusalem community central to the earliest apostolic period."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hegesippus-member-jerusalem-church",
+            "passage_id": "psg-eusebius-he-4-22",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-4-22",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 4.22",
+            "excerpt": "Hegesippus, in his five Memoirs, states that on a journey to Rome he met many bishops along the way and received the same doctrine from all of them. At Rome he compiled a succession list and remained through the episcopate of Anicetus. He found the same law, the prophets, and the Lord preached everywhere.",
+            "language": "English",
+            "passage_year": "313",
+            "url_override": "",
+            "notes": "Hegesippus travels from Jerusalem to Rome; compiles succession lists verifying apostolic faith; stays through Anicetus"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hegesippus-active-jerusalem",
+        "clm-hegesippus-active-antioch",
+        "clm-hegesippus-active-corinth",
+        "clm-hegesippus-active-rome",
+        "clm-hegesippus-member-roman-church",
+        "clm-hegesippus-person-affirms-apostolic-succession",
+        "clm-hegesippus-person-affirms-rule-of-faith"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-eusebius-he-4-22": [
+          "clm-hegesippus-active-antioch",
+          "clm-hegesippus-active-jerusalem",
+          "clm-hegesippus-active-rome",
+          "clm-hegesippus-member-roman-church",
+          "clm-hegesippus-person-affirms-apostolic-succession",
+          "clm-hegesippus-person-affirms-rule-of-faith"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-hegesippus-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "hegesippus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "175",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "hegesippus",
+        "person_label": "Hegesippus",
+        "name_alt": "",
+        "name_native": "Ἡγήσιππος",
+        "birth_year_display": "c. 110",
+        "death_year_display": "c. 180",
+        "person_kind": "individual",
+        "notes": "Jewish-Christian historian who traveled from Corinth to Rome under Bishop Anicetus; compiled succession lists of Roman bishops; five books of Memoirs (Ὑπομνήματα) preserved in fragments by Eusebius."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hegesippus-member-roman-church",
+            "passage_id": "psg-eusebius-he-4-22",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-4-22",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 4.22",
+            "excerpt": "Hegesippus, in his five Memoirs, states that on a journey to Rome he met many bishops along the way and received the same doctrine from all of them. At Rome he compiled a succession list and remained through the episcopate of Anicetus. He found the same law, the prophets, and the Lord preached everywhere.",
+            "language": "English",
+            "passage_year": "313",
+            "url_override": "",
+            "notes": "Hegesippus travels from Jerusalem to Rome; compiles succession lists verifying apostolic faith; stays through Anicetus"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hegesippus-active-jerusalem",
+        "clm-hegesippus-member-jerusalem-church",
+        "clm-hegesippus-active-antioch",
+        "clm-hegesippus-active-corinth",
+        "clm-hegesippus-active-rome",
+        "clm-hegesippus-person-affirms-apostolic-succession",
+        "clm-hegesippus-person-affirms-rule-of-faith"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-eusebius-he-4-22": [
+          "clm-hegesippus-active-antioch",
+          "clm-hegesippus-active-jerusalem",
+          "clm-hegesippus-active-rome",
+          "clm-hegesippus-member-jerusalem-church",
+          "clm-hegesippus-person-affirms-apostolic-succession",
+          "clm-hegesippus-person-affirms-rule-of-faith"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-embassy-by-athenagoras",
+        "subject_type": "work",
+        "subject_id": "embassy-for-the-christians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "athenagoras-of-athens",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "embassy-for-the-christians",
+        "title_display": "Embassy for the Christians",
+        "title_original": "Πρεσβεία περὶ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apology of Athenagoras c. 177 addressed to Marcus Aurelius and Commodus, defending Christian monotheism, Logos theology, and ethics."
+      },
+      "object_entity": {
+        "person_id": "athenagoras-of-athens",
+        "person_label": "Athenagoras of Athens",
+        "name_alt": "Athenagoras",
+        "name_native": "Ἀθηναγόρας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 180",
+        "person_kind": "individual",
+        "notes": "Athenian Christian philosopher who addressed an embassy to Marcus Aurelius and Commodus c. 177 defending Christians and articulating Logos theology."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-embassy-by-athenagoras",
+            "passage_id": "psg-athenagoras-emb-31-33",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Emb.31-33 is from Athenagoras's own Embassy text — direct attribution evidence."
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-emb-31-33",
+            "source_id": "src-athenagoras-embassy",
+            "locator_type": "source_ref",
+            "locator": "Embassy 31-33",
+            "excerpt": "Paraphrase: Christians each have one wife or none; second marriage is adultery; those who marry do so only for the sake of children; they esteem chastity and virginity highly; their aim is to dwell with God, not to gratify passion.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-embassy",
+            "work_id": "embassy-for-the-christians",
+            "source_kind": "primary_text",
+            "title": "Embassy for the Christians",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0205.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenagoras's plea to Marcus Aurelius and Commodus defending Christian monotheism, Logos theology, and moral purity."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-embassy-by-athenagoras",
+            "passage_id": "psg-athenagoras-emb-4-6",
+            "evidence_role": "supports",
+            "support_aspect": "attribution",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-emb-4-6",
+            "source_id": "src-athenagoras-embassy",
+            "locator_type": "source_ref",
+            "locator": "Embassy 4, 6-7",
+            "excerpt": "Paraphrase: God is uncreated and eternal, to be beheld by the understanding alone; we acknowledge one God who has made all things by the Logos which is from Him; He is the God who framed all things by the Logos and holds them in being by His Spirit — not atheists but worshippers of the one Creator.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-embassy",
+            "work_id": "embassy-for-the-christians",
+            "source_kind": "primary_text",
+            "title": "Embassy for the Christians",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0205.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenagoras's plea to Marcus Aurelius and Commodus defending Christian monotheism, Logos theology, and moral purity."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athenagoras-emb-addressed-rome",
+        "clm-athenagoras-emb-affirms-fasting",
+        "clm-athenagoras-emb-affirms-incarnation",
+        "clm-athenagoras-emb-affirms-logos",
+        "clm-athenagoras-emb-affirms-resurrection",
+        "clm-athenagoras-emb-affirms-virgin-birth",
+        "clm-athenagoras-emb-written-athens"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-athenagoras-emb-31-33": [
+          "clm-athenagoras-emb-affirms-resurrection"
+        ],
+        "psg-athenagoras-emb-4-6": [
+          "clm-athenagoras-active-athens",
+          "clm-athenagoras-emb-affirms-logos",
+          "clm-athenagoras-emb-written-athens"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athenagoras-emb-31-33",
+        "PARAPHRASE_RISK:psg-athenagoras-emb-4-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athenagoras-emb-addressed-rome",
+        "subject_type": "work",
+        "subject_id": "embassy-for-the-christians",
+        "predicate_id": "addressed_to_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "177",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T23:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "embassy-for-the-christians",
+        "title_display": "Embassy for the Christians",
+        "title_original": "Πρεσβεία περὶ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apology of Athenagoras c. 177 addressed to Marcus Aurelius and Commodus, defending Christian monotheism, Logos theology, and ethics."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athenagoras-emb-addressed-rome",
+            "passage_id": "psg-athenagoras-emb-37",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-emb-37",
+            "source_id": "src-athenagoras-embassy",
+            "locator_type": "source_ref",
+            "locator": "Embassy 37",
+            "excerpt": "Paraphrase: Christians pray for the emperor and his government; they obey those who rule in all things except what would harm piety; they offer rational worship and prayers, not animal sacrifices; they ask only to be judged by their deeds.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-embassy",
+            "work_id": "embassy-for-the-christians",
+            "source_kind": "primary_text",
+            "title": "Embassy for the Christians",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0205.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenagoras's plea to Marcus Aurelius and Commodus defending Christian monotheism, Logos theology, and moral purity."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athenagoras-emb-affirms-fasting",
+        "clm-athenagoras-emb-affirms-incarnation",
+        "clm-athenagoras-emb-affirms-logos",
+        "clm-athenagoras-emb-affirms-resurrection",
+        "clm-athenagoras-emb-affirms-virgin-birth",
+        "clm-athenagoras-emb-written-athens",
+        "clm-embassy-by-athenagoras"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-athenagoras-emb-37"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athenagoras-emb-written-athens",
+        "subject_type": "work",
+        "subject_id": "embassy-for-the-christians",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "athens",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "177",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T23:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "embassy-for-the-christians",
+        "title_display": "Embassy for the Christians",
+        "title_original": "Πρεσβεία περὶ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apology of Athenagoras c. 177 addressed to Marcus Aurelius and Commodus, defending Christian monotheism, Logos theology, and ethics."
+      },
+      "object_entity": {
+        "place_id": "athens",
+        "place_label": "Athens",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9838",
+        "lon": "23.7275",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Major Greek city visited by Paul in Acts 17."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athenagoras-emb-written-athens",
+            "passage_id": "psg-athenagoras-emb-4-6",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-emb-4-6",
+            "source_id": "src-athenagoras-embassy",
+            "locator_type": "source_ref",
+            "locator": "Embassy 4, 6-7",
+            "excerpt": "Paraphrase: God is uncreated and eternal, to be beheld by the understanding alone; we acknowledge one God who has made all things by the Logos which is from Him; He is the God who framed all things by the Logos and holds them in being by His Spirit — not atheists but worshippers of the one Creator.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-embassy",
+            "work_id": "embassy-for-the-christians",
+            "source_kind": "primary_text",
+            "title": "Embassy for the Christians",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0205.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenagoras's plea to Marcus Aurelius and Commodus defending Christian monotheism, Logos theology, and moral purity."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athenagoras-emb-addressed-rome",
+        "clm-athenagoras-emb-affirms-fasting",
+        "clm-athenagoras-emb-affirms-incarnation",
+        "clm-athenagoras-emb-affirms-logos",
+        "clm-athenagoras-emb-affirms-resurrection",
+        "clm-athenagoras-emb-affirms-virgin-birth",
+        "clm-embassy-by-athenagoras"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-athenagoras-emb-4-6": [
+          "clm-athenagoras-active-athens",
+          "clm-athenagoras-emb-affirms-logos",
+          "clm-embassy-by-athenagoras"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athenagoras-emb-4-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athenagoras-emb-affirms-fasting",
+        "subject_type": "work",
+        "subject_id": "embassy-for-the-christians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "fasting-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "177",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "embassy-for-the-christians",
+        "title_display": "Embassy for the Christians",
+        "title_original": "Πρεσβεία περὶ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apology of Athenagoras c. 177 addressed to Marcus Aurelius and Commodus, defending Christian monotheism, Logos theology, and ethics."
+      },
+      "object_entity": {
+        "proposition_id": "fasting-is-required",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "fasting-required",
+        "proposition_label": "Christians are required to fast",
+        "polarity_family": "christian_fasting",
+        "description": "Fasting is a required Christian spiritual discipline presented as obligatory, not merely optional.",
+        "notes": "Ascetic discipline"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athenagoras-emb-affirms-fasting",
+            "passage_id": "psg-athenagoras-emb-10",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "embassy-for-the-christians is a primary text directly relevant to fasting-is-required."
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-emb-10",
+            "source_id": "src-athenagoras-embassy",
+            "locator_type": "source_ref",
+            "locator": "Embassy 10",
+            "excerpt": "Paraphrase: The Son of God is the Logos and mind of the Father; the Son is in the Father and the Father in the Son in unity and power of Spirit; the Holy Spirit is an effluence from God as light flows from fire; all three are distinguished yet united.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-embassy",
+            "work_id": "embassy-for-the-christians",
+            "source_kind": "primary_text",
+            "title": "Embassy for the Christians",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0205.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenagoras's plea to Marcus Aurelius and Commodus defending Christian monotheism, Logos theology, and moral purity."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athenagoras-emb-addressed-rome",
+        "clm-athenagoras-emb-affirms-incarnation",
+        "clm-athenagoras-emb-affirms-logos",
+        "clm-athenagoras-emb-affirms-resurrection",
+        "clm-athenagoras-emb-affirms-virgin-birth",
+        "clm-athenagoras-emb-written-athens",
+        "clm-embassy-by-athenagoras"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-athenagoras-emb-10": [
+          "clm-athenagoras-emb-affirms-incarnation",
+          "clm-athenagoras-emb-affirms-logos",
+          "clm-athenagoras-emb-affirms-resurrection",
+          "clm-athenagoras-emb-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-athenagoras-emb-10",
+        "PARAPHRASE_RISK:psg-athenagoras-emb-10"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athenagoras-emb-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "embassy-for-the-christians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "177",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "embassy-for-the-christians",
+        "title_display": "Embassy for the Christians",
+        "title_original": "Πρεσβεία περὶ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apology of Athenagoras c. 177 addressed to Marcus Aurelius and Commodus, defending Christian monotheism, Logos theology, and ethics."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athenagoras-emb-affirms-incarnation",
+            "passage_id": "psg-athenagoras-emb-10",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "embassy-for-the-christians is a primary text directly relevant to christ-truly-became-flesh."
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-emb-10",
+            "source_id": "src-athenagoras-embassy",
+            "locator_type": "source_ref",
+            "locator": "Embassy 10",
+            "excerpt": "Paraphrase: The Son of God is the Logos and mind of the Father; the Son is in the Father and the Father in the Son in unity and power of Spirit; the Holy Spirit is an effluence from God as light flows from fire; all three are distinguished yet united.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-embassy",
+            "work_id": "embassy-for-the-christians",
+            "source_kind": "primary_text",
+            "title": "Embassy for the Christians",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0205.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenagoras's plea to Marcus Aurelius and Commodus defending Christian monotheism, Logos theology, and moral purity."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athenagoras-emb-addressed-rome",
+        "clm-athenagoras-emb-affirms-fasting",
+        "clm-athenagoras-emb-affirms-logos",
+        "clm-athenagoras-emb-affirms-resurrection",
+        "clm-athenagoras-emb-affirms-virgin-birth",
+        "clm-athenagoras-emb-written-athens",
+        "clm-embassy-by-athenagoras"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-athenagoras-emb-10": [
+          "clm-athenagoras-emb-affirms-fasting",
+          "clm-athenagoras-emb-affirms-logos",
+          "clm-athenagoras-emb-affirms-resurrection",
+          "clm-athenagoras-emb-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-athenagoras-emb-10",
+        "PARAPHRASE_RISK:psg-athenagoras-emb-10"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athenagoras-emb-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "embassy-for-the-christians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "177",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T23:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "embassy-for-the-christians",
+        "title_display": "Embassy for the Christians",
+        "title_original": "Πρεσβεία περὶ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apology of Athenagoras c. 177 addressed to Marcus Aurelius and Commodus, defending Christian monotheism, Logos theology, and ethics."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athenagoras-emb-affirms-logos",
+            "passage_id": "psg-athenagoras-emb-10",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-emb-10",
+            "source_id": "src-athenagoras-embassy",
+            "locator_type": "source_ref",
+            "locator": "Embassy 10",
+            "excerpt": "Paraphrase: The Son of God is the Logos and mind of the Father; the Son is in the Father and the Father in the Son in unity and power of Spirit; the Holy Spirit is an effluence from God as light flows from fire; all three are distinguished yet united.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-embassy",
+            "work_id": "embassy-for-the-christians",
+            "source_kind": "primary_text",
+            "title": "Embassy for the Christians",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0205.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenagoras's plea to Marcus Aurelius and Commodus defending Christian monotheism, Logos theology, and moral purity."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-athenagoras-emb-affirms-logos",
+            "passage_id": "psg-athenagoras-emb-4-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-emb-4-6",
+            "source_id": "src-athenagoras-embassy",
+            "locator_type": "source_ref",
+            "locator": "Embassy 4, 6-7",
+            "excerpt": "Paraphrase: God is uncreated and eternal, to be beheld by the understanding alone; we acknowledge one God who has made all things by the Logos which is from Him; He is the God who framed all things by the Logos and holds them in being by His Spirit — not atheists but worshippers of the one Creator.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-embassy",
+            "work_id": "embassy-for-the-christians",
+            "source_kind": "primary_text",
+            "title": "Embassy for the Christians",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0205.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenagoras's plea to Marcus Aurelius and Commodus defending Christian monotheism, Logos theology, and moral purity."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athenagoras-emb-addressed-rome",
+        "clm-athenagoras-emb-affirms-fasting",
+        "clm-athenagoras-emb-affirms-incarnation",
+        "clm-athenagoras-emb-affirms-resurrection",
+        "clm-athenagoras-emb-affirms-virgin-birth",
+        "clm-athenagoras-emb-written-athens",
+        "clm-embassy-by-athenagoras"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-athenagoras-emb-10": [
+          "clm-athenagoras-emb-affirms-fasting",
+          "clm-athenagoras-emb-affirms-incarnation",
+          "clm-athenagoras-emb-affirms-resurrection",
+          "clm-athenagoras-emb-affirms-virgin-birth"
+        ],
+        "psg-athenagoras-emb-4-6": [
+          "clm-athenagoras-active-athens",
+          "clm-athenagoras-emb-written-athens",
+          "clm-embassy-by-athenagoras"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athenagoras-emb-10",
+        "PARAPHRASE_RISK:psg-athenagoras-emb-4-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athenagoras-emb-affirms-resurrection",
+        "subject_type": "work",
+        "subject_id": "embassy-for-the-christians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "177",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "embassy-for-the-christians",
+        "title_display": "Embassy for the Christians",
+        "title_original": "Πρεσβεία περὶ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apology of Athenagoras c. 177 addressed to Marcus Aurelius and Commodus, defending Christian monotheism, Logos theology, and ethics."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athenagoras-emb-affirms-resurrection",
+            "passage_id": "psg-athenagoras-emb-10",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "embassy-for-the-christians is a primary text directly relevant to bodies-will-be-raised-at-last-day."
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-emb-10",
+            "source_id": "src-athenagoras-embassy",
+            "locator_type": "source_ref",
+            "locator": "Embassy 10",
+            "excerpt": "Paraphrase: The Son of God is the Logos and mind of the Father; the Son is in the Father and the Father in the Son in unity and power of Spirit; the Holy Spirit is an effluence from God as light flows from fire; all three are distinguished yet united.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-embassy",
+            "work_id": "embassy-for-the-christians",
+            "source_kind": "primary_text",
+            "title": "Embassy for the Christians",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0205.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenagoras's plea to Marcus Aurelius and Commodus defending Christian monotheism, Logos theology, and moral purity."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-athenagoras-emb-affirms-resurrection",
+            "passage_id": "psg-athenagoras-emb-31-33",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Emb.31-33 sexual ethics presupposes bodily resurrection — contextualizes the resurrection proposition."
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-emb-31-33",
+            "source_id": "src-athenagoras-embassy",
+            "locator_type": "source_ref",
+            "locator": "Embassy 31-33",
+            "excerpt": "Paraphrase: Christians each have one wife or none; second marriage is adultery; those who marry do so only for the sake of children; they esteem chastity and virginity highly; their aim is to dwell with God, not to gratify passion.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-embassy",
+            "work_id": "embassy-for-the-christians",
+            "source_kind": "primary_text",
+            "title": "Embassy for the Christians",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0205.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenagoras's plea to Marcus Aurelius and Commodus defending Christian monotheism, Logos theology, and moral purity."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athenagoras-emb-addressed-rome",
+        "clm-athenagoras-emb-affirms-fasting",
+        "clm-athenagoras-emb-affirms-incarnation",
+        "clm-athenagoras-emb-affirms-logos",
+        "clm-athenagoras-emb-affirms-virgin-birth",
+        "clm-athenagoras-emb-written-athens",
+        "clm-embassy-by-athenagoras"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-athenagoras-emb-10": [
+          "clm-athenagoras-emb-affirms-fasting",
+          "clm-athenagoras-emb-affirms-incarnation",
+          "clm-athenagoras-emb-affirms-logos",
+          "clm-athenagoras-emb-affirms-virgin-birth"
+        ],
+        "psg-athenagoras-emb-31-33": [
+          "clm-embassy-by-athenagoras"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-athenagoras-emb-10",
+        "PARAPHRASE_RISK:psg-athenagoras-emb-10"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athenagoras-emb-affirms-virgin-birth",
+        "subject_type": "work",
+        "subject_id": "embassy-for-the-christians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "177",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "embassy-for-the-christians",
+        "title_display": "Embassy for the Christians",
+        "title_original": "Πρεσβεία περὶ Χριστιανῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apology of Athenagoras c. 177 addressed to Marcus Aurelius and Commodus, defending Christian monotheism, Logos theology, and ethics."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athenagoras-emb-affirms-virgin-birth",
+            "passage_id": "psg-athenagoras-emb-10",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "embassy-for-the-christians is a primary text directly relevant to jesus-born-of-virgin."
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-emb-10",
+            "source_id": "src-athenagoras-embassy",
+            "locator_type": "source_ref",
+            "locator": "Embassy 10",
+            "excerpt": "Paraphrase: The Son of God is the Logos and mind of the Father; the Son is in the Father and the Father in the Son in unity and power of Spirit; the Holy Spirit is an effluence from God as light flows from fire; all three are distinguished yet united.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-embassy",
+            "work_id": "embassy-for-the-christians",
+            "source_kind": "primary_text",
+            "title": "Embassy for the Christians",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0205.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenagoras's plea to Marcus Aurelius and Commodus defending Christian monotheism, Logos theology, and moral purity."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athenagoras-emb-addressed-rome",
+        "clm-athenagoras-emb-affirms-fasting",
+        "clm-athenagoras-emb-affirms-incarnation",
+        "clm-athenagoras-emb-affirms-logos",
+        "clm-athenagoras-emb-affirms-resurrection",
+        "clm-athenagoras-emb-written-athens",
+        "clm-embassy-by-athenagoras"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-athenagoras-emb-10": [
+          "clm-athenagoras-emb-affirms-fasting",
+          "clm-athenagoras-emb-affirms-incarnation",
+          "clm-athenagoras-emb-affirms-logos",
+          "clm-athenagoras-emb-affirms-resurrection"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-athenagoras-emb-10",
+        "PARAPHRASE_RISK:psg-athenagoras-emb-10"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-jud-by-tertullian",
+        "subject_type": "work",
+        "subject_id": "adversus-judaeos-tertullian",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "tertullian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-judaeos-tertullian",
+        "title_display": "Adversus Judaeos",
+        "title_original": "Adversus Iudaeos",
+        "work_type": "treatise",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's anti-Jewish treatise (c. 198–208); argues that Christ's dominion has reached nations beyond Roman access including Britannia; contains an early rhetorical claim of universal Christian spread."
+      },
+      "object_entity": {
+        "person_id": "tertullian",
+        "person_label": "Tertullian",
+        "name_alt": "Quintus Septimius Florens Tertullianus",
+        "name_native": "Tertullianus",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 220",
+        "person_kind": "individual",
+        "notes": "First major Latin Christian author; active in Carthage c. 195–220. Wrote at least 31 works spanning apologetics, anti-heretical polemic, and moral discipline. Coined 'trinitas' and 'tres personae una substantia'. Defender of apostolic succession, rule of faith, incarnation, and bodily resurrection. Later attracted to Montanist rigorism c. 207; teacher of Cyprian by doctrinal influence."
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-jud-by-tertullian",
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "The passage is from Adversus Judaeos itself."
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "source_id": "src-adversus-judaeos-tertullian",
+            "locator_type": "source_ref",
+            "locator": "Adv. Jud. 7",
+            "excerpt": "Paraphrase: In whom else have all nations believed but in Christ who has already come? Parthians, Medes, Elamites, those in Mesopotamia, Armenia, Phrygia, Cappadocia, and the haunts of the Britons inaccessible to the Romans but subjugated to Christ.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Tertullian's rhetorical list of peoples reached by Christ including Britannia beyond Roman access."
+          },
+          "source": {
+            "source_id": "src-adversus-judaeos-tertullian",
+            "work_id": "adversus-judaeos-tertullian",
+            "source_kind": "primary_text",
+            "title": "Adversus Judaeos",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198–208",
+            "year_start": "198",
+            "year_end": "208",
+            "container_title": "Tertullian's Works",
+            "publisher": "",
+            "url": "https://www.tertullian.org/works/adversus_judaeos.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Tertullian's anti-Jewish treatise; English and Latin texts at tertullian.org."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-jud-written-carthage",
+        "clm-adv-jud-affirms-britannia-reached",
+        "clm-adv-jud-affirms-universal-dominion",
+        "clm-adv-jud-mentions-arabia",
+        "clm-adv-jud-mentions-ethiopia",
+        "clm-adv-jud-mentions-india",
+        "clm-adv-jud-mentions-universal"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-jud-7": [
+          "clm-adv-jud-affirms-britannia-reached",
+          "clm-adv-jud-affirms-universal-dominion",
+          "clm-adv-jud-mentions-arabia",
+          "clm-adv-jud-mentions-ethiopia",
+          "clm-adv-jud-mentions-india",
+          "clm-adv-jud-mentions-universal",
+          "clm-adv-jud-written-carthage",
+          "clm-british-church-at-britannia"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-adv-jud-7",
+        "PARAPHRASE_OMISSION:psg-tertullian-adv-jud-7:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-jud-written-carthage",
+        "subject_type": "work",
+        "subject_id": "adversus-judaeos-tertullian",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-judaeos-tertullian",
+        "title_display": "Adversus Judaeos",
+        "title_original": "Adversus Iudaeos",
+        "work_type": "treatise",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's anti-Jewish treatise (c. 198–208); argues that Christ's dominion has reached nations beyond Roman access including Britannia; contains an early rhetorical claim of universal Christian spread."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-jud-written-carthage",
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from adversus-judaeos-tertullian contextualizes its composition at carthage."
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "source_id": "src-adversus-judaeos-tertullian",
+            "locator_type": "source_ref",
+            "locator": "Adv. Jud. 7",
+            "excerpt": "Paraphrase: In whom else have all nations believed but in Christ who has already come? Parthians, Medes, Elamites, those in Mesopotamia, Armenia, Phrygia, Cappadocia, and the haunts of the Britons inaccessible to the Romans but subjugated to Christ.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Tertullian's rhetorical list of peoples reached by Christ including Britannia beyond Roman access."
+          },
+          "source": {
+            "source_id": "src-adversus-judaeos-tertullian",
+            "work_id": "adversus-judaeos-tertullian",
+            "source_kind": "primary_text",
+            "title": "Adversus Judaeos",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198–208",
+            "year_start": "198",
+            "year_end": "208",
+            "container_title": "Tertullian's Works",
+            "publisher": "",
+            "url": "https://www.tertullian.org/works/adversus_judaeos.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Tertullian's anti-Jewish treatise; English and Latin texts at tertullian.org."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-jud-by-tertullian",
+        "clm-adv-jud-affirms-britannia-reached",
+        "clm-adv-jud-affirms-universal-dominion",
+        "clm-adv-jud-mentions-arabia",
+        "clm-adv-jud-mentions-ethiopia",
+        "clm-adv-jud-mentions-india",
+        "clm-adv-jud-mentions-universal"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-jud-7": [
+          "clm-adv-jud-affirms-britannia-reached",
+          "clm-adv-jud-affirms-universal-dominion",
+          "clm-adv-jud-by-tertullian",
+          "clm-adv-jud-mentions-arabia",
+          "clm-adv-jud-mentions-ethiopia",
+          "clm-adv-jud-mentions-india",
+          "clm-adv-jud-mentions-universal",
+          "clm-british-church-at-britannia"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tertullian-adv-jud-7",
+        "PARAPHRASE_RISK:psg-tertullian-adv-jud-7",
+        "PARAPHRASE_OMISSION:psg-tertullian-adv-jud-7:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-jud-affirms-britannia-reached",
+        "subject_type": "work",
+        "subject_id": "adversus-judaeos-tertullian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-reached-britannia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-judaeos-tertullian",
+        "title_display": "Adversus Judaeos",
+        "title_original": "Adversus Iudaeos",
+        "work_type": "treatise",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's anti-Jewish treatise (c. 198–208); argues that Christ's dominion has reached nations beyond Roman access including Britannia; contains an early rhetorical claim of universal Christian spread."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-reached-britannia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "britannia-reached",
+        "proposition_label": "Christianity reached Britannia before the end of the Roman period",
+        "polarity_family": "britannia_reached",
+        "description": "Christianity was present in Roman Britain; rhetorical attestation by Tertullian c. 200, Origen c. 244, and firm documentary evidence of 3 British bishops at the Council of Arles 314.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-jud-affirms-britannia-reached",
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Tertullian lists Britannia among places reached by Christ."
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "source_id": "src-adversus-judaeos-tertullian",
+            "locator_type": "source_ref",
+            "locator": "Adv. Jud. 7",
+            "excerpt": "Paraphrase: In whom else have all nations believed but in Christ who has already come? Parthians, Medes, Elamites, those in Mesopotamia, Armenia, Phrygia, Cappadocia, and the haunts of the Britons inaccessible to the Romans but subjugated to Christ.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Tertullian's rhetorical list of peoples reached by Christ including Britannia beyond Roman access."
+          },
+          "source": {
+            "source_id": "src-adversus-judaeos-tertullian",
+            "work_id": "adversus-judaeos-tertullian",
+            "source_kind": "primary_text",
+            "title": "Adversus Judaeos",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198–208",
+            "year_start": "198",
+            "year_end": "208",
+            "container_title": "Tertullian's Works",
+            "publisher": "",
+            "url": "https://www.tertullian.org/works/adversus_judaeos.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Tertullian's anti-Jewish treatise; English and Latin texts at tertullian.org."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-jud-by-tertullian",
+        "clm-adv-jud-written-carthage",
+        "clm-adv-jud-affirms-universal-dominion",
+        "clm-adv-jud-mentions-arabia",
+        "clm-adv-jud-mentions-ethiopia",
+        "clm-adv-jud-mentions-india",
+        "clm-adv-jud-mentions-universal"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-jud-7": [
+          "clm-adv-jud-affirms-universal-dominion",
+          "clm-adv-jud-by-tertullian",
+          "clm-adv-jud-mentions-arabia",
+          "clm-adv-jud-mentions-ethiopia",
+          "clm-adv-jud-mentions-india",
+          "clm-adv-jud-mentions-universal",
+          "clm-adv-jud-written-carthage",
+          "clm-british-church-at-britannia"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-adv-jud-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-jud-affirms-universal-dominion",
+        "subject_type": "work",
+        "subject_id": "adversus-judaeos-tertullian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-dominion-is-universal",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-judaeos-tertullian",
+        "title_display": "Adversus Judaeos",
+        "title_original": "Adversus Iudaeos",
+        "work_type": "treatise",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's anti-Jewish treatise (c. 198–208); argues that Christ's dominion has reached nations beyond Roman access including Britannia; contains an early rhetorical claim of universal Christian spread."
+      },
+      "object_entity": {
+        "proposition_id": "christ-dominion-is-universal",
+        "topic_id": "christian-expansion",
+        "dimension_id": "britannia-reached",
+        "proposition_label": "Christ's dominion extends to all nations beyond the Roman frontier",
+        "polarity_family": "universal_dominion",
+        "description": "Tertullian Adv. Jud. 7 rhetorically lists all nations reached by Christ including those beyond Roman access; an early theological claim of universal Christian presence.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-jud-affirms-universal-dominion",
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Tertullian's universal dominion rhetoric."
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "source_id": "src-adversus-judaeos-tertullian",
+            "locator_type": "source_ref",
+            "locator": "Adv. Jud. 7",
+            "excerpt": "Paraphrase: In whom else have all nations believed but in Christ who has already come? Parthians, Medes, Elamites, those in Mesopotamia, Armenia, Phrygia, Cappadocia, and the haunts of the Britons inaccessible to the Romans but subjugated to Christ.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Tertullian's rhetorical list of peoples reached by Christ including Britannia beyond Roman access."
+          },
+          "source": {
+            "source_id": "src-adversus-judaeos-tertullian",
+            "work_id": "adversus-judaeos-tertullian",
+            "source_kind": "primary_text",
+            "title": "Adversus Judaeos",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198–208",
+            "year_start": "198",
+            "year_end": "208",
+            "container_title": "Tertullian's Works",
+            "publisher": "",
+            "url": "https://www.tertullian.org/works/adversus_judaeos.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Tertullian's anti-Jewish treatise; English and Latin texts at tertullian.org."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-jud-by-tertullian",
+        "clm-adv-jud-written-carthage",
+        "clm-adv-jud-affirms-britannia-reached",
+        "clm-adv-jud-mentions-arabia",
+        "clm-adv-jud-mentions-ethiopia",
+        "clm-adv-jud-mentions-india",
+        "clm-adv-jud-mentions-universal"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-jud-7": [
+          "clm-adv-jud-affirms-britannia-reached",
+          "clm-adv-jud-by-tertullian",
+          "clm-adv-jud-mentions-arabia",
+          "clm-adv-jud-mentions-ethiopia",
+          "clm-adv-jud-mentions-india",
+          "clm-adv-jud-mentions-universal",
+          "clm-adv-jud-written-carthage",
+          "clm-british-church-at-britannia"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-adv-jud-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-jud-mentions-arabia",
+        "subject_type": "work",
+        "subject_id": "adversus-judaeos-tertullian",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-arabia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-judaeos-tertullian",
+        "title_display": "Adversus Judaeos",
+        "title_original": "Adversus Iudaeos",
+        "work_type": "treatise",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's anti-Jewish treatise (c. 198–208); argues that Christ's dominion has reached nations beyond Roman access including Britannia; contains an early rhetorical claim of universal Christian spread."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-arabia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "arabia-christianized",
+        "proposition_label": "Christian communities were established in the Arabian Peninsula",
+        "polarity_family": "arabia_christianized",
+        "description": "Christianity was established in the Arabian Peninsula including at Bostra (synod c. 244), and in Himyar through Theophilus the Indian's mission c. 354 (Philostorgius); Najran attested later.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-jud-mentions-arabia",
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "source_id": "src-adversus-judaeos-tertullian",
+            "locator_type": "source_ref",
+            "locator": "Adv. Jud. 7",
+            "excerpt": "Paraphrase: In whom else have all nations believed but in Christ who has already come? Parthians, Medes, Elamites, those in Mesopotamia, Armenia, Phrygia, Cappadocia, and the haunts of the Britons inaccessible to the Romans but subjugated to Christ.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Tertullian's rhetorical list of peoples reached by Christ including Britannia beyond Roman access."
+          },
+          "source": {
+            "source_id": "src-adversus-judaeos-tertullian",
+            "work_id": "adversus-judaeos-tertullian",
+            "source_kind": "primary_text",
+            "title": "Adversus Judaeos",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198–208",
+            "year_start": "198",
+            "year_end": "208",
+            "container_title": "Tertullian's Works",
+            "publisher": "",
+            "url": "https://www.tertullian.org/works/adversus_judaeos.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Tertullian's anti-Jewish treatise; English and Latin texts at tertullian.org."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-jud-by-tertullian",
+        "clm-adv-jud-written-carthage",
+        "clm-adv-jud-affirms-britannia-reached",
+        "clm-adv-jud-affirms-universal-dominion",
+        "clm-adv-jud-mentions-ethiopia",
+        "clm-adv-jud-mentions-india",
+        "clm-adv-jud-mentions-universal"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-jud-7": [
+          "clm-adv-jud-affirms-britannia-reached",
+          "clm-adv-jud-affirms-universal-dominion",
+          "clm-adv-jud-by-tertullian",
+          "clm-adv-jud-mentions-ethiopia",
+          "clm-adv-jud-mentions-india",
+          "clm-adv-jud-mentions-universal",
+          "clm-adv-jud-written-carthage",
+          "clm-british-church-at-britannia"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tertullian-adv-jud-7",
+        "PARAPHRASE_RISK:psg-tertullian-adv-jud-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-jud-mentions-ethiopia",
+        "subject_type": "work",
+        "subject_id": "adversus-judaeos-tertullian",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christianity-established-in-ethiopia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-judaeos-tertullian",
+        "title_display": "Adversus Judaeos",
+        "title_original": "Adversus Iudaeos",
+        "work_type": "treatise",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's anti-Jewish treatise (c. 198–208); argues that Christ's dominion has reached nations beyond Roman access including Britannia; contains an early rhetorical claim of universal Christian spread."
+      },
+      "object_entity": {
+        "proposition_id": "christianity-established-in-ethiopia",
+        "topic_id": "christian-expansion",
+        "dimension_id": "ethiopia-christianized",
+        "proposition_label": "Christianity was established in Ethiopia through Frumentius and the conversion of King Ezana",
+        "polarity_family": "ethiopia_christianized",
+        "description": "The Aksumite kingdom (Ethiopia) received Christianity through the mission of Frumentius, consecrated by Athanasius of Alexandria, who converted King Ezana c. 330; attested by Rufinus, Socrates, Sozomen.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-jud-mentions-ethiopia",
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "source_id": "src-adversus-judaeos-tertullian",
+            "locator_type": "source_ref",
+            "locator": "Adv. Jud. 7",
+            "excerpt": "Paraphrase: In whom else have all nations believed but in Christ who has already come? Parthians, Medes, Elamites, those in Mesopotamia, Armenia, Phrygia, Cappadocia, and the haunts of the Britons inaccessible to the Romans but subjugated to Christ.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Tertullian's rhetorical list of peoples reached by Christ including Britannia beyond Roman access."
+          },
+          "source": {
+            "source_id": "src-adversus-judaeos-tertullian",
+            "work_id": "adversus-judaeos-tertullian",
+            "source_kind": "primary_text",
+            "title": "Adversus Judaeos",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198–208",
+            "year_start": "198",
+            "year_end": "208",
+            "container_title": "Tertullian's Works",
+            "publisher": "",
+            "url": "https://www.tertullian.org/works/adversus_judaeos.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Tertullian's anti-Jewish treatise; English and Latin texts at tertullian.org."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-jud-by-tertullian",
+        "clm-adv-jud-written-carthage",
+        "clm-adv-jud-affirms-britannia-reached",
+        "clm-adv-jud-affirms-universal-dominion",
+        "clm-adv-jud-mentions-arabia",
+        "clm-adv-jud-mentions-india",
+        "clm-adv-jud-mentions-universal"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-jud-7": [
+          "clm-adv-jud-affirms-britannia-reached",
+          "clm-adv-jud-affirms-universal-dominion",
+          "clm-adv-jud-by-tertullian",
+          "clm-adv-jud-mentions-arabia",
+          "clm-adv-jud-mentions-india",
+          "clm-adv-jud-mentions-universal",
+          "clm-adv-jud-written-carthage",
+          "clm-british-church-at-britannia"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tertullian-adv-jud-7",
+        "PARAPHRASE_RISK:psg-tertullian-adv-jud-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-jud-mentions-india",
+        "subject_type": "work",
+        "subject_id": "adversus-judaeos-tertullian",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "gospel-reached-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-judaeos-tertullian",
+        "title_display": "Adversus Judaeos",
+        "title_original": "Adversus Iudaeos",
+        "work_type": "treatise",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's anti-Jewish treatise (c. 198–208); argues that Christ's dominion has reached nations beyond Roman access including Britannia; contains an early rhetorical claim of universal Christian spread."
+      },
+      "object_entity": {
+        "proposition_id": "gospel-reached-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "india-reached",
+        "proposition_label": "The gospel reached India through early missionary or apostolic activity",
+        "polarity_family": "india_reached",
+        "description": "Christianity reached India — whether the Malabar coast or the broader \"India\" of ancient usage — through apostolic (Thomas, Bartholomew) or early missionary (Pantaenus) activity; attested by Eusebius HE 5.10 and Philostorgius.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-jud-mentions-india",
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "source_id": "src-adversus-judaeos-tertullian",
+            "locator_type": "source_ref",
+            "locator": "Adv. Jud. 7",
+            "excerpt": "Paraphrase: In whom else have all nations believed but in Christ who has already come? Parthians, Medes, Elamites, those in Mesopotamia, Armenia, Phrygia, Cappadocia, and the haunts of the Britons inaccessible to the Romans but subjugated to Christ.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Tertullian's rhetorical list of peoples reached by Christ including Britannia beyond Roman access."
+          },
+          "source": {
+            "source_id": "src-adversus-judaeos-tertullian",
+            "work_id": "adversus-judaeos-tertullian",
+            "source_kind": "primary_text",
+            "title": "Adversus Judaeos",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198–208",
+            "year_start": "198",
+            "year_end": "208",
+            "container_title": "Tertullian's Works",
+            "publisher": "",
+            "url": "https://www.tertullian.org/works/adversus_judaeos.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Tertullian's anti-Jewish treatise; English and Latin texts at tertullian.org."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-jud-by-tertullian",
+        "clm-adv-jud-written-carthage",
+        "clm-adv-jud-affirms-britannia-reached",
+        "clm-adv-jud-affirms-universal-dominion",
+        "clm-adv-jud-mentions-arabia",
+        "clm-adv-jud-mentions-ethiopia",
+        "clm-adv-jud-mentions-universal"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-jud-7": [
+          "clm-adv-jud-affirms-britannia-reached",
+          "clm-adv-jud-affirms-universal-dominion",
+          "clm-adv-jud-by-tertullian",
+          "clm-adv-jud-mentions-arabia",
+          "clm-adv-jud-mentions-ethiopia",
+          "clm-adv-jud-mentions-universal",
+          "clm-adv-jud-written-carthage",
+          "clm-british-church-at-britannia"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tertullian-adv-jud-7",
+        "PARAPHRASE_RISK:psg-tertullian-adv-jud-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-jud-mentions-universal",
+        "subject_type": "work",
+        "subject_id": "adversus-judaeos-tertullian",
+        "predicate_id": "work_mentions_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-dominion-is-universal",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-judaeos-tertullian",
+        "title_display": "Adversus Judaeos",
+        "title_original": "Adversus Iudaeos",
+        "work_type": "treatise",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's anti-Jewish treatise (c. 198–208); argues that Christ's dominion has reached nations beyond Roman access including Britannia; contains an early rhetorical claim of universal Christian spread."
+      },
+      "object_entity": {
+        "proposition_id": "christ-dominion-is-universal",
+        "topic_id": "christian-expansion",
+        "dimension_id": "britannia-reached",
+        "proposition_label": "Christ's dominion extends to all nations beyond the Roman frontier",
+        "polarity_family": "universal_dominion",
+        "description": "Tertullian Adv. Jud. 7 rhetorically lists all nations reached by Christ including those beyond Roman access; an early theological claim of universal Christian presence.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-jud-mentions-universal",
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-jud-7",
+            "source_id": "src-adversus-judaeos-tertullian",
+            "locator_type": "source_ref",
+            "locator": "Adv. Jud. 7",
+            "excerpt": "Paraphrase: In whom else have all nations believed but in Christ who has already come? Parthians, Medes, Elamites, those in Mesopotamia, Armenia, Phrygia, Cappadocia, and the haunts of the Britons inaccessible to the Romans but subjugated to Christ.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Tertullian's rhetorical list of peoples reached by Christ including Britannia beyond Roman access."
+          },
+          "source": {
+            "source_id": "src-adversus-judaeos-tertullian",
+            "work_id": "adversus-judaeos-tertullian",
+            "source_kind": "primary_text",
+            "title": "Adversus Judaeos",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198–208",
+            "year_start": "198",
+            "year_end": "208",
+            "container_title": "Tertullian's Works",
+            "publisher": "",
+            "url": "https://www.tertullian.org/works/adversus_judaeos.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Tertullian's anti-Jewish treatise; English and Latin texts at tertullian.org."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-jud-by-tertullian",
+        "clm-adv-jud-written-carthage",
+        "clm-adv-jud-affirms-britannia-reached",
+        "clm-adv-jud-affirms-universal-dominion",
+        "clm-adv-jud-mentions-arabia",
+        "clm-adv-jud-mentions-ethiopia",
+        "clm-adv-jud-mentions-india"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-jud-7": [
+          "clm-adv-jud-affirms-britannia-reached",
+          "clm-adv-jud-affirms-universal-dominion",
+          "clm-adv-jud-by-tertullian",
+          "clm-adv-jud-mentions-arabia",
+          "clm-adv-jud-mentions-ethiopia",
+          "clm-adv-jud-mentions-india",
+          "clm-adv-jud-written-carthage",
+          "clm-british-church-at-britannia"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tertullian-adv-jud-7",
+        "PARAPHRASE_RISK:psg-tertullian-adv-jud-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cn-by-hippolytus",
+        "subject_type": "work",
+        "subject_id": "contra-noetum",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "hippolytus-of-rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "contra-noetum",
+        "title_display": "Contra Noetum (Against Noetus)",
+        "title_original": "Πρὸς Νοητόν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise against the modalist Noetus of Smyrna, c. 200–210; defends the distinction of Father and Son against Patripassianism; affirms the Logos as a distinct divine person who became incarnate; important pre-Nicene trinitarian witness."
+      },
+      "object_entity": {
+        "person_id": "hippolytus-of-rome",
+        "person_label": "Hippolytus of Rome",
+        "name_alt": "Hippolytus",
+        "name_native": "Ἱππόλυτος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; prolific Greek-speaking writer in Rome; opposed the modalism of Zephyrinus and Callistus; set himself up as rival bishop c. 217 (sometimes called the first antipope); exiled with Pontian to Sardinia in 235; reconciled before death; author of the Apostolic Tradition, Refutation of All Heresies, Against Noetus, and Commentary on Daniel."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cn-by-hippolytus",
+            "passage_id": "psg-hippolytus-cn-1",
+            "evidence_role": "supports",
+            "support_aspect": "attribution",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Scholarly attribution based on style and theological consistency with other Hippolytan works."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-cn-1",
+            "source_id": "src-hippolytus-contra-noetum",
+            "locator_type": "source_ref",
+            "locator": "CN 1",
+            "excerpt": "Paraphrase: Some introduce among us a certain Noetus of Smyrna, who taught that Christ himself was the Father, and that the Father himself was born and suffered and died. They say: Christ was himself the Father and the Father himself suffered.",
+            "language": "English",
+            "passage_year": "205",
+            "url_override": "",
+            "notes": "Introduction of Noetus's modalism/Patripassianism: Father = Son = Christ who suffered"
+          },
+          "source": {
+            "source_id": "src-hippolytus-contra-noetum",
+            "work_id": "contra-noetum",
+            "source_kind": "primary_text",
+            "title": "Against Noetus",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200-210",
+            "year_start": "200",
+            "year_end": "210",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0521.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Anti-modalist treatise defending distinction of Father and Son; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cn-affirms-incarnation",
+        "clm-cn-affirms-logos",
+        "clm-cn-affirms-ot-scripture",
+        "clm-cn-affirms-passion",
+        "clm-cn-affirms-resurrection",
+        "clm-cn-affirms-trinity",
+        "clm-cn-written-rome"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-hippolytus-cn-1": [
+          "clm-cn-affirms-ot-scripture",
+          "clm-cn-affirms-passion",
+          "clm-cn-written-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-cn-1"
+      ]
+    }
+  ]
+}

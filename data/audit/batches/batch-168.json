@@ -1,0 +1,2160 @@
+{
+  "batch_id": "batch-168",
+  "queue": "1",
+  "focus": "mission-of-pantaenus-to-india; pauls-martyrdom; peters-martyrdom; persecution-of-shapur-ii; synod-of-bostra; mission-of-theophilus-to-himyar; origen-torture-under-decius; samaritans; jubilees; qumran-community; qumran; community-rule; first-enoch",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-pantaenus-mission-at-india",
+        "subject_type": "event",
+        "subject_id": "mission-of-pantaenus-to-india",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "india-malabar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "mission-of-pantaenus-to-india",
+        "event_label": "Mission of Pantaenus to India",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Pantaenus sent from Alexandria as far as India (c. 180) per Eusebius HE 5.10; reportedly found Christians using a Hebrew Gospel of Matthew left by Bartholomew; identity of 'India' debated (possibly south Arabia or actual India)."
+      },
+      "object_entity": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pantaenus-mission-at-india",
+            "passage_id": "psg-eusebius-he-5-10-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius locates mission in India."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-3-4",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.3–4",
+            "excerpt": "Paraphrase: Pantaenus is said to have gone to India where he found persons who knew of Christ. Bartholomew one of the apostles had preached to them and left with them the writing of Matthew in the Hebrew language which they had preserved till that time.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Pantaenus finding Christians in India with a Hebrew Matthew from Bartholomew."
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-mission-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-5-10-3-4": [
+          "clm-acts-thomas-affirms-thomas-india",
+          "clm-bartholomew-active-india",
+          "clm-eusebius-he-affirms-bartholomew-india",
+          "clm-eusebius-he-affirms-india-reached",
+          "clm-pantaenus-active-india",
+          "clm-pantaenus-participant-india-mission",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-place-neocaesarea-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-10-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pantaenus-mission-year",
+        "subject_type": "event",
+        "subject_id": "mission-of-pantaenus-to-india",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "180",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "mission-of-pantaenus-to-india",
+        "event_label": "Mission of Pantaenus to India",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Pantaenus sent from Alexandria as far as India (c. 180) per Eusebius HE 5.10; reportedly found Christians using a Hebrew Gospel of Matthew left by Bartholomew; identity of 'India' debated (possibly south Arabia or actual India)."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pantaenus-mission-year",
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Eusebius dates Pantaenus's headship c. 180."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.1–2",
+            "excerpt": "A man named Pantaenus was put in charge of the catechetical school at Alexandria, a school whose existence is attested from ancient times. This man had been trained in the Stoic system of philosophy; tradition reports he went as far as India to preach Christ to the Brahmans. Clement of Alexandria names him in his own writings as his instructor, showing that Pantaenus stood in the succession of teachers at Alexandria.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-mission-at-india"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-5-10-1-2": [
+          "clm-arabian-christians-at-bostra",
+          "clm-clement-alex-active-athens",
+          "clm-clement-alex-affirms-incarnation",
+          "clm-clement-alex-affirms-ot-scripture",
+          "clm-clement-alex-member-alexandrian",
+          "clm-clement-teacher-of-origen",
+          "clm-eusebius-he-mentions-pantaenus-mission",
+          "clm-eusebius-he-written-caesarea",
+          "clm-origen-active-alexandria",
+          "clm-origen-member-alexandrian-church",
+          "clm-pantaenus-active-alexandria",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-pantaenus-teacher-of-clement",
+          "clm-person-pantaenus-affirms-india"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pauls-martyrdom-at-rome",
+        "subject_type": "event",
+        "subject_id": "pauls-martyrdom",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T20:25:00Z"
+      },
+      "subject_entity": {
+        "event_id": "pauls-martyrdom",
+        "event_label": "Paul's Martyrdom",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Early Christian memory of Paul's suffering and death."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pauls-martyrdom-at-rome",
+            "passage_id": "psg-eusebius-church-history-2-25",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eusebius explicitly places Paul's death in Rome, but this batch still treats the localization as probable because the witness is later and tradition-bearing."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-church-history-2-25",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, Hist. eccl. 2.25",
+            "excerpt": "Paraphrase: Eusebius records that Paul was beheaded in Rome itself and Peter likewise suffered under Nero, appealing to Roman memorial traditions and earlier witnesses for their martyrdoms.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pauls-martyrdom-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-church-history-2-25": [
+          "clm-eusebius-he-affirms-universal",
+          "clm-eusebius-he-by-eusebius",
+          "clm-paul-in-pauls-martyrdom",
+          "clm-pauls-martyrdom-year",
+          "clm-peter-in-peters-martyrdom",
+          "clm-peters-martyrdom-at-rome",
+          "clm-peters-martyrdom-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-church-history-2-25"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pauls-martyrdom-year",
+        "subject_type": "event",
+        "subject_id": "pauls-martyrdom",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "64",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "pauls-martyrdom",
+        "event_label": "Paul's Martyrdom",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Early Christian memory of Paul's suffering and death."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pauls-martyrdom-year",
+            "passage_id": "psg-eusebius-church-history-2-25",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-church-history-2-25",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, Hist. eccl. 2.25",
+            "excerpt": "Paraphrase: Eusebius records that Paul was beheaded in Rome itself and Peter likewise suffered under Nero, appealing to Roman memorial traditions and earlier witnesses for their martyrdoms.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pauls-martyrdom-at-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-church-history-2-25": [
+          "clm-eusebius-he-affirms-universal",
+          "clm-eusebius-he-by-eusebius",
+          "clm-paul-in-pauls-martyrdom",
+          "clm-pauls-martyrdom-at-rome",
+          "clm-peter-in-peters-martyrdom",
+          "clm-peters-martyrdom-at-rome",
+          "clm-peters-martyrdom-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-church-history-2-25"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-peters-martyrdom-at-rome",
+        "subject_type": "event",
+        "subject_id": "peters-martyrdom",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T20:25:00Z"
+      },
+      "subject_entity": {
+        "event_id": "peters-martyrdom",
+        "event_label": "Peter's Martyrdom",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Early Christian memory of Peter's suffering and death."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-peters-martyrdom-at-rome",
+            "passage_id": "psg-eusebius-church-history-2-25",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius localizes Peter's suffering through Nero-era and Roman memorial tradition, so the Rome place claim is kept probable rather than maximal."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-church-history-2-25",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, Hist. eccl. 2.25",
+            "excerpt": "Paraphrase: Eusebius records that Paul was beheaded in Rome itself and Peter likewise suffered under Nero, appealing to Roman memorial traditions and earlier witnesses for their martyrdoms.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-peters-martyrdom-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-church-history-2-25": [
+          "clm-eusebius-he-affirms-universal",
+          "clm-eusebius-he-by-eusebius",
+          "clm-paul-in-pauls-martyrdom",
+          "clm-pauls-martyrdom-at-rome",
+          "clm-pauls-martyrdom-year",
+          "clm-peter-in-peters-martyrdom",
+          "clm-peters-martyrdom-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-church-history-2-25"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-peters-martyrdom-year",
+        "subject_type": "event",
+        "subject_id": "peters-martyrdom",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "64",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "peters-martyrdom",
+        "event_label": "Peter's Martyrdom",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Early Christian memory of Peter's suffering and death."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-peters-martyrdom-year",
+            "passage_id": "psg-eusebius-church-history-2-25",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-church-history-2-25",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, Hist. eccl. 2.25",
+            "excerpt": "Paraphrase: Eusebius records that Paul was beheaded in Rome itself and Peter likewise suffered under Nero, appealing to Roman memorial traditions and earlier witnesses for their martyrdoms.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-peters-martyrdom-at-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-church-history-2-25": [
+          "clm-eusebius-he-affirms-universal",
+          "clm-eusebius-he-by-eusebius",
+          "clm-paul-in-pauls-martyrdom",
+          "clm-pauls-martyrdom-at-rome",
+          "clm-pauls-martyrdom-year",
+          "clm-peter-in-peters-martyrdom",
+          "clm-peters-martyrdom-at-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-church-history-2-25"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-shapur-persecution-at-seleucia",
+        "subject_type": "event",
+        "subject_id": "persecution-of-shapur-ii",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "seleucia-ctesiphon",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "persecution-of-shapur-ii",
+        "event_label": "Persecution of Shapur II",
+        "event_type": "persecution",
+        "event_kind": "composite",
+        "notes": "Systematic persecution of Christians in the Sasanian Empire beginning c. 340 under Shapur II; motivated partly by Constantine's declaration of Rome as a Christian empire; Aphrahat wrote his later Demonstrations during this crisis; lasted intermittently until Shapur's death in 379."
+      },
+      "object_entity": {
+        "place_id": "seleucia-ctesiphon",
+        "place_label": "Seleucia-Ctesiphon",
+        "place_label_modern": "Al-Mada'in",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "33.0925",
+        "lon": "44.5775",
+        "location_precision": "approx_site",
+        "modern_country_label": "Iraq",
+        "notes": "Twin cities on the Tigris; capital of the Parthian and Sasanian empires; seat of the Catholicos of the Church of the East from the early 4th century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-shapur-persecution-at-seleucia",
+            "passage_id": "psg-wikipedia-church-of-east-spread",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes the location of persecution-of-shapur-ii."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-church-of-east-spread",
+            "source_id": "src-wikipedia-church-of-east",
+            "locator_type": "source_ref",
+            "locator": "Church_of_the_East#History",
+            "excerpt": "The Church of the East was centered at Seleucia-Ctesiphon and extended through Persia, Mesopotamia (Edessa, Arbela), and eventually reached India.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Church of the East presence at Edessa, Arbela, Seleucia-Ctesiphon, and India."
+          },
+          "source": {
+            "source_id": "src-wikipedia-church-of-east",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Church of the East - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Church_of_the_East",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the geographic extent of the Church of the East."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-shapur-persecution-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-wikipedia-church-of-east-spread": [
+          "clm-bardesanites-at-edessa",
+          "clm-bardesanites-at-mesopotamia",
+          "clm-church-east-at-arbela",
+          "clm-church-east-at-edessa",
+          "clm-church-east-at-seleucia",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-fall-nisibis-year",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-teacher-ephrem",
+          "clm-place-arbela-attested",
+          "clm-place-nisibis-attested",
+          "clm-place-seleucia-ctesiphon-attested",
+          "clm-shapur-in-persecution",
+          "clm-shapur-persecution-year"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-church-of-east-spread",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-shapur-persecution-year",
+        "subject_type": "event",
+        "subject_id": "persecution-of-shapur-ii",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "340",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "persecution-of-shapur-ii",
+        "event_label": "Persecution of Shapur II",
+        "event_type": "persecution",
+        "event_kind": "composite",
+        "notes": "Systematic persecution of Christians in the Sasanian Empire beginning c. 340 under Shapur II; motivated partly by Constantine's declaration of Rome as a Christian empire; Aphrahat wrote his later Demonstrations during this crisis; lasted intermittently until Shapur's death in 379."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-shapur-persecution-year",
+            "passage_id": "psg-wikipedia-church-of-east-spread",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-church-of-east-spread",
+            "source_id": "src-wikipedia-church-of-east",
+            "locator_type": "source_ref",
+            "locator": "Church_of_the_East#History",
+            "excerpt": "The Church of the East was centered at Seleucia-Ctesiphon and extended through Persia, Mesopotamia (Edessa, Arbela), and eventually reached India.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Church of the East presence at Edessa, Arbela, Seleucia-Ctesiphon, and India."
+          },
+          "source": {
+            "source_id": "src-wikipedia-church-of-east",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Church of the East - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Church_of_the_East",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the geographic extent of the Church of the East."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-shapur-persecution-at-seleucia"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-wikipedia-church-of-east-spread": [
+          "clm-bardesanites-at-edessa",
+          "clm-bardesanites-at-mesopotamia",
+          "clm-church-east-at-arbela",
+          "clm-church-east-at-edessa",
+          "clm-church-east-at-seleucia",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-fall-nisibis-year",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-teacher-ephrem",
+          "clm-place-arbela-attested",
+          "clm-place-nisibis-attested",
+          "clm-place-seleucia-ctesiphon-attested",
+          "clm-shapur-in-persecution",
+          "clm-shapur-persecution-at-seleucia"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-church-of-east-spread",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-synod-bostra-occurs-at-bostra",
+        "subject_type": "event",
+        "subject_id": "synod-of-bostra",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "bostra",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "synod-of-bostra",
+        "event_label": "Synod of Bostra",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Synod convened c. 244 at Bostra in Arabia to address the monarchian views of Bishop Beryllus who denied Christ's pre-existent divinity; Origen was invited to debate Beryllus and successfully persuaded him to return to orthodox teaching per Eusebius HE 6.33."
+      },
+      "object_entity": {
+        "place_id": "bostra",
+        "place_label": "Bostra",
+        "place_label_modern": "Busra esh-Sham",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5172",
+        "lon": "36.4817",
+        "location_precision": "approx_city",
+        "modern_country_label": "Syria",
+        "notes": "Capital of the Roman province of Arabia; seat of Bishop Beryllus; site of the synod c. 244 where Origen corrected Beryllus's monarchian views."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-synod-bostra-occurs-at-bostra",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eusebius locates the synod at Bostra."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-synod-bostra-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-synod-bostra-year",
+        "subject_type": "event",
+        "subject_id": "synod-of-bostra",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "244",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "synod-of-bostra",
+        "event_label": "Synod of Bostra",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Synod convened c. 244 at Bostra in Arabia to address the monarchian views of Bishop Beryllus who denied Christ's pre-existent divinity; Origen was invited to debate Beryllus and successfully persuaded him to return to orthodox teaching per Eusebius HE 6.33."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-synod-bostra-year",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius dates the synod c. 244."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-synod-bostra-occurs-at-bostra"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-theophilus-mission-at-zafar",
+        "subject_type": "event",
+        "subject_id": "mission-of-theophilus-to-himyar",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "zafar",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "mission-of-theophilus-to-himyar",
+        "event_label": "Mission of Theophilus to Himyar",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Emperor Constantius II sends bishop Theophilus the Indian c. 354 on a diplomatic-missionary embassy to Himyar (South Arabia); Theophilus builds churches in Zafar and Aden per Philostorgius HE 3.4–6."
+      },
+      "object_entity": {
+        "place_id": "zafar",
+        "place_label": "Zafar",
+        "place_label_modern": "Dhafar",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "14.2131",
+        "lon": "44.4042",
+        "location_precision": "approx_site",
+        "modern_country_label": "Yemen",
+        "notes": "Capital of the Himyarite Kingdom in South Arabia; Theophilus the Indian built a church here c. 354 per Philostorgius HE 3.4."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-theophilus-mission-at-zafar",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Philostorgius locates mission at Zafar."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-mission-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-year",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-theophilus-mission-year",
+        "subject_type": "event",
+        "subject_id": "mission-of-theophilus-to-himyar",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "354",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "mission-of-theophilus-to-himyar",
+        "event_label": "Mission of Theophilus to Himyar",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Emperor Constantius II sends bishop Theophilus the Indian c. 354 on a diplomatic-missionary embassy to Himyar (South Arabia); Theophilus builds churches in Zafar and Aden per Philostorgius HE 3.4–6."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-theophilus-mission-year",
+            "passage_id": "psg-philostorgius-he-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Philostorgius dates mission to Constantius's reign c. 354."
+          },
+          "passage": {
+            "passage_id": "psg-philostorgius-he-3-4",
+            "source_id": "src-philostorgius-he",
+            "locator_type": "source_ref",
+            "locator": "Philostorgius HE 3.4 (Photius epitome)",
+            "excerpt": "Paraphrase: Theophilus called the Indian was sent by Emperor Constantius on an embassy to the Himyarites in south Arabia. He was originally from the island of Dibus (Socotra). He converted the Himyarites and built three churches: one in Zafar the capital, one in Aden, and one near the Persian Gulf. He also visited the Aksumites and corrected their worship.",
+            "language": "English",
+            "passage_year": "425",
+            "url_override": "",
+            "notes": "Key source for Arabian/Himyarite Christianity and Theophilus's mission; preserved in Photius's epitome."
+          },
+          "source": {
+            "source_id": "src-philostorgius-he",
+            "work_id": "philostorgius-ecclesiastical-history",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History (epitome by Photius)",
+            "author": "Philostorgius",
+            "editor": "",
+            "year_display": "c. 425",
+            "year_start": "425",
+            "year_end": "425",
+            "container_title": "Photius Bibliotheca",
+            "publisher": "",
+            "url": "https://www.ccel.org/ccel/pearse/morefathers/files/philostorgius.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Philostorgius via Photius's epitome; English translation at tertullian.org / CCEL."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-theophilus-mission-at-zafar"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-philostorgius-he-3-4": [
+          "clm-arabian-christians-at-zafar",
+          "clm-constantius-coworker-theophilus",
+          "clm-constantius-participant-himyar-mission",
+          "clm-person-theophilus-affirms-arabia",
+          "clm-person-theophilus-affirms-india",
+          "clm-philostorgius-active-constantinople",
+          "clm-philostorgius-affirms-ethiopia",
+          "clm-philostorgius-affirms-india",
+          "clm-philostorgius-he-affirms-arabia-christianized",
+          "clm-philostorgius-he-affirms-india-reached",
+          "clm-philostorgius-he-affirms-thomas-india",
+          "clm-philostorgius-he-by-philostorgius",
+          "clm-philostorgius-he-mentions-ethiopia",
+          "clm-place-najran-attested",
+          "clm-place-zafar-attested",
+          "clm-shapur-in-persecution",
+          "clm-theophilus-active-india",
+          "clm-theophilus-active-zafar",
+          "clm-theophilus-member-arabian",
+          "clm-theophilus-mission-at-zafar",
+          "clm-theophilus-participant-himyar-mission"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-philostorgius-he-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-torture-decius-occurs-at-caesarea",
+        "subject_type": "event",
+        "subject_id": "origen-torture-under-decius",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "caesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "origen-torture-under-decius",
+        "event_label": "Origen's Torture under Decius",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "During the Decian persecution c. 250–251, Origen was imprisoned and subjected to prolonged torture including chains, the rack, and threats of fire; he survived but his health was broken and he died c. 253–254 in Tyre."
+      },
+      "object_entity": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-torture-decius-occurs-at-caesarea",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Eusebius locates Origen's imprisonment during Decian persecution."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-torture-decius-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-torture-decius-year",
+        "subject_type": "event",
+        "subject_id": "origen-torture-under-decius",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "250",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "origen-torture-under-decius",
+        "event_label": "Origen's Torture under Decius",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "During the Decian persecution c. 250–251, Origen was imprisoned and subjected to prolonged torture including chains, the rack, and threats of fire; he survived but his health was broken and he died c. 253–254 in Tyre."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-torture-decius-year",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius dates Origen's torture to the Decian persecution c. 250."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-torture-decius-occurs-at-caesarea"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-samaritans-samaria",
+        "subject_type": "group",
+        "subject_id": "samaritans",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "samaria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "-200",
+        "year_end": "100",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "samaritans",
+        "group_label": "Samaritans",
+        "group_kind": "sect",
+        "is_christian": "false",
+        "notes": "Distinct Israelite religious community centered on Samaria and Mount Gerizim."
+      },
+      "object_entity": {
+        "place_id": "samaria",
+        "place_label": "Samaria",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.2500",
+        "lon": "35.0000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Central region between Judea and Galilee associated with Acts 8 mission activity."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-samaritans-samaria",
+            "passage_id": "psg-acts-8-5-25",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-8-5-25",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.8.5-25",
+            "excerpt": "Paraphrase: Philip proclaims Christ in Samaria, many believe, and Peter and John pray for the new Samaritan believers.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-acts-8-5-25": [
+          "clm-group-disciples-samaria",
+          "clm-philip-evang-active-joppa",
+          "clm-philip-evang-in-jerusalem-persecution",
+          "clm-philip-evangelist-active-samaria",
+          "clm-philip-evangelist-disciple",
+          "clm-place-samaria-attested",
+          "clm-place-samaria-attested-late"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-8-5-25",
+        "PARAPHRASE_OMISSION:psg-acts-8-5-25:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-jubilees-judgment",
+        "subject_type": "work",
+        "subject_id": "jubilees",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "final-judgment-is-coming",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "-150",
+        "year_end": "-150",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "jubilees",
+        "title_display": "Jubilees",
+        "title_original": "Book of Jubilees",
+        "work_type": "other",
+        "language_original": "Hebrew / Ethiopic",
+        "work_kind": "single_work",
+        "notes": "Retelling of Genesis and Exodus with calendrical and covenantal emphases."
+      },
+      "object_entity": {
+        "proposition_id": "final-judgment-is-coming",
+        "topic_id": "final-judgment",
+        "dimension_id": "coming-judgment",
+        "proposition_label": "A final judgment is coming",
+        "polarity_family": "coming_judgment",
+        "description": "Texts or teachers present a climactic future judgment of the wicked and vindication of the righteous.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-jubilees-judgment",
+            "passage_id": "psg-jubilees-23-29-31",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-jubilees-23-29-31",
+            "source_id": "src-jubilees",
+            "locator_type": "source_ref",
+            "locator": "Jub.23.29-31",
+            "excerpt": "Paraphrase: After judgment the Lord will heal his servants and the righteous will see great peace.",
+            "language": "English",
+            "passage_year": "-150",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-jubilees",
+            "work_id": "jubilees",
+            "source_kind": "primary_text",
+            "title": "Jubilees",
+            "author": "Jewish author",
+            "editor": "",
+            "year_display": "2nd c. BCE",
+            "year_start": "-200",
+            "year_end": "-100",
+            "container_title": "Second Temple Jewish literature",
+            "publisher": "",
+            "url": "https://www.pseudepigrapha.com/jubilees/index.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Rewritten scriptural narrative with covenantal and calendrical emphases."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-jubilees-23-29-31"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-qumran-community-qumran",
+        "subject_type": "group",
+        "subject_id": "qumran-community",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "qumran",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "-150",
+        "year_end": "68",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "qumran-community",
+        "group_label": "Qumran Community",
+        "group_kind": "sect",
+        "is_christian": "false",
+        "notes": "Sectarian Yahad community associated with Qumran literature."
+      },
+      "object_entity": {
+        "place_id": "qumran",
+        "place_label": "Qumran",
+        "place_label_modern": "Qumran",
+        "place_kind": "site",
+        "parent_place_id": "judea",
+        "lat": "31.7439",
+        "lon": "35.4583",
+        "location_precision": "approx_site",
+        "modern_country_label": "West Bank",
+        "notes": "Dead Sea site associated with the Yahad and the preservation of sectarian literature."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-qumran-community-qumran",
+            "passage_id": "psg-community-rule-5-7-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-community-rule-5-7-13",
+            "source_id": "src-community-rule",
+            "locator_type": "source_ref",
+            "locator": "1QS 5.7-13",
+            "excerpt": "Paraphrase: Entrants to the community turn from evil and bind themselves to the covenant.",
+            "language": "English",
+            "passage_year": "-100",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-community-rule",
+            "work_id": "community-rule",
+            "source_kind": "primary_text",
+            "title": "Community Rule",
+            "author": "Qumran community tradition",
+            "editor": "",
+            "year_display": "2nd-1st c. BCE",
+            "year_start": "-200",
+            "year_end": "-1",
+            "container_title": "Dead Sea Scrolls",
+            "publisher": "",
+            "url": "https://ccat.sas.upenn.edu/gopher/other/courses/rels/225/Texts/1QS",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Sectarian rule text associated with the Yahad."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-community-rule-5-7-13": [
+          "clm-community-rule-repentance",
+          "clm-place-qumran-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-community-rule-5-7-13",
+        "PARAPHRASE_OMISSION:psg-community-rule-5-7-13:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-place-qumran-attested",
+        "subject_type": "place",
+        "subject_id": "qumran",
+        "predicate_id": "place_presence_status",
+        "object_mode": "text",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "attested",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "-150",
+        "year_end": "68",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "place_id": "qumran",
+        "place_label": "Qumran",
+        "place_label_modern": "Qumran",
+        "place_kind": "site",
+        "parent_place_id": "judea",
+        "lat": "31.7439",
+        "lon": "35.4583",
+        "location_precision": "approx_site",
+        "modern_country_label": "West Bank",
+        "notes": "Dead Sea site associated with the Yahad and the preservation of sectarian literature."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-place-qumran-attested",
+            "passage_id": "psg-community-rule-5-7-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-community-rule-5-7-13",
+            "source_id": "src-community-rule",
+            "locator_type": "source_ref",
+            "locator": "1QS 5.7-13",
+            "excerpt": "Paraphrase: Entrants to the community turn from evil and bind themselves to the covenant.",
+            "language": "English",
+            "passage_year": "-100",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-community-rule",
+            "work_id": "community-rule",
+            "source_kind": "primary_text",
+            "title": "Community Rule",
+            "author": "Qumran community tradition",
+            "editor": "",
+            "year_display": "2nd-1st c. BCE",
+            "year_start": "-200",
+            "year_end": "-1",
+            "container_title": "Dead Sea Scrolls",
+            "publisher": "",
+            "url": "https://ccat.sas.upenn.edu/gopher/other/courses/rels/225/Texts/1QS",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Sectarian rule text associated with the Yahad."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-community-rule-5-7-13": [
+          "clm-community-rule-repentance",
+          "clm-group-qumran-community-qumran"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-community-rule-5-7-13",
+        "PARAPHRASE_OMISSION:psg-community-rule-5-7-13:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-community-rule-repentance",
+        "subject_type": "work",
+        "subject_id": "community-rule",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "repentance-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "-100",
+        "year_end": "-100",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "community-rule",
+        "title_display": "Community Rule",
+        "title_original": "סרך היחד",
+        "work_type": "other",
+        "language_original": "Hebrew",
+        "work_kind": "single_work",
+        "notes": "Qumran sectarian rule text often designated 1QS."
+      },
+      "object_entity": {
+        "proposition_id": "repentance-is-required",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "repentant-response",
+        "proposition_label": "Repentance is required in response to the proclamation",
+        "polarity_family": "repentance_response",
+        "description": "The proclamation of the kingdom calls hearers to repentance.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-community-rule-repentance",
+            "passage_id": "psg-community-rule-5-7-13",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-community-rule-5-7-13",
+            "source_id": "src-community-rule",
+            "locator_type": "source_ref",
+            "locator": "1QS 5.7-13",
+            "excerpt": "Paraphrase: Entrants to the community turn from evil and bind themselves to the covenant.",
+            "language": "English",
+            "passage_year": "-100",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-community-rule",
+            "work_id": "community-rule",
+            "source_kind": "primary_text",
+            "title": "Community Rule",
+            "author": "Qumran community tradition",
+            "editor": "",
+            "year_display": "2nd-1st c. BCE",
+            "year_start": "-200",
+            "year_end": "-1",
+            "container_title": "Dead Sea Scrolls",
+            "publisher": "",
+            "url": "https://ccat.sas.upenn.edu/gopher/other/courses/rels/225/Texts/1QS",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Sectarian rule text associated with the Yahad."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-community-rule-5-7-13": [
+          "clm-group-qumran-community-qumran",
+          "clm-place-qumran-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-community-rule-5-7-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-first-enoch-judgment",
+        "subject_type": "work",
+        "subject_id": "first-enoch",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "final-judgment-is-coming",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "-100",
+        "year_end": "-100",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-enoch",
+        "title_display": "1 Enoch",
+        "title_original": "1 Enoch",
+        "work_type": "other",
+        "language_original": "Aramaic / Ethiopic",
+        "work_kind": "single_work",
+        "notes": "Composite apocalyptic work influential in Second Temple Judaism and echoed in Jude."
+      },
+      "object_entity": {
+        "proposition_id": "final-judgment-is-coming",
+        "topic_id": "final-judgment",
+        "dimension_id": "coming-judgment",
+        "proposition_label": "A final judgment is coming",
+        "polarity_family": "coming_judgment",
+        "description": "Texts or teachers present a climactic future judgment of the wicked and vindication of the righteous.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-first-enoch-judgment",
+            "passage_id": "psg-1enoch-1-9",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-1enoch-1-9",
+            "source_id": "src-1enoch",
+            "locator_type": "source_ref",
+            "locator": "1 Enoch 1.9",
+            "excerpt": "Paraphrase: The Lord comes with holy myriads to execute judgment on all.",
+            "language": "English",
+            "passage_year": "-100",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1enoch",
+            "work_id": "first-enoch",
+            "source_kind": "primary_text",
+            "title": "1 Enoch",
+            "author": "Composite Jewish work",
+            "editor": "",
+            "year_display": "3rd-1st c. BCE",
+            "year_start": "-300",
+            "year_end": "-1",
+            "container_title": "Second Temple Jewish literature",
+            "publisher": "",
+            "url": "https://www.pseudepigrapha.com/pseudepigrapha/1enoch_all.html",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Apocalyptic Jewish work influential in some late Second Temple circles."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-1enoch-1-9"
+      ]
+    }
+  ]
+}

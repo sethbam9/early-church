@@ -1,0 +1,1311 @@
+{
+  "batch_id": "batch-114",
+  "queue": "1",
+  "focus": "novatianists",
+  "claim_count": 10,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-novatianists-at-carthage",
+        "subject_type": "group",
+        "subject_id": "novatianists",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "251",
+        "year_end": "350",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "novatianists",
+        "group_label": "Novatianists",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Rigorist schismatic movement founded by Novatian c. 251 in Rome; denied the possibility of readmission for Christians who lapsed during persecution; spread to Carthage, Antioch, and across the empire; maintained a parallel episcopacy for centuries."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatianists-at-carthage",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Cyprian's letters attest Novatianist presence in Carthage."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatianists-schismed-from-roman-church",
+        "clm-novatianists-at-rome",
+        "clm-novatianists-schismed-from-carthage-church",
+        "clm-novatianists-at-alexandria",
+        "clm-novatianists-at-antioch",
+        "clm-novatianists-at-asia",
+        "clm-novatianists-at-ephesus",
+        "clm-novatianists-at-galatia",
+        "clm-novatianists-at-pontus"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatianists-at-rome",
+        "subject_type": "group",
+        "subject_id": "novatianists",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "251",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "novatianists",
+        "group_label": "Novatianists",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Rigorist schismatic movement founded by Novatian c. 251 in Rome; denied the possibility of readmission for Christians who lapsed during persecution; spread to Carthage, Antioch, and across the empire; maintained a parallel episcopacy for centuries."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatianists-at-rome",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Cornelius describes the Novatianist community in Rome."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatianists-schismed-from-roman-church",
+        "clm-novatianists-at-carthage",
+        "clm-novatianists-schismed-from-carthage-church",
+        "clm-novatianists-at-alexandria",
+        "clm-novatianists-at-antioch",
+        "clm-novatianists-at-asia",
+        "clm-novatianists-at-ephesus",
+        "clm-novatianists-at-galatia",
+        "clm-novatianists-at-pontus"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatianists-at-alexandria",
+        "subject_type": "group",
+        "subject_id": "novatianists",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "260",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "novatianists",
+        "group_label": "Novatianists",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Rigorist schismatic movement founded by Novatian c. 251 in Rome; denied the possibility of readmission for Christians who lapsed during persecution; spread to Carthage, Antioch, and across the empire; maintained a parallel episcopacy for centuries."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatianists-at-alexandria",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Eusebius HE 6.43 (Cornelius's letter) describes Novatian's party reaching multiple churches."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatianists-schismed-from-roman-church",
+        "clm-novatianists-at-carthage",
+        "clm-novatianists-at-rome",
+        "clm-novatianists-schismed-from-carthage-church",
+        "clm-novatianists-at-antioch",
+        "clm-novatianists-at-asia",
+        "clm-novatianists-at-ephesus",
+        "clm-novatianists-at-galatia",
+        "clm-novatianists-at-pontus"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatianists-at-antioch",
+        "subject_type": "group",
+        "subject_id": "novatianists",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "260",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "novatianists",
+        "group_label": "Novatianists",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Rigorist schismatic movement founded by Novatian c. 251 in Rome; denied the possibility of readmission for Christians who lapsed during persecution; spread to Carthage, Antioch, and across the empire; maintained a parallel episcopacy for centuries."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatianists-at-antioch",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.4",
+            "notes": "Eusebius elsewhere notes Novatianist spread."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatianists-schismed-from-roman-church",
+        "clm-novatianists-at-carthage",
+        "clm-novatianists-at-rome",
+        "clm-novatianists-schismed-from-carthage-church",
+        "clm-novatianists-at-alexandria",
+        "clm-novatianists-at-asia",
+        "clm-novatianists-at-ephesus",
+        "clm-novatianists-at-galatia",
+        "clm-novatianists-at-pontus"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatianists-at-asia",
+        "subject_type": "group",
+        "subject_id": "novatianists",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "asia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "260",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "novatianists",
+        "group_label": "Novatianists",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Rigorist schismatic movement founded by Novatian c. 251 in Rome; denied the possibility of readmission for Christians who lapsed during persecution; spread to Carthage, Antioch, and across the empire; maintained a parallel episcopacy for centuries."
+      },
+      "object_entity": {
+        "place_id": "asia",
+        "place_label": "Asia",
+        "place_label_modern": "Roman Asia",
+        "place_kind": "province",
+        "parent_place_id": "",
+        "lat": "38.5000",
+        "lon": "28.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Roman province in western Asia Minor addressed in 1 Peter and associated with Ephesus."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatianists-at-asia",
+            "passage_id": "psg-wikipedia-novatianists-spread",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Novatianism spread through Asia Minor."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-novatianists-spread",
+            "source_id": "src-wikipedia-novatianists",
+            "locator_type": "source_ref",
+            "locator": "Novatianism#Spread",
+            "excerpt": "Novatianism spread widely through the Eastern and Western churches in the 3rd-4th centuries, with communities in Rome, Asia Minor, Galatia, Pontus, and Ephesus.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Novatianist presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-novatianists",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Novatianism - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Novatianism",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the spread of Novatianism across the Eastern and Western churches."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatianists-schismed-from-roman-church",
+        "clm-novatianists-at-carthage",
+        "clm-novatianists-at-rome",
+        "clm-novatianists-schismed-from-carthage-church",
+        "clm-novatianists-at-alexandria",
+        "clm-novatianists-at-antioch",
+        "clm-novatianists-at-ephesus",
+        "clm-novatianists-at-galatia",
+        "clm-novatianists-at-pontus"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-wikipedia-novatianists-spread": [
+          "clm-novatianists-at-ephesus",
+          "clm-novatianists-at-galatia",
+          "clm-novatianists-at-pontus"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-novatianists-spread",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatianists-at-ephesus",
+        "subject_type": "group",
+        "subject_id": "novatianists",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "260",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "novatianists",
+        "group_label": "Novatianists",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Rigorist schismatic movement founded by Novatian c. 251 in Rome; denied the possibility of readmission for Christians who lapsed during persecution; spread to Carthage, Antioch, and across the empire; maintained a parallel episcopacy for centuries."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatianists-at-ephesus",
+            "passage_id": "psg-wikipedia-novatianists-spread",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Novatianist communities attested in Ephesus."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-novatianists-spread",
+            "source_id": "src-wikipedia-novatianists",
+            "locator_type": "source_ref",
+            "locator": "Novatianism#Spread",
+            "excerpt": "Novatianism spread widely through the Eastern and Western churches in the 3rd-4th centuries, with communities in Rome, Asia Minor, Galatia, Pontus, and Ephesus.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Novatianist presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-novatianists",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Novatianism - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Novatianism",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the spread of Novatianism across the Eastern and Western churches."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatianists-schismed-from-roman-church",
+        "clm-novatianists-at-carthage",
+        "clm-novatianists-at-rome",
+        "clm-novatianists-schismed-from-carthage-church",
+        "clm-novatianists-at-alexandria",
+        "clm-novatianists-at-antioch",
+        "clm-novatianists-at-asia",
+        "clm-novatianists-at-galatia",
+        "clm-novatianists-at-pontus"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-wikipedia-novatianists-spread": [
+          "clm-novatianists-at-asia",
+          "clm-novatianists-at-galatia",
+          "clm-novatianists-at-pontus"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-novatianists-spread",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatianists-at-galatia",
+        "subject_type": "group",
+        "subject_id": "novatianists",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galatia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "260",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "novatianists",
+        "group_label": "Novatianists",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Rigorist schismatic movement founded by Novatian c. 251 in Rome; denied the possibility of readmission for Christians who lapsed during persecution; spread to Carthage, Antioch, and across the empire; maintained a parallel episcopacy for centuries."
+      },
+      "object_entity": {
+        "place_id": "galatia",
+        "place_label": "Galatia",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "39.5000",
+        "lon": "32.8000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Region addressed in the Pauline letter to the Galatians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatianists-at-galatia",
+            "passage_id": "psg-wikipedia-novatianists-spread",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Novatianist communities attested in Galatia."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-novatianists-spread",
+            "source_id": "src-wikipedia-novatianists",
+            "locator_type": "source_ref",
+            "locator": "Novatianism#Spread",
+            "excerpt": "Novatianism spread widely through the Eastern and Western churches in the 3rd-4th centuries, with communities in Rome, Asia Minor, Galatia, Pontus, and Ephesus.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Novatianist presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-novatianists",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Novatianism - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Novatianism",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the spread of Novatianism across the Eastern and Western churches."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatianists-schismed-from-roman-church",
+        "clm-novatianists-at-carthage",
+        "clm-novatianists-at-rome",
+        "clm-novatianists-schismed-from-carthage-church",
+        "clm-novatianists-at-alexandria",
+        "clm-novatianists-at-antioch",
+        "clm-novatianists-at-asia",
+        "clm-novatianists-at-ephesus",
+        "clm-novatianists-at-pontus"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-wikipedia-novatianists-spread": [
+          "clm-novatianists-at-asia",
+          "clm-novatianists-at-ephesus",
+          "clm-novatianists-at-pontus"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-novatianists-spread",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatianists-at-pontus",
+        "subject_type": "group",
+        "subject_id": "novatianists",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "pontus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "260",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "novatianists",
+        "group_label": "Novatianists",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Rigorist schismatic movement founded by Novatian c. 251 in Rome; denied the possibility of readmission for Christians who lapsed during persecution; spread to Carthage, Antioch, and across the empire; maintained a parallel episcopacy for centuries."
+      },
+      "object_entity": {
+        "place_id": "pontus",
+        "place_label": "Pontus",
+        "place_label_modern": "",
+        "place_kind": "province",
+        "parent_place_id": "",
+        "lat": "40.8000",
+        "lon": "36.8000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Roman province on the Black Sea named in 1 Peter."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatianists-at-pontus",
+            "passage_id": "psg-wikipedia-novatianists-spread",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Novatianist communities attested in Pontus."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-novatianists-spread",
+            "source_id": "src-wikipedia-novatianists",
+            "locator_type": "source_ref",
+            "locator": "Novatianism#Spread",
+            "excerpt": "Novatianism spread widely through the Eastern and Western churches in the 3rd-4th centuries, with communities in Rome, Asia Minor, Galatia, Pontus, and Ephesus.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Novatianist presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-novatianists",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Novatianism - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Novatianism",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the spread of Novatianism across the Eastern and Western churches."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatianists-schismed-from-roman-church",
+        "clm-novatianists-at-carthage",
+        "clm-novatianists-at-rome",
+        "clm-novatianists-schismed-from-carthage-church",
+        "clm-novatianists-at-alexandria",
+        "clm-novatianists-at-antioch",
+        "clm-novatianists-at-asia",
+        "clm-novatianists-at-ephesus",
+        "clm-novatianists-at-galatia"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-wikipedia-novatianists-spread": [
+          "clm-novatianists-at-asia",
+          "clm-novatianists-at-ephesus",
+          "clm-novatianists-at-galatia"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-novatianists-spread",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatianists-schismed-from-roman-church",
+        "subject_type": "group",
+        "subject_id": "novatianists",
+        "predicate_id": "group_schismed_from",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "251",
+        "year_end": "251",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "novatianists",
+        "group_label": "Novatianists",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Rigorist schismatic movement founded by Novatian c. 251 in Rome; denied the possibility of readmission for Christians who lapsed during persecution; spread to Carthage, Antioch, and across the empire; maintained a parallel episcopacy for centuries."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatianists-schismed-from-roman-church",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Cornelius's letter describes Novatian's irregular seizure of the Roman bishopric c. 251."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatianists-at-carthage",
+        "clm-novatianists-at-rome",
+        "clm-novatianists-schismed-from-carthage-church",
+        "clm-novatianists-at-alexandria",
+        "clm-novatianists-at-antioch",
+        "clm-novatianists-at-asia",
+        "clm-novatianists-at-ephesus",
+        "clm-novatianists-at-galatia",
+        "clm-novatianists-at-pontus"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-43:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-novatianists-schismed-from-carthage-church",
+        "subject_type": "group",
+        "subject_id": "novatianists",
+        "predicate_id": "group_schismed_from",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "carthage-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "252",
+        "year_end": "260",
+        "context_place_id": "carthage",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "novatianists",
+        "group_label": "Novatianists",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Rigorist schismatic movement founded by Novatian c. 251 in Rome; denied the possibility of readmission for Christians who lapsed during persecution; spread to Carthage, Antioch, and across the empire; maintained a parallel episcopacy for centuries."
+      },
+      "object_entity": {
+        "group_id": "carthage-church",
+        "group_label": "Church in Carthage",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Major North African Christian community centered in Carthage; home of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-novatianists-schismed-from-carthage-church",
+            "passage_id": "psg-cyprian-unit-6",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "De Unitate's ecclesiology responds to the Novatianist schism affecting Carthage."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-unit-6",
+            "source_id": "src-cyprian-de-unitate",
+            "locator_type": "source_ref",
+            "locator": "De Unit. 6",
+            "excerpt": "Paraphrase: The episcopate is one, each part of which is held by each one for the whole. The Church also is one, which is spread abroad far and wide into a multitude by an increase of fruitfulness. As the sun has many rays but one light, and a tree has many branches but one strength, and as many streams flow from one spring — so also the Church, bathed in the light of the Lord, extends her rays over the whole world, yet it is one light that is diffused everywhere.",
+            "language": "English",
+            "passage_year": "251",
+            "url_override": "",
+            "notes": "Episcopate held in solidum; Church unity through episcopal collegiality; sun/tree/stream metaphors"
+          },
+          "source": {
+            "source_id": "src-cyprian-de-unitate",
+            "work_id": "de-unitate-ecclesiae",
+            "source_kind": "primary_text",
+            "title": "De Ecclesiae Catholicae Unitate (On the Unity of the Church)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 251",
+            "year_start": "251",
+            "year_end": "251",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050704.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Cyprian's foundational ecclesiology treatise; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-novatianists-schismed-from-carthage-church",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-novatianists-schismed-from-roman-church",
+        "clm-novatianists-at-carthage",
+        "clm-novatianists-at-rome",
+        "clm-novatianists-at-alexandria",
+        "clm-novatianists-at-antioch",
+        "clm-novatianists-at-asia",
+        "clm-novatianists-at-ephesus",
+        "clm-novatianists-at-galatia",
+        "clm-novatianists-at-pontus"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-cyprian-unit-6": [
+          "clm-de-unitate-affirms-baptism-water",
+          "clm-de-unitate-affirms-episcopal-unity",
+          "clm-de-unitate-affirms-eucharist-sunday",
+          "clm-de-unitate-opposes-rebaptism-void"
+        ],
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-43:subject+object"
+      ]
+    }
+  ]
+}

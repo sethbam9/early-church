@@ -1,0 +1,2691 @@
+{
+  "batch_id": "batch-026",
+  "queue": "0A",
+  "focus": "psg-1pet-1-1(15)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-agabus-member-antioch-church",
+        "subject_type": "person",
+        "subject_id": "agabus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "agabus",
+        "person_label": "Agabus",
+        "name_alt": "",
+        "name_native": "Ἅγαβος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet who comes down from Judea and warns Paul in Acts 21."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-agabus-member-antioch-church",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions agabus or antioch-church."
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-agabus-active-antioch",
+        "clm-agabus-member-disciples",
+        "clm-agabus-active-judea",
+        "clm-agabus-member-caesarean"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1",
+        "PARAPHRASE_OMISSION:psg-acts-13-1:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-manaen-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "manaen",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "manaen",
+        "person_label": "Manaen",
+        "name_alt": "Menaen",
+        "name_native": "Μαναήν",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher at Antioch said to have been brought up with Herod the tetrarch in Acts 13."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-manaen-coworker-paul",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-manaen-active-antioch",
+        "clm-manaen-antioch-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1",
+        "PARAPHRASE_OMISSION:psg-acts-13-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-manaen-antioch-church",
+        "subject_type": "person",
+        "subject_id": "manaen",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "manaen",
+        "person_label": "Manaen",
+        "name_alt": "Menaen",
+        "name_native": "Μαναήν",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher at Antioch said to have been brought up with Herod the tetrarch in Acts 13."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-manaen-antioch-church",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-manaen-active-antioch",
+        "clm-manaen-coworker-paul"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lucius-cyrene-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "lucius-of-cyrene",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lucius-of-cyrene",
+        "person_label": "Lucius of Cyrene",
+        "name_alt": "Lucius",
+        "name_native": "Λούκιος ὁ Κυρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher from Cyrene named in the church at Antioch in Acts 13."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lucius-cyrene-coworker-paul",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lucius-of-cyrene-active-antioch",
+        "clm-lucius-of-cyrene-antioch-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1",
+        "PARAPHRASE_OMISSION:psg-acts-13-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-member-antioch-church",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "44",
+        "year_end": "48",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-member-antioch-church",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church",
+        "clm-paul-coworker-stephanas"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1",
+        "PARAPHRASE_OMISSION:psg-acts-13-1:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-simeon-niger-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "simeon-called-niger",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "person_id": "simeon-called-niger",
+        "person_label": "Simeon called Niger",
+        "name_alt": "Simeon Niger",
+        "name_native": "Συμεὼν ὁ καλούμενος Νίγερ",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher named in the church at Antioch in Acts 13."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-simeon-niger-coworker-paul",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church",
+        "clm-paul-coworker-stephanas"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1",
+        "PARAPHRASE_OMISSION:psg-acts-13-1:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-antioch-church",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "superseded",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-antioch-church",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church"
+      ],
+      "sibling_count": 70,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lucius-of-cyrene-active-antioch",
+        "subject_type": "person",
+        "subject_id": "lucius-of-cyrene",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lucius-of-cyrene",
+        "person_label": "Lucius of Cyrene",
+        "name_alt": "Lucius",
+        "name_native": "Λούκιος ὁ Κυρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher from Cyrene named in the church at Antioch in Acts 13."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lucius-of-cyrene-active-antioch",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lucius-cyrene-coworker-paul",
+        "clm-lucius-of-cyrene-antioch-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-antioch-church",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "superseded",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-antioch-church",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 21,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-coworker-simeon-niger",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "simeon-called-niger",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "person_id": "simeon-called-niger",
+        "person_label": "Simeon called Niger",
+        "name_alt": "Simeon Niger",
+        "name_native": "Συμεὼν ὁ καλούμενος Νίγερ",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher named in the church at Antioch in Acts 13."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-coworker-simeon-niger",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-coworker-lucius",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "lucius-of-cyrene",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "person_id": "lucius-of-cyrene",
+        "person_label": "Lucius of Cyrene",
+        "name_alt": "Lucius",
+        "name_native": "Λούκιος ὁ Κυρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher from Cyrene named in the church at Antioch in Acts 13."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-coworker-lucius",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-manaen-active-antioch",
+        "subject_type": "person",
+        "subject_id": "manaen",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "manaen",
+        "person_label": "Manaen",
+        "name_alt": "Menaen",
+        "name_native": "Μαναήν",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher at Antioch said to have been brought up with Herod the tetrarch in Acts 13."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-manaen-active-antioch",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-manaen-antioch-church",
+        "clm-manaen-coworker-paul"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lucius-of-cyrene-antioch-church",
+        "subject_type": "person",
+        "subject_id": "lucius-of-cyrene",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lucius-of-cyrene",
+        "person_label": "Lucius of Cyrene",
+        "name_alt": "Lucius",
+        "name_native": "Λούκιος ὁ Κυρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher from Cyrene named in the church at Antioch in Acts 13."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lucius-of-cyrene-antioch-church",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lucius-cyrene-coworker-paul",
+        "clm-lucius-of-cyrene-active-antioch"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aphrahat-active-seleucia",
+        "subject_type": "person",
+        "subject_id": "aphrahat",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "seleucia-ctesiphon",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "280",
+        "year_end": "345",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aphrahat",
+        "person_label": "Aphrahat",
+        "name_alt": "Aphrahat the Persian Sage",
+        "name_native": "ܐܦܪܗܛ",
+        "birth_year_display": "c. 280",
+        "death_year_display": "c. 345",
+        "person_kind": "individual",
+        "notes": "Syriac church father in the Persian Empire; wrote 23 Demonstrations (337–345) on Christian faith and practice; possibly a bishop; used the Diatessaron as his gospel text; his theology is notably independent of Greek influence."
+      },
+      "object_entity": {
+        "place_id": "seleucia-ctesiphon",
+        "place_label": "Seleucia-Ctesiphon",
+        "place_label_modern": "Al-Mada'in",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "33.0925",
+        "lon": "44.5775",
+        "location_precision": "approx_site",
+        "modern_country_label": "Iraq",
+        "notes": "Twin cities on the Tigris; capital of the Parthian and Sasanian empires; seat of the Catholicos of the Church of the East from the early 4th century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aphrahat-active-seleucia",
+            "passage_id": "psg-aphrahat-dem-1",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Aphrahat's Demonstrations were composed at the Persian church center of Seleucia-Ctesiphon."
+          },
+          "passage": {
+            "passage_id": "psg-aphrahat-dem-1",
+            "source_id": "src-demonstrations-of-aphrahat",
+            "locator_type": "source_ref",
+            "locator": "Demonstration 1 (On Faith)",
+            "excerpt": "Paraphrase: Faith is the foundation upon which all the structure of Christian life is built; faith is the tree from which the fruits of good works grow; faith rests on the rock of Christ and is watered by baptism; the faithful must believe in God, his Christ, the Holy Spirit, baptism, resurrection, and eternal life.",
+            "language": "English",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "On Faith — foundation of Christian life"
+          },
+          "source": {
+            "source_id": "src-demonstrations-of-aphrahat",
+            "work_id": "demonstrations-of-aphrahat",
+            "source_kind": "primary_text",
+            "title": "Demonstrations",
+            "author": "Aphrahat",
+            "editor": "",
+            "year_display": "337–345",
+            "year_start": "337",
+            "year_end": "345",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/370101.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "23 Syriac homilies on faith and practice from the Persian church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aphrahat-member-church-east",
+        "clm-aphrahat-in-persecution"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-aphrahat-dem-1": [
+          "clm-aphrahat-affirms-baptism-regeneration",
+          "clm-aphrahat-affirms-baptism-water",
+          "clm-aphrahat-affirms-baptismal-anointing",
+          "clm-aphrahat-affirms-bishops-govern",
+          "clm-aphrahat-affirms-catechumenate",
+          "clm-aphrahat-affirms-free-will",
+          "clm-aphrahat-affirms-gentile-inclusion",
+          "clm-aphrahat-affirms-gospel-harmony",
+          "clm-aphrahat-affirms-judgment",
+          "clm-aphrahat-affirms-ot-authority",
+          "clm-aphrahat-affirms-resurrection",
+          "clm-aphrahat-affirms-rule-of-faith",
+          "clm-aphrahat-affirms-trinitarian-baptism",
+          "clm-aphrahat-member-church-east",
+          "clm-demonstrations-by-aphrahat"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:part_event:persecution-of-shapur-ii",
+        "UNSCORED_WEIGHT:psg-aphrahat-dem-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aphrahat-affirms-catechumenate",
+        "subject_type": "work",
+        "subject_id": "demonstrations-of-aphrahat",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "catechumenate-precedes-baptism",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "337",
+        "year_end": "345",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "demonstrations-of-aphrahat",
+        "title_display": "Demonstrations",
+        "title_original": "ܬܚܘ̈ܝܬܐ",
+        "work_type": "homily",
+        "language_original": "Syriac",
+        "work_kind": "collection",
+        "notes": "Collection of 23 homilies by Aphrahat the Persian Sage; first ten (337) on Christian life and church order; next twelve (344) on persecution, Judaism, and eschatology; final demonstration (c. 345) on the grape; the earliest substantial corpus of Syriac Christian theology."
+      },
+      "object_entity": {
+        "proposition_id": "catechumenate-precedes-baptism",
+        "topic_id": "baptism-practice",
+        "dimension_id": "catechumenate",
+        "proposition_label": "A formal catechumenate precedes baptism",
+        "polarity_family": "",
+        "description": "Candidates for baptism undergo a structured period of pre-baptismal instruction, examination, and moral formation (the catechumenate) before being admitted to the sacrament.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aphrahat-affirms-catechumenate",
+            "passage_id": "psg-aphrahat-dem-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "demonstrations-of-aphrahat is a primary text directly relevant to catechumenate-precedes-baptism."
+          },
+          "passage": {
+            "passage_id": "psg-aphrahat-dem-1",
+            "source_id": "src-demonstrations-of-aphrahat",
+            "locator_type": "source_ref",
+            "locator": "Demonstration 1 (On Faith)",
+            "excerpt": "Paraphrase: Faith is the foundation upon which all the structure of Christian life is built; faith is the tree from which the fruits of good works grow; faith rests on the rock of Christ and is watered by baptism; the faithful must believe in God, his Christ, the Holy Spirit, baptism, resurrection, and eternal life.",
+            "language": "English",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "On Faith — foundation of Christian life"
+          },
+          "source": {
+            "source_id": "src-demonstrations-of-aphrahat",
+            "work_id": "demonstrations-of-aphrahat",
+            "source_kind": "primary_text",
+            "title": "Demonstrations",
+            "author": "Aphrahat",
+            "editor": "",
+            "year_display": "337–345",
+            "year_start": "337",
+            "year_end": "345",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/370101.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "23 Syriac homilies on faith and practice from the Persian church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aphrahat-affirms-almsgiving",
+        "clm-aphrahat-affirms-ascetic-covenant",
+        "clm-aphrahat-affirms-baptism-regeneration",
+        "clm-aphrahat-affirms-baptism-water",
+        "clm-aphrahat-affirms-baptismal-anointing",
+        "clm-aphrahat-affirms-bishops-govern",
+        "clm-aphrahat-affirms-fasting",
+        "clm-aphrahat-affirms-free-will",
+        "clm-aphrahat-affirms-gentile-inclusion",
+        "clm-aphrahat-affirms-gospel-harmony",
+        "clm-aphrahat-affirms-incarnation",
+        "clm-aphrahat-affirms-jesus-is-christ",
+        "clm-aphrahat-affirms-jesus-raised",
+        "clm-aphrahat-affirms-judgment",
+        "clm-aphrahat-affirms-martyrdom",
+        "clm-aphrahat-affirms-ot-authority",
+        "clm-aphrahat-affirms-passion-reality",
+        "clm-aphrahat-affirms-penance",
+        "clm-aphrahat-affirms-prayer",
+        "clm-aphrahat-affirms-repentance",
+        "clm-aphrahat-affirms-resurrection",
+        "clm-aphrahat-affirms-rule-of-faith",
+        "clm-aphrahat-affirms-trinitarian-baptism",
+        "clm-aphrahat-affirms-virginity",
+        "clm-aphrahat-mentions-eucharist",
+        "clm-demonstrations-by-aphrahat"
+      ],
+      "sibling_count": 26,
+      "passage_co_users": {
+        "psg-aphrahat-dem-1": [
+          "clm-aphrahat-active-seleucia",
+          "clm-aphrahat-affirms-baptism-regeneration",
+          "clm-aphrahat-affirms-baptism-water",
+          "clm-aphrahat-affirms-baptismal-anointing",
+          "clm-aphrahat-affirms-bishops-govern",
+          "clm-aphrahat-affirms-free-will",
+          "clm-aphrahat-affirms-gentile-inclusion",
+          "clm-aphrahat-affirms-gospel-harmony",
+          "clm-aphrahat-affirms-judgment",
+          "clm-aphrahat-affirms-ot-authority",
+          "clm-aphrahat-affirms-resurrection",
+          "clm-aphrahat-affirms-rule-of-faith",
+          "clm-aphrahat-affirms-trinitarian-baptism",
+          "clm-aphrahat-member-church-east",
+          "clm-demonstrations-by-aphrahat"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-aphrahat-dem-1",
+        "PARAPHRASE_RISK:psg-aphrahat-dem-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aphrahat-affirms-bishops-govern",
+        "subject_type": "work",
+        "subject_id": "demonstrations-of-aphrahat",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bishops-govern-local-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "337",
+        "year_end": "345",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "demonstrations-of-aphrahat",
+        "title_display": "Demonstrations",
+        "title_original": "ܬܚܘ̈ܝܬܐ",
+        "work_type": "homily",
+        "language_original": "Syriac",
+        "work_kind": "collection",
+        "notes": "Collection of 23 homilies by Aphrahat the Persian Sage; first ten (337) on Christian life and church order; next twelve (344) on persecution, Judaism, and eschatology; final demonstration (c. 345) on the grape; the earliest substantial corpus of Syriac Christian theology."
+      },
+      "object_entity": {
+        "proposition_id": "bishops-govern-local-church",
+        "topic_id": "church-order",
+        "dimension_id": "monarchical-episcopate",
+        "proposition_label": "A single bishop governs the local church",
+        "polarity_family": "monarchical_episcopacy",
+        "description": "A single bishop holds authority over the local Christian community as representative of God.",
+        "notes": "Monarchical episcopate"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aphrahat-affirms-bishops-govern",
+            "passage_id": "psg-aphrahat-dem-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "demonstrations-of-aphrahat is a primary text directly relevant to bishops-govern-local-church."
+          },
+          "passage": {
+            "passage_id": "psg-aphrahat-dem-1",
+            "source_id": "src-demonstrations-of-aphrahat",
+            "locator_type": "source_ref",
+            "locator": "Demonstration 1 (On Faith)",
+            "excerpt": "Paraphrase: Faith is the foundation upon which all the structure of Christian life is built; faith is the tree from which the fruits of good works grow; faith rests on the rock of Christ and is watered by baptism; the faithful must believe in God, his Christ, the Holy Spirit, baptism, resurrection, and eternal life.",
+            "language": "English",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "On Faith — foundation of Christian life"
+          },
+          "source": {
+            "source_id": "src-demonstrations-of-aphrahat",
+            "work_id": "demonstrations-of-aphrahat",
+            "source_kind": "primary_text",
+            "title": "Demonstrations",
+            "author": "Aphrahat",
+            "editor": "",
+            "year_display": "337–345",
+            "year_start": "337",
+            "year_end": "345",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/370101.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "23 Syriac homilies on faith and practice from the Persian church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aphrahat-affirms-almsgiving",
+        "clm-aphrahat-affirms-ascetic-covenant",
+        "clm-aphrahat-affirms-baptism-regeneration",
+        "clm-aphrahat-affirms-baptism-water",
+        "clm-aphrahat-affirms-baptismal-anointing",
+        "clm-aphrahat-affirms-catechumenate",
+        "clm-aphrahat-affirms-fasting",
+        "clm-aphrahat-affirms-free-will",
+        "clm-aphrahat-affirms-gentile-inclusion",
+        "clm-aphrahat-affirms-gospel-harmony",
+        "clm-aphrahat-affirms-incarnation",
+        "clm-aphrahat-affirms-jesus-is-christ",
+        "clm-aphrahat-affirms-jesus-raised",
+        "clm-aphrahat-affirms-judgment",
+        "clm-aphrahat-affirms-martyrdom",
+        "clm-aphrahat-affirms-ot-authority",
+        "clm-aphrahat-affirms-passion-reality",
+        "clm-aphrahat-affirms-penance",
+        "clm-aphrahat-affirms-prayer",
+        "clm-aphrahat-affirms-repentance",
+        "clm-aphrahat-affirms-resurrection",
+        "clm-aphrahat-affirms-rule-of-faith",
+        "clm-aphrahat-affirms-trinitarian-baptism",
+        "clm-aphrahat-affirms-virginity",
+        "clm-aphrahat-mentions-eucharist",
+        "clm-demonstrations-by-aphrahat"
+      ],
+      "sibling_count": 26,
+      "passage_co_users": {
+        "psg-aphrahat-dem-1": [
+          "clm-aphrahat-active-seleucia",
+          "clm-aphrahat-affirms-baptism-regeneration",
+          "clm-aphrahat-affirms-baptism-water",
+          "clm-aphrahat-affirms-baptismal-anointing",
+          "clm-aphrahat-affirms-catechumenate",
+          "clm-aphrahat-affirms-free-will",
+          "clm-aphrahat-affirms-gentile-inclusion",
+          "clm-aphrahat-affirms-gospel-harmony",
+          "clm-aphrahat-affirms-judgment",
+          "clm-aphrahat-affirms-ot-authority",
+          "clm-aphrahat-affirms-resurrection",
+          "clm-aphrahat-affirms-rule-of-faith",
+          "clm-aphrahat-affirms-trinitarian-baptism",
+          "clm-aphrahat-member-church-east",
+          "clm-demonstrations-by-aphrahat"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-aphrahat-dem-1",
+        "PARAPHRASE_RISK:psg-aphrahat-dem-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aphrahat-affirms-rule-of-faith",
+        "subject_type": "work",
+        "subject_id": "demonstrations-of-aphrahat",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "rule-of-faith-received-from-apostles",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "337",
+        "year_end": "345",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "demonstrations-of-aphrahat",
+        "title_display": "Demonstrations",
+        "title_original": "ܬܚܘ̈ܝܬܐ",
+        "work_type": "homily",
+        "language_original": "Syriac",
+        "work_kind": "collection",
+        "notes": "Collection of 23 homilies by Aphrahat the Persian Sage; first ten (337) on Christian life and church order; next twelve (344) on persecution, Judaism, and eschatology; final demonstration (c. 345) on the grape; the earliest substantial corpus of Syriac Christian theology."
+      },
+      "object_entity": {
+        "proposition_id": "rule-of-faith-received-from-apostles",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "rule-of-faith",
+        "proposition_label": "The rule of faith is received from the apostles",
+        "polarity_family": "rule_of_faith",
+        "description": "Christians hold to a received standard of teaching traced to the apostles and guarded by their successors.",
+        "notes": "Oral tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aphrahat-affirms-rule-of-faith",
+            "passage_id": "psg-aphrahat-dem-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Faith rests on the rock of Christ; creedal elements enumerated."
+          },
+          "passage": {
+            "passage_id": "psg-aphrahat-dem-1",
+            "source_id": "src-demonstrations-of-aphrahat",
+            "locator_type": "source_ref",
+            "locator": "Demonstration 1 (On Faith)",
+            "excerpt": "Paraphrase: Faith is the foundation upon which all the structure of Christian life is built; faith is the tree from which the fruits of good works grow; faith rests on the rock of Christ and is watered by baptism; the faithful must believe in God, his Christ, the Holy Spirit, baptism, resurrection, and eternal life.",
+            "language": "English",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "On Faith — foundation of Christian life"
+          },
+          "source": {
+            "source_id": "src-demonstrations-of-aphrahat",
+            "work_id": "demonstrations-of-aphrahat",
+            "source_kind": "primary_text",
+            "title": "Demonstrations",
+            "author": "Aphrahat",
+            "editor": "",
+            "year_display": "337–345",
+            "year_start": "337",
+            "year_end": "345",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/370101.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "23 Syriac homilies on faith and practice from the Persian church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aphrahat-affirms-almsgiving",
+        "clm-aphrahat-affirms-ascetic-covenant",
+        "clm-aphrahat-affirms-baptism-regeneration",
+        "clm-aphrahat-affirms-baptism-water",
+        "clm-aphrahat-affirms-baptismal-anointing",
+        "clm-aphrahat-affirms-bishops-govern",
+        "clm-aphrahat-affirms-catechumenate",
+        "clm-aphrahat-affirms-fasting",
+        "clm-aphrahat-affirms-free-will",
+        "clm-aphrahat-affirms-gentile-inclusion",
+        "clm-aphrahat-affirms-gospel-harmony",
+        "clm-aphrahat-affirms-incarnation",
+        "clm-aphrahat-affirms-jesus-is-christ",
+        "clm-aphrahat-affirms-jesus-raised",
+        "clm-aphrahat-affirms-judgment",
+        "clm-aphrahat-affirms-martyrdom",
+        "clm-aphrahat-affirms-ot-authority",
+        "clm-aphrahat-affirms-passion-reality",
+        "clm-aphrahat-affirms-penance",
+        "clm-aphrahat-affirms-prayer",
+        "clm-aphrahat-affirms-repentance",
+        "clm-aphrahat-affirms-resurrection",
+        "clm-aphrahat-affirms-trinitarian-baptism",
+        "clm-aphrahat-affirms-virginity",
+        "clm-aphrahat-mentions-eucharist",
+        "clm-demonstrations-by-aphrahat"
+      ],
+      "sibling_count": 26,
+      "passage_co_users": {
+        "psg-aphrahat-dem-1": [
+          "clm-aphrahat-active-seleucia",
+          "clm-aphrahat-affirms-baptism-regeneration",
+          "clm-aphrahat-affirms-baptism-water",
+          "clm-aphrahat-affirms-baptismal-anointing",
+          "clm-aphrahat-affirms-bishops-govern",
+          "clm-aphrahat-affirms-catechumenate",
+          "clm-aphrahat-affirms-free-will",
+          "clm-aphrahat-affirms-gentile-inclusion",
+          "clm-aphrahat-affirms-gospel-harmony",
+          "clm-aphrahat-affirms-judgment",
+          "clm-aphrahat-affirms-ot-authority",
+          "clm-aphrahat-affirms-resurrection",
+          "clm-aphrahat-affirms-trinitarian-baptism",
+          "clm-aphrahat-member-church-east",
+          "clm-demonstrations-by-aphrahat"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-aphrahat-dem-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aphrahat-member-church-east",
+        "subject_type": "person",
+        "subject_id": "aphrahat",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "church-of-the-east",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "280",
+        "year_end": "345",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aphrahat",
+        "person_label": "Aphrahat",
+        "name_alt": "Aphrahat the Persian Sage",
+        "name_native": "ܐܦܪܗܛ",
+        "birth_year_display": "c. 280",
+        "death_year_display": "c. 345",
+        "person_kind": "individual",
+        "notes": "Syriac church father in the Persian Empire; wrote 23 Demonstrations (337–345) on Christian faith and practice; possibly a bishop; used the Diatessaron as his gospel text; his theology is notably independent of Greek influence."
+      },
+      "object_entity": {
+        "group_id": "church-of-the-east",
+        "group_label": "Church of the East",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in the Sasanian Persian Empire centered on Seleucia-Ctesiphon; developed independently of the Roman imperial church; used the Diatessaron as its gospel text until the 5th century; organized under a Catholicos from the early 4th century."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aphrahat-member-church-east",
+            "passage_id": "psg-aphrahat-dem-1",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Aphrahat's Demonstrations were written in Syriac from within the Persian church context."
+          },
+          "passage": {
+            "passage_id": "psg-aphrahat-dem-1",
+            "source_id": "src-demonstrations-of-aphrahat",
+            "locator_type": "source_ref",
+            "locator": "Demonstration 1 (On Faith)",
+            "excerpt": "Paraphrase: Faith is the foundation upon which all the structure of Christian life is built; faith is the tree from which the fruits of good works grow; faith rests on the rock of Christ and is watered by baptism; the faithful must believe in God, his Christ, the Holy Spirit, baptism, resurrection, and eternal life.",
+            "language": "English",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "On Faith — foundation of Christian life"
+          },
+          "source": {
+            "source_id": "src-demonstrations-of-aphrahat",
+            "work_id": "demonstrations-of-aphrahat",
+            "source_kind": "primary_text",
+            "title": "Demonstrations",
+            "author": "Aphrahat",
+            "editor": "",
+            "year_display": "337–345",
+            "year_start": "337",
+            "year_end": "345",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/370101.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "23 Syriac homilies on faith and practice from the Persian church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aphrahat-active-seleucia",
+        "clm-aphrahat-in-persecution"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-aphrahat-dem-1": [
+          "clm-aphrahat-active-seleucia",
+          "clm-aphrahat-affirms-baptism-regeneration",
+          "clm-aphrahat-affirms-baptism-water",
+          "clm-aphrahat-affirms-baptismal-anointing",
+          "clm-aphrahat-affirms-bishops-govern",
+          "clm-aphrahat-affirms-catechumenate",
+          "clm-aphrahat-affirms-free-will",
+          "clm-aphrahat-affirms-gentile-inclusion",
+          "clm-aphrahat-affirms-gospel-harmony",
+          "clm-aphrahat-affirms-judgment",
+          "clm-aphrahat-affirms-ot-authority",
+          "clm-aphrahat-affirms-resurrection",
+          "clm-aphrahat-affirms-rule-of-faith",
+          "clm-aphrahat-affirms-trinitarian-baptism",
+          "clm-demonstrations-by-aphrahat"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-aphrahat-dem-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aphrahat-affirms-resurrection",
+        "subject_type": "work",
+        "subject_id": "demonstrations-of-aphrahat",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "337",
+        "year_end": "345",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "demonstrations-of-aphrahat",
+        "title_display": "Demonstrations",
+        "title_original": "ܬܚܘ̈ܝܬܐ",
+        "work_type": "homily",
+        "language_original": "Syriac",
+        "work_kind": "collection",
+        "notes": "Collection of 23 homilies by Aphrahat the Persian Sage; first ten (337) on Christian life and church order; next twelve (344) on persecution, Judaism, and eschatology; final demonstration (c. 345) on the grape; the earliest substantial corpus of Syriac Christian theology."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aphrahat-affirms-resurrection",
+            "passage_id": "psg-aphrahat-dem-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "The faithful must believe in resurrection and eternal life."
+          },
+          "passage": {
+            "passage_id": "psg-aphrahat-dem-1",
+            "source_id": "src-demonstrations-of-aphrahat",
+            "locator_type": "source_ref",
+            "locator": "Demonstration 1 (On Faith)",
+            "excerpt": "Paraphrase: Faith is the foundation upon which all the structure of Christian life is built; faith is the tree from which the fruits of good works grow; faith rests on the rock of Christ and is watered by baptism; the faithful must believe in God, his Christ, the Holy Spirit, baptism, resurrection, and eternal life.",
+            "language": "English",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "On Faith — foundation of Christian life"
+          },
+          "source": {
+            "source_id": "src-demonstrations-of-aphrahat",
+            "work_id": "demonstrations-of-aphrahat",
+            "source_kind": "primary_text",
+            "title": "Demonstrations",
+            "author": "Aphrahat",
+            "editor": "",
+            "year_display": "337–345",
+            "year_start": "337",
+            "year_end": "345",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/370101.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "23 Syriac homilies on faith and practice from the Persian church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-aphrahat-affirms-resurrection",
+            "passage_id": "psg-aphrahat-dem-8",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Seed analogy for resurrection; Christ's resurrection as firstfruits."
+          },
+          "passage": {
+            "passage_id": "psg-aphrahat-dem-8",
+            "source_id": "src-demonstrations-of-aphrahat",
+            "locator_type": "source_ref",
+            "locator": "Demonstration 8 (On the Resurrection of the Dead)",
+            "excerpt": "Paraphrase: Aphrahat defends bodily resurrection against those who deny it; as the seed that falls into the ground rises again, so shall the dead rise; Christ's resurrection is the guarantee and firstfruits of the general resurrection.",
+            "language": "English",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "On Resurrection"
+          },
+          "source": {
+            "source_id": "src-demonstrations-of-aphrahat",
+            "work_id": "demonstrations-of-aphrahat",
+            "source_kind": "primary_text",
+            "title": "Demonstrations",
+            "author": "Aphrahat",
+            "editor": "",
+            "year_display": "337–345",
+            "year_start": "337",
+            "year_end": "345",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/370101.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "23 Syriac homilies on faith and practice from the Persian church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aphrahat-affirms-almsgiving",
+        "clm-aphrahat-affirms-ascetic-covenant",
+        "clm-aphrahat-affirms-baptism-regeneration",
+        "clm-aphrahat-affirms-baptism-water",
+        "clm-aphrahat-affirms-baptismal-anointing",
+        "clm-aphrahat-affirms-bishops-govern",
+        "clm-aphrahat-affirms-catechumenate",
+        "clm-aphrahat-affirms-fasting",
+        "clm-aphrahat-affirms-free-will",
+        "clm-aphrahat-affirms-gentile-inclusion",
+        "clm-aphrahat-affirms-gospel-harmony",
+        "clm-aphrahat-affirms-incarnation",
+        "clm-aphrahat-affirms-jesus-is-christ",
+        "clm-aphrahat-affirms-jesus-raised",
+        "clm-aphrahat-affirms-judgment",
+        "clm-aphrahat-affirms-martyrdom",
+        "clm-aphrahat-affirms-ot-authority",
+        "clm-aphrahat-affirms-passion-reality",
+        "clm-aphrahat-affirms-penance",
+        "clm-aphrahat-affirms-prayer",
+        "clm-aphrahat-affirms-repentance",
+        "clm-aphrahat-affirms-rule-of-faith",
+        "clm-aphrahat-affirms-trinitarian-baptism",
+        "clm-aphrahat-affirms-virginity",
+        "clm-aphrahat-mentions-eucharist",
+        "clm-demonstrations-by-aphrahat"
+      ],
+      "sibling_count": 26,
+      "passage_co_users": {
+        "psg-aphrahat-dem-1": [
+          "clm-aphrahat-active-seleucia",
+          "clm-aphrahat-affirms-baptism-regeneration",
+          "clm-aphrahat-affirms-baptism-water",
+          "clm-aphrahat-affirms-baptismal-anointing",
+          "clm-aphrahat-affirms-bishops-govern",
+          "clm-aphrahat-affirms-catechumenate",
+          "clm-aphrahat-affirms-free-will",
+          "clm-aphrahat-affirms-gentile-inclusion",
+          "clm-aphrahat-affirms-gospel-harmony",
+          "clm-aphrahat-affirms-judgment",
+          "clm-aphrahat-affirms-ot-authority",
+          "clm-aphrahat-affirms-rule-of-faith",
+          "clm-aphrahat-affirms-trinitarian-baptism",
+          "clm-aphrahat-member-church-east",
+          "clm-demonstrations-by-aphrahat"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-aphrahat-dem-8"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aphrahat-affirms-baptism-regeneration",
+        "subject_type": "work",
+        "subject_id": "demonstrations-of-aphrahat",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-effects-regeneration",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "337",
+        "year_end": "345",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "demonstrations-of-aphrahat",
+        "title_display": "Demonstrations",
+        "title_original": "ܬܚܘ̈ܝܬܐ",
+        "work_type": "homily",
+        "language_original": "Syriac",
+        "work_kind": "collection",
+        "notes": "Collection of 23 homilies by Aphrahat the Persian Sage; first ten (337) on Christian life and church order; next twelve (344) on persecution, Judaism, and eschatology; final demonstration (c. 345) on the grape; the earliest substantial corpus of Syriac Christian theology."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-effects-regeneration",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-regeneration",
+        "proposition_label": "Baptism effects spiritual regeneration",
+        "polarity_family": "baptism_regeneration",
+        "description": "Baptism is not merely symbolic but effects a new birth or regeneration of the recipient.",
+        "notes": "Baptismal regeneration"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aphrahat-affirms-baptism-regeneration",
+            "passage_id": "psg-aphrahat-dem-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Faith watered by baptism; the faithful must believe in baptism."
+          },
+          "passage": {
+            "passage_id": "psg-aphrahat-dem-1",
+            "source_id": "src-demonstrations-of-aphrahat",
+            "locator_type": "source_ref",
+            "locator": "Demonstration 1 (On Faith)",
+            "excerpt": "Paraphrase: Faith is the foundation upon which all the structure of Christian life is built; faith is the tree from which the fruits of good works grow; faith rests on the rock of Christ and is watered by baptism; the faithful must believe in God, his Christ, the Holy Spirit, baptism, resurrection, and eternal life.",
+            "language": "English",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "On Faith — foundation of Christian life"
+          },
+          "source": {
+            "source_id": "src-demonstrations-of-aphrahat",
+            "work_id": "demonstrations-of-aphrahat",
+            "source_kind": "primary_text",
+            "title": "Demonstrations",
+            "author": "Aphrahat",
+            "editor": "",
+            "year_display": "337–345",
+            "year_start": "337",
+            "year_end": "345",
+            "container_title": "NPNF Series 2 Vol. 13",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/370101.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "23 Syriac homilies on faith and practice from the Persian church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aphrahat-affirms-almsgiving",
+        "clm-aphrahat-affirms-ascetic-covenant",
+        "clm-aphrahat-affirms-baptism-water",
+        "clm-aphrahat-affirms-baptismal-anointing",
+        "clm-aphrahat-affirms-bishops-govern",
+        "clm-aphrahat-affirms-catechumenate",
+        "clm-aphrahat-affirms-fasting",
+        "clm-aphrahat-affirms-free-will",
+        "clm-aphrahat-affirms-gentile-inclusion",
+        "clm-aphrahat-affirms-gospel-harmony",
+        "clm-aphrahat-affirms-incarnation",
+        "clm-aphrahat-affirms-jesus-is-christ",
+        "clm-aphrahat-affirms-jesus-raised",
+        "clm-aphrahat-affirms-judgment",
+        "clm-aphrahat-affirms-martyrdom",
+        "clm-aphrahat-affirms-ot-authority",
+        "clm-aphrahat-affirms-passion-reality",
+        "clm-aphrahat-affirms-penance",
+        "clm-aphrahat-affirms-prayer",
+        "clm-aphrahat-affirms-repentance",
+        "clm-aphrahat-affirms-resurrection",
+        "clm-aphrahat-affirms-rule-of-faith",
+        "clm-aphrahat-affirms-trinitarian-baptism",
+        "clm-aphrahat-affirms-virginity",
+        "clm-aphrahat-mentions-eucharist",
+        "clm-demonstrations-by-aphrahat"
+      ],
+      "sibling_count": 26,
+      "passage_co_users": {
+        "psg-aphrahat-dem-1": [
+          "clm-aphrahat-active-seleucia",
+          "clm-aphrahat-affirms-baptism-water",
+          "clm-aphrahat-affirms-baptismal-anointing",
+          "clm-aphrahat-affirms-bishops-govern",
+          "clm-aphrahat-affirms-catechumenate",
+          "clm-aphrahat-affirms-free-will",
+          "clm-aphrahat-affirms-gentile-inclusion",
+          "clm-aphrahat-affirms-gospel-harmony",
+          "clm-aphrahat-affirms-judgment",
+          "clm-aphrahat-affirms-ot-authority",
+          "clm-aphrahat-affirms-resurrection",
+          "clm-aphrahat-affirms-rule-of-faith",
+          "clm-aphrahat-affirms-trinitarian-baptism",
+          "clm-aphrahat-member-church-east",
+          "clm-demonstrations-by-aphrahat"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-aphrahat-dem-1"
+      ]
+    }
+  ]
+}

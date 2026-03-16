@@ -1,0 +1,2528 @@
+{
+  "batch_id": "batch-142",
+  "queue": "1",
+  "focus": "john-the-baptist; followers-of-john-the-baptist; mary-mother-of-jesus; judas-iscariot; mary-magdalene",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-john-active-wilderness",
+        "subject_type": "person",
+        "subject_id": "john-the-baptist",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "wilderness-of-judea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "27",
+        "year_end": "28",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "john-the-baptist",
+        "person_label": "John the Baptist",
+        "name_alt": "John Baptist",
+        "name_native": "Ἰωάννης ὁ βαπτιστής",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 28/29",
+        "person_kind": "individual",
+        "notes": "Prophetic forerunner active in the Judean wilderness."
+      },
+      "object_entity": {
+        "place_id": "wilderness-of-judea",
+        "place_label": "Wilderness of Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "judea",
+        "lat": "31.6500",
+        "lon": "35.3500",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Region associated with John the Baptist."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-john-active-wilderness",
+            "passage_id": "psg-josephus-ant-18-116-119",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Josephus corroborates John the Baptist as a public figure but does not reproduce Gospel theological framing."
+          },
+          "passage": {
+            "passage_id": "psg-josephus-ant-18-116-119",
+            "source_id": "src-josephus-ant",
+            "locator_type": "source_ref",
+            "locator": "Antiquities 18.116-119",
+            "excerpt": "Paraphrase: Josephus describes John as a good man exhorting virtue and baptism and says Herod slew him.",
+            "language": "English",
+            "passage_year": "94",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-ant",
+            "work_id": "antiquities-of-the-jews",
+            "source_kind": "primary_text",
+            "title": "Antiquities of the Jews",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "93/94",
+            "year_start": "93",
+            "year_end": "94",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.perseus.tufts.edu/hopper/text?doc=J.%20AJ%2018",
+            "accessed_on": "2026-03-09",
+            "isbn_issn": "",
+            "notes": "Near-ancient non-Christian witness for John the Baptist and Pontius Pilate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-john-active-wilderness",
+            "passage_id": "psg-luke-3-1-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-luke-3-1-3",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.3.1-3",
+            "excerpt": "Paraphrase: John appears in the region around the Jordan proclaiming a baptism of repentance.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-john-in-baptism",
+        "clm-johnb-group",
+        "clm-john-baptist-in-own-death"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-josephus-ant-18-116-119": [
+          "clm-antiquities-repentance",
+          "clm-herod-antipas-in-john-baptist-martyrdom",
+          "clm-john-baptist-in-martyrdom",
+          "clm-johnb-group"
+        ],
+        "psg-luke-3-1-3": [
+          "clm-group-john-judea",
+          "clm-herod-antipas-active-galilee",
+          "clm-johnb-group"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-luke-3-1-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-john-in-baptism",
+        "subject_type": "person",
+        "subject_id": "john-the-baptist",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "baptism-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "27",
+        "year_end": "27",
+        "context_place_id": "bethany-beyond-the-jordan",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "john-the-baptist",
+        "person_label": "John the Baptist",
+        "name_alt": "John Baptist",
+        "name_native": "Ἰωάννης ὁ βαπτιστής",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 28/29",
+        "person_kind": "individual",
+        "notes": "Prophetic forerunner active in the Judean wilderness."
+      },
+      "object_entity": {
+        "event_id": "baptism-of-jesus",
+        "event_label": "Baptism of Jesus",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Opening public-ministry event in the Gospel narratives."
+      },
+      "context_place": {
+        "place_id": "bethany-beyond-the-jordan",
+        "place_label": "Bethany beyond the Jordan",
+        "place_label_modern": "",
+        "place_kind": "site",
+        "parent_place_id": "",
+        "lat": "31.8370",
+        "lon": "35.5500",
+        "location_precision": "approx_site",
+        "modern_country_label": "Jordan",
+        "notes": "Traditional site associated in John with John the Baptist activity."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-john-in-baptism",
+            "passage_id": "psg-john-1-28-34",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-1-28-34",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.1.28-34",
+            "excerpt": "Paraphrase: John testifies about Jesus at Bethany beyond the Jordan where he was baptizing.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-john-active-wilderness",
+        "clm-johnb-group",
+        "clm-john-baptist-in-own-death"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-john-1-28-34": [
+          "clm-baptism-at-bethany",
+          "clm-baptism-year",
+          "clm-followers-john-at-bethany",
+          "clm-followers-john-at-judea",
+          "clm-jesus-in-baptism",
+          "clm-john-baptist-in-own-death",
+          "clm-place-bethany-jordan-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-1-28-34"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-john-baptist-in-own-death",
+        "subject_type": "person",
+        "subject_id": "john-the-baptist",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "john-the-baptists-martyrdom",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "29",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "john-the-baptist",
+        "person_label": "John the Baptist",
+        "name_alt": "John Baptist",
+        "name_native": "Ἰωάννης ὁ βαπτιστής",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 28/29",
+        "person_kind": "individual",
+        "notes": "Prophetic forerunner active in the Judean wilderness."
+      },
+      "object_entity": {
+        "event_id": "john-the-baptists-martyrdom",
+        "event_label": "John the Baptist's Death",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Herod Antipas imprisons and kills John, as narrated in Mark 6 and contextualized by Josephus."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-john-baptist-in-own-death",
+            "passage_id": "psg-john-1-28-34",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes john-the-baptist's participation in john-the-baptists-martyrdom."
+          },
+          "passage": {
+            "passage_id": "psg-john-1-28-34",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.1.28-34",
+            "excerpt": "Paraphrase: John testifies about Jesus at Bethany beyond the Jordan where he was baptizing.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-john-in-baptism",
+        "clm-john-active-wilderness",
+        "clm-johnb-group"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-john-1-28-34": [
+          "clm-baptism-at-bethany",
+          "clm-baptism-year",
+          "clm-followers-john-at-bethany",
+          "clm-followers-john-at-judea",
+          "clm-jesus-in-baptism",
+          "clm-john-in-baptism",
+          "clm-place-bethany-jordan-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-john-1-28-34",
+        "PARAPHRASE_RISK:psg-john-1-28-34"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-johnb-group",
+        "subject_type": "person",
+        "subject_id": "john-the-baptist",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "followers-of-john-the-baptist",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "27",
+        "year_end": "28",
+        "context_place_id": "wilderness-of-judea",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "john-the-baptist",
+        "person_label": "John the Baptist",
+        "name_alt": "John Baptist",
+        "name_native": "Ἰωάννης ὁ βαπτιστής",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 28/29",
+        "person_kind": "individual",
+        "notes": "Prophetic forerunner active in the Judean wilderness."
+      },
+      "object_entity": {
+        "group_id": "followers-of-john-the-baptist",
+        "group_label": "Followers of John the Baptist",
+        "group_kind": "school",
+        "is_christian": "false",
+        "notes": "Movement gathered around John the Baptist."
+      },
+      "context_place": {
+        "place_id": "wilderness-of-judea",
+        "place_label": "Wilderness of Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "judea",
+        "lat": "31.6500",
+        "lon": "35.3500",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Region associated with John the Baptist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-johnb-group",
+            "passage_id": "psg-josephus-ant-18-116-119",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Josephus corroborates John the Baptist as a public figure but does not reproduce Gospel theological framing."
+          },
+          "passage": {
+            "passage_id": "psg-josephus-ant-18-116-119",
+            "source_id": "src-josephus-ant",
+            "locator_type": "source_ref",
+            "locator": "Antiquities 18.116-119",
+            "excerpt": "Paraphrase: Josephus describes John as a good man exhorting virtue and baptism and says Herod slew him.",
+            "language": "English",
+            "passage_year": "94",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-josephus-ant",
+            "work_id": "antiquities-of-the-jews",
+            "source_kind": "primary_text",
+            "title": "Antiquities of the Jews",
+            "author": "Flavius Josephus",
+            "editor": "",
+            "year_display": "93/94",
+            "year_start": "93",
+            "year_end": "94",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.perseus.tufts.edu/hopper/text?doc=J.%20AJ%2018",
+            "accessed_on": "2026-03-09",
+            "isbn_issn": "",
+            "notes": "Near-ancient non-Christian witness for John the Baptist and Pontius Pilate."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-johnb-group",
+            "passage_id": "psg-luke-3-1-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-luke-3-1-3",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.3.1-3",
+            "excerpt": "Paraphrase: John appears in the region around the Jordan proclaiming a baptism of repentance.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-john-in-baptism",
+        "clm-john-active-wilderness",
+        "clm-john-baptist-in-own-death"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-josephus-ant-18-116-119": [
+          "clm-antiquities-repentance",
+          "clm-herod-antipas-in-john-baptist-martyrdom",
+          "clm-john-active-wilderness",
+          "clm-john-baptist-in-martyrdom"
+        ],
+        "psg-luke-3-1-3": [
+          "clm-group-john-judea",
+          "clm-herod-antipas-active-galilee",
+          "clm-john-active-wilderness"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-luke-3-1-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-followers-john-at-bethany",
+        "subject_type": "group",
+        "subject_id": "followers-of-john-the-baptist",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "bethany-beyond-the-jordan",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "27",
+        "year_end": "28",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "followers-of-john-the-baptist",
+        "group_label": "Followers of John the Baptist",
+        "group_kind": "school",
+        "is_christian": "false",
+        "notes": "Movement gathered around John the Baptist."
+      },
+      "object_entity": {
+        "place_id": "bethany-beyond-the-jordan",
+        "place_label": "Bethany beyond the Jordan",
+        "place_label_modern": "",
+        "place_kind": "site",
+        "parent_place_id": "",
+        "lat": "31.8370",
+        "lon": "35.5500",
+        "location_precision": "approx_site",
+        "modern_country_label": "Jordan",
+        "notes": "Traditional site associated in John with John the Baptist activity."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-followers-john-at-bethany",
+            "passage_id": "psg-john-1-28-34",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "John the Baptist baptized at Bethany beyond the Jordan."
+          },
+          "passage": {
+            "passage_id": "psg-john-1-28-34",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.1.28-34",
+            "excerpt": "Paraphrase: John testifies about Jesus at Bethany beyond the Jordan where he was baptizing.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-group-john-judea",
+        "clm-followers-john-at-judea",
+        "clm-group-followers-john-ephesus"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-john-1-28-34": [
+          "clm-baptism-at-bethany",
+          "clm-baptism-year",
+          "clm-followers-john-at-judea",
+          "clm-jesus-in-baptism",
+          "clm-john-baptist-in-own-death",
+          "clm-john-in-baptism",
+          "clm-place-bethany-jordan-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-john-1-28-34",
+        "PARAPHRASE_RISK:psg-john-1-28-34"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-followers-john-at-judea",
+        "subject_type": "group",
+        "subject_id": "followers-of-john-the-baptist",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "judea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "27",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "followers-of-john-the-baptist",
+        "group_label": "Followers of John the Baptist",
+        "group_kind": "school",
+        "is_christian": "false",
+        "notes": "Movement gathered around John the Baptist."
+      },
+      "object_entity": {
+        "place_id": "judea",
+        "place_label": "Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "31.70",
+        "lon": "35.20",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Southern region including Jerusalem and the Judean wilderness."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-followers-john-at-judea",
+            "passage_id": "psg-john-1-28-34",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "John 1:28 places John's baptismal ministry 'at Bethany beyond the Jordan' in Judea; his followers were gathered there."
+          },
+          "passage": {
+            "passage_id": "psg-john-1-28-34",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.1.28-34",
+            "excerpt": "Paraphrase: John testifies about Jesus at Bethany beyond the Jordan where he was baptizing.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-followers-john-at-bethany",
+        "clm-group-john-judea",
+        "clm-group-followers-john-ephesus"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-john-1-28-34": [
+          "clm-baptism-at-bethany",
+          "clm-baptism-year",
+          "clm-followers-john-at-bethany",
+          "clm-jesus-in-baptism",
+          "clm-john-baptist-in-own-death",
+          "clm-john-in-baptism",
+          "clm-place-bethany-jordan-attested"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-john-1-28-34",
+        "PARAPHRASE_RISK:psg-john-1-28-34"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-john-judea",
+        "subject_type": "group",
+        "subject_id": "followers-of-john-the-baptist",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "wilderness-of-judea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "27",
+        "year_end": "28",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-09T00:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "followers-of-john-the-baptist",
+        "group_label": "Followers of John the Baptist",
+        "group_kind": "school",
+        "is_christian": "false",
+        "notes": "Movement gathered around John the Baptist."
+      },
+      "object_entity": {
+        "place_id": "wilderness-of-judea",
+        "place_label": "Wilderness of Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "judea",
+        "lat": "31.6500",
+        "lon": "35.3500",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Region associated with John the Baptist."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-john-judea",
+            "passage_id": "psg-luke-3-1-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-luke-3-1-3",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.3.1-3",
+            "excerpt": "Paraphrase: John appears in the region around the Jordan proclaiming a baptism of repentance.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-followers-john-at-bethany",
+        "clm-followers-john-at-judea",
+        "clm-group-followers-john-ephesus"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-luke-3-1-3": [
+          "clm-herod-antipas-active-galilee",
+          "clm-john-active-wilderness",
+          "clm-johnb-group"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-luke-3-1-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-followers-john-ephesus",
+        "subject_type": "group",
+        "subject_id": "followers-of-john-the-baptist",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "52",
+        "year_end": "52",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "followers-of-john-the-baptist",
+        "group_label": "Followers of John the Baptist",
+        "group_kind": "school",
+        "is_christian": "false",
+        "notes": "Movement gathered around John the Baptist."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-followers-john-ephesus",
+            "passage_id": "psg-acts-19-1-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-19-1-7",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.19.1-7",
+            "excerpt": "Paraphrase: Paul meets disciples in Ephesus who knew only John's baptism before they are instructed about Jesus and baptized in his name.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-followers-john-at-bethany",
+        "clm-group-john-judea",
+        "clm-followers-john-at-judea"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-19-1-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-mary-mother-active-galilee",
+        "subject_type": "person",
+        "subject_id": "mary-mother-of-jesus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galilee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "27",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "mary-mother-of-jesus",
+        "person_label": "Mary the mother of Jesus",
+        "name_alt": "Mary",
+        "name_native": "Μαριάμ",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Mother of Jesus, present in the infancy, passion, and early Jerusalem-community traditions."
+      },
+      "object_entity": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-mary-mother-active-galilee",
+            "passage_id": "psg-acts-1-13-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests mary-mother-of-jesus's activity in or near galilee."
+          },
+          "passage": {
+            "passage_id": "psg-acts-1-13-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.1.13-14",
+            "excerpt": "Paraphrase: The apostles, the women, and Mary the mother of Jesus are gathered in Jerusalem.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-mary-mother-active-jerusalem",
+        "clm-mary-mother-disciple",
+        "clm-mary-mother-in-crucifixion",
+        "clm-mary-mother-in-pentecost"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-acts-1-13-14": [
+          "clm-andrew-active-jerusalem",
+          "clm-andrew-in-pentecost",
+          "clm-andrew-member-jerusalem",
+          "clm-bartholomew-in-pentecost",
+          "clm-disciples-at-jerusalem-early",
+          "clm-james-just-in-pentecost",
+          "clm-james-zebedee-in-pentecost",
+          "clm-john-zebedee-active-jerusalem",
+          "clm-john-zebedee-in-pentecost",
+          "clm-john-zebedee-member-jerusalem",
+          "clm-mary-mother-active-jerusalem",
+          "clm-mary-mother-disciple",
+          "clm-mary-mother-in-pentecost",
+          "clm-matthew-active-jerusalem",
+          "clm-matthew-in-pentecost",
+          "clm-peter-active-jerusalem",
+          "clm-peter-coworker-john-zebedee",
+          "clm-peter-member-jerusalem-church",
+          "clm-philip-apostle-active-jerusalem",
+          "clm-philip-apostle-in-pentecost",
+          "clm-philip-apostle-member-jerusalem",
+          "clm-place-judea-attested-late",
+          "clm-thomas-active-jerusalem",
+          "clm-thomas-in-pentecost",
+          "clm-zealots-at-judea"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-1-13-14",
+        "PARAPHRASE_RISK:psg-acts-1-13-14",
+        "PARAPHRASE_OMISSION:psg-acts-1-13-14:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-mary-mother-in-crucifixion",
+        "subject_type": "person",
+        "subject_id": "mary-mother-of-jesus",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "crucifixion-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "mary-mother-of-jesus",
+        "person_label": "Mary the mother of Jesus",
+        "name_alt": "Mary",
+        "name_native": "Μαριάμ",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Mother of Jesus, present in the infancy, passion, and early Jerusalem-community traditions."
+      },
+      "object_entity": {
+        "event_id": "crucifixion-of-jesus",
+        "event_label": "Crucifixion of Jesus",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Execution of Jesus under Roman authority in Jerusalem."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-mary-mother-in-crucifixion",
+            "passage_id": "psg-john-19-38-42",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-19-38-42",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.19.38-42",
+            "excerpt": "Paraphrase: Joseph of Arimathea and Nicodemus bury Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-mary-mother-active-galilee",
+        "clm-mary-mother-active-jerusalem",
+        "clm-mary-mother-disciple",
+        "clm-mary-mother-in-pentecost"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-john-19-38-42": [
+          "clm-burial-at-jerusalem",
+          "clm-burial-year",
+          "clm-jesus-in-burial",
+          "clm-john-zebedee-in-crucifixion",
+          "clm-joseph-arimathea-active-jerusalem",
+          "clm-joseph-arimathea-disciple",
+          "clm-joseph-arimathea-disciple-area",
+          "clm-joseph-arimathea-in-burial",
+          "clm-mary-magdalene-in-crucifixion",
+          "clm-nicodemus-active-jerusalem",
+          "clm-nicodemus-active-judea",
+          "clm-nicodemus-in-burial",
+          "clm-resurrection-at-jerusalem"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-19-38-42"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-mary-mother-in-pentecost",
+        "subject_type": "person",
+        "subject_id": "mary-mother-of-jesus",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "pentecost",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "mary-mother-of-jesus",
+        "person_label": "Mary the mother of Jesus",
+        "name_alt": "Mary",
+        "name_native": "Μαριάμ",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Mother of Jesus, present in the infancy, passion, and early Jerusalem-community traditions."
+      },
+      "object_entity": {
+        "event_id": "pentecost",
+        "event_label": "Pentecost",
+        "event_type": "liturgical",
+        "event_kind": "simple",
+        "notes": "Outpouring of the Holy Spirit on the gathered disciples in Jerusalem."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-mary-mother-in-pentecost",
+            "passage_id": "psg-acts-1-13-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-1-13-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.1.13-14",
+            "excerpt": "Paraphrase: The apostles, the women, and Mary the mother of Jesus are gathered in Jerusalem.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-mary-mother-active-galilee",
+        "clm-mary-mother-active-jerusalem",
+        "clm-mary-mother-disciple",
+        "clm-mary-mother-in-crucifixion"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-acts-1-13-14": [
+          "clm-andrew-active-jerusalem",
+          "clm-andrew-in-pentecost",
+          "clm-andrew-member-jerusalem",
+          "clm-bartholomew-in-pentecost",
+          "clm-disciples-at-jerusalem-early",
+          "clm-james-just-in-pentecost",
+          "clm-james-zebedee-in-pentecost",
+          "clm-john-zebedee-active-jerusalem",
+          "clm-john-zebedee-in-pentecost",
+          "clm-john-zebedee-member-jerusalem",
+          "clm-mary-mother-active-galilee",
+          "clm-mary-mother-active-jerusalem",
+          "clm-mary-mother-disciple",
+          "clm-matthew-active-jerusalem",
+          "clm-matthew-in-pentecost",
+          "clm-peter-active-jerusalem",
+          "clm-peter-coworker-john-zebedee",
+          "clm-peter-member-jerusalem-church",
+          "clm-philip-apostle-active-jerusalem",
+          "clm-philip-apostle-in-pentecost",
+          "clm-philip-apostle-member-jerusalem",
+          "clm-place-judea-attested-late",
+          "clm-thomas-active-jerusalem",
+          "clm-thomas-in-pentecost",
+          "clm-zealots-at-judea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-1-13-14",
+        "PARAPHRASE_OMISSION:psg-acts-1-13-14:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-mary-mother-disciple",
+        "subject_type": "person",
+        "subject_id": "mary-mother-of-jesus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "mary-mother-of-jesus",
+        "person_label": "Mary the mother of Jesus",
+        "name_alt": "Mary",
+        "name_native": "Μαριάμ",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Mother of Jesus, present in the infancy, passion, and early Jerusalem-community traditions."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-mary-mother-disciple",
+            "passage_id": "psg-acts-1-13-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-1-13-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.1.13-14",
+            "excerpt": "Paraphrase: The apostles, the women, and Mary the mother of Jesus are gathered in Jerusalem.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-mary-mother-active-galilee",
+        "clm-mary-mother-active-jerusalem",
+        "clm-mary-mother-in-crucifixion",
+        "clm-mary-mother-in-pentecost"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-acts-1-13-14": [
+          "clm-andrew-active-jerusalem",
+          "clm-andrew-in-pentecost",
+          "clm-andrew-member-jerusalem",
+          "clm-bartholomew-in-pentecost",
+          "clm-disciples-at-jerusalem-early",
+          "clm-james-just-in-pentecost",
+          "clm-james-zebedee-in-pentecost",
+          "clm-john-zebedee-active-jerusalem",
+          "clm-john-zebedee-in-pentecost",
+          "clm-john-zebedee-member-jerusalem",
+          "clm-mary-mother-active-galilee",
+          "clm-mary-mother-active-jerusalem",
+          "clm-mary-mother-in-pentecost",
+          "clm-matthew-active-jerusalem",
+          "clm-matthew-in-pentecost",
+          "clm-peter-active-jerusalem",
+          "clm-peter-coworker-john-zebedee",
+          "clm-peter-member-jerusalem-church",
+          "clm-philip-apostle-active-jerusalem",
+          "clm-philip-apostle-in-pentecost",
+          "clm-philip-apostle-member-jerusalem",
+          "clm-place-judea-attested-late",
+          "clm-thomas-active-jerusalem",
+          "clm-thomas-in-pentecost",
+          "clm-zealots-at-judea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-1-13-14"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-judas-iscariot-active-galilee",
+        "subject_type": "person",
+        "subject_id": "judas-iscariot",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galilee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "judas-iscariot",
+        "person_label": "Judas Iscariot",
+        "name_alt": "Judas",
+        "name_native": "Ἰούδας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 30",
+        "person_kind": "individual",
+        "notes": "Disciple who leads those arresting Jesus in the passion narratives."
+      },
+      "object_entity": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-judas-iscariot-active-galilee",
+            "passage_id": "psg-matt-10-1-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-matt-10-1-4",
+            "source_id": "src-matthew",
+            "locator_type": "bible_osis",
+            "locator": "Matt.10.1-4",
+            "excerpt": "Paraphrase: Jesus calls twelve disciples and gives them authority; lists Simon Peter, Andrew, James, John, Philip, Bartholomew, Matthew, Thomas, James son of Alphaeus, Thaddaeus, Simon the Zealot, Judas Iscariot.",
+            "language": "English",
+            "passage_year": "28",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-matthew",
+            "work_id": "gospel-of-matthew",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Matthew",
+            "author": "Traditionally Matthew",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Matthew",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-judas-iscariot-active-jerusalem",
+        "clm-judas-iscariot-disciple",
+        "clm-judas-in-last-supper",
+        "clm-judas-iscariot-in-arrest"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-matt-10-1-4": [
+          "clm-jesus-teacher-andrew",
+          "clm-jesus-teacher-bartholomew",
+          "clm-jesus-teacher-james-son-of-zebedee",
+          "clm-jesus-teacher-james-the-just",
+          "clm-jesus-teacher-john-son-of-zebedee",
+          "clm-jesus-teacher-judas-iscariot",
+          "clm-jesus-teacher-lazarus-of-bethany",
+          "clm-jesus-teacher-martha-of-bethany",
+          "clm-jesus-teacher-mary-magdalene",
+          "clm-jesus-teacher-matthew-the-apostle",
+          "clm-jesus-teacher-nathanael",
+          "clm-jesus-teacher-philip-the-apostle",
+          "clm-jesus-teacher-simon-peter",
+          "clm-jesus-teacher-thomas",
+          "clm-judas-iscariot-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-matt-10-1-4",
+        "PARAPHRASE_OMISSION:psg-matt-10-1-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-judas-in-last-supper",
+        "subject_type": "person",
+        "subject_id": "judas-iscariot",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "last-supper",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "judas-iscariot",
+        "person_label": "Judas Iscariot",
+        "name_alt": "Judas",
+        "name_native": "Ἰούδας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 30",
+        "person_kind": "individual",
+        "notes": "Disciple who leads those arresting Jesus in the passion narratives."
+      },
+      "object_entity": {
+        "event_id": "last-supper",
+        "event_label": "Last Supper",
+        "event_type": "liturgical",
+        "event_kind": "simple",
+        "notes": "Jesus shares the final meal with his disciples before the passion and gives the bread and cup tradition."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-judas-in-last-supper",
+            "passage_id": "psg-john-13-1-17",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-13-1-17",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.13.1-17",
+            "excerpt": "Paraphrase: Jesus washes the disciples feet at the Last Supper and gives them the example of service.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-judas-in-last-supper",
+            "passage_id": "psg-luke-22-7-23",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-luke-22-7-23",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.22.7-23",
+            "excerpt": "Paraphrase: Jesus shares the Passover meal with his disciples, gives the bread and cup, and speaks of betrayal.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-judas-iscariot-active-galilee",
+        "clm-judas-iscariot-active-jerusalem",
+        "clm-judas-iscariot-disciple",
+        "clm-judas-iscariot-in-arrest"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-luke-22-7-23": [
+          "clm-jesus-in-last-supper",
+          "clm-john-zebedee-in-last-supper",
+          "clm-last-supper-at-jerusalem",
+          "clm-last-supper-year",
+          "clm-peter-in-last-supper"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-13-1-17",
+        "PARAPHRASE_OMISSION:psg-john-13-1-17:subject",
+        "PARAPHRASE_RISK:psg-luke-22-7-23",
+        "PARAPHRASE_OMISSION:psg-luke-22-7-23:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-judas-iscariot-in-arrest",
+        "subject_type": "person",
+        "subject_id": "judas-iscariot",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "arrest-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T22:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "judas-iscariot",
+        "person_label": "Judas Iscariot",
+        "name_alt": "Judas",
+        "name_native": "Ἰούδας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 30",
+        "person_kind": "individual",
+        "notes": "Disciple who leads those arresting Jesus in the passion narratives."
+      },
+      "object_entity": {
+        "event_id": "arrest-of-jesus",
+        "event_label": "Arrest of Jesus",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Jesus is seized in the passion narratives after Judas arrives with those who came to take him."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-judas-iscariot-in-arrest",
+            "passage_id": "psg-john-18-1-11",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-18-1-11",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.18.1-11",
+            "excerpt": "Paraphrase: Judas arrives with officers, Jesus is arrested in the garden, and he restrains violent resistance.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-judas-iscariot-in-arrest",
+            "passage_id": "psg-luke-22-47-53",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-luke-22-47-53",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.22.47-53",
+            "excerpt": "Paraphrase: Judas approaches Jesus with the crowd, Jesus is seized, and he speaks about their coming with swords and clubs.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-judas-iscariot-active-galilee",
+        "clm-judas-iscariot-active-jerusalem",
+        "clm-judas-iscariot-disciple",
+        "clm-judas-in-last-supper"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-john-18-1-11": [
+          "clm-arrest-year",
+          "clm-caiaphas-active-jerusalem",
+          "clm-caiaphas-in-temple-era",
+          "clm-jesus-in-arrest",
+          "clm-john-zebedee-in-arrest",
+          "clm-nicodemus-disciple",
+          "clm-peter-in-arrest",
+          "clm-peter-in-crucifixion-witness"
+        ],
+        "psg-luke-22-47-53": [
+          "clm-arrest-at-jerusalem",
+          "clm-jesus-in-arrest",
+          "clm-judas-iscariot-active-jerusalem"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-18-1-11",
+        "PARAPHRASE_RISK:psg-luke-22-47-53"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-judas-iscariot-disciple",
+        "subject_type": "person",
+        "subject_id": "judas-iscariot",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "galilee",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "judas-iscariot",
+        "person_label": "Judas Iscariot",
+        "name_alt": "Judas",
+        "name_native": "Ἰούδας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 30",
+        "person_kind": "individual",
+        "notes": "Disciple who leads those arresting Jesus in the passion narratives."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-judas-iscariot-disciple",
+            "passage_id": "psg-matt-10-1-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-matt-10-1-4",
+            "source_id": "src-matthew",
+            "locator_type": "bible_osis",
+            "locator": "Matt.10.1-4",
+            "excerpt": "Paraphrase: Jesus calls twelve disciples and gives them authority; lists Simon Peter, Andrew, James, John, Philip, Bartholomew, Matthew, Thomas, James son of Alphaeus, Thaddaeus, Simon the Zealot, Judas Iscariot.",
+            "language": "English",
+            "passage_year": "28",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-matthew",
+            "work_id": "gospel-of-matthew",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Matthew",
+            "author": "Traditionally Matthew",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Matthew",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-judas-iscariot-active-galilee",
+        "clm-judas-iscariot-active-jerusalem",
+        "clm-judas-in-last-supper",
+        "clm-judas-iscariot-in-arrest"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-matt-10-1-4": [
+          "clm-jesus-teacher-andrew",
+          "clm-jesus-teacher-bartholomew",
+          "clm-jesus-teacher-james-son-of-zebedee",
+          "clm-jesus-teacher-james-the-just",
+          "clm-jesus-teacher-john-son-of-zebedee",
+          "clm-jesus-teacher-judas-iscariot",
+          "clm-jesus-teacher-lazarus-of-bethany",
+          "clm-jesus-teacher-martha-of-bethany",
+          "clm-jesus-teacher-mary-magdalene",
+          "clm-jesus-teacher-matthew-the-apostle",
+          "clm-jesus-teacher-nathanael",
+          "clm-jesus-teacher-philip-the-apostle",
+          "clm-jesus-teacher-simon-peter",
+          "clm-jesus-teacher-thomas",
+          "clm-judas-iscariot-active-galilee"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-matt-10-1-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-mary-magdalene-active-galilee",
+        "subject_type": "person",
+        "subject_id": "mary-magdalene",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galilee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "mary-magdalene",
+        "person_label": "Mary Magdalene",
+        "name_alt": "Mary of Magdala",
+        "name_native": "Μαρία ἡ Μαγδαληνή",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Female disciple associated with Galilee, the passion, and the empty tomb narratives."
+      },
+      "object_entity": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-mary-magdalene-active-galilee",
+            "passage_id": "psg-luke-8-1-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-luke-8-1-3",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.8.1-3",
+            "excerpt": "Paraphrase: Women including Mary Magdalene accompany Jesus in the Galilean ministry.",
+            "language": "English",
+            "passage_year": "29",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-mary-magdalene-disciple",
+        "clm-mary-magdalene-active-jerusalem",
+        "clm-mary-magdalene-in-crucifixion",
+        "clm-mary-magdalene-in-resurrection"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-luke-8-1-3": [
+          "clm-jesus-teacher-mary-magdalene",
+          "clm-mary-magdalene-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-luke-8-1-3",
+        "PARAPHRASE_OMISSION:psg-luke-8-1-3:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-mary-magdalene-in-crucifixion",
+        "subject_type": "person",
+        "subject_id": "mary-magdalene",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "crucifixion-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "mary-magdalene",
+        "person_label": "Mary Magdalene",
+        "name_alt": "Mary of Magdala",
+        "name_native": "Μαρία ἡ Μαγδαληνή",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Female disciple associated with Galilee, the passion, and the empty tomb narratives."
+      },
+      "object_entity": {
+        "event_id": "crucifixion-of-jesus",
+        "event_label": "Crucifixion of Jesus",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Execution of Jesus under Roman authority in Jerusalem."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-mary-magdalene-in-crucifixion",
+            "passage_id": "psg-john-19-38-42",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "All four gospels place Mary Magdalene at the cross."
+          },
+          "passage": {
+            "passage_id": "psg-john-19-38-42",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.19.38-42",
+            "excerpt": "Paraphrase: Joseph of Arimathea and Nicodemus bury Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-mary-magdalene-in-crucifixion",
+            "passage_id": "psg-mark-15-40-41",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-15-40-41",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.15.40-41",
+            "excerpt": "There were also women looking on from a distance, among whom were Mary Magdalene, and Mary the mother of James the younger and of Joses, and Salome.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-mary-magdalene-active-galilee",
+        "clm-mary-magdalene-disciple",
+        "clm-mary-magdalene-active-jerusalem",
+        "clm-mary-magdalene-in-resurrection"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-john-19-38-42": [
+          "clm-burial-at-jerusalem",
+          "clm-burial-year",
+          "clm-jesus-in-burial",
+          "clm-john-zebedee-in-crucifixion",
+          "clm-joseph-arimathea-active-jerusalem",
+          "clm-joseph-arimathea-disciple",
+          "clm-joseph-arimathea-disciple-area",
+          "clm-joseph-arimathea-in-burial",
+          "clm-mary-mother-in-crucifixion",
+          "clm-nicodemus-active-jerusalem",
+          "clm-nicodemus-active-judea",
+          "clm-nicodemus-in-burial",
+          "clm-resurrection-at-jerusalem"
+        ],
+        "psg-mark-15-40-41": [
+          "clm-peter-in-crucifixion-witness"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-19-38-42",
+        "PARAPHRASE_OMISSION:psg-john-19-38-42:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-mary-magdalene-in-resurrection",
+        "subject_type": "person",
+        "subject_id": "mary-magdalene",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "resurrection-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T21:45:00Z"
+      },
+      "subject_entity": {
+        "person_id": "mary-magdalene",
+        "person_label": "Mary Magdalene",
+        "name_alt": "Mary of Magdala",
+        "name_native": "Μαρία ἡ Μαγδαληνή",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Female disciple associated with Galilee, the passion, and the empty tomb narratives."
+      },
+      "object_entity": {
+        "event_id": "resurrection-of-jesus",
+        "event_label": "Resurrection of Jesus",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Earliest Christian proclamation and Gospel narratives report that Jesus was raised after his death and burial."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-mary-magdalene-in-resurrection",
+            "passage_id": "psg-john-20-1-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-20-1-18",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.20.1-18",
+            "excerpt": "Paraphrase: Mary Magdalene comes to the tomb and encounters the risen Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-mary-magdalene-active-galilee",
+        "clm-mary-magdalene-disciple",
+        "clm-mary-magdalene-active-jerusalem",
+        "clm-mary-magdalene-in-crucifixion"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-john-20-1-18": [
+          "clm-jesus-in-resurrection",
+          "clm-john-resurrection",
+          "clm-mary-magdalene-active-jerusalem",
+          "clm-resurrection-at-jerusalem",
+          "clm-resurrection-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-20-1-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-mary-magdalene-disciple",
+        "subject_type": "person",
+        "subject_id": "mary-magdalene",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "mary-magdalene",
+        "person_label": "Mary Magdalene",
+        "name_alt": "Mary of Magdala",
+        "name_native": "Μαρία ἡ Μαγδαληνή",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Female disciple associated with Galilee, the passion, and the empty tomb narratives."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-mary-magdalene-disciple",
+            "passage_id": "psg-luke-8-1-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-luke-8-1-3",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.8.1-3",
+            "excerpt": "Paraphrase: Women including Mary Magdalene accompany Jesus in the Galilean ministry.",
+            "language": "English",
+            "passage_year": "29",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-mary-magdalene-active-galilee",
+        "clm-mary-magdalene-active-jerusalem",
+        "clm-mary-magdalene-in-crucifixion",
+        "clm-mary-magdalene-in-resurrection"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-luke-8-1-3": [
+          "clm-jesus-teacher-mary-magdalene",
+          "clm-mary-magdalene-active-galilee"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-luke-8-1-3"
+      ]
+    }
+  ]
+}

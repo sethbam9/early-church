@@ -1,0 +1,2548 @@
+{
+  "batch_id": "batch-020",
+  "queue": "0A",
+  "focus": "psg-acts-11-25-26(16)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-tychicus-disciple",
+        "subject_type": "person",
+        "subject_id": "tychicus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "66",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tychicus",
+        "person_label": "Tychicus",
+        "name_alt": "",
+        "name_native": "Τυχικός",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate sent to Ephesus according to 2 Timothy."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tychicus-disciple",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tychicus-active-asia",
+        "clm-tychicus-active-jerusalem",
+        "clm-tychicus-active-ephesus"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-trophimus-active-asia",
+        "subject_type": "person",
+        "subject_id": "trophimus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "asia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T08:40:00Z"
+      },
+      "subject_entity": {
+        "person_id": "trophimus",
+        "person_label": "Trophimus",
+        "name_alt": "",
+        "name_native": "Τρόφιμος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate left ill at Miletus according to 2 Timothy."
+      },
+      "object_entity": {
+        "place_id": "asia",
+        "place_label": "Asia",
+        "place_label_modern": "Roman Asia",
+        "place_kind": "province",
+        "parent_place_id": "",
+        "lat": "38.5000",
+        "lon": "28.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Roman province in western Asia Minor addressed in 1 Peter and associated with Ephesus."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-trophimus-active-asia",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-trophimus-active-jerusalem",
+        "clm-trophimus-disciple",
+        "clm-trophimus-active-miletus"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gaius-of-derbe-active-derbe",
+        "subject_type": "person",
+        "subject_id": "gaius-of-derbe",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "derbe",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T08:50:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gaius-of-derbe",
+        "person_label": "Gaius of Derbe",
+        "name_alt": "Gaius",
+        "name_native": "Γάϊος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Companion of Paul identified as from Derbe in Acts 20."
+      },
+      "object_entity": {
+        "place_id": "derbe",
+        "place_label": "Derbe",
+        "place_label_modern": "Kerti Höyük area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.2500",
+        "lon": "33.1500",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Lycaonian city named as the home of Gaius in Acts 20."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gaius-of-derbe-active-derbe",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gaius-active-jerusalem",
+        "clm-gaius-derbe-disciple",
+        "clm-paul-coworker-gaius"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-coworker-secundus",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "secundus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "person_id": "secundus",
+        "person_label": "Secundus",
+        "name_alt": "",
+        "name_native": "Σεκοῦνδος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Thessalonian companion of Paul named among the Acts 20 travel party."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-coworker-secundus",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aristarchus-active-thessalonica",
+        "subject_type": "person",
+        "subject_id": "aristarchus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "thessalonica",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T08:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aristarchus",
+        "person_label": "Aristarchus",
+        "name_alt": "",
+        "name_native": "Ἀρίσταρχος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Thessalonian companion of Paul named among the Acts 20 travel party."
+      },
+      "object_entity": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aristarchus-active-thessalonica",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aristarchus-member-thessalonian",
+        "clm-aristarchus-active-ephesus",
+        "clm-aristarchus-active-jerusalem",
+        "clm-aristarchus-coworker-tychicus",
+        "clm-aristarchus-active-rome",
+        "clm-aristarchus-coworker-paul",
+        "clm-aristarchus-member-roman-church",
+        "clm-epaphras-coworker-aristarchus"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-tychicus-active-asia",
+        "subject_type": "person",
+        "subject_id": "tychicus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "asia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T08:40:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tychicus",
+        "person_label": "Tychicus",
+        "name_alt": "",
+        "name_native": "Τυχικός",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate sent to Ephesus according to 2 Timothy."
+      },
+      "object_entity": {
+        "place_id": "asia",
+        "place_label": "Asia",
+        "place_label_modern": "Roman Asia",
+        "place_kind": "province",
+        "parent_place_id": "",
+        "lat": "38.5000",
+        "lon": "28.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Roman province in western Asia Minor addressed in 1 Peter and associated with Ephesus."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tychicus-active-asia",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tychicus-active-jerusalem",
+        "clm-tychicus-disciple",
+        "clm-tychicus-active-ephesus"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sopater-active-berea",
+        "subject_type": "person",
+        "subject_id": "sopater",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "berea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T08:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "sopater",
+        "person_label": "Sopater",
+        "name_alt": "Sopater son of Pyrrhus",
+        "name_native": "Σώπατρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Companion of Paul identified as from Berea in Acts 20."
+      },
+      "object_entity": {
+        "place_id": "berea",
+        "place_label": "Berea",
+        "place_label_modern": "Veria",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.5244",
+        "lon": "22.2024",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul's mission in Acts 17."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sopater-active-berea",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sopater-active-jerusalem",
+        "clm-sopater-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gaius-active-jerusalem",
+        "subject_type": "person",
+        "subject_id": "gaius-of-derbe",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "gaius-of-derbe",
+        "person_label": "Gaius of Derbe",
+        "name_alt": "Gaius",
+        "name_native": "Γάϊος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Companion of Paul identified as from Derbe in Acts 20."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gaius-active-jerusalem",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gaius-derbe-disciple",
+        "clm-gaius-of-derbe-active-derbe",
+        "clm-paul-coworker-gaius"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-tychicus-active-jerusalem",
+        "subject_type": "person",
+        "subject_id": "tychicus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tychicus",
+        "person_label": "Tychicus",
+        "name_alt": "",
+        "name_native": "Τυχικός",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate sent to Ephesus according to 2 Timothy."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tychicus-active-jerusalem",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tychicus-active-asia",
+        "clm-tychicus-disciple",
+        "clm-tychicus-active-ephesus"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-coworker-sopater",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "sopater",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "person_id": "sopater",
+        "person_label": "Sopater",
+        "name_alt": "Sopater son of Pyrrhus",
+        "name_native": "Σώπατρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Companion of Paul identified as from Berea in Acts 20."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-coworker-sopater",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-active-philippi",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-place-derbe-attested",
+        "subject_type": "place",
+        "subject_id": "derbe",
+        "predicate_id": "place_presence_status",
+        "object_mode": "text",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "attested",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T08:50:00Z"
+      },
+      "subject_entity": {
+        "place_id": "derbe",
+        "place_label": "Derbe",
+        "place_label_modern": "Kerti Höyük area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.2500",
+        "lon": "33.1500",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Lycaonian city named as the home of Gaius in Acts 20."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-place-derbe-attested",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aristarchus-active-jerusalem",
+        "subject_type": "person",
+        "subject_id": "aristarchus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aristarchus",
+        "person_label": "Aristarchus",
+        "name_alt": "",
+        "name_native": "Ἀρίσταρχος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Thessalonian companion of Paul named among the Acts 20 travel party."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aristarchus-active-jerusalem",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aristarchus-member-thessalonian",
+        "clm-aristarchus-active-ephesus",
+        "clm-aristarchus-active-thessalonica",
+        "clm-aristarchus-coworker-tychicus",
+        "clm-aristarchus-active-rome",
+        "clm-aristarchus-coworker-paul",
+        "clm-aristarchus-member-roman-church",
+        "clm-epaphras-coworker-aristarchus"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sopater-disciple",
+        "subject_type": "person",
+        "subject_id": "sopater",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "berea",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "sopater",
+        "person_label": "Sopater",
+        "name_alt": "Sopater son of Pyrrhus",
+        "name_native": "Σώπατρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Companion of Paul identified as from Berea in Acts 20."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "berea",
+        "place_label": "Berea",
+        "place_label_modern": "Veria",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.5244",
+        "lon": "22.2024",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul's mission in Acts 17."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sopater-disciple",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sopater-active-berea",
+        "clm-sopater-active-jerusalem"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-secundus-member-thessalonian",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-secundus-member-thessalonian",
+        "subject_type": "person",
+        "subject_id": "secundus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "thessalonian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "thessalonica",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "secundus",
+        "person_label": "Secundus",
+        "name_alt": "",
+        "name_native": "Σεκοῦνδος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Thessalonian companion of Paul named among the Acts 20 travel party."
+      },
+      "object_entity": {
+        "group_id": "thessalonian-church",
+        "group_label": "Church in Thessalonica",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Thessalonica attested in Acts and the Thessalonian letters."
+      },
+      "context_place": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-secundus-member-thessalonian",
+            "passage_id": "psg-acts-20-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-20-4",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.20.4",
+            "excerpt": "Paraphrase: Sopater of Berea and Aristarchus and Secundus of Thessalonica are named among Paul's companions.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-secundus-active-jerusalem",
+        "clm-secundus-active-thessalonica",
+        "clm-secundus-disciple"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-20-4": [
+          "clm-aristarchus-active-jerusalem",
+          "clm-aristarchus-active-thessalonica",
+          "clm-aristarchus-member-thessalonian",
+          "clm-gaius-active-jerusalem",
+          "clm-gaius-derbe-disciple",
+          "clm-gaius-of-derbe-active-derbe",
+          "clm-paul-coworker-gaius",
+          "clm-paul-coworker-secundus",
+          "clm-paul-coworker-sopater",
+          "clm-place-derbe-attested",
+          "clm-secundus-active-jerusalem",
+          "clm-secundus-active-thessalonica",
+          "clm-secundus-disciple",
+          "clm-sopater-active-berea",
+          "clm-sopater-active-jerusalem",
+          "clm-sopater-disciple",
+          "clm-trophimus-active-asia",
+          "clm-tychicus-active-asia",
+          "clm-tychicus-active-jerusalem",
+          "clm-tychicus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-20-4",
+        "PARAPHRASE_OMISSION:psg-acts-20-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-active-derbe",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "derbe",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "47",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "place_id": "derbe",
+        "place_label": "Derbe",
+        "place_label_modern": "Kerti Höyük area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.2500",
+        "lon": "33.1500",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Lycaonian city named as the home of Gaius in Acts 20."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-active-derbe",
+            "passage_id": "psg-acts-13-4-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-4-12",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.4-12",
+            "excerpt": "Paraphrase: Barnabas and Saul sail to Cyprus, proclaim in Salamis, traverse the island to Paphos, and Sergius Paulus believes after Elymas is opposed.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-galatia",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-acts-13-4-12": [
+          "clm-barnabas-active-cyprus",
+          "clm-barnabas-active-galatia",
+          "clm-barnabas-active-lystra",
+          "clm-barnabas-active-paphos",
+          "clm-barnabas-active-salamis",
+          "clm-group-disciples-paphos",
+          "clm-john-mark-active-cyprus",
+          "clm-john-mark-active-paphos",
+          "clm-john-mark-active-salamis",
+          "clm-paul-active-cyprus",
+          "clm-paul-active-paphos",
+          "clm-paul-active-salamis",
+          "clm-place-cyprus-attested",
+          "clm-place-cyprus-attested-late",
+          "clm-place-paphos-attested",
+          "clm-place-salamis-attested",
+          "clm-sergius-paulus-active-paphos",
+          "clm-sergius-paulus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-4-12",
+        "PARAPHRASE_OMISSION:psg-acts-13-4-12:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-john-mark-active-paphos",
+        "subject_type": "person",
+        "subject_id": "john-mark",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "paphos",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "john-mark",
+        "person_label": "John Mark",
+        "name_alt": "Mark",
+        "name_native": "Ἰωάννης Μᾶρκος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Mission helper associated with Barnabas and Paul in Acts 13 and later tradition."
+      },
+      "object_entity": {
+        "place_id": "paphos",
+        "place_label": "Paphos",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "cyprus",
+        "lat": "34.7754",
+        "lon": "32.4245",
+        "location_precision": "approx_city",
+        "modern_country_label": "Cyprus",
+        "notes": "Western Cypriot city associated with Sergius Paulus in Acts 13."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-john-mark-active-paphos",
+            "passage_id": "psg-acts-13-4-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-4-12",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.4-12",
+            "excerpt": "Paraphrase: Barnabas and Saul sail to Cyprus, proclaim in Salamis, traverse the island to Paphos, and Sergius Paulus believes after Elymas is opposed.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-john-mark-active-jerusalem",
+        "clm-john-mark-member-jerusalem",
+        "clm-john-mark-member-disciples",
+        "clm-john-mark-active-antioch",
+        "clm-john-mark-member-antioch",
+        "clm-john-mark-active-cyprus",
+        "clm-john-mark-active-salamis",
+        "clm-john-mark-coworker-peter",
+        "clm-john-mark-coworker-paul",
+        "clm-john-mark-active-rome",
+        "clm-john-mark-member-roman"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-acts-13-4-12": [
+          "clm-barnabas-active-cyprus",
+          "clm-barnabas-active-derbe",
+          "clm-barnabas-active-galatia",
+          "clm-barnabas-active-lystra",
+          "clm-barnabas-active-paphos",
+          "clm-barnabas-active-salamis",
+          "clm-group-disciples-paphos",
+          "clm-john-mark-active-cyprus",
+          "clm-john-mark-active-salamis",
+          "clm-paul-active-cyprus",
+          "clm-paul-active-paphos",
+          "clm-paul-active-salamis",
+          "clm-place-cyprus-attested",
+          "clm-place-cyprus-attested-late",
+          "clm-place-paphos-attested",
+          "clm-place-salamis-attested",
+          "clm-sergius-paulus-active-paphos",
+          "clm-sergius-paulus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-4-12",
+        "PARAPHRASE_OMISSION:psg-acts-13-4-12:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-barnabas-active-galatia",
+        "subject_type": "person",
+        "subject_id": "barnabas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galatia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "47",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "barnabas",
+        "person_label": "Barnabas",
+        "name_alt": "Joseph Barnabas",
+        "name_native": "Βαρνάβας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 61",
+        "person_kind": "individual",
+        "notes": "Early missionary coworker of Paul and prominent figure in Antioch."
+      },
+      "object_entity": {
+        "place_id": "galatia",
+        "place_label": "Galatia",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "39.5000",
+        "lon": "32.8000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Region addressed in the Pauline letter to the Galatians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-barnabas-active-galatia",
+            "passage_id": "psg-acts-13-4-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-4-12",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.4-12",
+            "excerpt": "Paraphrase: Barnabas and Saul sail to Cyprus, proclaim in Salamis, traverse the island to Paphos, and Sergius Paulus believes after Elymas is opposed.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-barnabas-active-jerusalem",
+        "clm-barnabas-member-jerusalem",
+        "clm-peter-coworker-barnabas",
+        "clm-barnabas-in-jerusalem-persecution",
+        "clm-paul-coworker-barnabas-jerusalem",
+        "clm-barnabas-active-antioch",
+        "clm-barnabas-member-antioch-2",
+        "clm-barnabas-disciple",
+        "clm-barnabas-coworker-john-mark",
+        "clm-barnabas-teacher-john-mark",
+        "clm-barnabas-active-cyprus",
+        "clm-barnabas-active-paphos",
+        "clm-barnabas-active-salamis",
+        "clm-barnabas-coworker-lucius",
+        "clm-barnabas-coworker-manaen",
+        "clm-barnabas-coworker-simeon-niger",
+        "clm-barnabas-active-derbe",
+        "clm-barnabas-active-lystra",
+        "clm-barnabas-coworker-silas",
+        "clm-barnabas-in-council"
+      ],
+      "sibling_count": 20,
+      "passage_co_users": {
+        "psg-acts-13-4-12": [
+          "clm-barnabas-active-cyprus",
+          "clm-barnabas-active-derbe",
+          "clm-barnabas-active-lystra",
+          "clm-barnabas-active-paphos",
+          "clm-barnabas-active-salamis",
+          "clm-group-disciples-paphos",
+          "clm-john-mark-active-cyprus",
+          "clm-john-mark-active-paphos",
+          "clm-john-mark-active-salamis",
+          "clm-paul-active-cyprus",
+          "clm-paul-active-paphos",
+          "clm-paul-active-salamis",
+          "clm-place-cyprus-attested",
+          "clm-place-cyprus-attested-late",
+          "clm-place-paphos-attested",
+          "clm-place-salamis-attested",
+          "clm-sergius-paulus-active-paphos",
+          "clm-sergius-paulus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-4-12",
+        "PARAPHRASE_OMISSION:psg-acts-13-4-12:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-john-mark-active-salamis",
+        "subject_type": "person",
+        "subject_id": "john-mark",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "salamis",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "john-mark",
+        "person_label": "John Mark",
+        "name_alt": "Mark",
+        "name_native": "Ἰωάννης Μᾶρκος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Mission helper associated with Barnabas and Paul in Acts 13 and later tradition."
+      },
+      "object_entity": {
+        "place_id": "salamis",
+        "place_label": "Salamis",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "cyprus",
+        "lat": "35.1738",
+        "lon": "33.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Cyprus",
+        "notes": "Eastern Cypriot city where Barnabas and Saul begin proclaiming in Acts 13."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-john-mark-active-salamis",
+            "passage_id": "psg-acts-13-4-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-4-12",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.4-12",
+            "excerpt": "Paraphrase: Barnabas and Saul sail to Cyprus, proclaim in Salamis, traverse the island to Paphos, and Sergius Paulus believes after Elymas is opposed.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-john-mark-active-jerusalem",
+        "clm-john-mark-member-jerusalem",
+        "clm-john-mark-member-disciples",
+        "clm-john-mark-active-antioch",
+        "clm-john-mark-member-antioch",
+        "clm-john-mark-active-cyprus",
+        "clm-john-mark-active-paphos",
+        "clm-john-mark-coworker-peter",
+        "clm-john-mark-coworker-paul",
+        "clm-john-mark-active-rome",
+        "clm-john-mark-member-roman"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-acts-13-4-12": [
+          "clm-barnabas-active-cyprus",
+          "clm-barnabas-active-derbe",
+          "clm-barnabas-active-galatia",
+          "clm-barnabas-active-lystra",
+          "clm-barnabas-active-paphos",
+          "clm-barnabas-active-salamis",
+          "clm-group-disciples-paphos",
+          "clm-john-mark-active-cyprus",
+          "clm-john-mark-active-paphos",
+          "clm-paul-active-cyprus",
+          "clm-paul-active-paphos",
+          "clm-paul-active-salamis",
+          "clm-place-cyprus-attested",
+          "clm-place-cyprus-attested-late",
+          "clm-place-paphos-attested",
+          "clm-place-salamis-attested",
+          "clm-sergius-paulus-active-paphos",
+          "clm-sergius-paulus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-4-12",
+        "PARAPHRASE_OMISSION:psg-acts-13-4-12:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-place-cyprus-attested-late",
+        "subject_type": "place",
+        "subject_id": "cyprus",
+        "predicate_id": "place_presence_status",
+        "object_mode": "text",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "attested",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "100",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "place_id": "cyprus",
+        "place_label": "Cyprus",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "35.0000",
+        "lon": "33.0000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Cyprus",
+        "notes": "Mediterranean island visited on the first missionary journey in Acts 13."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-place-cyprus-attested-late",
+            "passage_id": "psg-acts-13-4-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts 13:4 records Paul at Cyprus."
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-4-12",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.4-12",
+            "excerpt": "Paraphrase: Barnabas and Saul sail to Cyprus, proclaim in Salamis, traverse the island to Paphos, and Sergius Paulus believes after Elymas is opposed.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-acts-13-4-12": [
+          "clm-barnabas-active-cyprus",
+          "clm-barnabas-active-derbe",
+          "clm-barnabas-active-galatia",
+          "clm-barnabas-active-lystra",
+          "clm-barnabas-active-paphos",
+          "clm-barnabas-active-salamis",
+          "clm-group-disciples-paphos",
+          "clm-john-mark-active-cyprus",
+          "clm-john-mark-active-paphos",
+          "clm-john-mark-active-salamis",
+          "clm-paul-active-cyprus",
+          "clm-paul-active-paphos",
+          "clm-paul-active-salamis",
+          "clm-place-cyprus-attested",
+          "clm-place-paphos-attested",
+          "clm-place-salamis-attested",
+          "clm-sergius-paulus-active-paphos",
+          "clm-sergius-paulus-disciple"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-13-4-12",
+        "PARAPHRASE_RISK:psg-acts-13-4-12"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-john-mark-active-cyprus",
+        "subject_type": "person",
+        "subject_id": "john-mark",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "cyprus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T05:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "john-mark",
+        "person_label": "John Mark",
+        "name_alt": "Mark",
+        "name_native": "Ἰωάννης Μᾶρκος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Mission helper associated with Barnabas and Paul in Acts 13 and later tradition."
+      },
+      "object_entity": {
+        "place_id": "cyprus",
+        "place_label": "Cyprus",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "35.0000",
+        "lon": "33.0000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Cyprus",
+        "notes": "Mediterranean island visited on the first missionary journey in Acts 13."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-john-mark-active-cyprus",
+            "passage_id": "psg-acts-13-4-12",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-4-12",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.4-12",
+            "excerpt": "Paraphrase: Barnabas and Saul sail to Cyprus, proclaim in Salamis, traverse the island to Paphos, and Sergius Paulus believes after Elymas is opposed.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-john-mark-active-jerusalem",
+        "clm-john-mark-member-jerusalem",
+        "clm-john-mark-member-disciples",
+        "clm-john-mark-active-antioch",
+        "clm-john-mark-member-antioch",
+        "clm-john-mark-active-paphos",
+        "clm-john-mark-active-salamis",
+        "clm-john-mark-coworker-peter",
+        "clm-john-mark-coworker-paul",
+        "clm-john-mark-active-rome",
+        "clm-john-mark-member-roman"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-acts-13-4-12": [
+          "clm-barnabas-active-cyprus",
+          "clm-barnabas-active-derbe",
+          "clm-barnabas-active-galatia",
+          "clm-barnabas-active-lystra",
+          "clm-barnabas-active-paphos",
+          "clm-barnabas-active-salamis",
+          "clm-group-disciples-paphos",
+          "clm-john-mark-active-paphos",
+          "clm-john-mark-active-salamis",
+          "clm-paul-active-cyprus",
+          "clm-paul-active-paphos",
+          "clm-paul-active-salamis",
+          "clm-place-cyprus-attested",
+          "clm-place-cyprus-attested-late",
+          "clm-place-paphos-attested",
+          "clm-place-salamis-attested",
+          "clm-sergius-paulus-active-paphos",
+          "clm-sergius-paulus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-4-12",
+        "PARAPHRASE_OMISSION:psg-acts-13-4-12:subject"
+      ]
+    }
+  ]
+}

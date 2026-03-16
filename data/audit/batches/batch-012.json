@@ -1,0 +1,2923 @@
+{
+  "batch_id": "batch-012",
+  "queue": "0A",
+  "focus": "psg-philostorgius-he-3-4(22)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-2corinthians-by-paul",
+        "subject_type": "work",
+        "subject_id": "second-epistle-to-the-corinthians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "55",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T10:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "second-epistle-to-the-corinthians",
+        "title_display": "Second Epistle to the Corinthians",
+        "title_original": "Πρὸς Κορινθίους Βʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the church in Corinth together with believers in Achaia."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-2corinthians-by-paul",
+            "passage_id": "psg-2cor-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "2 Cor 1:1 explicit Paul+Timothy authorship; universally accepted as authentic."
+          },
+          "passage": {
+            "passage_id": "psg-2cor-1-1",
+            "source_id": "src-2cor",
+            "locator_type": "bible_osis",
+            "locator": "2Cor.1.1",
+            "excerpt": "Paraphrase: Paul addresses the church of God in Corinth together with all the saints in the whole of Achaia.",
+            "language": "English",
+            "passage_year": "55",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2cor",
+            "work_id": "second-epistle-to-the-corinthians",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to the Corinthians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 55-56",
+            "year_start": "55",
+            "year_end": "56",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Corinthians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Corinth and Achaia in the mid-50s."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-2corinthians-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "2 Cor 1:1 explicit Paul+Timothy authorship; universally accepted as authentic."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-second-corinthians-addressed-achaia",
+        "clm-second-corinthians-addressed-corinth",
+        "clm-second-corinthians-resurrection"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-2cor-1-1": [
+          "clm-group-disciples-achaia",
+          "clm-place-achaia-attested",
+          "clm-second-corinthians-addressed-achaia",
+          "clm-second-corinthians-addressed-corinth"
+        ],
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2cor-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-1peter-by-peter",
+        "subject_type": "work",
+        "subject_id": "first-epistle-of-peter",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "simon-peter",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "90",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T06:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-epistle-of-peter",
+        "title_display": "First Epistle of Peter",
+        "title_original": "Πέτρου Αʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "General epistle addressed to believers across several provinces of Asia Minor."
+      },
+      "object_entity": {
+        "person_id": "simon-peter",
+        "person_label": "Simon Peter",
+        "name_alt": "Cephas; Simon son of Jonah",
+        "name_native": "Σίμων Πέτρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Disciple called during Galilean ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-1peter-by-peter",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Traditional attribution to Simon Peter (1 Pet 1:1); disputed on stylistic and historical grounds."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-1pet-affirms-baptism-regen",
+        "clm-first-peter-addressed-asia",
+        "clm-first-peter-addressed-bithynia",
+        "clm-first-peter-addressed-cappadocia",
+        "clm-first-peter-addressed-galatia",
+        "clm-first-peter-addressed-pontus",
+        "clm-first-peter-resurrection"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-1corinthians-by-paul",
+        "subject_type": "work",
+        "subject_id": "first-epistle-to-the-corinthians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "53",
+        "year_end": "55",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T06:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-epistle-to-the-corinthians",
+        "title_display": "First Epistle to the Corinthians",
+        "title_original": "Πρὸς Κορινθίους Αʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressing the church in Corinth and preserving early resurrection tradition."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-1corinthians-by-paul",
+            "passage_id": "psg-1cor-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "1 Cor 1:1 — Paul explicitly identifies himself as author called as apostle."
+          },
+          "passage": {
+            "passage_id": "psg-1cor-1-2",
+            "source_id": "src-1cor",
+            "locator_type": "bible_osis",
+            "locator": "1Cor.1.2",
+            "excerpt": "Paraphrase: Paul addresses the church of God that is in Corinth.",
+            "language": "English",
+            "passage_year": "54",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1cor",
+            "work_id": "first-epistle-to-the-corinthians",
+            "source_kind": "primary_text",
+            "title": "First Epistle to the Corinthians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 53-55",
+            "year_start": "53",
+            "year_end": "55",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=1%20Corinthians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Corinth and resurrection proclamation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-1corinthians-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "1 Cor 1:1 explicit self-identification; universally accepted as authentic."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-first-corinthians-addressed-corinth",
+        "clm-first-corinthians-resurrection",
+        "clm-first-corinthians-written-ephesus",
+        "clm-1cor-year-end",
+        "clm-1cor-year-start"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-1cor-1-2": [
+          "clm-1cor-year-end",
+          "clm-1cor-year-start",
+          "clm-first-corinthians-addressed-corinth",
+          "clm-paul-member-corinthian-church"
+        ],
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-1cor-1-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gospel-matt-by-matthew",
+        "subject_type": "work",
+        "subject_id": "gospel-of-matthew",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "matthew-the-apostle",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "65",
+        "year_end": "90",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T09:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-matthew",
+        "title_display": "Gospel according to Matthew",
+        "title_original": "Κατὰ Ματθαῖον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Textual witness for ministry-period claims."
+      },
+      "object_entity": {
+        "person_id": "matthew-the-apostle",
+        "person_label": "Matthew",
+        "name_alt": "Levi",
+        "name_native": "Ματθαῖος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve in Gospel and Acts lists."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gospel-matt-by-matthew",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Traditional attribution to Matthew the tax collector/apostle (Papias apud Eusebius HE 3.39.16; Irenaeus AH 3.1.1). Scholarly majority regards as pseudonymous."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-matthew-repentance",
+        "clm-matthew-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philippians-by-paul",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-philippians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "54",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T06:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-philippians",
+        "title_display": "Epistle to the Philippians",
+        "title_original": "Πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the believers in Philippi."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philippians-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Phil 1:1 explicit Paul+Timothy opening; universally accepted as authentic."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-philippians-by-paul",
+            "passage_id": "psg-phil-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Phil 1:1 — Paul and Timothy opening; explicit Pauline self-identification."
+          },
+          "passage": {
+            "passage_id": "psg-phil-1-1",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.1.1",
+            "excerpt": "Paraphrase: Paul and Timothy address all the saints in Christ Jesus who are in Philippi, with the overseers and deacons.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philippians-addressed-philippi",
+        "clm-philippians-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ],
+        "psg-phil-1-1": [
+          "clm-paul-coworker-timothy",
+          "clm-paul-member-philippian",
+          "clm-philippians-addressed-philippi",
+          "clm-timothy-active-rome",
+          "clm-timothy-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phil-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-2timothy-by-paul",
+        "subject_type": "work",
+        "subject_id": "second-epistle-to-timothy",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "54",
+        "year_end": "100",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T10:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "second-epistle-to-timothy",
+        "title_display": "Second Epistle to Timothy",
+        "title_original": "Πρὸς Τιμόθεον Βʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pastoral epistle associated with Timothy and Paul's later imprisonment setting."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-2timothy-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Traditional Pauline attribution (2 Tim 1:1); Pastoral Epistle; fragment theory proposes authentic personal notes embedded in pseudonymous frame (2 Tim 4:9-21)."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-second-timothy-resurrection"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-acts-by-luke",
+        "subject_type": "work",
+        "subject_id": "acts-of-the-apostles",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "luke-the-evangelist",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "65",
+        "year_end": "90",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "",
+        "updated_at": ""
+      },
+      "subject_entity": {
+        "work_id": "acts-of-the-apostles",
+        "title_display": "Acts of the Apostles",
+        "title_original": "Πράξεις Ἀποστόλων",
+        "work_type": "chronicle",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Narrative source for the apostolic expansion from Jerusalem into the wider Roman world."
+      },
+      "object_entity": {
+        "person_id": "luke-the-evangelist",
+        "person_label": "Luke",
+        "name_alt": "Luke the beloved physician",
+        "name_native": "Λουκᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline companion traditionally associated with Luke and Acts."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-acts-by-luke",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "AH 3.1.1: Luke the companion of Paul wrote down the Gospel preached by Paul."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-acts-repentance",
+        "clm-acts-resurrection",
+        "clm-acts-affirms-baptism-regen",
+        "clm-acts-affirms-baptism-water",
+        "clm-acts-affirms-eucharist-sunday"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-james-by-james",
+        "subject_type": "work",
+        "subject_id": "epistle-of-james",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "james-the-just",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "45",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "",
+        "updated_at": ""
+      },
+      "subject_entity": {
+        "work_id": "epistle-of-james",
+        "title_display": "Epistle of James",
+        "title_original": "Ἰακώβου",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "General epistle associated with James and notable for its moral exhortation."
+      },
+      "object_entity": {
+        "person_id": "james-the-just",
+        "person_label": "James the Just",
+        "name_alt": "James brother of the Lord",
+        "name_native": "Ἰάκωβος",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 62",
+        "person_kind": "individual",
+        "notes": "Leading Jerusalem figure in the apostolic period."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-james-by-james",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Traditional attribution; Jas 1:1 self-identifies as 'James, servant of God and of the Lord.'"
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-james-epistle-repentance"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-romans-by-paul",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-romans",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "55",
+        "year_end": "58",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T06:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-romans",
+        "title_display": "Epistle to the Romans",
+        "title_original": "Πρὸς Ῥωμαίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the believers in Rome."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-romans-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Rom 1:1 explicit self-identification as Paul; universally accepted as authentic."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-romans-by-paul",
+            "passage_id": "psg-rom-1-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Rom 1:1,7 — Paul explicitly identifies himself as author and apostle."
+          },
+          "passage": {
+            "passage_id": "psg-rom-1-7",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.1.7",
+            "excerpt": "Paraphrase: Paul addresses all God beloved in Rome who are called to be saints.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-romans-addressed-rome",
+        "clm-romans-resurrection",
+        "clm-romans-year-end",
+        "clm-romans-year-start"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-titus-by-paul"
+        ],
+        "psg-rom-1-7": [
+          "clm-group-disciples-rome",
+          "clm-paul-member-roman-church",
+          "clm-romans-addressed-rome",
+          "clm-romans-year-end",
+          "clm-romans-year-start"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-1-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-galatians-by-paul",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-galatians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "48",
+        "year_end": "55",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "",
+        "updated_at": ""
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-galatians",
+        "title_display": "Epistle to the Galatians",
+        "title_original": "Πρὸς Γαλάτας",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter central to disputes over Gentile inclusion and circumcision."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-galatians-by-paul",
+            "passage_id": "psg-gal-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Gal 1:1-2: Paul explicitly identifies himself as author and apostle."
+          },
+          "passage": {
+            "passage_id": "psg-gal-1-2",
+            "source_id": "src-galatians",
+            "locator_type": "bible_osis",
+            "locator": "Gal.1.2",
+            "excerpt": "Paraphrase: Paul addresses the churches of Galatia.",
+            "language": "English",
+            "passage_year": "49",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-galatians",
+            "work_id": "epistle-to-the-galatians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Galatians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 48-49",
+            "year_start": "48",
+            "year_end": "49",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Galatians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Gentile inclusion and circumcision controversy."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-galatians-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "AH 3.1.1 and Paul's letters treated as a unit; Galatians 1:1 self-attribution."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-galatians-addressed-galatia",
+        "clm-galatians-gentiles"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-gal-1-2": [
+          "clm-galatians-addressed-galatia",
+          "clm-paul-active-galatia"
+        ],
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gal-1-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-1thess-by-paul",
+        "subject_type": "work",
+        "subject_id": "first-epistle-to-the-thessalonians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "51",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T09:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-epistle-to-the-thessalonians",
+        "title_display": "First Epistle to the Thessalonians",
+        "title_original": "Πρὸς Θεσσαλονικεῖς Αʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the church in Thessalonica."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-1thess-by-paul",
+            "passage_id": "psg-1thess-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "1 Thess 1:1 Paul and Silvanus and Timothy opening — explicit Pauline self-identification."
+          },
+          "passage": {
+            "passage_id": "psg-1thess-1-1",
+            "source_id": "src-1thess",
+            "locator_type": "bible_osis",
+            "locator": "1Thess.1.1",
+            "excerpt": "Paraphrase: Paul, Silvanus, and Timothy address the church of the Thessalonians in God the Father and the Lord Jesus Christ.",
+            "language": "English",
+            "passage_year": "50",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1thess",
+            "work_id": "first-epistle-to-the-thessalonians",
+            "source_kind": "primary_text",
+            "title": "First Epistle to the Thessalonians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 50-51",
+            "year_start": "50",
+            "year_end": "51",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=1%20Thessalonians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Thessalonian church and resurrection proclamation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-1thess-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "1 Thess 1:1 explicit Paul authorship; earliest of Paul's surviving letters; universally accepted."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-first-thessalonians-addressed-thessalonica",
+        "clm-first-thessalonians-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-1thess-1-1": [
+          "clm-first-thessalonians-addressed-thessalonica",
+          "clm-group-thessalonian-church-thessalonica",
+          "clm-paul-coworker-timothy",
+          "clm-paul-member-thessalonian",
+          "clm-place-thessalonica-attested",
+          "clm-silas-coworker-timothy",
+          "clm-timothy-active-corinth"
+        ],
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-1thess-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-2thessalonians-by-paul",
+        "subject_type": "work",
+        "subject_id": "second-epistle-to-the-thessalonians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "100",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T10:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "second-epistle-to-the-thessalonians",
+        "title_display": "Second Epistle to the Thessalonians",
+        "title_original": "Πρὸς Θεσσαλονικεῖς Βʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the church in Thessalonica."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-2thessalonians-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Traditional Pauline attribution (2 Thess 1:1); widely regarded as deuteropauline."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-second-thessalonians-addressed-thessalonica",
+        "clm-second-thessalonians-judgment"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-irenaeus-ah-affirms-apostolic-succession",
+        "subject_type": "work",
+        "subject_id": "against-heresies",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "180",
+        "year_end": "185",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T20:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "against-heresies",
+        "title_display": "Against Heresies",
+        "title_original": "Ἔλεγχος καὶ ἀνατροπὴ τῆς ψευδωνύμου γνώσεως",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Irenaeus of Lyons's five-book refutation of Gnosticism c. 180, establishing apostolic succession, rule of faith, and the fourfold Gospel as the standard against Valentinian and Marcionite innovations."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-ah-affirms-apostolic-succession",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "AH 3.1.1: salvation plan learned through those who brought the Gospel — apostolic chain."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-ah-affirms-apostolic-succession",
+            "passage_id": "psg-irenaeus-ah-3-3-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.1",
+            "excerpt": "Paraphrase: It is within the power of all in every Church to contemplate the tradition of the apostles manifested throughout the whole world and to reckon up those who were instituted bishops by the apostles and their succession to our own times; those who taught nothing like what the heretics rave about.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-ah-affirms-apostolic-succession",
+            "passage_id": "psg-irenaeus-ah-3-3-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.2",
+            "excerpt": "Paraphrase: The tradition derived from the apostles of the very great, very ancient, universally known Church founded at Rome by Peter and Paul — every Church must agree with this Church on account of its preeminent authority (potiorem principalitatem); the faith preached to men comes down to our time by means of the successions of the bishops.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-ah-affirms-apostolic-succession",
+            "passage_id": "psg-irenaeus-ah-3-3-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-3",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.3",
+            "excerpt": "Paraphrase: The Rome bishop succession: Peter and Paul committed the episcopate to Linus; then Anacletus; then Clement (third from the apostles, who had seen the blessed apostles); then Evaristus, Alexander, Sixtus, Telephorus (gloriously martyred), Hyginus, Pius, Anicetus, Soter, and Eleutherius (twelfth from the apostles, now in office). In this order and by this succession the ecclesiastical tradition from the apostles and the preaching of the truth have come down to us.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ah-affirms-ot-scripture",
+        "clm-ah-affirms-passion",
+        "clm-against-heresies-written-lyons",
+        "clm-ah-affirms-baptismal-anointing",
+        "clm-ah-affirms-catechumenate",
+        "clm-ah-affirms-military-refusal",
+        "clm-ah-affirms-ordination",
+        "clm-irenaeus-ah-affirms-baptism-regen",
+        "clm-irenaeus-ah-affirms-bodily-resurrection",
+        "clm-irenaeus-ah-affirms-continual-prayer",
+        "clm-irenaeus-ah-affirms-episcopal-chair",
+        "clm-irenaeus-ah-affirms-eucharist-body-blood",
+        "clm-irenaeus-ah-affirms-eucharist-sacrifice",
+        "clm-irenaeus-ah-affirms-eucharist-sunday",
+        "clm-irenaeus-ah-affirms-fasting",
+        "clm-irenaeus-ah-affirms-frequent-eucharist",
+        "clm-irenaeus-ah-affirms-incarnation",
+        "clm-irenaeus-ah-affirms-infant-baptism",
+        "clm-irenaeus-ah-affirms-logos",
+        "clm-irenaeus-ah-affirms-malachi-eucharist",
+        "clm-irenaeus-ah-affirms-martyrdom-witness",
+        "clm-irenaeus-ah-affirms-penance",
+        "clm-irenaeus-ah-affirms-rule-of-faith",
+        "clm-irenaeus-ah-affirms-trinitarian-baptism",
+        "clm-irenaeus-ah-affirms-virgin-birth",
+        "clm-against-heresies-by-irenaeus"
+      ],
+      "sibling_count": 26,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ],
+        "psg-irenaeus-ah-3-3-1": [
+          "clm-against-heresies-written-lyons",
+          "clm-ah-affirms-ordination",
+          "clm-irenaeus-active-lyons",
+          "clm-irenaeus-ah-affirms-episcopal-chair",
+          "clm-lyons-persecution-at-lyons",
+          "clm-peter-bishop-rome"
+        ],
+        "psg-irenaeus-ah-3-3-2": [
+          "clm-irenaeus-active-rome",
+          "clm-irenaeus-ah-affirms-episcopal-chair",
+          "clm-polycarp-bishop-smyrna"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-1-1",
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-1",
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-2",
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-2john-by-john",
+        "subject_type": "work",
+        "subject_id": "second-epistle-of-john",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "john-son-of-zebedee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "85",
+        "year_end": "110",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T10:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "second-epistle-of-john",
+        "title_display": "Second Epistle of John",
+        "title_original": "Ἰωάννου Βʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Short Johannine epistle addressed to the elect lady and her children."
+      },
+      "object_entity": {
+        "person_id": "john-son-of-zebedee",
+        "person_label": "John son of Zebedee",
+        "name_alt": "John the Apostle",
+        "name_native": "Ἰωάννης",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "One of the first called disciples."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-2john-by-john",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "2 Jn 1:1 'the Elder'; traditionally attributed to John the Apostle but the Papias distinction between the Apostle and Elder John creates genuine uncertainty."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-second-john-christ"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-titus-by-paul",
+        "subject_type": "work",
+        "subject_id": "epistle-to-titus",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "54",
+        "year_end": "90",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T06:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-titus",
+        "title_display": "Epistle to Titus",
+        "title_original": "Πρὸς Τίτον",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pastoral epistle associated with Titus and the churches in Crete."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-titus-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Traditional Pauline attribution (Tit 1:1); classified as Pastoral Epistle, widely regarded as deuteropauline."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-titus-addressed-crete"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gospel-luke-by-luke",
+        "subject_type": "work",
+        "subject_id": "gospel-of-luke",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "luke-the-evangelist",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "65",
+        "year_end": "90",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T09:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-luke",
+        "title_display": "Gospel according to Luke",
+        "title_original": "Κατὰ Λουκᾶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Textual witness for ministry-period claims."
+      },
+      "object_entity": {
+        "person_id": "luke-the-evangelist",
+        "person_label": "Luke",
+        "name_alt": "Luke the beloved physician",
+        "name_native": "Λουκᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline companion traditionally associated with Luke and Acts."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gospel-luke-by-luke",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Irenaeus AH 3.1.1: Luke the companion of Paul wrote the Gospel. The 'we passages' in Acts imply the same author travelled with Paul."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-luke-repentance",
+        "clm-luke-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-revelation-by-john",
+        "subject_type": "work",
+        "subject_id": "revelation-of-john",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "john-son-of-zebedee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "81",
+        "year_end": "96",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T10:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "revelation-of-john",
+        "title_display": "Revelation of John",
+        "title_original": "Ἀποκάλυψις Ἰωάννου",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apocalyptic work associated with Patmos and the late first-century church."
+      },
+      "object_entity": {
+        "person_id": "john-son-of-zebedee",
+        "person_label": "John son of Zebedee",
+        "name_alt": "John the Apostle",
+        "name_native": "Ἰωάννης",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "One of the first called disciples."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-revelation-by-john",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Rev 1:1,4,9: author names himself 'John'; traditional attribution to the Apostle. Justin Martyr (Dial. 81) accepts Johannine authorship. Dionysius of Alexandria rejected it on stylistic grounds (Euseb"
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-revelation-addressed-ephesus",
+        "clm-revelation-addressed-laodicea",
+        "clm-revelation-addressed-pergamum",
+        "clm-revelation-addressed-philadelphia",
+        "clm-revelation-addressed-sardis",
+        "clm-revelation-addressed-smyrna",
+        "clm-revelation-addressed-thyatira",
+        "clm-revelation-affirms-martyrdom-witness",
+        "clm-revelation-affirms-relics",
+        "clm-revelation-judgment",
+        "clm-revelation-written-patmos",
+        "clm-revelation-year-end",
+        "clm-revelation-year-start"
+      ],
+      "sibling_count": 13,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-1john-by-john",
+        "subject_type": "work",
+        "subject_id": "first-epistle-of-john",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "john-son-of-zebedee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "85",
+        "year_end": "100",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T06:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-epistle-of-john",
+        "title_display": "First Epistle of John",
+        "title_original": "Ἰωάννου Αʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Johannine epistle emphasizing confession of Jesus as the Christ and the Son of God."
+      },
+      "object_entity": {
+        "person_id": "john-son-of-zebedee",
+        "person_label": "John son of Zebedee",
+        "name_alt": "John the Apostle",
+        "name_native": "Ἰωάννης",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "One of the first called disciples."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-1john-by-john",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Traditional attribution to John the Apostle; shared vocabulary with Fourth Gospel supports Johannine school."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-first-john-christ",
+        "clm-1john-affirms-incarnation",
+        "clm-1john-affirms-logos"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-2peter-by-peter",
+        "subject_type": "work",
+        "subject_id": "second-epistle-of-peter",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "simon-peter",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "150",
+        "context_place_id": "",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T10:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "second-epistle-of-peter",
+        "title_display": "Second Epistle of Peter",
+        "title_original": "Πέτρου Βʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "General epistle associated with Peter and warning against false teachers."
+      },
+      "object_entity": {
+        "person_id": "simon-peter",
+        "person_label": "Simon Peter",
+        "name_alt": "Cephas; Simon son of Jonah",
+        "name_native": "Σίμων Πέτρος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Disciple called during Galilean ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-2peter-by-peter",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "2 Pet 1:1 claims Peter authorship; widely regarded as the latest NT writing (c. 100-150 CE) and pseudonymous; dependent on Jude; not attested before Origen."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-second-peter-judgment"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-edessa-church-at-edessa",
+        "subject_type": "group",
+        "subject_id": "edessa-church",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "edessa-church",
+        "group_label": "Church in Edessa",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Edessa (Osroene); spiritual capital of Syriac Christianity from at least c. 200 AD; home of the Abgar/Addai tradition, Bardaisan, and later Ephrem the Syrian; center of Syriac literary and theological culture."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-edessa-church-at-edessa",
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Edessa was one of the earliest Christian cities outside the Roman Empire."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "source_id": "src-wikipedia-early-church-geography",
+            "locator_type": "source_ref",
+            "locator": "Early_centers_of_Christianity",
+            "excerpt": "Early centers of Christianity included Jerusalem, Antioch, Alexandria, Rome, Carthage, and Edessa. Communities spread to Persia, India, and Ethiopia by the 4th century.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for general early Christian presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-early-church-geography",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Early centers of Christianity - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Early_centers_of_Christianity",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Survey of early Christian communities and geographic spread."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-wikipedia-early-church-geography": [
+          "clm-abgar-member-edessa-church",
+          "clm-abgar-viii-active-edessa",
+          "clm-bardaisan-member-bardesanites",
+          "clm-const381-event-year",
+          "clm-cyprian-originated-carthage",
+          "clm-cyril-participant-ephesus-431",
+          "clm-dura-church-at-dura",
+          "clm-dura-church-construction-year",
+          "clm-dura-church-year",
+          "clm-ebionites-at-egypt",
+          "clm-ephesus-431-event-year",
+          "clm-hippolytus-callistus-schism-year",
+          "clm-irenaeus-ah-year",
+          "clm-montanus-coworker-priscilla-montanist",
+          "clm-place-bostra-attested",
+          "clm-place-caesarea-cappadocia-attested",
+          "clm-place-carthage-attested",
+          "clm-place-dalmatia-attested-late",
+          "clm-place-dura-europos-attested",
+          "clm-place-edessa-attested",
+          "clm-place-neocaesarea-attested",
+          "clm-place-sardinia-attested",
+          "clm-priscilla-montanist-affirms-prophecy",
+          "clm-priscilla-montanist-member-montanists"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-early-church-geography",
+        "TERTIARY_ONLY_SUPPORT"
+      ]
+    }
+  ]
+}

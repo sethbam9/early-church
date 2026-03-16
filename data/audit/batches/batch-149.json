@@ -1,0 +1,2378 @@
+{
+  "batch_id": "batch-149",
+  "queue": "1",
+  "focus": "lucius-of-cyrene; manaen; epistle-to-the-galatians; jason; first-epistle-to-the-thessalonians; lydia; second-epistle-to-the-thessalonians",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-lucius-of-cyrene-antioch-church",
+        "subject_type": "person",
+        "subject_id": "lucius-of-cyrene",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lucius-of-cyrene",
+        "person_label": "Lucius of Cyrene",
+        "name_alt": "Lucius",
+        "name_native": "Λούκιος ὁ Κυρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher from Cyrene named in the church at Antioch in Acts 13."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lucius-of-cyrene-antioch-church",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lucius-cyrene-coworker-paul",
+        "clm-lucius-of-cyrene-active-antioch"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lucius-cyrene-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "lucius-of-cyrene",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lucius-of-cyrene",
+        "person_label": "Lucius of Cyrene",
+        "name_alt": "Lucius",
+        "name_native": "Λούκιος ὁ Κυρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher from Cyrene named in the church at Antioch in Acts 13."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lucius-cyrene-coworker-paul",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lucius-of-cyrene-active-antioch",
+        "clm-lucius-of-cyrene-antioch-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1",
+        "PARAPHRASE_OMISSION:psg-acts-13-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-manaen-active-antioch",
+        "subject_type": "person",
+        "subject_id": "manaen",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "manaen",
+        "person_label": "Manaen",
+        "name_alt": "Menaen",
+        "name_native": "Μαναήν",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher at Antioch said to have been brought up with Herod the tetrarch in Acts 13."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-manaen-active-antioch",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-manaen-antioch-church",
+        "clm-manaen-coworker-paul"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-manaen-antioch-church",
+        "subject_type": "person",
+        "subject_id": "manaen",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "antioch-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "manaen",
+        "person_label": "Manaen",
+        "name_alt": "Menaen",
+        "name_native": "Μαναήν",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher at Antioch said to have been brought up with Herod the tetrarch in Acts 13."
+      },
+      "object_entity": {
+        "group_id": "antioch-church",
+        "group_label": "Church in Antioch",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Early Christian community in Antioch associated with Barnabas and Paul."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-manaen-antioch-church",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-manaen-active-antioch",
+        "clm-manaen-coworker-paul"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-manaen-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "manaen",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "antioch",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "manaen",
+        "person_label": "Manaen",
+        "name_alt": "Menaen",
+        "name_native": "Μαναήν",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher at Antioch said to have been brought up with Herod the tetrarch in Acts 13."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-manaen-coworker-paul",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-manaen-active-antioch",
+        "clm-manaen-antioch-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-active-antioch",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1",
+        "PARAPHRASE_OMISSION:psg-acts-13-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-galatians-by-paul",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-galatians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "48",
+        "year_end": "55",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "",
+        "updated_at": ""
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-galatians",
+        "title_display": "Epistle to the Galatians",
+        "title_original": "Πρὸς Γαλάτας",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter central to disputes over Gentile inclusion and circumcision."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-galatians-by-paul",
+            "passage_id": "psg-gal-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Gal 1:1-2: Paul explicitly identifies himself as author and apostle."
+          },
+          "passage": {
+            "passage_id": "psg-gal-1-2",
+            "source_id": "src-galatians",
+            "locator_type": "bible_osis",
+            "locator": "Gal.1.2",
+            "excerpt": "Paraphrase: Paul addresses the churches of Galatia.",
+            "language": "English",
+            "passage_year": "49",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-galatians",
+            "work_id": "epistle-to-the-galatians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Galatians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 48-49",
+            "year_start": "48",
+            "year_end": "49",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Galatians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Gentile inclusion and circumcision controversy."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-galatians-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "AH 3.1.1 and Paul's letters treated as a unit; Galatians 1:1 self-attribution."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-galatians-addressed-galatia",
+        "clm-galatians-gentiles"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-gal-1-2": [
+          "clm-galatians-addressed-galatia",
+          "clm-paul-active-galatia"
+        ],
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gal-1-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-galatians-addressed-galatia",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-galatians",
+        "predicate_id": "addressed_to_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galatia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "49",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-galatians",
+        "title_display": "Epistle to the Galatians",
+        "title_original": "Πρὸς Γαλάτας",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter central to disputes over Gentile inclusion and circumcision."
+      },
+      "object_entity": {
+        "place_id": "galatia",
+        "place_label": "Galatia",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "39.5000",
+        "lon": "32.8000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Region addressed in the Pauline letter to the Galatians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-galatians-addressed-galatia",
+            "passage_id": "psg-gal-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-gal-1-2",
+            "source_id": "src-galatians",
+            "locator_type": "bible_osis",
+            "locator": "Gal.1.2",
+            "excerpt": "Paraphrase: Paul addresses the churches of Galatia.",
+            "language": "English",
+            "passage_year": "49",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-galatians",
+            "work_id": "epistle-to-the-galatians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Galatians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 48-49",
+            "year_start": "48",
+            "year_end": "49",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Galatians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Gentile inclusion and circumcision controversy."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-galatians-by-paul",
+        "clm-galatians-gentiles"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-gal-1-2": [
+          "clm-galatians-by-paul",
+          "clm-paul-active-galatia"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gal-1-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-galatians-gentiles",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-galatians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "gentile-believers-need-not-be-circumcised",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "49",
+        "context_place_id": "galatia",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-galatians",
+        "title_display": "Epistle to the Galatians",
+        "title_original": "Πρὸς Γαλάτας",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter central to disputes over Gentile inclusion and circumcision."
+      },
+      "object_entity": {
+        "proposition_id": "gentile-believers-need-not-be-circumcised",
+        "topic_id": "gentile-inclusion",
+        "dimension_id": "gentile-circumcision",
+        "proposition_label": "Gentile believers need not be circumcised",
+        "polarity_family": "gentile_inclusion",
+        "description": "Gentile inclusion in the people of God does not require circumcision.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "galatia",
+        "place_label": "Galatia",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "39.5000",
+        "lon": "32.8000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Turkey",
+        "notes": "Region addressed in the Pauline letter to the Galatians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-galatians-gentiles",
+            "passage_id": "psg-gal-2-1-10",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-gal-2-1-10",
+            "source_id": "src-galatians",
+            "locator_type": "bible_osis",
+            "locator": "Gal.2.1-10",
+            "excerpt": "Paraphrase: Paul goes up to Jerusalem and presents his gospel; the apostles add nothing and recognize the grace given to him, agreeing that he should go to the Gentiles.",
+            "language": "English",
+            "passage_year": "49",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-galatians",
+            "work_id": "epistle-to-the-galatians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Galatians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 48-49",
+            "year_start": "48",
+            "year_end": "49",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Galatians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Gentile inclusion and circumcision controversy."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-galatians-by-paul",
+        "clm-galatians-addressed-galatia"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-gal-2-1-10": [
+          "clm-james-coworker-john-zebedee",
+          "clm-james-coworker-peter",
+          "clm-james-just-bishop-jerusalem",
+          "clm-peter-coworker-paul",
+          "clm-titus-active-jerusalem"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-gal-2-1-10"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-jason-active-thessalonica",
+        "subject_type": "person",
+        "subject_id": "jason",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "thessalonica",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "50",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T08:20:00Z"
+      },
+      "subject_entity": {
+        "person_id": "jason",
+        "person_label": "Jason",
+        "name_alt": "",
+        "name_native": "Ἰάσων",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Host in Thessalonica whose house is attacked during the mission in Acts 17."
+      },
+      "object_entity": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-jason-active-thessalonica",
+            "passage_id": "psg-acts-17-5-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-17-5-9",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.17.5-9",
+            "excerpt": "Paraphrase: Opponents in Thessalonica attack Jason's house and drag Jason before the city authorities.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-jason-member-thessalonian",
+        "clm-paul-coworker-jason"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-17-5-9": [
+          "clm-jason-member-thessalonian",
+          "clm-paul-coworker-jason"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-17-5-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-jason-member-thessalonian",
+        "subject_type": "person",
+        "subject_id": "jason",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "thessalonian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "50",
+        "context_place_id": "thessalonica",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "jason",
+        "person_label": "Jason",
+        "name_alt": "",
+        "name_native": "Ἰάσων",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Host in Thessalonica whose house is attacked during the mission in Acts 17."
+      },
+      "object_entity": {
+        "group_id": "thessalonian-church",
+        "group_label": "Church in Thessalonica",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Thessalonica attested in Acts and the Thessalonian letters."
+      },
+      "context_place": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-jason-member-thessalonian",
+            "passage_id": "psg-acts-17-5-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-17-5-9",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.17.5-9",
+            "excerpt": "Paraphrase: Opponents in Thessalonica attack Jason's house and drag Jason before the city authorities.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-jason-active-thessalonica",
+        "clm-paul-coworker-jason"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-17-5-9": [
+          "clm-jason-active-thessalonica",
+          "clm-paul-coworker-jason"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-17-5-9",
+        "PARAPHRASE_OMISSION:psg-acts-17-5-9:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-coworker-jason",
+        "subject_type": "person",
+        "subject_id": "jason",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "50",
+        "context_place_id": "thessalonica",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "jason",
+        "person_label": "Jason",
+        "name_alt": "",
+        "name_native": "Ἰάσων",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Host in Thessalonica whose house is attacked during the mission in Acts 17."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-coworker-jason",
+            "passage_id": "psg-acts-17-5-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-17-5-9",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.17.5-9",
+            "excerpt": "Paraphrase: Opponents in Thessalonica attack Jason's house and drag Jason before the city authorities.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-jason-active-thessalonica",
+        "clm-jason-member-thessalonian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-17-5-9": [
+          "clm-jason-active-thessalonica",
+          "clm-jason-member-thessalonian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-17-5-9",
+        "PARAPHRASE_OMISSION:psg-acts-17-5-9:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-1thess-by-paul",
+        "subject_type": "work",
+        "subject_id": "first-epistle-to-the-thessalonians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "51",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T09:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-epistle-to-the-thessalonians",
+        "title_display": "First Epistle to the Thessalonians",
+        "title_original": "Πρὸς Θεσσαλονικεῖς Αʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the church in Thessalonica."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-1thess-by-paul",
+            "passage_id": "psg-1thess-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "1 Thess 1:1 Paul and Silvanus and Timothy opening — explicit Pauline self-identification."
+          },
+          "passage": {
+            "passage_id": "psg-1thess-1-1",
+            "source_id": "src-1thess",
+            "locator_type": "bible_osis",
+            "locator": "1Thess.1.1",
+            "excerpt": "Paraphrase: Paul, Silvanus, and Timothy address the church of the Thessalonians in God the Father and the Lord Jesus Christ.",
+            "language": "English",
+            "passage_year": "50",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1thess",
+            "work_id": "first-epistle-to-the-thessalonians",
+            "source_kind": "primary_text",
+            "title": "First Epistle to the Thessalonians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 50-51",
+            "year_start": "50",
+            "year_end": "51",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=1%20Thessalonians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Thessalonian church and resurrection proclamation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-1thess-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "1 Thess 1:1 explicit Paul authorship; earliest of Paul's surviving letters; universally accepted."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-first-thessalonians-addressed-thessalonica",
+        "clm-first-thessalonians-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-1thess-1-1": [
+          "clm-first-thessalonians-addressed-thessalonica",
+          "clm-group-thessalonian-church-thessalonica",
+          "clm-paul-coworker-timothy",
+          "clm-paul-member-thessalonian",
+          "clm-place-thessalonica-attested",
+          "clm-silas-coworker-timothy",
+          "clm-timothy-active-corinth"
+        ],
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-1thess-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-first-thessalonians-addressed-thessalonica",
+        "subject_type": "work",
+        "subject_id": "first-epistle-to-the-thessalonians",
+        "predicate_id": "addressed_to_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "thessalonica",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "50",
+        "year_end": "50",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-epistle-to-the-thessalonians",
+        "title_display": "First Epistle to the Thessalonians",
+        "title_original": "Πρὸς Θεσσαλονικεῖς Αʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the church in Thessalonica."
+      },
+      "object_entity": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-first-thessalonians-addressed-thessalonica",
+            "passage_id": "psg-1thess-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-1thess-1-1",
+            "source_id": "src-1thess",
+            "locator_type": "bible_osis",
+            "locator": "1Thess.1.1",
+            "excerpt": "Paraphrase: Paul, Silvanus, and Timothy address the church of the Thessalonians in God the Father and the Lord Jesus Christ.",
+            "language": "English",
+            "passage_year": "50",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1thess",
+            "work_id": "first-epistle-to-the-thessalonians",
+            "source_kind": "primary_text",
+            "title": "First Epistle to the Thessalonians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 50-51",
+            "year_start": "50",
+            "year_end": "51",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=1%20Thessalonians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Thessalonian church and resurrection proclamation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-1thess-by-paul",
+        "clm-first-thessalonians-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-1thess-1-1": [
+          "clm-1thess-by-paul",
+          "clm-group-thessalonian-church-thessalonica",
+          "clm-paul-coworker-timothy",
+          "clm-paul-member-thessalonian",
+          "clm-place-thessalonica-attested",
+          "clm-silas-coworker-timothy",
+          "clm-timothy-active-corinth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-1thess-1-1",
+        "PARAPHRASE_OMISSION:psg-1thess-1-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-first-thessalonians-resurrection",
+        "subject_type": "work",
+        "subject_id": "first-epistle-to-the-thessalonians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-proclaimed-as-raised",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "50",
+        "year_end": "50",
+        "context_place_id": "thessalonica",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-epistle-to-the-thessalonians",
+        "title_display": "First Epistle to the Thessalonians",
+        "title_original": "Πρὸς Θεσσαλονικεῖς Αʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the church in Thessalonica."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-proclaimed-as-raised",
+        "topic_id": "resurrection-proclamation",
+        "dimension_id": "jesus-resurrection",
+        "proposition_label": "Jesus is proclaimed as raised",
+        "polarity_family": "resurrection_proclamation",
+        "description": "The apostolic proclamation announces that Jesus has been raised from the dead.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-first-thessalonians-resurrection",
+            "passage_id": "psg-1thess-4-14",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-1thess-4-14",
+            "source_id": "src-1thess",
+            "locator_type": "bible_osis",
+            "locator": "1Thess.4.14",
+            "excerpt": "Paraphrase: Paul states that Jesus died and rose again and that God will bring with Jesus those who have died.",
+            "language": "English",
+            "passage_year": "50",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1thess",
+            "work_id": "first-epistle-to-the-thessalonians",
+            "source_kind": "primary_text",
+            "title": "First Epistle to the Thessalonians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 50-51",
+            "year_start": "50",
+            "year_end": "51",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=1%20Thessalonians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Thessalonian church and resurrection proclamation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-1thess-by-paul",
+        "clm-first-thessalonians-addressed-thessalonica"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-1thess-4-14"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lydia-active-philippi",
+        "subject_type": "person",
+        "subject_id": "lydia",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "philippi",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lydia",
+        "person_label": "Lydia",
+        "name_alt": "Lydia of Thyatira",
+        "name_native": "Λυδία",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Early believer associated with the church in Philippi."
+      },
+      "object_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lydia-active-philippi",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lydia-disciple",
+        "clm-lydia-philippian-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-philippian-church-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-disciple",
+          "clm-lydia-philippian-church",
+          "clm-paul-active-philippi",
+          "clm-place-philippi-attested",
+          "clm-silas-active-philippi",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-16-11-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lydia-disciple",
+        "subject_type": "person",
+        "subject_id": "lydia",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lydia",
+        "person_label": "Lydia",
+        "name_alt": "Lydia of Thyatira",
+        "name_native": "Λυδία",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Early believer associated with the church in Philippi."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lydia-disciple",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lydia-active-philippi",
+        "clm-lydia-philippian-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-philippian-church-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-active-philippi",
+          "clm-lydia-philippian-church",
+          "clm-paul-active-philippi",
+          "clm-place-philippi-attested",
+          "clm-silas-active-philippi",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-16-11-15",
+        "PARAPHRASE_OMISSION:psg-acts-16-11-15:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lydia-philippian-church",
+        "subject_type": "person",
+        "subject_id": "lydia",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "philippian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "60",
+        "context_place_id": "philippi",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lydia",
+        "person_label": "Lydia",
+        "name_alt": "Lydia of Thyatira",
+        "name_native": "Λυδία",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Early believer associated with the church in Philippi."
+      },
+      "object_entity": {
+        "group_id": "philippian-church",
+        "group_label": "Church in Philippi",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Philippi associated with Lydia and Pauline mission."
+      },
+      "context_place": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lydia-philippian-church",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lydia-active-philippi",
+        "clm-lydia-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-philippian-church-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-active-philippi",
+          "clm-lydia-disciple",
+          "clm-paul-active-philippi",
+          "clm-place-philippi-attested",
+          "clm-silas-active-philippi",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-16-11-15",
+        "PARAPHRASE_OMISSION:psg-acts-16-11-15:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-2thessalonians-by-paul",
+        "subject_type": "work",
+        "subject_id": "second-epistle-to-the-thessalonians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "100",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T10:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "second-epistle-to-the-thessalonians",
+        "title_display": "Second Epistle to the Thessalonians",
+        "title_original": "Πρὸς Θεσσαλονικεῖς Βʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the church in Thessalonica."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-2thessalonians-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Traditional Pauline attribution (2 Thess 1:1); widely regarded as deuteropauline."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-second-thessalonians-addressed-thessalonica",
+        "clm-second-thessalonians-judgment"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-second-thessalonians-addressed-thessalonica",
+        "subject_type": "work",
+        "subject_id": "second-epistle-to-the-thessalonians",
+        "predicate_id": "addressed_to_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "thessalonica",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "51",
+        "year_end": "51",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "work_id": "second-epistle-to-the-thessalonians",
+        "title_display": "Second Epistle to the Thessalonians",
+        "title_original": "Πρὸς Θεσσαλονικεῖς Βʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the church in Thessalonica."
+      },
+      "object_entity": {
+        "place_id": "thessalonica",
+        "place_label": "Thessalonica",
+        "place_label_modern": "Thessaloniki",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.6401",
+        "lon": "22.9444",
+        "location_precision": "exact",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city associated with Paul and the Thessalonian correspondence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-second-thessalonians-addressed-thessalonica",
+            "passage_id": "psg-2thess-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2thess-1-1",
+            "source_id": "src-2thess",
+            "locator_type": "bible_osis",
+            "locator": "2Thess.1.1",
+            "excerpt": "Paraphrase: Paul, Silvanus, and Timothy address the church of the Thessalonians in God our Father and the Lord Jesus Christ.",
+            "language": "English",
+            "passage_year": "51",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2thess",
+            "work_id": "second-epistle-to-the-thessalonians",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to the Thessalonians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 51-52",
+            "year_start": "51",
+            "year_end": "52",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Thessalonians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary witness for the addressed church in Thessalonica."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-2thessalonians-by-paul",
+        "clm-second-thessalonians-judgment"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-2thess-1-1": [
+          "clm-group-thessalonian-church-thessalonica",
+          "clm-place-thessalonica-attested",
+          "clm-second-thessalonians-judgment"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2thess-1-1",
+        "PARAPHRASE_OMISSION:psg-2thess-1-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-second-thessalonians-judgment",
+        "subject_type": "work",
+        "subject_id": "second-epistle-to-the-thessalonians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "final-judgment-is-coming",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "51",
+        "year_end": "51",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "second-epistle-to-the-thessalonians",
+        "title_display": "Second Epistle to the Thessalonians",
+        "title_original": "Πρὸς Θεσσαλονικεῖς Βʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the church in Thessalonica."
+      },
+      "object_entity": {
+        "proposition_id": "final-judgment-is-coming",
+        "topic_id": "final-judgment",
+        "dimension_id": "coming-judgment",
+        "proposition_label": "A final judgment is coming",
+        "polarity_family": "coming_judgment",
+        "description": "Texts or teachers present a climactic future judgment of the wicked and vindication of the righteous.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-second-thessalonians-judgment",
+            "passage_id": "psg-2thess-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions second-epistle-to-the-thessalonians or final-judgment-is-coming."
+          },
+          "passage": {
+            "passage_id": "psg-2thess-1-1",
+            "source_id": "src-2thess",
+            "locator_type": "bible_osis",
+            "locator": "2Thess.1.1",
+            "excerpt": "Paraphrase: Paul, Silvanus, and Timothy address the church of the Thessalonians in God our Father and the Lord Jesus Christ.",
+            "language": "English",
+            "passage_year": "51",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2thess",
+            "work_id": "second-epistle-to-the-thessalonians",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to the Thessalonians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 51-52",
+            "year_start": "51",
+            "year_end": "52",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Thessalonians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary witness for the addressed church in Thessalonica."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-2thessalonians-by-paul",
+        "clm-second-thessalonians-addressed-thessalonica"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-2thess-1-1": [
+          "clm-group-thessalonian-church-thessalonica",
+          "clm-place-thessalonica-attested",
+          "clm-second-thessalonians-addressed-thessalonica"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-2thess-1-1",
+        "PARAPHRASE_RISK:psg-2thess-1-1"
+      ]
+    }
+  ]
+}

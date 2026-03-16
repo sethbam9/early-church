@@ -1,0 +1,2421 @@
+{
+  "batch_id": "batch-038",
+  "queue": "0A",
+  "focus": "psg-acts-16-11-15(11), psg-irenaeus-ah-1-11-1(11)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-ep64-written-carthage",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "252",
+        "year_end": "252",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-written-carthage",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "The letter reports a council ruling at Carthage."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2",
+        "PARAPHRASE_OMISSION:psg-cyprian-ep64-2:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-baptismal-anointing",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptismal-anointing-with-oil",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "baptismal-anointing-with-oil",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-anointing",
+        "proposition_label": "Baptismal Anointing with Oil",
+        "polarity_family": "",
+        "description": "After emerging from the baptismal water, the newly baptized is anointed with chrism or oil as part of the baptismal rite, signifying the reception of the Holy Spirit and incorporation into Christ.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-baptismal-anointing",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Baptismal sanctification context may imply anointing."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cyprian-in-council-252",
+        "subject_type": "person",
+        "subject_id": "cyprian-of-carthage",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "council-of-carthage-252",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "252",
+        "year_end": "252",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "cyprian-of-carthage",
+        "person_label": "Cyprian of Carthage",
+        "name_alt": "Thascius Caecilius Cyprianus",
+        "name_native": "Kυπριανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 258",
+        "person_kind": "individual",
+        "notes": "Bishop of Carthage c. 248–258; major Latin theologian of ecclesiology and sacramental theology; converted c. 246; deeply influenced by Tertullian; key figure in the Novatian controversy (supported Cornelius against Novatian); martyred under Valerian."
+      },
+      "object_entity": {
+        "event_id": "council-of-carthage-252",
+        "event_label": "Council of Carthage (252) on Infant Baptism",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "North African council convened under Cyprian c. 252 responding to Bishop Fidus's question about delaying infant baptism until the eighth day; the council unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day after birth; key witness for infant baptism as assumed standard practice."
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cyprian-in-council-252",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Cyprian reports the council's unanimous ruling in Ep. 64."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cyprian-member-carthage-church",
+        "clm-cyprian-bishop-carthage",
+        "clm-cyprian-teacher-of-pontius",
+        "clm-pontius-coworker-cyprian",
+        "clm-cyprian-in-decian-persecution",
+        "clm-cyprian-in-council-251",
+        "clm-dionysius-alex-coworker-cyprian",
+        "clm-lucius-i-coworker-cyprian",
+        "clm-firmilian-coworker-cyprian",
+        "clm-cyprian-in-council-256",
+        "clm-cyprian-in-cyprians-martyrdom",
+        "clm-cyprian-originated-carthage"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lydia-disciple",
+        "subject_type": "person",
+        "subject_id": "lydia",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lydia",
+        "person_label": "Lydia",
+        "name_alt": "Lydia of Thyatira",
+        "name_native": "Λυδία",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Early believer associated with the church in Philippi."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lydia-disciple",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lydia-active-philippi",
+        "clm-lydia-philippian-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-philippian-church-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-active-philippi",
+          "clm-lydia-philippian-church",
+          "clm-paul-active-philippi",
+          "clm-place-philippi-attested",
+          "clm-silas-active-philippi",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-16-11-15",
+        "PARAPHRASE_OMISSION:psg-acts-16-11-15:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-disciples-at-philippi",
+        "subject_type": "group",
+        "subject_id": "disciples-of-jesus",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "philippi",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "70",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "object_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-disciples-at-philippi",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts records disciples/missionaries present at this location."
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-group-disciples-galilee",
+        "clm-group-disciples-judea",
+        "clm-disciples-at-jerusalem-early",
+        "clm-group-disciples-samaria",
+        "clm-disciples-at-damascus",
+        "clm-group-disciples-joppa",
+        "clm-disciples-at-lydda",
+        "clm-group-disciples-caesarea",
+        "clm-disciples-at-antioch",
+        "clm-group-disciples-paphos",
+        "clm-disciples-at-thessalonica",
+        "clm-group-disciples-rome",
+        "clm-group-disciples-athens",
+        "clm-disciples-at-corinth",
+        "clm-group-disciples-ephesus",
+        "clm-group-disciples-achaia",
+        "clm-group-disciples-troas",
+        "clm-group-disciples-tyre",
+        "clm-disciples-at-sidon",
+        "clm-disciples-at-malta",
+        "clm-group-disciples-puteoli",
+        "clm-disciples-at-colossae",
+        "clm-disciples-at-laodicea",
+        "clm-group-disciples-hierapolis",
+        "clm-group-disciples-asia",
+        "clm-group-disciples-bithynia",
+        "clm-group-disciples-cappadocia",
+        "clm-group-disciples-galatia",
+        "clm-group-disciples-pontus",
+        "clm-group-disciples-crete"
+      ],
+      "sibling_count": 30,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-group-philippian-church-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-active-philippi",
+          "clm-lydia-disciple",
+          "clm-lydia-philippian-church",
+          "clm-paul-active-philippi",
+          "clm-place-philippi-attested",
+          "clm-silas-active-philippi",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-16-11-15",
+        "PARAPHRASE_RISK:psg-acts-16-11-15",
+        "PARAPHRASE_OMISSION:psg-acts-16-11-15:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-paul-active-philippi",
+        "subject_type": "person",
+        "subject_id": "paul",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "philippi",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "object_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-paul-active-philippi",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-paul-in-pentecost",
+        "clm-paul-in-conversion",
+        "clm-paul-in-jerusalem-persecution-after-stephen",
+        "clm-paul-active-damascus",
+        "clm-peter-coworker-paul",
+        "clm-paul-disciple",
+        "clm-paul-active-galilee-area",
+        "clm-paul-member-jerusalem-church",
+        "clm-paul-active-jerusalem",
+        "clm-paul-active-antioch",
+        "clm-paul-member-antioch-church",
+        "clm-paul-active-cyprus",
+        "clm-paul-active-paphos",
+        "clm-paul-active-salamis",
+        "clm-simeon-niger-coworker-paul",
+        "clm-paul-active-derbe",
+        "clm-paul-active-galatia",
+        "clm-paul-active-lystra",
+        "clm-paul-teacher-of-timothy",
+        "clm-paul-teacher-of-titus",
+        "clm-paul-in-council",
+        "clm-paul-active-thessalonica",
+        "clm-paul-member-thessalonian",
+        "clm-paul-member-philippian",
+        "clm-paul-active-athens",
+        "clm-paul-active-berea",
+        "clm-paul-active-corinth",
+        "clm-paul-coworker-silas",
+        "clm-paul-member-corinthian-church",
+        "clm-paul-coworker-stephanas"
+      ],
+      "sibling_count": 69,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-philippian-church-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-active-philippi",
+          "clm-lydia-disciple",
+          "clm-lydia-philippian-church",
+          "clm-place-philippi-attested",
+          "clm-silas-active-philippi",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-16-11-15",
+        "PARAPHRASE_OMISSION:psg-acts-16-11-15:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-silas-active-philippi",
+        "subject_type": "person",
+        "subject_id": "silas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "philippi",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "50",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "silas",
+        "person_label": "Silas",
+        "name_alt": "Silvanus",
+        "name_native": "Σιλᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Missionary coworker associated with Paul and the Jerusalem church."
+      },
+      "object_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-silas-active-philippi",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-silas-active-jerusalem",
+        "clm-silas-member-jerusalem-church",
+        "clm-silas-member-disciples",
+        "clm-silas-member-antioch-church",
+        "clm-silas-active-lystra",
+        "clm-silas-in-council-jerusalem",
+        "clm-silas-active-antioch",
+        "clm-silas-active-thessalonica",
+        "clm-silas-member-philippian",
+        "clm-silas-active-berea",
+        "clm-silas-active-corinth",
+        "clm-silas-coworker-timothy",
+        "clm-peter-coworker-silas"
+      ],
+      "sibling_count": 13,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-philippian-church-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-active-philippi",
+          "clm-lydia-disciple",
+          "clm-lydia-philippian-church",
+          "clm-paul-active-philippi",
+          "clm-place-philippi-attested",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-16-11-15",
+        "PARAPHRASE_OMISSION:psg-acts-16-11-15:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-place-philippi-attested",
+        "subject_type": "place",
+        "subject_id": "philippi",
+        "predicate_id": "place_presence_status",
+        "object_mode": "text",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "attested",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "200",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-place-philippi-attested",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts 16:11 records Paul at Philippi."
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-philippian-church-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-active-philippi",
+          "clm-lydia-disciple",
+          "clm-lydia-philippian-church",
+          "clm-paul-active-philippi",
+          "clm-silas-active-philippi",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-16-11-15",
+        "PARAPHRASE_RISK:psg-acts-16-11-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lydia-philippian-church",
+        "subject_type": "person",
+        "subject_id": "lydia",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "philippian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "60",
+        "context_place_id": "philippi",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lydia",
+        "person_label": "Lydia",
+        "name_alt": "Lydia of Thyatira",
+        "name_native": "Λυδία",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Early believer associated with the church in Philippi."
+      },
+      "object_entity": {
+        "group_id": "philippian-church",
+        "group_label": "Church in Philippi",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Philippi associated with Lydia and Pauline mission."
+      },
+      "context_place": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lydia-philippian-church",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lydia-active-philippi",
+        "clm-lydia-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-philippian-church-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-active-philippi",
+          "clm-lydia-disciple",
+          "clm-paul-active-philippi",
+          "clm-place-philippi-attested",
+          "clm-silas-active-philippi",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-16-11-15",
+        "PARAPHRASE_OMISSION:psg-acts-16-11-15:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-roman-empire-philippi",
+        "subject_type": "group",
+        "subject_id": "roman-empire",
+        "predicate_id": "controls_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "philippi",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "roman-empire",
+        "group_label": "Roman Empire",
+        "group_kind": "polity",
+        "is_christian": "false",
+        "notes": "Imperial polity framing much of the New Testament historical setting."
+      },
+      "object_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-roman-empire-philippi",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-rome-controls-sardinia",
+        "clm-rome-controls-malta",
+        "clm-rome-controls-berea",
+        "clm-rome-controls-thessalonica",
+        "clm-rome-controls-achaia",
+        "clm-rome-controls-carthage",
+        "clm-rome-controls-asia",
+        "clm-rome-controls-colossae",
+        "clm-rome-controls-ephesus",
+        "clm-rome-controls-hierapolis",
+        "clm-rome-controls-laodicea",
+        "clm-rome-controls-miletus",
+        "clm-rome-controls-patmos",
+        "clm-rome-controls-pergamum",
+        "clm-rome-controls-philadelphia",
+        "clm-rome-controls-phrygia",
+        "clm-rome-controls-sardis",
+        "clm-rome-controls-smyrna",
+        "clm-rome-controls-thyatira",
+        "clm-rome-controls-troas",
+        "clm-rome-controls-gaul",
+        "clm-rome-controls-athens",
+        "clm-rome-controls-bithynia",
+        "clm-rome-controls-crete",
+        "clm-rome-controls-damascus",
+        "clm-rome-controls-antioch",
+        "clm-rome-controls-neocaesarea",
+        "clm-rome-controls-pontus",
+        "clm-rome-controls-sidon",
+        "clm-rome-controls-tyre"
+      ],
+      "sibling_count": 57,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-philippian-church-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-active-philippi",
+          "clm-lydia-disciple",
+          "clm-lydia-philippian-church",
+          "clm-paul-active-philippi",
+          "clm-place-philippi-attested",
+          "clm-silas-active-philippi",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-16-11-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lydia-active-philippi",
+        "subject_type": "person",
+        "subject_id": "lydia",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "philippi",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lydia",
+        "person_label": "Lydia",
+        "name_alt": "Lydia of Thyatira",
+        "name_native": "Λυδία",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Early believer associated with the church in Philippi."
+      },
+      "object_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lydia-active-philippi",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lydia-disciple",
+        "clm-lydia-philippian-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-philippian-church-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-disciple",
+          "clm-lydia-philippian-church",
+          "clm-paul-active-philippi",
+          "clm-place-philippi-attested",
+          "clm-silas-active-philippi",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-16-11-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-philippian-church-philippi",
+        "subject_type": "group",
+        "subject_id": "philippian-church",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "philippi",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "200",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "philippian-church",
+        "group_label": "Church in Philippi",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Philippi associated with Lydia and Pauline mission."
+      },
+      "object_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-philippian-church-philippi",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-active-philippi",
+          "clm-lydia-disciple",
+          "clm-lydia-philippian-church",
+          "clm-paul-active-philippi",
+          "clm-place-philippi-attested",
+          "clm-silas-active-philippi",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-16-11-15",
+        "PARAPHRASE_OMISSION:psg-acts-16-11-15:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-luke-coworker-silas",
+        "subject_type": "person",
+        "subject_id": "luke-the-evangelist",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "silas",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "52",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "luke-the-evangelist",
+        "person_label": "Luke",
+        "name_alt": "Luke the beloved physician",
+        "name_native": "Λουκᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline companion traditionally associated with Luke and Acts."
+      },
+      "object_entity": {
+        "person_id": "silas",
+        "person_label": "Silas",
+        "name_alt": "Silvanus",
+        "name_native": "Σιλᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Missionary coworker associated with Paul and the Jerusalem church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-luke-coworker-silas",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Acts 16:11-15 shows Luke and Silas as co-travelers in the same mission party."
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-luke-active-antioch",
+        "clm-luke-member-antioch-church",
+        "clm-luke-member-disciples",
+        "clm-luke-active-philippi",
+        "clm-luke-active-troas",
+        "clm-luke-coworker-timothy",
+        "clm-luke-active-caesarea",
+        "clm-luke-coworker-paul",
+        "clm-luke-active-rome",
+        "clm-luke-member-roman-church"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-philippian-church-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-lydia-active-philippi",
+          "clm-lydia-disciple",
+          "clm-lydia-philippian-church",
+          "clm-paul-active-philippi",
+          "clm-place-philippi-attested",
+          "clm-silas-active-philippi",
+          "clm-silas-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-16-11-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-silas-member-philippian",
+        "subject_type": "person",
+        "subject_id": "silas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "philippian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "49",
+        "year_end": "50",
+        "context_place_id": "philippi",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "silas",
+        "person_label": "Silas",
+        "name_alt": "Silvanus",
+        "name_native": "Σιλᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Missionary coworker associated with Paul and the Jerusalem church."
+      },
+      "object_entity": {
+        "group_id": "philippian-church",
+        "group_label": "Church in Philippi",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Philippi associated with Lydia and Pauline mission."
+      },
+      "context_place": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-silas-member-philippian",
+            "passage_id": "psg-acts-16-11-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-16-11-15",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.16.11-15",
+            "excerpt": "Paraphrase: The mission arrives at Philippi, a Roman colony, and Lydia responds in faith and hospitality.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-silas-active-jerusalem",
+        "clm-silas-member-jerusalem-church",
+        "clm-silas-member-disciples",
+        "clm-silas-member-antioch-church",
+        "clm-silas-active-lystra",
+        "clm-silas-in-council-jerusalem",
+        "clm-silas-active-antioch",
+        "clm-silas-active-philippi",
+        "clm-silas-active-thessalonica",
+        "clm-silas-active-berea",
+        "clm-silas-active-corinth",
+        "clm-silas-coworker-timothy",
+        "clm-peter-coworker-silas"
+      ],
+      "sibling_count": 13,
+      "passage_co_users": {
+        "psg-acts-16-11-15": [
+          "clm-disciples-at-philippi",
+          "clm-group-philippian-church-philippi",
+          "clm-group-roman-empire-philippi",
+          "clm-luke-coworker-silas",
+          "clm-lydia-active-philippi",
+          "clm-lydia-disciple",
+          "clm-lydia-philippian-church",
+          "clm-paul-active-philippi",
+          "clm-place-philippi-attested",
+          "clm-silas-active-philippi"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-16-11-15",
+        "PARAPHRASE_OMISSION:psg-acts-16-11-15:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-valentinus-opposes-apostolic-succession",
+        "subject_type": "person",
+        "subject_id": "valentinus",
+        "predicate_id": "person_opposes_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "138",
+        "year_end": "160",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "campaign5-heretics",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "person_id": "valentinus",
+        "person_label": "Valentinus",
+        "name_alt": "Valentinus of Alexandria",
+        "name_native": "Οὐαλεντῖνος",
+        "birth_year_display": "c. 100",
+        "death_year_display": "c. 160",
+        "person_kind": "individual",
+        "notes": "Gnostic teacher; studied in Alexandria, later prominent in Rome c. 138–160. Founded Valentinianism, the most influential Gnostic school, teaching a complex pleroma of divine emanations (Aeons) and a demiurge subordinate to the supreme God. Opposed apostolic succession, bodily resurrection, and the authority of the OT."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-valentinus-opposes-apostolic-succession",
+            "passage_id": "psg-irenaeus-ah-1-11-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Valentinus claimed private secret knowledge transmitted from Theudas (disciple of Paul) — bypassing apostolic succession."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-11-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.11.1",
+            "excerpt": "Valentinus adapted the principles of the heretical school called Gnostic to his own peculiar character of school. He affirmed that in the invisible and ineffable heights there exists a perfect, pre-existent Aeon — Proarche, Propator, and Bythus — invisible and incomprehensible. With him was also Ennoia, whom he calls Charis and Sige. This Bythus, at last resolving to send forth from himself the beginning of all things, deposited this production as a seed in the womb of Sige. The result was Nous and Aletheia — the beginning of a vast pleroma of divine emanations.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-valentinus-active-alexandria",
+        "clm-valentinus-active-rome",
+        "clm-valentinus-member-valentinians",
+        "clm-valentinus-opposes-incarnation",
+        "clm-valentinus-opposes-ot-scripture",
+        "clm-valentinus-opposes-passion",
+        "clm-valentinus-opposes-resurrection",
+        "clm-valentinus-opposes-rule-of-faith"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-11-1": [
+          "clm-valentinians-at-antioch",
+          "clm-valentinians-at-carthage",
+          "clm-valentinians-at-egypt",
+          "clm-valentinians-at-ephesus",
+          "clm-valentinians-schismed-from-roman",
+          "clm-valentinus-opposes-incarnation",
+          "clm-valentinus-opposes-ot-scripture",
+          "clm-valentinus-opposes-passion",
+          "clm-valentinus-opposes-resurrection",
+          "clm-valentinus-opposes-rule-of-faith"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-valentinians-at-antioch",
+        "subject_type": "group",
+        "subject_id": "valentinians",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "150",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "campaign5b-connections",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "group_id": "valentinians",
+        "group_label": "Valentinians",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Gnostic school founded by Valentinus c. 140 AD; active in Rome and Alexandria; refuted extensively by Irenaeus in Against Heresies."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-valentinians-at-antioch",
+            "passage_id": "psg-irenaeus-ah-1-11-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Irenaeus documents Valentinianism spreading from Rome outward; Antioch is a known Valentinian center."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-11-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.11.1",
+            "excerpt": "Valentinus adapted the principles of the heretical school called Gnostic to his own peculiar character of school. He affirmed that in the invisible and ineffable heights there exists a perfect, pre-existent Aeon — Proarche, Propator, and Bythus — invisible and incomprehensible. With him was also Ennoia, whom he calls Charis and Sige. This Bythus, at last resolving to send forth from himself the beginning of all things, deposited this production as a seed in the womb of Sige. The result was Nous and Aletheia — the beginning of a vast pleroma of divine emanations.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-valentinians-present-rome",
+        "clm-valentinians-schismed-from-roman",
+        "clm-valentinians-at-alexandria",
+        "clm-valentinians-at-egypt",
+        "clm-valentinians-at-ephesus",
+        "clm-valentinians-at-carthage",
+        "clm-valentinians-at-gaul"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-11-1": [
+          "clm-valentinians-at-carthage",
+          "clm-valentinians-at-egypt",
+          "clm-valentinians-at-ephesus",
+          "clm-valentinians-schismed-from-roman",
+          "clm-valentinus-opposes-apostolic-succession",
+          "clm-valentinus-opposes-incarnation",
+          "clm-valentinus-opposes-ot-scripture",
+          "clm-valentinus-opposes-passion",
+          "clm-valentinus-opposes-resurrection",
+          "clm-valentinus-opposes-rule-of-faith"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-valentinians-at-egypt",
+        "subject_type": "group",
+        "subject_id": "valentinians",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "egypt",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "140",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "valentinians",
+        "group_label": "Valentinians",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Gnostic school founded by Valentinus c. 140 AD; active in Rome and Alexandria; refuted extensively by Irenaeus in Against Heresies."
+      },
+      "object_entity": {
+        "place_id": "egypt",
+        "place_label": "Egypt",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "26.0000",
+        "lon": "30.0000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Egypt",
+        "notes": "Roman province encompassing the Nile valley; home of the Alexandrian church tradition and early monasticism."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-valentinians-at-egypt",
+            "passage_id": "psg-irenaeus-ah-1-11-1",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Irenaeus AH 1.11.1 names Valentinus and his school; Valentinus was Alexandrian-educated."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-11-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.11.1",
+            "excerpt": "Valentinus adapted the principles of the heretical school called Gnostic to his own peculiar character of school. He affirmed that in the invisible and ineffable heights there exists a perfect, pre-existent Aeon — Proarche, Propator, and Bythus — invisible and incomprehensible. With him was also Ennoia, whom he calls Charis and Sige. This Bythus, at last resolving to send forth from himself the beginning of all things, deposited this production as a seed in the womb of Sige. The result was Nous and Aletheia — the beginning of a vast pleroma of divine emanations.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-valentinians-present-rome",
+        "clm-valentinians-schismed-from-roman",
+        "clm-valentinians-at-alexandria",
+        "clm-valentinians-at-antioch",
+        "clm-valentinians-at-ephesus",
+        "clm-valentinians-at-carthage",
+        "clm-valentinians-at-gaul"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-11-1": [
+          "clm-valentinians-at-antioch",
+          "clm-valentinians-at-carthage",
+          "clm-valentinians-at-ephesus",
+          "clm-valentinians-schismed-from-roman",
+          "clm-valentinus-opposes-apostolic-succession",
+          "clm-valentinus-opposes-incarnation",
+          "clm-valentinus-opposes-ot-scripture",
+          "clm-valentinus-opposes-passion",
+          "clm-valentinus-opposes-resurrection",
+          "clm-valentinus-opposes-rule-of-faith"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-valentinus-opposes-passion",
+        "subject_type": "person",
+        "subject_id": "valentinus",
+        "predicate_id": "person_opposes_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-suffered-and-died",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "138",
+        "year_end": "160",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "valentinus",
+        "person_label": "Valentinus",
+        "name_alt": "Valentinus of Alexandria",
+        "name_native": "Οὐαλεντῖνος",
+        "birth_year_display": "c. 100",
+        "death_year_display": "c. 160",
+        "person_kind": "individual",
+        "notes": "Gnostic teacher; studied in Alexandria, later prominent in Rome c. 138–160. Founded Valentinianism, the most influential Gnostic school, teaching a complex pleroma of divine emanations (Aeons) and a demiurge subordinate to the supreme God. Opposed apostolic succession, bodily resurrection, and the authority of the OT."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-suffered-and-died",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "passion-reality",
+        "proposition_label": "Christ Truly Suffered and Died",
+        "polarity_family": "",
+        "description": "Christ's passion and death on the cross were genuine physical events, not apparent, symbolic, or borne by a substitute. Denied by docetists, Basilides (Simon Cyrene substitution), Marcion, and Cerinthus.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-valentinus-opposes-passion",
+            "passage_id": "psg-irenaeus-ah-1-11-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-11-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.11.1",
+            "excerpt": "Valentinus adapted the principles of the heretical school called Gnostic to his own peculiar character of school. He affirmed that in the invisible and ineffable heights there exists a perfect, pre-existent Aeon — Proarche, Propator, and Bythus — invisible and incomprehensible. With him was also Ennoia, whom he calls Charis and Sige. This Bythus, at last resolving to send forth from himself the beginning of all things, deposited this production as a seed in the womb of Sige. The result was Nous and Aletheia — the beginning of a vast pleroma of divine emanations.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-valentinus-active-alexandria",
+        "clm-valentinus-active-rome",
+        "clm-valentinus-member-valentinians",
+        "clm-valentinus-opposes-apostolic-succession",
+        "clm-valentinus-opposes-incarnation",
+        "clm-valentinus-opposes-ot-scripture",
+        "clm-valentinus-opposes-resurrection",
+        "clm-valentinus-opposes-rule-of-faith"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-11-1": [
+          "clm-valentinians-at-antioch",
+          "clm-valentinians-at-carthage",
+          "clm-valentinians-at-egypt",
+          "clm-valentinians-at-ephesus",
+          "clm-valentinians-schismed-from-roman",
+          "clm-valentinus-opposes-apostolic-succession",
+          "clm-valentinus-opposes-incarnation",
+          "clm-valentinus-opposes-ot-scripture",
+          "clm-valentinus-opposes-resurrection",
+          "clm-valentinus-opposes-rule-of-faith"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-valentinians-at-ephesus",
+        "subject_type": "group",
+        "subject_id": "valentinians",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "150",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "valentinians",
+        "group_label": "Valentinians",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Gnostic school founded by Valentinus c. 140 AD; active in Rome and Alexandria; refuted extensively by Irenaeus in Against Heresies."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-valentinians-at-ephesus",
+            "passage_id": "psg-irenaeus-ah-1-11-1",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Irenaeus AH 1.11.1 describes Valentinian presence across Asia Minor including Ephesus."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-11-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.11.1",
+            "excerpt": "Valentinus adapted the principles of the heretical school called Gnostic to his own peculiar character of school. He affirmed that in the invisible and ineffable heights there exists a perfect, pre-existent Aeon — Proarche, Propator, and Bythus — invisible and incomprehensible. With him was also Ennoia, whom he calls Charis and Sige. This Bythus, at last resolving to send forth from himself the beginning of all things, deposited this production as a seed in the womb of Sige. The result was Nous and Aletheia — the beginning of a vast pleroma of divine emanations.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-valentinians-at-ephesus",
+            "passage_id": "psg-wikipedia-gnostic-spread",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Valentinian Gnostic communities were present in Asia Minor."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-gnostic-spread",
+            "source_id": "src-wikipedia-gnosticism",
+            "locator_type": "source_ref",
+            "locator": "Gnosticism#Geography",
+            "excerpt": "Gnostic movements including Valentinianism and Docetism were present across the Roman Empire, with significant centers in Alexandria, Asia Minor, Rome, and Gaul.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for Gnostic/Valentinian/Docetist presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-gnosticism",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Gnosticism - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Gnosticism",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for the geographic spread of Gnostic movements."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-valentinians-present-rome",
+        "clm-valentinians-schismed-from-roman",
+        "clm-valentinians-at-alexandria",
+        "clm-valentinians-at-egypt",
+        "clm-valentinians-at-antioch",
+        "clm-valentinians-at-carthage",
+        "clm-valentinians-at-gaul"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-11-1": [
+          "clm-valentinians-at-antioch",
+          "clm-valentinians-at-carthage",
+          "clm-valentinians-at-egypt",
+          "clm-valentinians-schismed-from-roman",
+          "clm-valentinus-opposes-apostolic-succession",
+          "clm-valentinus-opposes-incarnation",
+          "clm-valentinus-opposes-ot-scripture",
+          "clm-valentinus-opposes-passion",
+          "clm-valentinus-opposes-resurrection",
+          "clm-valentinus-opposes-rule-of-faith"
+        ],
+        "psg-wikipedia-gnostic-spread": [
+          "clm-docetists-at-asia",
+          "clm-docetists-at-phrygia"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-valentinians-at-carthage",
+        "subject_type": "group",
+        "subject_id": "valentinians",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "160",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "campaign5b-connections",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "group_id": "valentinians",
+        "group_label": "Valentinians",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Gnostic school founded by Valentinus c. 140 AD; active in Rome and Alexandria; refuted extensively by Irenaeus in Against Heresies."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-valentinians-at-carthage",
+            "passage_id": "psg-irenaeus-ah-1-11-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Valentinian presence in Carthage attested via Tertullian (Against Valentinians) — contextualizing Irenaeus."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-11-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.11.1",
+            "excerpt": "Valentinus adapted the principles of the heretical school called Gnostic to his own peculiar character of school. He affirmed that in the invisible and ineffable heights there exists a perfect, pre-existent Aeon — Proarche, Propator, and Bythus — invisible and incomprehensible. With him was also Ennoia, whom he calls Charis and Sige. This Bythus, at last resolving to send forth from himself the beginning of all things, deposited this production as a seed in the womb of Sige. The result was Nous and Aletheia — the beginning of a vast pleroma of divine emanations.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-valentinians-present-rome",
+        "clm-valentinians-schismed-from-roman",
+        "clm-valentinians-at-alexandria",
+        "clm-valentinians-at-egypt",
+        "clm-valentinians-at-antioch",
+        "clm-valentinians-at-ephesus",
+        "clm-valentinians-at-gaul"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-11-1": [
+          "clm-valentinians-at-antioch",
+          "clm-valentinians-at-egypt",
+          "clm-valentinians-at-ephesus",
+          "clm-valentinians-schismed-from-roman",
+          "clm-valentinus-opposes-apostolic-succession",
+          "clm-valentinus-opposes-incarnation",
+          "clm-valentinus-opposes-ot-scripture",
+          "clm-valentinus-opposes-passion",
+          "clm-valentinus-opposes-resurrection",
+          "clm-valentinus-opposes-rule-of-faith"
+        ]
+      },
+      "flags": []
+    }
+  ]
+}

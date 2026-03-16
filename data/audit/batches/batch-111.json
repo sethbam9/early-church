@@ -1,0 +1,1134 @@
+{
+  "batch_id": "batch-111",
+  "queue": "1",
+  "focus": "exhortation-to-martyrdom",
+  "claim_count": 10,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-exhort-martyrdom-by-origen",
+        "subject_type": "work",
+        "subject_id": "exhortation-to-martyrdom",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "origen-of-alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "exhortation-to-martyrdom",
+        "title_display": "Exhortation to Martyrdom",
+        "title_original": "Εἰς μαρτύριον προτρεπτικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's treatise addressed to his patron Ambrose and the presbyter Protoctetus c. 235 during the persecution under Maximinus Thrax; exhorts them to embrace martyrdom rather than deny the faith; affirms free will, the vanity of idolatry, and the eschatological reward of the martyrs."
+      },
+      "object_entity": {
+        "person_id": "origen-of-alexandria",
+        "person_label": "Origen of Alexandria",
+        "name_alt": "Origen, Adamantius",
+        "name_native": "Ὠριγένης",
+        "birth_year_display": "c. 185",
+        "death_year_display": "c. 254",
+        "person_kind": "individual",
+        "notes": "Leading Alexandrian theologian and biblical scholar; student of Clement of Alexandria and eventual head of the Catechetical School. Prolific author covering exegesis, apologetics, and systematic theology. Active in Alexandria (c. 202–232) then Caesarea."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-exhort-martyrdom-by-origen",
+            "passage_id": "psg-origen-exhort-11",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Exhortation to Martyrdom explicitly by Origen."
+          },
+          "passage": {
+            "passage_id": "psg-origen-exhort-11",
+            "source_id": "src-origen-exhortation-martyrdom",
+            "locator_type": "source_ref",
+            "locator": "Exhort. Mart. 11",
+            "excerpt": "Paraphrase: The martyrs follow Christ in his suffering and share in his passion; their blood is a seed of future Christians; by their testimony they confess Christ before the powers of this world and receive the crown of life promised by the Lord.",
+            "language": "English",
+            "passage_year": "235",
+            "url_override": "",
+            "notes": "Martyrdom as witness to Christ and participation in his passion"
+          },
+          "source": {
+            "source_id": "src-origen-exhortation-martyrdom",
+            "work_id": "exhortation-to-martyrdom",
+            "source_kind": "primary_text",
+            "title": "Exhortation to Martyrdom",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 235",
+            "year_start": "235",
+            "year_end": "235",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0415.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's treatise addressed to Ambrose during the persecution of Maximinus Thrax; ANF Vol. 4."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-exhort-affirms-celibacy",
+        "clm-exhort-affirms-free-will",
+        "clm-exhort-affirms-incarnation",
+        "clm-exhort-affirms-judgment",
+        "clm-exhort-affirms-logos",
+        "clm-exhort-affirms-martyrdom",
+        "clm-exhort-affirms-ot",
+        "clm-exhort-affirms-resurrection",
+        "clm-exhort-martyrdom-written-at-caesarea"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-origen-exhort-11": [
+          "clm-exhort-affirms-incarnation",
+          "clm-exhort-affirms-judgment",
+          "clm-exhort-affirms-logos",
+          "clm-exhort-affirms-martyrdom",
+          "clm-exhort-affirms-resurrection"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-origen-exhort-11",
+        "PARAPHRASE_OMISSION:psg-origen-exhort-11:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-exhort-martyrdom-written-at-caesarea",
+        "subject_type": "work",
+        "subject_id": "exhortation-to-martyrdom",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "caesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "235",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "exhortation-to-martyrdom",
+        "title_display": "Exhortation to Martyrdom",
+        "title_original": "Εἰς μαρτύριον προτρεπτικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's treatise addressed to his patron Ambrose and the presbyter Protoctetus c. 235 during the persecution under Maximinus Thrax; exhorts them to embrace martyrdom rather than deny the faith; affirms free will, the vanity of idolatry, and the eschatological reward of the martyrs."
+      },
+      "object_entity": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-exhort-martyrdom-written-at-caesarea",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Written during persecution of Maximinus Thrax while Origen in Caesarea."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-exhort-affirms-celibacy",
+        "clm-exhort-affirms-free-will",
+        "clm-exhort-affirms-incarnation",
+        "clm-exhort-affirms-judgment",
+        "clm-exhort-affirms-logos",
+        "clm-exhort-affirms-martyrdom",
+        "clm-exhort-affirms-ot",
+        "clm-exhort-affirms-resurrection",
+        "clm-exhort-martyrdom-by-origen"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-exhort-affirms-celibacy",
+        "subject_type": "work",
+        "subject_id": "exhortation-to-martyrdom",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "virginity-is-honored-calling",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "235",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "exhortation-to-martyrdom",
+        "title_display": "Exhortation to Martyrdom",
+        "title_original": "Εἰς μαρτύριον προτρεπτικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's treatise addressed to his patron Ambrose and the presbyter Protoctetus c. 235 during the persecution under Maximinus Thrax; exhorts them to embrace martyrdom rather than deny the faith; affirms free will, the vanity of idolatry, and the eschatological reward of the martyrs."
+      },
+      "object_entity": {
+        "proposition_id": "virginity-is-honored-calling",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "celibacy-honored",
+        "proposition_label": "Virginity and celibacy are honored as a positive Christian calling",
+        "polarity_family": "celibacy_honored",
+        "description": "Virginity and celibacy are not merely tolerated but positively honored as a higher calling, even while marriage is defended as legitimate and good.",
+        "notes": "Celibacy and virginity honored"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-exhort-affirms-celibacy",
+            "passage_id": "psg-origen-exhort-30",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.4",
+            "notes": "Free offering to God connects to ascetic discipline."
+          },
+          "passage": {
+            "passage_id": "psg-origen-exhort-30",
+            "source_id": "src-origen-exhortation-martyrdom",
+            "locator_type": "source_ref",
+            "locator": "Exhort. Mart. 30",
+            "excerpt": "Paraphrase: God created rational beings with free will so that goodness might be their own, not forced; the one who chooses martyrdom does so freely, and this freedom is what makes the act meritorious; no fate or necessity compels the choice — it is the soul's free offering to God.",
+            "language": "English",
+            "passage_year": "235",
+            "url_override": "",
+            "notes": "Free will as basis for merit of martyrdom"
+          },
+          "source": {
+            "source_id": "src-origen-exhortation-martyrdom",
+            "work_id": "exhortation-to-martyrdom",
+            "source_kind": "primary_text",
+            "title": "Exhortation to Martyrdom",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 235",
+            "year_start": "235",
+            "year_end": "235",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0415.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's treatise addressed to Ambrose during the persecution of Maximinus Thrax; ANF Vol. 4."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-exhort-affirms-free-will",
+        "clm-exhort-affirms-incarnation",
+        "clm-exhort-affirms-judgment",
+        "clm-exhort-affirms-logos",
+        "clm-exhort-affirms-martyrdom",
+        "clm-exhort-affirms-ot",
+        "clm-exhort-affirms-resurrection",
+        "clm-exhort-martyrdom-written-at-caesarea",
+        "clm-exhort-martyrdom-by-origen"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-origen-exhort-30": [
+          "clm-exhort-affirms-free-will",
+          "clm-exhort-affirms-ot"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-origen-exhort-30"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-exhort-affirms-free-will",
+        "subject_type": "work",
+        "subject_id": "exhortation-to-martyrdom",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "free-will-grounds-moral-responsibility",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "235",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "exhortation-to-martyrdom",
+        "title_display": "Exhortation to Martyrdom",
+        "title_original": "Εἰς μαρτύριον προτρεπτικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's treatise addressed to his patron Ambrose and the presbyter Protoctetus c. 235 during the persecution under Maximinus Thrax; exhorts them to embrace martyrdom rather than deny the faith; affirms free will, the vanity of idolatry, and the eschatological reward of the martyrs."
+      },
+      "object_entity": {
+        "proposition_id": "free-will-grounds-moral-responsibility",
+        "topic_id": "anthropology-theology",
+        "dimension_id": "free-will",
+        "proposition_label": "Human free will is the basis for moral responsibility before God",
+        "polarity_family": "free_will",
+        "description": "God created rational beings with genuine freedom of choice; this freedom is what makes praise, blame, reward, and punishment just; evil arises from the misuse of free will, not from God or from nature.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-exhort-affirms-free-will",
+            "passage_id": "psg-origen-exhort-30",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Free will as basis for merit of martyrdom explicit."
+          },
+          "passage": {
+            "passage_id": "psg-origen-exhort-30",
+            "source_id": "src-origen-exhortation-martyrdom",
+            "locator_type": "source_ref",
+            "locator": "Exhort. Mart. 30",
+            "excerpt": "Paraphrase: God created rational beings with free will so that goodness might be their own, not forced; the one who chooses martyrdom does so freely, and this freedom is what makes the act meritorious; no fate or necessity compels the choice — it is the soul's free offering to God.",
+            "language": "English",
+            "passage_year": "235",
+            "url_override": "",
+            "notes": "Free will as basis for merit of martyrdom"
+          },
+          "source": {
+            "source_id": "src-origen-exhortation-martyrdom",
+            "work_id": "exhortation-to-martyrdom",
+            "source_kind": "primary_text",
+            "title": "Exhortation to Martyrdom",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 235",
+            "year_start": "235",
+            "year_end": "235",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0415.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's treatise addressed to Ambrose during the persecution of Maximinus Thrax; ANF Vol. 4."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-exhort-affirms-celibacy",
+        "clm-exhort-affirms-incarnation",
+        "clm-exhort-affirms-judgment",
+        "clm-exhort-affirms-logos",
+        "clm-exhort-affirms-martyrdom",
+        "clm-exhort-affirms-ot",
+        "clm-exhort-affirms-resurrection",
+        "clm-exhort-martyrdom-written-at-caesarea",
+        "clm-exhort-martyrdom-by-origen"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-origen-exhort-30": [
+          "clm-exhort-affirms-celibacy",
+          "clm-exhort-affirms-ot"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-origen-exhort-30"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-exhort-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "exhortation-to-martyrdom",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "235",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "exhortation-to-martyrdom",
+        "title_display": "Exhortation to Martyrdom",
+        "title_original": "Εἰς μαρτύριον προτρεπτικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's treatise addressed to his patron Ambrose and the presbyter Protoctetus c. 235 during the persecution under Maximinus Thrax; exhorts them to embrace martyrdom rather than deny the faith; affirms free will, the vanity of idolatry, and the eschatological reward of the martyrs."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-exhort-affirms-incarnation",
+            "passage_id": "psg-origen-exhort-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Sharing in Christ's passion presupposes incarnation."
+          },
+          "passage": {
+            "passage_id": "psg-origen-exhort-11",
+            "source_id": "src-origen-exhortation-martyrdom",
+            "locator_type": "source_ref",
+            "locator": "Exhort. Mart. 11",
+            "excerpt": "Paraphrase: The martyrs follow Christ in his suffering and share in his passion; their blood is a seed of future Christians; by their testimony they confess Christ before the powers of this world and receive the crown of life promised by the Lord.",
+            "language": "English",
+            "passage_year": "235",
+            "url_override": "",
+            "notes": "Martyrdom as witness to Christ and participation in his passion"
+          },
+          "source": {
+            "source_id": "src-origen-exhortation-martyrdom",
+            "work_id": "exhortation-to-martyrdom",
+            "source_kind": "primary_text",
+            "title": "Exhortation to Martyrdom",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 235",
+            "year_start": "235",
+            "year_end": "235",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0415.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's treatise addressed to Ambrose during the persecution of Maximinus Thrax; ANF Vol. 4."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-exhort-affirms-celibacy",
+        "clm-exhort-affirms-free-will",
+        "clm-exhort-affirms-judgment",
+        "clm-exhort-affirms-logos",
+        "clm-exhort-affirms-martyrdom",
+        "clm-exhort-affirms-ot",
+        "clm-exhort-affirms-resurrection",
+        "clm-exhort-martyrdom-written-at-caesarea",
+        "clm-exhort-martyrdom-by-origen"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-origen-exhort-11": [
+          "clm-exhort-affirms-judgment",
+          "clm-exhort-affirms-logos",
+          "clm-exhort-affirms-martyrdom",
+          "clm-exhort-affirms-resurrection",
+          "clm-exhort-martyrdom-by-origen"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-origen-exhort-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-exhort-affirms-judgment",
+        "subject_type": "work",
+        "subject_id": "exhortation-to-martyrdom",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "final-judgment-is-coming",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "235",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "exhortation-to-martyrdom",
+        "title_display": "Exhortation to Martyrdom",
+        "title_original": "Εἰς μαρτύριον προτρεπτικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's treatise addressed to his patron Ambrose and the presbyter Protoctetus c. 235 during the persecution under Maximinus Thrax; exhorts them to embrace martyrdom rather than deny the faith; affirms free will, the vanity of idolatry, and the eschatological reward of the martyrs."
+      },
+      "object_entity": {
+        "proposition_id": "final-judgment-is-coming",
+        "topic_id": "final-judgment",
+        "dimension_id": "coming-judgment",
+        "proposition_label": "A final judgment is coming",
+        "polarity_family": "coming_judgment",
+        "description": "Texts or teachers present a climactic future judgment of the wicked and vindication of the righteous.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-exhort-affirms-judgment",
+            "passage_id": "psg-origen-exhort-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Eschatological reward implies judgment."
+          },
+          "passage": {
+            "passage_id": "psg-origen-exhort-11",
+            "source_id": "src-origen-exhortation-martyrdom",
+            "locator_type": "source_ref",
+            "locator": "Exhort. Mart. 11",
+            "excerpt": "Paraphrase: The martyrs follow Christ in his suffering and share in his passion; their blood is a seed of future Christians; by their testimony they confess Christ before the powers of this world and receive the crown of life promised by the Lord.",
+            "language": "English",
+            "passage_year": "235",
+            "url_override": "",
+            "notes": "Martyrdom as witness to Christ and participation in his passion"
+          },
+          "source": {
+            "source_id": "src-origen-exhortation-martyrdom",
+            "work_id": "exhortation-to-martyrdom",
+            "source_kind": "primary_text",
+            "title": "Exhortation to Martyrdom",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 235",
+            "year_start": "235",
+            "year_end": "235",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0415.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's treatise addressed to Ambrose during the persecution of Maximinus Thrax; ANF Vol. 4."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-exhort-affirms-celibacy",
+        "clm-exhort-affirms-free-will",
+        "clm-exhort-affirms-incarnation",
+        "clm-exhort-affirms-logos",
+        "clm-exhort-affirms-martyrdom",
+        "clm-exhort-affirms-ot",
+        "clm-exhort-affirms-resurrection",
+        "clm-exhort-martyrdom-written-at-caesarea",
+        "clm-exhort-martyrdom-by-origen"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-origen-exhort-11": [
+          "clm-exhort-affirms-incarnation",
+          "clm-exhort-affirms-logos",
+          "clm-exhort-affirms-martyrdom",
+          "clm-exhort-affirms-resurrection",
+          "clm-exhort-martyrdom-by-origen"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-origen-exhort-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-exhort-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "exhortation-to-martyrdom",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "235",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "exhortation-to-martyrdom",
+        "title_display": "Exhortation to Martyrdom",
+        "title_original": "Εἰς μαρτύριον προτρεπτικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's treatise addressed to his patron Ambrose and the presbyter Protoctetus c. 235 during the persecution under Maximinus Thrax; exhorts them to embrace martyrdom rather than deny the faith; affirms free will, the vanity of idolatry, and the eschatological reward of the martyrs."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-exhort-affirms-logos",
+            "passage_id": "psg-origen-exhort-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Christological framework in martyrdom theology."
+          },
+          "passage": {
+            "passage_id": "psg-origen-exhort-11",
+            "source_id": "src-origen-exhortation-martyrdom",
+            "locator_type": "source_ref",
+            "locator": "Exhort. Mart. 11",
+            "excerpt": "Paraphrase: The martyrs follow Christ in his suffering and share in his passion; their blood is a seed of future Christians; by their testimony they confess Christ before the powers of this world and receive the crown of life promised by the Lord.",
+            "language": "English",
+            "passage_year": "235",
+            "url_override": "",
+            "notes": "Martyrdom as witness to Christ and participation in his passion"
+          },
+          "source": {
+            "source_id": "src-origen-exhortation-martyrdom",
+            "work_id": "exhortation-to-martyrdom",
+            "source_kind": "primary_text",
+            "title": "Exhortation to Martyrdom",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 235",
+            "year_start": "235",
+            "year_end": "235",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0415.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's treatise addressed to Ambrose during the persecution of Maximinus Thrax; ANF Vol. 4."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-exhort-affirms-celibacy",
+        "clm-exhort-affirms-free-will",
+        "clm-exhort-affirms-incarnation",
+        "clm-exhort-affirms-judgment",
+        "clm-exhort-affirms-martyrdom",
+        "clm-exhort-affirms-ot",
+        "clm-exhort-affirms-resurrection",
+        "clm-exhort-martyrdom-written-at-caesarea",
+        "clm-exhort-martyrdom-by-origen"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-origen-exhort-11": [
+          "clm-exhort-affirms-incarnation",
+          "clm-exhort-affirms-judgment",
+          "clm-exhort-affirms-martyrdom",
+          "clm-exhort-affirms-resurrection",
+          "clm-exhort-martyrdom-by-origen"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-origen-exhort-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-exhort-affirms-martyrdom",
+        "subject_type": "work",
+        "subject_id": "exhortation-to-martyrdom",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "martyrdom-witnesses-to-christ",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "235",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "exhortation-to-martyrdom",
+        "title_display": "Exhortation to Martyrdom",
+        "title_original": "Εἰς μαρτύριον προτρεπτικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's treatise addressed to his patron Ambrose and the presbyter Protoctetus c. 235 during the persecution under Maximinus Thrax; exhorts them to embrace martyrdom rather than deny the faith; affirms free will, the vanity of idolatry, and the eschatological reward of the martyrs."
+      },
+      "object_entity": {
+        "proposition_id": "martyrdom-witnesses-to-christ",
+        "topic_id": "martyrdom-theology",
+        "dimension_id": "martyr-witness",
+        "proposition_label": "Martyrdom is bearing faithful witness to Christ before authorities",
+        "polarity_family": "martyr_witness",
+        "description": "The martyr's death is presented as a form of witness to Christ, conforming to his passion and declaring undivided fidelity before earthly powers.",
+        "notes": "Martyrdom theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-exhort-affirms-martyrdom",
+            "passage_id": "psg-origen-exhort-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Martyrdom as witness to Christ explicit."
+          },
+          "passage": {
+            "passage_id": "psg-origen-exhort-11",
+            "source_id": "src-origen-exhortation-martyrdom",
+            "locator_type": "source_ref",
+            "locator": "Exhort. Mart. 11",
+            "excerpt": "Paraphrase: The martyrs follow Christ in his suffering and share in his passion; their blood is a seed of future Christians; by their testimony they confess Christ before the powers of this world and receive the crown of life promised by the Lord.",
+            "language": "English",
+            "passage_year": "235",
+            "url_override": "",
+            "notes": "Martyrdom as witness to Christ and participation in his passion"
+          },
+          "source": {
+            "source_id": "src-origen-exhortation-martyrdom",
+            "work_id": "exhortation-to-martyrdom",
+            "source_kind": "primary_text",
+            "title": "Exhortation to Martyrdom",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 235",
+            "year_start": "235",
+            "year_end": "235",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0415.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's treatise addressed to Ambrose during the persecution of Maximinus Thrax; ANF Vol. 4."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-exhort-affirms-celibacy",
+        "clm-exhort-affirms-free-will",
+        "clm-exhort-affirms-incarnation",
+        "clm-exhort-affirms-judgment",
+        "clm-exhort-affirms-logos",
+        "clm-exhort-affirms-ot",
+        "clm-exhort-affirms-resurrection",
+        "clm-exhort-martyrdom-written-at-caesarea",
+        "clm-exhort-martyrdom-by-origen"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-origen-exhort-11": [
+          "clm-exhort-affirms-incarnation",
+          "clm-exhort-affirms-judgment",
+          "clm-exhort-affirms-logos",
+          "clm-exhort-affirms-resurrection",
+          "clm-exhort-martyrdom-by-origen"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-origen-exhort-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-exhort-affirms-ot",
+        "subject_type": "work",
+        "subject_id": "exhortation-to-martyrdom",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "235",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "exhortation-to-martyrdom",
+        "title_display": "Exhortation to Martyrdom",
+        "title_original": "Εἰς μαρτύριον προτρεπτικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's treatise addressed to his patron Ambrose and the presbyter Protoctetus c. 235 during the persecution under Maximinus Thrax; exhorts them to embrace martyrdom rather than deny the faith; affirms free will, the vanity of idolatry, and the eschatological reward of the martyrs."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-exhort-affirms-ot",
+            "passage_id": "psg-origen-exhort-30",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "OT presupposed in moral argument."
+          },
+          "passage": {
+            "passage_id": "psg-origen-exhort-30",
+            "source_id": "src-origen-exhortation-martyrdom",
+            "locator_type": "source_ref",
+            "locator": "Exhort. Mart. 30",
+            "excerpt": "Paraphrase: God created rational beings with free will so that goodness might be their own, not forced; the one who chooses martyrdom does so freely, and this freedom is what makes the act meritorious; no fate or necessity compels the choice — it is the soul's free offering to God.",
+            "language": "English",
+            "passage_year": "235",
+            "url_override": "",
+            "notes": "Free will as basis for merit of martyrdom"
+          },
+          "source": {
+            "source_id": "src-origen-exhortation-martyrdom",
+            "work_id": "exhortation-to-martyrdom",
+            "source_kind": "primary_text",
+            "title": "Exhortation to Martyrdom",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 235",
+            "year_start": "235",
+            "year_end": "235",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0415.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's treatise addressed to Ambrose during the persecution of Maximinus Thrax; ANF Vol. 4."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-exhort-affirms-celibacy",
+        "clm-exhort-affirms-free-will",
+        "clm-exhort-affirms-incarnation",
+        "clm-exhort-affirms-judgment",
+        "clm-exhort-affirms-logos",
+        "clm-exhort-affirms-martyrdom",
+        "clm-exhort-affirms-resurrection",
+        "clm-exhort-martyrdom-written-at-caesarea",
+        "clm-exhort-martyrdom-by-origen"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-origen-exhort-30": [
+          "clm-exhort-affirms-celibacy",
+          "clm-exhort-affirms-free-will"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-origen-exhort-30"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-exhort-affirms-resurrection",
+        "subject_type": "work",
+        "subject_id": "exhortation-to-martyrdom",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "235",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "exhortation-to-martyrdom",
+        "title_display": "Exhortation to Martyrdom",
+        "title_original": "Εἰς μαρτύριον προτρεπτικός",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Origen's treatise addressed to his patron Ambrose and the presbyter Protoctetus c. 235 during the persecution under Maximinus Thrax; exhorts them to embrace martyrdom rather than deny the faith; affirms free will, the vanity of idolatry, and the eschatological reward of the martyrs."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-exhort-affirms-resurrection",
+            "passage_id": "psg-origen-exhort-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Crown of life implies resurrection."
+          },
+          "passage": {
+            "passage_id": "psg-origen-exhort-11",
+            "source_id": "src-origen-exhortation-martyrdom",
+            "locator_type": "source_ref",
+            "locator": "Exhort. Mart. 11",
+            "excerpt": "Paraphrase: The martyrs follow Christ in his suffering and share in his passion; their blood is a seed of future Christians; by their testimony they confess Christ before the powers of this world and receive the crown of life promised by the Lord.",
+            "language": "English",
+            "passage_year": "235",
+            "url_override": "",
+            "notes": "Martyrdom as witness to Christ and participation in his passion"
+          },
+          "source": {
+            "source_id": "src-origen-exhortation-martyrdom",
+            "work_id": "exhortation-to-martyrdom",
+            "source_kind": "primary_text",
+            "title": "Exhortation to Martyrdom",
+            "author": "Origen",
+            "editor": "",
+            "year_display": "c. 235",
+            "year_start": "235",
+            "year_end": "235",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0415.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Origen's treatise addressed to Ambrose during the persecution of Maximinus Thrax; ANF Vol. 4."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-exhort-affirms-celibacy",
+        "clm-exhort-affirms-free-will",
+        "clm-exhort-affirms-incarnation",
+        "clm-exhort-affirms-judgment",
+        "clm-exhort-affirms-logos",
+        "clm-exhort-affirms-martyrdom",
+        "clm-exhort-affirms-ot",
+        "clm-exhort-martyrdom-written-at-caesarea",
+        "clm-exhort-martyrdom-by-origen"
+      ],
+      "sibling_count": 9,
+      "passage_co_users": {
+        "psg-origen-exhort-11": [
+          "clm-exhort-affirms-incarnation",
+          "clm-exhort-affirms-judgment",
+          "clm-exhort-affirms-logos",
+          "clm-exhort-affirms-martyrdom",
+          "clm-exhort-martyrdom-by-origen"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-origen-exhort-11"
+      ]
+    }
+  ]
+}

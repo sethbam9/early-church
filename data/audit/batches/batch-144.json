@@ -1,0 +1,2265 @@
+{
+  "batch_id": "batch-144",
+  "queue": "1",
+  "focus": "epaphroditus; onesimus; gospel-of-mark; first-epistle-of-john; apology-of-aristides",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-epaphroditus-active-philippi",
+        "subject_type": "person",
+        "subject_id": "epaphroditus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "philippi",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "epaphroditus",
+        "person_label": "Epaphroditus",
+        "name_alt": "",
+        "name_native": "Ἐπαφρόδιτος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Philippian envoy and coworker mentioned in Philippians."
+      },
+      "object_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-epaphroditus-active-philippi",
+            "passage_id": "psg-phil-2-25-30",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phil-2-25-30",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.2.25-30",
+            "excerpt": "Paraphrase: Paul calls Epaphroditus his brother, coworker, and fellow soldier sent by the Philippians.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-epaphroditus-philippian-church",
+        "clm-timothy-coworker-epaphroditus",
+        "clm-epaphroditus-coworker-paul"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-phil-2-25-30": [
+          "clm-epaphroditus-coworker-paul",
+          "clm-epaphroditus-philippian-church",
+          "clm-philippians-resurrection",
+          "clm-timothy-coworker-epaphroditus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phil-2-25-30"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-epaphroditus-philippian-church",
+        "subject_type": "person",
+        "subject_id": "epaphroditus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "philippian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "epaphroditus",
+        "person_label": "Epaphroditus",
+        "name_alt": "",
+        "name_native": "Ἐπαφρόδιτος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Philippian envoy and coworker mentioned in Philippians."
+      },
+      "object_entity": {
+        "group_id": "philippian-church",
+        "group_label": "Church in Philippi",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Philippi associated with Lydia and Pauline mission."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-epaphroditus-philippian-church",
+            "passage_id": "psg-phil-2-25-30",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phil-2-25-30",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.2.25-30",
+            "excerpt": "Paraphrase: Paul calls Epaphroditus his brother, coworker, and fellow soldier sent by the Philippians.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-epaphroditus-active-philippi",
+        "clm-timothy-coworker-epaphroditus",
+        "clm-epaphroditus-coworker-paul"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-phil-2-25-30": [
+          "clm-epaphroditus-active-philippi",
+          "clm-epaphroditus-coworker-paul",
+          "clm-philippians-resurrection",
+          "clm-timothy-coworker-epaphroditus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phil-2-25-30"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-timothy-coworker-epaphroditus",
+        "subject_type": "person",
+        "subject_id": "epaphroditus",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "timothy",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "philippi",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "epaphroditus",
+        "person_label": "Epaphroditus",
+        "name_alt": "",
+        "name_native": "Ἐπαφρόδιτος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Philippian envoy and coworker mentioned in Philippians."
+      },
+      "object_entity": {
+        "person_id": "timothy",
+        "person_label": "Timothy",
+        "name_alt": "Timotheus",
+        "name_native": "Τιμόθεος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Missionary coworker of Paul and co-sender of Pauline letters."
+      },
+      "context_place": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-timothy-coworker-epaphroditus",
+            "passage_id": "psg-phil-2-25-30",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phil-2-25-30",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.2.25-30",
+            "excerpt": "Paraphrase: Paul calls Epaphroditus his brother, coworker, and fellow soldier sent by the Philippians.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-epaphroditus-active-philippi",
+        "clm-epaphroditus-philippian-church",
+        "clm-epaphroditus-coworker-paul"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-phil-2-25-30": [
+          "clm-epaphroditus-active-philippi",
+          "clm-epaphroditus-coworker-paul",
+          "clm-epaphroditus-philippian-church",
+          "clm-philippians-resurrection"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phil-2-25-30",
+        "PARAPHRASE_OMISSION:psg-phil-2-25-30:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-epaphroditus-coworker-paul",
+        "subject_type": "person",
+        "subject_id": "epaphroditus",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "61",
+        "year_end": "61",
+        "context_place_id": "philippi",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "epaphroditus",
+        "person_label": "Epaphroditus",
+        "name_alt": "",
+        "name_native": "Ἐπαφρόδιτος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Philippian envoy and coworker mentioned in Philippians."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-epaphroditus-coworker-paul",
+            "passage_id": "psg-phil-2-25-30",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phil-2-25-30",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.2.25-30",
+            "excerpt": "Paraphrase: Paul calls Epaphroditus his brother, coworker, and fellow soldier sent by the Philippians.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-epaphroditus-active-philippi",
+        "clm-epaphroditus-philippian-church",
+        "clm-timothy-coworker-epaphroditus"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-phil-2-25-30": [
+          "clm-epaphroditus-active-philippi",
+          "clm-epaphroditus-philippian-church",
+          "clm-philippians-resurrection",
+          "clm-timothy-coworker-epaphroditus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phil-2-25-30"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-onesimus-active-colossae",
+        "subject_type": "person",
+        "subject_id": "onesimus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "colossae",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "onesimus",
+        "person_label": "Onesimus",
+        "name_alt": "",
+        "name_native": "Ὀνήσιμος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer commended to Philemon and linked with Colossae in the Pauline correspondence."
+      },
+      "object_entity": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-onesimus-active-colossae",
+            "passage_id": "psg-col-4-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-col-4-9",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.4.9",
+            "excerpt": "Paraphrase: Onesimus, one of the Colossians, is sent with Tychicus and identified as a faithful and beloved brother.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-onesimus-colossian-church",
+        "clm-onesimus-coworker-tychicus",
+        "clm-onesimus-disciple"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-col-4-9": [
+          "clm-onesimus-colossian-church",
+          "clm-onesimus-disciple",
+          "clm-philemon-colossian-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-col-4-9",
+        "PARAPHRASE_OMISSION:psg-col-4-9:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-onesimus-colossian-church",
+        "subject_type": "person",
+        "subject_id": "onesimus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "colossian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "colossae",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "onesimus",
+        "person_label": "Onesimus",
+        "name_alt": "",
+        "name_native": "Ὀνήσιμος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer commended to Philemon and linked with Colossae in the Pauline correspondence."
+      },
+      "object_entity": {
+        "group_id": "colossian-church",
+        "group_label": "Church in Colossae",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Colossae addressed in Pauline correspondence."
+      },
+      "context_place": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-onesimus-colossian-church",
+            "passage_id": "psg-col-4-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-col-4-9",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.4.9",
+            "excerpt": "Paraphrase: Onesimus, one of the Colossians, is sent with Tychicus and identified as a faithful and beloved brother.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-onesimus-active-colossae",
+        "clm-onesimus-coworker-tychicus",
+        "clm-onesimus-disciple"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-col-4-9": [
+          "clm-onesimus-active-colossae",
+          "clm-onesimus-disciple",
+          "clm-philemon-colossian-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-col-4-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-onesimus-disciple",
+        "subject_type": "person",
+        "subject_id": "onesimus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "colossae",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T06:12:00Z"
+      },
+      "subject_entity": {
+        "person_id": "onesimus",
+        "person_label": "Onesimus",
+        "name_alt": "",
+        "name_native": "Ὀνήσιμος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer commended to Philemon and linked with Colossae in the Pauline correspondence."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-onesimus-disciple",
+            "passage_id": "psg-col-4-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-col-4-9",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.4.9",
+            "excerpt": "Paraphrase: Onesimus, one of the Colossians, is sent with Tychicus and identified as a faithful and beloved brother.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-onesimus-active-colossae",
+        "clm-onesimus-colossian-church",
+        "clm-onesimus-coworker-tychicus"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-col-4-9": [
+          "clm-onesimus-active-colossae",
+          "clm-onesimus-colossian-church",
+          "clm-philemon-colossian-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-col-4-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-onesimus-coworker-tychicus",
+        "subject_type": "person",
+        "subject_id": "onesimus",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "tychicus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "62",
+        "context_place_id": "colossae",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "onesimus",
+        "person_label": "Onesimus",
+        "name_alt": "",
+        "name_native": "Ὀνήσιμος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Believer commended to Philemon and linked with Colossae in the Pauline correspondence."
+      },
+      "object_entity": {
+        "person_id": "tychicus",
+        "person_label": "Tychicus",
+        "name_alt": "",
+        "name_native": "Τυχικός",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate sent to Ephesus according to 2 Timothy."
+      },
+      "context_place": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-onesimus-coworker-tychicus",
+            "passage_id": "psg-col-4-7-9",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Col 4:7-9 sends Tychicus with Onesimus."
+          },
+          "passage": {
+            "passage_id": "psg-col-4-7-9",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.4.7-9",
+            "excerpt": "Paraphrase: Tychicus is the beloved brother and faithful minister sent to the Colossians with Onesimus, who is one of them.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-onesimus-active-colossae",
+        "clm-onesimus-colossian-church",
+        "clm-onesimus-disciple"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-col-4-7-9": [
+          "clm-aristarchus-coworker-tychicus",
+          "clm-paul-coworker-tychicus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-col-4-7-9"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gospel-mark-by-mark",
+        "subject_type": "work",
+        "subject_id": "gospel-of-mark",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "john-mark",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "75",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T09:15:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-mark",
+        "title_display": "Gospel according to Mark",
+        "title_original": "Κατὰ Μᾶρκον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Included as canonical work identity because the seed dataset cites Mark as witness to ministry-period events."
+      },
+      "object_entity": {
+        "person_id": "john-mark",
+        "person_label": "John Mark",
+        "name_alt": "Mark",
+        "name_native": "Ἰωάννης Μᾶρκος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Mission helper associated with Barnabas and Paul in Acts 13 and later tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gospel-mark-by-mark",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Papias (apud Eusebius HE 3.39.15): Mark was Peter's interpreter; Irenaeus AH 3.1.1 confirms. Most broadly accepted Gospel attribution."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-mark-kingdom",
+        "clm-mark-repentance",
+        "clm-mark-resurrection"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-mark-kingdom",
+        "subject_type": "work",
+        "subject_id": "gospel-of-mark",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "kingdom-of-god-has-drawn-near",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "70",
+        "context_place_id": "galilee",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-mark",
+        "title_display": "Gospel according to Mark",
+        "title_original": "Κατὰ Μᾶρκον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Included as canonical work identity because the seed dataset cites Mark as witness to ministry-period events."
+      },
+      "object_entity": {
+        "proposition_id": "kingdom-of-god-has-drawn-near",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "kingdom-proximity",
+        "proposition_label": "The kingdom of God has drawn near",
+        "polarity_family": "kingdom_proximity",
+        "description": "Jesus proclamation presents God kingdom as imminently present or arriving.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-mark-kingdom",
+            "passage_id": "psg-mark-1-14-15",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-1-14-15",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.1.14-15",
+            "excerpt": "Paraphrase: Jesus comes into Galilee proclaiming God kingdom and calling for repentance and belief.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gospel-mark-by-mark",
+        "clm-mark-repentance",
+        "clm-mark-resurrection"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-mark-1-14-15": [
+          "clm-jesus-active-galilee",
+          "clm-jesus-kingdom",
+          "clm-mark-repentance",
+          "clm-place-capernaum-attested",
+          "clm-place-galilee-attested",
+          "clm-place-galilee-attested-late"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-1-14-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-mark-repentance",
+        "subject_type": "work",
+        "subject_id": "gospel-of-mark",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "repentance-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "70",
+        "context_place_id": "galilee",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-mark",
+        "title_display": "Gospel according to Mark",
+        "title_original": "Κατὰ Μᾶρκον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Included as canonical work identity because the seed dataset cites Mark as witness to ministry-period events."
+      },
+      "object_entity": {
+        "proposition_id": "repentance-is-required",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "repentant-response",
+        "proposition_label": "Repentance is required in response to the proclamation",
+        "polarity_family": "repentance_response",
+        "description": "The proclamation of the kingdom calls hearers to repentance.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-mark-repentance",
+            "passage_id": "psg-mark-1-14-15",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-1-14-15",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.1.14-15",
+            "excerpt": "Paraphrase: Jesus comes into Galilee proclaiming God kingdom and calling for repentance and belief.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gospel-mark-by-mark",
+        "clm-mark-kingdom",
+        "clm-mark-resurrection"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-mark-1-14-15": [
+          "clm-jesus-active-galilee",
+          "clm-jesus-kingdom",
+          "clm-mark-kingdom",
+          "clm-place-capernaum-attested",
+          "clm-place-galilee-attested",
+          "clm-place-galilee-attested-late"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-1-14-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-mark-resurrection",
+        "subject_type": "work",
+        "subject_id": "gospel-of-mark",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-proclaimed-as-raised",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "70",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:45:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-mark",
+        "title_display": "Gospel according to Mark",
+        "title_original": "Κατὰ Μᾶρκον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Included as canonical work identity because the seed dataset cites Mark as witness to ministry-period events."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-proclaimed-as-raised",
+        "topic_id": "resurrection-proclamation",
+        "dimension_id": "jesus-resurrection",
+        "proposition_label": "Jesus is proclaimed as raised",
+        "polarity_family": "resurrection_proclamation",
+        "description": "The apostolic proclamation announces that Jesus has been raised from the dead.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-mark-resurrection",
+            "passage_id": "psg-mark-16-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-16-6",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.16.6",
+            "excerpt": "Paraphrase: The young man announces that Jesus has been raised and is not in the tomb.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gospel-mark-by-mark",
+        "clm-mark-kingdom",
+        "clm-mark-repentance"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-16-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-1john-by-john",
+        "subject_type": "work",
+        "subject_id": "first-epistle-of-john",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "john-son-of-zebedee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "85",
+        "year_end": "100",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T06:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-epistle-of-john",
+        "title_display": "First Epistle of John",
+        "title_original": "Ἰωάννου Αʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Johannine epistle emphasizing confession of Jesus as the Christ and the Son of God."
+      },
+      "object_entity": {
+        "person_id": "john-son-of-zebedee",
+        "person_label": "John son of Zebedee",
+        "name_alt": "John the Apostle",
+        "name_native": "Ἰωάννης",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "One of the first called disciples."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-1john-by-john",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Traditional attribution to John the Apostle; shared vocabulary with Fourth Gospel supports Johannine school."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-first-john-christ",
+        "clm-1john-affirms-incarnation",
+        "clm-1john-affirms-logos"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-1john-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "first-epistle-of-john",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "90",
+        "year_end": "95",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-epistle-of-john",
+        "title_display": "First Epistle of John",
+        "title_original": "Ἰωάννου Αʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Johannine epistle emphasizing confession of Jesus as the Christ and the Son of God."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-1john-affirms-incarnation",
+            "passage_id": "psg-ignatius-smyrn-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions first-epistle-of-john or christ-truly-became-flesh."
+          },
+          "passage": {
+            "passage_id": "psg-ignatius-smyrn-1",
+            "source_id": "src-ignatius-smyrnaeans",
+            "locator_type": "source_ref",
+            "locator": "Smyrn.1",
+            "excerpt": "Paraphrase: Ignatius confesses that Christ was truly of the seed of David, truly born of a virgin, baptized by John that all righteousness might be fulfilled, truly crucified under Pontius Pilate.",
+            "language": "English",
+            "passage_year": "110",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-ignatius-smyrnaeans",
+            "work_id": "epistles-of-ignatius",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Smyrnaeans",
+            "author": "Ignatius of Antioch",
+            "editor": "",
+            "year_display": "c. 110",
+            "year_start": "110",
+            "year_end": "110",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0109.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Ignatius letter to Smyrna addressing docetism and eucharistic practice."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-1john-by-john",
+        "clm-first-john-christ",
+        "clm-1john-affirms-logos"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-ignatius-smyrn-1": [
+          "clm-docetists-at-phrygia",
+          "clm-docetists-at-rome",
+          "clm-docetists-schismed-from-antioch",
+          "clm-ignatius-affirms-baptism-regen",
+          "clm-ignatius-affirms-bodily-resurrection",
+          "clm-ignatius-affirms-episcopal-unity",
+          "clm-ignatius-affirms-fasting",
+          "clm-ignatius-affirms-incarnation",
+          "clm-ignatius-affirms-logos",
+          "clm-ignatius-affirms-threefold",
+          "clm-ignatius-eph-affirms-virgin-birth",
+          "clm-ignatius-member-smyrna-route",
+          "clm-ignatius-smyrn-affirms-passion",
+          "clm-polycarp-affirms-eucharist",
+          "clm-polycarp-affirms-fasting"
+        ]
+      },
+      "flags": [
+        "SOURCE_MISMATCH:psg-ignatius-smyrn-1:epistles-of-ignatius",
+        "PARAPHRASE_RISK:psg-ignatius-smyrn-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-1john-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "first-epistle-of-john",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "90",
+        "year_end": "95",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-epistle-of-john",
+        "title_display": "First Epistle of John",
+        "title_original": "Ἰωάννου Αʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Johannine epistle emphasizing confession of Jesus as the Christ and the Son of God."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-1john-affirms-logos",
+            "passage_id": "psg-john-20-31",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions first-epistle-of-john or logos-is-pre-existent-son-of-god."
+          },
+          "passage": {
+            "passage_id": "psg-john-20-31",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.20.31",
+            "excerpt": "Paraphrase: These things are written so that you may believe Jesus is the Christ, the Son of God.",
+            "language": "English",
+            "passage_year": "90",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-1john-by-john",
+        "clm-first-john-christ",
+        "clm-1john-affirms-incarnation"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-john-20-31": [
+          "clm-gospel-john-christ",
+          "clm-john-person-affirms-logos"
+        ]
+      },
+      "flags": [
+        "SOURCE_MISMATCH:psg-john-20-31:gospel-of-john",
+        "PARAPHRASE_RISK:psg-john-20-31"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-first-john-christ",
+        "subject_type": "work",
+        "subject_id": "first-epistle-of-john",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-the-christ",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "90",
+        "year_end": "90",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-epistle-of-john",
+        "title_display": "First Epistle of John",
+        "title_original": "Ἰωάννου Αʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Johannine epistle emphasizing confession of Jesus as the Christ and the Son of God."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-the-christ",
+        "topic_id": "messianic-identity",
+        "dimension_id": "jesus-as-messiah",
+        "proposition_label": "Jesus is the Christ",
+        "polarity_family": "jesus_as_messiah",
+        "description": "Texts or teachers explicitly identify Jesus as the Christ or Messiah.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-first-john-christ",
+            "passage_id": "psg-1john-5-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-1john-5-1",
+            "source_id": "src-1john",
+            "locator_type": "bible_osis",
+            "locator": "1John.5.1",
+            "excerpt": "Paraphrase: Everyone who believes that Jesus is the Christ has been born of God.",
+            "language": "English",
+            "passage_year": "90",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1john",
+            "work_id": "first-epistle-of-john",
+            "source_kind": "primary_text",
+            "title": "First Epistle of John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 85-95",
+            "year_start": "85",
+            "year_end": "95",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=1%20John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Johannine witness confessing Jesus as the Christ and Son of God."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-1john-by-john",
+        "clm-1john-affirms-incarnation",
+        "clm-1john-affirms-logos"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-1john-5-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-apol-aristides-by-aristides",
+        "subject_type": "work",
+        "subject_id": "apology-of-aristides",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "aristides-of-athens",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apology-of-aristides",
+        "title_display": "Apology of Aristides",
+        "title_original": "Ἀπολογία Ἀριστείδου",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apology addressed to Hadrian or Antoninus Pius c. 125-130, defending Christians and describing their community life and practices."
+      },
+      "object_entity": {
+        "person_id": "aristides-of-athens",
+        "person_label": "Aristides of Athens",
+        "name_alt": "Aristides",
+        "name_native": "Ἀριστείδης",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 130",
+        "person_kind": "individual",
+        "notes": "Athenian Christian philosopher who wrote an early apology addressed to the emperor Hadrian or Antoninus Pius c. 125-130."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-apol-aristides-by-aristides",
+            "passage_id": "psg-aristides-apol-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "attribution",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-aristides-apol-1-2",
+            "source_id": "src-aristides-apology",
+            "locator_type": "source_ref",
+            "locator": "Apol. 1-2",
+            "excerpt": "Paraphrase: God is not born, not made, an ever-abiding nature without beginning or end, immortal, perfect, and incomprehensible; Christians trace their religion from Jesus the Messiah Son of God Most High who came down from heaven and from a Hebrew virgin assumed and clothed himself with flesh; the Son of God lived in a daughter of man.",
+            "language": "English",
+            "passage_year": "125",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-aristides-apology",
+            "work_id": "apology-of-aristides",
+            "source_kind": "primary_text",
+            "title": "Apology of Aristides",
+            "author": "Aristides of Athens",
+            "editor": "",
+            "year_display": "c. 125-130",
+            "year_start": "125",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/1012.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenian philosopher's apology defending Christians before the emperor, preserved via Eusebius and a Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-apol-aristides-by-aristides",
+            "passage_id": "psg-aristides-apol-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Apol.15 is within Aristides's own text — direct authorship evidence."
+          },
+          "passage": {
+            "passage_id": "psg-aristides-apol-15",
+            "source_id": "src-aristides-apology",
+            "locator_type": "source_ref",
+            "locator": "Apol. 15",
+            "excerpt": "Paraphrase: Christians keep commandments written for them; they do not commit adultery or fornication; they do not bear false witness; they love one another; they give to the poor; they visit strangers and the sick; they fast two or three days; they pray; they are pure in speech.",
+            "language": "English",
+            "passage_year": "125",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-aristides-apology",
+            "work_id": "apology-of-aristides",
+            "source_kind": "primary_text",
+            "title": "Apology of Aristides",
+            "author": "Aristides of Athens",
+            "editor": "",
+            "year_display": "c. 125-130",
+            "year_start": "125",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/1012.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenian philosopher's apology defending Christians before the emperor, preserved via Eusebius and a Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aristides-apol-addressed-rome",
+        "clm-aristides-apol-affirms-logos",
+        "clm-aristides-apol-affirms-virgin-birth"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-aristides-apol-1-2": [
+          "clm-aristides-active-athens",
+          "clm-aristides-active-rome",
+          "clm-aristides-apol-affirms-logos",
+          "clm-aristides-apol-affirms-virgin-birth"
+        ],
+        "psg-aristides-apol-15": [
+          "clm-aristides-apol-affirms-logos"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-aristides-apol-1-2",
+        "PARAPHRASE_RISK:psg-aristides-apol-15",
+        "PARAPHRASE_OMISSION:psg-aristides-apol-15:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aristides-apol-addressed-rome",
+        "subject_type": "work",
+        "subject_id": "apology-of-aristides",
+        "predicate_id": "addressed_to_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "125",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T23:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apology-of-aristides",
+        "title_display": "Apology of Aristides",
+        "title_original": "Ἀπολογία Ἀριστείδου",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apology addressed to Hadrian or Antoninus Pius c. 125-130, defending Christians and describing their community life and practices."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aristides-apol-addressed-rome",
+            "passage_id": "psg-aristides-apol-16",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-aristides-apol-16",
+            "source_id": "src-aristides-apology",
+            "locator_type": "source_ref",
+            "locator": "Apol. 16",
+            "excerpt": "Paraphrase: If any Christian is poor and needy, Christians fast two or three days so the needy may be supplied with necessities; they observe the commandments of their Lord with care; they live righteously and justly; truly these are the people who have found the truth.",
+            "language": "English",
+            "passage_year": "125",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-aristides-apology",
+            "work_id": "apology-of-aristides",
+            "source_kind": "primary_text",
+            "title": "Apology of Aristides",
+            "author": "Aristides of Athens",
+            "editor": "",
+            "year_display": "c. 125-130",
+            "year_start": "125",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/1012.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenian philosopher's apology defending Christians before the emperor, preserved via Eusebius and a Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aristides-apol-affirms-logos",
+        "clm-aristides-apol-affirms-virgin-birth",
+        "clm-apol-aristides-by-aristides"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-aristides-apol-16"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aristides-apol-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "apology-of-aristides",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "125",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apology-of-aristides",
+        "title_display": "Apology of Aristides",
+        "title_original": "Ἀπολογία Ἀριστείδου",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apology addressed to Hadrian or Antoninus Pius c. 125-130, defending Christians and describing their community life and practices."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aristides-apol-affirms-logos",
+            "passage_id": "psg-aristides-apol-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-aristides-apol-1-2",
+            "source_id": "src-aristides-apology",
+            "locator_type": "source_ref",
+            "locator": "Apol. 1-2",
+            "excerpt": "Paraphrase: God is not born, not made, an ever-abiding nature without beginning or end, immortal, perfect, and incomprehensible; Christians trace their religion from Jesus the Messiah Son of God Most High who came down from heaven and from a Hebrew virgin assumed and clothed himself with flesh; the Son of God lived in a daughter of man.",
+            "language": "English",
+            "passage_year": "125",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-aristides-apology",
+            "work_id": "apology-of-aristides",
+            "source_kind": "primary_text",
+            "title": "Apology of Aristides",
+            "author": "Aristides of Athens",
+            "editor": "",
+            "year_display": "c. 125-130",
+            "year_start": "125",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/1012.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenian philosopher's apology defending Christians before the emperor, preserved via Eusebius and a Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-aristides-apol-affirms-logos",
+            "passage_id": "psg-aristides-apol-15",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Aristides Apol.15 ethical teaching contextualizes the Logos theology of the work."
+          },
+          "passage": {
+            "passage_id": "psg-aristides-apol-15",
+            "source_id": "src-aristides-apology",
+            "locator_type": "source_ref",
+            "locator": "Apol. 15",
+            "excerpt": "Paraphrase: Christians keep commandments written for them; they do not commit adultery or fornication; they do not bear false witness; they love one another; they give to the poor; they visit strangers and the sick; they fast two or three days; they pray; they are pure in speech.",
+            "language": "English",
+            "passage_year": "125",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-aristides-apology",
+            "work_id": "apology-of-aristides",
+            "source_kind": "primary_text",
+            "title": "Apology of Aristides",
+            "author": "Aristides of Athens",
+            "editor": "",
+            "year_display": "c. 125-130",
+            "year_start": "125",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/1012.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenian philosopher's apology defending Christians before the emperor, preserved via Eusebius and a Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aristides-apol-addressed-rome",
+        "clm-aristides-apol-affirms-virgin-birth",
+        "clm-apol-aristides-by-aristides"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-aristides-apol-1-2": [
+          "clm-apol-aristides-by-aristides",
+          "clm-aristides-active-athens",
+          "clm-aristides-active-rome",
+          "clm-aristides-apol-affirms-virgin-birth"
+        ],
+        "psg-aristides-apol-15": [
+          "clm-apol-aristides-by-aristides"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-aristides-apol-1-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aristides-apol-affirms-virgin-birth",
+        "subject_type": "work",
+        "subject_id": "apology-of-aristides",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "125",
+        "year_end": "130",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T23:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "apology-of-aristides",
+        "title_display": "Apology of Aristides",
+        "title_original": "Ἀπολογία Ἀριστείδου",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Apology addressed to Hadrian or Antoninus Pius c. 125-130, defending Christians and describing their community life and practices."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aristides-apol-affirms-virgin-birth",
+            "passage_id": "psg-aristides-apol-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-aristides-apol-1-2",
+            "source_id": "src-aristides-apology",
+            "locator_type": "source_ref",
+            "locator": "Apol. 1-2",
+            "excerpt": "Paraphrase: God is not born, not made, an ever-abiding nature without beginning or end, immortal, perfect, and incomprehensible; Christians trace their religion from Jesus the Messiah Son of God Most High who came down from heaven and from a Hebrew virgin assumed and clothed himself with flesh; the Son of God lived in a daughter of man.",
+            "language": "English",
+            "passage_year": "125",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-aristides-apology",
+            "work_id": "apology-of-aristides",
+            "source_kind": "primary_text",
+            "title": "Apology of Aristides",
+            "author": "Aristides of Athens",
+            "editor": "",
+            "year_display": "c. 125-130",
+            "year_start": "125",
+            "year_end": "130",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/1012.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Athenian philosopher's apology defending Christians before the emperor, preserved via Eusebius and a Syriac translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aristides-apol-addressed-rome",
+        "clm-aristides-apol-affirms-logos",
+        "clm-apol-aristides-by-aristides"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-aristides-apol-1-2": [
+          "clm-apol-aristides-by-aristides",
+          "clm-aristides-active-athens",
+          "clm-aristides-active-rome",
+          "clm-aristides-apol-affirms-logos"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-aristides-apol-1-2"
+      ]
+    }
+  ]
+}

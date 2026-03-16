@@ -1,0 +1,2260 @@
+{
+  "batch_id": "batch-150",
+  "queue": "1",
+  "focus": "crispus; stephanas; epistle-to-the-colossians; epistle-to-the-philippians; epistle-to-the-ephesians; phoebe; erastus",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-crispus-active-corinth",
+        "subject_type": "person",
+        "subject_id": "crispus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "corinth",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "50",
+        "year_end": "52",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T08:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "crispus",
+        "person_label": "Crispus",
+        "name_alt": "",
+        "name_native": "Κρίσπος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Synagogue ruler in Corinth who believes with his household in Acts 18."
+      },
+      "object_entity": {
+        "place_id": "corinth",
+        "place_label": "Corinth",
+        "place_label_modern": "Ancient Corinth",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9056",
+        "lon": "22.8784",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Major Achaian city associated with Paul and the Corinthian correspondence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-crispus-active-corinth",
+            "passage_id": "psg-acts-18-8",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-8",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.8",
+            "excerpt": "Paraphrase: Crispus, the ruler of the synagogue in Corinth, believes in the Lord together with his household.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-crispus-corinthian-church",
+        "clm-crispus-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-18-8"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-crispus-corinthian-church",
+        "subject_type": "person",
+        "subject_id": "crispus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "corinthian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "50",
+        "year_end": "52",
+        "context_place_id": "corinth",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:15:00Z"
+      },
+      "subject_entity": {
+        "person_id": "crispus",
+        "person_label": "Crispus",
+        "name_alt": "",
+        "name_native": "Κρίσπος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Synagogue ruler in Corinth who believes with his household in Acts 18."
+      },
+      "object_entity": {
+        "group_id": "corinthian-church",
+        "group_label": "Church in Corinth",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Corinth addressed in Pauline correspondence."
+      },
+      "context_place": {
+        "place_id": "corinth",
+        "place_label": "Corinth",
+        "place_label_modern": "Ancient Corinth",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9056",
+        "lon": "22.8784",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Major Achaian city associated with Paul and the Corinthian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-crispus-corinthian-church",
+            "passage_id": "psg-acts-18-7-8",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-7-8",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.7-8",
+            "excerpt": "Paraphrase: Paul moves next door to the house of Titius Justus in Corinth, and Crispus the synagogue ruler believes in the Lord with his household.",
+            "language": "English",
+            "passage_year": "50",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-crispus-active-corinth",
+        "clm-crispus-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-18-7-8": [
+          "clm-crispus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-18-7-8",
+        "PARAPHRASE_OMISSION:psg-acts-18-7-8:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-crispus-disciple",
+        "subject_type": "person",
+        "subject_id": "crispus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "50",
+        "year_end": "52",
+        "context_place_id": "corinth",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:15:00Z"
+      },
+      "subject_entity": {
+        "person_id": "crispus",
+        "person_label": "Crispus",
+        "name_alt": "",
+        "name_native": "Κρίσπος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Synagogue ruler in Corinth who believes with his household in Acts 18."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "corinth",
+        "place_label": "Corinth",
+        "place_label_modern": "Ancient Corinth",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9056",
+        "lon": "22.8784",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Major Achaian city associated with Paul and the Corinthian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-crispus-disciple",
+            "passage_id": "psg-acts-18-7-8",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-7-8",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.7-8",
+            "excerpt": "Paraphrase: Paul moves next door to the house of Titius Justus in Corinth, and Crispus the synagogue ruler believes in the Lord with his household.",
+            "language": "English",
+            "passage_year": "50",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-crispus-active-corinth",
+        "clm-crispus-corinthian-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-18-7-8": [
+          "clm-crispus-corinthian-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-18-7-8"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stephanas-active-corinth",
+        "subject_type": "person",
+        "subject_id": "stephanas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "corinth",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "50",
+        "year_end": "55",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stephanas",
+        "person_label": "Stephanas",
+        "name_alt": "",
+        "name_native": "Στεφανᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Christian at Corinth whose household were Paul's first converts in Achaia (1 Cor 16:15) and among the few Paul personally baptized (1 Cor 1:16); rendered service to the church."
+      },
+      "object_entity": {
+        "place_id": "corinth",
+        "place_label": "Corinth",
+        "place_label_modern": "Ancient Corinth",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9056",
+        "lon": "22.8784",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Major Achaian city associated with Paul and the Corinthian correspondence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stephanas-active-corinth",
+            "passage_id": "psg-1cor-16-15-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-1cor-16-15-18",
+            "source_id": "src-1cor",
+            "locator_type": "bible_osis",
+            "locator": "1Cor.16.15-18",
+            "excerpt": "Paraphrase: The household of Stephanas were the first converts in Achaia and have devoted themselves to the service of the saints.",
+            "language": "English",
+            "passage_year": "54",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1cor",
+            "work_id": "first-epistle-to-the-corinthians",
+            "source_kind": "primary_text",
+            "title": "First Epistle to the Corinthians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 53-55",
+            "year_start": "53",
+            "year_end": "55",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=1%20Corinthians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Corinth and resurrection proclamation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stephanas-member-corinthian",
+        "clm-stephanas-active-ephesus"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-1cor-16-15-18": [
+          "clm-paul-coworker-stephanas",
+          "clm-stephanas-member-corinthian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-1cor-16-15-18",
+        "PARAPHRASE_OMISSION:psg-1cor-16-15-18:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stephanas-active-ephesus",
+        "subject_type": "person",
+        "subject_id": "stephanas",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "54",
+        "year_end": "55",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stephanas",
+        "person_label": "Stephanas",
+        "name_alt": "",
+        "name_native": "Στεφανᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Christian at Corinth whose household were Paul's first converts in Achaia (1 Cor 16:15) and among the few Paul personally baptized (1 Cor 1:16); rendered service to the church."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stephanas-active-ephesus",
+            "passage_id": "psg-acts-19-1-10",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests stephanas's activity in or near ephesus."
+          },
+          "passage": {
+            "passage_id": "psg-acts-19-1-10",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.19.1-10",
+            "excerpt": "Paraphrase: Paul teaches in Ephesus and the message spreads broadly in the region.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stephanas-active-corinth",
+        "clm-stephanas-member-corinthian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-19-1-10": [
+          "clm-group-disciples-ephesus",
+          "clm-group-ephesian-church-ephesus",
+          "clm-paul-active-ephesus",
+          "clm-place-asia-attested-late",
+          "clm-place-ephesus-attested",
+          "clm-place-ephesus-attested-late"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-19-1-10",
+        "PARAPHRASE_RISK:psg-acts-19-1-10",
+        "PARAPHRASE_OMISSION:psg-acts-19-1-10:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stephanas-member-corinthian",
+        "subject_type": "person",
+        "subject_id": "stephanas",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "corinthian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "50",
+        "year_end": "55",
+        "context_place_id": "corinth",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stephanas",
+        "person_label": "Stephanas",
+        "name_alt": "",
+        "name_native": "Στεφανᾶς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Christian at Corinth whose household were Paul's first converts in Achaia (1 Cor 16:15) and among the few Paul personally baptized (1 Cor 1:16); rendered service to the church."
+      },
+      "object_entity": {
+        "group_id": "corinthian-church",
+        "group_label": "Church in Corinth",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Corinth addressed in Pauline correspondence."
+      },
+      "context_place": {
+        "place_id": "corinth",
+        "place_label": "Corinth",
+        "place_label_modern": "Ancient Corinth",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9056",
+        "lon": "22.8784",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Major Achaian city associated with Paul and the Corinthian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stephanas-member-corinthian",
+            "passage_id": "psg-1cor-16-15-18",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-1cor-16-15-18",
+            "source_id": "src-1cor",
+            "locator_type": "bible_osis",
+            "locator": "1Cor.16.15-18",
+            "excerpt": "Paraphrase: The household of Stephanas were the first converts in Achaia and have devoted themselves to the service of the saints.",
+            "language": "English",
+            "passage_year": "54",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1cor",
+            "work_id": "first-epistle-to-the-corinthians",
+            "source_kind": "primary_text",
+            "title": "First Epistle to the Corinthians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 53-55",
+            "year_start": "53",
+            "year_end": "55",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=1%20Corinthians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Corinth and resurrection proclamation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stephanas-active-corinth",
+        "clm-stephanas-active-ephesus"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-1cor-16-15-18": [
+          "clm-paul-coworker-stephanas",
+          "clm-stephanas-active-corinth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-1cor-16-15-18",
+        "PARAPHRASE_OMISSION:psg-1cor-16-15-18:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-colossians-by-paul",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-colossians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "54",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "",
+        "updated_at": ""
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-colossians",
+        "title_display": "Epistle to the Colossians",
+        "title_original": "Πρὸς Κολοσσαεῖς",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to believers in Colossae."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-colossians-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Irenaeus treats Pauline corpus including Colossians as Pauline; Col 1:1 self-attribution."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-colossians-addressed-colossae",
+        "clm-colossians-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-colossians-addressed-colossae",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-colossians",
+        "predicate_id": "addressed_to_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "colossae",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-colossians",
+        "title_display": "Epistle to the Colossians",
+        "title_original": "Πρὸς Κολοσσαεῖς",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to believers in Colossae."
+      },
+      "object_entity": {
+        "place_id": "colossae",
+        "place_label": "Colossae",
+        "place_label_modern": "Honaz area",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.8436",
+        "lon": "29.2628",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Phrygian city associated with the Epistle to the Colossians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-colossians-addressed-colossae",
+            "passage_id": "psg-col-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-col-1-2",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.1.2",
+            "excerpt": "Paraphrase: Paul addresses the saints and faithful brothers and sisters in Christ in Colossae.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-colossians-by-paul",
+        "clm-colossians-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-col-1-2": [
+          "clm-group-colossian-church-colossae",
+          "clm-place-colossae-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-col-1-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-colossians-resurrection",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-colossians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-proclaimed-as-raised",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-colossians",
+        "title_display": "Epistle to the Colossians",
+        "title_original": "Πρὸς Κολοσσαεῖς",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to believers in Colossae."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-proclaimed-as-raised",
+        "topic_id": "resurrection-proclamation",
+        "dimension_id": "jesus-resurrection",
+        "proposition_label": "Jesus is proclaimed as raised",
+        "polarity_family": "resurrection_proclamation",
+        "description": "The apostolic proclamation announces that Jesus has been raised from the dead.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-colossians-resurrection",
+            "passage_id": "psg-col-2-12",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-col-2-12",
+            "source_id": "src-colossians",
+            "locator_type": "bible_osis",
+            "locator": "Col.2.12",
+            "excerpt": "Paraphrase: Believers were buried with Christ in baptism and raised with him through faith in God's power.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-colossians",
+            "work_id": "epistle-to-the-colossians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Colossians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Colossians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Colossae and neighboring Laodicea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-colossians-by-paul",
+        "clm-colossians-addressed-colossae"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-col-2-12"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philippians-by-paul",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-philippians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "54",
+        "year_end": "62",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T06:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-philippians",
+        "title_display": "Epistle to the Philippians",
+        "title_original": "Πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the believers in Philippi."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philippians-by-paul",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Phil 1:1 explicit Paul+Timothy opening; universally accepted as authentic."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-philippians-by-paul",
+            "passage_id": "psg-phil-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Phil 1:1 — Paul and Timothy opening; explicit Pauline self-identification."
+          },
+          "passage": {
+            "passage_id": "psg-phil-1-1",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.1.1",
+            "excerpt": "Paraphrase: Paul and Timothy address all the saints in Christ Jesus who are in Philippi, with the overseers and deacons.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philippians-addressed-philippi",
+        "clm-philippians-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ],
+        "psg-phil-1-1": [
+          "clm-paul-coworker-timothy",
+          "clm-paul-member-philippian",
+          "clm-philippians-addressed-philippi",
+          "clm-timothy-active-rome",
+          "clm-timothy-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phil-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philippians-addressed-philippi",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-philippians",
+        "predicate_id": "addressed_to_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "philippi",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "61",
+        "year_end": "61",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-philippians",
+        "title_display": "Epistle to the Philippians",
+        "title_original": "Πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the believers in Philippi."
+      },
+      "object_entity": {
+        "place_id": "philippi",
+        "place_label": "Philippi",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.0136",
+        "lon": "24.2867",
+        "location_precision": "approx_site",
+        "modern_country_label": "Greece",
+        "notes": "Macedonian city and Roman colony associated with Lydia and the Philippian church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philippians-addressed-philippi",
+            "passage_id": "psg-phil-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-phil-1-1",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.1.1",
+            "excerpt": "Paraphrase: Paul and Timothy address all the saints in Christ Jesus who are in Philippi, with the overseers and deacons.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philippians-by-paul",
+        "clm-philippians-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-phil-1-1": [
+          "clm-paul-coworker-timothy",
+          "clm-paul-member-philippian",
+          "clm-philippians-by-paul",
+          "clm-timothy-active-rome",
+          "clm-timothy-member-philippian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-phil-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philippians-resurrection",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-philippians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-proclaimed-as-raised",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "61",
+        "year_end": "61",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-philippians",
+        "title_display": "Epistle to the Philippians",
+        "title_original": "Πρὸς Φιλιππησίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressed to the believers in Philippi."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-proclaimed-as-raised",
+        "topic_id": "resurrection-proclamation",
+        "dimension_id": "jesus-resurrection",
+        "proposition_label": "Jesus is proclaimed as raised",
+        "polarity_family": "resurrection_proclamation",
+        "description": "The apostolic proclamation announces that Jesus has been raised from the dead.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philippians-resurrection",
+            "passage_id": "psg-phil-2-25-30",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Phil 2:25-30 sits within a letter presupposing the resurrection; Phil 3:10-11 expresses it explicitly."
+          },
+          "passage": {
+            "passage_id": "psg-phil-2-25-30",
+            "source_id": "src-philippians",
+            "locator_type": "bible_osis",
+            "locator": "Phil.2.25-30",
+            "excerpt": "Paraphrase: Paul calls Epaphroditus his brother, coworker, and fellow soldier sent by the Philippians.",
+            "language": "English",
+            "passage_year": "61",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-philippians",
+            "work_id": "epistle-to-the-philippians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Philippians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-62",
+            "year_start": "60",
+            "year_end": "62",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Philippians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the church in Philippi."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-philippians-resurrection",
+            "passage_id": "psg-rom-10-9",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-10-9",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.10.9",
+            "excerpt": "Paraphrase: The confession of faith centers on God raising Jesus from the dead.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-philippians-by-paul",
+        "clm-philippians-addressed-philippi"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-phil-2-25-30": [
+          "clm-epaphroditus-active-philippi",
+          "clm-epaphroditus-coworker-paul",
+          "clm-epaphroditus-philippian-church",
+          "clm-timothy-coworker-epaphroditus"
+        ],
+        "psg-rom-10-9": [
+          "clm-ephesians-resurrection",
+          "clm-romans-resurrection"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ephesians-by-paul",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-ephesians",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "paul",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "54",
+        "year_end": "90",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "",
+        "updated_at": ""
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-ephesians",
+        "title_display": "Epistle to the Ephesians",
+        "title_original": "Πρὸς Ἐφεσίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter traditionally associated with Ephesus and the Pauline imprisonment period."
+      },
+      "object_entity": {
+        "person_id": "paul",
+        "person_label": "Paul",
+        "name_alt": "Saul of Tarsus; Paul the Apostle",
+        "name_native": "Παῦλος",
+        "birth_year_display": "c. AD 5",
+        "death_year_display": "c. AD 64/65",
+        "person_kind": "individual",
+        "notes": "Apostolic missionary central to Acts and several New Testament letters."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephesians-by-paul",
+            "passage_id": "psg-eph-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eph 1:1 self-attribution: 'Paul, an apostle of Christ Jesus by the will of God.'"
+          },
+          "passage": {
+            "passage_id": "psg-eph-1-1",
+            "source_id": "src-ephesians",
+            "locator_type": "bible_osis",
+            "locator": "Eph.1.1",
+            "excerpt": "Paraphrase: Paul addresses the saints in Ephesus, though the phrase 'in Ephesus' is textually debated.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-ephesians",
+            "work_id": "epistle-to-the-ephesians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Ephesians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Ephesians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness traditionally associated with Ephesus."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephesians-addressed-ephesus",
+        "clm-ephesians-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eph-1-1": [
+          "clm-ephesians-addressed-ephesus",
+          "clm-ephesians-resurrection"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eph-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ephesians-addressed-ephesus",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-ephesians",
+        "predicate_id": "addressed_to_place",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-ephesians",
+        "title_display": "Epistle to the Ephesians",
+        "title_original": "Πρὸς Ἐφεσίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter traditionally associated with Ephesus and the Pauline imprisonment period."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephesians-addressed-ephesus",
+            "passage_id": "psg-eph-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "The destination is textually debated in Eph 1:1, so the claim is kept probable rather than certain."
+          },
+          "passage": {
+            "passage_id": "psg-eph-1-1",
+            "source_id": "src-ephesians",
+            "locator_type": "bible_osis",
+            "locator": "Eph.1.1",
+            "excerpt": "Paraphrase: Paul addresses the saints in Ephesus, though the phrase 'in Ephesus' is textually debated.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-ephesians",
+            "work_id": "epistle-to-the-ephesians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Ephesians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Ephesians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness traditionally associated with Ephesus."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephesians-by-paul",
+        "clm-ephesians-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eph-1-1": [
+          "clm-ephesians-by-paul",
+          "clm-ephesians-resurrection"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eph-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ephesians-resurrection",
+        "subject_type": "work",
+        "subject_id": "epistle-to-the-ephesians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-proclaimed-as-raised",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "60",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistle-to-the-ephesians",
+        "title_display": "Epistle to the Ephesians",
+        "title_original": "Πρὸς Ἐφεσίους",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter traditionally associated with Ephesus and the Pauline imprisonment period."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-proclaimed-as-raised",
+        "topic_id": "resurrection-proclamation",
+        "dimension_id": "jesus-resurrection",
+        "proposition_label": "Jesus is proclaimed as raised",
+        "polarity_family": "resurrection_proclamation",
+        "description": "The apostolic proclamation announces that Jesus has been raised from the dead.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephesians-resurrection",
+            "passage_id": "psg-eph-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eph 1:20 (within Eph 1) describes Christ raised from dead and seated at God's right hand."
+          },
+          "passage": {
+            "passage_id": "psg-eph-1-1",
+            "source_id": "src-ephesians",
+            "locator_type": "bible_osis",
+            "locator": "Eph.1.1",
+            "excerpt": "Paraphrase: Paul addresses the saints in Ephesus, though the phrase 'in Ephesus' is textually debated.",
+            "language": "English",
+            "passage_year": "60",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-ephesians",
+            "work_id": "epistle-to-the-ephesians",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Ephesians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 60-61",
+            "year_start": "60",
+            "year_end": "61",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Ephesians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness traditionally associated with Ephesus."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-ephesians-resurrection",
+            "passage_id": "psg-rom-10-9",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-10-9",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.10.9",
+            "excerpt": "Paraphrase: The confession of faith centers on God raising Jesus from the dead.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephesians-by-paul",
+        "clm-ephesians-addressed-ephesus"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eph-1-1": [
+          "clm-ephesians-addressed-ephesus",
+          "clm-ephesians-by-paul"
+        ],
+        "psg-rom-10-9": [
+          "clm-philippians-resurrection",
+          "clm-romans-resurrection"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-phoebe-active-corinth",
+        "subject_type": "person",
+        "subject_id": "phoebe",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "corinth",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "56",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "phoebe",
+        "person_label": "Phoebe",
+        "name_alt": "",
+        "name_native": "Φοίβη",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Trusted woman commended by Paul in Romans 16."
+      },
+      "object_entity": {
+        "place_id": "corinth",
+        "place_label": "Corinth",
+        "place_label_modern": "Ancient Corinth",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9056",
+        "lon": "22.8784",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Major Achaian city associated with Paul and the Corinthian correspondence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-phoebe-active-corinth",
+            "passage_id": "psg-rom-16-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-1-2",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.1-2",
+            "excerpt": "Paraphrase: Paul commends Phoebe to the Roman believers.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-phoebe-member-corinthian",
+        "clm-phoebe-active-rome"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-rom-16-1-2": [
+          "clm-phoebe-active-rome",
+          "clm-phoebe-member-corinthian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-1-2",
+        "PARAPHRASE_OMISSION:psg-rom-16-1-2:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-phoebe-active-rome",
+        "subject_type": "person",
+        "subject_id": "phoebe",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "phoebe",
+        "person_label": "Phoebe",
+        "name_alt": "",
+        "name_native": "Φοίβη",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Trusted woman commended by Paul in Romans 16."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-phoebe-active-rome",
+            "passage_id": "psg-rom-16-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Romans 16:1-2 commends Phoebe, likely carried the letter to Rome."
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-1-2",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.1-2",
+            "excerpt": "Paraphrase: Paul commends Phoebe to the Roman believers.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-phoebe-active-corinth",
+        "clm-phoebe-member-corinthian"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-rom-16-1-2": [
+          "clm-phoebe-active-corinth",
+          "clm-phoebe-member-corinthian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-1-2",
+        "PARAPHRASE_OMISSION:psg-rom-16-1-2:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-phoebe-member-corinthian",
+        "subject_type": "person",
+        "subject_id": "phoebe",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "corinthian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "56",
+        "year_end": "57",
+        "context_place_id": "corinth",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "phoebe",
+        "person_label": "Phoebe",
+        "name_alt": "",
+        "name_native": "Φοίβη",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Trusted woman commended by Paul in Romans 16."
+      },
+      "object_entity": {
+        "group_id": "corinthian-church",
+        "group_label": "Church in Corinth",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Corinth addressed in Pauline correspondence."
+      },
+      "context_place": {
+        "place_id": "corinth",
+        "place_label": "Corinth",
+        "place_label_modern": "Ancient Corinth",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9056",
+        "lon": "22.8784",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Major Achaian city associated with Paul and the Corinthian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-phoebe-member-corinthian",
+            "passage_id": "psg-rom-16-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-1-2",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.1-2",
+            "excerpt": "Paraphrase: Paul commends Phoebe to the Roman believers.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-phoebe-active-corinth",
+        "clm-phoebe-active-rome"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-rom-16-1-2": [
+          "clm-phoebe-active-corinth",
+          "clm-phoebe-active-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-1-2",
+        "PARAPHRASE_OMISSION:psg-rom-16-1-2:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-erastus-active-corinth-late",
+        "subject_type": "person",
+        "subject_id": "erastus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "corinth",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "66",
+        "year_end": "66",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T07:05:00Z"
+      },
+      "subject_entity": {
+        "person_id": "erastus",
+        "person_label": "Erastus",
+        "name_alt": "",
+        "name_native": "Ἔραστος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said to remain at Corinth in 2 Timothy."
+      },
+      "object_entity": {
+        "place_id": "corinth",
+        "place_label": "Corinth",
+        "place_label_modern": "Ancient Corinth",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9056",
+        "lon": "22.8784",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Major Achaian city associated with Paul and the Corinthian correspondence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-erastus-active-corinth-late",
+            "passage_id": "psg-2tim-4-20",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-2tim-4-20",
+            "source_id": "src-2tim",
+            "locator_type": "bible_osis",
+            "locator": "2Tim.4.20",
+            "excerpt": "Paraphrase: Paul notes that Trophimus was left ill at Miletus.",
+            "language": "English",
+            "passage_year": "66",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-2tim",
+            "work_id": "second-epistle-to-timothy",
+            "source_kind": "primary_text",
+            "title": "Second Epistle to Timothy",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 64-67",
+            "year_start": "64",
+            "year_end": "67",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=2%20Timothy",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Pastoral witness for Timothy and Paul's later imprisonment setting."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-erastus-corinthian-church",
+        "clm-erastus-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-2tim-4-20": [
+          "clm-trophimus-active-miletus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-2tim-4-20",
+        "PARAPHRASE_OMISSION:psg-2tim-4-20:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-erastus-corinthian-church",
+        "subject_type": "person",
+        "subject_id": "erastus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "corinthian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "57",
+        "year_end": "57",
+        "context_place_id": "corinth",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:15:00Z"
+      },
+      "subject_entity": {
+        "person_id": "erastus",
+        "person_label": "Erastus",
+        "name_alt": "",
+        "name_native": "Ἔραστος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Pauline associate said to remain at Corinth in 2 Timothy."
+      },
+      "object_entity": {
+        "group_id": "corinthian-church",
+        "group_label": "Church in Corinth",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Corinth addressed in Pauline correspondence."
+      },
+      "context_place": {
+        "place_id": "corinth",
+        "place_label": "Corinth",
+        "place_label_modern": "Ancient Corinth",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9056",
+        "lon": "22.8784",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Major Achaian city associated with Paul and the Corinthian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-erastus-corinthian-church",
+            "passage_id": "psg-rom-16-23",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Erastus sends greetings in the Romans closing context and is modeled as a probable member of the Corinthian church rather than as an explicit membership formula."
+          },
+          "passage": {
+            "passage_id": "psg-rom-16-23",
+            "source_id": "src-romans",
+            "locator_type": "bible_osis",
+            "locator": "Rom.16.23",
+            "excerpt": "Paraphrase: Gaius and Erastus, the city treasurer, send greetings with the Roman letter.",
+            "language": "English",
+            "passage_year": "57",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-romans",
+            "work_id": "epistle-to-the-romans",
+            "source_kind": "primary_text",
+            "title": "Epistle to the Romans",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 56-57",
+            "year_start": "56",
+            "year_end": "57",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Romans",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for the Roman church."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-erastus-disciple",
+        "clm-erastus-active-corinth-late"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-rom-16-23": [
+          "clm-erastus-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rom-16-23",
+        "PARAPHRASE_OMISSION:psg-rom-16-23:object"
+      ]
+    }
+  ]
+}

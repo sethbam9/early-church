@@ -1,0 +1,2367 @@
+{
+  "batch_id": "batch-134",
+  "queue": "1",
+  "focus": "ad-autolycum; hippolytus-of-rome; on-christ-and-antichrist; refutation-of-all-heresies",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-ad-autolycum-written-antioch",
+        "subject_type": "work",
+        "subject_id": "ad-autolycum",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "178",
+        "year_end": "183",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-autolycum",
+        "title_display": "Ad Autolycum",
+        "title_original": "Πρὸς Αὐτόλυκον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Theophilus of Antioch's three-book apology c. 180 defending Christian monotheism; first Christian use of the word Τριάς (Trinity); key witness for Logos theology and bodily resurrection."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-autolycum-written-antioch",
+            "passage_id": "psg-theophilus-autol-2-10",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-theophilus-autol-2-10",
+            "source_id": "src-ad-autolycum",
+            "locator_type": "source_ref",
+            "locator": "Autol. 2.10",
+            "excerpt": "God, then, having his own Word internal within his own bowels, begat him, emitting him along with his own wisdom before all things. He had this Word as a helper in the things that were created by him, and by him he made all things. He is called governing principle because he rules and is lord of all things fashioned by him.",
+            "language": "English",
+            "passage_year": "180",
+            "url_override": "",
+            "notes": "Logos begotten from God before creation; Logos as helper and ruler of creation; pre-Nicene Logos theology"
+          },
+          "source": {
+            "source_id": "src-ad-autolycum",
+            "work_id": "ad-autolycum",
+            "source_kind": "primary_text",
+            "title": "Ad Autolycum",
+            "author": "Theophilus of Antioch",
+            "editor": "",
+            "year_display": "c. 180",
+            "year_start": "180",
+            "year_end": "180",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0409.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Three-book apology by the bishop of Antioch; New Advent ANF edition."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-autolycum-affirms-bodily-resurrection",
+        "clm-ad-autolycum-affirms-incarnation",
+        "clm-ad-autolycum-affirms-logos",
+        "clm-ad-autolycum-affirms-trinity",
+        "clm-ad-autolycum-by-theophilus"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-theophilus-autol-2-10": [
+          "clm-ad-autolycum-affirms-logos",
+          "clm-ad-autolycum-by-theophilus",
+          "clm-theophilus-bishop-antioch"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-autolycum-affirms-bodily-resurrection",
+        "subject_type": "work",
+        "subject_id": "ad-autolycum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "178",
+        "year_end": "183",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-autolycum",
+        "title_display": "Ad Autolycum",
+        "title_original": "Πρὸς Αὐτόλυκον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Theophilus of Antioch's three-book apology c. 180 defending Christian monotheism; first Christian use of the word Τριάς (Trinity); key witness for Logos theology and bodily resurrection."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-autolycum-affirms-bodily-resurrection",
+            "passage_id": "psg-theophilus-autol-1-13",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-theophilus-autol-1-13",
+            "source_id": "src-ad-autolycum",
+            "locator_type": "source_ref",
+            "locator": "Autol. 1.13",
+            "excerpt": "God made us of nothing; and just as not existing before we were made, so also being able to be made again after dissolution, as his will is able to make us. For what is impossible with man is possible with God.",
+            "language": "English",
+            "passage_year": "180",
+            "url_override": "",
+            "notes": "God who created from nothing can resurrect the body from dissolution; resurrection defended"
+          },
+          "source": {
+            "source_id": "src-ad-autolycum",
+            "work_id": "ad-autolycum",
+            "source_kind": "primary_text",
+            "title": "Ad Autolycum",
+            "author": "Theophilus of Antioch",
+            "editor": "",
+            "year_display": "c. 180",
+            "year_start": "180",
+            "year_end": "180",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0409.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Three-book apology by the bishop of Antioch; New Advent ANF edition."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-autolycum-affirms-incarnation",
+        "clm-ad-autolycum-affirms-logos",
+        "clm-ad-autolycum-affirms-trinity",
+        "clm-ad-autolycum-written-antioch",
+        "clm-ad-autolycum-by-theophilus"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-theophilus-autol-1-13": [
+          "clm-ad-autolycum-affirms-incarnation",
+          "clm-ad-autolycum-affirms-trinity"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-autolycum-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "ad-autolycum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "178",
+        "year_end": "183",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-autolycum",
+        "title_display": "Ad Autolycum",
+        "title_original": "Πρὸς Αὐτόλυκον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Theophilus of Antioch's three-book apology c. 180 defending Christian monotheism; first Christian use of the word Τριάς (Trinity); key witness for Logos theology and bodily resurrection."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-autolycum-affirms-incarnation",
+            "passage_id": "psg-theophilus-autol-1-13",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "ad-autolycum is a primary text directly relevant to christ-truly-became-flesh."
+          },
+          "passage": {
+            "passage_id": "psg-theophilus-autol-1-13",
+            "source_id": "src-ad-autolycum",
+            "locator_type": "source_ref",
+            "locator": "Autol. 1.13",
+            "excerpt": "God made us of nothing; and just as not existing before we were made, so also being able to be made again after dissolution, as his will is able to make us. For what is impossible with man is possible with God.",
+            "language": "English",
+            "passage_year": "180",
+            "url_override": "",
+            "notes": "God who created from nothing can resurrect the body from dissolution; resurrection defended"
+          },
+          "source": {
+            "source_id": "src-ad-autolycum",
+            "work_id": "ad-autolycum",
+            "source_kind": "primary_text",
+            "title": "Ad Autolycum",
+            "author": "Theophilus of Antioch",
+            "editor": "",
+            "year_display": "c. 180",
+            "year_start": "180",
+            "year_end": "180",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0409.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Three-book apology by the bishop of Antioch; New Advent ANF edition."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-autolycum-affirms-bodily-resurrection",
+        "clm-ad-autolycum-affirms-logos",
+        "clm-ad-autolycum-affirms-trinity",
+        "clm-ad-autolycum-written-antioch",
+        "clm-ad-autolycum-by-theophilus"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-theophilus-autol-1-13": [
+          "clm-ad-autolycum-affirms-bodily-resurrection",
+          "clm-ad-autolycum-affirms-trinity"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-theophilus-autol-1-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-autolycum-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "ad-autolycum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "178",
+        "year_end": "183",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-autolycum",
+        "title_display": "Ad Autolycum",
+        "title_original": "Πρὸς Αὐτόλυκον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Theophilus of Antioch's three-book apology c. 180 defending Christian monotheism; first Christian use of the word Τριάς (Trinity); key witness for Logos theology and bodily resurrection."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-autolycum-affirms-logos",
+            "passage_id": "psg-theophilus-autol-2-10",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-theophilus-autol-2-10",
+            "source_id": "src-ad-autolycum",
+            "locator_type": "source_ref",
+            "locator": "Autol. 2.10",
+            "excerpt": "God, then, having his own Word internal within his own bowels, begat him, emitting him along with his own wisdom before all things. He had this Word as a helper in the things that were created by him, and by him he made all things. He is called governing principle because he rules and is lord of all things fashioned by him.",
+            "language": "English",
+            "passage_year": "180",
+            "url_override": "",
+            "notes": "Logos begotten from God before creation; Logos as helper and ruler of creation; pre-Nicene Logos theology"
+          },
+          "source": {
+            "source_id": "src-ad-autolycum",
+            "work_id": "ad-autolycum",
+            "source_kind": "primary_text",
+            "title": "Ad Autolycum",
+            "author": "Theophilus of Antioch",
+            "editor": "",
+            "year_display": "c. 180",
+            "year_start": "180",
+            "year_end": "180",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0409.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Three-book apology by the bishop of Antioch; New Advent ANF edition."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-ad-autolycum-affirms-logos",
+            "passage_id": "psg-theophilus-autol-2-15",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-theophilus-autol-2-15",
+            "source_id": "src-ad-autolycum",
+            "locator_type": "source_ref",
+            "locator": "Autol. 2.15",
+            "excerpt": "And thus also the three days which were before the luminaries are types of the Trinity — of God, and his Word, and his wisdom.",
+            "language": "English",
+            "passage_year": "180",
+            "url_override": "",
+            "notes": "First Christian explicit use of Trinity (Τριάς) applied to Father, Word, and Wisdom; Theophilus's Trinity terminology"
+          },
+          "source": {
+            "source_id": "src-ad-autolycum",
+            "work_id": "ad-autolycum",
+            "source_kind": "primary_text",
+            "title": "Ad Autolycum",
+            "author": "Theophilus of Antioch",
+            "editor": "",
+            "year_display": "c. 180",
+            "year_start": "180",
+            "year_end": "180",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0409.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Three-book apology by the bishop of Antioch; New Advent ANF edition."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-autolycum-affirms-bodily-resurrection",
+        "clm-ad-autolycum-affirms-incarnation",
+        "clm-ad-autolycum-affirms-trinity",
+        "clm-ad-autolycum-written-antioch",
+        "clm-ad-autolycum-by-theophilus"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-theophilus-autol-2-10": [
+          "clm-ad-autolycum-by-theophilus",
+          "clm-ad-autolycum-written-antioch",
+          "clm-theophilus-bishop-antioch"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-autolycum-affirms-trinity",
+        "subject_type": "work",
+        "subject_id": "ad-autolycum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "trinity-is-three-persons-one-substance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "178",
+        "year_end": "183",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-autolycum",
+        "title_display": "Ad Autolycum",
+        "title_original": "Πρὸς Αὐτόλυκον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Theophilus of Antioch's three-book apology c. 180 defending Christian monotheism; first Christian use of the word Τριάς (Trinity); key witness for Logos theology and bodily resurrection."
+      },
+      "object_entity": {
+        "proposition_id": "trinity-is-three-persons-one-substance",
+        "topic_id": "trinitarian-theology",
+        "dimension_id": "trinitarian-formula",
+        "proposition_label": "God is three persons — Father, Son, and Holy Spirit — in one substance",
+        "polarity_family": "trinitarian_formula",
+        "description": "The one God subsists in three persons (personae) — Father, Son, and Holy Spirit — who share one substance (substantia); the Son proceeds from the Father and the Spirit from both, without dividing the divine substance.",
+        "notes": "Trinitarian formula"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-autolycum-affirms-trinity",
+            "passage_id": "psg-theophilus-autol-1-13",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "ad-autolycum is a primary text directly relevant to trinity-is-three-persons-one-substance."
+          },
+          "passage": {
+            "passage_id": "psg-theophilus-autol-1-13",
+            "source_id": "src-ad-autolycum",
+            "locator_type": "source_ref",
+            "locator": "Autol. 1.13",
+            "excerpt": "God made us of nothing; and just as not existing before we were made, so also being able to be made again after dissolution, as his will is able to make us. For what is impossible with man is possible with God.",
+            "language": "English",
+            "passage_year": "180",
+            "url_override": "",
+            "notes": "God who created from nothing can resurrect the body from dissolution; resurrection defended"
+          },
+          "source": {
+            "source_id": "src-ad-autolycum",
+            "work_id": "ad-autolycum",
+            "source_kind": "primary_text",
+            "title": "Ad Autolycum",
+            "author": "Theophilus of Antioch",
+            "editor": "",
+            "year_display": "c. 180",
+            "year_start": "180",
+            "year_end": "180",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0409.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Three-book apology by the bishop of Antioch; New Advent ANF edition."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-autolycum-affirms-bodily-resurrection",
+        "clm-ad-autolycum-affirms-incarnation",
+        "clm-ad-autolycum-affirms-logos",
+        "clm-ad-autolycum-written-antioch",
+        "clm-ad-autolycum-by-theophilus"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-theophilus-autol-1-13": [
+          "clm-ad-autolycum-affirms-bodily-resurrection",
+          "clm-ad-autolycum-affirms-incarnation"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-theophilus-autol-1-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-hippolytus-rival-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "hippolytus-of-rome",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "217",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "hippolytus-of-rome",
+        "person_label": "Hippolytus of Rome",
+        "name_alt": "Hippolytus",
+        "name_native": "Ἱππόλυτος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; prolific Greek-speaking writer in Rome; opposed the modalism of Zephyrinus and Callistus; set himself up as rival bishop c. 217 (sometimes called the first antipope); exiled with Pontian to Sardinia in 235; reconciled before death; author of the Apostolic Tradition, Refutation of All Heresies, Against Noetus, and Commentary on Daniel."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hippolytus-rival-bishop-rome",
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.7",
+            "excerpt": "Paraphrase: Callistus, having been appointed over the cemetery by Zephyrinus, brought many into his following. He was the first to invent the device of conniving at the sensual pleasures of men, saying that all men had their sins forgiven by himself. For he even permitted women of rank, if they were unmarried and burned with lust, to have a companion of the rank of slave or freedman.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus attacks Callistus for moral laxity; permitting marriages between social classes; forgiving grave sins"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hippolytus-member-roman-church",
+        "clm-hippolytus-in-schism",
+        "clm-hippolytus-teacher-of-novatian",
+        "clm-hippolytus-coworker-pontian",
+        "clm-hippolytus-in-sardinian-exile"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-7": [
+          "clm-callistus-bishop-rome",
+          "clm-callistus-in-schism",
+          "clm-callistus-member-roman-church",
+          "clm-hippolytus-callistus-schism-at-rome",
+          "clm-hippolytus-in-schism",
+          "clm-hippolytus-teacher-of-novatian",
+          "clm-refutation-affirms-rule-of-faith",
+          "clm-refutation-affirms-succession",
+          "clm-refutation-by-hippolytus",
+          "clm-refutation-written-rome",
+          "clm-zephyrinus-in-schism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-7",
+        "PARAPHRASE_OMISSION:psg-hippolytus-ref-9-7:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-hippolytus-in-schism",
+        "subject_type": "person",
+        "subject_id": "hippolytus-of-rome",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "hippolytus-callistus-schism",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "217",
+        "year_end": "235",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "hippolytus-of-rome",
+        "person_label": "Hippolytus of Rome",
+        "name_alt": "Hippolytus",
+        "name_native": "Ἱππόλυτος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; prolific Greek-speaking writer in Rome; opposed the modalism of Zephyrinus and Callistus; set himself up as rival bishop c. 217 (sometimes called the first antipope); exiled with Pontian to Sardinia in 235; reconciled before death; author of the Apostolic Tradition, Refutation of All Heresies, Against Noetus, and Commentary on Daniel."
+      },
+      "object_entity": {
+        "event_id": "hippolytus-callistus-schism",
+        "event_label": "Schism of Hippolytus and Callistus",
+        "event_type": "schism",
+        "event_kind": "simple",
+        "notes": "Hippolytus set himself up as rival bishop of Rome c. 217 after the election of Callistus I, whom he accused of modalism and moral laxity; sometimes called the first antipope; the schism persisted through the pontificates of Urban I and Pontian until reconciliation in Sardinian exile c. 235."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hippolytus-in-schism",
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Refutation 9 details the schism between Hippolytus and the succession of Zephyrinus-Callistus-Urban-Pontian."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.7",
+            "excerpt": "Paraphrase: Callistus, having been appointed over the cemetery by Zephyrinus, brought many into his following. He was the first to invent the device of conniving at the sensual pleasures of men, saying that all men had their sins forgiven by himself. For he even permitted women of rank, if they were unmarried and burned with lust, to have a companion of the rank of slave or freedman.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus attacks Callistus for moral laxity; permitting marriages between social classes; forgiving grave sins"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hippolytus-member-roman-church",
+        "clm-hippolytus-rival-bishop-rome",
+        "clm-hippolytus-teacher-of-novatian",
+        "clm-hippolytus-coworker-pontian",
+        "clm-hippolytus-in-sardinian-exile"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-7": [
+          "clm-callistus-bishop-rome",
+          "clm-callistus-in-schism",
+          "clm-callistus-member-roman-church",
+          "clm-hippolytus-callistus-schism-at-rome",
+          "clm-hippolytus-rival-bishop-rome",
+          "clm-hippolytus-teacher-of-novatian",
+          "clm-refutation-affirms-rule-of-faith",
+          "clm-refutation-affirms-succession",
+          "clm-refutation-by-hippolytus",
+          "clm-refutation-written-rome",
+          "clm-zephyrinus-in-schism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-hippolytus-in-sardinian-exile",
+        "subject_type": "person",
+        "subject_id": "hippolytus-of-rome",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "sardinian-exile",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "235",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "hippolytus-of-rome",
+        "person_label": "Hippolytus of Rome",
+        "name_alt": "Hippolytus",
+        "name_native": "Ἱππόλυτος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; prolific Greek-speaking writer in Rome; opposed the modalism of Zephyrinus and Callistus; set himself up as rival bishop c. 217 (sometimes called the first antipope); exiled with Pontian to Sardinia in 235; reconciled before death; author of the Apostolic Tradition, Refutation of All Heresies, Against Noetus, and Commentary on Daniel."
+      },
+      "object_entity": {
+        "event_id": "sardinian-exile",
+        "event_label": "Sardinian Exile of Hippolytus and Pontian",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Bishop Pontian and the schismatic Hippolytus were both exiled to the mines of Sardinia in 235 under Emperor Maximinus Thrax; they were reconciled before death; their bodies were brought back to Rome by Pope Fabian c. 236."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hippolytus-in-sardinian-exile",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius and the Liberian Catalogue attest the exile of both Hippolytus and Pontian to Sardinia."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hippolytus-member-roman-church",
+        "clm-hippolytus-in-schism",
+        "clm-hippolytus-rival-bishop-rome",
+        "clm-hippolytus-teacher-of-novatian",
+        "clm-hippolytus-coworker-pontian"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-hippolytus-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "hippolytus-of-rome",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "195",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "hippolytus-of-rome",
+        "person_label": "Hippolytus of Rome",
+        "name_alt": "Hippolytus",
+        "name_native": "Ἱππόλυτος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; prolific Greek-speaking writer in Rome; opposed the modalism of Zephyrinus and Callistus; set himself up as rival bishop c. 217 (sometimes called the first antipope); exiled with Pontian to Sardinia in 235; reconciled before death; author of the Apostolic Tradition, Refutation of All Heresies, Against Noetus, and Commentary on Daniel."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hippolytus-member-roman-church",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Hippolytus active as presbyter and writer in the Roman church."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hippolytus-in-schism",
+        "clm-hippolytus-rival-bishop-rome",
+        "clm-hippolytus-teacher-of-novatian",
+        "clm-hippolytus-coworker-pontian",
+        "clm-hippolytus-in-sardinian-exile"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-hippolytus-teacher-of-novatian",
+        "subject_type": "person",
+        "subject_id": "hippolytus-of-rome",
+        "predicate_id": "teacher_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "novatian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "hippolytus-of-rome",
+        "person_label": "Hippolytus of Rome",
+        "name_alt": "Hippolytus",
+        "name_native": "Ἱππόλυτος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; prolific Greek-speaking writer in Rome; opposed the modalism of Zephyrinus and Callistus; set himself up as rival bishop c. 217 (sometimes called the first antipope); exiled with Pontian to Sardinia in 235; reconciled before death; author of the Apostolic Tradition, Refutation of All Heresies, Against Noetus, and Commentary on Daniel."
+      },
+      "object_entity": {
+        "person_id": "novatian",
+        "person_label": "Novatian",
+        "name_alt": "Novatianus",
+        "name_native": "Νοβατιανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 258",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; author of De Trinitate (c. 250), the first systematic Latin treatise on the Trinity; rigorist who opposed the readmission of the lapsed after the Decian persecution; set up a rival church c. 251 against Pope Cornelius; his followers (Novatianists) persisted for centuries."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hippolytus-teacher-of-novatian",
+            "passage_id": "psg-hippolytus-ref-9-11-12",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Hippolytus Ref. 9.11-12 shows the Roman ecclesiastical milieu in which Novatian was formed."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-11-12",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.11-12",
+            "excerpt": "Paraphrase: Callistus alleged that the parable of the tares growing together with the wheat was spoken in reference to the Church: sinners should remain in the Church. He also affirmed that the ark of Noah was a figure of the Church, in which were dogs, hawks, and other unclean animals — so must the Church tolerate sinners.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Callistus defends leniency toward sinners using parables of tares and Noah's ark; penitential controversy"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-hippolytus-teacher-of-novatian",
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.7",
+            "excerpt": "Paraphrase: Callistus, having been appointed over the cemetery by Zephyrinus, brought many into his following. He was the first to invent the device of conniving at the sensual pleasures of men, saying that all men had their sins forgiven by himself. For he even permitted women of rank, if they were unmarried and burned with lust, to have a companion of the rank of slave or freedman.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus attacks Callistus for moral laxity; permitting marriages between social classes; forgiving grave sins"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hippolytus-member-roman-church",
+        "clm-hippolytus-in-schism",
+        "clm-hippolytus-rival-bishop-rome",
+        "clm-hippolytus-coworker-pontian",
+        "clm-hippolytus-in-sardinian-exile"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-11-12": [
+          "clm-callistus-person-affirms-penance",
+          "clm-hippolytus-callistus-schism-year",
+          "clm-refutation-affirms-penance"
+        ],
+        "psg-hippolytus-ref-9-7": [
+          "clm-callistus-bishop-rome",
+          "clm-callistus-in-schism",
+          "clm-callistus-member-roman-church",
+          "clm-hippolytus-callistus-schism-at-rome",
+          "clm-hippolytus-in-schism",
+          "clm-hippolytus-rival-bishop-rome",
+          "clm-refutation-affirms-rule-of-faith",
+          "clm-refutation-affirms-succession",
+          "clm-refutation-by-hippolytus",
+          "clm-refutation-written-rome",
+          "clm-zephyrinus-in-schism"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-hippolytus-coworker-pontian",
+        "subject_type": "person",
+        "subject_id": "hippolytus-of-rome",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "pontian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "230",
+        "year_end": "235",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "hippolytus-of-rome",
+        "person_label": "Hippolytus of Rome",
+        "name_alt": "Hippolytus",
+        "name_native": "Ἱππόλυτος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; prolific Greek-speaking writer in Rome; opposed the modalism of Zephyrinus and Callistus; set himself up as rival bishop c. 217 (sometimes called the first antipope); exiled with Pontian to Sardinia in 235; reconciled before death; author of the Apostolic Tradition, Refutation of All Heresies, Against Noetus, and Commentary on Daniel."
+      },
+      "object_entity": {
+        "person_id": "pontian",
+        "person_label": "Pontian",
+        "name_alt": "Pope Pontian",
+        "name_native": "Ποντιανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 230–235; exiled with Hippolytus to Sardinia under Maximinus Thrax in 235; resigned the papacy before death; bodies of both were brought back to Rome under Fabian."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hippolytus-coworker-pontian",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Both exiled together to Sardinia, indicating interaction during Pontian's pontificate."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hippolytus-member-roman-church",
+        "clm-hippolytus-in-schism",
+        "clm-hippolytus-rival-bishop-rome",
+        "clm-hippolytus-teacher-of-novatian",
+        "clm-hippolytus-in-sardinian-exile"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ca-by-hippolytus",
+        "subject_type": "work",
+        "subject_id": "on-christ-and-antichrist",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "hippolytus-of-rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "on-christ-and-antichrist",
+        "title_display": "On Christ and the Antichrist",
+        "title_original": "Περὶ τοῦ Ἀντιχρίστου",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise c. 200 on eschatology and the Antichrist; one of the earliest surviving complete patristic works on the subject; interprets Daniel and Revelation; affirms bodily resurrection and final judgment; opposes imminent apocalypticism."
+      },
+      "object_entity": {
+        "person_id": "hippolytus-of-rome",
+        "person_label": "Hippolytus of Rome",
+        "name_alt": "Hippolytus",
+        "name_native": "Ἱππόλυτος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; prolific Greek-speaking writer in Rome; opposed the modalism of Zephyrinus and Callistus; set himself up as rival bishop c. 217 (sometimes called the first antipope); exiled with Pontian to Sardinia in 235; reconciled before death; author of the Apostolic Tradition, Refutation of All Heresies, Against Noetus, and Commentary on Daniel."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ca-by-hippolytus",
+            "passage_id": "psg-hippolytus-ca-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "On Christ and the Antichrist is among the most securely attributed works of Hippolytus."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ca-2-3",
+            "source_id": "src-hippolytus-on-christ-antichrist",
+            "locator_type": "source_ref",
+            "locator": "CA 2-3",
+            "excerpt": "Paraphrase: The blessed prophets were eyes to us; they foresaw through faith the mysteries of the Word. They ministered to those generations and to us by speaking of things divine. For they did not speak of their own power, but the Word moved them. The prophets first received from God the gift of prophecy; and then they rightly instructed us about the present, past, and future.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Prophetic inspiration from the Word; hermeneutical introduction to eschatological interpretation"
+          },
+          "source": {
+            "source_id": "src-hippolytus-on-christ-antichrist",
+            "work_id": "on-christ-and-antichrist",
+            "source_kind": "primary_text",
+            "title": "On Christ and the Antichrist",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200",
+            "year_start": "200",
+            "year_end": "200",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0516.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Eschatological treatise on Antichrist; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ca-affirms-incarnation",
+        "clm-ca-affirms-judgment",
+        "clm-ca-affirms-ot-scripture",
+        "clm-ca-affirms-resurrection",
+        "clm-ca-written-rome"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-hippolytus-ca-2-3": [
+          "clm-ca-affirms-incarnation",
+          "clm-ca-affirms-ot-scripture",
+          "clm-ca-written-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ca-2-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ca-written-rome",
+        "subject_type": "work",
+        "subject_id": "on-christ-and-antichrist",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "200",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "on-christ-and-antichrist",
+        "title_display": "On Christ and the Antichrist",
+        "title_original": "Περὶ τοῦ Ἀντιχρίστου",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise c. 200 on eschatology and the Antichrist; one of the earliest surviving complete patristic works on the subject; interprets Daniel and Revelation; affirms bodily resurrection and final judgment; opposes imminent apocalypticism."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ca-written-rome",
+            "passage_id": "psg-hippolytus-ca-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Written in the Roman context based on content and attribution."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ca-2-3",
+            "source_id": "src-hippolytus-on-christ-antichrist",
+            "locator_type": "source_ref",
+            "locator": "CA 2-3",
+            "excerpt": "Paraphrase: The blessed prophets were eyes to us; they foresaw through faith the mysteries of the Word. They ministered to those generations and to us by speaking of things divine. For they did not speak of their own power, but the Word moved them. The prophets first received from God the gift of prophecy; and then they rightly instructed us about the present, past, and future.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Prophetic inspiration from the Word; hermeneutical introduction to eschatological interpretation"
+          },
+          "source": {
+            "source_id": "src-hippolytus-on-christ-antichrist",
+            "work_id": "on-christ-and-antichrist",
+            "source_kind": "primary_text",
+            "title": "On Christ and the Antichrist",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200",
+            "year_start": "200",
+            "year_end": "200",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0516.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Eschatological treatise on Antichrist; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ca-affirms-incarnation",
+        "clm-ca-affirms-judgment",
+        "clm-ca-affirms-ot-scripture",
+        "clm-ca-affirms-resurrection",
+        "clm-ca-by-hippolytus"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-hippolytus-ca-2-3": [
+          "clm-ca-affirms-incarnation",
+          "clm-ca-affirms-ot-scripture",
+          "clm-ca-by-hippolytus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ca-2-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ca-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "on-christ-and-antichrist",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "200",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "on-christ-and-antichrist",
+        "title_display": "On Christ and the Antichrist",
+        "title_original": "Περὶ τοῦ Ἀντιχρίστου",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise c. 200 on eschatology and the Antichrist; one of the earliest surviving complete patristic works on the subject; interprets Daniel and Revelation; affirms bodily resurrection and final judgment; opposes imminent apocalypticism."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ca-affirms-incarnation",
+            "passage_id": "psg-hippolytus-ca-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "CA presupposes the incarnation of the Word in its christological framework."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ca-2-3",
+            "source_id": "src-hippolytus-on-christ-antichrist",
+            "locator_type": "source_ref",
+            "locator": "CA 2-3",
+            "excerpt": "Paraphrase: The blessed prophets were eyes to us; they foresaw through faith the mysteries of the Word. They ministered to those generations and to us by speaking of things divine. For they did not speak of their own power, but the Word moved them. The prophets first received from God the gift of prophecy; and then they rightly instructed us about the present, past, and future.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Prophetic inspiration from the Word; hermeneutical introduction to eschatological interpretation"
+          },
+          "source": {
+            "source_id": "src-hippolytus-on-christ-antichrist",
+            "work_id": "on-christ-and-antichrist",
+            "source_kind": "primary_text",
+            "title": "On Christ and the Antichrist",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200",
+            "year_start": "200",
+            "year_end": "200",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0516.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Eschatological treatise on Antichrist; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ca-affirms-judgment",
+        "clm-ca-affirms-ot-scripture",
+        "clm-ca-affirms-resurrection",
+        "clm-ca-written-rome",
+        "clm-ca-by-hippolytus"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-hippolytus-ca-2-3": [
+          "clm-ca-affirms-ot-scripture",
+          "clm-ca-by-hippolytus",
+          "clm-ca-written-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ca-2-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ca-affirms-judgment",
+        "subject_type": "work",
+        "subject_id": "on-christ-and-antichrist",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "final-judgment-is-coming",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "200",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "on-christ-and-antichrist",
+        "title_display": "On Christ and the Antichrist",
+        "title_original": "Περὶ τοῦ Ἀντιχρίστου",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise c. 200 on eschatology and the Antichrist; one of the earliest surviving complete patristic works on the subject; interprets Daniel and Revelation; affirms bodily resurrection and final judgment; opposes imminent apocalypticism."
+      },
+      "object_entity": {
+        "proposition_id": "final-judgment-is-coming",
+        "topic_id": "final-judgment",
+        "dimension_id": "coming-judgment",
+        "proposition_label": "A final judgment is coming",
+        "polarity_family": "coming_judgment",
+        "description": "Texts or teachers present a climactic future judgment of the wicked and vindication of the righteous.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ca-affirms-judgment",
+            "passage_id": "psg-hippolytus-ca-61-64",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "CA 61-64 describes the final judgment of righteous and wicked."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ca-61-64",
+            "source_id": "src-hippolytus-on-christ-antichrist",
+            "locator_type": "source_ref",
+            "locator": "CA 61-64",
+            "excerpt": "Paraphrase: The Antichrist will arise as a deceiving king from the tribe of Dan; he will rebuild the temple in Jerusalem; he will persecute the saints; but at the coming of Christ, the Antichrist shall be destroyed and the dead shall be raised — both the righteous to eternal life and the wicked to eternal punishment.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Bodily resurrection at the last day; final judgment; eschatological scenario; Antichrist as persecutor"
+          },
+          "source": {
+            "source_id": "src-hippolytus-on-christ-antichrist",
+            "work_id": "on-christ-and-antichrist",
+            "source_kind": "primary_text",
+            "title": "On Christ and the Antichrist",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200",
+            "year_start": "200",
+            "year_end": "200",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0516.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Eschatological treatise on Antichrist; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ca-affirms-incarnation",
+        "clm-ca-affirms-ot-scripture",
+        "clm-ca-affirms-resurrection",
+        "clm-ca-written-rome",
+        "clm-ca-by-hippolytus"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-hippolytus-ca-61-64": [
+          "clm-ca-affirms-resurrection"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ca-61-64"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ca-affirms-ot-scripture",
+        "subject_type": "work",
+        "subject_id": "on-christ-and-antichrist",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "200",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "on-christ-and-antichrist",
+        "title_display": "On Christ and the Antichrist",
+        "title_original": "Περὶ τοῦ Ἀντιχρίστου",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise c. 200 on eschatology and the Antichrist; one of the earliest surviving complete patristic works on the subject; interprets Daniel and Revelation; affirms bodily resurrection and final judgment; opposes imminent apocalypticism."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ca-affirms-ot-scripture",
+            "passage_id": "psg-hippolytus-ca-2-3",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "CA builds its entire eschatological argument on Daniel and other OT prophets."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ca-2-3",
+            "source_id": "src-hippolytus-on-christ-antichrist",
+            "locator_type": "source_ref",
+            "locator": "CA 2-3",
+            "excerpt": "Paraphrase: The blessed prophets were eyes to us; they foresaw through faith the mysteries of the Word. They ministered to those generations and to us by speaking of things divine. For they did not speak of their own power, but the Word moved them. The prophets first received from God the gift of prophecy; and then they rightly instructed us about the present, past, and future.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Prophetic inspiration from the Word; hermeneutical introduction to eschatological interpretation"
+          },
+          "source": {
+            "source_id": "src-hippolytus-on-christ-antichrist",
+            "work_id": "on-christ-and-antichrist",
+            "source_kind": "primary_text",
+            "title": "On Christ and the Antichrist",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200",
+            "year_start": "200",
+            "year_end": "200",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0516.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Eschatological treatise on Antichrist; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ca-affirms-incarnation",
+        "clm-ca-affirms-judgment",
+        "clm-ca-affirms-resurrection",
+        "clm-ca-written-rome",
+        "clm-ca-by-hippolytus"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-hippolytus-ca-2-3": [
+          "clm-ca-affirms-incarnation",
+          "clm-ca-by-hippolytus",
+          "clm-ca-written-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ca-2-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ca-affirms-resurrection",
+        "subject_type": "work",
+        "subject_id": "on-christ-and-antichrist",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "200",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "on-christ-and-antichrist",
+        "title_display": "On Christ and the Antichrist",
+        "title_original": "Περὶ τοῦ Ἀντιχρίστου",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise c. 200 on eschatology and the Antichrist; one of the earliest surviving complete patristic works on the subject; interprets Daniel and Revelation; affirms bodily resurrection and final judgment; opposes imminent apocalypticism."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ca-affirms-resurrection",
+            "passage_id": "psg-hippolytus-ca-61-64",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "CA 61-64 explicitly affirms that the dead shall be raised at Christ's coming."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ca-61-64",
+            "source_id": "src-hippolytus-on-christ-antichrist",
+            "locator_type": "source_ref",
+            "locator": "CA 61-64",
+            "excerpt": "Paraphrase: The Antichrist will arise as a deceiving king from the tribe of Dan; he will rebuild the temple in Jerusalem; he will persecute the saints; but at the coming of Christ, the Antichrist shall be destroyed and the dead shall be raised — both the righteous to eternal life and the wicked to eternal punishment.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Bodily resurrection at the last day; final judgment; eschatological scenario; Antichrist as persecutor"
+          },
+          "source": {
+            "source_id": "src-hippolytus-on-christ-antichrist",
+            "work_id": "on-christ-and-antichrist",
+            "source_kind": "primary_text",
+            "title": "On Christ and the Antichrist",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200",
+            "year_start": "200",
+            "year_end": "200",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0516.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Eschatological treatise on Antichrist; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ca-affirms-incarnation",
+        "clm-ca-affirms-judgment",
+        "clm-ca-affirms-ot-scripture",
+        "clm-ca-written-rome",
+        "clm-ca-by-hippolytus"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-hippolytus-ca-61-64": [
+          "clm-ca-affirms-judgment"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ca-61-64"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-refutation-by-hippolytus",
+        "subject_type": "work",
+        "subject_id": "refutation-of-all-heresies",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "hippolytus-of-rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "refutation-of-all-heresies",
+        "title_display": "Refutation of All Heresies",
+        "title_original": "Φιλοσοφούμενα ἢ κατὰ πασῶν αἱρέσεων ἔλεγχος",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Major heresiological work attributed to Hippolytus c. 222–225 (also known as Philosophoumena); ten books refuting pagan philosophies and Christian heresies; Books 9–10 provide unique information about Roman church disputes under Zephyrinus and Callistus; affirms Logos theology against modalism."
+      },
+      "object_entity": {
+        "person_id": "hippolytus-of-rome",
+        "person_label": "Hippolytus of Rome",
+        "name_alt": "Hippolytus",
+        "name_native": "Ἱππόλυτος",
+        "birth_year_display": "c. 170",
+        "death_year_display": "c. 235",
+        "person_kind": "individual",
+        "notes": "Roman presbyter and theologian; prolific Greek-speaking writer in Rome; opposed the modalism of Zephyrinus and Callistus; set himself up as rival bishop c. 217 (sometimes called the first antipope); exiled with Pontian to Sardinia in 235; reconciled before death; author of the Apostolic Tradition, Refutation of All Heresies, Against Noetus, and Commentary on Daniel."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-refutation-by-hippolytus",
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "evidence_role": "supports",
+            "support_aspect": "attribution",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "The Refutation's detailed account of Roman bishops implies an author within the Roman community."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.7",
+            "excerpt": "Paraphrase: Callistus, having been appointed over the cemetery by Zephyrinus, brought many into his following. He was the first to invent the device of conniving at the sensual pleasures of men, saying that all men had their sins forgiven by himself. For he even permitted women of rank, if they were unmarried and burned with lust, to have a companion of the rank of slave or freedman.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus attacks Callistus for moral laxity; permitting marriages between social classes; forgiving grave sins"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-refutation-affirms-logos",
+        "clm-refutation-affirms-penance",
+        "clm-refutation-affirms-rule-of-faith",
+        "clm-refutation-affirms-succession",
+        "clm-refutation-written-rome"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-7": [
+          "clm-callistus-bishop-rome",
+          "clm-callistus-in-schism",
+          "clm-callistus-member-roman-church",
+          "clm-hippolytus-callistus-schism-at-rome",
+          "clm-hippolytus-in-schism",
+          "clm-hippolytus-rival-bishop-rome",
+          "clm-hippolytus-teacher-of-novatian",
+          "clm-refutation-affirms-rule-of-faith",
+          "clm-refutation-affirms-succession",
+          "clm-refutation-written-rome",
+          "clm-zephyrinus-in-schism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-refutation-written-rome",
+        "subject_type": "work",
+        "subject_id": "refutation-of-all-heresies",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "222",
+        "year_end": "225",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "refutation-of-all-heresies",
+        "title_display": "Refutation of All Heresies",
+        "title_original": "Φιλοσοφούμενα ἢ κατὰ πασῶν αἱρέσεων ἔλεγχος",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Major heresiological work attributed to Hippolytus c. 222–225 (also known as Philosophoumena); ten books refuting pagan philosophies and Christian heresies; Books 9–10 provide unique information about Roman church disputes under Zephyrinus and Callistus; affirms Logos theology against modalism."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-refutation-written-rome",
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Detailed knowledge of Roman episcopal affairs places the work in Rome."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.7",
+            "excerpt": "Paraphrase: Callistus, having been appointed over the cemetery by Zephyrinus, brought many into his following. He was the first to invent the device of conniving at the sensual pleasures of men, saying that all men had their sins forgiven by himself. For he even permitted women of rank, if they were unmarried and burned with lust, to have a companion of the rank of slave or freedman.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus attacks Callistus for moral laxity; permitting marriages between social classes; forgiving grave sins"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-refutation-affirms-logos",
+        "clm-refutation-affirms-penance",
+        "clm-refutation-affirms-rule-of-faith",
+        "clm-refutation-affirms-succession",
+        "clm-refutation-by-hippolytus"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-7": [
+          "clm-callistus-bishop-rome",
+          "clm-callistus-in-schism",
+          "clm-callistus-member-roman-church",
+          "clm-hippolytus-callistus-schism-at-rome",
+          "clm-hippolytus-in-schism",
+          "clm-hippolytus-rival-bishop-rome",
+          "clm-hippolytus-teacher-of-novatian",
+          "clm-refutation-affirms-rule-of-faith",
+          "clm-refutation-affirms-succession",
+          "clm-refutation-by-hippolytus",
+          "clm-zephyrinus-in-schism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-refutation-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "refutation-of-all-heresies",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "222",
+        "year_end": "225",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "refutation-of-all-heresies",
+        "title_display": "Refutation of All Heresies",
+        "title_original": "Φιλοσοφούμενα ἢ κατὰ πασῶν αἱρέσεων ἔλεγχος",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Major heresiological work attributed to Hippolytus c. 222–225 (also known as Philosophoumena); ten books refuting pagan philosophies and Christian heresies; Books 9–10 provide unique information about Roman church disputes under Zephyrinus and Callistus; affirms Logos theology against modalism."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-refutation-affirms-logos",
+            "passage_id": "psg-hippolytus-ref-9-12-zeph",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Hippolytus defends Logos theology against the modalism of Zephyrinus and Callistus."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-12-zeph",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.12",
+            "excerpt": "Paraphrase: Zephyrinus was an ignorant and illiterate individual, and one unskilled in the definitions of the Church. Callistus, who was crafty in dealing with evil, and versed in knavery, urged Zephyrinus on, and taught him that the Father and Son are the same. This is the way the wretched man Zephyrinus was beguiled.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus accuses Zephyrinus of modalism under Callistus's influence; polemical context"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-refutation-affirms-penance",
+        "clm-refutation-affirms-rule-of-faith",
+        "clm-refutation-affirms-succession",
+        "clm-refutation-written-rome",
+        "clm-refutation-by-hippolytus"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-12-zeph": [
+          "clm-zephyrinus-bishop-rome",
+          "clm-zephyrinus-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-12-zeph"
+      ]
+    }
+  ]
+}

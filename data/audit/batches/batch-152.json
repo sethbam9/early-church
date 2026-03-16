@@ -1,0 +1,2182 @@
+{
+  "batch_id": "batch-152",
+  "queue": "1",
+  "focus": "gospel-of-luke; gospel-of-matthew; nicolaitans; gospel-of-john; clement-of-rome; marcion-antitheses; tatian-the-assyrian",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-luke-repentance",
+        "subject_type": "work",
+        "subject_id": "gospel-of-luke",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "repentance-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "85",
+        "year_end": "85",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-luke",
+        "title_display": "Gospel according to Luke",
+        "title_original": "Κατὰ Λουκᾶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Textual witness for ministry-period claims."
+      },
+      "object_entity": {
+        "proposition_id": "repentance-is-required",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "repentant-response",
+        "proposition_label": "Repentance is required in response to the proclamation",
+        "polarity_family": "repentance_response",
+        "description": "The proclamation of the kingdom calls hearers to repentance.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-luke-repentance",
+            "passage_id": "psg-luke-24-46-47",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-luke-24-46-47",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.24.46-47",
+            "excerpt": "Paraphrase: The risen Christ says repentance and forgiveness are to be proclaimed in his name.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gospel-luke-by-luke",
+        "clm-luke-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-luke-24-46-47": [
+          "clm-acts-repentance"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-luke-24-46-47"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-luke-resurrection",
+        "subject_type": "work",
+        "subject_id": "gospel-of-luke",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-proclaimed-as-raised",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "85",
+        "year_end": "85",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:45:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-luke",
+        "title_display": "Gospel according to Luke",
+        "title_original": "Κατὰ Λουκᾶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Textual witness for ministry-period claims."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-proclaimed-as-raised",
+        "topic_id": "resurrection-proclamation",
+        "dimension_id": "jesus-resurrection",
+        "proposition_label": "Jesus is proclaimed as raised",
+        "polarity_family": "resurrection_proclamation",
+        "description": "The apostolic proclamation announces that Jesus has been raised from the dead.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-luke-resurrection",
+            "passage_id": "psg-luke-24-5-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-luke-24-5-7",
+            "source_id": "src-luke",
+            "locator_type": "bible_osis",
+            "locator": "Luke.24.5-7",
+            "excerpt": "Paraphrase: The messengers remind the women that the Son of Man must be crucified and on the third day rise.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-luke",
+            "work_id": "gospel-of-luke",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Luke",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Luke",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gospel-luke-by-luke",
+        "clm-luke-repentance"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-luke-24-5-7": [
+          "clm-place-emmaus-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-luke-24-5-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gospel-matt-by-matthew",
+        "subject_type": "work",
+        "subject_id": "gospel-of-matthew",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "matthew-the-apostle",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "65",
+        "year_end": "90",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T09:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-matthew",
+        "title_display": "Gospel according to Matthew",
+        "title_original": "Κατὰ Ματθαῖον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Textual witness for ministry-period claims."
+      },
+      "object_entity": {
+        "person_id": "matthew-the-apostle",
+        "person_label": "Matthew",
+        "name_alt": "Levi",
+        "name_native": "Ματθαῖος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve in Gospel and Acts lists."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gospel-matt-by-matthew",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Traditional attribution to Matthew the tax collector/apostle (Papias apud Eusebius HE 3.39.16; Irenaeus AH 3.1.1). Scholarly majority regards as pseudonymous."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-matthew-repentance",
+        "clm-matthew-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-john-by-john",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-matthew-repentance",
+        "subject_type": "work",
+        "subject_id": "gospel-of-matthew",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "repentance-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "80",
+        "year_end": "80",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-matthew",
+        "title_display": "Gospel according to Matthew",
+        "title_original": "Κατὰ Ματθαῖον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Textual witness for ministry-period claims."
+      },
+      "object_entity": {
+        "proposition_id": "repentance-is-required",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "repentant-response",
+        "proposition_label": "Repentance is required in response to the proclamation",
+        "polarity_family": "repentance_response",
+        "description": "The proclamation of the kingdom calls hearers to repentance.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-matthew-repentance",
+            "passage_id": "psg-matt-4-17",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-matt-4-17",
+            "source_id": "src-matthew",
+            "locator_type": "bible_osis",
+            "locator": "Matt.4.17",
+            "excerpt": "Paraphrase: Jesus begins proclaiming, Repent, for the kingdom of heaven has drawn near.",
+            "language": "English",
+            "passage_year": "28",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-matthew",
+            "work_id": "gospel-of-matthew",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Matthew",
+            "author": "Traditionally Matthew",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Matthew",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gospel-matt-by-matthew",
+        "clm-matthew-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-matt-4-17"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-matthew-resurrection",
+        "subject_type": "work",
+        "subject_id": "gospel-of-matthew",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-proclaimed-as-raised",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "80",
+        "year_end": "80",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:45:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-matthew",
+        "title_display": "Gospel according to Matthew",
+        "title_original": "Κατὰ Ματθαῖον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Textual witness for ministry-period claims."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-proclaimed-as-raised",
+        "topic_id": "resurrection-proclamation",
+        "dimension_id": "jesus-resurrection",
+        "proposition_label": "Jesus is proclaimed as raised",
+        "polarity_family": "resurrection_proclamation",
+        "description": "The apostolic proclamation announces that Jesus has been raised from the dead.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-matthew-resurrection",
+            "passage_id": "psg-matt-28-19-20",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Matt 28:19-20 records post-resurrection appearance and Great Commission — resurrection affirmation."
+          },
+          "passage": {
+            "passage_id": "psg-matt-28-19-20",
+            "source_id": "src-matthew",
+            "locator_type": "bible_osis",
+            "locator": "Matt.28.19-20",
+            "excerpt": "Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-matthew",
+            "work_id": "gospel-of-matthew",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Matthew",
+            "author": "Traditionally Matthew",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Matthew",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-matthew-resurrection",
+            "passage_id": "psg-matt-28-5-7",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-matt-28-5-7",
+            "source_id": "src-matthew",
+            "locator_type": "bible_osis",
+            "locator": "Matt.28.5-7",
+            "excerpt": "Paraphrase: The angel tells the women that Jesus has been raised from the dead and will go before the disciples into Galilee.",
+            "language": "English",
+            "passage_year": "80",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-matthew",
+            "work_id": "gospel-of-matthew",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Matthew",
+            "author": "Traditionally Matthew",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Matthew",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gospel-matt-by-matthew",
+        "clm-matthew-repentance"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-matt-28-5-7"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-nicolaitans-ephesus",
+        "subject_type": "group",
+        "subject_id": "nicolaitans",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "120",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "nicolaitans",
+        "group_label": "Nicolaitans",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Early Christian sect or faction named in Revelation and opposed in the messages to Ephesus and Pergamum."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-nicolaitans-ephesus",
+            "passage_id": "psg-rev-2-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Revelation condemns the Nicolaitans' works in Ephesus, which supports probable group presence without implying a formal census."
+          },
+          "passage": {
+            "passage_id": "psg-rev-2-6",
+            "source_id": "src-revelation",
+            "locator_type": "bible_osis",
+            "locator": "Rev.2.6",
+            "excerpt": "Paraphrase: The Ephesian church is commended for hating the works of the Nicolaitans, which Christ also hates.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-revelation",
+            "work_id": "revelation-of-john",
+            "source_kind": "primary_text",
+            "title": "Revelation of John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 95",
+            "year_start": "95",
+            "year_end": "95",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Revelation",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late first-century apocalyptic witness associated with Patmos."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nicolaitans-schismed-from-ephesian",
+        "clm-group-nicolaitans-pergamum"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-rev-2-6": [
+          "clm-nicolaitans-schismed-from-ephesian"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rev-2-6",
+        "PARAPHRASE_OMISSION:psg-rev-2-6:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-group-nicolaitans-pergamum",
+        "subject_type": "group",
+        "subject_id": "nicolaitans",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "pergamum",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "120",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T17:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "nicolaitans",
+        "group_label": "Nicolaitans",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Early Christian sect or faction named in Revelation and opposed in the messages to Ephesus and Pergamum."
+      },
+      "object_entity": {
+        "place_id": "pergamum",
+        "place_label": "Pergamum",
+        "place_label_modern": "Bergama",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "39.1190",
+        "lon": "27.1834",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "City of one of the churches addressed in Revelation."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-nicolaitans-pergamum",
+            "passage_id": "psg-rev-2-15",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Revelation says some in Pergamum hold the teaching of the Nicolaitans, supporting probable group presence in the city."
+          },
+          "passage": {
+            "passage_id": "psg-rev-2-15",
+            "source_id": "src-revelation",
+            "locator_type": "bible_osis",
+            "locator": "Rev.2.15",
+            "excerpt": "Paraphrase: In Pergamum some hold the teaching of the Nicolaitans.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-revelation",
+            "work_id": "revelation-of-john",
+            "source_kind": "primary_text",
+            "title": "Revelation of John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 95",
+            "year_start": "95",
+            "year_end": "95",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Revelation",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late first-century apocalyptic witness associated with Patmos."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nicolaitans-schismed-from-ephesian",
+        "clm-group-nicolaitans-ephesus"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-rev-2-15"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nicolaitans-schismed-from-ephesian",
+        "subject_type": "group",
+        "subject_id": "nicolaitans",
+        "predicate_id": "group_schismed_from",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "ephesian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "100",
+        "context_place_id": "ephesus",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "nicolaitans",
+        "group_label": "Nicolaitans",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Early Christian sect or faction named in Revelation and opposed in the messages to Ephesus and Pergamum."
+      },
+      "object_entity": {
+        "group_id": "ephesian-church",
+        "group_label": "Church in Ephesus",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Ephesus attested in Acts and Revelation."
+      },
+      "context_place": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nicolaitans-schismed-from-ephesian",
+            "passage_id": "psg-rev-2-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Rev 2:6 names the Nicolaitans at Ephesus."
+          },
+          "passage": {
+            "passage_id": "psg-rev-2-6",
+            "source_id": "src-revelation",
+            "locator_type": "bible_osis",
+            "locator": "Rev.2.6",
+            "excerpt": "Paraphrase: The Ephesian church is commended for hating the works of the Nicolaitans, which Christ also hates.",
+            "language": "English",
+            "passage_year": "95",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-revelation",
+            "work_id": "revelation-of-john",
+            "source_kind": "primary_text",
+            "title": "Revelation of John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 95",
+            "year_start": "95",
+            "year_end": "95",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Revelation",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late first-century apocalyptic witness associated with Patmos."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-group-nicolaitans-ephesus",
+        "clm-group-nicolaitans-pergamum"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-rev-2-6": [
+          "clm-group-nicolaitans-ephesus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-rev-2-6"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gospel-john-by-john",
+        "subject_type": "work",
+        "subject_id": "gospel-of-john",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "john-son-of-zebedee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "85",
+        "year_end": "100",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T09:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-john",
+        "title_display": "Gospel according to John",
+        "title_original": "Κατὰ Ἰωάννην",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Textual witness for ministry-period claims."
+      },
+      "object_entity": {
+        "person_id": "john-son-of-zebedee",
+        "person_label": "John son of Zebedee",
+        "name_alt": "John the Apostle",
+        "name_native": "Ἰωάννης",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "One of the first called disciples."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gospel-john-by-john",
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Irenaeus AH 3.1.1: John the disciple published his Gospel at Ephesus. The identification of the Beloved Disciple with John son of Zebedee is traditional but debated."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-1-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.1.1",
+            "excerpt": "Paraphrase: We learned the plan of salvation from those through whom the Gospel came to us. Matthew issued a written Gospel among the Hebrews while Peter and Paul were preaching at Rome. Mark, the disciple and interpreter of Peter, handed down what Peter had preached. Luke, Paul's companion, recorded his Gospel. Afterwards John, who leaned on the Lord's breast, published his Gospel during his residence at Ephesus.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gospel-john-christ",
+        "clm-john-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-1-1": [
+          "clm-1corinthians-by-paul",
+          "clm-1john-by-john",
+          "clm-1peter-by-peter",
+          "clm-1thess-by-paul",
+          "clm-1timothy-by-paul",
+          "clm-2corinthians-by-paul",
+          "clm-2john-by-john",
+          "clm-2peter-by-peter",
+          "clm-2thessalonians-by-paul",
+          "clm-2timothy-by-paul",
+          "clm-acts-by-luke",
+          "clm-barnabas-ep-by-barnabas",
+          "clm-colossians-by-paul",
+          "clm-galatians-by-paul",
+          "clm-gospel-luke-by-luke",
+          "clm-gospel-mark-by-mark",
+          "clm-gospel-matt-by-matthew",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-james-by-james",
+          "clm-martyrdom-polycarp-by-smyrna",
+          "clm-philippians-by-paul",
+          "clm-revelation-by-john",
+          "clm-romans-by-paul",
+          "clm-titus-by-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-1-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-gospel-john-christ",
+        "subject_type": "work",
+        "subject_id": "gospel-of-john",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-the-christ",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "90",
+        "year_end": "90",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-john",
+        "title_display": "Gospel according to John",
+        "title_original": "Κατὰ Ἰωάννην",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Textual witness for ministry-period claims."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-the-christ",
+        "topic_id": "messianic-identity",
+        "dimension_id": "jesus-as-messiah",
+        "proposition_label": "Jesus is the Christ",
+        "polarity_family": "jesus_as_messiah",
+        "description": "Texts or teachers explicitly identify Jesus as the Christ or Messiah.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-gospel-john-christ",
+            "passage_id": "psg-john-20-31",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-20-31",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.20.31",
+            "excerpt": "Paraphrase: These things are written so that you may believe Jesus is the Christ, the Son of God.",
+            "language": "English",
+            "passage_year": "90",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gospel-john-by-john",
+        "clm-john-resurrection"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-john-20-31": [
+          "clm-1john-affirms-logos",
+          "clm-john-person-affirms-logos"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-20-31"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-john-resurrection",
+        "subject_type": "work",
+        "subject_id": "gospel-of-john",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-proclaimed-as-raised",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "90",
+        "year_end": "90",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:45:00Z"
+      },
+      "subject_entity": {
+        "work_id": "gospel-of-john",
+        "title_display": "Gospel according to John",
+        "title_original": "Κατὰ Ἰωάννην",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Textual witness for ministry-period claims."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-proclaimed-as-raised",
+        "topic_id": "resurrection-proclamation",
+        "dimension_id": "jesus-resurrection",
+        "proposition_label": "Jesus is proclaimed as raised",
+        "polarity_family": "resurrection_proclamation",
+        "description": "The apostolic proclamation announces that Jesus has been raised from the dead.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-john-resurrection",
+            "passage_id": "psg-john-20-1-18",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-20-1-18",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.20.1-18",
+            "excerpt": "Paraphrase: Mary Magdalene comes to the tomb and encounters the risen Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-gospel-john-by-john",
+        "clm-gospel-john-christ"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-john-20-1-18": [
+          "clm-jesus-in-resurrection",
+          "clm-mary-magdalene-active-jerusalem",
+          "clm-mary-magdalene-in-resurrection",
+          "clm-resurrection-at-jerusalem",
+          "clm-resurrection-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-20-1-18"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-clement-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "clement-of-rome",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "90",
+        "year_end": "99",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "clement-of-rome",
+        "person_label": "Clement of Rome",
+        "name_alt": "Clement",
+        "name_native": "Κλήμης",
+        "birth_year_display": "c. 35",
+        "death_year_display": "c. 99",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome associated with the First Epistle of Clement c. 95-96; key early witness to Roman church order and apostolic memory."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-clement-bishop-rome",
+            "passage_id": "psg-1clement-addressed-corinth",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-1clement-addressed-corinth",
+            "source_id": "src-1clement",
+            "locator_type": "source_ref",
+            "locator": "1 Clem. salutation",
+            "excerpt": "The church of God which sojourns at Rome, to the church of God sojourning at Corinth.",
+            "language": "English",
+            "passage_year": "96",
+            "url_override": "",
+            "notes": "Explicit Rome-to-Corinth address establishing both communities"
+          },
+          "source": {
+            "source_id": "src-1clement",
+            "work_id": "first-epistle-of-clement",
+            "source_kind": "primary_text",
+            "title": "First Epistle of Clement",
+            "author": "Clement of Rome",
+            "editor": "",
+            "year_display": "c. 95-96",
+            "year_start": "95",
+            "year_end": "96",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/text/1clement-roberts.html",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Early Roman Christian witness frequently used for late first-century apostolic memory."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-clement-member-roman-church",
+        "clm-clement-in-domitian-persecution"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-1clement-addressed-corinth": [
+          "clm-1clement-addressed-corinth",
+          "clm-1clement-by-clement",
+          "clm-1clement-written-rome",
+          "clm-clement-member-roman-church"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-clement-in-domitian-persecution",
+        "subject_type": "person",
+        "subject_id": "clement-of-rome",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "domitian-persecution",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "95",
+        "year_end": "96",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "clement-of-rome",
+        "person_label": "Clement of Rome",
+        "name_alt": "Clement",
+        "name_native": "Κλήμης",
+        "birth_year_display": "c. 35",
+        "death_year_display": "c. 99",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome associated with the First Epistle of Clement c. 95-96; key early witness to Roman church order and apostolic memory."
+      },
+      "object_entity": {
+        "event_id": "domitian-persecution",
+        "event_label": "Persecution under Domitian",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Imperial persecution of Christians and Jews under Emperor Domitian c. 95-96 CE; traditional context for Revelation and John's exile to Patmos; 1 Clement likely written in this setting."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-clement-in-domitian-persecution",
+            "passage_id": "psg-eusebius-he-3-39",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-39",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 3.39.1-4",
+            "excerpt": "Paraphrase: Eusebius introduces Papias as bishop of Hierapolis and author of five books of Dominical Oracles; he quotes Papias saying he preferred the living oral voice to what was in books, and that he inquired after what Andrew, Peter, Philip, Thomas, James, John, and Matthew said.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius locates Papias at Hierapolis and confirms his method of collecting oral tradition from those who knew the apostles"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-clement-bishop-rome",
+        "clm-clement-member-roman-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-3-39": [
+          "clm-domitian-persecution-at-rome",
+          "clm-papias-bishop-hierapolis",
+          "clm-papias-coworker-polycarp"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-3-39",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-39:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-clement-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "clement-of-rome",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "90",
+        "year_end": "99",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T22:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "clement-of-rome",
+        "person_label": "Clement of Rome",
+        "name_alt": "Clement",
+        "name_native": "Κλήμης",
+        "birth_year_display": "c. 35",
+        "death_year_display": "c. 99",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome associated with the First Epistle of Clement c. 95-96; key early witness to Roman church order and apostolic memory."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-clement-member-roman-church",
+            "passage_id": "psg-1clement-addressed-corinth",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Church of God sojourning at Rome"
+          },
+          "passage": {
+            "passage_id": "psg-1clement-addressed-corinth",
+            "source_id": "src-1clement",
+            "locator_type": "source_ref",
+            "locator": "1 Clem. salutation",
+            "excerpt": "The church of God which sojourns at Rome, to the church of God sojourning at Corinth.",
+            "language": "English",
+            "passage_year": "96",
+            "url_override": "",
+            "notes": "Explicit Rome-to-Corinth address establishing both communities"
+          },
+          "source": {
+            "source_id": "src-1clement",
+            "work_id": "first-epistle-of-clement",
+            "source_kind": "primary_text",
+            "title": "First Epistle of Clement",
+            "author": "Clement of Rome",
+            "editor": "",
+            "year_display": "c. 95-96",
+            "year_start": "95",
+            "year_end": "96",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.earlychristianwritings.com/text/1clement-roberts.html",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Early Roman Christian witness frequently used for late first-century apostolic memory."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-clement-bishop-rome",
+        "clm-clement-in-domitian-persecution"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-1clement-addressed-corinth": [
+          "clm-1clement-addressed-corinth",
+          "clm-1clement-by-clement",
+          "clm-1clement-written-rome",
+          "clm-clement-bishop-rome"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcion-antitheses-by-marcion",
+        "subject_type": "work",
+        "subject_id": "marcion-antitheses",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "marcion-of-sinope",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "140",
+        "year_end": "144",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign5c-final",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "work_id": "marcion-antitheses",
+        "title_display": "Antitheses",
+        "title_original": "Ἀντιθέσεις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Lost work by Marcion of Sinope, c. 140–144 AD. A systematic presentation of contradictions between the God of the Old Testament (just, wrathful) and the God revealed by Jesus (good, merciful). Foundational document of Marcionite theology. Known through refutations by Irenaeus (AH 1.27) and Tertullian (Against Marcion)."
+      },
+      "object_entity": {
+        "person_id": "marcion-of-sinope",
+        "person_label": "Marcion of Sinope",
+        "name_alt": "Marcion",
+        "name_native": "Μαρκίων",
+        "birth_year_display": "c. 85",
+        "death_year_display": "c. 160",
+        "person_kind": "individual",
+        "notes": "Wealthy shipowner from Sinope in Pontus; came to Rome c. 140; rejected the OT and constructed a reduced canon; excommunicated from the Roman church c. 144; major polemical target of Justin, Irenaeus, and Tertullian."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcion-antitheses-by-marcion",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Irenaeus describes Marcion composing his Antitheses to contrast the two gods."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcion-antitheses-opposes-ot-scripture",
+        "clm-marcion-antitheses-written-rome"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcion-antitheses-written-rome",
+        "subject_type": "work",
+        "subject_id": "marcion-antitheses",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "140",
+        "year_end": "144",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "campaign5c-final",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "work_id": "marcion-antitheses",
+        "title_display": "Antitheses",
+        "title_original": "Ἀντιθέσεις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Lost work by Marcion of Sinope, c. 140–144 AD. A systematic presentation of contradictions between the God of the Old Testament (just, wrathful) and the God revealed by Jesus (good, merciful). Foundational document of Marcionite theology. Known through refutations by Irenaeus (AH 1.27) and Tertullian (Against Marcion)."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcion-antitheses-written-rome",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Marcion composed his system in Rome after arriving there c. 140."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcion-antitheses-by-marcion",
+        "clm-marcion-antitheses-opposes-ot-scripture"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-opposes-ot-scripture",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-marcion-antitheses-opposes-ot-scripture",
+        "subject_type": "work",
+        "subject_id": "marcion-antitheses",
+        "predicate_id": "work_opposes_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "140",
+        "year_end": "144",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign5c-final",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "work_id": "marcion-antitheses",
+        "title_display": "Antitheses",
+        "title_original": "Ἀντιθέσεις",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Lost work by Marcion of Sinope, c. 140–144 AD. A systematic presentation of contradictions between the God of the Old Testament (just, wrathful) and the God revealed by Jesus (good, merciful). Foundational document of Marcionite theology. Known through refutations by Irenaeus (AH 1.27) and Tertullian (Against Marcion)."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-marcion-antitheses-opposes-ot-scripture",
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "The entire Antitheses project contrasts the evil OT God with the good NT God — OT authority denied."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-27-1-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.27.1–2",
+            "excerpt": "Marcion of Pontus succeeded [Cerdo] and developed his doctrine, blaspheming with shameless effrontery Him proclaimed as God by the law and the prophets, declaring Him the author of evils, taking delight in war, infirm of purpose, and contrary to Himself. But Jesus, derived from that father above the God who made the world, came into Judaea in the times of Pontius Pilate, was manifested in the form of a man — abolishing the prophets and the law — but not truly taking flesh. He also mutilated the Gospel according to Luke, removing all that is written respecting the generation of the Lord.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-marcion-antitheses-by-marcion",
+        "clm-marcion-antitheses-written-rome"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-27-1-2": [
+          "clm-marcion-active-pontus",
+          "clm-marcion-antitheses-by-marcion",
+          "clm-marcion-antitheses-written-rome",
+          "clm-marcion-gospel-by-marcion",
+          "clm-marcion-gospel-opposes-incarnation",
+          "clm-marcion-opposes-apostolic-succession",
+          "clm-marcion-opposes-passion",
+          "clm-marcion-opposes-resurrection",
+          "clm-marcion-opposes-rule-of-faith",
+          "clm-marcion-opposes-virgin-birth",
+          "clm-marcionites-at-alexandria",
+          "clm-marcionites-at-antioch",
+          "clm-marcionites-at-ephesus",
+          "clm-marcionites-at-galatia",
+          "clm-marcionites-schismed-from-roman",
+          "clm-place-sinope-attested"
+        ]
+      },
+      "flags": [
+        "INDIRECT_TESTIMONIUM:psg-irenaeus-ah-1-27-1-2:against-heresies"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-tatian-affirms-encratism",
+        "subject_type": "person",
+        "subject_id": "tatian-the-assyrian",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "encratism-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "165",
+        "year_end": "180",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tatian-the-assyrian",
+        "person_label": "Tatian the Assyrian",
+        "name_alt": "Tatian",
+        "name_native": "Τατιανός",
+        "birth_year_display": "c. 120",
+        "death_year_display": "c. 180",
+        "person_kind": "individual",
+        "notes": "Student of Justin Martyr in Rome; wrote the Oration to the Greeks c. 155-165 and compiled the Diatessaron (harmony of four Gospels); later became an encratite ascetic and returned to the East."
+      },
+      "object_entity": {
+        "proposition_id": "encratism-is-required",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "encratism",
+        "proposition_label": "Radical continence is required of all Christians",
+        "polarity_family": "encratism",
+        "description": "Sexual continence, abstinence from meat, and/or abstinence from wine are required — not merely counseled — for all Christians; associated with Tatian, the Acts of Thomas, and some early Syriac communities.",
+        "notes": "Encratism"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tatian-affirms-encratism",
+            "passage_id": "psg-eusebius-he-4-30",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Eusebius HE 4.30 explicitly reports Tatian's encratite teaching and its spread."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-4-30",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 4.30",
+            "excerpt": "Paraphrase: Eusebius reports that Bardaisan of Edessa was at first a follower of Valentinus but later turned against the Valentinian heresy; he composed many dialogues in Syriac and Greek against the Marcionites and other heretics; despite his eloquent defense of the faith, he did not wholly purge himself of the old heresy.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Bardaisan of Edessa"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-tatian-affirms-encratism",
+            "passage_id": "psg-tatian-oration-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Tatian Oration 6 directly expresses his encratite theology regarding matter and abstinence."
+          },
+          "passage": {
+            "passage_id": "psg-tatian-oration-6",
+            "source_id": "src-oration-to-greeks",
+            "locator_type": "source_ref",
+            "locator": "Oration 6",
+            "excerpt": "God is a Spirit, not pervading matter, but the maker of material spirits and of the forms that are in matter; he is invisible, impalpable, being himself the Father of both sensible and invisible things. Him do we know from his creation, and apprehend his invisible power by his works.",
+            "language": "English",
+            "passage_year": "160",
+            "url_override": "",
+            "notes": "God as Spirit beyond matter; Logos theology background; Creator God affirmed"
+          },
+          "source": {
+            "source_id": "src-oration-to-greeks",
+            "work_id": "oration-to-the-greeks",
+            "source_kind": "primary_text",
+            "title": "Oration to the Greeks",
+            "author": "Tatian the Assyrian",
+            "editor": "",
+            "year_display": "c. 155-165",
+            "year_start": "155",
+            "year_end": "165",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0202.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Tatian's polemic against Greco-Roman religion defending resurrection and Logos theology."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tatian-active-rome",
+        "clm-tatian-member-roman-church",
+        "clm-tatian-active-antioch",
+        "clm-tatian-affirms-gospel-harmony",
+        "clm-tatian-active-edessa"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-eusebius-he-4-30": [
+          "clm-bardaisan-active-armenia",
+          "clm-bardaisan-active-edessa",
+          "clm-bardaisan-affirms-incarnation",
+          "clm-bardaisan-in-conversion",
+          "clm-bardaisan-member-edessa-church",
+          "clm-bardesanites-schismed-from-edessa",
+          "clm-tatian-active-edessa",
+          "clm-tatian-affirms-gospel-harmony"
+        ],
+        "psg-tatian-oration-6": [
+          "clm-oration-greeks-affirms-logos",
+          "clm-oration-greeks-written-rome",
+          "clm-tatian-active-antioch"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-4-30"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-tatian-active-antioch",
+        "subject_type": "person",
+        "subject_id": "tatian-the-assyrian",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "165",
+        "year_end": "180",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tatian-the-assyrian",
+        "person_label": "Tatian the Assyrian",
+        "name_alt": "Tatian",
+        "name_native": "Τατιανός",
+        "birth_year_display": "c. 120",
+        "death_year_display": "c. 180",
+        "person_kind": "individual",
+        "notes": "Student of Justin Martyr in Rome; wrote the Oration to the Greeks c. 155-165 and compiled the Diatessaron (harmony of four Gospels); later became an encratite ascetic and returned to the East."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tatian-active-antioch",
+            "passage_id": "psg-tatian-oration-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tatian-oration-6",
+            "source_id": "src-oration-to-greeks",
+            "locator_type": "source_ref",
+            "locator": "Oration 6",
+            "excerpt": "God is a Spirit, not pervading matter, but the maker of material spirits and of the forms that are in matter; he is invisible, impalpable, being himself the Father of both sensible and invisible things. Him do we know from his creation, and apprehend his invisible power by his works.",
+            "language": "English",
+            "passage_year": "160",
+            "url_override": "",
+            "notes": "God as Spirit beyond matter; Logos theology background; Creator God affirmed"
+          },
+          "source": {
+            "source_id": "src-oration-to-greeks",
+            "work_id": "oration-to-the-greeks",
+            "source_kind": "primary_text",
+            "title": "Oration to the Greeks",
+            "author": "Tatian the Assyrian",
+            "editor": "",
+            "year_display": "c. 155-165",
+            "year_start": "155",
+            "year_end": "165",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0202.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Tatian's polemic against Greco-Roman religion defending resurrection and Logos theology."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tatian-active-rome",
+        "clm-tatian-member-roman-church",
+        "clm-tatian-affirms-encratism",
+        "clm-tatian-affirms-gospel-harmony",
+        "clm-tatian-active-edessa"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-tatian-oration-6": [
+          "clm-oration-greeks-affirms-logos",
+          "clm-oration-greeks-written-rome",
+          "clm-tatian-affirms-encratism"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-tatian-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "tatian-the-assyrian",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "150",
+        "year_end": "165",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "tatian-the-assyrian",
+        "person_label": "Tatian the Assyrian",
+        "name_alt": "Tatian",
+        "name_native": "Τατιανός",
+        "birth_year_display": "c. 120",
+        "death_year_display": "c. 180",
+        "person_kind": "individual",
+        "notes": "Student of Justin Martyr in Rome; wrote the Oration to the Greeks c. 155-165 and compiled the Diatessaron (harmony of four Gospels); later became an encratite ascetic and returned to the East."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-tatian-member-roman-church",
+            "passage_id": "psg-tatian-oration-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tatian-oration-4",
+            "source_id": "src-oration-to-greeks",
+            "locator_type": "source_ref",
+            "locator": "Oration 4",
+            "excerpt": "We are not fools, men of Greece, nor are we uttering nonsense when we report that God was born in the form of man. Compare your own stories: the gods of the Greeks changed into birds and beasts and flowers. God in a human body is far more decorous.",
+            "language": "English",
+            "passage_year": "160",
+            "url_override": "",
+            "notes": "Christ's incarnation defended against pagan objection; anti-docetist realism assumed"
+          },
+          "source": {
+            "source_id": "src-oration-to-greeks",
+            "work_id": "oration-to-the-greeks",
+            "source_kind": "primary_text",
+            "title": "Oration to the Greeks",
+            "author": "Tatian the Assyrian",
+            "editor": "",
+            "year_display": "c. 155-165",
+            "year_start": "155",
+            "year_end": "165",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0202.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Tatian's polemic against Greco-Roman religion defending resurrection and Logos theology."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-tatian-active-rome",
+        "clm-tatian-active-antioch",
+        "clm-tatian-affirms-encratism",
+        "clm-tatian-affirms-gospel-harmony",
+        "clm-tatian-active-edessa"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-tatian-oration-4": [
+          "clm-justin-teacher-of-tatian",
+          "clm-oration-greeks-affirms-incarnation",
+          "clm-oration-greeks-by-tatian",
+          "clm-tatian-active-rome",
+          "clm-tatian-coworker-justin"
+        ]
+      },
+      "flags": []
+    }
+  ]
+}

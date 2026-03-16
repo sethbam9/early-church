@@ -1,0 +1,2285 @@
+{
+  "batch_id": "batch-148",
+  "queue": "1",
+  "focus": "herodians; matthew-the-apostle; nathanael; joseph-of-arimathea; nicodemus; stephen; cornelius; lucius-of-cyrene",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-group-herodians-jerusalem",
+        "subject_type": "group",
+        "subject_id": "herodians",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T06:40:00Z"
+      },
+      "subject_entity": {
+        "group_id": "herodians",
+        "group_label": "Herodians",
+        "group_kind": "faction",
+        "is_christian": "false",
+        "notes": "Political faction aligned with the Herodian ruling house and appearing in Gospel opposition scenes."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-group-herodians-jerusalem",
+            "passage_id": "psg-mark-12-13-17",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-mark-12-13-17",
+            "source_id": "src-mark",
+            "locator_type": "bible_osis",
+            "locator": "Mark.12.13-17",
+            "excerpt": "Paraphrase: Pharisees and Herodians question Jesus in Jerusalem about paying taxes to Caesar.",
+            "language": "English",
+            "passage_year": "70",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-mark",
+            "work_id": "gospel-of-mark",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Mark",
+            "author": "Traditionally Mark",
+            "editor": "",
+            "year_display": "c. 66-74",
+            "year_start": "66",
+            "year_end": "74",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Mark",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-herodians-at-judea",
+        "clm-group-herodians-galilee"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-mark-12-13-17": [
+          "clm-herodians-at-judea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-mark-12-13-17"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-matthew-active-galilee",
+        "subject_type": "person",
+        "subject_id": "matthew-the-apostle",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "galilee",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "matthew-the-apostle",
+        "person_label": "Matthew",
+        "name_alt": "Levi",
+        "name_native": "Ματθαῖος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve in Gospel and Acts lists."
+      },
+      "object_entity": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-matthew-active-galilee",
+            "passage_id": "psg-matt-10-2-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-matt-10-2-4",
+            "source_id": "src-matthew",
+            "locator_type": "bible_osis",
+            "locator": "Matt.10.2-4",
+            "excerpt": "Paraphrase: Matthew lists the names of the Twelve apostles including Thomas, Matthew, Philip, and Bartholomew.",
+            "language": "English",
+            "passage_year": "28",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-matthew",
+            "work_id": "gospel-of-matthew",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Matthew",
+            "author": "Traditionally Matthew",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Matthew",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-matthew-active-jerusalem",
+        "clm-matthew-disciple",
+        "clm-matthew-in-pentecost"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-matt-10-2-4": [
+          "clm-bartholomew-active-galilee",
+          "clm-bartholomew-disciple",
+          "clm-matthew-disciple",
+          "clm-thomas-active-galilee",
+          "clm-thomas-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-matt-10-2-4",
+        "PARAPHRASE_OMISSION:psg-matt-10-2-4:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-matthew-in-pentecost",
+        "subject_type": "person",
+        "subject_id": "matthew-the-apostle",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "pentecost",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "matthew-the-apostle",
+        "person_label": "Matthew",
+        "name_alt": "Levi",
+        "name_native": "Ματθαῖος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve in Gospel and Acts lists."
+      },
+      "object_entity": {
+        "event_id": "pentecost",
+        "event_label": "Pentecost",
+        "event_type": "liturgical",
+        "event_kind": "simple",
+        "notes": "Outpouring of the Holy Spirit on the gathered disciples in Jerusalem."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-matthew-in-pentecost",
+            "passage_id": "psg-acts-1-13-14",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-1-13-14",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.1.13-14",
+            "excerpt": "Paraphrase: The apostles, the women, and Mary the mother of Jesus are gathered in Jerusalem.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-matthew-active-galilee",
+        "clm-matthew-active-jerusalem",
+        "clm-matthew-disciple"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-1-13-14": [
+          "clm-andrew-active-jerusalem",
+          "clm-andrew-in-pentecost",
+          "clm-andrew-member-jerusalem",
+          "clm-bartholomew-in-pentecost",
+          "clm-disciples-at-jerusalem-early",
+          "clm-james-just-in-pentecost",
+          "clm-james-zebedee-in-pentecost",
+          "clm-john-zebedee-active-jerusalem",
+          "clm-john-zebedee-in-pentecost",
+          "clm-john-zebedee-member-jerusalem",
+          "clm-mary-mother-active-galilee",
+          "clm-mary-mother-active-jerusalem",
+          "clm-mary-mother-disciple",
+          "clm-mary-mother-in-pentecost",
+          "clm-matthew-active-jerusalem",
+          "clm-peter-active-jerusalem",
+          "clm-peter-coworker-john-zebedee",
+          "clm-peter-member-jerusalem-church",
+          "clm-philip-apostle-active-jerusalem",
+          "clm-philip-apostle-in-pentecost",
+          "clm-philip-apostle-member-jerusalem",
+          "clm-place-judea-attested-late",
+          "clm-thomas-active-jerusalem",
+          "clm-thomas-in-pentecost",
+          "clm-zealots-at-judea"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-1-13-14",
+        "PARAPHRASE_OMISSION:psg-acts-1-13-14:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-matthew-disciple",
+        "subject_type": "person",
+        "subject_id": "matthew-the-apostle",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "matthew-the-apostle",
+        "person_label": "Matthew",
+        "name_alt": "Levi",
+        "name_native": "Ματθαῖος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve in Gospel and Acts lists."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-matthew-disciple",
+            "passage_id": "psg-matt-10-2-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-matt-10-2-4",
+            "source_id": "src-matthew",
+            "locator_type": "bible_osis",
+            "locator": "Matt.10.2-4",
+            "excerpt": "Paraphrase: Matthew lists the names of the Twelve apostles including Thomas, Matthew, Philip, and Bartholomew.",
+            "language": "English",
+            "passage_year": "28",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-matthew",
+            "work_id": "gospel-of-matthew",
+            "source_kind": "primary_text",
+            "title": "Gospel according to Matthew",
+            "author": "Traditionally Matthew",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Matthew",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-matthew-active-galilee",
+        "clm-matthew-active-jerusalem",
+        "clm-matthew-in-pentecost"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-matt-10-2-4": [
+          "clm-bartholomew-active-galilee",
+          "clm-bartholomew-disciple",
+          "clm-matthew-active-galilee",
+          "clm-thomas-active-galilee",
+          "clm-thomas-disciple"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-matt-10-2-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nathanael-active-cana",
+        "subject_type": "person",
+        "subject_id": "nathanael",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "cana",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "nathanael",
+        "person_label": "Nathanael",
+        "name_alt": "",
+        "name_native": "Ναθαναήλ",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Disciple from Cana associated with Philip in the Gospel of John."
+      },
+      "object_entity": {
+        "place_id": "cana",
+        "place_label": "Cana",
+        "place_label_modern": "Kafr Kanna area",
+        "place_kind": "site",
+        "parent_place_id": "galilee",
+        "lat": "32.7470",
+        "lon": "35.3420",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Galilean village associated with the sign at Cana and with Nathanael."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nathanael-active-cana",
+            "passage_id": "psg-john-1-43-49",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-1-43-49",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.1.43-49",
+            "excerpt": "Paraphrase: Jesus calls Philip, who brings Nathanael, who confesses him.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nathanael-disciple",
+        "clm-philip-apostle-coworker-nathanael"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-john-1-43-49": [
+          "clm-jesus-teacher-nathanael",
+          "clm-jesus-teacher-philip-the-apostle",
+          "clm-nathanael-disciple",
+          "clm-philip-apostle-active-bethsaida",
+          "clm-philip-apostle-active-galilee",
+          "clm-philip-apostle-coworker-nathanael",
+          "clm-philip-apostle-disciple",
+          "clm-place-bethsaida-attested",
+          "clm-place-cana-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-1-43-49",
+        "PARAPHRASE_OMISSION:psg-john-1-43-49:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nathanael-disciple",
+        "subject_type": "person",
+        "subject_id": "nathanael",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T16:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "nathanael",
+        "person_label": "Nathanael",
+        "name_alt": "",
+        "name_native": "Ναθαναήλ",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Disciple from Cana associated with Philip in the Gospel of John."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nathanael-disciple",
+            "passage_id": "psg-john-1-43-49",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-1-43-49",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.1.43-49",
+            "excerpt": "Paraphrase: Jesus calls Philip, who brings Nathanael, who confesses him.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nathanael-active-cana",
+        "clm-philip-apostle-coworker-nathanael"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-john-1-43-49": [
+          "clm-jesus-teacher-nathanael",
+          "clm-jesus-teacher-philip-the-apostle",
+          "clm-nathanael-active-cana",
+          "clm-philip-apostle-active-bethsaida",
+          "clm-philip-apostle-active-galilee",
+          "clm-philip-apostle-coworker-nathanael",
+          "clm-philip-apostle-disciple",
+          "clm-place-bethsaida-attested",
+          "clm-place-cana-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-1-43-49"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-philip-apostle-coworker-nathanael",
+        "subject_type": "person",
+        "subject_id": "nathanael",
+        "predicate_id": "coworker_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "philip-the-apostle",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "28",
+        "year_end": "30",
+        "context_place_id": "galilee",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "nathanael",
+        "person_label": "Nathanael",
+        "name_alt": "",
+        "name_native": "Ναθαναήλ",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Disciple from Cana associated with Philip in the Gospel of John."
+      },
+      "object_entity": {
+        "person_id": "philip-the-apostle",
+        "person_label": "Philip",
+        "name_alt": "Philip the Apostle",
+        "name_native": "Φίλιππος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Member of the Twelve; distinct from Philip the evangelist."
+      },
+      "context_place": {
+        "place_id": "galilee",
+        "place_label": "Galilee",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.80",
+        "lon": "35.35",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel",
+        "notes": "Northern region central to Jesus ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-philip-apostle-coworker-nathanael",
+            "passage_id": "psg-john-1-43-49",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Philip finds Nathanael."
+          },
+          "passage": {
+            "passage_id": "psg-john-1-43-49",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.1.43-49",
+            "excerpt": "Paraphrase: Jesus calls Philip, who brings Nathanael, who confesses him.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nathanael-active-cana",
+        "clm-nathanael-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-john-1-43-49": [
+          "clm-jesus-teacher-nathanael",
+          "clm-jesus-teacher-philip-the-apostle",
+          "clm-nathanael-active-cana",
+          "clm-nathanael-disciple",
+          "clm-philip-apostle-active-bethsaida",
+          "clm-philip-apostle-active-galilee",
+          "clm-philip-apostle-disciple",
+          "clm-place-bethsaida-attested",
+          "clm-place-cana-attested"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-1-43-49"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-joseph-arimathea-disciple-area",
+        "subject_type": "person",
+        "subject_id": "joseph-of-arimathea",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "judea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "joseph-of-arimathea",
+        "person_label": "Joseph of Arimathea",
+        "name_alt": "",
+        "name_native": "Ἰωσὴφ ὁ ἀπὸ Ἀριμαθαίας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Council member who requests the body of Jesus for burial."
+      },
+      "object_entity": {
+        "place_id": "judea",
+        "place_label": "Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "31.70",
+        "lon": "35.20",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Southern region including Jerusalem and the Judean wilderness."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-joseph-arimathea-disciple-area",
+            "passage_id": "psg-john-19-38-42",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests joseph-of-arimathea's activity in or near judea."
+          },
+          "passage": {
+            "passage_id": "psg-john-19-38-42",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.19.38-42",
+            "excerpt": "Paraphrase: Joseph of Arimathea and Nicodemus bury Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-joseph-arimathea-active-jerusalem",
+        "clm-joseph-arimathea-disciple",
+        "clm-joseph-arimathea-in-burial"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-john-19-38-42": [
+          "clm-burial-at-jerusalem",
+          "clm-burial-year",
+          "clm-jesus-in-burial",
+          "clm-john-zebedee-in-crucifixion",
+          "clm-joseph-arimathea-active-jerusalem",
+          "clm-joseph-arimathea-disciple",
+          "clm-joseph-arimathea-in-burial",
+          "clm-mary-magdalene-in-crucifixion",
+          "clm-mary-mother-in-crucifixion",
+          "clm-nicodemus-active-jerusalem",
+          "clm-nicodemus-active-judea",
+          "clm-nicodemus-in-burial",
+          "clm-resurrection-at-jerusalem"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-john-19-38-42",
+        "PARAPHRASE_RISK:psg-john-19-38-42",
+        "PARAPHRASE_OMISSION:psg-john-19-38-42:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-joseph-arimathea-in-burial",
+        "subject_type": "person",
+        "subject_id": "joseph-of-arimathea",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "burial-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T22:15:00Z"
+      },
+      "subject_entity": {
+        "person_id": "joseph-of-arimathea",
+        "person_label": "Joseph of Arimathea",
+        "name_alt": "",
+        "name_native": "Ἰωσὴφ ὁ ἀπὸ Ἀριμαθαίας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Council member who requests the body of Jesus for burial."
+      },
+      "object_entity": {
+        "event_id": "burial-of-jesus",
+        "event_label": "Burial of Jesus",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Joseph of Arimathea and Nicodemus bury Jesus in a tomb after the crucifixion."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-joseph-arimathea-in-burial",
+            "passage_id": "psg-john-19-38-42",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-19-38-42",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.19.38-42",
+            "excerpt": "Paraphrase: Joseph of Arimathea and Nicodemus bury Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-joseph-arimathea-active-jerusalem",
+        "clm-joseph-arimathea-disciple",
+        "clm-joseph-arimathea-disciple-area"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-john-19-38-42": [
+          "clm-burial-at-jerusalem",
+          "clm-burial-year",
+          "clm-jesus-in-burial",
+          "clm-john-zebedee-in-crucifixion",
+          "clm-joseph-arimathea-active-jerusalem",
+          "clm-joseph-arimathea-disciple",
+          "clm-joseph-arimathea-disciple-area",
+          "clm-mary-magdalene-in-crucifixion",
+          "clm-mary-mother-in-crucifixion",
+          "clm-nicodemus-active-jerusalem",
+          "clm-nicodemus-active-judea",
+          "clm-nicodemus-in-burial",
+          "clm-resurrection-at-jerusalem"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-19-38-42"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-joseph-arimathea-disciple",
+        "subject_type": "person",
+        "subject_id": "joseph-of-arimathea",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T19:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "joseph-of-arimathea",
+        "person_label": "Joseph of Arimathea",
+        "name_alt": "",
+        "name_native": "Ἰωσὴφ ὁ ἀπὸ Ἀριμαθαίας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Council member who requests the body of Jesus for burial."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-joseph-arimathea-disciple",
+            "passage_id": "psg-john-19-38-42",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-19-38-42",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.19.38-42",
+            "excerpt": "Paraphrase: Joseph of Arimathea and Nicodemus bury Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-joseph-arimathea-active-jerusalem",
+        "clm-joseph-arimathea-disciple-area",
+        "clm-joseph-arimathea-in-burial"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-john-19-38-42": [
+          "clm-burial-at-jerusalem",
+          "clm-burial-year",
+          "clm-jesus-in-burial",
+          "clm-john-zebedee-in-crucifixion",
+          "clm-joseph-arimathea-active-jerusalem",
+          "clm-joseph-arimathea-disciple-area",
+          "clm-joseph-arimathea-in-burial",
+          "clm-mary-magdalene-in-crucifixion",
+          "clm-mary-mother-in-crucifixion",
+          "clm-nicodemus-active-jerusalem",
+          "clm-nicodemus-active-judea",
+          "clm-nicodemus-in-burial",
+          "clm-resurrection-at-jerusalem"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-19-38-42"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nicodemus-active-judea",
+        "subject_type": "person",
+        "subject_id": "nicodemus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "judea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "nicodemus",
+        "person_label": "Nicodemus",
+        "name_alt": "",
+        "name_native": "Νικόδημος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Jerusalem Pharisee who appears in the Gospel of John."
+      },
+      "object_entity": {
+        "place_id": "judea",
+        "place_label": "Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "31.70",
+        "lon": "35.20",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Southern region including Jerusalem and the Judean wilderness."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nicodemus-active-judea",
+            "passage_id": "psg-john-19-38-42",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage attests nicodemus's activity in or near judea."
+          },
+          "passage": {
+            "passage_id": "psg-john-19-38-42",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.19.38-42",
+            "excerpt": "Paraphrase: Joseph of Arimathea and Nicodemus bury Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nicodemus-active-jerusalem",
+        "clm-nicodemus-disciple",
+        "clm-nicodemus-in-burial"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-john-19-38-42": [
+          "clm-burial-at-jerusalem",
+          "clm-burial-year",
+          "clm-jesus-in-burial",
+          "clm-john-zebedee-in-crucifixion",
+          "clm-joseph-arimathea-active-jerusalem",
+          "clm-joseph-arimathea-disciple",
+          "clm-joseph-arimathea-disciple-area",
+          "clm-joseph-arimathea-in-burial",
+          "clm-mary-magdalene-in-crucifixion",
+          "clm-mary-mother-in-crucifixion",
+          "clm-nicodemus-active-jerusalem",
+          "clm-nicodemus-in-burial",
+          "clm-resurrection-at-jerusalem"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-john-19-38-42",
+        "PARAPHRASE_RISK:psg-john-19-38-42",
+        "PARAPHRASE_OMISSION:psg-john-19-38-42:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nicodemus-in-burial",
+        "subject_type": "person",
+        "subject_id": "nicodemus",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "burial-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T22:15:00Z"
+      },
+      "subject_entity": {
+        "person_id": "nicodemus",
+        "person_label": "Nicodemus",
+        "name_alt": "",
+        "name_native": "Νικόδημος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Jerusalem Pharisee who appears in the Gospel of John."
+      },
+      "object_entity": {
+        "event_id": "burial-of-jesus",
+        "event_label": "Burial of Jesus",
+        "event_type": "other",
+        "event_kind": "simple",
+        "notes": "Joseph of Arimathea and Nicodemus bury Jesus in a tomb after the crucifixion."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nicodemus-in-burial",
+            "passage_id": "psg-john-19-38-42",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-john-19-38-42",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.19.38-42",
+            "excerpt": "Paraphrase: Joseph of Arimathea and Nicodemus bury Jesus.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nicodemus-active-jerusalem",
+        "clm-nicodemus-active-judea",
+        "clm-nicodemus-disciple"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-john-19-38-42": [
+          "clm-burial-at-jerusalem",
+          "clm-burial-year",
+          "clm-jesus-in-burial",
+          "clm-john-zebedee-in-crucifixion",
+          "clm-joseph-arimathea-active-jerusalem",
+          "clm-joseph-arimathea-disciple",
+          "clm-joseph-arimathea-disciple-area",
+          "clm-joseph-arimathea-in-burial",
+          "clm-mary-magdalene-in-crucifixion",
+          "clm-mary-mother-in-crucifixion",
+          "clm-nicodemus-active-jerusalem",
+          "clm-nicodemus-active-judea",
+          "clm-resurrection-at-jerusalem"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-19-38-42"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nicodemus-disciple",
+        "subject_type": "person",
+        "subject_id": "nicodemus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "30",
+        "year_end": "30",
+        "context_place_id": "jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "nicodemus",
+        "person_label": "Nicodemus",
+        "name_alt": "",
+        "name_native": "Νικόδημος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Jerusalem Pharisee who appears in the Gospel of John."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nicodemus-disciple",
+            "passage_id": "psg-john-18-1-11",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Upgraded from contextualizes: passage explicitly mentions nicodemus or disciples-of-jesus."
+          },
+          "passage": {
+            "passage_id": "psg-john-18-1-11",
+            "source_id": "src-john",
+            "locator_type": "bible_osis",
+            "locator": "John.18.1-11",
+            "excerpt": "Paraphrase: Judas arrives with officers, Jesus is arrested in the garden, and he restrains violent resistance.",
+            "language": "English",
+            "passage_year": "30",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-john",
+            "work_id": "gospel-of-john",
+            "source_kind": "primary_text",
+            "title": "Gospel according to John",
+            "author": "Traditionally John",
+            "editor": "",
+            "year_display": "c. 90-100",
+            "year_start": "90",
+            "year_end": "100",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=John",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Christian narrative witness used in this seed dataset."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nicodemus-active-jerusalem",
+        "clm-nicodemus-active-judea",
+        "clm-nicodemus-in-burial"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-john-18-1-11": [
+          "clm-arrest-year",
+          "clm-caiaphas-active-jerusalem",
+          "clm-caiaphas-in-temple-era",
+          "clm-jesus-in-arrest",
+          "clm-john-zebedee-in-arrest",
+          "clm-judas-iscariot-in-arrest",
+          "clm-peter-in-arrest",
+          "clm-peter-in-crucifixion-witness"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-john-18-1-11",
+        "PARAPHRASE_OMISSION:psg-john-18-1-11:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stephen-in-jerusalem-persecution",
+        "subject_type": "person",
+        "subject_id": "stephen",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "jerusalem-persecution-after-stephen",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "34",
+        "year_end": "34",
+        "context_place_id": "jerusalem",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stephen",
+        "person_label": "Stephen",
+        "name_alt": "",
+        "name_native": "Στέφανος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Early Jerusalem believer remembered as a martyr in Acts."
+      },
+      "object_entity": {
+        "event_id": "jerusalem-persecution-after-stephen",
+        "event_label": "Jerusalem Persecution after Stephen",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Great persecution against the Jerusalem church following Stephen's martyrdom."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stephen-in-jerusalem-persecution",
+            "passage_id": "psg-acts-8-1-3",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-8-1-3",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.8.1-3",
+            "excerpt": "Paraphrase: A great persecution breaks out against the church in Jerusalem, and Saul ravages the church house by house.",
+            "language": "English",
+            "passage_year": "34",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stephen-active-jerusalem",
+        "clm-stephen-jerusalem-church",
+        "clm-stephen-in-martyrdom"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-8-1-3": [
+          "clm-barnabas-in-jerusalem-persecution",
+          "clm-jerusalem-persecution-after-stephen-at-jerusalem",
+          "clm-jerusalem-persecution-after-stephen-year",
+          "clm-paul-in-jerusalem-persecution-after-stephen"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-8-1-3",
+        "PARAPHRASE_OMISSION:psg-acts-8-1-3:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stephen-in-martyrdom",
+        "subject_type": "person",
+        "subject_id": "stephen",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "stephens-martyrdom",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "34",
+        "year_end": "34",
+        "context_place_id": "jerusalem",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stephen",
+        "person_label": "Stephen",
+        "name_alt": "",
+        "name_native": "Στέφανος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Early Jerusalem believer remembered as a martyr in Acts."
+      },
+      "object_entity": {
+        "event_id": "stephens-martyrdom",
+        "event_label": "Stephen's Martyrdom",
+        "event_type": "martyrdom",
+        "event_kind": "simple",
+        "notes": "Early Jerusalem martyrdom narrated in Acts 7."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stephen-in-martyrdom",
+            "passage_id": "psg-acts-7-54-60",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-7-54-60",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.7.54-60",
+            "excerpt": "Paraphrase: Stephen is stoned outside Jerusalem after his witness before the council.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stephen-active-jerusalem",
+        "clm-stephen-jerusalem-church",
+        "clm-stephen-in-jerusalem-persecution"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-7-54-60": [
+          "clm-stephen-active-jerusalem",
+          "clm-stephen-jerusalem-church",
+          "clm-stephens-martyrdom-at-jerusalem",
+          "clm-stephens-martyrdom-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-7-54-60",
+        "PARAPHRASE_OMISSION:psg-acts-7-54-60:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-stephen-jerusalem-church",
+        "subject_type": "person",
+        "subject_id": "stephen",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "jerusalem-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "33",
+        "year_end": "34",
+        "context_place_id": "jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "person_id": "stephen",
+        "person_label": "Stephen",
+        "name_alt": "",
+        "name_native": "Στέφανος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Early Jerusalem believer remembered as a martyr in Acts."
+      },
+      "object_entity": {
+        "group_id": "jerusalem-church",
+        "group_label": "Church in Jerusalem",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Jerusalem community central to the earliest apostolic period."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-stephen-jerusalem-church",
+            "passage_id": "psg-acts-7-54-60",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Stephen is linked to the Jerusalem believing community through the martyrdom narrative."
+          },
+          "passage": {
+            "passage_id": "psg-acts-7-54-60",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.7.54-60",
+            "excerpt": "Paraphrase: Stephen is stoned outside Jerusalem after his witness before the council.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-stephen-active-jerusalem",
+        "clm-stephen-in-jerusalem-persecution",
+        "clm-stephen-in-martyrdom"
+      ],
+      "sibling_count": 3,
+      "passage_co_users": {
+        "psg-acts-7-54-60": [
+          "clm-stephen-active-jerusalem",
+          "clm-stephen-in-martyrdom",
+          "clm-stephens-martyrdom-at-jerusalem",
+          "clm-stephens-martyrdom-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-7-54-60"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cornelius-active-caesarea",
+        "subject_type": "person",
+        "subject_id": "cornelius",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "caesarea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "40",
+        "year_end": "41",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T05:05:00Z"
+      },
+      "subject_entity": {
+        "person_id": "cornelius",
+        "person_label": "Cornelius",
+        "name_alt": "",
+        "name_native": "Κορνήλιος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Roman centurion at Caesarea whose household is incorporated into the Jesus movement in Acts 10."
+      },
+      "object_entity": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cornelius-active-caesarea",
+            "passage_id": "psg-acts-10-1-48",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-10-1-48",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.10.1-48",
+            "excerpt": "Paraphrase: Cornelius of Caesarea sends for Peter, hears the message, and the Holy Spirit falls on Gentiles who are then baptized.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cornelius-disciple",
+        "clm-cornelius-member-caesarean"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-10-1-48": [
+          "clm-cornelius-disciple",
+          "clm-cornelius-member-caesarean",
+          "clm-group-disciples-caesarea",
+          "clm-peter-active-caesarea",
+          "clm-place-caesarea-attested-early"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-10-1-48"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cornelius-disciple",
+        "subject_type": "person",
+        "subject_id": "cornelius",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "disciples-of-jesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "40",
+        "year_end": "41",
+        "context_place_id": "caesarea",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T05:05:00Z"
+      },
+      "subject_entity": {
+        "person_id": "cornelius",
+        "person_label": "Cornelius",
+        "name_alt": "",
+        "name_native": "Κορνήλιος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Roman centurion at Caesarea whose household is incorporated into the Jesus movement in Acts 10."
+      },
+      "object_entity": {
+        "group_id": "disciples-of-jesus",
+        "group_label": "Disciples of Jesus",
+        "group_kind": "school",
+        "is_christian": "true",
+        "notes": "Movement gathered around Jesus during his ministry and carried forward in the apostolic era."
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cornelius-disciple",
+            "passage_id": "psg-acts-10-1-48",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-10-1-48",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.10.1-48",
+            "excerpt": "Paraphrase: Cornelius of Caesarea sends for Peter, hears the message, and the Holy Spirit falls on Gentiles who are then baptized.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cornelius-active-caesarea",
+        "clm-cornelius-member-caesarean"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-10-1-48": [
+          "clm-cornelius-active-caesarea",
+          "clm-cornelius-member-caesarean",
+          "clm-group-disciples-caesarea",
+          "clm-peter-active-caesarea",
+          "clm-place-caesarea-attested-early"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-10-1-48"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cornelius-member-caesarean",
+        "subject_type": "person",
+        "subject_id": "cornelius",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "caesarean-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "40",
+        "year_end": "41",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "cornelius",
+        "person_label": "Cornelius",
+        "name_alt": "",
+        "name_native": "Κορνήλιος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Roman centurion at Caesarea whose household is incorporated into the Jesus movement in Acts 10."
+      },
+      "object_entity": {
+        "group_id": "caesarean-church",
+        "group_label": "Church in Caesarea",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Caesarea Maritima; major center from the apostolic period onward; Origen relocated here c. 232 and founded a theological school and library with Alexander of Jerusalem."
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cornelius-member-caesarean",
+            "passage_id": "psg-acts-10-1-48",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-10-1-48",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.10.1-48",
+            "excerpt": "Paraphrase: Cornelius of Caesarea sends for Peter, hears the message, and the Holy Spirit falls on Gentiles who are then baptized.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cornelius-active-caesarea",
+        "clm-cornelius-disciple"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-10-1-48": [
+          "clm-cornelius-active-caesarea",
+          "clm-cornelius-disciple",
+          "clm-group-disciples-caesarea",
+          "clm-peter-active-caesarea",
+          "clm-place-caesarea-attested-early"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-10-1-48",
+        "PARAPHRASE_OMISSION:psg-acts-10-1-48:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lucius-of-cyrene-active-antioch",
+        "subject_type": "person",
+        "subject_id": "lucius-of-cyrene",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "46",
+        "year_end": "46",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "openai-manual-edit",
+        "updated_at": "2026-03-10T18:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "lucius-of-cyrene",
+        "person_label": "Lucius of Cyrene",
+        "name_alt": "Lucius",
+        "name_native": "Λούκιος ὁ Κυρηναῖος",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Prophet or teacher from Cyrene named in the church at Antioch in Acts 13."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lucius-of-cyrene-active-antioch",
+            "passage_id": "psg-acts-13-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-13-1",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.13.1",
+            "excerpt": "Paraphrase: In the church at Antioch there were prophets and teachers including Barnabas, Simeon called Niger, Lucius of Cyrene, Manaen, and Saul.",
+            "language": "English",
+            "passage_year": "46",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lucius-cyrene-coworker-paul",
+        "clm-lucius-of-cyrene-antioch-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-acts-13-1": [
+          "clm-agabus-member-antioch-church",
+          "clm-barnabas-antioch-church",
+          "clm-barnabas-coworker-lucius",
+          "clm-barnabas-coworker-manaen",
+          "clm-barnabas-coworker-simeon-niger",
+          "clm-lucius-cyrene-coworker-paul",
+          "clm-lucius-of-cyrene-antioch-church",
+          "clm-manaen-active-antioch",
+          "clm-manaen-antioch-church",
+          "clm-manaen-coworker-paul",
+          "clm-paul-antioch-church",
+          "clm-paul-member-antioch-church",
+          "clm-simeon-called-niger-active-antioch",
+          "clm-simeon-called-niger-antioch-church",
+          "clm-simeon-niger-coworker-paul"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-13-1"
+      ]
+    }
+  ]
+}

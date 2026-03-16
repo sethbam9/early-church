@@ -1,0 +1,2572 @@
+{
+  "batch_id": "batch-133",
+  "queue": "1",
+  "focus": "first-epistle-to-the-corinthians; ebionites; oration-to-the-greeks; pantaenus; ad-autolycum",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-first-corinthians-resurrection",
+        "subject_type": "work",
+        "subject_id": "first-epistle-to-the-corinthians",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-is-proclaimed-as-raised",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "54",
+        "year_end": "54",
+        "context_place_id": "corinth",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "seed-script",
+        "updated_at": "2026-03-10T00:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "first-epistle-to-the-corinthians",
+        "title_display": "First Epistle to the Corinthians",
+        "title_original": "Πρὸς Κορινθίους Αʹ",
+        "work_type": "letter",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Pauline letter addressing the church in Corinth and preserving early resurrection tradition."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-is-proclaimed-as-raised",
+        "topic_id": "resurrection-proclamation",
+        "dimension_id": "jesus-resurrection",
+        "proposition_label": "Jesus is proclaimed as raised",
+        "polarity_family": "resurrection_proclamation",
+        "description": "The apostolic proclamation announces that Jesus has been raised from the dead.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "corinth",
+        "place_label": "Corinth",
+        "place_label_modern": "Ancient Corinth",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9056",
+        "lon": "22.8784",
+        "location_precision": "approx_city",
+        "modern_country_label": "Greece",
+        "notes": "Major Achaian city associated with Paul and the Corinthian correspondence."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-first-corinthians-resurrection",
+            "passage_id": "psg-1cor-15-3-8",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-1cor-15-3-8",
+            "source_id": "src-1cor",
+            "locator_type": "bible_osis",
+            "locator": "1Cor.15.3-8",
+            "excerpt": "Paraphrase: Paul rehearses the received proclamation that Christ died, was buried, was raised, and appeared.",
+            "language": "English",
+            "passage_year": "54",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-1cor",
+            "work_id": "first-epistle-to-the-corinthians",
+            "source_kind": "primary_text",
+            "title": "First Epistle to the Corinthians",
+            "author": "Traditionally Paul",
+            "editor": "",
+            "year_display": "c. 53-55",
+            "year_start": "53",
+            "year_end": "55",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=1%20Corinthians",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Primary Pauline witness for Corinth and resurrection proclamation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-1corinthians-by-paul",
+        "clm-first-corinthians-addressed-corinth",
+        "clm-first-corinthians-written-ephesus",
+        "clm-1cor-year-end",
+        "clm-1cor-year-start"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-1cor-15-3-8": [
+          "clm-jesus-in-resurrection"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-1cor-15-3-8"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ebionites-at-judea",
+        "subject_type": "group",
+        "subject_id": "ebionites",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "judea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "200",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "ebionites",
+        "group_label": "Ebionites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Jewish-Christian sect insisting on full Torah observance and rejecting the divine pre-existence of Christ; active in Syria-Palestine and Transjordan; refuted by Irenaeus (AH 1.26), Origen, and Epiphanius; name means the poor."
+      },
+      "object_entity": {
+        "place_id": "judea",
+        "place_label": "Judea",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "31.70",
+        "lon": "35.20",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Southern region including Jerusalem and the Judean wilderness."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ebionites-at-judea",
+            "passage_id": "psg-irenaeus-ah-1-26-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Irenaeus AH 1.26.2 describes Ebionites as Jewish Christians in Judean context."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-26-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.26.2",
+            "excerpt": "Those called Ebionites agree that the world was made by God; but their opinions with respect to the Lord are similar to those of Cerinthus and Carpocrates. They use the Gospel according to Matthew only, and repudiate the Apostle Paul, maintaining that he was an apostate from the law. As regards the prophetical writings, they endeavour to interpret them in a singular manner. They practise circumcision and observe the Mosaic law. They affirm Jesus was the son of Joseph and Mary.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-ebionites-at-judea",
+            "passage_id": "psg-wikipedia-early-christian-places",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Ebionites were a Jewish-Christian group centered in Judea."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-early-christian-places",
+            "source_id": "src-wikipedia-early-christian-places",
+            "locator_type": "source_ref",
+            "locator": "Christianity_in_the_1st_century",
+            "excerpt": "Christianity spread rapidly from Jerusalem through Judea, Samaria, Syria, Asia Minor, Greece, and Rome during the first century.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "General reference for early Christian geographic spread."
+          },
+          "source": {
+            "source_id": "src-wikipedia-early-christian-places",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Christianity in the 1st century - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Christianity_in_the_1st_century",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Reference for first-century Christian communities and geographic spread."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ebionites-schismed-from-jerusalem",
+        "clm-ebionites-at-jerusalem",
+        "clm-ebionites-at-samaria",
+        "clm-ebionites-at-antioch",
+        "clm-ebionites-at-egypt"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-26-2": [
+          "clm-ebionites-at-antioch",
+          "clm-ebionites-at-egypt",
+          "clm-ebionites-oppose-logos"
+        ],
+        "psg-wikipedia-early-christian-places": [
+          "clm-place-bithynia-attested-late",
+          "clm-place-cappadocia-attested-late",
+          "clm-place-flavia-neapolis-attested",
+          "clm-place-pontus-attested-late"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-early-christian-places"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ebionites-at-antioch",
+        "subject_type": "group",
+        "subject_id": "ebionites",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "100",
+        "year_end": "300",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "ebionites",
+        "group_label": "Ebionites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Jewish-Christian sect insisting on full Torah observance and rejecting the divine pre-existence of Christ; active in Syria-Palestine and Transjordan; refuted by Irenaeus (AH 1.26), Origen, and Epiphanius; name means the poor."
+      },
+      "object_entity": {
+        "place_id": "antioch",
+        "place_label": "Antioch",
+        "place_label_modern": "Antakya",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.2021",
+        "lon": "36.1606",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major base for the apostolic mission to the Gentiles."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ebionites-at-antioch",
+            "passage_id": "psg-irenaeus-ah-1-26-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-26-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.26.1",
+            "excerpt": "A certain Cerinthus in Asia taught that the world was not made by the primary God, but by a Power far separated from him and ignorant of the supreme authority. He maintained that Jesus was not born of a virgin, but was the son of Joseph and Mary according to the ordinary course of human generation. After baptism, Christ descended upon him in the form of a dove from the Supreme Ruler; then he proclaimed the unknown Father and performed miracles. But at last Christ departed from Jesus, and then Jesus suffered and rose again.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-ebionites-at-antioch",
+            "passage_id": "psg-irenaeus-ah-1-26-2",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Irenaeus AH 1.26.2 explicitly describes Ebionite practice and geography including Syria/Palestine."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-26-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.26.2",
+            "excerpt": "Those called Ebionites agree that the world was made by God; but their opinions with respect to the Lord are similar to those of Cerinthus and Carpocrates. They use the Gospel according to Matthew only, and repudiate the Apostle Paul, maintaining that he was an apostate from the law. As regards the prophetical writings, they endeavour to interpret them in a singular manner. They practise circumcision and observe the Mosaic law. They affirm Jesus was the son of Joseph and Mary.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ebionites-schismed-from-jerusalem",
+        "clm-ebionites-at-judea",
+        "clm-ebionites-at-jerusalem",
+        "clm-ebionites-at-samaria",
+        "clm-ebionites-at-egypt"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-26-1": [
+          "clm-cerinthians-schismed-from-ephesian",
+          "clm-cerinthus-active-ephesus",
+          "clm-cerinthus-member-cerinthians",
+          "clm-cerinthus-opposes-incarnation",
+          "clm-cerinthus-opposes-logos-preexistence",
+          "clm-cerinthus-opposes-ot-scripture",
+          "clm-cerinthus-opposes-passion",
+          "clm-cerinthus-opposes-virgin-birth",
+          "clm-ebionites-schismed-from-jerusalem"
+        ],
+        "psg-irenaeus-ah-1-26-2": [
+          "clm-ebionites-at-egypt",
+          "clm-ebionites-at-judea",
+          "clm-ebionites-oppose-logos"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ebionites-at-egypt",
+        "subject_type": "group",
+        "subject_id": "ebionites",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "egypt",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "100",
+        "year_end": "300",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "ebionites",
+        "group_label": "Ebionites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Jewish-Christian sect insisting on full Torah observance and rejecting the divine pre-existence of Christ; active in Syria-Palestine and Transjordan; refuted by Irenaeus (AH 1.26), Origen, and Epiphanius; name means the poor."
+      },
+      "object_entity": {
+        "place_id": "egypt",
+        "place_label": "Egypt",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "26.0000",
+        "lon": "30.0000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Egypt",
+        "notes": "Roman province encompassing the Nile valley; home of the Alexandrian church tradition and early monasticism."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ebionites-at-egypt",
+            "passage_id": "psg-irenaeus-ah-1-26-2",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Irenaeus AH 1.26.2 describes Ebionites as present throughout the East including Egypt."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-26-2",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.26.2",
+            "excerpt": "Those called Ebionites agree that the world was made by God; but their opinions with respect to the Lord are similar to those of Cerinthus and Carpocrates. They use the Gospel according to Matthew only, and repudiate the Apostle Paul, maintaining that he was an apostate from the law. As regards the prophetical writings, they endeavour to interpret them in a singular manner. They practise circumcision and observe the Mosaic law. They affirm Jesus was the son of Joseph and Mary.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-ebionites-at-egypt",
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Ebionite communities are attested in Egypt."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "source_id": "src-wikipedia-early-church-geography",
+            "locator_type": "source_ref",
+            "locator": "Early_centers_of_Christianity",
+            "excerpt": "Early centers of Christianity included Jerusalem, Antioch, Alexandria, Rome, Carthage, and Edessa. Communities spread to Persia, India, and Ethiopia by the 4th century.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for general early Christian presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-early-church-geography",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Early centers of Christianity - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Early_centers_of_Christianity",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Survey of early Christian communities and geographic spread."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ebionites-schismed-from-jerusalem",
+        "clm-ebionites-at-judea",
+        "clm-ebionites-at-jerusalem",
+        "clm-ebionites-at-samaria",
+        "clm-ebionites-at-antioch"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-26-2": [
+          "clm-ebionites-at-antioch",
+          "clm-ebionites-at-judea",
+          "clm-ebionites-oppose-logos"
+        ],
+        "psg-wikipedia-early-church-geography": [
+          "clm-abgar-member-edessa-church",
+          "clm-abgar-viii-active-edessa",
+          "clm-bardaisan-member-bardesanites",
+          "clm-const381-event-year",
+          "clm-cyprian-originated-carthage",
+          "clm-cyril-participant-ephesus-431",
+          "clm-dura-church-at-dura",
+          "clm-dura-church-construction-year",
+          "clm-dura-church-year",
+          "clm-edessa-church-at-edessa",
+          "clm-ephesus-431-event-year",
+          "clm-hippolytus-callistus-schism-year",
+          "clm-irenaeus-ah-year",
+          "clm-montanus-coworker-priscilla-montanist",
+          "clm-place-bostra-attested",
+          "clm-place-caesarea-cappadocia-attested",
+          "clm-place-carthage-attested",
+          "clm-place-dalmatia-attested-late",
+          "clm-place-dura-europos-attested",
+          "clm-place-edessa-attested",
+          "clm-place-neocaesarea-attested",
+          "clm-place-sardinia-attested",
+          "clm-priscilla-montanist-affirms-prophecy",
+          "clm-priscilla-montanist-member-montanists"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ebionites-at-jerusalem",
+        "subject_type": "group",
+        "subject_id": "ebionites",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "jerusalem",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "100",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "ebionites",
+        "group_label": "Ebionites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Jewish-Christian sect insisting on full Torah observance and rejecting the divine pre-existence of Christ; active in Syria-Palestine and Transjordan; refuted by Irenaeus (AH 1.26), Origen, and Epiphanius; name means the poor."
+      },
+      "object_entity": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ebionites-at-jerusalem",
+            "passage_id": "psg-eusebius-he-4-11",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-4-11",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 4.11",
+            "excerpt": "Under Hyginus, bishop of Rome, Cerdo arrived and taught that the God proclaimed by the law and prophets was not the Father of Christ. After him Marcion of Pontus came to Rome and advanced Cerdo's school, blaspheming the Creator. The Ebionites held Christ to be a mere man born of Joseph.",
+            "language": "English",
+            "passage_year": "313",
+            "url_override": "",
+            "notes": "Eusebius locates Cerdo and Marcion at Rome; names Pontus as Marcion's origin; Ebionites noted"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ebionites-schismed-from-jerusalem",
+        "clm-ebionites-at-judea",
+        "clm-ebionites-at-samaria",
+        "clm-ebionites-at-antioch",
+        "clm-ebionites-at-egypt"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-eusebius-he-4-11": [
+          "clm-marcion-active-rome",
+          "clm-marcion-active-sinope",
+          "clm-marcion-excommunication-at-rome",
+          "clm-marcion-in-excommunication",
+          "clm-marcion-member-roman-church",
+          "clm-marcionites-at-carthage",
+          "clm-marcionites-at-pontus"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ebionites-at-samaria",
+        "subject_type": "group",
+        "subject_id": "ebionites",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "samaria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "100",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "ebionites",
+        "group_label": "Ebionites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Jewish-Christian sect insisting on full Torah observance and rejecting the divine pre-existence of Christ; active in Syria-Palestine and Transjordan; refuted by Irenaeus (AH 1.26), Origen, and Epiphanius; name means the poor."
+      },
+      "object_entity": {
+        "place_id": "samaria",
+        "place_label": "Samaria",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "32.2500",
+        "lon": "35.0000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Central region between Judea and Galilee associated with Acts 8 mission activity."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ebionites-at-samaria",
+            "passage_id": "psg-irenaeus-ah-1-10-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-10-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.10.1",
+            "excerpt": "Paraphrase: The Church dispersed throughout the whole world received from the apostles this faith: in one God the Father Almighty; one Christ Jesus the Son of God who became incarnate for our salvation; and the Holy Spirit who proclaimed through the prophets the birth from a virgin, passion, resurrection from the dead, ascension into heaven, and future gathering of all things and resurrection of all flesh.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ebionites-schismed-from-jerusalem",
+        "clm-ebionites-at-judea",
+        "clm-ebionites-at-jerusalem",
+        "clm-ebionites-at-antioch",
+        "clm-ebionites-at-egypt"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-10-1": [
+          "clm-ah-affirms-catechumenate",
+          "clm-irenaeus-ah-affirms-incarnation",
+          "clm-irenaeus-ah-affirms-logos",
+          "clm-irenaeus-ah-affirms-rule-of-faith",
+          "clm-irenaeus-ah-affirms-virgin-birth",
+          "clm-valentinians-at-alexandria"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-1-10-1",
+        "PARAPHRASE_OMISSION:psg-irenaeus-ah-1-10-1:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ebionites-schismed-from-jerusalem",
+        "subject_type": "group",
+        "subject_id": "ebionites",
+        "predicate_id": "group_schismed_from",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "jerusalem-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "100",
+        "context_place_id": "jerusalem",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "ebionites",
+        "group_label": "Ebionites",
+        "group_kind": "sect",
+        "is_christian": "true",
+        "notes": "Jewish-Christian sect insisting on full Torah observance and rejecting the divine pre-existence of Christ; active in Syria-Palestine and Transjordan; refuted by Irenaeus (AH 1.26), Origen, and Epiphanius; name means the poor."
+      },
+      "object_entity": {
+        "group_id": "jerusalem-church",
+        "group_label": "Church in Jerusalem",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Jerusalem community central to the earliest apostolic period."
+      },
+      "context_place": {
+        "place_id": "jerusalem",
+        "place_label": "Jerusalem",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "judea",
+        "lat": "31.7780",
+        "lon": "35.2354",
+        "location_precision": "exact",
+        "modern_country_label": "Israel / Palestine",
+        "notes": "Temple city and climactic destination of the ministry narratives."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ebionites-schismed-from-jerusalem",
+            "passage_id": "psg-irenaeus-ah-1-26-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-1-26-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 1.26.1",
+            "excerpt": "A certain Cerinthus in Asia taught that the world was not made by the primary God, but by a Power far separated from him and ignorant of the supreme authority. He maintained that Jesus was not born of a virgin, but was the son of Joseph and Mary according to the ordinary course of human generation. After baptism, Christ descended upon him in the form of a dove from the Supreme Ruler; then he proclaimed the unknown Father and performed miracles. But at last Christ departed from Jesus, and then Jesus suffered and rose again.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ebionites-at-judea",
+        "clm-ebionites-at-jerusalem",
+        "clm-ebionites-at-samaria",
+        "clm-ebionites-at-antioch",
+        "clm-ebionites-at-egypt"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-irenaeus-ah-1-26-1": [
+          "clm-cerinthians-schismed-from-ephesian",
+          "clm-cerinthus-active-ephesus",
+          "clm-cerinthus-member-cerinthians",
+          "clm-cerinthus-opposes-incarnation",
+          "clm-cerinthus-opposes-logos-preexistence",
+          "clm-cerinthus-opposes-ot-scripture",
+          "clm-cerinthus-opposes-passion",
+          "clm-cerinthus-opposes-virgin-birth",
+          "clm-ebionites-at-antioch"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-oration-greeks-by-tatian",
+        "subject_type": "work",
+        "subject_id": "oration-to-the-greeks",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "tatian-the-assyrian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "oration-to-the-greeks",
+        "title_display": "Oration to the Greeks",
+        "title_original": "Λόγος πρὸς Ἕλληνας",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Tatian the Assyrian's polemical address c. 155-165 against Greco-Roman religion and philosophy; defends Christian resurrection hope and Logos theology; student of Justin Martyr."
+      },
+      "object_entity": {
+        "person_id": "tatian-the-assyrian",
+        "person_label": "Tatian the Assyrian",
+        "name_alt": "Tatian",
+        "name_native": "Τατιανός",
+        "birth_year_display": "c. 120",
+        "death_year_display": "c. 180",
+        "person_kind": "individual",
+        "notes": "Student of Justin Martyr in Rome; wrote the Oration to the Greeks c. 155-165 and compiled the Diatessaron (harmony of four Gospels); later became an encratite ascetic and returned to the East."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-oration-greeks-by-tatian",
+            "passage_id": "psg-tatian-oration-4",
+            "evidence_role": "supports",
+            "support_aspect": "attribution",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tatian-oration-4",
+            "source_id": "src-oration-to-greeks",
+            "locator_type": "source_ref",
+            "locator": "Oration 4",
+            "excerpt": "We are not fools, men of Greece, nor are we uttering nonsense when we report that God was born in the form of man. Compare your own stories: the gods of the Greeks changed into birds and beasts and flowers. God in a human body is far more decorous.",
+            "language": "English",
+            "passage_year": "160",
+            "url_override": "",
+            "notes": "Christ's incarnation defended against pagan objection; anti-docetist realism assumed"
+          },
+          "source": {
+            "source_id": "src-oration-to-greeks",
+            "work_id": "oration-to-the-greeks",
+            "source_kind": "primary_text",
+            "title": "Oration to the Greeks",
+            "author": "Tatian the Assyrian",
+            "editor": "",
+            "year_display": "c. 155-165",
+            "year_start": "155",
+            "year_end": "165",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0202.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Tatian's polemic against Greco-Roman religion defending resurrection and Logos theology."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-oration-greeks-affirms-bodily-resurrection",
+        "clm-oration-greeks-affirms-incarnation",
+        "clm-oration-greeks-affirms-logos",
+        "clm-oration-greeks-affirms-ot-scripture",
+        "clm-oration-greeks-written-rome"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-tatian-oration-4": [
+          "clm-justin-teacher-of-tatian",
+          "clm-oration-greeks-affirms-incarnation",
+          "clm-tatian-active-rome",
+          "clm-tatian-coworker-justin",
+          "clm-tatian-member-roman-church"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-oration-greeks-written-rome",
+        "subject_type": "work",
+        "subject_id": "oration-to-the-greeks",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "165",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "oration-to-the-greeks",
+        "title_display": "Oration to the Greeks",
+        "title_original": "Λόγος πρὸς Ἕλληνας",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Tatian the Assyrian's polemical address c. 155-165 against Greco-Roman religion and philosophy; defends Christian resurrection hope and Logos theology; student of Justin Martyr."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-oration-greeks-written-rome",
+            "passage_id": "psg-tatian-oration-6",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tatian-oration-6",
+            "source_id": "src-oration-to-greeks",
+            "locator_type": "source_ref",
+            "locator": "Oration 6",
+            "excerpt": "God is a Spirit, not pervading matter, but the maker of material spirits and of the forms that are in matter; he is invisible, impalpable, being himself the Father of both sensible and invisible things. Him do we know from his creation, and apprehend his invisible power by his works.",
+            "language": "English",
+            "passage_year": "160",
+            "url_override": "",
+            "notes": "God as Spirit beyond matter; Logos theology background; Creator God affirmed"
+          },
+          "source": {
+            "source_id": "src-oration-to-greeks",
+            "work_id": "oration-to-the-greeks",
+            "source_kind": "primary_text",
+            "title": "Oration to the Greeks",
+            "author": "Tatian the Assyrian",
+            "editor": "",
+            "year_display": "c. 155-165",
+            "year_start": "155",
+            "year_end": "165",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0202.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Tatian's polemic against Greco-Roman religion defending resurrection and Logos theology."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-oration-greeks-affirms-bodily-resurrection",
+        "clm-oration-greeks-affirms-incarnation",
+        "clm-oration-greeks-affirms-logos",
+        "clm-oration-greeks-affirms-ot-scripture",
+        "clm-oration-greeks-by-tatian"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-tatian-oration-6": [
+          "clm-oration-greeks-affirms-logos",
+          "clm-tatian-active-antioch",
+          "clm-tatian-affirms-encratism"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-oration-greeks-affirms-bodily-resurrection",
+        "subject_type": "work",
+        "subject_id": "oration-to-the-greeks",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "165",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "oration-to-the-greeks",
+        "title_display": "Oration to the Greeks",
+        "title_original": "Λόγος πρὸς Ἕλληνας",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Tatian the Assyrian's polemical address c. 155-165 against Greco-Roman religion and philosophy; defends Christian resurrection hope and Logos theology; student of Justin Martyr."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-oration-greeks-affirms-bodily-resurrection",
+            "passage_id": "psg-tatian-oration-15",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tatian-oration-15",
+            "source_id": "src-oration-to-greeks",
+            "locator_type": "source_ref",
+            "locator": "Oration 15",
+            "excerpt": "We do not speak nonsense when we say the body will rise again. The dissolution of matter does not mean annihilation. God who is almighty is able to raise it. Fire dissolves material things, but God who made them from non-existence can restore them from dissolution.",
+            "language": "English",
+            "passage_year": "160",
+            "url_override": "",
+            "notes": "Bodily resurrection affirmed; Creator God as guarantee of resurrection; anti-materialist argument"
+          },
+          "source": {
+            "source_id": "src-oration-to-greeks",
+            "work_id": "oration-to-the-greeks",
+            "source_kind": "primary_text",
+            "title": "Oration to the Greeks",
+            "author": "Tatian the Assyrian",
+            "editor": "",
+            "year_display": "c. 155-165",
+            "year_start": "155",
+            "year_end": "165",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0202.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Tatian's polemic against Greco-Roman religion defending resurrection and Logos theology."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-oration-greeks-affirms-incarnation",
+        "clm-oration-greeks-affirms-logos",
+        "clm-oration-greeks-affirms-ot-scripture",
+        "clm-oration-greeks-written-rome",
+        "clm-oration-greeks-by-tatian"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {},
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-oration-greeks-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "oration-to-the-greeks",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "165",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "oration-to-the-greeks",
+        "title_display": "Oration to the Greeks",
+        "title_original": "Λόγος πρὸς Ἕλληνας",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Tatian the Assyrian's polemical address c. 155-165 against Greco-Roman religion and philosophy; defends Christian resurrection hope and Logos theology; student of Justin Martyr."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-oration-greeks-affirms-incarnation",
+            "passage_id": "psg-tatian-oration-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tatian-oration-4",
+            "source_id": "src-oration-to-greeks",
+            "locator_type": "source_ref",
+            "locator": "Oration 4",
+            "excerpt": "We are not fools, men of Greece, nor are we uttering nonsense when we report that God was born in the form of man. Compare your own stories: the gods of the Greeks changed into birds and beasts and flowers. God in a human body is far more decorous.",
+            "language": "English",
+            "passage_year": "160",
+            "url_override": "",
+            "notes": "Christ's incarnation defended against pagan objection; anti-docetist realism assumed"
+          },
+          "source": {
+            "source_id": "src-oration-to-greeks",
+            "work_id": "oration-to-the-greeks",
+            "source_kind": "primary_text",
+            "title": "Oration to the Greeks",
+            "author": "Tatian the Assyrian",
+            "editor": "",
+            "year_display": "c. 155-165",
+            "year_start": "155",
+            "year_end": "165",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0202.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Tatian's polemic against Greco-Roman religion defending resurrection and Logos theology."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-oration-greeks-affirms-bodily-resurrection",
+        "clm-oration-greeks-affirms-logos",
+        "clm-oration-greeks-affirms-ot-scripture",
+        "clm-oration-greeks-written-rome",
+        "clm-oration-greeks-by-tatian"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-tatian-oration-4": [
+          "clm-justin-teacher-of-tatian",
+          "clm-oration-greeks-by-tatian",
+          "clm-tatian-active-rome",
+          "clm-tatian-coworker-justin",
+          "clm-tatian-member-roman-church"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-oration-greeks-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "oration-to-the-greeks",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "165",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "oration-to-the-greeks",
+        "title_display": "Oration to the Greeks",
+        "title_original": "Λόγος πρὸς Ἕλληνας",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Tatian the Assyrian's polemical address c. 155-165 against Greco-Roman religion and philosophy; defends Christian resurrection hope and Logos theology; student of Justin Martyr."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-oration-greeks-affirms-logos",
+            "passage_id": "psg-tatian-oration-6",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tatian-oration-6",
+            "source_id": "src-oration-to-greeks",
+            "locator_type": "source_ref",
+            "locator": "Oration 6",
+            "excerpt": "God is a Spirit, not pervading matter, but the maker of material spirits and of the forms that are in matter; he is invisible, impalpable, being himself the Father of both sensible and invisible things. Him do we know from his creation, and apprehend his invisible power by his works.",
+            "language": "English",
+            "passage_year": "160",
+            "url_override": "",
+            "notes": "God as Spirit beyond matter; Logos theology background; Creator God affirmed"
+          },
+          "source": {
+            "source_id": "src-oration-to-greeks",
+            "work_id": "oration-to-the-greeks",
+            "source_kind": "primary_text",
+            "title": "Oration to the Greeks",
+            "author": "Tatian the Assyrian",
+            "editor": "",
+            "year_display": "c. 155-165",
+            "year_start": "155",
+            "year_end": "165",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0202.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Tatian's polemic against Greco-Roman religion defending resurrection and Logos theology."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-oration-greeks-affirms-bodily-resurrection",
+        "clm-oration-greeks-affirms-incarnation",
+        "clm-oration-greeks-affirms-ot-scripture",
+        "clm-oration-greeks-written-rome",
+        "clm-oration-greeks-by-tatian"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-tatian-oration-6": [
+          "clm-oration-greeks-written-rome",
+          "clm-tatian-active-antioch",
+          "clm-tatian-affirms-encratism"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-oration-greeks-affirms-ot-scripture",
+        "subject_type": "work",
+        "subject_id": "oration-to-the-greeks",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "155",
+        "year_end": "165",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "campaign5c-final",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "work_id": "oration-to-the-greeks",
+        "title_display": "Oration to the Greeks",
+        "title_original": "Λόγος πρὸς Ἕλληνας",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Tatian the Assyrian's polemical address c. 155-165 against Greco-Roman religion and philosophy; defends Christian resurrection hope and Logos theology; student of Justin Martyr."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-oration-greeks-affirms-ot-scripture",
+            "passage_id": "psg-irenaeus-ah-3-4-1",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Tatian's Oration defends the antiquity of Moses over Greek philosophy — OT scripture affirmed."
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-4-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.4.1",
+            "excerpt": "Paraphrase: The apostles lodged in the Church all things pertaining to truth as in a rich bank; she is the entrance to life, all others are thieves and robbers. In any dispute one should have recourse to the most ancient Churches where the apostles held constant intercourse.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-oration-greeks-affirms-bodily-resurrection",
+        "clm-oration-greeks-affirms-incarnation",
+        "clm-oration-greeks-affirms-logos",
+        "clm-oration-greeks-written-rome",
+        "clm-oration-greeks-by-tatian"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-4-1": [
+          "clm-ah-affirms-military-refusal",
+          "clm-dial-trypho-affirms-ot-scripture",
+          "clm-irenaeus-ah-affirms-fasting",
+          "clm-irenaeus-ah-affirms-rule-of-faith"
+        ]
+      },
+      "flags": [
+        "NO_SUPPORTS"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-person-pantaenus-affirms-bartholomew",
+        "subject_type": "person",
+        "subject_id": "pantaenus",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bartholomew-preached-in-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "180",
+        "year_end": "185",
+        "context_place_id": "india-malabar",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pantaenus",
+        "person_label": "Pantaenus",
+        "name_alt": "Pantaenus of Alexandria",
+        "name_native": "Πάνταινος",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 200",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria before Clement; former Stoic philosopher converted to Christianity. According to Eusebius, he traveled as far as India as a missionary. He was Clement of Alexandria's primary teacher."
+      },
+      "object_entity": {
+        "proposition_id": "bartholomew-preached-in-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "apostle-bartholomew-india",
+        "proposition_label": "The apostle Bartholomew preached in India and left a Hebrew Gospel of Matthew",
+        "polarity_family": "bartholomew_india",
+        "description": "Eusebius HE 5.10 reports that Pantaenus found in India Christians who possessed a Hebrew Matthew left by the apostle Bartholomew; Philostorgius HE 3.6 also mentions Bartholomew.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-person-pantaenus-affirms-bartholomew",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes pantaenus's position on bartholomew-preached-in-india."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-person-pantaenus-affirms-bartholomew",
+            "passage_id": "psg-eusebius-he-5-10-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eusebius HE 5.10.3-4 says Pantaenus found a Hebrew Matthew left by Bartholomew in India."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-3-4",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.3–4",
+            "excerpt": "Paraphrase: Pantaenus is said to have gone to India where he found persons who knew of Christ. Bartholomew one of the apostles had preached to them and left with them the writing of Matthew in the Hebrew language which they had preserved till that time.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Pantaenus finding Christians in India with a Hebrew Matthew from Bartholomew."
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-active-alexandria",
+        "clm-pantaenus-member-alexandria-church",
+        "clm-pantaenus-teacher-of-clement",
+        "clm-pantaenus-active-india",
+        "clm-pantaenus-participant-india-mission",
+        "clm-person-pantaenus-affirms-india"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ],
+        "psg-eusebius-he-5-10-3-4": [
+          "clm-acts-thomas-affirms-thomas-india",
+          "clm-bartholomew-active-india",
+          "clm-eusebius-he-affirms-bartholomew-india",
+          "clm-eusebius-he-affirms-india-reached",
+          "clm-pantaenus-active-india",
+          "clm-pantaenus-mission-at-india",
+          "clm-pantaenus-participant-india-mission",
+          "clm-place-neocaesarea-attested"
+        ]
+      },
+      "flags": [
+        "WEIGHT_CERTAINTY_TENSION:high_wt_possible:psg-eusebius-he-5-10-3-4",
+        "PARAPHRASE_RISK:psg-eusebius-he-5-10-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-person-pantaenus-affirms-india",
+        "subject_type": "person",
+        "subject_id": "pantaenus",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "gospel-reached-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "180",
+        "year_end": "185",
+        "context_place_id": "india-malabar",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pantaenus",
+        "person_label": "Pantaenus",
+        "name_alt": "Pantaenus of Alexandria",
+        "name_native": "Πάνταινος",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 200",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria before Clement; former Stoic philosopher converted to Christianity. According to Eusebius, he traveled as far as India as a missionary. He was Clement of Alexandria's primary teacher."
+      },
+      "object_entity": {
+        "proposition_id": "gospel-reached-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "india-reached",
+        "proposition_label": "The gospel reached India through early missionary or apostolic activity",
+        "polarity_family": "india_reached",
+        "description": "Christianity reached India — whether the Malabar coast or the broader \"India\" of ancient usage — through apostolic (Thomas, Bartholomew) or early missionary (Pantaenus) activity; attested by Eusebius HE 5.10 and Philostorgius.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-person-pantaenus-affirms-india",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes pantaenus's position on gospel-reached-india."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-person-pantaenus-affirms-india",
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eusebius HE 5.10.1-2 describes Pantaenus's mission to India and finding the Gospel of Matthew there."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.1–2",
+            "excerpt": "A man named Pantaenus was put in charge of the catechetical school at Alexandria, a school whose existence is attested from ancient times. This man had been trained in the Stoic system of philosophy; tradition reports he went as far as India to preach Christ to the Brahmans. Clement of Alexandria names him in his own writings as his instructor, showing that Pantaenus stood in the succession of teachers at Alexandria.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-active-alexandria",
+        "clm-pantaenus-member-alexandria-church",
+        "clm-pantaenus-teacher-of-clement",
+        "clm-pantaenus-active-india",
+        "clm-pantaenus-participant-india-mission",
+        "clm-person-pantaenus-affirms-bartholomew"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-peter-bishop-antioch"
+        ],
+        "psg-eusebius-he-5-10-1-2": [
+          "clm-arabian-christians-at-bostra",
+          "clm-clement-alex-active-athens",
+          "clm-clement-alex-affirms-incarnation",
+          "clm-clement-alex-affirms-ot-scripture",
+          "clm-clement-alex-member-alexandrian",
+          "clm-clement-teacher-of-origen",
+          "clm-eusebius-he-mentions-pantaenus-mission",
+          "clm-eusebius-he-written-caesarea",
+          "clm-origen-active-alexandria",
+          "clm-origen-member-alexandrian-church",
+          "clm-pantaenus-active-alexandria",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-pantaenus-mission-year",
+          "clm-pantaenus-teacher-of-clement"
+        ]
+      },
+      "flags": [
+        "WEIGHT_CERTAINTY_TENSION:high_wt_possible:psg-eusebius-he-5-10-1-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pantaenus-active-alexandria",
+        "subject_type": "person",
+        "subject_id": "pantaenus",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "160",
+        "year_end": "200",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign5-heretics",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "person_id": "pantaenus",
+        "person_label": "Pantaenus",
+        "name_alt": "Pantaenus of Alexandria",
+        "name_native": "Πάνταινος",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 200",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria before Clement; former Stoic philosopher converted to Christianity. According to Eusebius, he traveled as far as India as a missionary. He was Clement of Alexandria's primary teacher."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pantaenus-active-alexandria",
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eusebius places Pantaenus as head of the Alexandrian school."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.1–2",
+            "excerpt": "A man named Pantaenus was put in charge of the catechetical school at Alexandria, a school whose existence is attested from ancient times. This man had been trained in the Stoic system of philosophy; tradition reports he went as far as India to preach Christ to the Brahmans. Clement of Alexandria names him in his own writings as his instructor, showing that Pantaenus stood in the succession of teachers at Alexandria.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-member-alexandria-church",
+        "clm-pantaenus-teacher-of-clement",
+        "clm-pantaenus-active-india",
+        "clm-pantaenus-participant-india-mission",
+        "clm-person-pantaenus-affirms-bartholomew",
+        "clm-person-pantaenus-affirms-india"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-eusebius-he-5-10-1-2": [
+          "clm-arabian-christians-at-bostra",
+          "clm-clement-alex-active-athens",
+          "clm-clement-alex-affirms-incarnation",
+          "clm-clement-alex-affirms-ot-scripture",
+          "clm-clement-alex-member-alexandrian",
+          "clm-clement-teacher-of-origen",
+          "clm-eusebius-he-mentions-pantaenus-mission",
+          "clm-eusebius-he-written-caesarea",
+          "clm-origen-active-alexandria",
+          "clm-origen-member-alexandrian-church",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-pantaenus-mission-year",
+          "clm-pantaenus-teacher-of-clement",
+          "clm-person-pantaenus-affirms-india"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pantaenus-participant-india-mission",
+        "subject_type": "person",
+        "subject_id": "pantaenus",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "mission-of-pantaenus-to-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "180",
+        "year_end": "185",
+        "context_place_id": "india-malabar",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pantaenus",
+        "person_label": "Pantaenus",
+        "name_alt": "Pantaenus of Alexandria",
+        "name_native": "Πάνταινος",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 200",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria before Clement; former Stoic philosopher converted to Christianity. According to Eusebius, he traveled as far as India as a missionary. He was Clement of Alexandria's primary teacher."
+      },
+      "object_entity": {
+        "event_id": "mission-of-pantaenus-to-india",
+        "event_label": "Mission of Pantaenus to India",
+        "event_type": "mission",
+        "event_kind": "simple",
+        "notes": "Pantaenus sent from Alexandria as far as India (c. 180) per Eusebius HE 5.10; reportedly found Christians using a Hebrew Gospel of Matthew left by Bartholomew; identity of 'India' debated (possibly south Arabia or actual India)."
+      },
+      "context_place": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pantaenus-participant-india-mission",
+            "passage_id": "psg-eusebius-he-5-10-3-4",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eusebius's account of Pantaenus's mission."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-3-4",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.3–4",
+            "excerpt": "Paraphrase: Pantaenus is said to have gone to India where he found persons who knew of Christ. Bartholomew one of the apostles had preached to them and left with them the writing of Matthew in the Hebrew language which they had preserved till that time.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Pantaenus finding Christians in India with a Hebrew Matthew from Bartholomew."
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-active-alexandria",
+        "clm-pantaenus-member-alexandria-church",
+        "clm-pantaenus-teacher-of-clement",
+        "clm-pantaenus-active-india",
+        "clm-person-pantaenus-affirms-bartholomew",
+        "clm-person-pantaenus-affirms-india"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-eusebius-he-5-10-3-4": [
+          "clm-acts-thomas-affirms-thomas-india",
+          "clm-bartholomew-active-india",
+          "clm-eusebius-he-affirms-bartholomew-india",
+          "clm-eusebius-he-affirms-india-reached",
+          "clm-pantaenus-active-india",
+          "clm-pantaenus-mission-at-india",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-place-neocaesarea-attested"
+        ]
+      },
+      "flags": [
+        "WEIGHT_CERTAINTY_TENSION:high_wt_possible:psg-eusebius-he-5-10-3-4",
+        "PARAPHRASE_RISK:psg-eusebius-he-5-10-3-4"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pantaenus-member-alexandria-church",
+        "subject_type": "person",
+        "subject_id": "pantaenus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "alexandrian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "170",
+        "year_end": "200",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pantaenus",
+        "person_label": "Pantaenus",
+        "name_alt": "Pantaenus of Alexandria",
+        "name_native": "Πάνταινος",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 200",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria before Clement; former Stoic philosopher converted to Christianity. According to Eusebius, he traveled as far as India as a missionary. He was Clement of Alexandria's primary teacher."
+      },
+      "object_entity": {
+        "group_id": "alexandrian-church",
+        "group_label": "Church in Alexandria",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Alexandria; home of the Catechetical School; major center of Greek-speaking Christianity from the late first century onward."
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pantaenus-member-alexandria-church",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes pantaenus's membership in alexandrian-church."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-pantaenus-member-alexandria-church",
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eusebius HE 5.10.1-2 explicitly names Pantaenus as head of the Alexandrian school."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.1–2",
+            "excerpt": "A man named Pantaenus was put in charge of the catechetical school at Alexandria, a school whose existence is attested from ancient times. This man had been trained in the Stoic system of philosophy; tradition reports he went as far as India to preach Christ to the Brahmans. Clement of Alexandria names him in his own writings as his instructor, showing that Pantaenus stood in the succession of teachers at Alexandria.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-active-alexandria",
+        "clm-pantaenus-teacher-of-clement",
+        "clm-pantaenus-active-india",
+        "clm-pantaenus-participant-india-mission",
+        "clm-person-pantaenus-affirms-bartholomew",
+        "clm-person-pantaenus-affirms-india"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ],
+        "psg-eusebius-he-5-10-1-2": [
+          "clm-arabian-christians-at-bostra",
+          "clm-clement-alex-active-athens",
+          "clm-clement-alex-affirms-incarnation",
+          "clm-clement-alex-affirms-ot-scripture",
+          "clm-clement-alex-member-alexandrian",
+          "clm-clement-teacher-of-origen",
+          "clm-eusebius-he-mentions-pantaenus-mission",
+          "clm-eusebius-he-written-caesarea",
+          "clm-origen-active-alexandria",
+          "clm-origen-member-alexandrian-church",
+          "clm-pantaenus-active-alexandria",
+          "clm-pantaenus-mission-year",
+          "clm-pantaenus-teacher-of-clement",
+          "clm-person-pantaenus-affirms-india"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pantaenus-teacher-of-clement",
+        "subject_type": "person",
+        "subject_id": "pantaenus",
+        "predicate_id": "teacher_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "clement-of-alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "170",
+        "year_end": "200",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign5-heretics",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "person_id": "pantaenus",
+        "person_label": "Pantaenus",
+        "name_alt": "Pantaenus of Alexandria",
+        "name_native": "Πάνταινος",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 200",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria before Clement; former Stoic philosopher converted to Christianity. According to Eusebius, he traveled as far as India as a missionary. He was Clement of Alexandria's primary teacher."
+      },
+      "object_entity": {
+        "person_id": "clement-of-alexandria",
+        "person_label": "Clement of Alexandria",
+        "name_alt": "Titus Flavius Clemens",
+        "name_native": "Κλήμης Ἀλεξανδρεύς",
+        "birth_year_display": "c. 150",
+        "death_year_display": "c. 215",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria; author of Protrepticus, Paedagogus, and Stromateis; synthesized Christian faith with Greek philosophy; key witness for Alexandrian baptismal theology, eucharistic practice, asceticism, and apostolic tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pantaenus-teacher-of-clement",
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eusebius: Clement of Alexandria names Pantaenus in his writings as his instructor."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.1–2",
+            "excerpt": "A man named Pantaenus was put in charge of the catechetical school at Alexandria, a school whose existence is attested from ancient times. This man had been trained in the Stoic system of philosophy; tradition reports he went as far as India to preach Christ to the Brahmans. Clement of Alexandria names him in his own writings as his instructor, showing that Pantaenus stood in the succession of teachers at Alexandria.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-active-alexandria",
+        "clm-pantaenus-member-alexandria-church",
+        "clm-pantaenus-active-india",
+        "clm-pantaenus-participant-india-mission",
+        "clm-person-pantaenus-affirms-bartholomew",
+        "clm-person-pantaenus-affirms-india"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-eusebius-he-5-10-1-2": [
+          "clm-arabian-christians-at-bostra",
+          "clm-clement-alex-active-athens",
+          "clm-clement-alex-affirms-incarnation",
+          "clm-clement-alex-affirms-ot-scripture",
+          "clm-clement-alex-member-alexandrian",
+          "clm-clement-teacher-of-origen",
+          "clm-eusebius-he-mentions-pantaenus-mission",
+          "clm-eusebius-he-written-caesarea",
+          "clm-origen-active-alexandria",
+          "clm-origen-member-alexandrian-church",
+          "clm-pantaenus-active-alexandria",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-pantaenus-mission-year",
+          "clm-person-pantaenus-affirms-india"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ad-autolycum-by-theophilus",
+        "subject_type": "work",
+        "subject_id": "ad-autolycum",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "theophilus-of-antioch",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "ad-autolycum",
+        "title_display": "Ad Autolycum",
+        "title_original": "Πρὸς Αὐτόλυκον",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Theophilus of Antioch's three-book apology c. 180 defending Christian monotheism; first Christian use of the word Τριάς (Trinity); key witness for Logos theology and bodily resurrection."
+      },
+      "object_entity": {
+        "person_id": "theophilus-of-antioch",
+        "person_label": "Theophilus of Antioch",
+        "name_alt": "Theophilus",
+        "name_native": "Θεόφιλος",
+        "birth_year_display": "c. 115",
+        "death_year_display": "c. 185",
+        "person_kind": "individual",
+        "notes": "Bishop of Antioch c. 169-183; wrote Ad Autolycum (three books) c. 180; first Christian writer to use the term Τριάς (Trinity); important witness for Logos theology."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ad-autolycum-by-theophilus",
+            "passage_id": "psg-ad-autolycum-1-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Ad Autolycum 1.1 opens with Theophilus addressing Autolycus — direct authorship evidence."
+          },
+          "passage": {
+            "passage_id": "psg-ad-autolycum-1-1",
+            "source_id": "src-ad-autolycum",
+            "locator_type": "source_ref",
+            "locator": "Ad Autolycum 1.1",
+            "excerpt": "Theophilus to Autolycus: The beauty of your discourse, and the grace of your writings, and your diligence in study have moved me to write to you.",
+            "language": "en",
+            "passage_year": "180",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-ad-autolycum",
+            "work_id": "ad-autolycum",
+            "source_kind": "primary_text",
+            "title": "Ad Autolycum",
+            "author": "Theophilus of Antioch",
+            "editor": "",
+            "year_display": "c. 180",
+            "year_start": "180",
+            "year_end": "180",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0409.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Three-book apology by the bishop of Antioch; New Advent ANF edition."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-ad-autolycum-by-theophilus",
+            "passage_id": "psg-theophilus-autol-2-10",
+            "evidence_role": "supports",
+            "support_aspect": "attribution",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-theophilus-autol-2-10",
+            "source_id": "src-ad-autolycum",
+            "locator_type": "source_ref",
+            "locator": "Autol. 2.10",
+            "excerpt": "God, then, having his own Word internal within his own bowels, begat him, emitting him along with his own wisdom before all things. He had this Word as a helper in the things that were created by him, and by him he made all things. He is called governing principle because he rules and is lord of all things fashioned by him.",
+            "language": "English",
+            "passage_year": "180",
+            "url_override": "",
+            "notes": "Logos begotten from God before creation; Logos as helper and ruler of creation; pre-Nicene Logos theology"
+          },
+          "source": {
+            "source_id": "src-ad-autolycum",
+            "work_id": "ad-autolycum",
+            "source_kind": "primary_text",
+            "title": "Ad Autolycum",
+            "author": "Theophilus of Antioch",
+            "editor": "",
+            "year_display": "c. 180",
+            "year_start": "180",
+            "year_end": "180",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0409.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Three-book apology by the bishop of Antioch; New Advent ANF edition."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ad-autolycum-affirms-bodily-resurrection",
+        "clm-ad-autolycum-affirms-incarnation",
+        "clm-ad-autolycum-affirms-logos",
+        "clm-ad-autolycum-affirms-trinity",
+        "clm-ad-autolycum-written-antioch"
+      ],
+      "sibling_count": 5,
+      "passage_co_users": {
+        "psg-theophilus-autol-2-10": [
+          "clm-ad-autolycum-affirms-logos",
+          "clm-ad-autolycum-written-antioch",
+          "clm-theophilus-bishop-antioch"
+        ]
+      },
+      "flags": []
+    }
+  ]
+}

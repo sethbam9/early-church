@@ -1,0 +1,2330 @@
+{
+  "batch_id": "batch-037",
+  "queue": "0A",
+  "focus": "psg-ephrem-comm-diat-1(12), psg-cyprian-ep64-2(11)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-comm-diat-by-ephrem",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "ephrem-the-syrian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "person_id": "ephrem-the-syrian",
+        "person_label": "Ephrem the Syrian",
+        "name_alt": "Mar Ephrem",
+        "name_native": "ܡܪܝ ܐܦܪܝܡ ܣܘܪܝܝܐ",
+        "birth_year_display": "306",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Pre-eminent Syriac hymnographer and theologian; deacon at Nisibis under Jacob then relocated to Edessa after 363; wrote Hymns on Faith, Paradise, Nativity, Against Heresies, Nisibis Hymns, and Commentary on the Diatessaron; Doctor of the Church."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comm-diat-by-ephrem",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "This passage from the work attests its existence and authorship."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-gospel-harmony",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "gospel-harmony-is-authoritative",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "gospel-harmony-is-authoritative",
+        "topic_id": "canon-theology",
+        "dimension_id": "gospel-harmony-authority",
+        "proposition_label": "A harmonized gospel narrative is the authoritative gospel text",
+        "polarity_family": "gospel_harmony",
+        "description": "The Diatessaron or similar gospel harmony serves as the primary authoritative gospel text for liturgy and teaching, rather than reading four separate canonical gospels; standard in the Syriac church from c. 170 until the 5th century.",
+        "notes": "Gospel harmony authority"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-gospel-harmony",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Four gospels woven into one witness reveal the single plan of salvation."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-virgin-birth",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-virgin-birth",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "commentary-on-diatessaron-ephrem is a primary text directly relevant to jesus-born-of-virgin."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-logos",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Christ confessed as the Word made flesh."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-incarnation",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Christ is the Word made flesh uniting divinity and humanity."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-resurrection",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-resurrection",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "commentary-on-diatessaron-ephrem is a primary text directly relevant to bodies-will-be-raised-at-last-day."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comm-diat-written-edessa",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comm-diat-written-edessa",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from commentary-on-diatessaron-ephrem contextualizes its composition at edessa."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_OMISSION:psg-ephrem-comm-diat-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-repentance",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "repentance-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "repentance-is-required",
+        "topic_id": "kingdom-proclamation",
+        "dimension_id": "repentant-response",
+        "proposition_label": "Repentance is required in response to the proclamation",
+        "polarity_family": "repentance_response",
+        "description": "The proclamation of the kingdom calls hearers to repentance.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-repentance",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "commentary-on-diatessaron-ephrem is a primary text directly relevant to repentance-is-required."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-ot-authority",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-comdiat-affirms-ot-authority",
+        "subject_type": "work",
+        "subject_id": "commentary-on-diatessaron-ephrem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "360",
+        "year_end": "370",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "commentary-on-diatessaron-ephrem",
+        "title_display": "Commentary on the Diatessaron",
+        "title_original": "ܦܘܫܩܐ ܕܐܘܢܓܠܝܘܢ ܕܡܚܠܛܐ",
+        "work_type": "commentary",
+        "language_original": "Syriac",
+        "work_kind": "single_work",
+        "notes": "Ephrem the Syrian's verse-by-verse commentary on Tatian's Diatessaron (c. 360–370); the primary witness to how the Syriac church read the gospel harmony; christological and typological exegesis throughout."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-comdiat-affirms-ot-authority",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "commentary-on-diatessaron-ephrem is a primary text directly relevant to old-testament-is-authoritative-scripture."
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-comdiat-affirms-eucharist-body-blood",
+        "clm-comdiat-affirms-gospel-harmony",
+        "clm-comdiat-affirms-incarnation",
+        "clm-comdiat-affirms-logos",
+        "clm-comdiat-affirms-passion",
+        "clm-comdiat-affirms-repentance",
+        "clm-comdiat-affirms-resurrection",
+        "clm-comdiat-affirms-virgin-birth",
+        "clm-comm-diat-by-ephrem",
+        "clm-comm-diat-written-edessa"
+      ],
+      "sibling_count": 10,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ephrem-active-edessa",
+        "subject_type": "person",
+        "subject_id": "ephrem-the-syrian",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "363",
+        "year_end": "373",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ephrem-the-syrian",
+        "person_label": "Ephrem the Syrian",
+        "name_alt": "Mar Ephrem",
+        "name_native": "ܡܪܝ ܐܦܪܝܡ ܣܘܪܝܝܐ",
+        "birth_year_display": "306",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Pre-eminent Syriac hymnographer and theologian; deacon at Nisibis under Jacob then relocated to Edessa after 363; wrote Hymns on Faith, Paradise, Nativity, Against Heresies, Nisibis Hymns, and Commentary on the Diatessaron; Doctor of the Church."
+      },
+      "object_entity": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephrem-active-edessa",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephrem-coworker-jacob",
+        "clm-ephrem-active-nisibis",
+        "clm-ephrem-in-fall-nisibis",
+        "clm-ephrem-affirms-fasting",
+        "clm-ephrem-affirms-prayer",
+        "clm-ephrem-member-edessa-church"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-affirms-fasting",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_DERIVED_PRESENCE:auth_written:hymns-on-paradise-ephrem",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1",
+        "PARAPHRASE_OMISSION:psg-ephrem-comm-diat-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ephrem-affirms-fasting",
+        "subject_type": "person",
+        "subject_id": "ephrem-the-syrian",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "fasting-is-required",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "363",
+        "year_end": "373",
+        "context_place_id": "edessa",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ephrem-the-syrian",
+        "person_label": "Ephrem the Syrian",
+        "name_alt": "Mar Ephrem",
+        "name_native": "ܡܪܝ ܐܦܪܝܡ ܣܘܪܝܝܐ",
+        "birth_year_display": "306",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Pre-eminent Syriac hymnographer and theologian; deacon at Nisibis under Jacob then relocated to Edessa after 363; wrote Hymns on Faith, Paradise, Nativity, Against Heresies, Nisibis Hymns, and Commentary on the Diatessaron; Doctor of the Church."
+      },
+      "object_entity": {
+        "proposition_id": "fasting-is-required",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "fasting-required",
+        "proposition_label": "Christians are required to fast",
+        "polarity_family": "christian_fasting",
+        "description": "Fasting is a required Christian spiritual discipline presented as obligatory, not merely optional.",
+        "notes": "Ascetic discipline"
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephrem-affirms-fasting",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephrem-coworker-jacob",
+        "clm-ephrem-active-nisibis",
+        "clm-ephrem-in-fall-nisibis",
+        "clm-ephrem-active-edessa",
+        "clm-ephrem-affirms-prayer",
+        "clm-ephrem-member-edessa-church"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-prayer"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ephrem-affirms-prayer",
+        "subject_type": "person",
+        "subject_id": "ephrem-the-syrian",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "prayer-is-offered-without-ceasing",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "363",
+        "year_end": "373",
+        "context_place_id": "edessa",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "ephrem-the-syrian",
+        "person_label": "Ephrem the Syrian",
+        "name_alt": "Mar Ephrem",
+        "name_native": "ܡܪܝ ܐܦܪܝܡ ܣܘܪܝܝܐ",
+        "birth_year_display": "306",
+        "death_year_display": "373",
+        "person_kind": "individual",
+        "notes": "Pre-eminent Syriac hymnographer and theologian; deacon at Nisibis under Jacob then relocated to Edessa after 363; wrote Hymns on Faith, Paradise, Nativity, Against Heresies, Nisibis Hymns, and Commentary on the Diatessaron; Doctor of the Church."
+      },
+      "object_entity": {
+        "proposition_id": "prayer-is-offered-without-ceasing",
+        "topic_id": "ascetic-practice",
+        "dimension_id": "continual-prayer",
+        "proposition_label": "Prayer is offered without ceasing throughout all of life",
+        "polarity_family": "continual_prayer",
+        "description": "The spiritually formed Christian does not confine prayer to set times but prays continually through every word, action, and disposition, maintaining unceasing communion with God.",
+        "notes": "Continual prayer"
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ephrem-affirms-prayer",
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-ephrem-comm-diat-1",
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "locator_type": "source_ref",
+            "locator": "Commentary on the Diatessaron 1",
+            "excerpt": "Paraphrase: Ephrem opens his commentary on the harmonized gospel by confessing Christ as the Word made flesh who united divinity and humanity; the four gospels woven into one witness reveal the single plan of salvation; Ephrem reads each episode christologically and typologically.",
+            "language": "English",
+            "passage_year": "365",
+            "url_override": "",
+            "notes": "Opening — christological interpretation"
+          },
+          "source": {
+            "source_id": "src-commentary-on-diatessaron-ephrem",
+            "work_id": "commentary-on-diatessaron-ephrem",
+            "source_kind": "primary_text",
+            "title": "Commentary on the Diatessaron",
+            "author": "Ephrem the Syrian",
+            "editor": "",
+            "year_display": "c. 360–370",
+            "year_start": "360",
+            "year_end": "370",
+            "container_title": "",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/3315.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Ephrem's verse-by-verse commentary on Tatian's gospel harmony."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ephrem-coworker-jacob",
+        "clm-ephrem-active-nisibis",
+        "clm-ephrem-in-fall-nisibis",
+        "clm-ephrem-active-edessa",
+        "clm-ephrem-affirms-fasting",
+        "clm-ephrem-member-edessa-church"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-ephrem-comm-diat-1": [
+          "clm-comdiat-affirms-gospel-harmony",
+          "clm-comdiat-affirms-incarnation",
+          "clm-comdiat-affirms-logos",
+          "clm-comdiat-affirms-ot-authority",
+          "clm-comdiat-affirms-repentance",
+          "clm-comdiat-affirms-resurrection",
+          "clm-comdiat-affirms-virgin-birth",
+          "clm-comm-diat-by-ephrem",
+          "clm-comm-diat-written-edessa",
+          "clm-ephrem-active-edessa",
+          "clm-ephrem-affirms-fasting"
+        ]
+      },
+      "flags": [
+        "REDUNDANT_PERSON_PROP:clm-hof-affirms-prayer",
+        "PARAPHRASE_RISK:psg-ephrem-comm-diat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-ordination-hands",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "ordination-conferred-by-laying-on-of-hands",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "ordination-conferred-by-laying-on-of-hands",
+        "topic_id": "church-order",
+        "dimension_id": "ordination-rite",
+        "proposition_label": "Ordination is conferred by the laying on of hands",
+        "polarity_family": "",
+        "description": "The ministry of bishop, presbyter, and deacon is conferred through the liturgical act of laying on of hands by existing bishops (for episcopal ordination) or by the bishop (for presbyters and deacons).",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-ordination-hands",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.5",
+            "notes": "Council bishops acting collegially presupposes ordination."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-baptism-water",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-with-water-commanded",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-with-water-commanded",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptism-mode",
+        "proposition_label": "Baptism is administered with water",
+        "polarity_family": "baptism_water",
+        "description": "Baptismal practice uses water as the material element.",
+        "notes": "Core initiatory practice"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-baptism-water",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Baptism and sanctification with water explicitly discussed."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-infant-baptism",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "infants-and-children-are-baptized",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "infants-and-children-are-baptized",
+        "topic_id": "baptism-practice",
+        "dimension_id": "infant-baptism",
+        "proposition_label": "Infants and children receive baptism",
+        "polarity_family": "infant_baptism",
+        "description": "Infant and child baptism is explicitly affirmed or presupposed as the ordinary practice of the Church.",
+        "notes": "Infant baptism"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-infant-baptism",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Council unanimously ruled infant baptism not to be delayed — grace denied to none."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-council-carthage-252-at-carthage",
+        "subject_type": "event",
+        "subject_id": "council-of-carthage-252",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-carthage-252",
+        "event_label": "Council of Carthage (252) on Infant Baptism",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "North African council convened under Cyprian c. 252 responding to Bishop Fidus's question about delaying infant baptism until the eighth day; the council unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day after birth; key witness for infant baptism as assumed standard practice."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-council-carthage-252-at-carthage",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Ep. 64 explicitly reports the council's ruling at Carthage."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-council-carthage-252-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2",
+        "PARAPHRASE_OMISSION:psg-cyprian-ep64-2:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-episcopal-unity",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "episcopal-unity-grounds-church-unity",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "episcopal-unity-grounds-church-unity",
+        "topic_id": "episcopal-authority",
+        "dimension_id": "episcopal-collegiality",
+        "proposition_label": "The unity of bishops grounds the unity of the Church",
+        "polarity_family": "episcopal_unity",
+        "description": "The Church is one because the episcopate is one; each bishop holds the whole of the one episcopate in solidum; to break with the bishop is to break with the Church; there is one altar and one bishop.",
+        "notes": ""
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-episcopal-unity",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Council ruling reflects collegial episcopal authority."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-by-cyprian",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "cyprian-of-carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "person_id": "cyprian-of-carthage",
+        "person_label": "Cyprian of Carthage",
+        "name_alt": "Thascius Caecilius Cyprianus",
+        "name_native": "Kυπριανός",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 258",
+        "person_kind": "individual",
+        "notes": "Bishop of Carthage c. 248–258; major Latin theologian of ecclesiology and sacramental theology; converted c. 246; deeply influenced by Tertullian; key figure in the Novatian controversy (supported Cornelius against Novatian); martyred under Valerian."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-by-cyprian",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Cyprian is the author of Epistula 64."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-affirms-trinitarian-baptism",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2",
+        "PARAPHRASE_OMISSION:psg-cyprian-ep64-2:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-ep64-affirms-trinitarian-baptism",
+        "subject_type": "work",
+        "subject_id": "epistula-64-cyprian",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "baptism-administered-in-trinitarian-name",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "epistula-64-cyprian",
+        "title_display": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+        "title_original": "Epistula LXIV",
+        "work_type": "letter",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Cyprian's letter c. 252 to Bishop Fidus in response to the question of whether baptism should be delayed until the eighth day after birth (by analogy with circumcision); the Council of Carthage 252 unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day; key witness for the assumption of infant baptism as standard practice and the council's reasoning that God's grace should not be withheld from any soul."
+      },
+      "object_entity": {
+        "proposition_id": "baptism-administered-in-trinitarian-name",
+        "topic_id": "baptism-practice",
+        "dimension_id": "baptismal-formula",
+        "proposition_label": "Baptism is administered in the Trinitarian name of Father, Son, and Holy Spirit",
+        "polarity_family": "trinitarian_baptism",
+        "description": "Baptism uses the explicit Trinitarian formula of Father, Son, and Holy Spirit as the form of the sacrament.",
+        "notes": "Trinitarian baptismal formula"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-ep64-affirms-trinitarian-baptism",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Baptismal sanctification implies trinitarian formula."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-ep64-written-carthage",
+        "clm-ep64-affirms-baptism-regen",
+        "clm-ep64-affirms-baptism-water",
+        "clm-ep64-affirms-baptismal-anointing",
+        "clm-ep64-affirms-episcopal-unity",
+        "clm-ep64-affirms-infant-baptism",
+        "clm-ep64-affirms-ordination-hands",
+        "clm-ep64-affirms-ot-authority",
+        "clm-ep64-affirms-penance",
+        "clm-ep64-by-cyprian",
+        "clm-ep64-mentions-catechumenate"
+      ],
+      "sibling_count": 11,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-council-carthage-252-year",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-council-carthage-252-year",
+        "subject_type": "event",
+        "subject_id": "council-of-carthage-252",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "252",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-carthage-252",
+        "event_label": "Council of Carthage (252) on Infant Baptism",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "North African council convened under Cyprian c. 252 responding to Bishop Fidus's question about delaying infant baptism until the eighth day; the council unanimously ruled that baptism should not be delayed — infants may be baptized as early as the second or third day after birth; key witness for infant baptism as assumed standard practice."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-council-carthage-252-year",
+            "passage_id": "psg-cyprian-ep64-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Ep. 64 dates from the council of c. 252."
+          },
+          "passage": {
+            "passage_id": "psg-cyprian-ep64-2",
+            "source_id": "src-cyprian-epistula-64",
+            "locator_type": "source_ref",
+            "locator": "Ep. 64.2",
+            "excerpt": "Paraphrase: But in respect of the case of infants, which you say ought not to be baptized within the second or third day after their birth, and that the old law of circumcision should be regarded, so that you think one who is just born should not be baptized and sanctified within the eighth day — we all thought very differently in our council. For in this course which you thought was to be taken, no one agreed; but we all rather judged that the mercy and grace of God ought to be denied to no man born.",
+            "language": "English",
+            "passage_year": "252",
+            "url_override": "",
+            "notes": "Council of Carthage 252 ruling: infant baptism not to be delayed; grace denied to none"
+          },
+          "source": {
+            "source_id": "src-cyprian-epistula-64",
+            "work_id": "epistula-64-cyprian",
+            "source_kind": "primary_text",
+            "title": "Epistula 64 (Letter to Fidus on Infant Baptism)",
+            "author": "Cyprian",
+            "editor": "",
+            "year_display": "c. 252",
+            "year_start": "252",
+            "year_end": "252",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/050664.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Letter to Fidus reporting the Council of Carthage 252 ruling on infant baptism; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-council-carthage-252-at-carthage"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-cyprian-ep64-2": [
+          "clm-council-carthage-252-at-carthage",
+          "clm-cyprian-in-council-252",
+          "clm-ep64-affirms-baptism-water",
+          "clm-ep64-affirms-baptismal-anointing",
+          "clm-ep64-affirms-episcopal-unity",
+          "clm-ep64-affirms-infant-baptism",
+          "clm-ep64-affirms-ordination-hands",
+          "clm-ep64-affirms-trinitarian-baptism",
+          "clm-ep64-by-cyprian",
+          "clm-ep64-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-cyprian-ep64-2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2515 @@
+{
+  "batch_id": "batch-035",
+  "queue": "0A",
+  "focus": "psg-eusebius-vita-const-3-6(12)",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-participant-council-nicaea",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "council-of-arles-314",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "314",
+        "year_end": "314",
+        "context_place_id": "arles",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "event_id": "council-of-arles-314",
+        "event_label": "Council of Arles (314)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Church council convened by Emperor Constantine at Arles in Gaul, 314; addressed the Donatist controversy; attended by 3 British bishops (Eborius of York, Restitutus of London, Adelfius of Colchester/Lincoln); earliest firm attestation of organized British Christianity."
+      },
+      "context_place": {
+        "place_id": "arles",
+        "place_label": "Arles",
+        "place_label_modern": "Arles",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "43.6767",
+        "lon": "4.6278",
+        "location_precision": "approx_city",
+        "modern_country_label": "France",
+        "notes": "Roman Arelate in southern Gaul; site of the Council of Arles 314 addressing the Donatist controversy; attended by bishops from across the Western empire including 3 from Britain."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-participant-council-nicaea",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes eusebius-of-caesarea's participation in council-of-arles-314."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-member-caesarea",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "caesarean-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "313",
+        "year_end": "339",
+        "context_place_id": "caesarea",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "group_id": "caesarean-church",
+        "group_label": "Church in Caesarea",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Caesarea Maritima; major center from the apostolic period onward; Origen relocated here c. 232 and founded a theological school and library with Alexander of Jerusalem."
+      },
+      "context_place": {
+        "place_id": "caesarea",
+        "place_label": "Caesarea",
+        "place_label_modern": "Caesarea Maritima",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5000",
+        "lon": "34.9000",
+        "location_precision": "approx_site",
+        "modern_country_label": "Israel",
+        "notes": "Coastal city associated with Cornelius, Peter, and Philip the Evangelist."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-member-caesarea",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes eusebius-of-caesarea's membership in caesarean-church."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-participant-nicaea",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-3-36",
+        "PARAPHRASE_RISK:psg-eusebius-he-3-36",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-3-36:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-pantaenus-member-alexandria-church",
+        "subject_type": "person",
+        "subject_id": "pantaenus",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "alexandrian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "170",
+        "year_end": "200",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pantaenus",
+        "person_label": "Pantaenus",
+        "name_alt": "Pantaenus of Alexandria",
+        "name_native": "Πάνταινος",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 200",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria before Clement; former Stoic philosopher converted to Christianity. According to Eusebius, he traveled as far as India as a missionary. He was Clement of Alexandria's primary teacher."
+      },
+      "object_entity": {
+        "group_id": "alexandrian-church",
+        "group_label": "Church in Alexandria",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Alexandria; home of the Catechetical School; major center of Greek-speaking Christianity from the late first century onward."
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-pantaenus-member-alexandria-church",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes pantaenus's membership in alexandrian-church."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-pantaenus-member-alexandria-church",
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eusebius HE 5.10.1-2 explicitly names Pantaenus as head of the Alexandrian school."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.1–2",
+            "excerpt": "A man named Pantaenus was put in charge of the catechetical school at Alexandria, a school whose existence is attested from ancient times. This man had been trained in the Stoic system of philosophy; tradition reports he went as far as India to preach Christ to the Brahmans. Clement of Alexandria names him in his own writings as his instructor, showing that Pantaenus stood in the succession of teachers at Alexandria.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-active-alexandria",
+        "clm-pantaenus-teacher-of-clement",
+        "clm-pantaenus-active-india",
+        "clm-pantaenus-participant-india-mission",
+        "clm-person-pantaenus-affirms-bartholomew",
+        "clm-person-pantaenus-affirms-india"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-person-pantaenus-affirms-india",
+          "clm-peter-bishop-antioch"
+        ],
+        "psg-eusebius-he-5-10-1-2": [
+          "clm-arabian-christians-at-bostra",
+          "clm-clement-alex-active-athens",
+          "clm-clement-alex-affirms-incarnation",
+          "clm-clement-alex-affirms-ot-scripture",
+          "clm-clement-alex-member-alexandrian",
+          "clm-clement-teacher-of-origen",
+          "clm-eusebius-he-mentions-pantaenus-mission",
+          "clm-eusebius-he-written-caesarea",
+          "clm-origen-active-alexandria",
+          "clm-origen-member-alexandrian-church",
+          "clm-pantaenus-active-alexandria",
+          "clm-pantaenus-mission-year",
+          "clm-pantaenus-teacher-of-clement",
+          "clm-person-pantaenus-affirms-india"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-person-pantaenus-affirms-india",
+        "subject_type": "person",
+        "subject_id": "pantaenus",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "gospel-reached-india",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "180",
+        "year_end": "185",
+        "context_place_id": "india-malabar",
+        "certainty": "possible",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "pantaenus",
+        "person_label": "Pantaenus",
+        "name_alt": "Pantaenus of Alexandria",
+        "name_native": "Πάνταινος",
+        "birth_year_display": "c. 130",
+        "death_year_display": "c. 200",
+        "person_kind": "individual",
+        "notes": "Head of the Catechetical School of Alexandria before Clement; former Stoic philosopher converted to Christianity. According to Eusebius, he traveled as far as India as a missionary. He was Clement of Alexandria's primary teacher."
+      },
+      "object_entity": {
+        "proposition_id": "gospel-reached-india",
+        "topic_id": "christian-expansion",
+        "dimension_id": "india-reached",
+        "proposition_label": "The gospel reached India through early missionary or apostolic activity",
+        "polarity_family": "india_reached",
+        "description": "Christianity reached India — whether the Malabar coast or the broader \"India\" of ancient usage — through apostolic (Thomas, Bartholomew) or early missionary (Pantaenus) activity; attested by Eusebius HE 5.10 and Philostorgius.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "india-malabar",
+        "place_label": "India (Malabar)",
+        "place_label_modern": "Kerala",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "10.0000",
+        "lon": "76.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "India",
+        "notes": "Malabar coast of southwest India; traditional site of the Thomas Christians; Pantaenus reportedly found Christians using Matthew's Gospel here (Eusebius HE 5.10)."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-person-pantaenus-affirms-india",
+            "passage_id": "psg-eusebius-he-3-36",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes pantaenus's position on gospel-reached-india."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-3-36",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius HE 3.36",
+            "excerpt": "Paraphrase: Eusebius records Ignatius as bishop of Antioch after Peter, transported to Rome for martyrdom.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-person-pantaenus-affirms-india",
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eusebius HE 5.10.1-2 describes Pantaenus's mission to India and finding the Gospel of Matthew there."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-10-1-2",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.10.1–2",
+            "excerpt": "A man named Pantaenus was put in charge of the catechetical school at Alexandria, a school whose existence is attested from ancient times. This man had been trained in the Stoic system of philosophy; tradition reports he went as far as India to preach Christ to the Brahmans. Clement of Alexandria names him in his own writings as his instructor, showing that Pantaenus stood in the succession of teachers at Alexandria.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-pantaenus-active-alexandria",
+        "clm-pantaenus-member-alexandria-church",
+        "clm-pantaenus-teacher-of-clement",
+        "clm-pantaenus-active-india",
+        "clm-pantaenus-participant-india-mission",
+        "clm-person-pantaenus-affirms-bartholomew"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-eusebius-he-3-36": [
+          "clm-eusebius-active-alexandria",
+          "clm-eusebius-active-antioch",
+          "clm-eusebius-affirms-britannia",
+          "clm-eusebius-bishop-caesarea",
+          "clm-eusebius-he-mentions-thomas-india",
+          "clm-eusebius-member-caesarea",
+          "clm-eusebius-participant-council-nicaea",
+          "clm-eusebius-teacher-pantaenus",
+          "clm-ignatius-martyrdom-year",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-person-pantaenus-affirms-bartholomew",
+          "clm-peter-bishop-antioch"
+        ],
+        "psg-eusebius-he-5-10-1-2": [
+          "clm-arabian-christians-at-bostra",
+          "clm-clement-alex-active-athens",
+          "clm-clement-alex-affirms-incarnation",
+          "clm-clement-alex-affirms-ot-scripture",
+          "clm-clement-alex-member-alexandrian",
+          "clm-clement-teacher-of-origen",
+          "clm-eusebius-he-mentions-pantaenus-mission",
+          "clm-eusebius-he-written-caesarea",
+          "clm-origen-active-alexandria",
+          "clm-origen-member-alexandrian-church",
+          "clm-pantaenus-active-alexandria",
+          "clm-pantaenus-member-alexandria-church",
+          "clm-pantaenus-mission-year",
+          "clm-pantaenus-teacher-of-clement"
+        ]
+      },
+      "flags": [
+        "WEIGHT_CERTAINTY_TENSION:high_wt_possible:psg-eusebius-he-5-10-1-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aquila-active-ephesus",
+        "subject_type": "person",
+        "subject_id": "aquila",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "52",
+        "year_end": "55",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "person_id": "aquila",
+        "person_label": "Aquila",
+        "name_alt": "",
+        "name_native": "Ἀκύλας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Jewish Christian coworker of Paul associated with Corinth and Ephesus."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aquila-active-ephesus",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aquila-coworker-priscilla",
+        "clm-aquila-active-corinth",
+        "clm-aquila-member-corinthian",
+        "clm-aquila-coworker-paul",
+        "clm-aquila-teacher-of-apollos",
+        "clm-aquila-ephesian-church",
+        "clm-aquila-roman-church"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-at-egypt",
+          "clm-alexandrian-church-present",
+          "clm-apollos-active-achaia",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-alexandrian",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-alexandria-attested",
+          "clm-place-egypt-attested",
+          "clm-priscilla-active-ephesus",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-18-24-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-aquila-teacher-of-apollos",
+        "subject_type": "person",
+        "subject_id": "aquila",
+        "predicate_id": "teacher_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "apollos",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "50",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign5b-connections",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "person_id": "aquila",
+        "person_label": "Aquila",
+        "name_alt": "",
+        "name_native": "Ἀκύλας",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Jewish Christian coworker of Paul associated with Corinth and Ephesus."
+      },
+      "object_entity": {
+        "person_id": "apollos",
+        "person_label": "Apollos",
+        "name_alt": "",
+        "name_native": "Ἀπολλώς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Alexandrian Christian teacher active at Ephesus and in Achaia."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-aquila-teacher-of-apollos",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "Acts 18:26: both Priscilla and Aquila instructed Apollos."
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-aquila-coworker-priscilla",
+        "clm-aquila-active-corinth",
+        "clm-aquila-member-corinthian",
+        "clm-aquila-coworker-paul",
+        "clm-aquila-active-ephesus",
+        "clm-aquila-ephesian-church",
+        "clm-aquila-roman-church"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-at-egypt",
+          "clm-alexandrian-church-present",
+          "clm-apollos-active-achaia",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-alexandrian",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-active-ephesus",
+          "clm-place-alexandria-attested",
+          "clm-place-egypt-attested",
+          "clm-priscilla-active-ephesus",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-18-24-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-alexandrian-church-present",
+        "subject_type": "group",
+        "subject_id": "alexandrian-church",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "alexandria",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T00:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "alexandrian-church",
+        "group_label": "Church in Alexandria",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Alexandria; home of the Catechetical School; major center of Greek-speaking Christianity from the late first century onward."
+      },
+      "object_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-alexandrian-church-present",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts 18:24 attests Apollos as an Alexandrian, evidencing the Alexandrian church."
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-alexandrian-church-at-egypt"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-at-egypt",
+          "clm-apollos-active-achaia",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-alexandrian",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-active-ephesus",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-alexandria-attested",
+          "clm-place-egypt-attested",
+          "clm-priscilla-active-ephesus",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-18-24-28",
+        "PARAPHRASE_RISK:psg-acts-18-24-28",
+        "PARAPHRASE_OMISSION:psg-acts-18-24-28:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-place-alexandria-attested",
+        "subject_type": "place",
+        "subject_id": "alexandria",
+        "predicate_id": "place_presence_status",
+        "object_mode": "text",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "attested",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-place-alexandria-attested",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts 18:24 attests Apollos as an Alexandrian."
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-at-egypt",
+          "clm-alexandrian-church-present",
+          "clm-apollos-active-achaia",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-alexandrian",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-active-ephesus",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-egypt-attested",
+          "clm-priscilla-active-ephesus",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-18-24-28",
+        "PARAPHRASE_RISK:psg-acts-18-24-28",
+        "PARAPHRASE_OMISSION:psg-acts-18-24-28:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-priscilla-teacher-of-apollos",
+        "subject_type": "person",
+        "subject_id": "priscilla",
+        "predicate_id": "teacher_of",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "apollos",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "50",
+        "year_end": "60",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "campaign5b-connections",
+        "updated_at": "2025-01-15"
+      },
+      "subject_entity": {
+        "person_id": "priscilla",
+        "person_label": "Priscilla",
+        "name_alt": "Prisca",
+        "name_native": "Πρίσκα",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Coworker of Paul associated with Corinth and Ephesus."
+      },
+      "object_entity": {
+        "person_id": "apollos",
+        "person_label": "Apollos",
+        "name_alt": "",
+        "name_native": "Ἀπολλώς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Alexandrian Christian teacher active at Ephesus and in Achaia."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-priscilla-teacher-of-apollos",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "Acts 18:26: 'Priscilla and Aquila... invited him to their home and explained to him the way of God more adequately.'"
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-priscilla-active-corinth",
+        "clm-priscilla-member-corinthian",
+        "clm-priscilla-active-ephesus",
+        "clm-priscilla-member-ephesian",
+        "clm-priscilla-active-rome",
+        "clm-priscilla-roman-church"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-at-egypt",
+          "clm-alexandrian-church-present",
+          "clm-apollos-active-achaia",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-alexandrian",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-active-ephesus",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-alexandria-attested",
+          "clm-place-egypt-attested",
+          "clm-priscilla-active-ephesus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-18-24-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-apollos-member-alexandrian",
+        "subject_type": "person",
+        "subject_id": "apollos",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "alexandrian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "50",
+        "year_end": "53",
+        "context_place_id": "alexandria",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "apollos",
+        "person_label": "Apollos",
+        "name_alt": "",
+        "name_native": "Ἀπολλώς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Alexandrian Christian teacher active at Ephesus and in Achaia."
+      },
+      "object_entity": {
+        "group_id": "alexandrian-church",
+        "group_label": "Church in Alexandria",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Alexandria; home of the Catechetical School; major center of Greek-speaking Christianity from the late first century onward."
+      },
+      "context_place": {
+        "place_id": "alexandria",
+        "place_label": "Alexandria",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "egypt",
+        "lat": "31.2001",
+        "lon": "29.9187",
+        "location_precision": "approx_city",
+        "modern_country_label": "Egypt",
+        "notes": "Major Egyptian port city; intellectual and commercial center; seat of the Catechetical School; major Christian center from the first century onward."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-apollos-member-alexandrian",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Acts 18:24 identifies Apollos as an Alexandrian."
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-apollos-coworker-paul",
+        "clm-apollos-member-ephesian",
+        "clm-apollos-coworker-aquila",
+        "clm-apollos-coworker-priscilla",
+        "clm-apollos-active-ephesus",
+        "clm-apollos-active-corinth",
+        "clm-apollos-member-corinthian",
+        "clm-apollos-active-achaia"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-at-egypt",
+          "clm-alexandrian-church-present",
+          "clm-apollos-active-achaia",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-active-ephesus",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-alexandria-attested",
+          "clm-place-egypt-attested",
+          "clm-priscilla-active-ephesus",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-18-24-28",
+        "PARAPHRASE_OMISSION:psg-acts-18-24-28:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-apollos-active-ephesus",
+        "subject_type": "person",
+        "subject_id": "apollos",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "53",
+        "year_end": "54",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "person_id": "apollos",
+        "person_label": "Apollos",
+        "name_alt": "",
+        "name_native": "Ἀπολλώς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Alexandrian Christian teacher active at Ephesus and in Achaia."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-apollos-active-ephesus",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-apollos-member-alexandrian",
+        "clm-apollos-coworker-paul",
+        "clm-apollos-member-ephesian",
+        "clm-apollos-coworker-aquila",
+        "clm-apollos-coworker-priscilla",
+        "clm-apollos-active-corinth",
+        "clm-apollos-member-corinthian",
+        "clm-apollos-active-achaia"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-at-egypt",
+          "clm-alexandrian-church-present",
+          "clm-apollos-active-achaia",
+          "clm-apollos-member-alexandrian",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-active-ephesus",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-alexandria-attested",
+          "clm-place-egypt-attested",
+          "clm-priscilla-active-ephesus",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-18-24-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-apollos-member-ephesian",
+        "subject_type": "person",
+        "subject_id": "apollos",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "ephesian-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "52",
+        "year_end": "53",
+        "context_place_id": "ephesus",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "apollos",
+        "person_label": "Apollos",
+        "name_alt": "",
+        "name_native": "Ἀπολλώς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Alexandrian Christian teacher active at Ephesus and in Achaia."
+      },
+      "object_entity": {
+        "group_id": "ephesian-church",
+        "group_label": "Church in Ephesus",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Ephesus attested in Acts and Revelation."
+      },
+      "context_place": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-apollos-member-ephesian",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-apollos-member-alexandrian",
+        "clm-apollos-coworker-paul",
+        "clm-apollos-coworker-aquila",
+        "clm-apollos-coworker-priscilla",
+        "clm-apollos-active-ephesus",
+        "clm-apollos-active-corinth",
+        "clm-apollos-member-corinthian",
+        "clm-apollos-active-achaia"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-at-egypt",
+          "clm-alexandrian-church-present",
+          "clm-apollos-active-achaia",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-alexandrian",
+          "clm-aquila-active-ephesus",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-alexandria-attested",
+          "clm-place-egypt-attested",
+          "clm-priscilla-active-ephesus",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-18-24-28",
+        "PARAPHRASE_OMISSION:psg-acts-18-24-28:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-priscilla-active-ephesus",
+        "subject_type": "person",
+        "subject_id": "priscilla",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "ephesus",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "52",
+        "year_end": "55",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T04:20:00Z"
+      },
+      "subject_entity": {
+        "person_id": "priscilla",
+        "person_label": "Priscilla",
+        "name_alt": "Prisca",
+        "name_native": "Πρίσκα",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Coworker of Paul associated with Corinth and Ephesus."
+      },
+      "object_entity": {
+        "place_id": "ephesus",
+        "place_label": "Ephesus",
+        "place_label_modern": "Selçuk region",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.9410",
+        "lon": "27.3410",
+        "location_precision": "approx_site",
+        "modern_country_label": "Turkey",
+        "notes": "Major urban center in Asia associated with Paul long ministry and later Johannine tradition."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-priscilla-active-ephesus",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-priscilla-active-corinth",
+        "clm-priscilla-member-corinthian",
+        "clm-priscilla-teacher-of-apollos",
+        "clm-priscilla-member-ephesian",
+        "clm-priscilla-active-rome",
+        "clm-priscilla-roman-church"
+      ],
+      "sibling_count": 6,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-at-egypt",
+          "clm-alexandrian-church-present",
+          "clm-apollos-active-achaia",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-alexandrian",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-active-ephesus",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-alexandria-attested",
+          "clm-place-egypt-attested",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-18-24-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-place-egypt-attested",
+        "subject_type": "place",
+        "subject_id": "egypt",
+        "predicate_id": "place_presence_status",
+        "object_mode": "text",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "attested",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "place_id": "egypt",
+        "place_label": "Egypt",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "26.0000",
+        "lon": "30.0000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Egypt",
+        "notes": "Roman province encompassing the Nile valley; home of the Alexandrian church tradition and early monasticism."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-place-egypt-attested",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "subject",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts 18:24 identifies Apollos as Alexandrian — direct attestation of Egypt as Christian center."
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [],
+      "sibling_count": 0,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-at-egypt",
+          "clm-alexandrian-church-present",
+          "clm-apollos-active-achaia",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-alexandrian",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-active-ephesus",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-alexandria-attested",
+          "clm-priscilla-active-ephesus",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-18-24-28",
+        "PARAPHRASE_RISK:psg-acts-18-24-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-alexandrian-church-at-egypt",
+        "subject_type": "group",
+        "subject_id": "alexandrian-church",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "egypt",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "70",
+        "year_end": "400",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "alexandrian-church",
+        "group_label": "Church in Alexandria",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Alexandria; home of the Catechetical School; major center of Greek-speaking Christianity from the late first century onward."
+      },
+      "object_entity": {
+        "place_id": "egypt",
+        "place_label": "Egypt",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "26.0000",
+        "lon": "30.0000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Egypt",
+        "notes": "Roman province encompassing the Nile valley; home of the Alexandrian church tradition and early monasticism."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-alexandrian-church-at-egypt",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Acts 18:24 identifies Apollos as 'a native of Alexandria' who knew Christian teaching, directly attesting an Alexandrian Christian community."
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-alexandrian-church-present"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-present",
+          "clm-apollos-active-achaia",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-alexandrian",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-active-ephesus",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-alexandria-attested",
+          "clm-place-egypt-attested",
+          "clm-priscilla-active-ephesus",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-acts-18-24-28",
+        "PARAPHRASE_RISK:psg-acts-18-24-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-apollos-active-achaia",
+        "subject_type": "person",
+        "subject_id": "apollos",
+        "predicate_id": "active_in",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "achaia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "54",
+        "year_end": "55",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T10:10:00Z"
+      },
+      "subject_entity": {
+        "person_id": "apollos",
+        "person_label": "Apollos",
+        "name_alt": "",
+        "name_native": "Ἀπολλώς",
+        "birth_year_display": "",
+        "death_year_display": "",
+        "person_kind": "individual",
+        "notes": "Alexandrian Christian teacher active at Ephesus and in Achaia."
+      },
+      "object_entity": {
+        "place_id": "achaia",
+        "place_label": "Achaia",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "38.2000",
+        "lon": "22.5000",
+        "location_precision": "approx_region",
+        "modern_country_label": "Greece",
+        "notes": "Roman province/region associated with Corinth and addressed alongside the Corinthian church in 2 Corinthians."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-apollos-active-achaia",
+            "passage_id": "psg-acts-18-24-28",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-acts-18-24-28",
+            "source_id": "src-acts",
+            "locator_type": "bible_osis",
+            "locator": "Acts.18.24-28",
+            "excerpt": "Paraphrase: Apollos arrives at Ephesus, is instructed more accurately by Priscilla and Aquila, and later assists believers in Achaia.",
+            "language": "English",
+            "passage_year": "85",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-acts",
+            "work_id": "acts-of-the-apostles",
+            "source_kind": "primary_text",
+            "title": "Acts of the Apostles",
+            "author": "Traditionally Luke",
+            "editor": "",
+            "year_display": "c. 80-90",
+            "year_start": "80",
+            "year_end": "90",
+            "container_title": "New Testament",
+            "publisher": "",
+            "url": "https://www.stepbible.org/?q=reference=Acts",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Narrative witness for the apostolic expansion beyond Judea."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-apollos-member-alexandrian",
+        "clm-apollos-coworker-paul",
+        "clm-apollos-member-ephesian",
+        "clm-apollos-coworker-aquila",
+        "clm-apollos-coworker-priscilla",
+        "clm-apollos-active-ephesus",
+        "clm-apollos-active-corinth",
+        "clm-apollos-member-corinthian"
+      ],
+      "sibling_count": 8,
+      "passage_co_users": {
+        "psg-acts-18-24-28": [
+          "clm-alexandrian-church-at-egypt",
+          "clm-alexandrian-church-present",
+          "clm-apollos-active-ephesus",
+          "clm-apollos-member-alexandrian",
+          "clm-apollos-member-ephesian",
+          "clm-aquila-active-ephesus",
+          "clm-aquila-teacher-of-apollos",
+          "clm-place-alexandria-attested",
+          "clm-place-egypt-attested",
+          "clm-priscilla-active-ephesus",
+          "clm-priscilla-teacher-of-apollos"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-acts-18-24-28"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nicaea-year-325",
+        "subject_type": "event",
+        "subject_id": "council-of-nicaea-325",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "325",
+        "value_boolean": "",
+        "year_start": "325",
+        "year_end": "325",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T11:30:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-nicaea-325",
+        "event_label": "First Council of Nicaea (325)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "First ecumenical council convened by Emperor Constantine at Nicaea in Bithynia, May–August 325 CE. Addressed the Arian controversy; produced the original Nicene Creed affirming the Son as homoousios (same substance) with the Father; condemned Arius; standardized Easter dating; addressed the Meletian schism in Egypt. Attended by ~300 bishops, mostly from the East. Jacob of Nisibis and Eusebius of Caesarea were among the attendees."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nicaea-year-325",
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "The First Council of Nicaea was held in 325 CE."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "VC 3.6-14",
+            "excerpt": "Constantine convened the universal synod at Nicaea in Bithynia, gathering bishops from all regions of the empire.",
+            "language": "el",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "Vita Constantini 3.6-14; primary narrative source for Nicaea."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nicaea-occurs-at-nicaea"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-vita-const-3-6": [
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-participant-nicaea",
+          "clm-church-east-at-nisibis",
+          "clm-constantine-convenes-nicaea",
+          "clm-ephrem-coworker-jacob",
+          "clm-eusebius-participant-nicaea",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-participant-nicaea",
+          "clm-jacob-teacher-ephrem",
+          "clm-nicaea-occurs-at-nicaea"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-church-east-at-nisibis",
+        "subject_type": "group",
+        "subject_id": "church-of-the-east",
+        "predicate_id": "group_present_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "nisibis",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "280",
+        "year_end": "363",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "group_id": "church-of-the-east",
+        "group_label": "Church of the East",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in the Sasanian Persian Empire centered on Seleucia-Ctesiphon; developed independently of the Roman imperial church; used the Diatessaron as its gospel text until the 5th century; organized under a Catholicos from the early 4th century."
+      },
+      "object_entity": {
+        "place_id": "nisibis",
+        "place_label": "Nisibis",
+        "place_label_modern": "Nusaybin",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.0700",
+        "lon": "41.2150",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Major frontier city between Rome and Persia; home of Ephrem the Syrian until 363; seat of Bishop Jacob of Nisibis; ceded to Persia by Jovian's treaty of 363."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-church-east-at-nisibis",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "0.3",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-church-east-at-nisibis",
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Vita Const. 3 documents the council where Jacob of Nisibis (Church of the East) represented Nisibis."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "VC 3.6-14",
+            "excerpt": "Constantine convened the universal synod at Nicaea in Bithynia, gathering bishops from all regions of the empire.",
+            "language": "el",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "Vita Constantini 3.6-14; primary narrative source for Nicaea."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-church-east-at-arbela",
+        "clm-church-east-at-edessa",
+        "clm-church-east-at-india",
+        "clm-church-east-at-seleucia"
+      ],
+      "sibling_count": 4,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ],
+        "psg-eusebius-vita-const-3-6": [
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-participant-nicaea",
+          "clm-constantine-convenes-nicaea",
+          "clm-ephrem-coworker-jacob",
+          "clm-eusebius-participant-nicaea",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-participant-nicaea",
+          "clm-jacob-teacher-ephrem",
+          "clm-nicaea-occurs-at-nicaea",
+          "clm-nicaea-year-325"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-eusebius-participant-nicaea",
+        "subject_type": "person",
+        "subject_id": "eusebius-of-caesarea",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "council-of-nicaea-325",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "325",
+        "year_end": "325",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T11:30:00Z"
+      },
+      "subject_entity": {
+        "person_id": "eusebius-of-caesarea",
+        "person_label": "Eusebius of Caesarea",
+        "name_alt": "Eusebius Pamphili",
+        "name_native": "Εὐσέβιος",
+        "birth_year_display": "c. 260",
+        "death_year_display": "c. 339",
+        "person_kind": "individual",
+        "notes": "Bishop of Caesarea c. 313–339; author of the Ecclesiastical History, Life of Constantine, and other works; key source for early church history; present at the Council of Nicaea 325; moderate position on Arianism."
+      },
+      "object_entity": {
+        "event_id": "council-of-nicaea-325",
+        "event_label": "First Council of Nicaea (325)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "First ecumenical council convened by Emperor Constantine at Nicaea in Bithynia, May–August 325 CE. Addressed the Arian controversy; produced the original Nicene Creed affirming the Son as homoousios (same substance) with the Father; condemned Arius; standardized Easter dating; addressed the Meletian schism in Egypt. Attended by ~300 bishops, mostly from the East. Jacob of Nisibis and Eusebius of Caesarea were among the attendees."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-eusebius-participant-nicaea",
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eusebius of Caesarea attended and wrote an account of Nicaea in his letter to his church (apud Theodoret HE 1.11) and in Vita Constantini 3."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "VC 3.6-14",
+            "excerpt": "Constantine convened the universal synod at Nicaea in Bithynia, gathering bishops from all regions of the empire.",
+            "language": "el",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "Vita Constantini 3.6-14; primary narrative source for Nicaea."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-eusebius-active-alexandria",
+        "clm-eusebius-affirms-bodily-resurrection",
+        "clm-eusebius-affirms-incarnation",
+        "clm-eusebius-affirms-logos",
+        "clm-eusebius-affirms-ot-scripture",
+        "clm-eusebius-affirms-rule-of-faith",
+        "clm-eusebius-affirms-succession",
+        "clm-eusebius-bishop-caesarea",
+        "clm-eusebius-member-caesarea",
+        "clm-eusebius-participant-council-nicaea",
+        "clm-eusebius-affirms-britannia",
+        "clm-eusebius-active-antioch"
+      ],
+      "sibling_count": 12,
+      "passage_co_users": {
+        "psg-eusebius-vita-const-3-6": [
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-participant-nicaea",
+          "clm-church-east-at-nisibis",
+          "clm-constantine-convenes-nicaea",
+          "clm-ephrem-coworker-jacob",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-participant-nicaea",
+          "clm-jacob-teacher-ephrem",
+          "clm-nicaea-occurs-at-nicaea",
+          "clm-nicaea-year-325"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-nicaea-occurs-at-nicaea",
+        "subject_type": "event",
+        "subject_id": "council-of-nicaea-325",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "nicaea",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "325",
+        "year_end": "325",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade-curator",
+        "updated_at": "2026-03-17T11:30:00Z"
+      },
+      "subject_entity": {
+        "event_id": "council-of-nicaea-325",
+        "event_label": "First Council of Nicaea (325)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "First ecumenical council convened by Emperor Constantine at Nicaea in Bithynia, May–August 325 CE. Addressed the Arian controversy; produced the original Nicene Creed affirming the Son as homoousios (same substance) with the Father; condemned Arius; standardized Easter dating; addressed the Meletian schism in Egypt. Attended by ~300 bishops, mostly from the East. Jacob of Nisibis and Eusebius of Caesarea were among the attendees."
+      },
+      "object_entity": {
+        "place_id": "nicaea",
+        "place_label": "Nicaea",
+        "place_label_modern": "İznik, Turkey",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "40.4261",
+        "lon": "29.7183",
+        "location_precision": "approx_city",
+        "modern_country_label": "",
+        "notes": "Ancient city in Bithynia (modern İznik, Turkey); site of the First Ecumenical Council (325 CE) and Second Ecumenical Council (787 CE)."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-nicaea-occurs-at-nicaea",
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "The First Council of Nicaea convened at Nicaea in Bithynia, 325 CE."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-vita-const-3-6",
+            "source_id": "src-vita-constantini",
+            "locator_type": "source_ref",
+            "locator": "VC 3.6-14",
+            "excerpt": "Constantine convened the universal synod at Nicaea in Bithynia, gathering bishops from all regions of the empire.",
+            "language": "el",
+            "passage_year": "337",
+            "url_override": "",
+            "notes": "Vita Constantini 3.6-14; primary narrative source for Nicaea."
+          },
+          "source": {
+            "source_id": "src-vita-constantini",
+            "work_id": "vita-constantini-eusebius",
+            "source_kind": "primary_text",
+            "title": "Life of Constantine",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 337–339",
+            "year_start": "337",
+            "year_end": "339",
+            "container_title": "NPNF Series 2 Vol. 1",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/25024.htm",
+            "accessed_on": "2026-03-11",
+            "isbn_issn": "",
+            "notes": "Eusebius's panegyrical biography; NPNF translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-nicaea-year-325"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-vita-const-3-6": [
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-participant-nicaea",
+          "clm-church-east-at-nisibis",
+          "clm-constantine-convenes-nicaea",
+          "clm-ephrem-coworker-jacob",
+          "clm-eusebius-participant-nicaea",
+          "clm-fall-nisibis-at-nisibis",
+          "clm-jacob-bishop-nisibis",
+          "clm-jacob-participant-nicaea",
+          "clm-jacob-teacher-ephrem",
+          "clm-nicaea-year-325"
+        ]
+      },
+      "flags": []
+    }
+  ]
+}

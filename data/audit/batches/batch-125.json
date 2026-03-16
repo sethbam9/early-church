@@ -1,0 +1,2400 @@
+{
+  "batch_id": "batch-125",
+  "queue": "1",
+  "focus": "contra-noetum; adversus-marcionem; cornelius-pope",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-cn-written-rome",
+        "subject_type": "work",
+        "subject_id": "contra-noetum",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "210",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "contra-noetum",
+        "title_display": "Contra Noetum (Against Noetus)",
+        "title_original": "Πρὸς Νοητόν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise against the modalist Noetus of Smyrna, c. 200–210; defends the distinction of Father and Son against Patripassianism; affirms the Logos as a distinct divine person who became incarnate; important pre-Nicene trinitarian witness."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cn-written-rome",
+            "passage_id": "psg-hippolytus-cn-1",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Against Noetus reflects the Roman anti-modalist context."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-cn-1",
+            "source_id": "src-hippolytus-contra-noetum",
+            "locator_type": "source_ref",
+            "locator": "CN 1",
+            "excerpt": "Paraphrase: Some introduce among us a certain Noetus of Smyrna, who taught that Christ himself was the Father, and that the Father himself was born and suffered and died. They say: Christ was himself the Father and the Father himself suffered.",
+            "language": "English",
+            "passage_year": "205",
+            "url_override": "",
+            "notes": "Introduction of Noetus's modalism/Patripassianism: Father = Son = Christ who suffered"
+          },
+          "source": {
+            "source_id": "src-hippolytus-contra-noetum",
+            "work_id": "contra-noetum",
+            "source_kind": "primary_text",
+            "title": "Against Noetus",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200-210",
+            "year_start": "200",
+            "year_end": "210",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0521.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Anti-modalist treatise defending distinction of Father and Son; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cn-affirms-incarnation",
+        "clm-cn-affirms-logos",
+        "clm-cn-affirms-ot-scripture",
+        "clm-cn-affirms-passion",
+        "clm-cn-affirms-resurrection",
+        "clm-cn-affirms-trinity",
+        "clm-cn-by-hippolytus"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-hippolytus-cn-1": [
+          "clm-cn-affirms-ot-scripture",
+          "clm-cn-affirms-passion",
+          "clm-cn-by-hippolytus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-cn-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cn-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "contra-noetum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "210",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "contra-noetum",
+        "title_display": "Contra Noetum (Against Noetus)",
+        "title_original": "Πρὸς Νοητόν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise against the modalist Noetus of Smyrna, c. 200–210; defends the distinction of Father and Son against Patripassianism; affirms the Logos as a distinct divine person who became incarnate; important pre-Nicene trinitarian witness."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cn-affirms-incarnation",
+            "passage_id": "psg-hippolytus-cn-10-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "CN teaches that the Word became the Son of God and was made manifest in the flesh."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-cn-10-11",
+            "source_id": "src-hippolytus-contra-noetum",
+            "locator_type": "source_ref",
+            "locator": "CN 10-11",
+            "excerpt": "Paraphrase: God being alone, and having nothing contemporaneous with himself, determined to create the world. He conceived the world in thought and will. He begat the Word, firstborn of all creation, not as a voice but as the internal reckoning of all things. This was the companion of the Father. The Word was made manifest and became the Son of God.",
+            "language": "English",
+            "passage_year": "205",
+            "url_override": "",
+            "notes": "Logos doctrine against modalism; Word begotten from the Father as distinct person; anti-modalist Logos theology"
+          },
+          "source": {
+            "source_id": "src-hippolytus-contra-noetum",
+            "work_id": "contra-noetum",
+            "source_kind": "primary_text",
+            "title": "Against Noetus",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200-210",
+            "year_start": "200",
+            "year_end": "210",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0521.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Anti-modalist treatise defending distinction of Father and Son; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cn-affirms-logos",
+        "clm-cn-affirms-ot-scripture",
+        "clm-cn-affirms-passion",
+        "clm-cn-affirms-resurrection",
+        "clm-cn-affirms-trinity",
+        "clm-cn-written-rome",
+        "clm-cn-by-hippolytus"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-hippolytus-cn-10-11": [
+          "clm-cn-affirms-logos",
+          "clm-irenaeus-teacher-hippolytus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-cn-10-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cn-affirms-logos",
+        "subject_type": "work",
+        "subject_id": "contra-noetum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "logos-is-pre-existent-son-of-god",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "210",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "contra-noetum",
+        "title_display": "Contra Noetum (Against Noetus)",
+        "title_original": "Πρὸς Νοητόν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise against the modalist Noetus of Smyrna, c. 200–210; defends the distinction of Father and Son against Patripassianism; affirms the Logos as a distinct divine person who became incarnate; important pre-Nicene trinitarian witness."
+      },
+      "object_entity": {
+        "proposition_id": "logos-is-pre-existent-son-of-god",
+        "topic_id": "logos-theology",
+        "dimension_id": "logos-pre-existence",
+        "proposition_label": "Christ the Logos is the pre-existent Son of God",
+        "polarity_family": "logos_preexistence",
+        "description": "The Word/Logos of God, who became incarnate as Jesus Christ, pre-existed creation as the Son and mind of the Father, through whom all things were made.",
+        "notes": "Logos theology"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cn-affirms-logos",
+            "passage_id": "psg-hippolytus-cn-10-11",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "CN 10-11 explicitly teaches the Word begotten from the Father as a distinct divine person."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-cn-10-11",
+            "source_id": "src-hippolytus-contra-noetum",
+            "locator_type": "source_ref",
+            "locator": "CN 10-11",
+            "excerpt": "Paraphrase: God being alone, and having nothing contemporaneous with himself, determined to create the world. He conceived the world in thought and will. He begat the Word, firstborn of all creation, not as a voice but as the internal reckoning of all things. This was the companion of the Father. The Word was made manifest and became the Son of God.",
+            "language": "English",
+            "passage_year": "205",
+            "url_override": "",
+            "notes": "Logos doctrine against modalism; Word begotten from the Father as distinct person; anti-modalist Logos theology"
+          },
+          "source": {
+            "source_id": "src-hippolytus-contra-noetum",
+            "work_id": "contra-noetum",
+            "source_kind": "primary_text",
+            "title": "Against Noetus",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200-210",
+            "year_start": "200",
+            "year_end": "210",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0521.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Anti-modalist treatise defending distinction of Father and Son; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cn-affirms-incarnation",
+        "clm-cn-affirms-ot-scripture",
+        "clm-cn-affirms-passion",
+        "clm-cn-affirms-resurrection",
+        "clm-cn-affirms-trinity",
+        "clm-cn-written-rome",
+        "clm-cn-by-hippolytus"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-hippolytus-cn-10-11": [
+          "clm-cn-affirms-incarnation",
+          "clm-irenaeus-teacher-hippolytus"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-cn-10-11"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cn-affirms-ot-scripture",
+        "subject_type": "work",
+        "subject_id": "contra-noetum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "210",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "contra-noetum",
+        "title_display": "Contra Noetum (Against Noetus)",
+        "title_original": "Πρὸς Νοητόν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise against the modalist Noetus of Smyrna, c. 200–210; defends the distinction of Father and Son against Patripassianism; affirms the Logos as a distinct divine person who became incarnate; important pre-Nicene trinitarian witness."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cn-affirms-ot-scripture",
+            "passage_id": "psg-hippolytus-cn-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "CN's argument is built on OT scriptural citations throughout."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-cn-1",
+            "source_id": "src-hippolytus-contra-noetum",
+            "locator_type": "source_ref",
+            "locator": "CN 1",
+            "excerpt": "Paraphrase: Some introduce among us a certain Noetus of Smyrna, who taught that Christ himself was the Father, and that the Father himself was born and suffered and died. They say: Christ was himself the Father and the Father himself suffered.",
+            "language": "English",
+            "passage_year": "205",
+            "url_override": "",
+            "notes": "Introduction of Noetus's modalism/Patripassianism: Father = Son = Christ who suffered"
+          },
+          "source": {
+            "source_id": "src-hippolytus-contra-noetum",
+            "work_id": "contra-noetum",
+            "source_kind": "primary_text",
+            "title": "Against Noetus",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200-210",
+            "year_start": "200",
+            "year_end": "210",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0521.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Anti-modalist treatise defending distinction of Father and Son; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cn-affirms-incarnation",
+        "clm-cn-affirms-logos",
+        "clm-cn-affirms-passion",
+        "clm-cn-affirms-resurrection",
+        "clm-cn-affirms-trinity",
+        "clm-cn-written-rome",
+        "clm-cn-by-hippolytus"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-hippolytus-cn-1": [
+          "clm-cn-affirms-passion",
+          "clm-cn-by-hippolytus",
+          "clm-cn-written-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-cn-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cn-affirms-passion",
+        "subject_type": "work",
+        "subject_id": "contra-noetum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-suffered-and-died",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "210",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "contra-noetum",
+        "title_display": "Contra Noetum (Against Noetus)",
+        "title_original": "Πρὸς Νοητόν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise against the modalist Noetus of Smyrna, c. 200–210; defends the distinction of Father and Son against Patripassianism; affirms the Logos as a distinct divine person who became incarnate; important pre-Nicene trinitarian witness."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-suffered-and-died",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "passion-reality",
+        "proposition_label": "Christ Truly Suffered and Died",
+        "polarity_family": "",
+        "description": "Christ's passion and death on the cross were genuine physical events, not apparent, symbolic, or borne by a substitute. Denied by docetists, Basilides (Simon Cyrene substitution), Marcion, and Cerinthus.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cn-affirms-passion",
+            "passage_id": "psg-hippolytus-cn-1",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "CN refutes Patripassianism by affirming the Son, not the Father, truly suffered."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-cn-1",
+            "source_id": "src-hippolytus-contra-noetum",
+            "locator_type": "source_ref",
+            "locator": "CN 1",
+            "excerpt": "Paraphrase: Some introduce among us a certain Noetus of Smyrna, who taught that Christ himself was the Father, and that the Father himself was born and suffered and died. They say: Christ was himself the Father and the Father himself suffered.",
+            "language": "English",
+            "passage_year": "205",
+            "url_override": "",
+            "notes": "Introduction of Noetus's modalism/Patripassianism: Father = Son = Christ who suffered"
+          },
+          "source": {
+            "source_id": "src-hippolytus-contra-noetum",
+            "work_id": "contra-noetum",
+            "source_kind": "primary_text",
+            "title": "Against Noetus",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200-210",
+            "year_start": "200",
+            "year_end": "210",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0521.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Anti-modalist treatise defending distinction of Father and Son; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cn-affirms-incarnation",
+        "clm-cn-affirms-logos",
+        "clm-cn-affirms-ot-scripture",
+        "clm-cn-affirms-resurrection",
+        "clm-cn-affirms-trinity",
+        "clm-cn-written-rome",
+        "clm-cn-by-hippolytus"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-hippolytus-cn-1": [
+          "clm-cn-affirms-ot-scripture",
+          "clm-cn-by-hippolytus",
+          "clm-cn-written-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-cn-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cn-affirms-resurrection",
+        "subject_type": "work",
+        "subject_id": "contra-noetum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "210",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "contra-noetum",
+        "title_display": "Contra Noetum (Against Noetus)",
+        "title_original": "Πρὸς Νοητόν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise against the modalist Noetus of Smyrna, c. 200–210; defends the distinction of Father and Son against Patripassianism; affirms the Logos as a distinct divine person who became incarnate; important pre-Nicene trinitarian witness."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cn-affirms-resurrection",
+            "passage_id": "psg-hippolytus-cn-17-18",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "CN's trinitarian framework presupposes bodily resurrection as part of the creedal tradition."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-cn-17-18",
+            "source_id": "src-hippolytus-contra-noetum",
+            "locator_type": "source_ref",
+            "locator": "CN 17-18",
+            "excerpt": "These things then, brethren, are demonstrated by the blessed John and by the Word of truth. Let us therefore glorify God: the Father and the Son, with the Holy Spirit — the holy Trinity. For as the Father is one, his Word is one, and the Spirit from God is one, and one only.",
+            "language": "English",
+            "passage_year": "205",
+            "url_override": "",
+            "notes": "Trinitarian doxology: Father, Son, Holy Spirit; one Trinity; anti-modalist conclusion"
+          },
+          "source": {
+            "source_id": "src-hippolytus-contra-noetum",
+            "work_id": "contra-noetum",
+            "source_kind": "primary_text",
+            "title": "Against Noetus",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200-210",
+            "year_start": "200",
+            "year_end": "210",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0521.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Anti-modalist treatise defending distinction of Father and Son; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cn-affirms-incarnation",
+        "clm-cn-affirms-logos",
+        "clm-cn-affirms-ot-scripture",
+        "clm-cn-affirms-passion",
+        "clm-cn-affirms-trinity",
+        "clm-cn-written-rome",
+        "clm-cn-by-hippolytus"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-hippolytus-cn-17-18": [
+          "clm-cn-affirms-trinity"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cn-affirms-trinity",
+        "subject_type": "work",
+        "subject_id": "contra-noetum",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "trinity-is-three-persons-one-substance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "210",
+        "context_place_id": "rome",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "contra-noetum",
+        "title_display": "Contra Noetum (Against Noetus)",
+        "title_original": "Πρὸς Νοητόν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Hippolytus's treatise against the modalist Noetus of Smyrna, c. 200–210; defends the distinction of Father and Son against Patripassianism; affirms the Logos as a distinct divine person who became incarnate; important pre-Nicene trinitarian witness."
+      },
+      "object_entity": {
+        "proposition_id": "trinity-is-three-persons-one-substance",
+        "topic_id": "trinitarian-theology",
+        "dimension_id": "trinitarian-formula",
+        "proposition_label": "God is three persons — Father, Son, and Holy Spirit — in one substance",
+        "polarity_family": "trinitarian_formula",
+        "description": "The one God subsists in three persons (personae) — Father, Son, and Holy Spirit — who share one substance (substantia); the Son proceeds from the Father and the Spirit from both, without dividing the divine substance.",
+        "notes": "Trinitarian formula"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cn-affirms-trinity",
+            "passage_id": "psg-hippolytus-cn-17-18",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "CN 17-18 concludes with a trinitarian doxology: Father, Son, Holy Spirit — one Trinity."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-cn-17-18",
+            "source_id": "src-hippolytus-contra-noetum",
+            "locator_type": "source_ref",
+            "locator": "CN 17-18",
+            "excerpt": "These things then, brethren, are demonstrated by the blessed John and by the Word of truth. Let us therefore glorify God: the Father and the Son, with the Holy Spirit — the holy Trinity. For as the Father is one, his Word is one, and the Spirit from God is one, and one only.",
+            "language": "English",
+            "passage_year": "205",
+            "url_override": "",
+            "notes": "Trinitarian doxology: Father, Son, Holy Spirit; one Trinity; anti-modalist conclusion"
+          },
+          "source": {
+            "source_id": "src-hippolytus-contra-noetum",
+            "work_id": "contra-noetum",
+            "source_kind": "primary_text",
+            "title": "Against Noetus",
+            "author": "Hippolytus of Rome",
+            "editor": "",
+            "year_display": "c. 200-210",
+            "year_start": "200",
+            "year_end": "210",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0521.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Anti-modalist treatise defending distinction of Father and Son; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cn-affirms-incarnation",
+        "clm-cn-affirms-logos",
+        "clm-cn-affirms-ot-scripture",
+        "clm-cn-affirms-passion",
+        "clm-cn-affirms-resurrection",
+        "clm-cn-written-rome",
+        "clm-cn-by-hippolytus"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-hippolytus-cn-17-18": [
+          "clm-cn-affirms-resurrection"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-marc-by-tertullian",
+        "subject_type": "work",
+        "subject_id": "adversus-marcionem",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "tertullian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-marcionem",
+        "title_display": "Adversus Marcionem",
+        "title_original": "Adversus Marcionem",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's five-book refutation of Marcion c. 207-208; defends the OT, the unity of the Creator and Redeemer, the reality of Christ's flesh, and bodily resurrection; the most comprehensive early anti-Marcionite polemic."
+      },
+      "object_entity": {
+        "person_id": "tertullian",
+        "person_label": "Tertullian",
+        "name_alt": "Quintus Septimius Florens Tertullianus",
+        "name_native": "Tertullianus",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 220",
+        "person_kind": "individual",
+        "notes": "First major Latin Christian author; active in Carthage c. 195–220. Wrote at least 31 works spanning apologetics, anti-heretical polemic, and moral discipline. Coined 'trinitas' and 'tres personae una substantia'. Defender of apostolic succession, rule of faith, incarnation, and bodily resurrection. Later attracted to Montanist rigorism c. 207; teacher of Cyprian by doctrinal influence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-marc-by-tertullian",
+            "passage_id": "psg-tertullian-adv-marc-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-marc-1-2",
+            "source_id": "src-tertullian-adv-marcionem",
+            "locator_type": "source_ref",
+            "locator": "Adv. Marc. 1.2",
+            "excerpt": "Paraphrase: Tertullian introduces the refutation of Marcion's two-God theory, defending the identity of the Creator with the God of the gospel and the authority of the Old Testament as Christian Scripture.",
+            "language": "English",
+            "passage_year": "208",
+            "url_override": "",
+            "notes": "Introduces the fundamental anti-Marcionite thesis: one God, Creator and Redeemer"
+          },
+          "source": {
+            "source_id": "src-tertullian-adv-marcionem",
+            "work_id": "adversus-marcionem",
+            "source_kind": "primary_text",
+            "title": "Adversus Marcionem",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 207-208",
+            "year_start": "207",
+            "year_end": "208",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0312.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's five-book polemic against Marcion; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-marc-affirms-eucharist",
+        "clm-adv-marc-affirms-incarnation",
+        "clm-adv-marc-affirms-ot",
+        "clm-adv-marc-affirms-passion",
+        "clm-adv-marc-affirms-resurrection",
+        "clm-adv-marc-affirms-virgin-birth",
+        "clm-adv-marc-written-carthage"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-marc-1-2": [
+          "clm-adv-marc-affirms-ot",
+          "clm-adv-marc-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-adv-marc-1-2",
+        "PARAPHRASE_OMISSION:psg-tertullian-adv-marc-1-2:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-marc-written-carthage",
+        "subject_type": "work",
+        "subject_id": "adversus-marcionem",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "207",
+        "year_end": "208",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-marcionem",
+        "title_display": "Adversus Marcionem",
+        "title_original": "Adversus Marcionem",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's five-book refutation of Marcion c. 207-208; defends the OT, the unity of the Creator and Redeemer, the reality of Christ's flesh, and bodily resurrection; the most comprehensive early anti-Marcionite polemic."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-marc-written-carthage",
+            "passage_id": "psg-tertullian-adv-marc-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from adversus-marcionem contextualizes its composition at carthage."
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-marc-1-2",
+            "source_id": "src-tertullian-adv-marcionem",
+            "locator_type": "source_ref",
+            "locator": "Adv. Marc. 1.2",
+            "excerpt": "Paraphrase: Tertullian introduces the refutation of Marcion's two-God theory, defending the identity of the Creator with the God of the gospel and the authority of the Old Testament as Christian Scripture.",
+            "language": "English",
+            "passage_year": "208",
+            "url_override": "",
+            "notes": "Introduces the fundamental anti-Marcionite thesis: one God, Creator and Redeemer"
+          },
+          "source": {
+            "source_id": "src-tertullian-adv-marcionem",
+            "work_id": "adversus-marcionem",
+            "source_kind": "primary_text",
+            "title": "Adversus Marcionem",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 207-208",
+            "year_start": "207",
+            "year_end": "208",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0312.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's five-book polemic against Marcion; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-marc-affirms-eucharist",
+        "clm-adv-marc-affirms-incarnation",
+        "clm-adv-marc-affirms-ot",
+        "clm-adv-marc-affirms-passion",
+        "clm-adv-marc-affirms-resurrection",
+        "clm-adv-marc-affirms-virgin-birth",
+        "clm-adv-marc-by-tertullian"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-marc-1-2": [
+          "clm-adv-marc-affirms-ot",
+          "clm-adv-marc-by-tertullian"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tertullian-adv-marc-1-2",
+        "PARAPHRASE_RISK:psg-tertullian-adv-marc-1-2",
+        "PARAPHRASE_OMISSION:psg-tertullian-adv-marc-1-2:subject+object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-marc-affirms-eucharist",
+        "subject_type": "work",
+        "subject_id": "adversus-marcionem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "eucharist-is-body-and-blood",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "207",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-marcionem",
+        "title_display": "Adversus Marcionem",
+        "title_original": "Adversus Marcionem",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's five-book refutation of Marcion c. 207-208; defends the OT, the unity of the Creator and Redeemer, the reality of Christ's flesh, and bodily resurrection; the most comprehensive early anti-Marcionite polemic."
+      },
+      "object_entity": {
+        "proposition_id": "eucharist-is-body-and-blood",
+        "topic_id": "eucharist-presence",
+        "dimension_id": "real-presence",
+        "proposition_label": "The Eucharist is the body and blood of Christ",
+        "polarity_family": "eucharistic_realism",
+        "description": "The eucharistic elements are identified as the flesh and blood of Jesus.",
+        "notes": "Real-presence language"
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-marc-affirms-eucharist",
+            "passage_id": "psg-tertullian-adv-marc-4-40",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "Figure-of-my-body language presupposes real body; debated realist vs figurative reading"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-marc-4-40",
+            "source_id": "src-tertullian-adv-marcionem",
+            "locator_type": "source_ref",
+            "locator": "Adv. Marc. 4.40",
+            "excerpt": "Having taken the bread and given it to his disciples, he made it his own body by saying 'This is my body,' that is, the figure of my body. A figure, however, there could not have been unless there were first a veritable body.",
+            "language": "English",
+            "passage_year": "208",
+            "url_override": "",
+            "notes": "Eucharistic language in anti-Marcionite context; 'figure of my body' presupposes real body; debated realist vs figurative reading"
+          },
+          "source": {
+            "source_id": "src-tertullian-adv-marcionem",
+            "work_id": "adversus-marcionem",
+            "source_kind": "primary_text",
+            "title": "Adversus Marcionem",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 207-208",
+            "year_start": "207",
+            "year_end": "208",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0312.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's five-book polemic against Marcion; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-marc-affirms-incarnation",
+        "clm-adv-marc-affirms-ot",
+        "clm-adv-marc-affirms-passion",
+        "clm-adv-marc-affirms-resurrection",
+        "clm-adv-marc-affirms-virgin-birth",
+        "clm-adv-marc-written-carthage",
+        "clm-adv-marc-by-tertullian"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-marc-4-40": [
+          "clm-tertullian-affirms-eucharist-sacrifice"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-marc-affirms-incarnation",
+        "subject_type": "work",
+        "subject_id": "adversus-marcionem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-became-flesh",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "207",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-marcionem",
+        "title_display": "Adversus Marcionem",
+        "title_original": "Adversus Marcionem",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's five-book refutation of Marcion c. 207-208; defends the OT, the unity of the Creator and Redeemer, the reality of Christ's flesh, and bodily resurrection; the most comprehensive early anti-Marcionite polemic."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-became-flesh",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "true-incarnation",
+        "proposition_label": "Christ truly became flesh and truly suffered in the body",
+        "polarity_family": "incarnation_realism",
+        "description": "The incarnate Christ was a genuine human being who truly was born, truly suffered, truly died, and truly rose again; not a phantom or appearance as the Docetists claimed.",
+        "notes": "Anti-docetist"
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-marc-affirms-incarnation",
+            "passage_id": "psg-tertullian-adv-marc-3-8",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "Christ took real flesh from the virgin"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-marc-3-8",
+            "source_id": "src-tertullian-adv-marcionem",
+            "locator_type": "source_ref",
+            "locator": "Adv. Marc. 3.8",
+            "excerpt": "Paraphrase: Tertullian argues that OT prophecy is fulfilled in Christ's incarnation, proving the Creator God sent him; Christ took real flesh from the virgin and truly suffered.",
+            "language": "English",
+            "passage_year": "208",
+            "url_override": "",
+            "notes": "OT fulfillment in Christ's incarnation; virgin birth; real flesh against Marcion"
+          },
+          "source": {
+            "source_id": "src-tertullian-adv-marcionem",
+            "work_id": "adversus-marcionem",
+            "source_kind": "primary_text",
+            "title": "Adversus Marcionem",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 207-208",
+            "year_start": "207",
+            "year_end": "208",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0312.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's five-book polemic against Marcion; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-marc-affirms-eucharist",
+        "clm-adv-marc-affirms-ot",
+        "clm-adv-marc-affirms-passion",
+        "clm-adv-marc-affirms-resurrection",
+        "clm-adv-marc-affirms-virgin-birth",
+        "clm-adv-marc-written-carthage",
+        "clm-adv-marc-by-tertullian"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-marc-3-8": [
+          "clm-adv-marc-affirms-passion",
+          "clm-adv-marc-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-adv-marc-3-8"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-marc-affirms-ot",
+        "subject_type": "work",
+        "subject_id": "adversus-marcionem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "old-testament-is-authoritative-scripture",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "207",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-marcionem",
+        "title_display": "Adversus Marcionem",
+        "title_original": "Adversus Marcionem",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's five-book refutation of Marcion c. 207-208; defends the OT, the unity of the Creator and Redeemer, the reality of Christ's flesh, and bodily resurrection; the most comprehensive early anti-Marcionite polemic."
+      },
+      "object_entity": {
+        "proposition_id": "old-testament-is-authoritative-scripture",
+        "topic_id": "canon-theology",
+        "dimension_id": "ot-authority",
+        "proposition_label": "Old Testament is Authoritative Scripture",
+        "polarity_family": "",
+        "description": "The Church accepts the Old Testament as authoritative Christian scripture; the God of creation and Israel is the same God as the Father of Jesus Christ. Denied by Marcion, Valentinus, Basilides, and most Gnostic schools.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-marc-affirms-ot",
+            "passage_id": "psg-tertullian-adv-marc-1-2",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "Defends identity of Creator with God of the gospel and OT authority"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-marc-1-2",
+            "source_id": "src-tertullian-adv-marcionem",
+            "locator_type": "source_ref",
+            "locator": "Adv. Marc. 1.2",
+            "excerpt": "Paraphrase: Tertullian introduces the refutation of Marcion's two-God theory, defending the identity of the Creator with the God of the gospel and the authority of the Old Testament as Christian Scripture.",
+            "language": "English",
+            "passage_year": "208",
+            "url_override": "",
+            "notes": "Introduces the fundamental anti-Marcionite thesis: one God, Creator and Redeemer"
+          },
+          "source": {
+            "source_id": "src-tertullian-adv-marcionem",
+            "work_id": "adversus-marcionem",
+            "source_kind": "primary_text",
+            "title": "Adversus Marcionem",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 207-208",
+            "year_start": "207",
+            "year_end": "208",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0312.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's five-book polemic against Marcion; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-marc-affirms-eucharist",
+        "clm-adv-marc-affirms-incarnation",
+        "clm-adv-marc-affirms-passion",
+        "clm-adv-marc-affirms-resurrection",
+        "clm-adv-marc-affirms-virgin-birth",
+        "clm-adv-marc-written-carthage",
+        "clm-adv-marc-by-tertullian"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-marc-1-2": [
+          "clm-adv-marc-by-tertullian",
+          "clm-adv-marc-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-adv-marc-1-2"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-marc-affirms-passion",
+        "subject_type": "work",
+        "subject_id": "adversus-marcionem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "christ-truly-suffered-and-died",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "207",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-marcionem",
+        "title_display": "Adversus Marcionem",
+        "title_original": "Adversus Marcionem",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's five-book refutation of Marcion c. 207-208; defends the OT, the unity of the Creator and Redeemer, the reality of Christ's flesh, and bodily resurrection; the most comprehensive early anti-Marcionite polemic."
+      },
+      "object_entity": {
+        "proposition_id": "christ-truly-suffered-and-died",
+        "topic_id": "incarnation-theology",
+        "dimension_id": "passion-reality",
+        "proposition_label": "Christ Truly Suffered and Died",
+        "polarity_family": "",
+        "description": "Christ's passion and death on the cross were genuine physical events, not apparent, symbolic, or borne by a substitute. Denied by docetists, Basilides (Simon Cyrene substitution), Marcion, and Cerinthus.",
+        "notes": ""
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-marc-affirms-passion",
+            "passage_id": "psg-tertullian-adv-marc-3-8",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.85",
+            "notes": "Christ truly suffered in real flesh"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-marc-3-8",
+            "source_id": "src-tertullian-adv-marcionem",
+            "locator_type": "source_ref",
+            "locator": "Adv. Marc. 3.8",
+            "excerpt": "Paraphrase: Tertullian argues that OT prophecy is fulfilled in Christ's incarnation, proving the Creator God sent him; Christ took real flesh from the virgin and truly suffered.",
+            "language": "English",
+            "passage_year": "208",
+            "url_override": "",
+            "notes": "OT fulfillment in Christ's incarnation; virgin birth; real flesh against Marcion"
+          },
+          "source": {
+            "source_id": "src-tertullian-adv-marcionem",
+            "work_id": "adversus-marcionem",
+            "source_kind": "primary_text",
+            "title": "Adversus Marcionem",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 207-208",
+            "year_start": "207",
+            "year_end": "208",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0312.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's five-book polemic against Marcion; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-marc-affirms-eucharist",
+        "clm-adv-marc-affirms-incarnation",
+        "clm-adv-marc-affirms-ot",
+        "clm-adv-marc-affirms-resurrection",
+        "clm-adv-marc-affirms-virgin-birth",
+        "clm-adv-marc-written-carthage",
+        "clm-adv-marc-by-tertullian"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-marc-3-8": [
+          "clm-adv-marc-affirms-incarnation",
+          "clm-adv-marc-affirms-virgin-birth"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-adv-marc-3-8"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-marc-affirms-resurrection",
+        "subject_type": "work",
+        "subject_id": "adversus-marcionem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "207",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-marcionem",
+        "title_display": "Adversus Marcionem",
+        "title_original": "Adversus Marcionem",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's five-book refutation of Marcion c. 207-208; defends the OT, the unity of the Creator and Redeemer, the reality of Christ's flesh, and bodily resurrection; the most comprehensive early anti-Marcionite polemic."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-marc-affirms-resurrection",
+            "passage_id": "psg-tertullian-adv-marc-5-10",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.95",
+            "notes": "Bodily resurrection defended from 1 Cor 15"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-marc-5-10",
+            "source_id": "src-tertullian-adv-marcionem",
+            "locator_type": "source_ref",
+            "locator": "Adv. Marc. 5.10",
+            "excerpt": "Paraphrase: Tertullian defends the resurrection of the flesh by arguing from Paul's statements in 1 Corinthians 15 that the same body which dies will be raised and transformed.",
+            "language": "English",
+            "passage_year": "208",
+            "url_override": "",
+            "notes": "Bodily resurrection of the flesh defended against Marcionite and Gnostic denial"
+          },
+          "source": {
+            "source_id": "src-tertullian-adv-marcionem",
+            "work_id": "adversus-marcionem",
+            "source_kind": "primary_text",
+            "title": "Adversus Marcionem",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 207-208",
+            "year_start": "207",
+            "year_end": "208",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0312.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's five-book polemic against Marcion; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-marc-affirms-eucharist",
+        "clm-adv-marc-affirms-incarnation",
+        "clm-adv-marc-affirms-ot",
+        "clm-adv-marc-affirms-passion",
+        "clm-adv-marc-affirms-virgin-birth",
+        "clm-adv-marc-written-carthage",
+        "clm-adv-marc-by-tertullian"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {},
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-adv-marc-5-10"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-adv-marc-affirms-virgin-birth",
+        "subject_type": "work",
+        "subject_id": "adversus-marcionem",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "jesus-born-of-virgin",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "207",
+        "year_end": "208",
+        "context_place_id": "carthage",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "adversus-marcionem",
+        "title_display": "Adversus Marcionem",
+        "title_original": "Adversus Marcionem",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's five-book refutation of Marcion c. 207-208; defends the OT, the unity of the Creator and Redeemer, the reality of Christ's flesh, and bodily resurrection; the most comprehensive early anti-Marcionite polemic."
+      },
+      "object_entity": {
+        "proposition_id": "jesus-born-of-virgin",
+        "topic_id": "mariology",
+        "dimension_id": "virgin-birth",
+        "proposition_label": "Jesus was truly born of a virgin",
+        "polarity_family": "virgin_birth",
+        "description": "Jesus was truly conceived by the Holy Spirit and born of the virgin Mary, not through natural human generation.",
+        "notes": "Virgin birth"
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-adv-marc-affirms-virgin-birth",
+            "passage_id": "psg-tertullian-adv-marc-3-8",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "OT prophecy fulfilled in virgin birth"
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-adv-marc-3-8",
+            "source_id": "src-tertullian-adv-marcionem",
+            "locator_type": "source_ref",
+            "locator": "Adv. Marc. 3.8",
+            "excerpt": "Paraphrase: Tertullian argues that OT prophecy is fulfilled in Christ's incarnation, proving the Creator God sent him; Christ took real flesh from the virgin and truly suffered.",
+            "language": "English",
+            "passage_year": "208",
+            "url_override": "",
+            "notes": "OT fulfillment in Christ's incarnation; virgin birth; real flesh against Marcion"
+          },
+          "source": {
+            "source_id": "src-tertullian-adv-marcionem",
+            "work_id": "adversus-marcionem",
+            "source_kind": "primary_text",
+            "title": "Adversus Marcionem",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 207-208",
+            "year_start": "207",
+            "year_end": "208",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0312.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's five-book polemic against Marcion; ANF Vol. 3, Holmes translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-adv-marc-affirms-eucharist",
+        "clm-adv-marc-affirms-incarnation",
+        "clm-adv-marc-affirms-ot",
+        "clm-adv-marc-affirms-passion",
+        "clm-adv-marc-affirms-resurrection",
+        "clm-adv-marc-written-carthage",
+        "clm-adv-marc-by-tertullian"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-tertullian-adv-marc-3-8": [
+          "clm-adv-marc-affirms-incarnation",
+          "clm-adv-marc-affirms-passion"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-adv-marc-3-8"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cornelius-pope-affirms-succession",
+        "subject_type": "person",
+        "subject_id": "cornelius-pope",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "apostolic-succession-transmits-faith",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "251",
+        "year_end": "253",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T13:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "cornelius-pope",
+        "person_label": "Cornelius (pope)",
+        "name_alt": "Cornelius",
+        "name_native": "Κορνήλιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 253",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 251–253; key figure in the Novatian controversy; excommunicated Novatian and his followers; received the support of Cyprian of Carthage."
+      },
+      "object_entity": {
+        "proposition_id": "apostolic-succession-transmits-faith",
+        "topic_id": "apostolic-tradition",
+        "dimension_id": "apostolic-succession",
+        "proposition_label": "Faith is transmitted through apostolic succession",
+        "polarity_family": "apostolic_succession",
+        "description": "The bishops who succeed the apostles are authoritative guarantors of the received tradition.",
+        "notes": "Succession and tradition"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cornelius-pope-affirms-succession",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cornelius-pope-in-decian-persecution",
+        "clm-cornelius-pope-in-council-251",
+        "clm-cornelius-pope-bishop-rome",
+        "clm-cornelius-pope-coworker-cyprian",
+        "clm-cornelius-pope-in-novatian-schism",
+        "clm-cornelius-pope-member-roman-church",
+        "clm-cornelius-pope-person-affirms-penance"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-in-council-251",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-43:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cornelius-pope-person-affirms-penance",
+        "subject_type": "person",
+        "subject_id": "cornelius-pope",
+        "predicate_id": "person_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "post-baptismal-sin-forgiven-by-penance",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "251",
+        "year_end": "253",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "cornelius-pope",
+        "person_label": "Cornelius (pope)",
+        "name_alt": "Cornelius",
+        "name_native": "Κορνήλιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 253",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 251–253; key figure in the Novatian controversy; excommunicated Novatian and his followers; received the support of Cyprian of Carthage."
+      },
+      "object_entity": {
+        "proposition_id": "post-baptismal-sin-forgiven-by-penance",
+        "topic_id": "penance-practice",
+        "dimension_id": "post-baptismal-penance",
+        "proposition_label": "Post-baptismal sin can be forgiven through penance",
+        "polarity_family": "post_baptismal_penance",
+        "description": "A second repentance after baptism is possible and administered through church discipline.",
+        "notes": "Penitential discipline"
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cornelius-pope-person-affirms-penance",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Cornelius's position against Novatian affirmed the possibility of readmission."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cornelius-pope-in-decian-persecution",
+        "clm-cornelius-pope-in-council-251",
+        "clm-cornelius-pope-affirms-succession",
+        "clm-cornelius-pope-bishop-rome",
+        "clm-cornelius-pope-coworker-cyprian",
+        "clm-cornelius-pope-in-novatian-schism",
+        "clm-cornelius-pope-member-roman-church"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cornelius-pope-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "cornelius-pope",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "251",
+        "year_end": "253",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "cornelius-pope",
+        "person_label": "Cornelius (pope)",
+        "name_alt": "Cornelius",
+        "name_native": "Κορνήλιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 253",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 251–253; key figure in the Novatian controversy; excommunicated Novatian and his followers; received the support of Cyprian of Carthage."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cornelius-pope-bishop-rome",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eusebius preserves Cornelius's own letter as bishop of Rome."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cornelius-pope-in-decian-persecution",
+        "clm-cornelius-pope-in-council-251",
+        "clm-cornelius-pope-affirms-succession",
+        "clm-cornelius-pope-coworker-cyprian",
+        "clm-cornelius-pope-in-novatian-schism",
+        "clm-cornelius-pope-member-roman-church",
+        "clm-cornelius-pope-person-affirms-penance"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cornelius-pope-in-decian-persecution",
+        "subject_type": "person",
+        "subject_id": "cornelius-pope",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "decian-persecution",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "250",
+        "year_end": "253",
+        "context_place_id": "rome",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "cornelius-pope",
+        "person_label": "Cornelius (pope)",
+        "name_alt": "Cornelius",
+        "name_native": "Κορνήλιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 253",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 251–253; key figure in the Novatian controversy; excommunicated Novatian and his followers; received the support of Cyprian of Carthage."
+      },
+      "object_entity": {
+        "event_id": "decian-persecution",
+        "event_label": "Persecution under Decius",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Empire-wide persecution under Emperor Decius c. 250–251; required all citizens to sacrifice to Roman gods and obtain a certificate (libellus); many Christians lapsed; triggered the controversy over readmission of the lapsed that led to the Novatian schism."
+      },
+      "context_place": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cornelius-pope-in-decian-persecution",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.8",
+            "notes": "Eusebius preserves Cornelius's own letter describing the aftermath of the Decian persecution at Rome."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cornelius-pope-in-council-251",
+        "clm-cornelius-pope-affirms-succession",
+        "clm-cornelius-pope-bishop-rome",
+        "clm-cornelius-pope-coworker-cyprian",
+        "clm-cornelius-pope-in-novatian-schism",
+        "clm-cornelius-pope-member-roman-church",
+        "clm-cornelius-pope-person-affirms-penance"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-council-251",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-43:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-cornelius-pope-in-council-251",
+        "subject_type": "person",
+        "subject_id": "cornelius-pope",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "council-of-carthage-251",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "251",
+        "year_end": "251",
+        "context_place_id": "carthage",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "cornelius-pope",
+        "person_label": "Cornelius (pope)",
+        "name_alt": "Cornelius",
+        "name_native": "Κορνήλιος",
+        "birth_year_display": "c. 200",
+        "death_year_display": "c. 253",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 251–253; key figure in the Novatian controversy; excommunicated Novatian and his followers; received the support of Cyprian of Carthage."
+      },
+      "object_entity": {
+        "event_id": "council-of-carthage-251",
+        "event_label": "Council of Carthage (251)",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "North African council convened under Cyprian c. 251 after the Decian persecution to establish policy on the readmission of the lapsed; distinguished categories of lapse and mandated graded penance under episcopal authority; opposed both the rigorist position (Novatian) and the lax granting of peace by confessors."
+      },
+      "context_place": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-cornelius-pope-in-council-251",
+            "passage_id": "psg-eusebius-he-6-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.43",
+            "excerpt": "Paraphrase: Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination irregularity: three simple and rustic bishops from Italy were brought to Rome and compelled to lay hands on Novatian by a counterfeit and vain laying on of hands; Novatian seized the bishopric by craft and treachery. Cornelius also lists the Roman clergy: forty-six presbyters, seven deacons, seven subdeacons, forty-two acolytes, and fifty-two exorcists, readers, and doorkeepers. More than fifteen hundred widows and distressed persons are supported by the Lord's grace and kindness.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Cornelius on Novatian's irregular ordination; Roman church size and clerical orders c. 251"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-cornelius-pope-in-decian-persecution",
+        "clm-cornelius-pope-affirms-succession",
+        "clm-cornelius-pope-bishop-rome",
+        "clm-cornelius-pope-coworker-cyprian",
+        "clm-cornelius-pope-in-novatian-schism",
+        "clm-cornelius-pope-member-roman-church",
+        "clm-cornelius-pope-person-affirms-penance"
+      ],
+      "sibling_count": 7,
+      "passage_co_users": {
+        "psg-eusebius-he-6-43": [
+          "clm-arius-opposes-eternal-generation",
+          "clm-arius-opposes-incarnation-real",
+          "clm-arius-opposes-logos",
+          "clm-arius-opposes-trinity",
+          "clm-celerinus-active-rome",
+          "clm-celerinus-in-decian-persecution",
+          "clm-cornelius-pope-affirms-succession",
+          "clm-cornelius-pope-in-decian-persecution",
+          "clm-decian-persecution-at-rome",
+          "clm-dionysius-alex-active-rome-exile",
+          "clm-dionysius-alex-affirms-logos",
+          "clm-dionysius-alex-affirms-penance",
+          "clm-dionysius-alex-affirms-succession",
+          "clm-dionysius-alex-affirms-trinity",
+          "clm-dionysius-alex-in-decian",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-in-sardinian-return",
+          "clm-firmilian-affirms-succession",
+          "clm-firmilian-in-council-256",
+          "clm-novatian-active-carthage-mission",
+          "clm-novatian-in-decian",
+          "clm-novatianists-at-alexandria",
+          "clm-novatianists-schismed-from-carthage-church",
+          "clm-novatianists-schismed-from-roman-church",
+          "clm-stephen-i-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-43"
+      ]
+    }
+  ]
+}

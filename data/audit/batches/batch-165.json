@@ -1,0 +1,2441 @@
+{
+  "batch_id": "batch-165",
+  "queue": "1",
+  "focus": "on-the-resurrection-of-the-dead; lyons-persecution; irenaeus-writes-against-heresies; quartodeciman-controversy; de-oratione; abgar-viii-of-edessa; hippolytus-callistus-schism; beryllus-of-bostra; urban-i; sardinian-exile",
+  "claim_count": 20,
+  "claims": [
+    {
+      "claim": {
+        "claim_id": "clm-resurrection-by-athenagoras",
+        "subject_type": "work",
+        "subject_id": "on-the-resurrection-of-the-dead",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "athenagoras-of-athens",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "on-the-resurrection-of-the-dead",
+        "title_display": "On the Resurrection of the Dead",
+        "title_original": "Περὶ ἀναστάσεως νεκρῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Athenagoras's philosophical defense of bodily resurrection c. 177."
+      },
+      "object_entity": {
+        "person_id": "athenagoras-of-athens",
+        "person_label": "Athenagoras of Athens",
+        "name_alt": "Athenagoras",
+        "name_native": "Ἀθηναγόρας",
+        "birth_year_display": "",
+        "death_year_display": "c. AD 180",
+        "person_kind": "individual",
+        "notes": "Athenian Christian philosopher who addressed an embassy to Marcus Aurelius and Commodus c. 177 defending Christians and articulating Logos theology."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-resurrection-by-athenagoras",
+            "passage_id": "psg-athenagoras-res-1-3",
+            "evidence_role": "supports",
+            "support_aspect": "attribution",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-res-1-3",
+            "source_id": "src-athenagoras-resurrection",
+            "locator_type": "source_ref",
+            "locator": "Res. 1-3",
+            "excerpt": "Paraphrase: Arguments defending the truth of resurrection must precede all inquiry about it; God who created what did not exist can certainly restore what has been dissolved; disbelief in resurrection has no reasonable foundation.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-resurrection",
+            "work_id": "on-the-resurrection-of-the-dead",
+            "source_kind": "primary_text",
+            "title": "On the Resurrection of the Dead",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0206.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Philosophical defense of the possibility and necessity of bodily resurrection."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-athenagoras-res-affirms-bodily-resurrection"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-athenagoras-res-1-3": [
+          "clm-athenagoras-res-affirms-bodily-resurrection"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athenagoras-res-1-3"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-athenagoras-res-affirms-bodily-resurrection",
+        "subject_type": "work",
+        "subject_id": "on-the-resurrection-of-the-dead",
+        "predicate_id": "work_affirms_proposition",
+        "object_mode": "entity",
+        "object_type": "proposition",
+        "object_id": "bodies-will-be-raised-at-last-day",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "177",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T23:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "on-the-resurrection-of-the-dead",
+        "title_display": "On the Resurrection of the Dead",
+        "title_original": "Περὶ ἀναστάσεως νεκρῶν",
+        "work_type": "other",
+        "language_original": "Greek",
+        "work_kind": "single_work",
+        "notes": "Athenagoras's philosophical defense of bodily resurrection c. 177."
+      },
+      "object_entity": {
+        "proposition_id": "bodies-will-be-raised-at-last-day",
+        "topic_id": "bodily-resurrection",
+        "dimension_id": "bodily-resurrection-affirmed",
+        "proposition_label": "The human body will be raised from the dead at the last day",
+        "polarity_family": "bodily_resurrection_affirmed",
+        "description": "At the final judgment God will raise the same bodies that died, reuniting them with their souls for eternal life or punishment.",
+        "notes": "Bodily resurrection"
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-athenagoras-res-affirms-bodily-resurrection",
+            "passage_id": "psg-athenagoras-res-1-3",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-res-1-3",
+            "source_id": "src-athenagoras-resurrection",
+            "locator_type": "source_ref",
+            "locator": "Res. 1-3",
+            "excerpt": "Paraphrase: Arguments defending the truth of resurrection must precede all inquiry about it; God who created what did not exist can certainly restore what has been dissolved; disbelief in resurrection has no reasonable foundation.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-resurrection",
+            "work_id": "on-the-resurrection-of-the-dead",
+            "source_kind": "primary_text",
+            "title": "On the Resurrection of the Dead",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0206.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Philosophical defense of the possibility and necessity of bodily resurrection."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-athenagoras-res-affirms-bodily-resurrection",
+            "passage_id": "psg-athenagoras-res-25",
+            "evidence_role": "supports",
+            "support_aspect": "predicate",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-athenagoras-res-25",
+            "source_id": "src-athenagoras-resurrection",
+            "locator_type": "source_ref",
+            "locator": "Res. 25",
+            "excerpt": "Paraphrase: The body must rise together with the soul to receive just judgment; the same composite human nature that lived and acted must stand before God at the final judgment; soul alone is incomplete for this purpose.",
+            "language": "English",
+            "passage_year": "177",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-athenagoras-resurrection",
+            "work_id": "on-the-resurrection-of-the-dead",
+            "source_kind": "primary_text",
+            "title": "On the Resurrection of the Dead",
+            "author": "Athenagoras",
+            "editor": "",
+            "year_display": "c. 177",
+            "year_start": "177",
+            "year_end": "177",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0206.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Philosophical defense of the possibility and necessity of bodily resurrection."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-resurrection-by-athenagoras"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-athenagoras-res-1-3": [
+          "clm-resurrection-by-athenagoras"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-athenagoras-res-25"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lyons-persecution-year",
+        "subject_type": "event",
+        "subject_id": "lyons-persecution",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "177",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T20:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "lyons-persecution",
+        "event_label": "Persecution at Lyons and Vienne",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Severe persecution of Christians at Lyons and Vienne in Gaul c. 177 AD under Marcus Aurelius; attested in a letter preserved by Eusebius; Irenaeus was sent as envoy to Rome during this crisis."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lyons-persecution-year",
+            "passage_id": "psg-eusebius-he-5-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-1",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.1",
+            "excerpt": "The servants of Christ dwelling in Vienne and Lyons in Gaul... were harassed in many ways by the evil one.",
+            "language": "en",
+            "passage_year": "313",
+            "url_override": "",
+            "notes": "Eusebius records the Lyons persecution (177 AD)."
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lyons-persecution-at-lyons"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-5-1": [
+          "clm-irenaeus-ah-at-lyons",
+          "clm-irenaeus-originated-smyrna",
+          "clm-place-gaul-attested",
+          "clm-valentinians-at-gaul"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-5-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-lyons-persecution-at-lyons",
+        "subject_type": "event",
+        "subject_id": "lyons-persecution",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "lyons",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "177",
+        "year_end": "177",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T20:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "lyons-persecution",
+        "event_label": "Persecution at Lyons and Vienne",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Severe persecution of Christians at Lyons and Vienne in Gaul c. 177 AD under Marcus Aurelius; attested in a letter preserved by Eusebius; Irenaeus was sent as envoy to Rome during this crisis."
+      },
+      "object_entity": {
+        "place_id": "lyons",
+        "place_label": "Lyons",
+        "place_label_modern": "Lyon",
+        "place_kind": "city",
+        "parent_place_id": "gaul",
+        "lat": "45.7640",
+        "lon": "4.8357",
+        "location_precision": "approx_city",
+        "modern_country_label": "France",
+        "notes": "City in Gaul (Lugdunum) where Irenaeus was bishop from c. 178; site of the 177 AD persecution under Marcus Aurelius attested in the letter preserved by Eusebius."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-lyons-persecution-at-lyons",
+            "passage_id": "psg-irenaeus-ah-3-3-1",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-irenaeus-ah-3-3-1",
+            "source_id": "src-irenaeus-against-heresies",
+            "locator_type": "source_ref",
+            "locator": "AH 3.3.1",
+            "excerpt": "Paraphrase: It is within the power of all in every Church to contemplate the tradition of the apostles manifested throughout the whole world and to reckon up those who were instituted bishops by the apostles and their succession to our own times; those who taught nothing like what the heretics rave about.",
+            "language": "English",
+            "passage_year": "182",
+            "url_override": "",
+            "notes": ""
+          },
+          "source": {
+            "source_id": "src-irenaeus-against-heresies",
+            "work_id": "against-heresies",
+            "source_kind": "primary_text",
+            "title": "Against Heresies",
+            "author": "Irenaeus of Lyons",
+            "editor": "",
+            "year_display": "c. 180-185",
+            "year_start": "180",
+            "year_end": "185",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0103.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Five-book refutation of Gnosticism; ANF Vol. 1 translation by Roberts and Rambaut, revised for New Advent by Kevin Knight."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-lyons-persecution-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-irenaeus-ah-3-3-1": [
+          "clm-against-heresies-written-lyons",
+          "clm-ah-affirms-ordination",
+          "clm-irenaeus-active-lyons",
+          "clm-irenaeus-ah-affirms-apostolic-succession",
+          "clm-irenaeus-ah-affirms-episcopal-chair",
+          "clm-peter-bishop-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-irenaeus-ah-3-3-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-irenaeus-ah-year",
+        "subject_type": "event",
+        "subject_id": "irenaeus-writes-against-heresies",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "180",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "irenaeus-writes-against-heresies",
+        "event_label": "Irenaeus Writes Against Heresies",
+        "event_type": "literary",
+        "event_kind": "simple",
+        "notes": "Irenaeus of Lyons composes Against Heresies (Adversus Haereses) c. 180–185, the foundational anti-Gnostic theological work and fullest second-century statement of apostolic succession."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-ah-year",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Eusebius HE 5.24 places Irenaeus active c. 190; AH was composed around this period."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-ah-year",
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "source_id": "src-wikipedia-early-church-geography",
+            "locator_type": "source_ref",
+            "locator": "Early_centers_of_Christianity",
+            "excerpt": "Early centers of Christianity included Jerusalem, Antioch, Alexandria, Rome, Carthage, and Edessa. Communities spread to Persia, India, and Ethiopia by the 4th century.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for general early Christian presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-early-church-geography",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Early centers of Christianity - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Early_centers_of_Christianity",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Survey of early Christian communities and geographic spread."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-irenaeus-ah-at-lyons"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ],
+        "psg-wikipedia-early-church-geography": [
+          "clm-abgar-member-edessa-church",
+          "clm-abgar-viii-active-edessa",
+          "clm-bardaisan-member-bardesanites",
+          "clm-const381-event-year",
+          "clm-cyprian-originated-carthage",
+          "clm-cyril-participant-ephesus-431",
+          "clm-dura-church-at-dura",
+          "clm-dura-church-construction-year",
+          "clm-dura-church-year",
+          "clm-ebionites-at-egypt",
+          "clm-edessa-church-at-edessa",
+          "clm-ephesus-431-event-year",
+          "clm-hippolytus-callistus-schism-year",
+          "clm-montanus-coworker-priscilla-montanist",
+          "clm-place-bostra-attested",
+          "clm-place-caesarea-cappadocia-attested",
+          "clm-place-carthage-attested",
+          "clm-place-dalmatia-attested-late",
+          "clm-place-dura-europos-attested",
+          "clm-place-edessa-attested",
+          "clm-place-neocaesarea-attested",
+          "clm-place-sardinia-attested",
+          "clm-priscilla-montanist-affirms-prophecy",
+          "clm-priscilla-montanist-member-montanists"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-irenaeus-ah-at-lyons",
+        "subject_type": "event",
+        "subject_id": "irenaeus-writes-against-heresies",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "lyons",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "180",
+        "year_end": "185",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "irenaeus-writes-against-heresies",
+        "event_label": "Irenaeus Writes Against Heresies",
+        "event_type": "literary",
+        "event_kind": "simple",
+        "notes": "Irenaeus of Lyons composes Against Heresies (Adversus Haereses) c. 180–185, the foundational anti-Gnostic theological work and fullest second-century statement of apostolic succession."
+      },
+      "object_entity": {
+        "place_id": "lyons",
+        "place_label": "Lyons",
+        "place_label_modern": "Lyon",
+        "place_kind": "city",
+        "parent_place_id": "gaul",
+        "lat": "45.7640",
+        "lon": "4.8357",
+        "location_precision": "approx_city",
+        "modern_country_label": "France",
+        "notes": "City in Gaul (Lugdunum) where Irenaeus was bishop from c. 178; site of the 177 AD persecution under Marcus Aurelius attested in the letter preserved by Eusebius."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-irenaeus-ah-at-lyons",
+            "passage_id": "psg-eusebius-he-5-1",
+            "evidence_role": "supports",
+            "support_aspect": "place",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes the location of irenaeus-writes-against-heresies."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-1",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 5.1",
+            "excerpt": "The servants of Christ dwelling in Vienne and Lyons in Gaul... were harassed in many ways by the evil one.",
+            "language": "en",
+            "passage_year": "313",
+            "url_override": "",
+            "notes": "Eusebius records the Lyons persecution (177 AD)."
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-irenaeus-ah-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-5-1": [
+          "clm-irenaeus-originated-smyrna",
+          "clm-lyons-persecution-year",
+          "clm-place-gaul-attested",
+          "clm-valentinians-at-gaul"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-eusebius-he-5-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-quartodeciman-year",
+        "subject_type": "event",
+        "subject_id": "quartodeciman-controversy",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "190",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "quartodeciman-controversy",
+        "event_label": "Quartodeciman Controversy",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Dispute c. 190-195 between Victor of Rome and Asian churches led by Polycrates of Ephesus over whether Easter should be observed on 14 Nisan or the Sunday following; Irenaeus of Lyons mediated and persuaded Victor not to excommunicate the Asian churches."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-quartodeciman-year",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-quartodeciman-at-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-at-rome",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-quartodeciman-at-rome",
+        "subject_type": "event",
+        "subject_id": "quartodeciman-controversy",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "190",
+        "year_end": "195",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-10T21:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "quartodeciman-controversy",
+        "event_label": "Quartodeciman Controversy",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Dispute c. 190-195 between Victor of Rome and Asian churches led by Polycrates of Ephesus over whether Easter should be observed on 14 Nisan or the Sunday following; Irenaeus of Lyons mediated and persuaded Victor not to excommunicate the Asian churches."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-quartodeciman-at-rome",
+            "passage_id": "psg-eusebius-he-5-24",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-5-24",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "Eusebius, HE 5.24",
+            "excerpt": "Paraphrase: Irenaeus wrote to Victor of Rome urging peace over the Easter controversy; he noted that diverse custom on this point does not destroy the unity of the faith, citing Polycarp's visit to Anicetus as a precedent for peaceful disagreement; the difference in fasting does not harm the faith.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Irenaeus mediates Quartodeciman controversy; cites Polycarp's visit to Rome as precedent; peace over uniformity"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-quartodeciman-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-5-24": [
+          "clm-anicetus-bishop-rome",
+          "clm-irenaeus-ah-year",
+          "clm-irenaeus-coworker-victor",
+          "clm-irenaeus-in-quartodeciman",
+          "clm-irenaeus-member-roman-church-visit",
+          "clm-john-zebedee-bishop-ephesus",
+          "clm-polycarp-active-rome",
+          "clm-polycarp-coworker-anicetus",
+          "clm-polycarp-in-quartodeciman-visit",
+          "clm-polycarp-member-roman-church-visit",
+          "clm-polycrates-bishop-ephesus",
+          "clm-polycrates-in-quartodeciman",
+          "clm-polycrates-member-ephesian-church",
+          "clm-polycrates-person-affirms-rule-of-faith",
+          "clm-quartodeciman-year",
+          "clm-victor-affirms-succession",
+          "clm-victor-bishop-rome",
+          "clm-victor-in-quartodeciman",
+          "clm-victor-member-roman-church",
+          "clm-victor-person-affirms-episcopal-chair"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-5-24"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-orat-by-tertullian",
+        "subject_type": "work",
+        "subject_id": "de-oratione",
+        "predicate_id": "authored_by",
+        "object_mode": "entity",
+        "object_type": "person",
+        "object_id": "tertullian",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-oratione",
+        "title_display": "De Oratione",
+        "title_original": "De Oratione",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise on prayer c. 198-200; earliest known systematic exposition of the Lord's Prayer; includes eucharistic and fasting references."
+      },
+      "object_entity": {
+        "person_id": "tertullian",
+        "person_label": "Tertullian",
+        "name_alt": "Quintus Septimius Florens Tertullianus",
+        "name_native": "Tertullianus",
+        "birth_year_display": "c. 155",
+        "death_year_display": "c. 220",
+        "person_kind": "individual",
+        "notes": "First major Latin Christian author; active in Carthage c. 195–220. Wrote at least 31 works spanning apologetics, anti-heretical polemic, and moral discipline. Coined 'trinitas' and 'tres personae una substantia'. Defender of apostolic succession, rule of faith, incarnation, and bodily resurrection. Later attracted to Montanist rigorism c. 207; teacher of Cyprian by doctrinal influence."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-orat-by-tertullian",
+            "passage_id": "psg-tertullian-de-orat-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": ""
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-orat-1",
+            "source_id": "src-tertullian-de-oratione",
+            "locator_type": "source_ref",
+            "locator": "De Orat. 1",
+            "excerpt": "Paraphrase: Tertullian opens with the statement that the Spirit of God, the Word of God, the Reason of God — the Word of Reason, the Reason and Spirit of the Word — Jesus Christ our Lord, determined a new form of prayer for the new disciples of the new covenant.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Lord's Prayer as new form of prayer given by Christ; earliest systematic commentary on the Our Father"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-oratione",
+            "work_id": "de-oratione",
+            "source_kind": "primary_text",
+            "title": "De Oratione",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198-200",
+            "year_start": "198",
+            "year_end": "200",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0322.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's treatise on prayer; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-orat-written-carthage"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-tertullian-de-orat-1": [
+          "clm-de-orat-written-carthage"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-tertullian-de-orat-1"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-de-orat-written-carthage",
+        "subject_type": "work",
+        "subject_id": "de-oratione",
+        "predicate_id": "written_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "carthage",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "198",
+        "year_end": "200",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T08:00:00Z"
+      },
+      "subject_entity": {
+        "work_id": "de-oratione",
+        "title_display": "De Oratione",
+        "title_original": "De Oratione",
+        "work_type": "other",
+        "language_original": "Latin",
+        "work_kind": "single_work",
+        "notes": "Tertullian's treatise on prayer c. 198-200; earliest known systematic exposition of the Lord's Prayer; includes eucharistic and fasting references."
+      },
+      "object_entity": {
+        "place_id": "carthage",
+        "place_label": "Carthage",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "36.8580",
+        "lon": "10.3240",
+        "location_precision": "approx_city",
+        "modern_country_label": "Tunisia",
+        "notes": "Major North African city; center of Latin Christianity from Tertullian through Cyprian and Augustine; seat of important regional councils."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-de-orat-written-carthage",
+            "passage_id": "psg-tertullian-de-orat-1",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage from de-oratione contextualizes its composition at carthage."
+          },
+          "passage": {
+            "passage_id": "psg-tertullian-de-orat-1",
+            "source_id": "src-tertullian-de-oratione",
+            "locator_type": "source_ref",
+            "locator": "De Orat. 1",
+            "excerpt": "Paraphrase: Tertullian opens with the statement that the Spirit of God, the Word of God, the Reason of God — the Word of Reason, the Reason and Spirit of the Word — Jesus Christ our Lord, determined a new form of prayer for the new disciples of the new covenant.",
+            "language": "English",
+            "passage_year": "200",
+            "url_override": "",
+            "notes": "Lord's Prayer as new form of prayer given by Christ; earliest systematic commentary on the Our Father"
+          },
+          "source": {
+            "source_id": "src-tertullian-de-oratione",
+            "work_id": "de-oratione",
+            "source_kind": "primary_text",
+            "title": "De Oratione",
+            "author": "Tertullian",
+            "editor": "",
+            "year_display": "c. 198-200",
+            "year_start": "198",
+            "year_end": "200",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0322.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Tertullian's treatise on prayer; ANF Vol. 3, Thelwall translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-de-orat-by-tertullian"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-tertullian-de-orat-1": [
+          "clm-de-orat-by-tertullian"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-tertullian-de-orat-1",
+        "PARAPHRASE_RISK:psg-tertullian-de-orat-1",
+        "PARAPHRASE_OMISSION:psg-tertullian-de-orat-1:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-abgar-in-conversion-edessa",
+        "subject_type": "person",
+        "subject_id": "abgar-viii-of-edessa",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "conversion-of-edessa",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "200",
+        "context_place_id": "edessa",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "abgar-viii-of-edessa",
+        "person_label": "Abgar VIII of Edessa",
+        "name_alt": "Abgar the Great",
+        "name_native": "ܐܒܓܪ",
+        "birth_year_display": "c. 177",
+        "death_year_display": "c. 212",
+        "person_kind": "individual",
+        "notes": "King of Osroene (c. 177–212) who converted to Christianity c. 200, making Edessa likely the first Christian state; distinct from the legendary Abgar V of the Eusebius HE 1.13 correspondence tradition."
+      },
+      "object_entity": {
+        "event_id": "conversion-of-edessa",
+        "event_label": "Conversion of Edessa",
+        "event_type": "political",
+        "event_kind": "simple",
+        "notes": "Conversion of King Abgar VIII of Osroene to Christianity c. 200 AD, making Edessa likely the first Christian state; the historical kernel behind the later legendary Abgar-Jesus correspondence in Eusebius HE 1.13."
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-abgar-in-conversion-edessa",
+            "passage_id": "psg-eusebius-he-1-13",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.7",
+            "notes": "King Abgar writes to Jesus and receives healing."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-1-13",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 1.13",
+            "excerpt": "Paraphrase: Eusebius reproduces documents from the archives of Edessa: King Abgar writes to Jesus asking for healing; Jesus replies promising to send a disciple after his ascension; Thomas later sends Thaddaeus (Addai) who heals Abgar and evangelizes Edessa.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Abgar-Jesus correspondence and Addai tradition"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-abgar-viii-active-edessa",
+        "clm-abgar-member-edessa-church"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-eusebius-he-1-13": [
+          "clm-addai-active-edessa",
+          "clm-addai-coworker-thomas",
+          "clm-addai-in-conversion-edessa",
+          "clm-addai-member-edessa-church",
+          "clm-conversion-edessa-at-edessa",
+          "clm-conversion-edessa-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-1-13"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-abgar-member-edessa-church",
+        "subject_type": "person",
+        "subject_id": "abgar-viii-of-edessa",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "edessa-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "200",
+        "year_end": "212",
+        "context_place_id": "edessa",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "abgar-viii-of-edessa",
+        "person_label": "Abgar VIII of Edessa",
+        "name_alt": "Abgar the Great",
+        "name_native": "ܐܒܓܪ",
+        "birth_year_display": "c. 177",
+        "death_year_display": "c. 212",
+        "person_kind": "individual",
+        "notes": "King of Osroene (c. 177–212) who converted to Christianity c. 200, making Edessa likely the first Christian state; distinct from the legendary Abgar V of the Eusebius HE 1.13 correspondence tradition."
+      },
+      "object_entity": {
+        "group_id": "edessa-church",
+        "group_label": "Church in Edessa",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Edessa (Osroene); spiritual capital of Syriac Christianity from at least c. 200 AD; home of the Abgar/Addai tradition, Bardaisan, and later Ephrem the Syrian; center of Syriac literary and theological culture."
+      },
+      "context_place": {
+        "place_id": "edessa",
+        "place_label": "Edessa",
+        "place_label_modern": "Şanlıurfa",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "37.1591",
+        "lon": "38.7969",
+        "location_precision": "approx_city",
+        "modern_country_label": "Turkey",
+        "notes": "Capital of Osroene in upper Mesopotamia; spiritual capital of Syriac Christianity; home of Bardaisan, Ephrem (after 363), and the Abgar/Addai tradition; site of the School of the Persians."
+      },
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-abgar-member-edessa-church",
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Passage contextualizes abgar-viii-of-edessa's membership in edessa-church."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "source_id": "src-wikipedia-early-church-geography",
+            "locator_type": "source_ref",
+            "locator": "Early_centers_of_Christianity",
+            "excerpt": "Early centers of Christianity included Jerusalem, Antioch, Alexandria, Rome, Carthage, and Edessa. Communities spread to Persia, India, and Ethiopia by the 4th century.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for general early Christian presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-early-church-geography",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Early centers of Christianity - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Early_centers_of_Christianity",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Survey of early Christian communities and geographic spread."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-abgar-viii-active-edessa",
+        "clm-abgar-in-conversion-edessa"
+      ],
+      "sibling_count": 2,
+      "passage_co_users": {
+        "psg-wikipedia-early-church-geography": [
+          "clm-abgar-viii-active-edessa",
+          "clm-bardaisan-member-bardesanites",
+          "clm-const381-event-year",
+          "clm-cyprian-originated-carthage",
+          "clm-cyril-participant-ephesus-431",
+          "clm-dura-church-at-dura",
+          "clm-dura-church-construction-year",
+          "clm-dura-church-year",
+          "clm-ebionites-at-egypt",
+          "clm-edessa-church-at-edessa",
+          "clm-ephesus-431-event-year",
+          "clm-hippolytus-callistus-schism-year",
+          "clm-irenaeus-ah-year",
+          "clm-montanus-coworker-priscilla-montanist",
+          "clm-place-bostra-attested",
+          "clm-place-caesarea-cappadocia-attested",
+          "clm-place-carthage-attested",
+          "clm-place-dalmatia-attested-late",
+          "clm-place-dura-europos-attested",
+          "clm-place-edessa-attested",
+          "clm-place-neocaesarea-attested",
+          "clm-place-sardinia-attested",
+          "clm-priscilla-montanist-affirms-prophecy",
+          "clm-priscilla-montanist-member-montanists"
+        ]
+      },
+      "flags": [
+        "UNSCORED_WEIGHT:psg-wikipedia-early-church-geography",
+        "TERTIARY_ONLY_SUPPORT",
+        "TERTIARY_DOCTRINAL"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-hippolytus-callistus-schism-year",
+        "subject_type": "event",
+        "subject_id": "hippolytus-callistus-schism",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "217",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade-batch-500",
+        "updated_at": "2026-03-12T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "hippolytus-callistus-schism",
+        "event_label": "Schism of Hippolytus and Callistus",
+        "event_type": "schism",
+        "event_kind": "simple",
+        "notes": "Hippolytus set himself up as rival bishop of Rome c. 217 after the election of Callistus I, whom he accused of modalism and moral laxity; sometimes called the first antipope; the schism persisted through the pontificates of Urban I and Pontian until reconciliation in Sardinian exile c. 235."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hippolytus-callistus-schism-year",
+            "passage_id": "psg-hippolytus-ref-9-11-12",
+            "evidence_role": "supports",
+            "support_aspect": "date",
+            "assertion_mode": "strong_inference",
+            "excerpt_override": "",
+            "evidence_weight": "1.0",
+            "notes": "Hippolytus Ref. 9.11-12 describes the schism with Callistus c. 217 CE; year inferred from context."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-11-12",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.11-12",
+            "excerpt": "Paraphrase: Callistus alleged that the parable of the tares growing together with the wheat was spoken in reference to the Church: sinners should remain in the Church. He also affirmed that the ark of Noah was a figure of the Church, in which were dogs, hawks, and other unclean animals — so must the Church tolerate sinners.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Callistus defends leniency toward sinners using parables of tares and Noah's ark; penitential controversy"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        },
+        {
+          "evidence": {
+            "claim_id": "clm-hippolytus-callistus-schism-year",
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "evidence_role": "contextualizes",
+            "support_aspect": "",
+            "assertion_mode": "",
+            "excerpt_override": "",
+            "evidence_weight": "",
+            "notes": "Year derived from associated narrative account."
+          },
+          "passage": {
+            "passage_id": "psg-wikipedia-early-church-geography",
+            "source_id": "src-wikipedia-early-church-geography",
+            "locator_type": "source_ref",
+            "locator": "Early_centers_of_Christianity",
+            "excerpt": "Early centers of Christianity included Jerusalem, Antioch, Alexandria, Rome, Carthage, and Edessa. Communities spread to Persia, India, and Ethiopia by the 4th century.",
+            "language": "en",
+            "passage_year": "",
+            "url_override": "",
+            "notes": "Used for general early Christian presence at various locations."
+          },
+          "source": {
+            "source_id": "src-wikipedia-early-church-geography",
+            "work_id": "",
+            "source_kind": "web_page",
+            "title": "Early centers of Christianity - Wikipedia",
+            "author": "",
+            "editor": "",
+            "year_display": "2024",
+            "year_start": "",
+            "year_end": "",
+            "container_title": "Wikipedia",
+            "publisher": "Wikimedia Foundation",
+            "url": "https://en.wikipedia.org/wiki/Early_centers_of_Christianity",
+            "accessed_on": "2025-01-01",
+            "isbn_issn": "",
+            "notes": "Survey of early Christian communities and geographic spread."
+          },
+          "excerpt_form": "verbatim",
+          "source_tier": "tier_3_tertiary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hippolytus-callistus-schism-at-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-11-12": [
+          "clm-callistus-person-affirms-penance",
+          "clm-hippolytus-teacher-of-novatian",
+          "clm-refutation-affirms-penance"
+        ],
+        "psg-wikipedia-early-church-geography": [
+          "clm-abgar-member-edessa-church",
+          "clm-abgar-viii-active-edessa",
+          "clm-bardaisan-member-bardesanites",
+          "clm-const381-event-year",
+          "clm-cyprian-originated-carthage",
+          "clm-cyril-participant-ephesus-431",
+          "clm-dura-church-at-dura",
+          "clm-dura-church-construction-year",
+          "clm-dura-church-year",
+          "clm-ebionites-at-egypt",
+          "clm-edessa-church-at-edessa",
+          "clm-ephesus-431-event-year",
+          "clm-irenaeus-ah-year",
+          "clm-montanus-coworker-priscilla-montanist",
+          "clm-place-bostra-attested",
+          "clm-place-caesarea-cappadocia-attested",
+          "clm-place-carthage-attested",
+          "clm-place-dalmatia-attested-late",
+          "clm-place-dura-europos-attested",
+          "clm-place-edessa-attested",
+          "clm-place-neocaesarea-attested",
+          "clm-place-sardinia-attested",
+          "clm-priscilla-montanist-affirms-prophecy",
+          "clm-priscilla-montanist-member-montanists"
+        ]
+      },
+      "flags": []
+    },
+    {
+      "claim": {
+        "claim_id": "clm-hippolytus-callistus-schism-at-rome",
+        "subject_type": "event",
+        "subject_id": "hippolytus-callistus-schism",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "217",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "hippolytus-callistus-schism",
+        "event_label": "Schism of Hippolytus and Callistus",
+        "event_type": "schism",
+        "event_kind": "simple",
+        "notes": "Hippolytus set himself up as rival bishop of Rome c. 217 after the election of Callistus I, whom he accused of modalism and moral laxity; sometimes called the first antipope; the schism persisted through the pontificates of Urban I and Pontian until reconciliation in Sardinian exile c. 235."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-hippolytus-callistus-schism-at-rome",
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Refutation 9 locates the schism in the Roman church."
+          },
+          "passage": {
+            "passage_id": "psg-hippolytus-ref-9-7",
+            "source_id": "src-hippolytus-refutation",
+            "locator_type": "source_ref",
+            "locator": "Ref. 9.7",
+            "excerpt": "Paraphrase: Callistus, having been appointed over the cemetery by Zephyrinus, brought many into his following. He was the first to invent the device of conniving at the sensual pleasures of men, saying that all men had their sins forgiven by himself. For he even permitted women of rank, if they were unmarried and burned with lust, to have a companion of the rank of slave or freedman.",
+            "language": "English",
+            "passage_year": "222",
+            "url_override": "",
+            "notes": "Hippolytus attacks Callistus for moral laxity; permitting marriages between social classes; forgiving grave sins"
+          },
+          "source": {
+            "source_id": "src-hippolytus-refutation",
+            "work_id": "refutation-of-all-heresies",
+            "source_kind": "primary_text",
+            "title": "Refutation of All Heresies",
+            "author": "Hippolytus of Rome (attributed)",
+            "editor": "",
+            "year_display": "c. 222-225",
+            "year_start": "222",
+            "year_end": "225",
+            "container_title": "Early Christian literature",
+            "publisher": "",
+            "url": "https://www.newadvent.org/fathers/0501.htm",
+            "accessed_on": "2026-03-15",
+            "isbn_issn": "",
+            "notes": "Philosophoumena; ten-book heresiological work; ANF Vol. 5 translation."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-hippolytus-callistus-schism-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-hippolytus-ref-9-7": [
+          "clm-callistus-bishop-rome",
+          "clm-callistus-in-schism",
+          "clm-callistus-member-roman-church",
+          "clm-hippolytus-in-schism",
+          "clm-hippolytus-rival-bishop-rome",
+          "clm-hippolytus-teacher-of-novatian",
+          "clm-refutation-affirms-rule-of-faith",
+          "clm-refutation-affirms-succession",
+          "clm-refutation-by-hippolytus",
+          "clm-refutation-written-rome",
+          "clm-zephyrinus-in-schism"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-hippolytus-ref-9-7",
+        "PARAPHRASE_OMISSION:psg-hippolytus-ref-9-7:object"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-beryllus-bishop-of-bostra",
+        "subject_type": "person",
+        "subject_id": "beryllus-of-bostra",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "bostra",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "220",
+        "year_end": "250",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "beryllus-of-bostra",
+        "person_label": "Beryllus of Bostra",
+        "name_alt": "Beryllus",
+        "name_native": "Βήρυλλος",
+        "birth_year_display": "c. 190",
+        "death_year_display": "c. 250",
+        "person_kind": "individual",
+        "notes": "Bishop of Bostra in Arabia; held monarchian views denying Christ's pre-existent divinity; corrected by Origen at a synod c. 244; subsequently returned to orthodoxy per Eusebius HE 6.33."
+      },
+      "object_entity": {
+        "place_id": "bostra",
+        "place_label": "Bostra",
+        "place_label_modern": "Busra esh-Sham",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "32.5172",
+        "lon": "36.4817",
+        "location_precision": "approx_city",
+        "modern_country_label": "Syria",
+        "notes": "Capital of the Roman province of Arabia; seat of Bishop Beryllus; site of the synod c. 244 where Origen corrected Beryllus's monarchian views."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-beryllus-bishop-of-bostra",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eusebius names Beryllus of Bostra as bishop who invited Origen."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-beryllus-participant-synod-bostra"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-participant-synod-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-beryllus-participant-synod-bostra",
+        "subject_type": "person",
+        "subject_id": "beryllus-of-bostra",
+        "predicate_id": "participant_in",
+        "object_mode": "entity",
+        "object_type": "event",
+        "object_id": "synod-of-bostra",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "244",
+        "year_end": "244",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "beryllus-of-bostra",
+        "person_label": "Beryllus of Bostra",
+        "name_alt": "Beryllus",
+        "name_native": "Βήρυλλος",
+        "birth_year_display": "c. 190",
+        "death_year_display": "c. 250",
+        "person_kind": "individual",
+        "notes": "Bishop of Bostra in Arabia; held monarchian views denying Christ's pre-existent divinity; corrected by Origen at a synod c. 244; subsequently returned to orthodoxy per Eusebius HE 6.33."
+      },
+      "object_entity": {
+        "event_id": "synod-of-bostra",
+        "event_label": "Synod of Bostra",
+        "event_type": "council",
+        "event_kind": "simple",
+        "notes": "Synod convened c. 244 at Bostra in Arabia to address the monarchian views of Bishop Beryllus who denied Christ's pre-existent divinity; Origen was invited to debate Beryllus and successfully persuaded him to return to orthodox teaching per Eusebius HE 6.33."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-beryllus-participant-synod-bostra",
+            "passage_id": "psg-eusebius-he-6-19",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Eusebius records the synod at Bostra where Origen corrected Beryllus."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-19",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.19",
+            "excerpt": "Paraphrase: Origen's fame spread throughout the whole world; Beryllus of Bostra, Alexander of Jerusalem, and many other bishops invited him to teach and dispute with heretics; in Caesarea he was ordained presbyter by the bishops of Palestine, which provoked the jealousy of Demetrius of Alexandria.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius on Origen's fame, ordination controversy, and network of episcopal supporters"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-beryllus-bishop-of-bostra"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-19": [
+          "clm-alexander-jerusalem-active-caesarea",
+          "clm-alexander-jerusalem-bishop-of",
+          "clm-alexander-jerusalem-member-alexandrian",
+          "clm-alexander-jerusalem-participant-decian",
+          "clm-alexander-jerusalem-teacher-of-origen",
+          "clm-ambrose-alex-active-alexandria",
+          "clm-ambrose-alex-active-rome",
+          "clm-arius-active-alexandria",
+          "clm-arius-member-alexandrian",
+          "clm-athanasius-coworker-eusebius",
+          "clm-beryllus-bishop-of-bostra",
+          "clm-caesarean-church-at-caesarea",
+          "clm-church-east-at-nisibis",
+          "clm-comjohn-written-at-caesarea",
+          "clm-commatt-written-at-caesarea",
+          "clm-comrom-written-at-caesarea",
+          "clm-contra-celsum-written-at-caesarea",
+          "clm-demetrius-participant-expulsion",
+          "clm-dionysius-alex-coworker-origen",
+          "clm-ephrem-coworker-jacob",
+          "clm-exhort-martyrdom-written-at-caesarea",
+          "clm-expulsion-occurs-at-alexandria",
+          "clm-expulsion-year",
+          "clm-homjer-written-at-caesarea",
+          "clm-homlev-written-at-caesarea",
+          "clm-homluke-written-at-caesarea",
+          "clm-julius-africanus-active-alexandria",
+          "clm-julius-africanus-active-emmaus",
+          "clm-julius-africanus-active-rome",
+          "clm-onprayer-written-at-caesarea",
+          "clm-origen-active-antioch",
+          "clm-origen-active-tyre",
+          "clm-origen-coworker-ambrose",
+          "clm-origen-coworker-firmilian",
+          "clm-origen-member-caesarean",
+          "clm-origen-participant-expulsion",
+          "clm-origen-participant-synod-bostra",
+          "clm-origen-participant-torture-decius",
+          "clm-origen-teacher-of-firmilian",
+          "clm-origen-teacher-of-julius-africanus",
+          "clm-synod-bostra-occurs-at-bostra",
+          "clm-synod-bostra-year",
+          "clm-tertullian-active-rome",
+          "clm-torture-decius-occurs-at-caesarea",
+          "clm-torture-decius-year"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-19"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-urban-i-bishop-rome",
+        "subject_type": "person",
+        "subject_id": "urban-i",
+        "predicate_id": "bishop_of",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "rome",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "222",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "urban-i",
+        "person_label": "Urban I",
+        "name_alt": "Pope Urban",
+        "name_native": "Οὐρβανός",
+        "birth_year_display": "c. 175",
+        "death_year_display": "c. 230",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 222–230; succeeded Callistus I; Hippolytus continued his rival episcopacy during Urban's pontificate."
+      },
+      "object_entity": {
+        "place_id": "rome",
+        "place_label": "Rome",
+        "place_label_modern": "",
+        "place_kind": "city",
+        "parent_place_id": "",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "location_precision": "exact",
+        "modern_country_label": "Italy",
+        "notes": "Imperial capital associated with the Roman church and Paul later ministry."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-urban-i-bishop-rome",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Eusebius attests the succession; Hippolytus continued his opposition during Urban's pontificate."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-urban-i-member-roman-church"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-urban-i-member-roman-church",
+        "subject_type": "person",
+        "subject_id": "urban-i",
+        "predicate_id": "member_of_group",
+        "object_mode": "entity",
+        "object_type": "group",
+        "object_id": "roman-church",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "222",
+        "year_end": "230",
+        "context_place_id": "",
+        "certainty": "probable",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "person_id": "urban-i",
+        "person_label": "Urban I",
+        "name_alt": "Pope Urban",
+        "name_native": "Οὐρβανός",
+        "birth_year_display": "c. 175",
+        "death_year_display": "c. 230",
+        "person_kind": "individual",
+        "notes": "Bishop of Rome c. 222–230; succeeded Callistus I; Hippolytus continued his rival episcopacy during Urban's pontificate."
+      },
+      "object_entity": {
+        "group_id": "roman-church",
+        "group_label": "Church in Rome",
+        "group_kind": "communion",
+        "is_christian": "true",
+        "notes": "Christian community in Rome addressed by Paul and associated with house-church gatherings."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-urban-i-member-roman-church",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.6",
+            "notes": "Urban I as bishop of Rome."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-urban-i-bishop-rome"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sardinian-exile-year",
+        "subject_type": "event",
+        "subject_id": "sardinian-exile",
+        "predicate_id": "event_has_year",
+        "object_mode": "year",
+        "object_type": "",
+        "object_id": "",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "235",
+        "value_boolean": "",
+        "year_start": "",
+        "year_end": "",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "sardinian-exile",
+        "event_label": "Sardinian Exile of Hippolytus and Pontian",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Bishop Pontian and the schismatic Hippolytus were both exiled to the mines of Sardinia in 235 under Emperor Maximinus Thrax; they were reconciled before death; their bodies were brought back to Rome by Pope Fabian c. 236."
+      },
+      "object_entity": null,
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sardinian-exile-year",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "The exile occurred in 235 under Maximinus Thrax."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sardinian-exile-at-sardinia"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-at-sardinia",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:subject"
+      ]
+    },
+    {
+      "claim": {
+        "claim_id": "clm-sardinian-exile-at-sardinia",
+        "subject_type": "event",
+        "subject_id": "sardinian-exile",
+        "predicate_id": "event_occurs_at",
+        "object_mode": "entity",
+        "object_type": "place",
+        "object_id": "sardinia",
+        "value_text": "",
+        "value_number": "",
+        "value_year": "",
+        "value_boolean": "",
+        "year_start": "235",
+        "year_end": "235",
+        "context_place_id": "",
+        "certainty": "attested",
+        "claim_status": "active",
+        "created_by": "cascade",
+        "updated_at": "2026-03-11T12:00:00Z"
+      },
+      "subject_entity": {
+        "event_id": "sardinian-exile",
+        "event_label": "Sardinian Exile of Hippolytus and Pontian",
+        "event_type": "persecution",
+        "event_kind": "simple",
+        "notes": "Bishop Pontian and the schismatic Hippolytus were both exiled to the mines of Sardinia in 235 under Emperor Maximinus Thrax; they were reconciled before death; their bodies were brought back to Rome by Pope Fabian c. 236."
+      },
+      "object_entity": {
+        "place_id": "sardinia",
+        "place_label": "Sardinia",
+        "place_label_modern": "",
+        "place_kind": "region",
+        "parent_place_id": "",
+        "lat": "39.2238",
+        "lon": "9.1217",
+        "location_precision": "approx_region",
+        "modern_country_label": "Italy",
+        "notes": "Mediterranean island; site of Roman mines where Hippolytus and Pontian were exiled in 235 under Maximinus Thrax."
+      },
+      "context_place": null,
+      "evidence": [
+        {
+          "evidence": {
+            "claim_id": "clm-sardinian-exile-at-sardinia",
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "evidence_role": "supports",
+            "support_aspect": "whole_claim",
+            "assertion_mode": "explicit",
+            "excerpt_override": "",
+            "evidence_weight": "0.9",
+            "notes": "Liberian Catalogue records the exile to Sardinia."
+          },
+          "passage": {
+            "passage_id": "psg-eusebius-he-6-20-43",
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "locator_type": "source_ref",
+            "locator": "HE 6.20, 6.43",
+            "excerpt": "Paraphrase: Eusebius reports that Hippolytus was a bishop somewhere and that he composed various works. In HE 6.43, Eusebius preserves a letter of Cornelius of Rome describing Novatian's ordination as rival bishop and the condemnation of his rigorist position by a Roman synod of sixty bishops.",
+            "language": "English",
+            "passage_year": "325",
+            "url_override": "",
+            "notes": "Eusebius testimony to Hippolytus's episcopacy and works; Cornelius's letter on Novatian schism; Roman synod against Novatian"
+          },
+          "source": {
+            "source_id": "src-eusebius-ecclesiastical-history",
+            "work_id": "ecclesiastical-history-of-eusebius",
+            "source_kind": "primary_text",
+            "title": "Ecclesiastical History",
+            "author": "Eusebius of Caesarea",
+            "editor": "",
+            "year_display": "c. 325",
+            "year_start": "325",
+            "year_end": "325",
+            "container_title": "Late antique Christian historiography",
+            "publisher": "",
+            "url": "https://www.earlychurchtexts.com/public/eusebius_persecution_under_nero.htm",
+            "accessed_on": "2026-03-10",
+            "isbn_issn": "",
+            "notes": "Late antique witness explicitly connecting Peter and Paul's martyrdom memory with Rome under Nero."
+          },
+          "excerpt_form": "paraphrase",
+          "source_tier": "tier_1_primary"
+        }
+      ],
+      "sibling_claim_ids": [
+        "clm-sardinian-exile-year"
+      ],
+      "sibling_count": 1,
+      "passage_co_users": {
+        "psg-eusebius-he-6-20-43": [
+          "clm-cornelius-pope-bishop-rome",
+          "clm-cornelius-pope-coworker-cyprian",
+          "clm-cornelius-pope-in-novatian-schism",
+          "clm-cornelius-pope-member-roman-church",
+          "clm-cornelius-pope-person-affirms-penance",
+          "clm-cyprian-bishop-carthage",
+          "clm-cyprian-in-decian-persecution",
+          "clm-cyprian-member-carthage-church",
+          "clm-decian-persecution-at-rome",
+          "clm-decian-persecution-year",
+          "clm-fabian-bishop-rome",
+          "clm-fabian-in-decian-persecution",
+          "clm-fabian-member-roman-church",
+          "clm-hippolytus-coworker-pontian",
+          "clm-hippolytus-in-sardinian-exile",
+          "clm-hippolytus-member-roman-church",
+          "clm-novatian-active-rome",
+          "clm-novatian-in-novatian-schism",
+          "clm-novatian-member-novatianists",
+          "clm-novatian-member-roman-church",
+          "clm-novatian-person-opposes-penance",
+          "clm-novatian-schism-at-rome",
+          "clm-novatian-schism-year",
+          "clm-novatianists-at-antioch",
+          "clm-novatianists-at-carthage",
+          "clm-novatianists-at-rome",
+          "clm-pontian-bishop-rome",
+          "clm-pontian-in-sardinian-exile",
+          "clm-pontian-member-roman-church",
+          "clm-sardinian-exile-year",
+          "clm-tertullian-teacher-cyprian",
+          "clm-urban-i-bishop-rome",
+          "clm-urban-i-member-roman-church"
+        ]
+      },
+      "flags": [
+        "PARAPHRASE_RISK:psg-eusebius-he-6-20-43",
+        "PARAPHRASE_OMISSION:psg-eusebius-he-6-20-43:subject+object"
+      ]
+    }
+  ]
+}
