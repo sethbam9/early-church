@@ -1,0 +1,124 @@
+.chain {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  padding: var(--space-2);
+  background: var(--bg-surface-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.badge {
+  font-size: 0.65rem;
+  padding: 1px 6px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+.badgeDirect {
+  background: rgba(26, 122, 92, 0.12);
+  color: var(--color-success);
+}
+.badgeDerived {
+  background: rgba(176, 126, 16, 0.12);
+  color: var(--color-warning);
+}
+.rule {
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: var(--font-size-xs);
+}
+.cert {
+  margin-left: auto;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+.summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+  font-size: var(--font-size-sm);
+}
+.step, .stepLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-weight: 500;
+}
+.stepLink {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--accent);
+  font-size: inherit;
+  font-weight: 500;
+  padding: 0;
+}
+.stepLink:hover {
+  text-decoration: underline;
+}
+.arrow {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.claimList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: var(--space-1);
+  border-top: 1px solid var(--border-subtle);
+}
+.claimStep {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  padding: 2px 0;
+  flex-wrap: wrap;
+}
+.stepNum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-surface-3);
+  color: var(--text-muted);
+  font-size: 0.6rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.stepEntity {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.stepPred {
+  color: var(--text-muted);
+  font-style: italic;
+}
+.faint {
+  color: var(--text-muted);
+}
+.compact {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+.empty {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  font-style: italic;
+}

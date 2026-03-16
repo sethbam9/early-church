@@ -171,7 +171,9 @@ export interface SourceRecord {
   title: string;
   author: string;
   editor: string;
-  year: string;
+  year_display: string;
+  year_start: number | null;
+  year_end: number | null;
   container_title: string;
   publisher: string;
   url: string;
@@ -213,10 +215,15 @@ export interface Claim {
   updated_at: string;
 }
 
+export type SupportAspect = "whole_claim" | "subject" | "predicate" | "object" | "date" | "place" | "context" | "attribution";
+export type AssertionMode = "explicit" | "strong_inference" | "weak_inference" | "background_only";
+
 export interface ClaimEvidence {
   claim_id: string;
   passage_id: string;
   evidence_role: EvidenceRole;
+  support_aspect: SupportAspect | "";
+  assertion_mode: AssertionMode | "";
   excerpt_override: string;
   evidence_weight: number | null;
   notes: string;
@@ -228,6 +235,16 @@ export interface ClaimReview {
   review_status: ReviewStatus;
   reviewed_at: string;
   confidence: ReviewConfidence;
+  note: string;
+}
+
+export type ReviewEventType = "created" | "reviewed" | "approved" | "disputed" | "reopened" | "needs_revision";
+
+export interface ClaimReviewEvent {
+  claim_id: string;
+  event_type: ReviewEventType;
+  actor_id: string;
+  event_at: string;
   note: string;
 }
 
@@ -244,6 +261,24 @@ export interface EditorNote {
 
 // ─── Derived table models ────────────────────────────────────────────────────
 
+export type Directness = "direct" | "derived";
+
+export interface DerivedEdge {
+  edge_id: string;
+  from_type: string;
+  from_id: string;
+  to_type: string;
+  to_id: string;
+  relation_kind: string;
+  directness: Directness;
+  rule_id: string;
+  year_start: number | null;
+  year_end: number | null;
+  certainty: Certainty;
+  supporting_claim_ids: string[];
+  path_text: string;
+}
+
 export interface EntityPlaceFootprint {
   entity_type: string;
   entity_id: string;
@@ -252,7 +287,7 @@ export interface EntityPlaceFootprint {
   year_end: number | null;
   reason_predicate_id: string;
   stance: DerivedStance;
-  path_signature: string;
+  derived_edge_id: string;
 }
 
 export interface PlaceStateByDecade {
@@ -282,6 +317,7 @@ export interface PropositionPlacePresence {
   stance: Stance;
   supporting_claim_count: number;
   opposing_claim_count: number;
+  derived_edge_ids: string[];
   derivation_hash: string;
 }
 

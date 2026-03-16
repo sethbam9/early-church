@@ -1,11 +1,14 @@
+import { useState } from "react";
 import s from "./Wiki.module.css";
-import { dataStore } from "../../data/dataStore";
+import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { useClaimsData, EVIDENCE_ROLES } from "../../hooks/useClaimsData";
 import { CERTAINTY_OPTIONS } from "../shared/entityConstants";
 import { SearchInput } from "../shared/SearchInput";
 import { DropdownSelect } from "../shared/Dropdown";
+import { EntityLink } from "../shared/EntityLink";
 import { NoteCard } from "../shared/NoteCard";
 import { ClaimRow } from "./ClaimRow";
+import { DerivationChain } from "../shared/DerivationChain";
 
 interface ClaimsPanelProps {
   kind: string;
@@ -72,17 +75,17 @@ export function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelec
       <div className={s.evRoleFilter}>
         <DropdownSelect
           value={roleFilter ?? "all"}
-          onChange={setRoleFilter}
+          onChange={(value) => setRoleFilter(value as any)}
           options={EVIDENCE_ROLES.map((r) => ({ value: r, label: r.charAt(0).toUpperCase() + r.slice(1) }))}
         />
         <DropdownSelect
           value={certFilter}
-          onChange={setCertFilter}
+          onChange={(value) => setCertFilter(value)}
           options={CERTAINTY_OPTIONS}
         />
         <DropdownSelect
           value={reviewFilter}
-          onChange={setReviewFilter}
+          onChange={(value) => setReviewFilter(value)}
           options={[
             { value: "all", label: "All review" },
             { value: "unreviewed", label: "Unreviewed" },
@@ -125,6 +128,66 @@ export function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelec
                 onSelectEntity={onSelectEntity} onSelectClaim={onSelectClaim}
                 isSelected={claim.claim_id === selectedClaimId} roleFilter={roleFilter} />
             ))}
+          </div>
+        );
+      })}
+
+      {/* Derived places for propositions — shown at bottom after all claims */}
+      {kind === "proposition" && <PropositionPlaces propId={id} onSelectEntity={onSelectEntity} />}
+    </div>
+  );
+}
+
+// ── Derived Places for Propositions ──────────────────────────────────────────
+
+function PropositionPlaces({ propId, onSelectEntity }: { propId: string; onSelectEntity: (k: string, i: string) => void }) {
+  const [expandedPlace, setExpandedPlace] = useState<string | null>(null);
+  const presenceRows = dataStore.propositionPlacePresence.getForProposition(propId);
+  if (presenceRows.length === 0) return null;
+
+  return (
+    <div className={s.predGroup}>
+      <div className={s.predGroupHeader}>
+        <span className={s.predId}>Derived Places ({presenceRows.length})</span>
+      </div>
+      {presenceRows.map((pp) => {
+        const isOpen = expandedPlace === `${pp.place_id}-${pp.year_start}`;
+        const yearRange = pp.year_start != null
+          ? `AD ${pp.year_start}${pp.year_end != null && pp.year_end !== pp.year_start ? `–${pp.year_end}` : ""}`
+          : "";
+        return (
+          <div key={`${pp.place_id}-${pp.year_start}-${pp.year_end}`} className={s.claimRow}>
+            <div className={s.claimMain} onClick={() => onSelectEntity("place", pp.place_id)}>
+              <div className={s.claimLeft}>
+                <span className={s.predLabel}>{pp.stance}</span>
+                <EntityLink kind="place" id={pp.place_id} onClick={() => onSelectEntity("place", pp.place_id)} />
+                <span className={s.faint}>{pp.supporting_claim_count}↑ {pp.opposing_claim_count}↓</span>
+              </div>
+              <div className={s.claimRight}>
+                {yearRange && <span className={s.year}>{yearRange}</span>}
+                {pp.derived_edge_ids.length > 0 && (
+                  <span className={s.evCount} title={`${pp.derived_edge_ids.length} derivation chain(s)`}>
+                    {pp.derived_edge_ids.length}drv
+                  </span>
+                )}
+                <button type="button" className={s.expandBtn}
+                  onClick={(e) => { e.stopPropagation(); setExpandedPlace(isOpen ? null : `${pp.place_id}-${pp.year_start}`); }}
+                  title={isOpen ? "Hide derivation" : "Show derivation"}>
+                  {isOpen ? "▲" : "▼"}
+                </button>
+              </div>
+            </div>
+            {isOpen && (
+              <div className={s.claimEvidence}>
+                {pp.derived_edge_ids.length > 0 ? (
+                  pp.derived_edge_ids.map((edgeId) => (
+                    <DerivationChain key={edgeId} edgeId={edgeId} onSelectEntity={onSelectEntity} />
+                  ))
+                ) : (
+                  <div className={s.emptySub}>No derivation chain available.</div>
+                )}
+              </div>
+            )}
           </div>
         );
       })}

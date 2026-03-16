@@ -64,9 +64,27 @@ export function useMapPageData() {
   const showArcs          = useAppStore((s) => s.showArcs);
   const mapFilterType     = useAppStore((s) => s.mapFilterType);
   const mapFilterId       = useAppStore((s) => s.mapFilterId);
+  const stanceFilters     = useAppStore((s) => s.activePropositionStanceFilters);
   const searchQuery       = useAppStore((s) => s.searchQuery);
 
   const decades = dataStore.map.getDecades();
+
+  const activePropositionId = useMemo(() => {
+    if (mapFilterType === "proposition" && mapFilterId) return mapFilterId;
+    if (selection?.kind === "proposition") return selection.id;
+    return null;
+  }, [mapFilterType, mapFilterId, selection]);
+
+  const propositionEntriesForDecade = useMemo(() => {
+    if (!activePropositionId) return [];
+    const ppp = dataStore.propositionPlacePresence.getForProposition(activePropositionId);
+    const decadeEnd = activeDecade + 9;
+    return ppp.filter((entry) => {
+      const ppStart = entry.year_start ?? -9999;
+      const ppEnd = entry.year_end ?? 9999;
+      return ppStart <= decadeEnd && ppEnd >= activeDecade;
+    });
+  }, [activePropositionId, activeDecade]);
 
   // Visible places
   const visiblePlaces = useMemo<PlaceAtDecade[]>(() => {
@@ -99,10 +117,19 @@ export function useMapPageData() {
         const placeIds = getConnectedPlaceIds({ kind: mapFilterType, id: mapFilterId });
         result = result.filter((p) => placeIds.has(p.place_id));
       } else if (mapFilterType === "proposition") {
-        const ppp = dataStore.propositionPlacePresence.getForProposition(mapFilterId);
-        const placeIds = new Set(ppp.map((pp) => pp.place_id));
+        const placeIds = new Set(propositionEntriesForDecade.map((pp) => pp.place_id));
         result = result.filter((p) => placeIds.has(p.place_id));
       }
+    }
+
+    // Proposition stance filter (applies when a proposition context is active)
+    if (activePropositionId && stanceFilters.length > 0) {
+      const placeIds = new Set(
+        propositionEntriesForDecade
+          .filter((entry) => stanceFilters.includes(entry.stance))
+          .map((entry) => entry.place_id),
+      );
+      result = result.filter((p) => placeIds.has(p.place_id));
     }
 
     // Global text search
@@ -112,22 +139,30 @@ export function useMapPageData() {
     }
 
     return result;
-  }, [activeDecade, includeCumulative, activeFilters, placeKindFilter, christianOnly, mapFilterType, mapFilterId, searchQuery]);
+  }, [
+    includeCumulative,
+    activeDecade,
+    activeFilters,
+    placeKindFilter,
+    christianOnly,
+    mapFilterType,
+    mapFilterId,
+    activePropositionId,
+    propositionEntriesForDecade,
+    stanceFilters,
+    searchQuery,
+  ]);
 
   // Proposition stance lookup (used for marker coloring)
   // Activates both when map filter is proposition AND when a proposition is selected in the right panel
   const propositionStanceMap = useMemo<Map<string, string>>(() => {
-    const propId = (mapFilterType === "proposition" && mapFilterId)
-      ? mapFilterId
-      : (selection?.kind === "proposition" ? selection.id : null);
-    if (!propId) return new Map();
-    const ppp = dataStore.propositionPlacePresence.getForProposition(propId);
+    if (!activePropositionId) return new Map();
     const map = new Map<string, string>();
-    for (const entry of ppp) {
+    for (const entry of propositionEntriesForDecade) {
       map.set(entry.place_id, entry.stance || "unknown");
     }
     return map;
-  }, [mapFilterType, mapFilterId, selection]);
+  }, [activePropositionId, propositionEntriesForDecade]);
 
   // Arc data
   const arcPairs = useMemo<ArcEntry[]>(() => {

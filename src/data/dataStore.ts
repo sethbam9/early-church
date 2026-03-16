@@ -10,8 +10,8 @@ export type {
   CanonicalSortRule, MentionSourceType,
   EntityType, MentionTargetType, SelectionKind,
   Place, Person, Work, HistoricalEvent, Group, Topic, Dimension, Proposition,
-  PredicateType, SourceRecord, Passage, Claim, ClaimEvidence, ClaimReview, EditorNote,
-  EntityPlaceFootprint, PlaceStateByDecade, FirstAttestation, PropositionPlacePresence,
+  PredicateType, SourceRecord, Passage, Claim, ClaimEvidence, ClaimReview, ClaimReviewEvent, EditorNote,
+  DerivedEdge, EntityPlaceFootprint, PlaceStateByDecade, FirstAttestation, PropositionPlacePresence,
   NoteMention, PlaceAtDecade,
   EntityRef, HighlightEntry, CorrespondenceArc, Selection,
 } from "./types";
@@ -19,8 +19,8 @@ export type {
 import type {
   PresenceStatus, LocationPrecision, PlaceKind,
   Place, Person, Work, HistoricalEvent, Group, Topic, Dimension, Proposition,
-  PredicateType, SourceRecord, Passage, Claim, ClaimEvidence, ClaimReview, EditorNote,
-  EntityPlaceFootprint, PlaceStateByDecade, FirstAttestation, PropositionPlacePresence,
+  PredicateType, SourceRecord, Passage, Claim, ClaimEvidence, ClaimReview, ClaimReviewEvent, EditorNote,
+  DerivedEdge, EntityPlaceFootprint, PlaceStateByDecade, FirstAttestation, PropositionPlacePresence,
   NoteMention, PlaceAtDecade, DerivedStance,
 } from "./types";
 
@@ -41,6 +41,7 @@ import passagesRaw        from "../../data/sheets/passages.tsv?raw";
 import claimsRaw          from "../../data/sheets/claims.tsv?raw";
 import claimEvidenceRaw   from "../../data/sheets/claim_evidence.tsv?raw";
 import claimReviewsRaw    from "../../data/sheets/claim_reviews.tsv?raw";
+import reviewEventsRaw    from "../../data/sheets/claim_review_events.tsv?raw";
 import editorNotesRaw     from "../../data/sheets/editor_notes.tsv?raw";
 
 // Derived tables
@@ -48,6 +49,7 @@ import footprintsRaw      from "../../data/derived/entity_place_footprints.tsv?r
 import placeStatesRaw     from "../../data/derived/place_state_by_decade.tsv?raw";
 import firstAttestRaw     from "../../data/derived/first_attestations.tsv?raw";
 import propPresenceRaw    from "../../data/derived/proposition_place_presence.tsv?raw";
+import derivedEdgesRaw    from "../../data/derived/derived_edges.tsv?raw";
 import noteMentionsRaw    from "../../data/derived/note_mentions.tsv?raw";
 
 // ─── Parsing helpers ──────────────────────────────────────────────────────────
@@ -174,7 +176,9 @@ const sources: SourceRecord[] = parseTsv(sourcesRaw).map((r) => ({
   title: str(r.title),
   author: str(r.author),
   editor: str(r.editor),
-  year: str(r.year),
+  year_display: str(r.year_display),
+  year_start: int(r.year_start),
+  year_end: int(r.year_end),
   container_title: str(r.container_title),
   publisher: str(r.publisher),
   url: str(r.url),
@@ -220,6 +224,8 @@ const claimEvidence: ClaimEvidence[] = parseTsv(claimEvidenceRaw).map((r) => ({
   claim_id: str(r.claim_id),
   passage_id: str(r.passage_id),
   evidence_role: str(r.evidence_role) as ClaimEvidence["evidence_role"],
+  support_aspect: str(r.support_aspect) as ClaimEvidence["support_aspect"],
+  assertion_mode: str(r.assertion_mode) as ClaimEvidence["assertion_mode"],
   excerpt_override: str(r.excerpt_override),
   evidence_weight: float(r.evidence_weight),
   notes: str(r.notes),
@@ -231,6 +237,14 @@ const claimReviews: ClaimReview[] = parseTsv(claimReviewsRaw).map((r) => ({
   review_status: str(r.review_status) as ClaimReview["review_status"],
   reviewed_at: str(r.reviewed_at),
   confidence: str(r.confidence) as ClaimReview["confidence"],
+  note: str(r.note),
+}));
+
+const claimReviewEvents: ClaimReviewEvent[] = parseTsv(reviewEventsRaw).map((r) => ({
+  claim_id: str(r.claim_id),
+  event_type: str(r.event_type) as ClaimReviewEvent["event_type"],
+  actor_id: str(r.actor_id),
+  event_at: str(r.event_at),
   note: str(r.note),
 }));
 
@@ -247,6 +261,22 @@ const editorNotes: EditorNote[] = parseTsv(editorNotesRaw).map((r) => ({
 
 // ─── Parse derived tables ────────────────────────────────────────────────────
 
+const derivedEdges: DerivedEdge[] = parseTsv(derivedEdgesRaw).map((r) => ({
+  edge_id: str(r.edge_id),
+  from_type: str(r.from_type),
+  from_id: str(r.from_id),
+  to_type: str(r.to_type),
+  to_id: str(r.to_id),
+  relation_kind: str(r.relation_kind),
+  directness: str(r.directness) as DerivedEdge["directness"],
+  rule_id: str(r.rule_id),
+  year_start: int(r.year_start),
+  year_end: int(r.year_end),
+  certainty: str(r.certainty) as DerivedEdge["certainty"],
+  supporting_claim_ids: str(r.supporting_claim_ids).split("|").filter(Boolean),
+  path_text: str(r.path_text),
+}));
+
 const footprints: EntityPlaceFootprint[] = parseTsv(footprintsRaw).map((r) => ({
   entity_type: str(r.entity_type),
   entity_id: str(r.entity_id),
@@ -255,7 +285,7 @@ const footprints: EntityPlaceFootprint[] = parseTsv(footprintsRaw).map((r) => ({
   year_end: int(r.year_end),
   reason_predicate_id: str(r.reason_predicate_id),
   stance: parseDerivedStance(str(r.stance)),
-  path_signature: str(r.path_signature),
+  derived_edge_id: str(r.derived_edge_id),
 }));
 
 const placeStates: PlaceStateByDecade[] = parseTsv(placeStatesRaw).map((r) => ({
@@ -285,6 +315,7 @@ const propositionPlacePresence: PropositionPlacePresence[] = parseTsv(propPresen
   stance: str(r.stance) as PropositionPlacePresence["stance"],
   supporting_claim_count: int(r.supporting_claim_count) ?? 0,
   opposing_claim_count: int(r.opposing_claim_count) ?? 0,
+  derived_edge_ids: str(r.derived_edge_ids).split("|").filter(Boolean),
   derivation_hash: str(r.derivation_hash),
 }));
 
@@ -321,6 +352,7 @@ for (const source of sources) {
 const passageById = new Map(passages.map((p) => [p.passage_id, p]));
 const claimById = new Map(claims.map((c) => [c.claim_id, c]));
 const editorNoteById = new Map(editorNotes.map((n) => [n.editor_note_id, n]));
+const derivedEdgeById = new Map(derivedEdges.map((e) => [e.edge_id, e]));
 
 // place_states indexed by decade
 const placeStatesByDecade = new Map<number, PlaceStateByDecade[]>();
@@ -906,12 +938,26 @@ export const dataStore = {
     getForClaim: (claimId: string) => claimReviews.filter((r) => r.claim_id === claimId),
   },
 
+  // ── Claim review events (history) ──
+  claimReviewEvents: {
+    getAll: () => claimReviewEvents,
+    getForClaim: (claimId: string) => claimReviewEvents.filter((r) => r.claim_id === claimId),
+  },
+
   // ── Editor notes (replaces notes) ──
   editorNotes: {
     getAll: () => editorNotes,
     getById: (id: string) => editorNoteById.get(id),
     getForEntity: (type: string, id: string) => notesByEntity.get(`${type}:${id}`) ?? [],
     getMentioningNotes: (type: string, id: string) => getMentioningNotes(type, id),
+  },
+
+  // ── Derived edges ──
+  derivedEdges: {
+    getAll: () => derivedEdges,
+    getById: (id: string) => derivedEdgeById.get(id),
+    getForEntity: (type: string, id: string) =>
+      derivedEdges.filter((e) => (e.from_type === type && e.from_id === id) || (e.to_type === type && e.to_id === id)),
   },
 
   // ── Footprints (derived) ──

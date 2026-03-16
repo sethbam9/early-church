@@ -136,14 +136,14 @@ export function getEntityHeaderData(kind: string, id: string): EntityHeaderData 
     const rows: HeaderRow[] = [];
     if (e.author) rows.push({ label: "Author", value: e.author });
     if (e.editor) rows.push({ label: "Editor", value: e.editor });
-    if (e.year) rows.push({ label: "Year", value: e.year });
+    if (e.year_display) rows.push({ label: "Year", value: e.year_display });
     if (e.publisher) rows.push({ label: "Publisher", value: e.publisher });
     if (e.container_title) rows.push({ label: "In", value: e.container_title });
     if (e.isbn_issn) rows.push({ label: "ISBN/ISSN", value: e.isbn_issn });
     rows.push({ label: "Kind", value: e.source_kind });
     return {
       title: e.title,
-      subtitle: [e.author, e.year].filter(Boolean).join(" · "),
+      subtitle: [e.author, e.year_display].filter(Boolean).join(" · "),
       tags: [e.source_kind],
       rows,
       notes: e.notes || undefined,

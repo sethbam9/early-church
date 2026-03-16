@@ -46,6 +46,7 @@ Follow these steps when making any UI changes (CSS, layout, component styling, n
 
 16. If the change resolves an item in `docs/ui-goals.md`, mark it as `[x]` in the issue tracker.
 17. If the change introduces a new UI pattern or shared component, add it to the relevant section in `docs/ui-goals.md`.
+18. If it adds new functionality or features, edit the relevant docs in `docs/`.
 
 ## Key Principles
 

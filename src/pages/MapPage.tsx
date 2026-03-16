@@ -410,8 +410,6 @@ export function MapPage() {
           onFitVisible={handleFitVisible}
           onCenterSelected={handleCenterSelected}
           showCenter={!!selection}
-          fitLabel="fit"
-          centerLabel="center"
         />
 
         {/* Search results overlay */}

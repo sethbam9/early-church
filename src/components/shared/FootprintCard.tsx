@@ -4,6 +4,7 @@ import type { EntityPlaceFootprint } from "../../data/types";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { kindIcon } from "./entityConstants";
 import { EvidenceCard } from "./EvidenceCard";
+import { DerivationChain } from "./DerivationChain";
 import { getPredicateLabel } from "../../domain/relationLabels";
 import ehc from "./EntityHoverCard.module.css";
 import fc from "./FootprintCard.module.css";
@@ -32,33 +33,48 @@ function DerivationTooltip({ anchorRef, footprint }: {
     const el = anchorRef.current;
     if (!el) return;
     const rect = el.getBoundingClientRect();
-    let top = rect.top - 4;
     let left = rect.right + 8;
-    if (left + 280 > window.innerWidth) left = rect.left - 288;
-    if (top + 160 > window.innerHeight) top = window.innerHeight - 168;
-    if (top < 4) top = 4;
+    if (left + 320 > window.innerWidth) left = rect.left - 328;
+    // Show above if we're in the bottom half of the viewport
+    const estimatedHeight = 200;
+    let top: number;
+    if (rect.bottom + estimatedHeight > window.innerHeight) {
+      top = rect.top - estimatedHeight - 4;
+      if (top < 4) top = 4;
+    } else {
+      top = rect.top - 4;
+    }
     setPos({ top, left });
   }, [anchorRef]);
 
-  const trace = dataStore.claims.getTraceForFootprint(footprint);
-  const hasContent = trace.mode === "direct" ? trace.claims.length > 0
-    : trace.paths.length > 0;
+  const edgeId = footprint.derived_edge_id;
+  const edge = edgeId ? dataStore.derivedEdges.getById(edgeId) : undefined;
+
+  // Fall back to legacy trace when no derived_edge_id
+  const trace = !edge ? dataStore.claims.getTraceForFootprint(footprint) : null;
+  const hasContent = edge
+    ? true
+    : trace
+      ? (trace.mode === "direct" ? trace.claims.length > 0 : trace.paths.length > 0)
+      : false;
 
   if (!pos || !hasContent) return null;
   return createPortal(
     <div className={ehc.tooltip} style={{ top: pos.top, left: pos.left, pointerEvents: "none" }}>
       <div className={ehc.kind}>Derivation trail</div>
       <div className={`${fc.stackSm} ${fc.stackSmTop}`}>
-        {trace.mode === "direct" ? (
+        {edge ? (
+          <DerivationChain edgeId={edge.edge_id} compact={false} />
+        ) : trace?.mode === "direct" ? (
           trace.claims.map((c) => claimLine(c))
-        ) : (
+        ) : trace?.mode === "derived_proposition_presence" ? (
           trace.paths.map((p, i) => (
             <div key={i} className={fc.tracePath}>
               {claimLine(p.propositionClaim)}
               {claimLine(p.placeClaim)}
             </div>
           ))
-        )}
+        ) : null}
       </div>
     </div>,
     document.body,

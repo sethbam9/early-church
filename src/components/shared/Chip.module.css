@@ -32,7 +32,16 @@
 .active:hover {
   background: var(--accent-strong);
 }
-.active .dot { background: #fff !important; }
+.active .dot,
+.activeSuccess .dot,
+.activeWarning .dot,
+.activeDanger .dot,
+.activeAttested .dot,
+.activeProbable .dot,
+.activeClaimed .dot,
+.activeSuppressed .dot,
+.activeUnknown .dot { background: #fff !important; }
+.preserveDotOnActive.active .dot { background: var(--chip-dot-color) !important; }
 
 /* Semantic active overrides */
 .activeSuccess { background: var(--color-success); border-color: var(--color-success); color: #fff; }

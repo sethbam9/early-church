@@ -2,6 +2,7 @@ import { useCallback, useMemo } from "react";
 import { useAppStore } from "../../stores/appStore";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import type { PresenceStatus, PlaceKind } from "../../data/dataStore";
+import type { Stance } from "../../data/types";
 import { PRESENCE_LABELS, PRESENCE_COLORS, STANCE_COLORS, STANCE_LABELS, KIND_ICONS } from "../shared/entityConstants";
 import { Chip } from "../shared/Chip";
 import { Slider } from "../shared/Slider";
@@ -31,13 +32,20 @@ function EntityContextBanner() {
     if (activeKind === "proposition") {
       const ppp = dataStore.propositionPlacePresence.getForProposition(activeId);
       if (ppp.length === 0) return null;
+      // Year-filter: only count places whose attestation overlaps the active decade
+      const decadeEnd = activeDecade + 9;
+      const filtered = ppp.filter((pp) => {
+        const s = pp.year_start ?? -9999;
+        const e = pp.year_end ?? 9999;
+        return s <= decadeEnd && e >= activeDecade;
+      });
       let affirm = 0, oppose = 0, mixed = 0;
-      for (const entry of ppp) {
+      for (const entry of filtered) {
         if (entry.stance === "affirms") affirm++;
         else if (entry.stance === "opposes") oppose++;
         else mixed++;
       }
-      return { places: ppp.length, affirm, oppose, mixed };
+      return { places: filtered.length, affirm, oppose, mixed };
     }
 
     if (activeKind === "group") {
@@ -83,6 +91,13 @@ function EntityContextBanner() {
 // ─── Place kind chips ─────────────────────────────────────────────────────────
 
 const PLACE_KINDS: PlaceKind[] = ["city", "region", "site", "province", "monastery", "route"];
+const STANCE_VARIANT: Record<Stance, "success" | "danger" | "warning" | "unknown"> = {
+  affirms: "success",
+  opposes: "danger",
+  mixed: "warning",
+  neutral: "unknown",
+  unknown: "unknown",
+};
 
 // ─── LeftPanel ────────────────────────────────────────────────────────────────
 
@@ -102,6 +117,7 @@ export function LeftPanel({
   const christianOnly     = useAppStore((s) => s.christianOnly);
   const mapFilterType     = useAppStore((s) => s.mapFilterType);
   const mapFilterId       = useAppStore((s) => s.mapFilterId);
+  const stanceFilter      = useAppStore((s) => s.activePropositionStanceFilters);
 
   const setDecade            = useAppStore((s) => s.setDecade);
   const stepDecade           = useAppStore((s) => s.stepDecade);
@@ -113,6 +129,8 @@ export function LeftPanel({
   const toggleShowArcs       = useAppStore((s) => s.toggleShowArcs);
   const toggleFilter         = useAppStore((s) => s.togglePresenceFilter);
   const setAllFilters        = useAppStore((s) => s.setAllPresenceFilters);
+  const toggleStanceFilter   = useAppStore((s) => s.togglePropositionStanceFilter);
+  const clearStanceFilters   = useAppStore((s) => s.clearPropositionStanceFilters);
   const setPlaceKindFilter   = useAppStore((s) => s.setPlaceKindFilter);
   const setChristianOnly     = useAppStore((s) => s.setChristianOnly);
   const toggleLeftPanel      = useAppStore((s) => s.toggleLeftPanel);
@@ -142,9 +160,10 @@ export function LeftPanel({
     stepDecade(dir);
   };
 
-  const allOn  = activeFilters.length === 0;
-  const isOn   = (s: PresenceStatus) => allOn || activeFilters.includes(s);
+  const hasPresenceFilter = activeFilters.length > 0;
+  const isOn = (s: PresenceStatus) => hasPresenceFilter && activeFilters.includes(s);
   const toggleAll = () => setAllFilters([]);
+  const hasStanceFilter = stanceFilter.length > 0;
 
   return (
     <>
@@ -283,13 +302,24 @@ export function LeftPanel({
           </label>
         </div>
 
-        {/* Proposition stance legend — shown when proposition is filtered or selected */}
+        {/* Proposition stance filter — shown when proposition is filtered or selected */}
         {((mapFilterType === "proposition" && mapFilterId) || selection?.kind === "proposition") && (
           <div className={lp.section}>
-            <div className={lp.sectionLabel}>Proposition stance</div>
+            <div className={lp.sectionLabel}>
+              Proposition stance
+              {hasStanceFilter && (
+                <button type="button" className={lp.sectionAction} onClick={clearStanceFilters}>
+                  show all
+                </button>
+              )}
+            </div>
             <div className={lp.chipRow}>
               {(Object.entries(STANCE_LABELS) as [string, string][]).map(([stance, label]) => (
-                <Chip key={stance} legend dot={STANCE_COLORS[stance] ?? "#8e8070"}>
+                <Chip key={stance}
+                  variant={STANCE_VARIANT[stance as Stance]}
+                  active={hasStanceFilter && stanceFilter.includes(stance as Stance)}
+                  dot={STANCE_COLORS[stance] ?? "#8e8070"}
+                  onClick={() => toggleStanceFilter(stance as Stance)}>
                   {label}
                 </Chip>
               ))}
@@ -301,7 +331,7 @@ export function LeftPanel({
         <div className={lp.section}>
           <div className={lp.sectionLabel}>
             Filter by presence
-            {!allOn && (
+            {hasPresenceFilter && (
               <button
                 type="button"
                 className={lp.sectionAction}

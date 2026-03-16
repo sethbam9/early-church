@@ -19,8 +19,8 @@ export function MapGraphOverlay({
   onZoomOut,
   onFitVisible,
   onCenterSelected,
-  fitLabel = "fit",
-  centerLabel = "center",
+  fitLabel = "⛶",
+  centerLabel = "⌖",
   showCenter = false,
 }: MapGraphOverlayProps) {
   return (
@@ -32,10 +32,10 @@ export function MapGraphOverlay({
         <button type="button" className={`${s.btn} ${s.btnMinus}`} onClick={onZoomOut} title="Zoom out">−</button>
       )}
       {onFitVisible && (
-        <button type="button" className={s.btnSmall} onClick={onFitVisible} title="Fit visible">{fitLabel}</button>
+        <button type="button" className={s.btn} onClick={onFitVisible} title="Fit visible">{fitLabel}</button>
       )}
       {showCenter && onCenterSelected && (
-        <button type="button" className={s.btnSmall} onClick={onCenterSelected} title="Center on selected">{centerLabel}</button>
+        <button type="button" className={s.btn} onClick={onCenterSelected} title="Center on selected">{centerLabel}</button>
       )}
     </div>
   );

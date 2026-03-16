@@ -19,6 +19,12 @@ export function NavBar() {
       <NavLink to="/wiki" className={({ isActive }) => `${s.link}${isActive ? ` ${s.active}` : ""}`}>
         📖 Wiki
       </NavLink>
+      <NavLink to="/audit" className={({ isActive }) => `${s.link}${isActive ? ` ${s.active}` : ""}`}>
+        🔍 Audit
+      </NavLink>
+      <NavLink to="/guide" className={({ isActive }) => `${s.link}${isActive ? ` ${s.active}` : ""}`}>
+        📚 Guide
+      </NavLink>
     </nav>
   );
 }

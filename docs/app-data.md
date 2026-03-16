@@ -45,7 +45,9 @@ Related file: [`domain-models.md`](./domain-models.md)
 | `claims.tsv` | source | yes | `claim_id` | Atomic historical assertions |
 | `claim_evidence.tsv` | source | yes | composite | Many-to-many claim ↔ passage links |
 | `claim_reviews.tsv` | source | yes | composite | Review and sign-off state for claims |
+| `claim_review_events.tsv` | source | yes | composite | Append-only review history |
 | `editor_notes.tsv` | source | yes | `editor_note_id` | Editorial markdown notes |
+| `derived_edges.tsv` | derived | no | `edge_id` | All derived relationship paths |
 | `entity_place_footprints.tsv` | derived | no | composite | Entity ↔ place index for map/UI |
 | `place_state_by_decade.tsv` | derived | no | composite | Place rollup for the map |
 | `first_attestations.tsv` | derived | no | composite | Computed earliest attestation |
@@ -66,12 +68,14 @@ Humans and AI may edit only:
 - `claims.tsv`
 - `claim_evidence.tsv`
 - `claim_reviews.tsv`
+- `claim_review_events.tsv`
 - `editor_notes.tsv`
 
 ### Never hand-edit derived tables
 
 These are always regenerated:
 
+- `derived_edges.tsv`
 - `entity_place_footprints.tsv`
 - `place_state_by_decade.tsv`
 - `first_attestations.tsv`
@@ -309,7 +313,9 @@ The proposition model replaces the old flat doctrine model.
 | `title` | string | yes | Display title |
 | `author` | string | no | Free text |
 | `editor` | string | no | Free text |
-| `year` | int | no | Publication/composition year |
+| `year_display` | string | no | Freeform display text (e.g. "c. 95-96") |
+| `year_start` | int | no | Parsed integer start year |
+| `year_end` | int | no | Parsed integer end year |
 | `container_title` | string | no | Journal/book/site title |
 | `publisher` | string | no | Free text |
 | `url` | string | no | Preferred URL |
@@ -410,9 +416,41 @@ There is no separate `polarity` or `stance` column on claims. The predicate IS t
 | `claim_id` | string FK→claims | yes | Part of composite PK |
 | `passage_id` | string FK→passages | yes | Part of composite PK |
 | `evidence_role` | enum `evidence_role` | yes | Supports/opposes/contextualizes/mentions |
+| `support_aspect` | enum `support_aspect` | when role=supports | whole_claim, subject, predicate, object, date, place, context, attribution |
+| `assertion_mode` | enum `assertion_mode` | when role=supports | explicit, strong_inference, weak_inference, background_only |
 | `excerpt_override` | string | no | Optional UI excerpt |
-| `evidence_weight` | int | no | 1–5 |
+| `evidence_weight` | decimal | no | 0.0–1.0 |
 | `notes` | markdown string | no | Wiki-links allowed |
+
+### evidence_role vs claim predicates — NOT redundant
+
+These operate at **different levels** of the data model:
+
+| Level | Field | What it answers |
+|-------|-------|-----------------|
+| **Claim** | `predicate_id` (e.g. `work_mentions_proposition`) | "What relationship exists between these two entities?" |
+| **Evidence** | `evidence_role` (e.g. `contextualizes`) | "How well does this specific passage demonstrate that claim?" |
+
+**Example**: A claim "De Baptismo `work_affirms_proposition` baptism-regeneration" might have 3 evidence rows:
+- Passage 3.1 → `supports` (directly states baptism regenerates)
+- Passage 5.2 → `contextualizes` (discusses baptism without directly asserting regeneration)
+- Passage 1.1 → `mentions` (uses the word "baptism" in passing)
+
+The predicate `work_mentions_proposition` specifically means the work **references** a proposition without taking a clear stance. But even a `work_affirms_proposition` claim can legitimately have `contextualizes` evidence — that particular passage provides background for the affirmation, while other passages directly support it.
+
+### Redundancy rules for person vs work proposition claims
+
+A `person_*_proposition` claim is **redundant** when:
+1. ALL of its evidence passages trace back (passage → source → work) to works authored by the same person, AND
+2. Those works already carry the corresponding `work_*_proposition` claim for the same proposition.
+
+The mapping is:
+- `person_affirms_proposition` → redundant if `work_affirms_proposition` exists on the person's own works
+- `person_opposes_proposition` → redundant if `work_opposes_proposition` exists
+- `person_mentions_proposition` → redundant if `work_mentions_proposition` exists
+- `person_develops_proposition` → redundant if `work_develops_proposition` exists
+
+**When person claims are NOT redundant**: When the evidence comes from a **third-party source** (e.g. Eusebius reporting someone's beliefs), the evidence works are NOT the person's own authored works, so the person claim is legitimate.
 
 ## `claim_reviews.tsv`
 
@@ -459,7 +497,7 @@ Precomputed entity ↔ place index for the map and detail pages.
 | `year_end` | int | no | |
 | `reason_predicate_id` | string | yes | Claim path root |
 | `stance` | enum `derived_stance` | yes | Usually blank except proposition rows |
-| `path_signature` | string | yes | Deterministic derivation signature |
+| `derived_edge_id` | string | yes | FK → derived_edges.tsv |
 
 ## `place_state_by_decade.tsv`
 
@@ -503,6 +541,7 @@ Map rollup for place-by-time visualization.
 | `stance` | enum `stance` | yes | `affirms`, `opposes`, `mixed`, `neutral`, `unknown` |
 | `supporting_claim_count` | int | yes | |
 | `opposing_claim_count` | int | yes | |
+| `derived_edge_ids` | string | no | Pipe-delimited FK list → derived_edges.tsv |
 | `derivation_hash` | string | yes | |
 
 ## `note_mentions.tsv`
@@ -596,43 +635,49 @@ The validator/script layer is authoritative for the remaining enum sets used by 
 
 # Predicate catalog and canonical order
 
-The actual `predicate_types.tsv` is authoritative. The following predicates are especially important to the current UI and derivation chain:
+The actual `predicate_types.tsv` is authoritative. Every predicate below exactly matches a row in that file.
 
 **Work predicates**
-- `authored_by` — work → person (inverse: `author_of`)
-- `written_at` — work → place
-- `addressed_to_place` — work → place
-- `work_affirms_proposition` — work → proposition
-- `work_opposes_proposition` — work → proposition
+- `authored_by` — work → person (inverse: `authored`)
+- `written_at` — work → place (inverse: `has work written`)
+- `addressed_to_place` — work → place (inverse: `receives addressed work`)
+- `work_affirms_proposition` — work → proposition (inverse: `affirmed by work`)
+- `work_opposes_proposition` — work → proposition (inverse: `opposed by work`)
+- `work_develops_proposition` — work → proposition (inverse: `developed by work`)
+- `work_mentions_proposition` — work → proposition (inverse: `mentioned by work`)
+- `work_year_start` — work → year (composition lower bound)
+- `work_year_end` — work → year (composition upper bound)
 
 **Person predicates**
-- `active_in` — person → place
-- `originated_in` — person → place
-- `bishop_of` — person → place (inverse: `has_bishop`)
-- `member_of_group` — person → group
-- `teacher_of` — person → person (inverse: `disciple_of`)
+- `active_in` — person → place (inverse: `has active figure`)
+- `originated_in` — person → place (inverse: `origin of`)
+- `bishop_of` — person → place (inverse: `has bishop`)
+- `member_of_group` — person → group (inverse: `has member`)
+- `teacher_of` — person → person (inverse: `student of`)
 - `coworker_of` — person → person (symmetric)
-- `participant_in` — person → event
-- `person_affirms_proposition` — person → proposition
-- `person_opposes_proposition` — person → proposition
+- `participant_in` — person → event (inverse: `has participant`)
+- `person_affirms_proposition` — person → proposition (inverse: `affirmed by person`)
+- `person_opposes_proposition` — person → proposition (inverse: `opposed by person`)
+- `person_develops_proposition` — person → proposition (inverse: `developed by person`)
 
 **Event predicates**
-- `event_occurs_at` — event → place
+- `event_occurs_at` — event → place (inverse: `hosts event`)
 - `event_has_year` — event → year
 
 **Group predicates**
-- `group_present_at` — group → place
-- `controls_place` — group → place
-- `split_from_group` — group → group
+- `group_present_at` — group → place (inverse: `has group present`)
+- `controls_place` — group → place (inverse: `ruled by group`)
+- `group_schismed_from` — group → group (inverse: `spawned schism`)
 
-**Place predicates**
-- `place_presence_status` — place → text
+**Place predicates (infrastructure)**
+- `place_presence_status` — place → text (rollup seed; drives map derivation only)
 
 Canonical-order reminders:
 
 - Symmetric predicates are stored once only, in canonical order.
-- Inverse labels are runtime-only.
+- Inverse labels are runtime-only display helpers.
 - Groups, not separate polity rows, are the subjects of `controls_place`.
+- `work_year_start` / `work_year_end` are infrastructure predicates that feed derivation logic (entity-place link year fallback).
 
 ---
 

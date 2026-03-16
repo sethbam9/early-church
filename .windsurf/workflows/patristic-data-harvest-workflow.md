@@ -196,8 +196,11 @@ Each packet should contain:
 One or more atomic claims that the passage supports.
 
 ### D. Link packet
-- `claim_evidence.tsv` rows
+- `claim_evidence.tsv` rows — for `evidence_role=supports`, also set:
+  - `support_aspect`: which part of the claim the passage demonstrates (whole_claim, subject, predicate, object, date, place, context, attribution)
+  - `assertion_mode`: how directly the passage asserts the fact (explicit, strong_inference, weak_inference). Never use `background_only` with `supports`.
 - optional `claim_reviews.tsv` row
+- optional `claim_review_events.tsv` row (append-only history)
 - optional `editor_notes.tsv` rationale if inference is non-obvious
 
 ---

@@ -15,14 +15,14 @@ import { EvidenceCard } from "../shared/EvidenceCard";
 import { EntityHoverWrap } from "../shared/EntityHoverCard";
 import { ExternalLink } from "../shared/ExternalLink";
 import { getPredicateLabel } from "../../domain/relationLabels";
-import type { Claim, EntityPlaceFootprint, PlaceStateByDecade } from "../../data/types";
+import type { Claim, Passage, EntityPlaceFootprint, PlaceStateByDecade } from "../../data/types";
 import { truncateLabel, formatYearRange, formatDecadeLabel } from "../../utils/formatYear";
 import ed from "./EntityDetail.module.css";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 type EntityDetailTab =
-  | "info" | "timeline" | "people" | "places" | "groups"
+  | "info" | "timeline" | "passages" | "people" | "places" | "groups"
   | "works" | "events" | "propositions" | "topics" | "notes" | "mentions";
 
 interface ConnectedEntity {
@@ -36,6 +36,7 @@ interface ConnectedEntity {
 const TAB_LABELS: Record<EntityDetailTab, string> = {
   info:         "Info",
   timeline:     "Timeline",
+  passages:     "Passages",
   people:       "People",
   places:       "Places",
   groups:       "Groups",
@@ -93,7 +94,24 @@ export function EntityDetail({
   const footprints   = useMemo(() => dataStore.footprints.getForEntityDeduped(kind, id), [kind, id]);
   const mentions     = useMemo(() => dataStore.noteMentions.getMentioning(kind, id), [kind, id]);
   const placeStates  = useMemo(() => kind === "place" ? dataStore.map.getPlaceStatesForPlace(id) : [], [kind, id]);
-  const datedClaims  = useMemo(() => kind !== "place" ? dataStore.claims.getDatedSorted(kind, id) : [], [kind, id]);
+  const datedClaims  = useMemo(() => (kind !== "place" && kind !== "work") ? dataStore.claims.getDatedSorted(kind, id) : [], [kind, id]);
+
+  // Passages for works, propositions, people
+  const entityPassages = useMemo((): Passage[] => {
+    if (kind === "work") return dataStore.passages.getByWork(id);
+    // For people/propositions: find passages via claim_evidence chains
+    const relatedClaims = [...(dataStore.claims.getGroupedByObjectType(kind, id).values())].flat();
+    const passageIds = new Set<string>();
+    for (const c of relatedClaims) {
+      for (const ev of dataStore.claimEvidence.getForClaim(c.claim_id)) {
+        passageIds.add(ev.passage_id);
+      }
+    }
+    return Array.from(passageIds).map((pid) => dataStore.passages.getById(pid)).filter((p): p is Passage => !!p);
+  }, [kind, id]);
+
+  // First attestations for header enrichment
+  const firstAttests = useMemo(() => dataStore.firstAttestations.getForSubject(kind, id), [kind, id]);
 
   const grouped = useMemo(() => dataStore.claims.getGroupedByObjectType(kind, id), [kind, id]);
 
@@ -124,9 +142,16 @@ export function EntityDetail({
       { id: "info", label: TAB_LABELS.info },
     ];
 
-    const timelineCount = kind === "place" ? placeStates.length : datedClaims.length;
-    if (timelineCount > 0)
-      tabs.push({ id: "timeline", label: `Timeline (${timelineCount})` });
+    // Works get no timeline (they have composition dates); other entities get timeline
+    if (kind !== "work") {
+      const timelineCount = kind === "place" ? placeStates.length : datedClaims.length;
+      if (timelineCount > 0)
+        tabs.push({ id: "timeline", label: `Timeline (${timelineCount})` });
+    }
+
+    // Passages tab for works, people, propositions
+    if (entityPassages.length > 0)
+      tabs.push({ id: "passages", label: `Passages (${entityPassages.length})` });
 
     const RELATION_TYPES: { type: string; tab: EntityDetailTab }[] = [
       { type: "person",      tab: "people"       },
@@ -150,7 +175,7 @@ export function EntityDetail({
       tabs.push({ id: "mentions", label: `Mentions (${mentions.length})` });
 
     return tabs;
-  }, [kind, id, placeStates.length, datedClaims.length, connectedByType, footprints.length, editorNotes.length, mentions.length]);
+  }, [kind, id, placeStates.length, datedClaims.length, entityPassages.length, connectedByType, footprints.length, editorNotes.length, mentions.length]);
 
   // Reset tab when entity changes
   useEffect(() => { setActiveTab("info"); }, [kind, id]);
@@ -237,6 +262,7 @@ export function EntityDetail({
         {activeTab === "events"       && <RelationTab entities={connectedByType["event"]       ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} onHoverEntity={onHoverEntity} onLeaveEntity={onLeaveEntity} />}
         {activeTab === "propositions" && <RelationTab entities={connectedByType["proposition"] ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} onHoverEntity={onHoverEntity} onLeaveEntity={onLeaveEntity} />}
         {activeTab === "topics"       && <RelationTab entities={connectedByType["topic"]       ?? []} focusKind={kind} focusId={id} onSelectEntity={onSelectEntity} onHoverEntity={onHoverEntity} onLeaveEntity={onLeaveEntity} />}
+        {activeTab === "passages"     && <PassagesTab passages={entityPassages} onSelectEntity={onSelectEntity} />}
         {activeTab === "places"       && <PlacesTab footprints={footprints} onSelectEntity={onSelectEntity} />}
         {activeTab === "notes"        && <NotesTab notes={editorNotes} onSelectEntity={onSelectEntity} searchQuery={resolvedSearchQuery} />}
         {activeTab === "mentions"     && <MentionsTab kind={kind} id={id} onSelectEntity={onSelectEntity} />}
@@ -554,6 +580,96 @@ function RelationTab({ entities, focusKind, focusId, onSelectEntity, onHoverEnti
                 {evidence.map((ev) => (
                   <EvidenceCard key={`${ev.claim_id}-${ev.passage_id}`} ev={ev} onSelectEntity={onSelectEntity} hideWorkLink={focusKind === "work"} />
                 ))}
+              </div>
+            )}
+          </div>
+        );
+      })}
+      <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
+    </div>
+  );
+}
+
+// ─── Passages tab ────────────────────────────────────────────────────────────
+
+function PassagesTab({ passages, onSelectEntity }: {
+  passages: Passage[];
+  onSelectEntity: (kind: string, id: string) => void;
+}) {
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+  const { page, setPage, pageItems, total, pageSize } = usePaginatedList(passages, PAGE_SIZE);
+  if (passages.length === 0) return <div className={ed.emptyState}>No passages found.</div>;
+  return (
+    <div className={ed.flexCol}>
+      {pageItems.map((p) => {
+        const source = dataStore.sources.getById(p.source_id);
+        const evidence = dataStore.claimEvidence.getAll().filter((ev) => ev.passage_id === p.passage_id);
+        const isOpen = expandedId === p.passage_id;
+        return (
+          <div key={p.passage_id} className={ed.connCard}>
+            <div className={ed.connRow} onClick={() => setExpandedId(isOpen ? null : p.passage_id)}>
+              <span className={ed.connIcon}>📖</span>
+              <div className={ed.connBody}>
+                <div className={ed.connName}>{p.locator}</div>
+                <div className={ed.connRel}>
+                  {source?.title ?? p.source_id}
+                  {p.passage_year ? ` · AD ${p.passage_year}` : ""}
+                  {evidence.length > 0 ? ` · ${evidence.length} claim${evidence.length !== 1 ? "s" : ""}` : ""}
+                </div>
+              </div>
+              <div className={ed.connBadges}>
+                <button type="button" className={ed.connExpandBtn}
+                  onClick={(e) => { e.stopPropagation(); setExpandedId(isOpen ? null : p.passage_id); }}
+                  title={isOpen ? "Hide detail" : "Show detail"}>
+                  {isOpen ? "▲" : "▼"}
+                </button>
+              </div>
+            </div>
+            {isOpen && (
+              <div className={ed.connEvidence}>
+                {p.excerpt && <div className={ed.desc}>"{p.excerpt}"</div>}
+                {p.language && <div className={ed.connRel}>Language: {p.language}</div>}
+                {p.locator_type === "bible_osis" && p.locator && (
+                  <ExternalLink href={`https://www.stepbible.org/?q=reference=${encodeURIComponent(p.locator)}`}>Open Bible verse</ExternalLink>
+                )}
+                {p.url_override && <ExternalLink href={p.url_override}>View passage</ExternalLink>}
+                {source && (
+                  <EntityHoverWrap kind="source" id={source.source_id}>
+                    <button type="button" className={ed.mentionLink} onClick={() => onSelectEntity("source", source.source_id)}>
+                      Open work: {source.title}
+                    </button>
+                  </EntityHoverWrap>
+                )}
+                {evidence.length > 0 && (
+                  <>
+                    <div className={ed.sectionTitle}>Linked claims ({evidence.length})</div>
+                    {evidence.map((ev) => {
+                      const claim = dataStore.claims.getById(ev.claim_id);
+                      if (!claim) return null;
+                      const predLabel = getPredicateLabel(claim.predicate_id, true);
+                      const subLabel = getEntityLabel(claim.subject_type, claim.subject_id);
+                      const objLabel = claim.object_mode === "entity" && claim.object_id
+                        ? getEntityLabel(claim.object_type, claim.object_id)
+                        : (claim.value_text || claim.value_year?.toString() || "");
+                      return (
+                        <div key={ev.claim_id} className={ed.connCard}>
+                          <div className={ed.connRow} onClick={() => onSelectEntity("claim", claim.claim_id)}>
+                            <div className={ed.connBody}>
+                              <div className={ed.connName}>{subLabel} {predLabel} {objLabel}</div>
+                              <div className={ed.connRel}>
+                                {ev.evidence_role}
+                                {ev.evidence_weight != null ? ` · wt ${ev.evidence_weight}` : ""}
+                                {ev.support_aspect ? ` · ${ev.support_aspect}` : ""}
+                              </div>
+                            </div>
+                            <CertaintyBadge value={claim.certainty ?? ""} />
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </>
+                )}
+                {evidence.length === 0 && <div className={ed.emptyState}>No claims reference this passage.</div>}
               </div>
             )}
           </div>

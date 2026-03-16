@@ -260,6 +260,7 @@ place	ephesus	place_presence_status	52	clm-place-ephesus-attested	psg-acts-19-1-
 place	india-malabar	place_presence_status	52	clm-place-india-attested	
 person	thomas	person_affirms_proposition	52	clm-thomas-affirms-thomas-india	
 person	apollos	active_in	53	clm-apollos-active-ephesus	psg-acts-18-24-28
+work	first-epistle-to-the-corinthians	work_year_start	53	clm-1cor-year-start	
 person	alexander-ephesus-riot	active_in	54	clm-alexander-ephesus-riot-active-ephesus	psg-acts-19-33-34
 person	aristarchus	active_in	54	clm-aristarchus-active-ephesus	psg-acts-19-29
 person	demetrius	active_in	54	clm-demetrius-active-ephesus	psg-acts-19-24-27
@@ -268,6 +269,8 @@ work	first-epistle-to-the-corinthians	work_affirms_proposition	54	clm-first-cori
 work	first-epistle-to-the-corinthians	written_at	54	clm-first-corinthians-written-ephesus	psg-1cor-16-8
 person	nero	active_in	54	clm-nero-active-rome	psg-tacitus-annals-15-38-44
 person	tyrannus	active_in	54	clm-tyrannus-active-ephesus	psg-acts-19-9
+work	epistle-to-the-romans	work_year_start	55	clm-romans-year-start	
+work	first-epistle-to-the-corinthians	work_year_end	55	clm-1cor-year-end	
 person	onesiphorus	active_in	55	clm-onesiphorus-active-ephesus	psg-2tim-4-19
 work	second-epistle-to-the-corinthians	addressed_to_place	55	clm-second-corinthians-addressed-achaia	psg-2cor-1-1
 work	second-epistle-to-the-corinthians	work_affirms_proposition	55	clm-second-corinthians-resurrection	psg-2cor-4-14
@@ -287,6 +290,7 @@ work	epistle-to-the-ephesians	work_affirms_proposition	57	clm-ephesians-resurrec
 work	epistle-to-the-philippians	work_affirms_proposition	57	clm-philippians-resurrection	psg-rom-10-9
 work	epistle-to-the-romans	addressed_to_place	57	clm-romans-addressed-rome	psg-rom-1-7
 work	epistle-to-the-romans	work_affirms_proposition	57	clm-romans-resurrection	psg-rom-10-9
+work	epistle-to-the-romans	work_year_end	57	clm-romans-year-end	
 person	erastus	member_of_group	57	clm-erastus-corinthian-church	psg-rom-16-23
 person	felix	active_in	57	clm-felix-active-caesarea	psg-acts-23-26-35
 person	gaius-of-derbe	active_in	57	clm-gaius-active-jerusalem	psg-acts-20-4
@@ -462,6 +466,7 @@ event	domitian-persecution	event_has_year	95	clm-domitian-persecution-year
 event	domitian-persecution	event_occurs_at	95	clm-domitian-persecution-at-rome	psg-eusebius-he-3-39
 work	first-epistle-of-clement	addressed_to_place	95	clm-1clement-addressed-corinth	psg-1clement-addressed-corinth
 work	first-epistle-of-clement	work_affirms_proposition	95	clm-1clement-affirms-bodily-resurrection	psg-1clement-24-26
+work	first-epistle-of-clement	work_year_start	95	clm-1clement-year-start	
 work	first-epistle-of-clement	written_at	95	clm-1clement-written-rome	psg-1clement-addressed-corinth
 event	john-on-patmos	event_has_year	95	clm-john-on-patmos-year	
 event	john-on-patmos	event_occurs_at	95	clm-john-on-patmos-at-patmos	psg-rev-1-9
@@ -475,6 +480,7 @@ place	philadelphia-asia	place_presence_status	95	clm-place-philadelphia-attested
 group	philadelphia-church	group_present_at	95	clm-group-philadelphia-church-philadelphia-asia	psg-rev-1-11
 work	revelation-of-john	addressed_to_place	95	clm-revelation-addressed-ephesus	psg-rev-1-11
 work	revelation-of-john	work_affirms_proposition	95	clm-revelation-affirms-martyrdom-witness	psg-rev-2-13
+work	revelation-of-john	work_year_start	95	clm-revelation-year-start	
 work	revelation-of-john	written_at	95	clm-revelation-written-patmos	psg-rev-1-9
 place	sardis	place_presence_status	95	clm-place-sardis-attested	psg-rev-1-11
 group	sardis-church	group_present_at	95	clm-group-sardis-church-sardis	psg-rev-1-11
@@ -484,6 +490,8 @@ group	smyrna-church	group_present_at	95	clm-group-smyrna-church-smyrna	psg-rev-1
 place	thyatira	place_presence_status	95	clm-place-thyatira-attested	psg-rev-1-11
 group	thyatira-church	group_present_at	95	clm-group-thyatira-church-thyatira	psg-rev-1-11
 work	first-epistle-of-clement	authored_by	96	clm-1clement-by-clement	psg-1clement-addressed-corinth
+work	first-epistle-of-clement	work_year_end	96	clm-1clement-year-end	
+work	revelation-of-john	work_year_end	96	clm-revelation-year-end	
 person	ignatius-of-antioch	bishop_of	98	clm-ignatius-bishop-antioch	psg-ignatius-magn-13
 group	caesarean-church	group_present_at	100	clm-caesarean-church-at-caesarea	psg-eusebius-he-6-19
 group	docetists	group_present_at	100	clm-docetists-at-antioch	psg-ignatius-smyrn-7
@@ -702,7 +710,6 @@ work	adversus-judaeos-tertullian	work_mentions_proposition	200	clm-adv-jud-menti
 place	arbela	place_presence_status	200	clm-place-arbela-attested	
 person	bardaisan-of-edessa	participant_in	200	clm-bardaisan-in-conversion	psg-eusebius-he-4-30
 place	britannia	place_presence_status	200	clm-place-britannia-attested	
-group	british-church	group_present_at	200	clm-british-church-at-britannia	psg-council-arles-subscriptions
 group	church-of-the-east	group_present_at	200	clm-church-east-at-arbela	
 work	contra-noetum	work_affirms_proposition	200	clm-cn-affirms-incarnation	psg-hippolytus-cn-10-11
 work	contra-noetum	written_at	200	clm-cn-written-rome	psg-hippolytus-cn-1
@@ -720,6 +727,7 @@ person	julius-africanus	active_in	200	clm-julius-africanus-active-alexandria	psg
 work	on-christ-and-antichrist	authored_by	200	clm-ca-by-hippolytus	psg-hippolytus-ca-2-3
 work	on-christ-and-antichrist	work_affirms_proposition	200	clm-ca-affirms-incarnation	psg-hippolytus-ca-2-3
 work	on-christ-and-antichrist	written_at	200	clm-ca-written-rome	psg-hippolytus-ca-2-3
+person	tertullian	person_develops_proposition	200	clm-tertullian-develops-trinitarian-formula	
 person	tertullian	teacher_of	200	clm-tertullian-teacher-cyprian	psg-eusebius-he-6-20-43
 person	heraclas	coworker_of	202	clm-heraclas-coworker-origen	psg-eusebius-he-6-3
 person	heraclas	member_of_group	202	clm-heraclas-member-alexandrian	psg-eusebius-he-6-3
@@ -769,9 +777,11 @@ work	acts-of-thomas	written_at	220	clm-acts-thomas-written-edessa
 person	ambrose-of-alexandria	coworker_of	220	clm-origen-coworker-ambrose	psg-eusebius-he-6-19
 person	beryllus-of-bostra	bishop_of	220	clm-beryllus-bishop-of-bostra	psg-eusebius-he-6-19
 work	de-principiis	work_affirms_proposition	220	clm-deprinc-affirms-allegorical	psg-origen-deprinc-4-2-4
+work	de-principiis	work_develops_proposition	220	clm-de-principiis-develops-logos-preexistent	
 work	de-principiis	written_at	220	clm-deprincipiis-written-at-alexandria	psg-eusebius-he-6-3
 person	dionysius-of-alexandria	coworker_of	220	clm-dionysius-alex-coworker-origen	psg-eusebius-he-6-19
 person	hippolytus-of-rome	teacher_of	220	clm-hippolytus-teacher-of-novatian	psg-hippolytus-ref-9-7
+person	origen-of-alexandria	person_develops_proposition	220	clm-origen-develops-allegorical	
 work	refutation-of-all-heresies	authored_by	222	clm-refutation-by-hippolytus	psg-hippolytus-ref-9-7
 work	refutation-of-all-heresies	work_affirms_proposition	222	clm-refutation-affirms-logos	psg-hippolytus-ref-9-12-zeph
 work	refutation-of-all-heresies	written_at	222	clm-refutation-written-rome	psg-hippolytus-ref-9-7
@@ -831,7 +841,6 @@ person	novatian	member_of_group	240	clm-novatian-member-roman-church	psg-eusebiu
 work	commentary-on-romans-origen	work_affirms_proposition	243	clm-comrom-affirms-allegorical	psg-origen-comrom-3-8
 work	commentary-on-romans-origen	written_at	243	clm-comrom-written-at-caesarea	psg-eusebius-he-6-19
 group	arabian-christians	controls_place	244	clm-arabian-christians-controls-bostra	
-group	arabian-christians	group_present_at	244	clm-arabian-christians-at-bostra	psg-eusebius-he-5-10-1-2
 person	beryllus-of-bostra	participant_in	244	clm-beryllus-participant-synod-bostra	psg-eusebius-he-6-19
 place	bostra	place_presence_status	244	clm-place-bostra-attested	
 work	commentary-on-romans-origen	authored_by	244	clm-comrom-by-origen	psg-origen-comrom-5-9
@@ -933,7 +942,6 @@ person	pontius-deacon	participant_in	258	clm-pontius-in-cyprians-martyrdom	psg-e
 person	aphrahat	active_in	280	clm-aphrahat-active-seleucia	
 person	aphrahat	member_of_group	280	clm-aphrahat-member-church-east	
 group	aksumite-church	controls_place	300	clm-aksumite-church-controls-tyre	
-group	aksumite-church	group_present_at	300	clm-aksumite-church-at-tyre	
 person	frumentius	active_in	300	clm-frumentius-active-tyre	
 place	najran	place_presence_status	300	clm-place-najran-attested	
 place	seleucia-ctesiphon	place_presence_status	300	clm-place-seleucia-ctesiphon-attested	
@@ -953,6 +961,7 @@ person	eusebius-of-caesarea	member_of_group	313	clm-eusebius-member-caesarea
 person	eusebius-of-caesarea	person_affirms_proposition	313	clm-eusebius-affirms-bodily-resurrection	psg-eusebius-he-3-39-1-4
 place	arles	place_presence_status	314	clm-place-arles-attested	
 group	british-church	controls_place	314	clm-british-church-controls-britannia	
+group	british-church	group_present_at	314	clm-british-church-group-present-arles	psg-council-arles-subscriptions
 event	council-of-arles-314	event_has_year	314	clm-council-arles-year	psg-council-arles-subscriptions
 event	council-of-arles-314	event_occurs_at	314	clm-council-arles-at-arles	psg-council-arles-subscriptions
 person	eusebius-of-caesarea	participant_in	314	clm-eusebius-participant-council-nicaea	
@@ -973,6 +982,7 @@ event	origen-torture-under-decius	event_occurs_at	325	clm-torture-decius-occurs-
 event	pauls-martyrdom	event_occurs_at	325	clm-pauls-martyrdom-at-rome	psg-eusebius-church-history-2-25
 event	peters-martyrdom	event_occurs_at	325	clm-peters-martyrdom-at-rome	psg-eusebius-church-history-2-25
 event	synod-of-bostra	event_occurs_at	325	clm-synod-bostra-occurs-at-bostra	psg-eusebius-he-6-19
+group	aksumite-church	group_present_at	328	clm-aksumite-church-at-alexandria	
 group	aksumite-church	group_schismed_from	328	clm-aksumite-church-group-schism-alexandrian	psg-rufinus-he-1-9
 person	athanasius-of-alexandria	bishop_of	328	clm-athanasius-bishop-alexandria	
 person	athanasius-of-alexandria	member_of_group	328	clm-athanasius-member-alexandrian	
@@ -1043,11 +1053,17 @@ person	philostorgius	person_affirms_proposition	425	clm-philostorgius-affirms-et
 work	philostorgius-ecclesiastical-history	work_affirms_proposition	425	clm-philostorgius-he-affirms-arabia-christianized	psg-philostorgius-he-3-4
 work	philostorgius-ecclesiastical-history	work_mentions_proposition	425	clm-philostorgius-he-affirms-thomas-india	
 event	council-of-ephesus-431	event_has_year	431	clm-council-ephesus-431-year	
+work	socrates-ecclesiastical-history	work_affirms_proposition	439	clm-socrates-he-affirms-ethiopia	psg-socrates-he-1-19
 event	martyrdom-of-alban	event_occurs_at	540	clm-martyrdom-alban-at-britannia	psg-gildas-de-excidio-10
 event	council-of-ephesus-431	event_occurs_at		clm-council-ephesus-at-ephesus	
+person	cyprian-of-carthage	originated_in		clm-cyprian-originated-carthage	
 event	dura-europos-church-construction	event_occurs_at		clm-dura-church-at-dura	
 event	fall-of-nisibis-363	event_occurs_at		clm-fall-nisibis-at-nisibis	
+person	irenaeus-of-lyons	originated_in		clm-irenaeus-originated-smyrna	
+person	jesus-of-nazareth	originated_in		clm-jesus-originated-nazareth	
+person	origen-of-alexandria	originated_in		clm-origen-originated-alexandria	
 work	paedagogus	authored_by		clm-paedagogus-by-clement	
 event	persecution-of-shapur-ii	event_occurs_at		clm-shapur-persecution-at-seleucia	
 work	protrepticus	authored_by		clm-protrepticus-by-clement	
 work	stromateis	authored_by		clm-stromata-by-clement	
+person	tertullian	originated_in		clm-tertullian-originated-carthage	

@@ -240,8 +240,8 @@ export function GraphPage() {
 
       {/* ── Graph canvas ── */}
       <div className={s.canvasArea}>
-        <MapGraphOverlay onZoomIn={zoomIn} onZoomOut={zoomOut} onFitVisible={resetView} fitLabel="fit"
-          onCenterSelected={centerOnSelected} showCenter={hasSelection} centerLabel="center" />
+        <MapGraphOverlay onZoomIn={zoomIn} onZoomOut={zoomOut} onFitVisible={resetView}
+          onCenterSelected={centerOnSelected} showCenter={hasSelection} />
         <div className={s.hint}>Scroll to zoom · Drag to pan · Click node to explore</div>
 
         <svg

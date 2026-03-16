@@ -76,7 +76,8 @@ src/
 
   pages/
     MapPage.tsx             GraphPage.tsx
-    WikiPage.tsx            EssaysPage.tsx
+    WikiPage.tsx            AuditPage.tsx
+    EssaysPage.tsx
 
   hooks/                    # React hooks — all business logic lives here
     useWikiPageState.ts     useClaimsData.ts      useAuditData.ts

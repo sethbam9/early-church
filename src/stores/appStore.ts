@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import type { Selection, PresenceStatus, PlaceKind } from "../data/dataStore";
+import type { Stance } from "../data/types";
 import { dataStore } from "../data/dataStore";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -46,6 +47,7 @@ export interface AppState {
   // Map filter by entity (group / person / proposition)
   mapFilterType: string | null;
   mapFilterId: string | null;
+  activePropositionStanceFilters: Stance[];
 
   // Right panel
   panelTab: PanelTab;
@@ -80,6 +82,8 @@ export interface AppState {
   toggleShowArcs: () => void;
   setMapFilter: (type: string, id: string) => void;
   clearMapFilter: () => void;
+  togglePropositionStanceFilter: (stance: Stance) => void;
+  clearPropositionStanceFilters: () => void;
   clearAll: () => void;
 
   setPanelTab: (tab: PanelTab) => void;
@@ -116,6 +120,7 @@ export const useAppStore = create<AppState>((set) => ({
   showArcs: true,
   mapFilterType: null,
   mapFilterId: null,
+  activePropositionStanceFilters: [],
 
   panelTab: "places",
   panelExpanded: false,
@@ -183,7 +188,24 @@ export const useAppStore = create<AppState>((set) => ({
 
   setMapFilter: (type, id) => set({ mapFilterType: type, mapFilterId: id }),
   clearMapFilter: () => set({ mapFilterType: null, mapFilterId: null }),
-  clearAll: () => set({ selection: null, selectionHistory: [], mapFilterType: null, mapFilterId: null, searchQuery: "", activePresenceFilters: [], activePlaceKindFilter: null, christianOnly: false }),
+  togglePropositionStanceFilter: (stance) =>
+    set((state) => {
+      const cur = state.activePropositionStanceFilters;
+      const next = cur.includes(stance) ? cur.filter((v) => v !== stance) : [...cur, stance];
+      return { activePropositionStanceFilters: next };
+    }),
+  clearPropositionStanceFilters: () => set({ activePropositionStanceFilters: [] }),
+  clearAll: () => set({
+    selection: null,
+    selectionHistory: [],
+    mapFilterType: null,
+    mapFilterId: null,
+    searchQuery: "",
+    activePresenceFilters: [],
+    activePlaceKindFilter: null,
+    activePropositionStanceFilters: [],
+    christianOnly: false,
+  }),
 
   // ── Panel ───────────────────────────────────────────────────────────────
 

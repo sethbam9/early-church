@@ -19,18 +19,22 @@ interface ChipProps {
   children: React.ReactNode;
   variant?: ChipVariant;
   active?: boolean;
+  activeClassName?: string;
   dot?: string;
+  preserveDotOnActive?: boolean;
   legend?: boolean;
   onClick?: () => void;
   className?: string;
   title?: string;
 }
 
-export function Chip({ children, variant = 'neutral', active, dot, legend, onClick, className, title }: ChipProps) {
+export function Chip({ children, variant = 'neutral', active, activeClassName, dot, preserveDotOnActive, legend, onClick, className, title }: ChipProps) {
   const cls = [
     s.chip,
     onClick ? s.clickable : '',
     active ? (ACTIVE_MAP[variant] || s.active) : '',
+    active ? (activeClassName ?? '') : '',
+    preserveDotOnActive ? s.preserveDotOnActive : '',
     legend ? s.legend : '',
     className ?? '',
   ].filter(Boolean).join(' ');
@@ -39,7 +43,7 @@ export function Chip({ children, variant = 'neutral', active, dot, legend, onCli
 
   return (
     <Tag type={onClick ? 'button' : undefined} className={cls} onClick={onClick} title={title}>
-      {dot && <span className={s.dot} style={{ background: dot }} />}
+      {dot && <span className={s.dot} style={{ background: dot, ['--chip-dot-color' as string]: dot }} />}
       {children}
     </Tag>
   );

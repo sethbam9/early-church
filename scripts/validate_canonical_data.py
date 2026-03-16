@@ -1,4 +1,32 @@
 #!/usr/bin/env python3
+"""Canonical data validator for the Early Christianity Atlas.
+
+Validates all source TSV files against their schemas, checks foreign keys,
+enforces redundancy and evidence-quality rules, regenerates derived tables,
+and optionally scans markdown files for wiki-link integrity.
+
+Usage:
+    python3 scripts/validate_canonical_data.py --data-dir data
+    python3 scripts/validate_canonical_data.py --data-dir data --json --check-evidence
+
+Sections:
+    1. Constants (headers, enums, predicate sets)
+    2. Utility functions (parsing, hashing, I/O)
+    3. Markdown/mention collection
+    4. Derivation functions (derived table generation)
+    5. Validator class:
+       a. Init & helpers
+       b. Loading
+       c. Schema & enum validation
+       d. Claim structure validation
+       e. Redundancy rules (R1–R8)
+       f. Evidence quality rules (P1–P5)
+       g. Markdown & OSIS validation
+       h. Derived table generation & comparison
+       i. Reporting (sparse, evidence quality)
+       j. Run (orchestrator)
+    6. CLI entry point
+"""
 from __future__ import annotations
 
 import argparse
@@ -20,12 +48,13 @@ SOURCE_HEADERS: Dict[str, List[str]] = {
     "dimensions.tsv": ["dimension_id", "topic_id", "dimension_label", "dimension_kind", "notes"],
     "propositions.tsv": ["proposition_id", "topic_id", "dimension_id", "proposition_label", "polarity_family", "description", "notes"],
     "predicate_types.tsv": ["predicate_id", "predicate_label", "subject_type", "object_mode", "object_type", "inverse_label", "is_symmetric", "canonical_sort_rule", "allows_date_range", "allows_context_place", "description"],
-    "sources.tsv": ["source_id", "work_id", "source_kind", "title", "author", "editor", "year", "container_title", "publisher", "url", "accessed_on", "isbn_issn", "notes"],
+    "sources.tsv": ["source_id", "work_id", "source_kind", "title", "author", "editor", "year_display", "year_start", "year_end", "container_title", "publisher", "url", "accessed_on", "isbn_issn", "notes"],
     "passages.tsv": ["passage_id", "source_id", "locator_type", "locator", "excerpt", "language", "passage_year", "url_override", "notes"],
     "claims.tsv": ["claim_id", "subject_type", "subject_id", "predicate_id", "object_mode", "object_type", "object_id", "value_text", "value_number", "value_year", "value_boolean", "year_start", "year_end", "context_place_id", "certainty", "claim_status", "created_by", "updated_at"],
-    "claim_evidence.tsv": ["claim_id", "passage_id", "evidence_role", "excerpt_override", "evidence_weight", "notes"],
+    "claim_evidence.tsv": ["claim_id", "passage_id", "evidence_role", "support_aspect", "assertion_mode", "excerpt_override", "evidence_weight", "notes"],
     "claim_reviews.tsv": ["claim_id", "reviewer_id", "review_status", "reviewed_at", "confidence", "note"],
     "editor_notes.tsv": ["editor_note_id", "note_kind", "entity_type", "entity_id", "claim_id", "body_md", "created_by", "created_at"],
+    "claim_review_events.tsv": ["claim_id", "event_type", "actor_id", "event_at", "note"],
 }
 
 DERIVED_HEADERS: Dict[str, List[str]] = {
@@ -40,8 +69,9 @@ DERIVED_HEADERS: Dict[str, List[str]] = {
         "mention_label",
     ],
     "first_attestations.tsv": ["subject_type", "subject_id", "predicate_id", "first_year", "first_claim_id", "first_passage_id"],
-    "proposition_place_presence.tsv": ["proposition_id", "place_id", "year_start", "year_end", "stance", "supporting_claim_count", "opposing_claim_count", "derivation_hash"],
-    "entity_place_footprints.tsv": ["entity_type", "entity_id", "place_id", "year_start", "year_end", "reason_predicate_id", "stance", "path_signature"],
+    "derived_edges.tsv": ["edge_id", "from_type", "from_id", "to_type", "to_id", "relation_kind", "directness", "rule_id", "year_start", "year_end", "certainty", "supporting_claim_ids", "path_text"],
+    "proposition_place_presence.tsv": ["proposition_id", "place_id", "year_start", "year_end", "stance", "supporting_claim_count", "opposing_claim_count", "derived_edge_ids", "derivation_hash"],
+    "entity_place_footprints.tsv": ["entity_type", "entity_id", "place_id", "year_start", "year_end", "reason_predicate_id", "stance", "derived_edge_id"],
     "place_state_by_decade.tsv": ["place_id", "decade", "presence_status", "group_presence_summary", "dominant_polity_group_id", "supporting_claim_count", "derivation_hash"],
 }
 
@@ -58,7 +88,10 @@ CERTAINTY = {"attested", "probable", "possible", "claimed_tradition", "legendary
 
 CLAIM_STATUS = {"active", "deprecated", "superseded", "rejected", "draft"}
 EVIDENCE_ROLE = {"supports", "opposes", "contextualizes", "mentions"}
+SUPPORT_ASPECT = {"whole_claim", "subject", "predicate", "object", "date", "place", "context", "attribution"}
+ASSERTION_MODE = {"explicit", "strong_inference", "weak_inference", "background_only"}
 REVIEW_STATUS = {"unreviewed", "reviewed", "approved", "disputed", "needs_revision"}
+REVIEW_EVENT_TYPE = {"created", "reviewed", "approved", "disputed", "reopened", "needs_revision"}
 REVIEW_CONFIDENCE = {"low", "medium", "high"}
 EDITOR_NOTE_KIND = {"commentary", "todo", "dispute", "migration", "rationale"}
 PLACE_KIND = {"city", "region", "province", "site", "monastery", "route", "unknown"}
@@ -103,6 +136,20 @@ MARKDOWN_FIELD_NAMES = {"notes", "body_md"}
 SKIP_DIR_NAMES = {".git", ".hg", ".svn", "node_modules", "dist", "build", "coverage", "__pycache__", ".venv", "venv", ".windsurf", "docs"}
 WIKILINK_RE = re.compile(r"\[\[([a-z_]+):([^\]|]+)(?:\|([^\]]+))?\]\]")
 OSIS_RE = re.compile(r"^(?:[1-3]?[A-Za-z][A-Za-z0-9]*)\.\d+\.\d+(?:-(?:(?:[1-3]?[A-Za-z][A-Za-z0-9]*)\.\d+\.\d+|\d+))?$")
+CERTAINTY_RANK = {"attested": 0, "probable": 1, "possible": 2, "claimed_tradition": 3, "legendary": 4, "unknown": 5}
+
+# Maps predicate_id to a human-readable relation_kind for derived edges
+RELATION_KIND_MAP: Dict[str, str] = {
+    "bishop_of": "person_place",
+    "active_in": "person_place",
+    "originated_in": "entity_place",
+    "written_at": "work_place",
+    "addressed_to_place": "work_place",
+    "event_occurs_at": "event_place",
+    "group_present_at": "group_place",
+    "controls_place": "group_place",
+}
+
 SPARSE_ENTITY_FILES: Dict[str, Tuple[str, str]] = {
     "places.tsv": ("place", "place_label"),
     "people.tsv": ("person", "person_label"),
@@ -189,7 +236,7 @@ def primary_key_fields(headers: Sequence[str]) -> List[str]:
 
 
 def sort_value_for_field(header: str, row: Dict[str, str]) -> Tuple[int, Any]:
-    if header in {"year_start", "year_end", "first_year", "decade", "passage_year", "year", "value_year"}:
+    if header in {"year_start", "year_end", "first_year", "decade", "passage_year", "value_year"}:
         parsed = parse_int(row.get(header))
         return (0, parsed) if parsed is not None else (1, 0)
     return (0, norm(row.get(header)))
@@ -337,8 +384,113 @@ def derive_entity_place_links(claims: List[Dict[str, str]]) -> Dict[Tuple[str, s
     return links
 
 
-def derive_proposition_place_presence(claims: List[Dict[str, str]]) -> List[Dict[str, Any]]:
+def min_certainty(*values: str) -> str:
+    """Return the weakest certainty from the given values."""
+    best_rank = -1
+    best_val = "unknown"
+    for v in values:
+        rank = CERTAINTY_RANK.get(v, 5)
+        if rank > best_rank:
+            best_rank = rank
+            best_val = v
+    return best_val
+
+
+def derive_edges(claims: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    """Generate derived_edges.tsv rows from claim chains.
+
+    Produces two kinds of edges:
+    - direct: a single claim links entity→place via PLACE_LINK_PREDICATES
+    - derived: proposition→place chains inferred from entity→place + proposition claims
+    """
+    entity_place_links = derive_entity_place_links(claims)
+    edges: List[Dict[str, str]] = []
+    seen_ids: set[str] = set()
+
+    # --- Direct edges: entity→place from PLACE_LINK_PREDICATES ---
+    for claim in claims:
+        if claim.get("claim_status") != "active":
+            continue
+        if claim.get("object_mode") != "entity" or claim.get("object_type") != "place":
+            continue
+        if claim["predicate_id"] not in PLACE_LINK_PREDICATES:
+            continue
+        year_start = parse_int(claim.get("year_start"))
+        year_end = parse_int(claim.get("year_end"))
+        edge_id = hash_id("edge", claim["subject_type"], claim["subject_id"], "place", claim["object_id"], claim["predicate_id"], claim["claim_id"])
+        if edge_id in seen_ids:
+            continue
+        seen_ids.add(edge_id)
+        relation_kind = RELATION_KIND_MAP.get(claim["predicate_id"], "entity_place")
+        path_text = f"{claim['subject_type']}:{claim['subject_id']} → {claim['predicate_id']} → place:{claim['object_id']}"
+        edges.append({
+            "edge_id": edge_id,
+            "from_type": claim["subject_type"],
+            "from_id": claim["subject_id"],
+            "to_type": "place",
+            "to_id": claim["object_id"],
+            "relation_kind": relation_kind,
+            "directness": "direct",
+            "rule_id": claim["predicate_id"],
+            "year_start": "" if year_start is None else str(year_start),
+            "year_end": "" if year_end is None else str(year_end),
+            "certainty": claim.get("certainty", "unknown"),
+            "supporting_claim_ids": claim["claim_id"],
+            "path_text": path_text,
+        })
+
+    # --- Derived edges: proposition→place via entity→place + proposition claim ---
+    for claim in claims:
+        if claim.get("claim_status") != "active":
+            continue
+        if claim.get("object_mode") != "entity" or claim.get("object_type") != "proposition":
+            continue
+        if claim["predicate_id"] not in PROPOSITION_CLAIM_PREDICATES:
+            continue
+        proposition_id = claim["object_id"]
+        for place_id, place_start, place_end, place_pred, place_claim_id in entity_place_links.get((claim["subject_type"], claim["subject_id"]), []):
+            claim_year_start = parse_int(claim.get("year_start"))
+            claim_year_end = parse_int(claim.get("year_end"))
+            year_start = claim_year_start if claim_year_start is not None else place_start
+            year_end = claim_year_end if claim_year_end is not None else place_end
+            claim_ids_sorted = "|".join(sorted({claim["claim_id"], place_claim_id}))
+            edge_id = hash_id("edge", "proposition", proposition_id, "place", place_id, claim["predicate_id"], place_pred, claim_ids_sorted)
+            if edge_id in seen_ids:
+                continue
+            seen_ids.add(edge_id)
+            cert = min_certainty(claim.get("certainty", "unknown"), "probable")  # derived chains capped
+            rule_id = f"{claim['predicate_id']}+{place_pred}"
+            path_text = (
+                f"{claim['subject_type']}:{claim['subject_id']} → {claim['predicate_id']} → proposition:{proposition_id} "
+                f"+ {claim['subject_type']}:{claim['subject_id']} → {place_pred} → place:{place_id}"
+            )
+            edges.append({
+                "edge_id": edge_id,
+                "from_type": "proposition",
+                "from_id": proposition_id,
+                "to_type": "place",
+                "to_id": place_id,
+                "relation_kind": "proposition_place",
+                "directness": "derived",
+                "rule_id": rule_id,
+                "year_start": "" if year_start is None else str(year_start),
+                "year_end": "" if year_end is None else str(year_end),
+                "certainty": cert,
+                "supporting_claim_ids": claim_ids_sorted,
+                "path_text": path_text,
+            })
+
+    return sorted(edges, key=lambda r: (r["from_type"], r["from_id"], r["to_type"], r["to_id"], r["edge_id"]))
+
+
+def derive_proposition_place_presence(claims: List[Dict[str, str]], edges: List[Dict[str, str]]) -> List[Dict[str, Any]]:
     entity_places = derive_entity_place_links(claims)
+    # Build edge lookup: (proposition_id, place_id, claim_ids_key) → edge_id
+    prop_edge_lookup: Dict[Tuple[str, str, str], str] = {}
+    for e in edges:
+        if e["from_type"] == "proposition" and e["to_type"] == "place" and e["directness"] == "derived":
+            prop_edge_lookup[(e["from_id"], e["to_id"], e["supporting_claim_ids"])] = e["edge_id"]
+
     rows_by_key: Dict[Tuple[str, str, Optional[int], Optional[int]], Dict[str, Any]] = {}
     for claim in claims:
         if claim.get("object_mode") != "entity" or claim.get("object_type") != "proposition":
@@ -363,9 +515,14 @@ def derive_proposition_place_presence(claims: List[Dict[str, str]]) -> List[Dict
                     "opposing": set(),
                     "neutral": set(),
                     "path": set(),
+                    "edge_ids": set(),
                 },
             )
             row["path"].update({claim["claim_id"], place_claim_id})
+            claim_ids_key = "|".join(sorted({claim["claim_id"], place_claim_id}))
+            eid = prop_edge_lookup.get((proposition_id, place_id, claim_ids_key))
+            if eid:
+                row["edge_ids"].add(eid)
             if claim["predicate_id"] in {"work_affirms_proposition", "person_affirms_proposition", "work_develops_proposition", "person_develops_proposition"}:
                 row["supporting"].add(claim["claim_id"])
             elif claim["predicate_id"] in {"work_opposes_proposition", "person_opposes_proposition"}:
@@ -395,14 +552,22 @@ def derive_proposition_place_presence(claims: List[Dict[str, str]]) -> List[Dict
                 "stance": stance,
                 "supporting_claim_count": str(supports),
                 "opposing_claim_count": str(opposes),
+                "derived_edge_ids": "|".join(sorted(row["edge_ids"])),
                 "derivation_hash": hash_id("drv", row["proposition_id"], row["place_id"], row["year_start"], row["year_end"], *sorted(row["path"])),
             }
         )
     return sorted(out, key=lambda row: (row["proposition_id"], row["place_id"], row["year_start"], row["year_end"]))
 
 
-def derive_entity_place_footprints(claims: List[Dict[str, str]], proposition_presence: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def derive_entity_place_footprints(claims: List[Dict[str, str]], proposition_presence: List[Dict[str, Any]], edges: List[Dict[str, str]]) -> List[Dict[str, Any]]:
     entity_places = derive_entity_place_links(claims)
+    # Build edge lookup: (from_type, from_id, to_id, claim_id) → edge_id for direct edges
+    direct_edge_lookup: Dict[Tuple[str, str, str, str], str] = {}
+    for e in edges:
+        if e["directness"] == "direct":
+            for cid in e["supporting_claim_ids"].split("|"):
+                direct_edge_lookup[(e["from_type"], e["from_id"], e["to_id"], cid)] = e["edge_id"]
+
     out: List[Dict[str, Any]] = []
     seen = set()
     for (entity_type, entity_id), places in entity_places.items():
@@ -411,6 +576,7 @@ def derive_entity_place_footprints(claims: List[Dict[str, str]], proposition_pre
             if key in seen:
                 continue
             seen.add(key)
+            edge_id = direct_edge_lookup.get((entity_type, entity_id, place_id, claim_id), "")
             out.append(
                 {
                     "entity_type": entity_type,
@@ -420,7 +586,7 @@ def derive_entity_place_footprints(claims: List[Dict[str, str]], proposition_pre
                     "year_end": "" if year_end is None else str(year_end),
                     "reason_predicate_id": predicate_id,
                     "stance": "",
-                    "path_signature": hash_id("path", *key, claim_id),
+                    "derived_edge_id": edge_id,
                 }
             )
     for row in proposition_presence:
@@ -428,6 +594,9 @@ def derive_entity_place_footprints(claims: List[Dict[str, str]], proposition_pre
         if key in seen:
             continue
         seen.add(key)
+        # Use first derived_edge_id from the presence row's pipe-delimited list
+        edge_ids = row.get("derived_edge_ids", "")
+        first_edge = edge_ids.split("|")[0] if edge_ids else ""
         out.append(
             {
                 "entity_type": "proposition",
@@ -437,7 +606,7 @@ def derive_entity_place_footprints(claims: List[Dict[str, str]], proposition_pre
                 "year_end": row["year_end"],
                 "reason_predicate_id": "derived_proposition_presence",
                 "stance": row["stance"],
-                "path_signature": row["derivation_hash"],
+                "derived_edge_id": first_edge,
             }
         )
     return sorted(out, key=lambda row: (row["entity_type"], row["entity_id"], row["place_id"], row["year_start"], row["year_end"], row["reason_predicate_id"]))
@@ -534,14 +703,24 @@ def derive_place_state_by_decade(claims: List[Dict[str, str]]) -> List[Dict[str,
     return sorted(out, key=lambda row: (row["place_id"], int(row["decade"])))
 
 
+# =============================================================================
+# VALIDATOR CLASS
+# =============================================================================
+
 class Validator:
+    """Core validator that loads, checks, and regenerates all canonical data."""
+
+    # ── Init & helpers ────────────────────────────────────────────────────
+
     def __init__(
         self,
         data_dir: Path,
         markdown_scan_root: Optional[Path] = None,
-        check_markdown: bool = False,
+        check_markdown: bool = True,
         rewrite_derived: bool = False,
         sparse_threshold: Optional[int] = None,
+        json_output: bool = False,
+        check_evidence: bool = False,
     ) -> None:
         self.data_dir = data_dir
         self.markdown_scan_root = markdown_scan_root
@@ -552,6 +731,8 @@ class Validator:
         self.warnings: List[str] = []
         self.sparse_messages: List[str] = []
         self.tables: Dict[str, List[Dict[str, str]]] = {}
+        self.json_output: bool = json_output
+        self.check_evidence: bool = check_evidence
         self.by_id: Dict[str, set[str]] = {}
         self.predicate_by_id: Dict[str, Dict[str, str]] = {}
         self.claim_by_id: Dict[str, Dict[str, str]] = {}
@@ -586,6 +767,8 @@ class Validator:
     def subject_fk_exists(self, entity_type: str, entity_id: str) -> bool:
         filename = self.file_for_entity_type(entity_type)
         return bool(filename and entity_id in self.by_id.get(filename, set()))
+
+    # ── Loading ────────────────────────────────────────────────────────────
 
     def load(self) -> None:
         sheets_dir = self.data_dir / "sheets"
@@ -658,7 +841,10 @@ class Validator:
         self.claim_by_id = {row["claim_id"]: row for row in self.tables.get("claims.tsv", []) if row.get("claim_id")}
         self.passage_by_id = {row["passage_id"]: row for row in self.tables.get("passages.tsv", []) if row.get("passage_id")}
 
+    # ── Schema & enum validation ────────────────────────────────────────
+
     def validate_enums_and_entities(self) -> None:
+        """Validate enum values and foreign keys for all entity tables."""
         for idx, row in enumerate(self.tables.get("places.tsv", []), start=2):
             if row["place_kind"] not in PLACE_KIND:
                 self.error(f"places.tsv:{idx} invalid place_kind={row['place_kind']}")
@@ -724,6 +910,10 @@ class Validator:
                 self.error(f"sources.tsv:{idx} invalid source_kind={row['source_kind']}")
             if row.get("work_id") and row["work_id"] not in self.by_id.get("works.tsv", set()):
                 self.error(f"sources.tsv:{idx} broken FK work_id={row['work_id']}")
+            src_ys = parse_int(row.get("year_start"))
+            src_ye = parse_int(row.get("year_end"))
+            if src_ys is not None and src_ye is not None and src_ye < src_ys:
+                self.error(f"sources.tsv:{idx} year_end < year_start ({src_ye} < {src_ys})")
 
         for idx, row in enumerate(self.tables.get("passages.tsv", []), start=2):
             if row["source_id"] not in self.by_id.get("sources.tsv", set()):
@@ -736,7 +926,11 @@ class Validator:
             if row.get("locator_type") == "bible_osis" and locator and not is_osis_ref(locator):
                 self.error(f"passages.tsv:{idx} locator is not valid OSIS={locator}")
 
+    # ── Claim structure validation ────────────────────────────────────────
+
     def validate_claims(self) -> None:
+        """Validate claim structure: predicate match, FK integrity, logical uniqueness.
+        Also dispatches all redundancy and evidence quality sub-validators."""
         logical_seen: set[Tuple[Any, ...]] = set()
         for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
             predicate = self.predicate_by_id.get(row["predicate_id"])
@@ -816,7 +1010,10 @@ class Validator:
         self.validate_bishop_location_redundancy()
         self.validate_authored_place_redundancy()
         self.validate_participant_place_redundancy()
+        self.validate_controls_group_present_redundancy()
         self.validate_evidence_role_semantics()
+
+    # ── Redundancy rules (R1–R8) ───────────────────────────────────────────
 
     def validate_change_based_group_claims(self) -> None:
         grouped: Dict[Tuple[str, str, str, str, str], List[Tuple[Optional[int], Optional[int], str]]] = defaultdict(list)
@@ -853,12 +1050,15 @@ class Validator:
                 previous_claim = claim_id
 
     def validate_author_work_affirmation_redundancy(self) -> None:
-        """Error when person_affirms_proposition is backed solely by passages from works that already work_affirm that proposition.
+        """Error when person_*_proposition is backed solely by passages from works that already carry
+        the equivalent work_*_proposition for the same proposition.
+
+        Covers: person_affirms → work_affirms, person_opposes → work_opposes,
+        person_mentions → work_mentions, person_develops → work_develops.
 
         Authorship is inferred structurally: if ALL of a person claim's evidence passages trace back
-        (passage → source → work) to works that already carry work_affirms_proposition for the same
-        proposition, the person claim is entirely redundant — the work claim covers the author's position.
-        Remove the person claim; keep the work claim.
+        (passage → source → work) to works authored by the same person that already carry the
+        corresponding work-level predicate, the person claim is entirely redundant.
         """
         # passage_id -> work_id via passages.source_id -> sources.work_id
         source_by_id = {row["source_id"]: row for row in self.tables.get("sources.tsv", []) if row.get("source_id")}
@@ -871,15 +1071,24 @@ class Validator:
                 if wid:
                     passage_to_work[pid] = wid
 
-        # work_id -> set of proposition_ids it actively affirms
-        work_affirmed: Dict[str, set[str]] = defaultdict(set)
+        # Mapping from person predicate to its work equivalent
+        PERSON_TO_WORK_PRED = {
+            "person_affirms_proposition": "work_affirms_proposition",
+            "person_opposes_proposition": "work_opposes_proposition",
+            "person_mentions_proposition": "work_mentions_proposition",
+            "person_develops_proposition": "work_develops_proposition",
+        }
+        WORK_PROP_PREDICATES = set(PERSON_TO_WORK_PRED.values())
+
+        # work_id -> predicate -> set of proposition_ids
+        work_prop_by_pred: Dict[str, Dict[str, set[str]]] = defaultdict(lambda: defaultdict(set))
         for row in self.tables.get("claims.tsv", []):
             if row.get("claim_status") != "active":
                 continue
-            if row.get("predicate_id") == "work_affirms_proposition" \
+            if row.get("predicate_id") in WORK_PROP_PREDICATES \
                     and row.get("object_mode") == "entity" \
                     and row.get("object_type") == "proposition":
-                work_affirmed[row["subject_id"]].add(row["object_id"])
+                work_prop_by_pred[row["subject_id"]][row["predicate_id"]].add(row["object_id"])
 
         # claim_id -> set of passage_ids (from claim_evidence)
         claim_passages: Dict[str, set[str]] = defaultdict(set)
@@ -897,20 +1106,17 @@ class Validator:
                     and row.get("object_type") == "person":
                 person_authored_works[row["object_id"]].add(row["subject_id"])
 
-        # Validate each person_affirms_proposition claim
+        # Validate each person_*_proposition claim for redundancy with work_*_proposition
         for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
             if row.get("claim_status") != "active":
                 continue
-            if row.get("predicate_id") != "person_affirms_proposition":
+            person_pred = row.get("predicate_id", "")
+            if person_pred not in PERSON_TO_WORK_PRED:
                 continue
             if row.get("object_mode") != "entity" or row.get("object_type") != "proposition":
                 continue
 
-            # Opposing claims are never redundant: they represent a different
-            # theological position from the work that affirms the prop.
-            if row.get("polarity") == "opposes":
-                continue
-
+            work_pred = PERSON_TO_WORK_PRED[person_pred]
             prop_id = row["object_id"]
             claim_id = row["claim_id"]
             subject_id = row["subject_id"]
@@ -924,20 +1130,18 @@ class Validator:
                 continue  # all passages are Bible / un-work-linked; legitimate person claim
 
             # Only fire when all evidence works are works authored by the subject person.
-            # If the evidence comes from a third-party witness (e.g. Irenaeus reporting
-            # Cerinthus), the evidence works are NOT the person's own, so no redundancy.
             person_works = person_authored_works.get(subject_id, set())
             if not evidence_works.issubset(person_works):
                 continue  # some evidence is from a different author — legitimate claim
 
-            # If EVERY evidence work is authored by the subject AND already carries
-            # work_affirms_proposition for this prop, the person claim is redundant.
-            redundant = [w for w in evidence_works if prop_id in work_affirmed.get(w, set())]
+            # If EVERY evidence work already carries the corresponding work_*_proposition,
+            # the person claim is redundant.
+            redundant = [w for w in evidence_works if prop_id in work_prop_by_pred.get(w, {}).get(work_pred, set())]
             if len(redundant) == len(evidence_works):
                 self.error(
-                    f"claims.tsv:{idx} redundant person_affirms_proposition: "
-                    f"person={subject_id} prop={prop_id} is already affirmed by "
-                    f"own work(s)={redundant} through their evidence passages. "
+                    f"claims.tsv:{idx} redundant {person_pred}: "
+                    f"person={subject_id} prop={prop_id} is already covered by "
+                    f"{work_pred} on own work(s)={redundant}. "
                     f"Remove the person claim; the work claim suffices (claim_id={claim_id})"
                 )
 
@@ -1105,18 +1309,68 @@ class Validator:
                     f"Consider removing (claim_id={row['claim_id']})"
                 )
 
+    def validate_controls_group_present_redundancy(self) -> None:
+        """R5: Error when group_present_at duplicates controls_place for same group/place/overlapping dates."""
+        controls: Dict[Tuple[str, str], List[Tuple[Optional[int], Optional[int], str]]] = defaultdict(list)
+        for row in self.tables.get("claims.tsv", []):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") == "controls_place" and row.get("object_mode") == "entity" and row.get("object_type") == "place":
+                controls[(row["subject_id"], row["object_id"])].append(
+                    (parse_int(row.get("year_start")), parse_int(row.get("year_end")), row["claim_id"])
+                )
+
+        for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
+            if row.get("claim_status") != "active":
+                continue
+            if row.get("predicate_id") != "group_present_at":
+                continue
+            if row.get("object_mode") != "entity" or row.get("object_type") != "place":
+                continue
+            key = (row["subject_id"], row["object_id"])
+            gpa_start = parse_int(row.get("year_start"))
+            gpa_end = parse_int(row.get("year_end"))
+            for cp_start, cp_end, cp_claim_id in controls.get(key, []):
+                # Check date overlap (None treated as open-ended)
+                s1 = gpa_start if gpa_start is not None else -(10**9)
+                e1 = gpa_end if gpa_end is not None else 10**9
+                s2 = cp_start if cp_start is not None else -(10**9)
+                e2 = cp_end if cp_end is not None else 10**9
+                if s1 <= e2 and s2 <= e1:
+                    self.error(
+                        f"claims.tsv:{idx} R5 redundant group_present_at: "
+                        f"group={row['subject_id']} place={row['object_id']} is already covered by "
+                        f"controls_place claim={cp_claim_id}. Remove the group_present_at claim "
+                        f"(claim_id={row['claim_id']})"
+                    )
+                    break
+
+    # ── Evidence quality rules (P1–P5) ──────────────────────────────────────
+
     def validate_evidence_role_semantics(self) -> None:
-        """Validate evidence role quality:
-        1. 'attested' claims must have at least one 'supports' evidence.
-        2. Any claim whose sole evidence is contextualizes/mentions (no 'supports') gets a warning.
-        """
-        # Build claim -> evidence roles index
+        """Validate evidence role quality rules P1–P5 and basic evidence semantics."""
+        # Build indexes
+        claim_evidence_rows: Dict[str, List[Dict[str, str]]] = defaultdict(list)
         claim_evidence_roles: Dict[str, set[str]] = defaultdict(set)
         for row in self.tables.get("claim_evidence.tsv", []):
             claim_id = row["claim_id"]
             evidence_role = row.get("evidence_role", "")
             if evidence_role:
                 claim_evidence_roles[claim_id].add(evidence_role)
+            claim_evidence_rows[claim_id].append(row)
+
+        # passage -> source -> work_id chain
+        source_by_id = {row["source_id"]: row for row in self.tables.get("sources.tsv", []) if row.get("source_id")}
+        passage_to_work: Dict[str, str] = {}
+        for row in self.tables.get("passages.tsv", []):
+            pid = row.get("passage_id", "")
+            sid = row.get("source_id", "")
+            if pid and sid:
+                wid = source_by_id.get(sid, {}).get("work_id", "")
+                if wid:
+                    passage_to_work[pid] = wid
+
+        P3_QUALITY_ASPECTS = {"whole_claim", "predicate", "object"}
 
         for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
             if row.get("claim_status") != "active":
@@ -1125,8 +1379,9 @@ class Validator:
             claim_id = row["claim_id"]
             evidence_roles = claim_evidence_roles.get(claim_id, set())
             certainty = row.get("certainty", "")
+            ev_rows = claim_evidence_rows.get(claim_id, [])
 
-            # Rule 1: 'attested' requires at least one 'supports'
+            # Basic rule: 'attested' requires at least one 'supports'
             if certainty == "attested":
                 if not evidence_roles:
                     self.warn(
@@ -1140,7 +1395,7 @@ class Validator:
                         f"Change certainty to 'probable' or add a direct 'supports' link."
                     )
 
-            # Rule 2: any active claim with evidence where ALL roles are contextualizes/mentions
+            # Basic rule: sole evidence is contextualizes/mentions
             if evidence_roles and evidence_roles.issubset({"contextualizes", "mentions"}):
                 self.warn(
                     f"claims.tsv:{idx} sole evidence is contextual/mention only (no 'supports'): "
@@ -1148,6 +1403,50 @@ class Validator:
                     f"This evidence does not directly support the claim. "
                     f"Add a direct 'supports' link, change to a contextualizes-only note, or remove the evidence."
                 )
+
+            # P1: work_* claims should have evidence from the same work
+            if row["subject_type"] == "work" and row["predicate_id"].startswith("work_"):
+                work_subject = row["subject_id"]
+                for ev in ev_rows:
+                    if ev.get("evidence_role") != "supports":
+                        continue
+                    ev_work = passage_to_work.get(ev["passage_id"], "")
+                    if ev_work and ev_work != work_subject:
+                        self.warn(
+                            f"claims.tsv:{idx} P1 source mismatch: work claim subject={work_subject} "
+                            f"but supports evidence passage={ev['passage_id']} comes from work={ev_work}. "
+                            f"claim_id={claim_id}"
+                        )
+
+            # P3: attested claims need quality support_aspect (only enforce when populated)
+            if certainty == "attested" and ev_rows:
+                supports_rows = [e for e in ev_rows if e.get("evidence_role") == "supports"]
+                has_any_aspect = any(e.get("support_aspect") for e in supports_rows)
+                if has_any_aspect:
+                    has_quality = any(
+                        e.get("support_aspect") in P3_QUALITY_ASPECTS
+                        for e in supports_rows
+                    )
+                    if not has_quality:
+                        self.warn(
+                            f"claims.tsv:{idx} P3 attested claim has no supports evidence with "
+                            f"support_aspect in {{whole_claim, predicate, object}}: "
+                            f"claim_id={claim_id}. Consider adding a direct aspect reference."
+                        )
+
+            # P5: supports evidence with empty excerpt on passage
+            for ev in ev_rows:
+                if ev.get("evidence_role") != "supports":
+                    continue
+                passage = self.passage_by_id.get(ev["passage_id"])
+                if passage and not passage.get("excerpt") and not ev.get("excerpt_override"):
+                    self.warn(
+                        f"claims.tsv:{idx} P5 supports evidence with no excerpt: "
+                        f"claim_id={claim_id} passage={ev['passage_id']}. "
+                        f"Add an excerpt to the passage or an excerpt_override to the evidence."
+                    )
+
+    # ── Evidence, review & note FK validation ──────────────────────────────
 
     def validate_evidence_reviews_notes(self) -> None:
         seen_evidence: set[Tuple[str, str, str]] = set()
@@ -1158,6 +1457,17 @@ class Validator:
                 self.error(f"claim_evidence.tsv:{idx} broken FK passage_id={row['passage_id']}")
             if row["evidence_role"] not in EVIDENCE_ROLE:
                 self.error(f"claim_evidence.tsv:{idx} invalid evidence_role={row['evidence_role']}")
+            if row.get("support_aspect") and row["support_aspect"] not in SUPPORT_ASPECT:
+                self.error(f"claim_evidence.tsv:{idx} invalid support_aspect={row['support_aspect']}")
+            if row.get("assertion_mode") and row["assertion_mode"] not in ASSERTION_MODE:
+                self.error(f"claim_evidence.tsv:{idx} invalid assertion_mode={row['assertion_mode']}")
+            # P4: supports + background_only is contradictory
+            if row["evidence_role"] == "supports" and row.get("assertion_mode") == "background_only":
+                self.error(
+                    f"claim_evidence.tsv:{idx} supports + background_only is invalid: "
+                    f"claim={row['claim_id']} passage={row['passage_id']}. "
+                    f"Use evidence_role=contextualizes for background passages."
+                )
             key = (row["claim_id"], row["passage_id"], row["evidence_role"])
             if key in seen_evidence:
                 self.error(f"claim_evidence.tsv:{idx} duplicate composite key {key}")
@@ -1189,6 +1499,14 @@ class Validator:
             if row.get("claim_id") and row["claim_id"] not in self.by_id.get("claims.tsv", set()):
                 self.error(f"editor_notes.tsv:{idx} broken FK claim_id={row['claim_id']}")
 
+        for idx, row in enumerate(self.tables.get("claim_review_events.tsv", []), start=2):
+            if row["claim_id"] not in self.by_id.get("claims.tsv", set()):
+                self.error(f"claim_review_events.tsv:{idx} broken FK claim_id={row['claim_id']}")
+            if row["event_type"] not in REVIEW_EVENT_TYPE:
+                self.error(f"claim_review_events.tsv:{idx} invalid event_type={row['event_type']}")
+
+    # ── Markdown & OSIS validation ──────────────────────────────────────────
+
     def derive_expected_note_mentions(self) -> List[Dict[str, str]]:
         sources = collect_markdown_reference_sources(self.data_dir / "sheets", self.markdown_source_root())
         return derive_note_mentions(sources)
@@ -1216,6 +1534,8 @@ class Validator:
                     if value and not is_osis_ref(value):
                         self.error(f"{filename}:{idx} field {field} is not valid OSIS={value}")
 
+    # ── Derived table generation & comparison ──────────────────────────────
+
     def derive_expected_first_attestations(self) -> List[Dict[str, Any]]:
         return derive_first_attestations(
             self.tables.get("claims.tsv", []),
@@ -1223,12 +1543,14 @@ class Validator:
             self.tables.get("passages.tsv", []),
         )
 
-    def derive_expected_proposition_place_presence(self) -> List[Dict[str, Any]]:
-        return derive_proposition_place_presence(self.tables.get("claims.tsv", []))
+    def derive_expected_edges(self) -> List[Dict[str, str]]:
+        return derive_edges(self.tables.get("claims.tsv", []))
 
-    def derive_expected_entity_place_footprints(self) -> List[Dict[str, Any]]:
-        proposition_presence = self.derive_expected_proposition_place_presence()
-        return derive_entity_place_footprints(self.tables.get("claims.tsv", []), proposition_presence)
+    def derive_expected_proposition_place_presence(self, edges: List[Dict[str, str]]) -> List[Dict[str, Any]]:
+        return derive_proposition_place_presence(self.tables.get("claims.tsv", []), edges)
+
+    def derive_expected_entity_place_footprints(self, edges: List[Dict[str, str]], proposition_presence: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        return derive_entity_place_footprints(self.tables.get("claims.tsv", []), proposition_presence, edges)
 
     def derive_expected_place_state_by_decade(self) -> List[Dict[str, Any]]:
         return derive_place_state_by_decade(self.tables.get("claims.tsv", []))
@@ -1248,8 +1570,11 @@ class Validator:
     def validate_derived(self) -> None:
         self.compare_rows("note_mentions.tsv", self.derive_expected_note_mentions())
         self.compare_rows("first_attestations.tsv", self.derive_expected_first_attestations())
-        self.compare_rows("proposition_place_presence.tsv", self.derive_expected_proposition_place_presence())
-        self.compare_rows("entity_place_footprints.tsv", self.derive_expected_entity_place_footprints())
+        edges = self.derive_expected_edges()
+        self.compare_rows("derived_edges.tsv", edges)
+        proposition_presence = self.derive_expected_proposition_place_presence(edges)
+        self.compare_rows("proposition_place_presence.tsv", proposition_presence)
+        self.compare_rows("entity_place_footprints.tsv", self.derive_expected_entity_place_footprints(edges, proposition_presence))
         self.compare_rows("place_state_by_decade.tsv", self.derive_expected_place_state_by_decade())
 
         for idx, row in enumerate(self.tables.get("note_mentions.tsv", []), start=2):
@@ -1297,6 +1622,8 @@ class Validator:
             if row.get("dominant_polity_group_id") and row["dominant_polity_group_id"] not in self.by_id.get("groups.tsv", set()):
                 self.error(f"place_state_by_decade.tsv:{idx} broken dominant_polity_group_id={row['dominant_polity_group_id']}")
 
+    # ── Reporting ──────────────────────────────────────────────────────────
+
     def build_sparse_report(self) -> None:
         if self.sparse_threshold is None:
             return
@@ -1340,7 +1667,62 @@ class Validator:
             for entity_type, count, entity_id, label in sparse_rows
         ]
 
+    def build_evidence_report(self) -> List[Dict[str, Any]]:
+        """Build detailed per-claim evidence quality report when --check-evidence is set."""
+        if not self.check_evidence:
+            return []
+        source_by_id = {row["source_id"]: row for row in self.tables.get("sources.tsv", []) if row.get("source_id")}
+        passage_to_work: Dict[str, str] = {}
+        for row in self.tables.get("passages.tsv", []):
+            pid, sid = row.get("passage_id", ""), row.get("source_id", "")
+            if pid and sid:
+                wid = source_by_id.get(sid, {}).get("work_id", "")
+                if wid:
+                    passage_to_work[pid] = wid
+        evidence_by_claim: Dict[str, List[Dict[str, str]]] = defaultdict(list)
+        for row in self.tables.get("claim_evidence.tsv", []):
+            evidence_by_claim[row["claim_id"]].append(row)
+        report: List[Dict[str, Any]] = []
+        for row in self.tables.get("claims.tsv", []):
+            if row.get("claim_status") != "active":
+                continue
+            claim_id = row["claim_id"]
+            ev_rows = evidence_by_claim.get(claim_id, [])
+            flags: List[str] = []
+            if not ev_rows:
+                flags.append("no_evidence")
+            else:
+                roles = {e.get("evidence_role") for e in ev_rows}
+                if "supports" not in roles:
+                    flags.append("no_supports")
+                supports_rows = [e for e in ev_rows if e.get("evidence_role") == "supports"]
+                for e in supports_rows:
+                    psg = self.passage_by_id.get(e["passage_id"])
+                    if psg and not psg.get("excerpt") and not e.get("excerpt_override"):
+                        flags.append("missing_excerpt")
+                        break
+                if row["subject_type"] == "work" and row["predicate_id"].startswith("work_"):
+                    for e in supports_rows:
+                        ew = passage_to_work.get(e["passage_id"], "")
+                        if ew and ew != row["subject_id"]:
+                            flags.append("source_mismatch")
+                            break
+                has_aspect = any(e.get("support_aspect") for e in supports_rows)
+                if has_aspect and not any(
+                    e.get("support_aspect") in {"whole_claim", "predicate", "object"}
+                    for e in supports_rows
+                ):
+                    flags.append("weak_aspect")
+            if flags:
+                report.append({"claim_id": claim_id, "certainty": row.get("certainty", ""), "flags": flags, "evidence_count": len(ev_rows)})
+        report.sort(key=lambda r: (len(r["flags"]), r["claim_id"]))
+        return report
+
+    # ── Orchestrator ──────────────────────────────────────────────────────
+
     def run(self) -> int:
+        """Run all validation passes and output results."""
+        import json as json_mod
         self.load()
         self.validate_enums_and_entities()
         self.validate_claims()
@@ -1348,10 +1730,31 @@ class Validator:
         self.validate_markdown_links_and_osis()
         self.validate_derived()
         self.build_sparse_report()
+        evidence_report = self.build_evidence_report()
+
+        if self.json_output:
+            result: Dict[str, Any] = {
+                "passed": len(self.errors) == 0,
+                "error_count": len(self.errors),
+                "warning_count": len(self.warnings),
+                "errors": self.errors,
+                "warnings": self.warnings,
+            }
+            if self.sparse_threshold is not None:
+                result["sparse"] = self.sparse_messages
+            if self.check_evidence:
+                result["evidence_report"] = evidence_report
+            print(json_mod.dumps(result, indent=2))
+            return 1 if self.errors else 0
+
         if self.warnings:
             print("Warnings:")
             for message in self.warnings:
                 print(f"  - {message}")
+        if self.check_evidence and evidence_report:
+            print(f"Evidence quality issues ({len(evidence_report)} claims):")
+            for item in evidence_report:
+                print(f"  - {item['claim_id']}: {', '.join(item['flags'])} (ev={item['evidence_count']}, cert={item['certainty']})")
         if self.sparse_threshold is not None:
             print(f"Sparse entities (<= {self.sparse_threshold} active claim links):")
             if self.sparse_messages:
@@ -1368,6 +1771,10 @@ class Validator:
         return 0
 
 
+# =============================================================================
+# CLI ENTRY POINT
+# =============================================================================
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate canonical TSV data, regenerate derived tables, optionally scan markdown files, and report sparse entities.")
     parser.add_argument("--data-dir", default=str(Path(__file__).resolve().parent.parent / "data"), help="Directory containing canonical TSV files.")
@@ -1375,6 +1782,8 @@ def main() -> None:
     parser.add_argument("--scan-root", default=None, help="Root directory to scan for markdown files. Defaults to the repository root.")
     parser.add_argument("--rewrite-derived", action="store_true", help="Accepted for CLI compatibility; derived files are rewritten automatically when stale.")
     parser.add_argument("--check-sparse", nargs="?", const=1, type=int, default=None, metavar="N", help="Report entities with N or fewer active claim links. Defaults to 1 when passed without a value.")
+    parser.add_argument("--json", action="store_true", help="Output results as machine-readable JSON.")
+    parser.add_argument("--check-evidence", action="store_true", help="Detailed evidence quality report (source mismatches, missing excerpts, aspect coverage gaps).")
     args = parser.parse_args()
 
     data_dir = Path(args.data_dir).resolve()
@@ -1391,6 +1800,8 @@ def main() -> None:
         check_markdown=bool(args.check_markdown or args.scan_root),
         rewrite_derived=args.rewrite_derived,
         sparse_threshold=args.check_sparse,
+        json_output=args.json,
+        check_evidence=args.check_evidence,
     )
     sys.exit(validator.run())
 

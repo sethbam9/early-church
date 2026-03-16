@@ -30,6 +30,7 @@ Edit only these source tables directly:
 | `data/sheets/claims.tsv` | Atomic historical assertions |
 | `data/sheets/claim_evidence.tsv` | Claim ↔ passage links |
 | `data/sheets/claim_reviews.tsv` | Claim review status |
+| `data/sheets/claim_review_events.tsv` | Append-only review history |
 | `data/sheets/editor_notes.tsv` | Editorial markdown notes |
 
 ## Derived files
@@ -42,6 +43,7 @@ Never edit these manually. They are rewritten by validation.
 | `data/derived/place_state_by_decade.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
 | `data/derived/first_attestations.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
 | `data/derived/proposition_place_presence.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
+| `data/derived/derived_edges.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
 | `data/derived/note_mentions.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
 
 ---
@@ -227,6 +229,10 @@ Every Windsurf agent or scripted assistant should follow these constraints:
 8. Never store `person_affirms/opposes_proposition` when the person's own authored works already carry the equivalent `work_affirms/opposes_proposition` — the work claim covers it.
 9. Never store `active_in` when `bishop_of` already covers the same person-place — bishop implies active.
 10. Prefer letting `authored_by` + `written_at` and `participant_in` + `event_occurs_at` derive person-place presence instead of adding redundant `active_in` claims.
+11. Never store `group_present_at` when `controls_place` already covers the same group-place with overlapping dates — control implies presence (R5).
+12. When adding `evidence_role=supports` evidence, always set `support_aspect` (whole_claim, subject, predicate, object, date, place, context, attribution) and `assertion_mode` (explicit, strong_inference, weak_inference). Never combine `evidence_role=supports` with `assertion_mode=background_only` (P4).
+13. For `work_*` claims, ensure supports evidence comes from passages of the same work as `claim.subject_id` — cross-work evidence triggers a source-mismatch warning (P1).
+14. For `certainty=attested` claims, ensure at least one supports row has `support_aspect` in {whole_claim, predicate, object} (P3).
 
 ---
 
@@ -246,6 +252,18 @@ Optional sparse-connectivity report:
 
 ```bash
 python3 scripts/validate_canonical_data.py --data-dir data --check-sparse
+```
+
+Detailed evidence quality report:
+
+```bash
+python3 scripts/validate_canonical_data.py --data-dir data --check-evidence
+```
+
+Machine-readable JSON output (for AI feedback loops):
+
+```bash
+python3 scripts/validate_canonical_data.py --data-dir data --json
 ```
 
 To scan a different directory for markdown mentions:
