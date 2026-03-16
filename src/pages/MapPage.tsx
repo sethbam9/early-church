@@ -2,18 +2,45 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import s from "./MapPage.module.css";
 import { useLocation } from "react-router-dom";
 import L, { type LayerGroup, type Map as LeafletMap } from "leaflet";
+import { PanelLeft, PanelRight, ChevronDown, ChevronUp } from "lucide-react";
 import { useAppStore } from "../stores/appStore";
-import { dataStore } from "../data/dataStore";
+import { dataStore, globalSearch } from "../data/dataStore";
 import { LeftPanel } from "../components/map/LeftPanel";
 import { RightPanel } from "../components/map/RightPanel";
-import { PRESENCE_COLORS, STANCE_COLORS, KIND_ICONS } from "../components/shared/entityConstants";
-import { Hl } from "../components/shared/Hl";
+import { PRESENCE_COLORS, STANCE_COLORS, PlaceKindIcon } from "../components/shared/entityConstants";
+import { buildPlaceKindIconSvg, PLACE_KIND_LABELS } from "../components/shared/icons";
 import { MapGraphOverlay } from "../components/shared/MapGraphOverlay";
-import { useMapPageData, getConnectedPlaceIds, PLACE_SEARCH_INDEX } from "../hooks/useMapPageData";
+import { useMapPageData, getConnectedPlaceIds } from "../hooks/useMapPageData";
 
 // Leaflet markers require raw hex values (not CSS variables)
 const ACCENT = "#c47c3a";
 const ACCENT_CONNECTED = "#e8943a";
+
+// ─── Place kind legend overlay ───────────────────────────────────────────────
+// Uses PlaceKindIcon React components — same icons as the right panel.
+
+const LEGEND_KINDS = Object.keys(PLACE_KIND_LABELS).filter((k) => k !== "unknown");
+
+function PlaceLegend() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className={s.legend}>
+      <button type="button" className={s.legendToggle} onClick={() => setOpen((v) => !v)}>
+        Legend {open ? <ChevronUp size={11} /> : <ChevronDown size={11} />}
+      </button>
+      {open && (
+        <div className={s.legendItems}>
+          {LEGEND_KINDS.map((kind) => (
+            <div key={kind} className={s.legendItem}>
+              <PlaceKindIcon kind={kind} size={14} />
+              <span>{PLACE_KIND_LABELS[kind]}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 // ─── MapPage ──────────────────────────────────────────────────────────────────
 
@@ -33,6 +60,23 @@ export function MapPage() {
   const setPanelTab     = useAppStore((s) => s.setPanelTab);
   const toggleLeftPanel   = useAppStore((s) => s.toggleLeftPanel);
   const toggleRightPanel  = useAppStore((s) => s.toggleRightPanel);
+
+  // ── Search-based place highlight set (from NavBar global query) ──────────
+  const searchHighlightPlaceIds = useMemo(() => {
+    const q = searchQuery.trim();
+    if (!q) return null;
+    const results = globalSearch(q);
+    const placeIds = new Set<string>();
+    for (const r of results) {
+      if (r.kind === "place") {
+        placeIds.add(r.id);
+      } else {
+        const fps = dataStore.footprints.getForEntityDeduped(r.kind, r.id);
+        for (const fp of fps) placeIds.add(fp.place_id);
+      }
+    }
+    return placeIds;
+  }, [searchQuery]);
 
   // ── Refs ──────────────────────────────────────────────────────────────────
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
@@ -110,16 +154,21 @@ export function MapPage() {
       if (place.lat == null || place.lon == null) continue;
       const isSelected  = place.place_id === selPlaceId;
       const isConnected = connectedPlaceIds.has(place.place_id);
-      const isDimmed    = hasEntityHighlight && !isConnected && !isSelected;
+      const isDimmed    = hasEntityHighlight
+        ? (!isConnected && !isSelected)
+        : searchHighlightPlaceIds !== null && !searchHighlightPlaceIds.has(place.place_id);
       const stanceColor = propositionStanceMap.size > 0 ? propositionStanceMap.get(place.place_id) : undefined;
       const fallback    = "#8e8070";
       const color       = stanceColor ? (STANCE_COLORS[stanceColor] ?? fallback) : (PRESENCE_COLORS[place.presence_status] ?? fallback);
-      const r           = isSelected ? 9 : isConnected ? 8 : 6;
+      const useStanceColor = stanceColor != null;
+      const strokeColor = isSelected ? ACCENT : isConnected && !useStanceColor ? ACCENT_CONNECTED : color;
+      const fillColor = useStanceColor ? color : isConnected ? ACCENT_CONNECTED : color;
+      const fillOpacity = isSelected ? 1 : isDimmed ? 0.22 : isConnected ? 0.92 : 0.78;
 
-      // Selected ring
+      // Selection / connection rings — radius matches half of iconSz + 4px gap
       if (isSelected) {
         L.circleMarker([place.lat, place.lon], {
-          radius: 17, color: ACCENT, weight: 2.5,
+          radius: 14, color: ACCENT, weight: 2.5,
           fillColor: "transparent", fillOpacity: 0,
           dashArray: "5 4",
         }).addTo(rowLyr);
@@ -127,18 +176,21 @@ export function MapPage() {
 
       if (isConnected && !isSelected) {
         L.circleMarker([place.lat, place.lon], {
-          radius: 14, color: ACCENT, weight: 2,
+          radius: 13, color: ACCENT, weight: 2,
           fillColor: "transparent", fillOpacity: 0,
         }).addTo(rowLyr);
       }
 
-      const useStanceColor = stanceColor != null;
-      const m = L.circleMarker([place.lat, place.lon], {
-        radius: r,
-        color: isSelected ? ACCENT : isConnected && !useStanceColor ? ACCENT_CONNECTED : color,
-        weight: isSelected ? 2.5 : isConnected ? 2 : 1.2,
-        fillColor: useStanceColor ? color : isConnected ? ACCENT_CONNECTED : color,
-        fillOpacity: isSelected ? 1 : isDimmed ? 0.22 : isConnected ? 0.92 : 0.78,
+      // All places use divIcon for consistent centering.
+      // iconAnchor centres the icon at lat/lon — no CSS transform needed.
+      const iconSz = isSelected ? 20 : isConnected ? 18 : 16;
+      const m = L.marker([place.lat, place.lon], {
+        icon: L.divIcon({
+          className: "",
+          html: `<div style="width:${iconSz}px;height:${iconSz}px;display:flex;align-items:center;justify-content:center;opacity:${fillOpacity};filter:drop-shadow(0 0 2px rgba(255,255,255,0.85));">${buildPlaceKindIconSvg(place.place_kind, strokeColor, iconSz)}</div>`,
+          iconSize: [iconSz, iconSz],
+          iconAnchor: [iconSz / 2, iconSz / 2],
+        }),
       });
 
       const modernPart = place.place_label_modern && place.place_label_modern !== place.place_label
@@ -193,7 +245,7 @@ export function MapPage() {
         }, ms);
       }
     }
-  }, [visiblePlaces, selection, propositionStanceMap, setSelection, setPanelTab, rightPanelVisible, toggleRightPanel]);
+  }, [visiblePlaces, selection, propositionStanceMap, searchHighlightPlaceIds, setSelection, setPanelTab, rightPanelVisible, toggleRightPanel]);
 
   // ── Render arcs ───────────────────────────────────────────────────────────
 
@@ -393,12 +445,12 @@ export function MapPage() {
         <div className={s.overlays}>
           {!leftPanelVisible && (
             <button type="button" className={s.overlayBtn} onClick={toggleLeftPanel} title="Show controls">
-              ◀ Controls
+              <PanelLeft size={14} /> Controls
             </button>
           )}
           {!rightPanelVisible && (
             <button type="button" className={`${s.overlayBtn} ${s.overlayBtnRight}`} onClick={toggleRightPanel} title="Show panel">
-              Panel ▶
+              Panel <PanelRight size={14} />
             </button>
           )}
         </div>
@@ -412,15 +464,9 @@ export function MapPage() {
           showCenter={!!selection}
         />
 
-        {/* Search results overlay */}
-        {searchQuery.trim() && (
-          <SearchResultsPanel
-            query={searchQuery.trim()}
-            activeDecade={activeDecade}
-            matchedPlaceIds={new Set(visiblePlaces.map((p) => p.place_id))}
-            onClear={() => useAppStore.getState().setSearchQuery("")}
-          />
-        )}
+        {/* Place kind legend */}
+        <PlaceLegend />
+
       </div>
 
       {/* Right panel */}
@@ -436,119 +482,3 @@ export function MapPage() {
   );
 }
 
-// ─── Search Results Panel ─────────────────────────────────────────────────────
-
-const SEARCH_PAGE_SIZE = 20;
-
-function SearchResultsPanel({
-  query,
-  activeDecade,
-  matchedPlaceIds,
-  onClear,
-}: {
-  query: string;
-  activeDecade: number;
-  matchedPlaceIds: Set<string>;
-  onClear: () => void;
-}) {
-  const setSelection  = useAppStore((s) => s.setSelection);
-  const setPanelTab = useAppStore((s) => s.setPanelTab);
-  const toggleRight   = useAppStore((s) => s.toggleRightPanel);
-  const rightVisible  = useAppStore((s) => s.rightPanelVisible);
-  const [page, setPage] = useState(0);
-
-  const q = query.toLowerCase();
-
-  const matches = useMemo(() => {
-    if (!q) return [];
-    const results: { kind: string; id: string; label: string; sub: string }[] = [];
-
-    for (const place of dataStore.places.getAll()) {
-      const blob = PLACE_SEARCH_INDEX.get(place.place_id) ?? "";
-      if (!blob.includes(q)) continue;
-      results.push({ kind: "place", id: place.place_id, label: place.place_label, sub: `${place.modern_country_label} · ${place.place_kind}` });
-    }
-    for (const p of dataStore.people.getAll()) {
-      if (!`${p.person_label} ${p.name_alt.join(" ")} ${p.notes}`.toLowerCase().includes(q)) continue;
-      results.push({ kind: "person", id: p.person_id, label: p.person_label, sub: p.person_kind });
-    }
-    for (const w of dataStore.works.getAll()) {
-      if (!`${w.title_display} ${w.work_type} ${w.notes}`.toLowerCase().includes(q)) continue;
-      results.push({ kind: "work", id: w.work_id, label: w.title_display, sub: w.work_type });
-    }
-    for (const g of dataStore.groups.getAll()) {
-      if (!`${g.group_label} ${g.group_kind} ${g.notes}`.toLowerCase().includes(q)) continue;
-      results.push({ kind: "group", id: g.group_id, label: g.group_label, sub: g.group_kind });
-    }
-    for (const e of dataStore.events.getAll()) {
-      if (!`${e.event_label} ${e.event_type} ${e.notes}`.toLowerCase().includes(q)) continue;
-      results.push({ kind: "event", id: e.event_id, label: e.event_label, sub: e.event_type });
-    }
-    for (const p of dataStore.propositions.getAll()) {
-      if (!`${p.proposition_label} ${p.description} ${p.polarity_family}`.toLowerCase().includes(q)) continue;
-      results.push({ kind: "proposition", id: p.proposition_id, label: p.proposition_label, sub: "proposition" });
-    }
-    for (const src of dataStore.sources.getAll()) {
-      if (!`${src.title} ${src.source_kind}`.toLowerCase().includes(q)) continue;
-      results.push({ kind: "source", id: src.source_id, label: src.title, sub: src.source_kind });
-    }
-
-    results.sort((a, b) => a.label.localeCompare(b.label));
-    return results;
-  }, [q]);
-
-  useEffect(() => { setPage(0); }, [q]);
-
-  const totalPages = Math.ceil(matches.length / SEARCH_PAGE_SIZE);
-  const pageItems  = matches.slice(page * SEARCH_PAGE_SIZE, (page + 1) * SEARCH_PAGE_SIZE);
-
-  const handleSelect = (kind: string, id: string) => {
-    setSelection({ kind: kind as import("../data/dataStore").Selection["kind"], id });
-    if (kind === "place") setPanelTab("places");
-    if (!rightVisible) toggleRight();
-  };
-
-  if (matches.length === 0) return null;
-
-  return (
-    <div className={s.searchPanel}>
-      <div className={s.searchHeader}>
-        <span className={s.searchTitle}>
-          {matches.length} match{matches.length !== 1 ? "es" : ""} for &ldquo;{query}&rdquo;
-        </span>
-        <div className={s.searchHeaderActions}>
-          {totalPages > 1 && (
-            <span className={s.searchPageInfo}>
-              {page + 1} / {totalPages}
-            </span>
-          )}
-          <button type="button" className={s.closeBtn} onClick={onClear} title="Clear search">✕</button>
-        </div>
-      </div>
-
-      <div className={s.searchList}>
-        {pageItems.map((m) => (
-          <button
-            key={`${m.kind}:${m.id}`}
-            type="button"
-            className={s.searchItem}
-            onClick={() => handleSelect(m.kind, m.id)}
-          >
-            <span className={s.searchIcon}>{KIND_ICONS[m.kind] ?? "•"}</span>
-            <div className={s.searchBody}>
-              <div className={s.searchLabel}><Hl text={m.label} query={q} /></div>
-              {m.sub && <div className={s.searchSub}><Hl text={m.sub} query={q} /></div>}
-            </div>
-          </button>
-        ))}
-      </div>
-
-      {totalPages > 1 && (
-        <div className={s.searchPagination}>
-          <button type="button" className={s.actionBtn} disabled={page === 0} onClick={() => setPage((p) => p - 1)}>← Prev</button>
-          <button type="button" className={s.actionBtn} disabled={page >= totalPages - 1} onClick={() => setPage((p) => p + 1)}>Next →</button>
-        </div>
-      )}
-    </div>
-  );
-}

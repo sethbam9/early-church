@@ -10,12 +10,19 @@
   cursor: pointer; font-size: var(--font-size-sm); padding: 0;
 }
 .backBtn:hover { text-decoration: underline; }
-.crumb { font-size: var(--font-size-xs); color: var(--text-muted); flex: 1; }
+.crumb { font-size: var(--font-size-xs); color: var(--text-muted); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .exitBtn { margin-left: auto; }
+.copyIdBtn {
+  background: none; border: none; cursor: pointer; color: var(--text-faint);
+  padding: 1px 3px; display: inline-flex; align-items: center;
+  transition: color 0.12s;
+}
+.copyIdBtn:hover { color: var(--accent-bright); }
 .header { padding: var(--space-2) var(--space-3); flex-shrink: 0; }
 .headerRow { display: flex; align-items: center; justify-content: space-between; }
 
 /* Filter banner */
+.filterBannerLabel { display: inline-flex; align-items: center; gap: var(--space-1); }
 .filterBanner {
   display: flex; align-items: center; justify-content: space-between;
   padding: var(--space-2) var(--space-3);
@@ -44,16 +51,49 @@
 }
 .subTab:hover { color: var(--text-primary); }
 .subTabActive { color: var(--accent-bright); border-bottom-color: var(--accent-bright); font-weight: 600; }
+.detailSubTab {
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  background: none; border: none; border-bottom: 2px solid transparent;
+  cursor: pointer; font-size: var(--font-size-sm); color: var(--text-muted);
+  transition: color 0.12s, border-color 0.12s; font-family: inherit;
+}
+.detailSubTab:hover { color: var(--text); }
+.detailSubTabActive { color: var(--accent-bright); border-bottom-color: var(--accent-bright); font-weight: 600; }
+.detailSubTabCount {
+  font-size: 0.7rem;
+  color: var(--text-faint);
+  background: var(--surface-2);
+  border-radius: 8px;
+  padding: 1px 5px;
+  margin-left: 2px;
+}
 
 /* Body */
-.body { flex: 1; overflow-y: auto; padding: var(--space-3); display: flex; flex-direction: column; gap: var(--space-3); }
+.body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  background: transparent;
+}
+.notesToggle {
+  background: none; border: none; cursor: pointer; font: inherit;
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; padding: 0; color: var(--text-primary);
+  transition: color 0.12s;
+}
+.notesToggle:hover { color: var(--accent-bright); }
 .sectionTitle { font-size: var(--font-size-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: var(--space-1); }
 
 /* Presence tags */
 .tags { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: var(--space-1); }
 .tagsSpaced { gap: var(--space-2); }
 .tag {
-  display: inline-block; padding: 1px var(--space-2); border-radius: var(--radius-pill);
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  padding: 1px var(--space-2); border-radius: var(--radius-pill);
   font-size: var(--font-size-xs); border: 1px solid var(--border-default);
   color: var(--text-secondary); background: var(--bg-surface-2);
 }
@@ -75,10 +115,10 @@
 /* Connection card (relation rows) */
 .connCard {
   display: flex; flex-direction: column;
-  border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);
-  background: var(--bg-surface-2); transition: background 0.12s;
+  border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+  background: var(--surface); transition: background 0.12s;
 }
-.connCard:hover { background: var(--bg-surface-3); }
+.connCard:hover { background: var(--surface-2); }
 .connRow { display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2); cursor: pointer; }
 .connIcon { font-size: var(--font-size-md); width: 18px; text-align: center; flex-shrink: 0; }
 .connBody { flex: 1; min-width: 0; }
@@ -92,6 +132,212 @@
 }
 .connExpandBtn:hover { color: var(--text-primary); }
 .connEvidence { padding: var(--space-1) var(--space-2) var(--space-2); display: flex; flex-direction: column; gap: var(--space-1); }
+
+.passageCard {
+  border-color: var(--border-subtle);
+  background: var(--surface);
+  overflow: hidden;
+  font-size: var(--font-size-sm);
+}
+
+.passageHeader {
+  padding: var(--space-3);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.passageHeaderOpen {
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.passageMain {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  min-width: 0;
+  flex: 1;
+}
+
+.passageTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.passageMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: 2px;
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+.passageMetaSource { font-weight: 500; }
+
+.passageClaimsCount {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+}
+
+.passageExpandBtn {
+  margin-left: var(--space-2);
+}
+
+.passageContent {
+  background: var(--surface-2);
+  border-top: 1px solid var(--border-default);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.passageQuote {
+  margin: 0;
+  padding: var(--space-2);
+  background: var(--surface);
+  border-left: 3px solid var(--attested);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-style: italic;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.passageDetailsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.passageActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.passageWorkBtn {
+  background: none;
+  border: none;
+  border-bottom: 1px dashed var(--border-default);
+  border-radius: 0;
+  padding: 0;
+  font-size: var(--font-size-xs);
+  color: var(--accent-bright);
+  cursor: pointer;
+}
+.passageWorkBtn:hover { background: var(--accent-dim); border-bottom-color: var(--accent); }
+.weightIcon { display: inline-flex; align-items: center; gap: 2px; color: var(--text-muted); font-size: var(--font-size-xs); }
+
+.linkedClaimsHeader {
+  margin-top: var(--space-1);
+  margin-bottom: 0;
+}
+
+.linkedClaimsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.linkedClaimCard {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.linkedClaimCard:hover {
+  background: var(--surface-3);
+  border-color: var(--accent-bright);
+}
+
+.linkedClaimMain {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-2);
+}
+
+.linkedClaimSentence {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.linkedClaimEntity {
+  font-weight: 700;
+}
+
+.linkedClaimPredicate {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.linkedClaimObjectText {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.linkedClaimMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: 2px;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.linkedClaimRefs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+  font-size: var(--font-size-xs);
+}
+
+.linkedClaimRole {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.linkedClaimActions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.noLinkedClaims {
+  text-align: center;
+  color: var(--text-faint);
+  font-size: var(--font-size-sm);
+  font-style: italic;
+  padding: var(--space-3) var(--space-2);
+}
 
 /* Timeline content classes (structural gutter/dot in shared Timeline.module.css) */
 .tlDecadeHdr { font-size: var(--font-size-sm); font-weight: 600; color: var(--text-primary); }
@@ -128,7 +374,8 @@
 
 /* Sub-tab */
 .detailSubTab {
-  background: none; border: none; padding: 6px 12px;
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  background: none; border: none; padding: 6px 10px;
   font-size: var(--font-size-sm); cursor: pointer;
   color: var(--text-muted); border-bottom: 2px solid transparent;
   font-family: inherit; transition: color 0.12s, border-color 0.12s;

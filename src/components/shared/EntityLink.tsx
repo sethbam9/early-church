@@ -1,7 +1,7 @@
 import s from './EntityLink.module.css';
 import { EntityHoverWrap } from './EntityHoverCard';
 import { getEntityLabel } from '../../data/dataStore';
-import { kindIcon } from './entityConstants';
+import { KindIcon } from './entityConstants';
 
 interface EntityLinkProps {
   kind: string;
@@ -17,7 +17,7 @@ export function EntityLink({ kind, id, label, showIcon, onClick, className }: En
   return (
     <EntityHoverWrap kind={kind} id={id}>
       <button type="button" className={`${s.link} ${className ?? ''}`} onClick={onClick}>
-        {showIcon && <>{kindIcon(kind)} </>}{display}
+        {showIcon && <><KindIcon kind={kind} size={14} /> </>}{display}
       </button>
     </EntityHoverWrap>
   );

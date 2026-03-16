@@ -1,13 +1,14 @@
 /**
  * Canonical entity-kind icons, labels, and presence-status styling.
  * Import from here instead of re-declaring these maps per-component.
+ * Icons are now provided via Lucide React for consistency.
  */
 
-export const KIND_ICONS: Record<string, string> = {
-  place: "🏛", person: "👤", work: "📜", event: "⚡",
-  group: "✦", topic: "📖", dimension: "📊", proposition: "📝",
-  source: "📚", passage: "📄", claim: "🔗", editor_note: "📋", essay: "📝",
-};
+import { createElement } from "react";
+import { getKindIcon, getPlaceKindIcon } from "./icons";
+import { CheckCircle2, XCircle, Circle, RotateCcw, CircleDot } from "lucide-react";
+import type { ComponentType } from "react";
+import type { LucideProps } from "lucide-react";
 
 export const KIND_LABELS: Record<string, string> = {
   place: "Place", person: "Person", work: "Work", event: "Event",
@@ -15,12 +16,32 @@ export const KIND_LABELS: Record<string, string> = {
   source: "Source", passage: "Passage", claim: "Claim", editor_note: "Note",
 };
 
-export function kindIcon(kind: string): string {
-  return KIND_ICONS[kind] ?? "•";
+// Icon component — returns React element
+export function KindIcon({ kind, size = 16, className }: { kind: string; size?: number; className?: string }) {
+  const IconComponent = getKindIcon(kind);
+  return createElement(IconComponent, { size, strokeWidth: 2, className });
 }
 
 export function kindLabel(kind: string): string {
   return KIND_LABELS[kind] ?? kind;
+}
+
+const REVIEW_ICON_MAP: Record<string, ComponentType<LucideProps>> = {
+  approved:       CheckCircle2,
+  reviewed:       CircleDot,
+  disputed:       XCircle,
+  needs_revision: RotateCcw,
+  unreviewed:     Circle,
+};
+
+export function ReviewStatusIcon({ status, size = 12 }: { status: string; size?: number }) {
+  const Icon = REVIEW_ICON_MAP[status] ?? Circle;
+  return createElement(Icon, { size, strokeWidth: 2 });
+}
+
+export function PlaceKindIcon({ kind, size = 14, color }: { kind: string; size?: number; color?: string }) {
+  const Icon = getPlaceKindIcon(kind);
+  return createElement(Icon, { size, strokeWidth: 2, color });
 }
 
 export const PRESENCE_COLORS: Record<string, string> = {

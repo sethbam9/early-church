@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
+import { ChevronUp, ChevronDown, ChevronLeft, X, BookOpen, Scale, Map as MapIcon, Sword, Info, Clock, FileText, AtSign, Copy, Check, Quote } from "lucide-react";
 import { useAppStore } from "../../stores/appStore";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { EntityHeader, getEntityHeaderData } from "../shared/EntityHeader";
@@ -6,7 +7,7 @@ import { MarkdownRenderer } from "../shared/MarkdownRenderer";
 import { Pagination, PAGE_SIZE } from "../shared/Pagination";
 import { usePaginatedList } from "../../hooks/usePaginatedList";
 import { NoteCard } from "../shared/NoteCard";
-import { kindIcon, kindLabel, PRESENCE_COLORS, PRESENCE_LABELS } from "../shared/entityConstants";
+import { KindIcon, kindLabel, PRESENCE_COLORS, PRESENCE_LABELS, KIND_COLORS } from "../shared/entityConstants";
 import { CertaintyBadge } from "../shared/CertaintyBadge";
 import { FootprintCard } from "../shared/FootprintCard";
 import { Timeline } from "../shared/Timeline";
@@ -14,6 +15,8 @@ import type { TimelineRow } from "../shared/Timeline";
 import { EvidenceCard } from "../shared/EvidenceCard";
 import { EntityHoverWrap } from "../shared/EntityHoverCard";
 import { ExternalLink } from "../shared/ExternalLink";
+import { InfoIcon } from "../shared/InfoIcon";
+import { getSourceExternalUrl } from "../../utils/sourceLinks";
 import { getPredicateLabel } from "../../domain/relationLabels";
 import type { Claim, Passage, EntityPlaceFootprint, PlaceStateByDecade } from "../../data/types";
 import { truncateLabel, formatYearRange, formatDecadeLabel } from "../../utils/formatYear";
@@ -32,6 +35,21 @@ interface ConnectedEntity {
 }
 
 // ─── Tab label map ────────────────────────────────────────────────────────────
+
+const TAB_ICONS: Partial<Record<EntityDetailTab, React.ReactNode>> = {
+  info:         <Info size={12} />,
+  timeline:     <Clock size={12} />,
+  passages:     <Quote size={12} />,
+  people:       <KindIcon kind="person" size={12} />,
+  places:       <KindIcon kind="place" size={12} />,
+  groups:       <KindIcon kind="group" size={12} />,
+  works:        <KindIcon kind="work" size={12} />,
+  events:       <KindIcon kind="event" size={12} />,
+  propositions: <KindIcon kind="proposition" size={12} />,
+  topics:       <KindIcon kind="topic" size={12} />,
+  notes:        <FileText size={12} />,
+  mentions:     <AtSign size={12} />,
+};
 
 const TAB_LABELS: Record<EntityDetailTab, string> = {
   info:         "Info",
@@ -80,6 +98,14 @@ export function EntityDetail({
   const storeSearchQuery = useAppStore((s) => s.searchQuery).trim();
   const resolvedSearchQuery = searchQueryProp ?? storeSearchQuery;
   const [activeTab, setActiveTab] = useState<EntityDetailTab>("info");
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyId = () => {
+    navigator.clipboard.writeText(id).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    });
+  };
 
   const isFiltered = mapFilterType === kind && mapFilterId === id;
   const canFilter  = ["group", "person", "proposition", "event", "work"].includes(kind);
@@ -137,21 +163,21 @@ export function EntityDetail({
   }, [grouped, kind, id]);
 
   // ── Build available tabs ─────────────────────────────────────────────────
-  const availableTabs = useMemo((): { id: EntityDetailTab; label: string }[] => {
-    const tabs: { id: EntityDetailTab; label: string }[] = [
-      { id: "info", label: TAB_LABELS.info },
+  const availableTabs = useMemo((): { id: EntityDetailTab; label: string; count: number }[] => {
+    const tabs: { id: EntityDetailTab; label: string; count: number }[] = [
+      { id: "info", label: TAB_LABELS.info, count: 0 },
     ];
 
     // Works get no timeline (they have composition dates); other entities get timeline
     if (kind !== "work") {
       const timelineCount = kind === "place" ? placeStates.length : datedClaims.length;
       if (timelineCount > 0)
-        tabs.push({ id: "timeline", label: `Timeline (${timelineCount})` });
+        tabs.push({ id: "timeline", label: TAB_LABELS.timeline, count: timelineCount });
     }
 
-    // Passages tab for works, people, propositions
-    if (entityPassages.length > 0)
-      tabs.push({ id: "passages", label: `Passages (${entityPassages.length})` });
+    // Passages tab for works only
+    if (kind === "work" && entityPassages.length > 0)
+      tabs.push({ id: "passages", label: TAB_LABELS.passages, count: entityPassages.length });
 
     const RELATION_TYPES: { type: string; tab: EntityDetailTab }[] = [
       { type: "person",      tab: "people"       },
@@ -163,16 +189,16 @@ export function EntityDetail({
     ];
     for (const { type, tab } of RELATION_TYPES) {
       const n = connectedByType[type]?.length ?? 0;
-      if (n > 0) tabs.push({ id: tab, label: `${TAB_LABELS[tab]} (${n})` });
+      if (n > 0) tabs.push({ id: tab, label: TAB_LABELS[tab], count: n });
     }
 
     if (footprints.length > 0)
-      tabs.push({ id: "places", label: `Places (${footprints.length})` });
+      tabs.push({ id: "places", label: TAB_LABELS.places, count: footprints.length });
 
     if (editorNotes.length > 0)
-      tabs.push({ id: "notes", label: `Notes (${editorNotes.length})` });
+      tabs.push({ id: "notes", label: TAB_LABELS.notes, count: editorNotes.length });
     if (mentions.length > 0)
-      tabs.push({ id: "mentions", label: `Mentions (${mentions.length})` });
+      tabs.push({ id: "mentions", label: TAB_LABELS.mentions, count: mentions.length });
 
     return tabs;
   }, [kind, id, placeStates.length, datedClaims.length, entityPassages.length, connectedByType, footprints.length, editorNotes.length, mentions.length]);
@@ -187,16 +213,21 @@ export function EntityDetail({
     [kind, id, activeDecade],
   );
 
+  const accentColor = KIND_COLORS[kind];
+
   return (
-    <div className={ed.panel}>
+    <div className={ed.panel} style={accentColor ? { borderTop: `3px solid ${accentColor}` } : undefined}>
       {/* Back bar */}
       {!hideBackBar && (
         <div className={ed.backBar}>
           {hasHistory && (
-            <button type="button" className={ed.backBtn} onClick={onBack}>← Back</button>
+            <button type="button" className={ed.backBtn} onClick={onBack}><ChevronLeft size={12} /> Back</button>
           )}
-          <span className={ed.crumb}>{kindLabel(kind)}</span>
-          {onExit && <button type="button" className={`${ed.backBtn} ${ed.exitBtn}`} onClick={onExit} title="Exit to list">✕</button>}
+          <span className={ed.crumb}>{getEntityLabel(kind, id)}</span>
+          <button type="button" className={ed.copyIdBtn} onClick={handleCopyId} title={`Copy entity ID: ${id}`}>
+            {copied ? <Check size={11} /> : <Copy size={11} />}
+          </button>
+          {onExit && <button type="button" className={`${ed.backBtn} ${ed.exitBtn}`} onClick={onExit} title="Exit to list"><X size={13} /></button>}
         </div>
       )}
 
@@ -217,7 +248,7 @@ export function EntityDetail({
       {/* Map filter banner */}
       {canFilter && setMapFilter && (
         <div className={ed.filterBanner}>
-          <span>🗺 Filter map to this {kindLabel(kind).toLowerCase()}</span>
+          <span className={ed.filterBannerLabel}><MapIcon size={13} /> Filter map to this {kindLabel(kind).toLowerCase()}</span>
           <button
             type="button"
             className={`${ed.filterToggleBtn}${isFiltered ? ` ${ed.filterToggleBtnOn}` : ""}`}
@@ -237,8 +268,10 @@ export function EntityDetail({
               type="button"
               className={`${ed.detailSubTab}${activeTab === t.id ? ` ${ed.detailSubTabActive}` : ""}`}
               onClick={() => setActiveTab(t.id)}
+              title={TAB_LABELS[t.id as EntityDetailTab]}
             >
-              {t.label}
+              {TAB_ICONS[t.id as EntityDetailTab]}
+              {t.count > 0 && <span className={ed.detailSubTabCount}>{t.count}</span>}
             </button>
           ))}
         </div>
@@ -291,7 +324,7 @@ function PlacePresenceChips({ currentState, activeDecade, onSelectEntity }: {
             onClick={() => onSelectEntity("group", currentState.dominant_polity_group_id)}
             title="Dominant polity"
           >
-            ⚔ {dataStore.groups.getById(currentState.dominant_polity_group_id)?.group_label ?? currentState.dominant_polity_group_id}
+            <Sword size={11} /> {dataStore.groups.getById(currentState.dominant_polity_group_id)?.group_label ?? currentState.dominant_polity_group_id}
           </button>
         </EntityHoverWrap>
       )}
@@ -308,6 +341,27 @@ function PlacePresenceChips({ currentState, activeDecade, onSelectEntity }: {
             </EntityHoverWrap>
           );
         })}
+    </div>
+  );
+}
+
+// ─── Collapsed editor notes section ──────────────────────────────────────────
+
+function EditorNotesSectionCollapsed({ notes, onSelectEntity, searchQuery = "" }: {
+  notes: ReturnType<typeof dataStore.editorNotes.getForEntity>;
+  onSelectEntity: (kind: string, id: string) => void;
+  searchQuery?: string;
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className={ed.flexCol8}>
+      <button type="button" className={ed.notesToggle} onClick={() => setOpen((v) => !v)}>
+        <span className={ed.sectionTitle}>Editor Notes ({notes.length})</span>
+        {open ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+      </button>
+      {open && notes.map((n) => (
+        <NoteCard key={n.editor_note_id} note={n} onSelectEntity={onSelectEntity} searchQuery={searchQuery} />
+      ))}
     </div>
   );
 }
@@ -351,12 +405,7 @@ function InfoTab({ kind, id, editorNotes, onSelectEntity, hideExternalLink, sear
         <ExternalLink href={data.url}>Read online</ExternalLink>
       )}
       {editorNotes.length > 0 && (
-        <div className={ed.flexCol8}>
-          <div className={ed.sectionTitle}>Editor Notes</div>
-          {editorNotes.map((n) => (
-            <NoteCard key={n.editor_note_id} note={n} onSelectEntity={onSelectEntity} searchQuery={searchQuery} />
-          ))}
-        </div>
+        <EditorNotesSectionCollapsed notes={editorNotes} onSelectEntity={onSelectEntity} searchQuery={searchQuery} />
       )}
     </div>
   );
@@ -416,7 +465,7 @@ function PlaceTimelineTab({ placeStates, placeId, activeDecade, onSelectEntity, 
                   <span className={ed.tlPred}>{isDominant ? "polity" : "group present"}</span>
                   <EntityHoverWrap kind="group" id={gid}>
                     <button type="button" className={ed.mentionLink} onClick={() => onSelectEntity("group", gid)}>
-                      {kindIcon("group")} {label}
+                      <KindIcon kind="group" size={13} /> {label}
                     </button>
                   </EntityHoverWrap>
                 </div>
@@ -435,7 +484,7 @@ function PlaceTimelineTab({ placeStates, placeId, activeDecade, onSelectEntity, 
                   <span className={ed.tlPred}>{predLabel}</span>
                   <EntityHoverWrap kind={fp.entity_type} id={fp.entity_id}>
                     <button type="button" className={ed.mentionLink} onClick={() => onSelectEntity(fp.entity_type, fp.entity_id)}>
-                      {kindIcon(fp.entity_type)} {entLabel}
+                      <KindIcon kind={fp.entity_type} size={13} /> {entLabel}
                     </button>
                   </EntityHoverWrap>
                   <CertaintyBadge value={fp.stance ?? ""} />
@@ -505,7 +554,7 @@ function EntityTimelineTab({ claims, entityKind, entityId, onSelectEntity, onHov
                   {othId ? (
                     <EntityHoverWrap kind={othKind} id={othId}>
                       <button type="button" className={ed.mentionLink} onClick={() => onSelectEntity(othKind, othId)}>
-                        {kindIcon(othKind)} {othLabel}
+                        <KindIcon kind={othKind} size={13} /> {othLabel}
                       </button>
                     </EntityHoverWrap>
                   ) : <span className={ed.faint}>{othLabel}</span>}
@@ -557,7 +606,7 @@ function RelationTab({ entities, focusKind, focusId, onSelectEntity, onHoverEnti
             onMouseLeave={() => onLeaveEntity?.()}
           >
             <div className={ed.connRow} onClick={() => onSelectEntity(kind, id)}>
-              <span className={ed.connIcon}>{kindIcon(kind)}</span>
+              <span className={ed.connIcon}><KindIcon kind={kind} size={14} /></span>
               <div className={ed.connBody}>
                 <div className={ed.connName}>{label}</div>
                 <div className={ed.connRel}>{predicates.join(" · ")}</div>
@@ -569,7 +618,7 @@ function RelationTab({ entities, focusKind, focusId, onSelectEntity, onHoverEnti
                     onClick={(e) => { e.stopPropagation(); setExpandedId(isOpen ? null : id); }}
                     title={isOpen ? "Hide evidence" : "Show evidence"}
                   >
-                    {isOpen ? "▲" : "▼"}
+                    {isOpen ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
                   </button>
                 )}
               </div>
@@ -599,77 +648,138 @@ function PassagesTab({ passages, onSelectEntity }: {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const { page, setPage, pageItems, total, pageSize } = usePaginatedList(passages, PAGE_SIZE);
   if (passages.length === 0) return <div className={ed.emptyState}>No passages found.</div>;
+
   return (
     <div className={ed.flexCol}>
       {pageItems.map((p) => {
         const source = dataStore.sources.getById(p.source_id);
         const evidence = dataStore.claimEvidence.getAll().filter((ev) => ev.passage_id === p.passage_id);
         const isOpen = expandedId === p.passage_id;
+
         return (
-          <div key={p.passage_id} className={ed.connCard}>
-            <div className={ed.connRow} onClick={() => setExpandedId(isOpen ? null : p.passage_id)}>
-              <span className={ed.connIcon}>📖</span>
-              <div className={ed.connBody}>
-                <div className={ed.connName}>{p.locator}</div>
-                <div className={ed.connRel}>
-                  {source?.title ?? p.source_id}
-                  {p.passage_year ? ` · AD ${p.passage_year}` : ""}
-                  {evidence.length > 0 ? ` · ${evidence.length} claim${evidence.length !== 1 ? "s" : ""}` : ""}
+          <div key={p.passage_id} className={`${ed.connCard} ${ed.passageCard}`}>
+            <div
+              className={`${ed.connRow} ${ed.passageHeader}${isOpen ? ` ${ed.passageHeaderOpen}` : ""}`}
+              onClick={() => setExpandedId(isOpen ? null : p.passage_id)}
+            >
+              <div className={ed.passageMain}>
+                <span className={ed.connIcon}><BookOpen size={14} /></span>
+                <div className={ed.connBody}>
+                  <div className={ed.passageTitle}>
+                    {p.locator}
+                  </div>
+                  <div className={ed.passageMeta}>
+                    <span className={ed.passageMetaSource}>
+                      {source?.title ?? p.source_id}
+                    </span>
+                    {p.passage_year && <span>· AD {p.passage_year}</span>}
+                    {evidence.length > 0 && <span className={ed.passageClaimsCount}>{evidence.length} claim{evidence.length !== 1 ? "s" : ""}</span>}
+                  </div>
                 </div>
               </div>
-              <div className={ed.connBadges}>
-                <button type="button" className={ed.connExpandBtn}
-                  onClick={(e) => { e.stopPropagation(); setExpandedId(isOpen ? null : p.passage_id); }}
-                  title={isOpen ? "Hide detail" : "Show detail"}>
-                  {isOpen ? "▲" : "▼"}
-                </button>
-              </div>
+              <button
+                type="button"
+                className={`${ed.connExpandBtn} ${ed.passageExpandBtn}`}
+                onClick={(e) => { e.stopPropagation(); setExpandedId(isOpen ? null : p.passage_id); }}
+                title={isOpen ? "Hide detail" : "Show detail"}
+              >
+                {isOpen ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+              </button>
             </div>
+
             {isOpen && (
-              <div className={ed.connEvidence}>
-                {p.excerpt && <div className={ed.desc}>"{p.excerpt}"</div>}
-                {p.language && <div className={ed.connRel}>Language: {p.language}</div>}
-                {p.locator_type === "bible_osis" && p.locator && (
-                  <ExternalLink href={`https://www.stepbible.org/?q=reference=${encodeURIComponent(p.locator)}`}>Open Bible verse</ExternalLink>
-                )}
-                {p.url_override && <ExternalLink href={p.url_override}>View passage</ExternalLink>}
-                {source && (
-                  <EntityHoverWrap kind="source" id={source.source_id}>
-                    <button type="button" className={ed.mentionLink} onClick={() => onSelectEntity("source", source.source_id)}>
-                      Open work: {source.title}
-                    </button>
-                  </EntityHoverWrap>
-                )}
+              <div className={ed.passageContent}>
+                {p.excerpt && <blockquote className={ed.passageQuote}>"{p.excerpt}"</blockquote>}
+
+                <div className={ed.passageDetailsRow}>
+                  {p.language && <span><strong>Language:</strong> {p.language}</span>}
+                  {p.locator_type && <span><strong>Type:</strong> {p.locator_type}</span>}
+                </div>
+
+                <div className={ed.passageActions}>
+                  {p.locator_type === "bible_osis" && p.locator && (
+                    <ExternalLink href={`https://www.stepbible.org/?q=reference=${encodeURIComponent(p.locator)}`}>
+                      Open Bible verse
+                    </ExternalLink>
+                  )}
+                  {p.url_override && <ExternalLink href={p.url_override}>View passage</ExternalLink>}
+                  {source && (
+                    <EntityHoverWrap kind="source" id={source.source_id}>
+                      <button
+                        type="button"
+                        className={`${ed.mentionLink} ${ed.passageWorkBtn}`}
+                        onClick={() => onSelectEntity("source", source.source_id)}
+                      >
+                        Open work: {source.title}
+                      </button>
+                    </EntityHoverWrap>
+                  )}
+                </div>
+
                 {evidence.length > 0 && (
                   <>
-                    <div className={ed.sectionTitle}>Linked claims ({evidence.length})</div>
-                    {evidence.map((ev) => {
-                      const claim = dataStore.claims.getById(ev.claim_id);
-                      if (!claim) return null;
-                      const predLabel = getPredicateLabel(claim.predicate_id, true);
-                      const subLabel = getEntityLabel(claim.subject_type, claim.subject_id);
-                      const objLabel = claim.object_mode === "entity" && claim.object_id
-                        ? getEntityLabel(claim.object_type, claim.object_id)
-                        : (claim.value_text || claim.value_year?.toString() || "");
-                      return (
-                        <div key={ev.claim_id} className={ed.connCard}>
-                          <div className={ed.connRow} onClick={() => onSelectEntity("claim", claim.claim_id)}>
-                            <div className={ed.connBody}>
-                              <div className={ed.connName}>{subLabel} {predLabel} {objLabel}</div>
-                              <div className={ed.connRel}>
-                                {ev.evidence_role}
-                                {ev.evidence_weight != null ? ` · wt ${ev.evidence_weight}` : ""}
-                                {ev.support_aspect ? ` · ${ev.support_aspect}` : ""}
+                    <div className={`${ed.sectionTitle} ${ed.linkedClaimsHeader}`}>Linked claims ({evidence.length})</div>
+                    <div className={ed.linkedClaimsList}>
+                      {evidence.map((ev) => {
+                        const claim = dataStore.claims.getById(ev.claim_id);
+                        if (!claim) return null;
+                        const predLabel = getPredicateLabel(claim.predicate_id, true);
+                        const subLabel = getEntityLabel(claim.subject_type, claim.subject_id);
+                        const isObjEntity = claim.object_mode === "entity" && !!claim.object_id;
+                        const objLabel = isObjEntity
+                          ? getEntityLabel(claim.object_type, claim.object_id)
+                          : (claim.value_text || claim.value_year?.toString() || "");
+                        const evPassage = dataStore.passages.getById(ev.passage_id);
+                        const evSource = evPassage ? dataStore.sources.getById(evPassage.source_id) : null;
+                        const evSourceUrl = getSourceExternalUrl(evSource);
+                        
+                        return (
+                          <div key={ev.claim_id} className={ed.linkedClaimCard} onClick={() => onSelectEntity("claim", claim.claim_id)}>
+                            <div className={ed.linkedClaimMain}>
+                              <div className={ed.connBody}>
+                                <div className={ed.linkedClaimSentence}>
+                                  <EntityHoverWrap kind={claim.subject_type} id={claim.subject_id}>
+                                    <button
+                                      type="button"
+                                      className={`${ed.mentionLink} ${ed.linkedClaimEntity}`}
+                                      onClick={(e) => { e.stopPropagation(); onSelectEntity(claim.subject_type, claim.subject_id); }}
+                                    >
+                                      {subLabel}
+                                    </button>
+                                  </EntityHoverWrap>
+                                  <span className={ed.linkedClaimPredicate}> {predLabel} </span>
+                                  {isObjEntity && claim.object_id ? (
+                                    <EntityHoverWrap kind={claim.object_type} id={claim.object_id}>
+                                      <button
+                                        type="button"
+                                        className={`${ed.mentionLink} ${ed.linkedClaimEntity}`}
+                                        onClick={(e) => { e.stopPropagation(); onSelectEntity(claim.object_type, claim.object_id); }}
+                                      >
+                                        {objLabel}
+                                      </button>
+                                    </EntityHoverWrap>
+                                  ) : (
+                                    <span className={ed.linkedClaimObjectText}>{objLabel}</span>
+                                  )}
+                                </div>
+                                <div className={ed.linkedClaimMeta}>
+                                  <span className={ed.linkedClaimRole}>{ev.evidence_role}</span>
+                                  {ev.evidence_weight != null && <span className={ed.weightIcon}><Scale size={11} /> {ev.evidence_weight}</span>}
+                                  {ev.support_aspect && <span>{ev.support_aspect}</span>}
+                                </div>
+                              </div>
+                              <div className={ed.linkedClaimActions}>
+                                <CertaintyBadge value={claim.certainty ?? ""} />
+                                <InfoIcon claimId={claim.claim_id} />
                               </div>
                             </div>
-                            <CertaintyBadge value={claim.certainty ?? ""} />
                           </div>
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
                   </>
                 )}
-                {evidence.length === 0 && <div className={ed.emptyState}>No claims reference this passage.</div>}
+                {evidence.length === 0 && <div className={ed.noLinkedClaims}>No claims reference this passage.</div>}
               </div>
             )}
           </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChevronUp, ChevronDown, TrendingUp, TrendingDown, StickyNote, MapPin } from "lucide-react";
 import s from "./Wiki.module.css";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { useClaimsData, EVIDENCE_ROLES } from "../../hooks/useClaimsData";
@@ -67,11 +68,26 @@ export function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelec
     );
   }
 
+  const [notesOpen, setNotesOpen] = useState(false);
+
   if (claims.length === 0 && editorNotes.length === 0) return <div className={s.emptyState}>No claims for this entity.</div>;
 
   return (
     <div className={s.claimsPanel}>
-      {/* Filters */}
+      {/* Editor notes — collapsible, collapsed by default */}
+      {editorNotes.length > 0 && (
+        <div className={s.predGroup}>
+          <button type="button" className={s.sectionToggleBtn} onClick={() => setNotesOpen((v) => !v)}>
+            <span className={s.predId}><StickyNote size={11} /> {editorNotes.length} Notes</span>
+            {notesOpen ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+          </button>
+          {notesOpen && editorNotes.map((note) => (
+            <NoteCard key={note.editor_note_id} note={note} onSelectEntity={onSelectEntity} yearLabel={note.note_kind} />
+          ))}
+        </div>
+      )}
+
+      {/* Filters — directly above claims count */}
       <div className={s.evRoleFilter}>
         <DropdownSelect
           value={roleFilter ?? "all"}
@@ -97,19 +113,6 @@ export function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelec
         <SearchInput value={predSearch} onChange={setPredSearch} placeholder="Filter predicate…" />
       </div>
 
-      {/* Editor notes in-feed */}
-      {editorNotes.length > 0 && (
-        <div className={s.predGroup}>
-          <div className={s.predGroupHeader}>
-            <span className={s.predId}>editor notes</span>
-            <span className={`${s.predCount} ${s.faint}`}>{editorNotes.length}</span>
-          </div>
-          {editorNotes.map((note) => (
-            <NoteCard key={note.editor_note_id} note={note} onSelectEntity={onSelectEntity} yearLabel={note.note_kind} />
-          ))}
-        </div>
-      )}
-
       <div className={s.auditSummary}>
         <span className={s.auditTotal}>{stats.total} claims</span>
         {stats.noEv > 0 && <span className={`${s.auditChip} ${s.auditChipRed}`}>{stats.noEv} no evidence</span>}
@@ -121,7 +124,7 @@ export function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelec
         return (
           <div key={predicateId} className={s.predGroup}>
             <div className={s.predGroupHeader}>
-              <span className={s.predId}>{`(${predClaims.length}) ${predicateId.replace(/_/g, " ")}`}</span>
+              <span className={s.predId}>{predClaims.length} {predicateId.replace(/_/g, " ")}</span>
             </div>
             {predClaims.map((claim) => (
               <ClaimRow key={claim.claim_id} claim={claim} focusKind={kind} focusId={id}
@@ -141,16 +144,18 @@ export function ClaimsPanel({ kind, id, onSelectEntity, selectedClaimId, onSelec
 // ── Derived Places for Propositions ──────────────────────────────────────────
 
 function PropositionPlaces({ propId, onSelectEntity }: { propId: string; onSelectEntity: (k: string, i: string) => void }) {
+  const [open, setOpen] = useState(false);
   const [expandedPlace, setExpandedPlace] = useState<string | null>(null);
   const presenceRows = dataStore.propositionPlacePresence.getForProposition(propId);
   if (presenceRows.length === 0) return null;
 
   return (
     <div className={s.predGroup}>
-      <div className={s.predGroupHeader}>
-        <span className={s.predId}>Derived Places ({presenceRows.length})</span>
-      </div>
-      {presenceRows.map((pp) => {
+      <button type="button" className={s.sectionToggleBtn} onClick={() => setOpen((v) => !v)}>
+        <span className={s.predId}><MapPin size={11} /> {presenceRows.length} Derived Places</span>
+        {open ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+      </button>
+      {open && presenceRows.map((pp) => {
         const isOpen = expandedPlace === `${pp.place_id}-${pp.year_start}`;
         const yearRange = pp.year_start != null
           ? `AD ${pp.year_start}${pp.year_end != null && pp.year_end !== pp.year_start ? `–${pp.year_end}` : ""}`
@@ -161,7 +166,10 @@ function PropositionPlaces({ propId, onSelectEntity }: { propId: string; onSelec
               <div className={s.claimLeft}>
                 <span className={s.predLabel}>{pp.stance}</span>
                 <EntityLink kind="place" id={pp.place_id} onClick={() => onSelectEntity("place", pp.place_id)} />
-                <span className={s.faint}>{pp.supporting_claim_count}↑ {pp.opposing_claim_count}↓</span>
+                <span className={s.faint}>
+                  <TrendingUp size={11} /> {pp.supporting_claim_count}
+                  {" "}<TrendingDown size={11} /> {pp.opposing_claim_count}
+                </span>
               </div>
               <div className={s.claimRight}>
                 {yearRange && <span className={s.year}>{yearRange}</span>}
@@ -173,7 +181,7 @@ function PropositionPlaces({ propId, onSelectEntity }: { propId: string; onSelec
                 <button type="button" className={s.expandBtn}
                   onClick={(e) => { e.stopPropagation(); setExpandedPlace(isOpen ? null : `${pp.place_id}-${pp.year_start}`); }}
                   title={isOpen ? "Hide derivation" : "Show derivation"}>
-                  {isOpen ? "▲" : "▼"}
+                  {isOpen ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
                 </button>
               </div>
             </div>

@@ -209,11 +209,26 @@
 .evRow {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
-  padding-bottom: var(--space-2);
+  gap: var(--space-2);
+  padding-bottom: var(--space-3);
   border-bottom: 1px solid var(--border-subtle);
 }
 .evRow:last-child { border-bottom: none; }
+.evSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.evSectionTitle {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: var(--space-1);
+}
 .evFields {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -284,6 +299,13 @@
   gap: 3px;
 }
 .entityBtn:hover { text-decoration: underline; }
+.extLink {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: var(--space-1);
+  font-size: var(--font-size-xs);
+}
+.extLink:hover { text-decoration: underline; }
 
 /* ── Right: Review & Derivation ── */
 .right {

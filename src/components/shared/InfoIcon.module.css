@@ -1,0 +1,19 @@
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-faint);
+  font-size: var(--font-size-sm);
+  line-height: 1;
+  transition: color 0.12s ease, background 0.12s ease;
+}
+
+.iconBtn:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}

@@ -9,7 +9,16 @@ export interface EntityListItem {
   countLabel: string;
 }
 
+const _entityListCache = new Map<string, EntityListItem[]>();
+
 export function getAllEntities(kind: string): EntityListItem[] {
+  if (_entityListCache.has(kind)) return _entityListCache.get(kind)!;
+  const result = _computeAllEntities(kind);
+  _entityListCache.set(kind, result);
+  return result;
+}
+
+function _computeAllEntities(kind: string): EntityListItem[] {
   switch (kind) {
     case "person": return dataStore.people.getAll().map((e) => ({
       id: e.person_id, label: e.person_label,

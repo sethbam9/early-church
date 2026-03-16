@@ -32,6 +32,15 @@
 .auditChipOrange { background: rgba(176,126,16,0.12); color: #8a6200; }
 .auditChipGreen { background: rgba(26,122,92,0.1); color: #1a7a5c; }
 
+/* Collapsible section toggle button (notes, derived places) */
+.sectionToggleBtn {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; background: none; border: none; cursor: pointer; font: inherit;
+  padding: 6px 4px 4px; border-bottom: 1px solid var(--border-subtle); margin-bottom: 2px;
+  color: var(--text-primary); transition: color 0.12s;
+}
+.sectionToggleBtn:hover { color: var(--accent-bright); }
+
 /* Predicate groups */
 .predGroup {
   display: flex;
@@ -126,6 +135,9 @@
 .certaintyUnknown { background: rgba(142,128,112,0.12); color: var(--text-faint); }
 
 .reviewBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 0.7rem;
   font-weight: 700;
   cursor: default;

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
+import { X } from "lucide-react";
 import { fetchBiblePassage, osisToStepBibleUrl, locatorToDisplay, type BiblePassageResult } from "../../utils/bibleApi";
 import { ExternalLink } from "./ExternalLink";
 import s from "./BibleOverlay.module.css";
@@ -33,7 +34,7 @@ export function BibleOverlay({ locator, onClose }: BibleOverlayProps) {
       <div className={s.overlay}>
         <div className={s.header}>
           <div className={s.title}>{displayRef}</div>
-          <button type="button" className={s.closeBtn} onClick={onClose}>✕</button>
+          <button type="button" className={s.closeBtn} onClick={onClose}><X size={14} /></button>
         </div>
         <div className={s.body}>
           {loading && <div className={s.emptyState}>Loading passage…</div>}

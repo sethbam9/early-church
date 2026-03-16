@@ -56,7 +56,7 @@ src/
       PanelSection.tsx      PassageReference.tsx   PathPickerInput.tsx
       RelationCard.tsx      SearchInput.tsx        Slider.tsx
       Switch.tsx            Tabs.tsx               Timeline.tsx
-      ToggleGroup.tsx       TooltipOverlay.tsx
+      ToggleGroup.tsx       TooltipOverlay.tsx     InfoIcon.tsx
       entityConstants.ts    – KIND_ICONS, KIND_LABELS, kindIcon(), kindLabel(), presence colors
 
     wiki/                   # Wiki-specific extracted components
@@ -136,6 +136,7 @@ Every reusable visual pattern is a component. If a pattern appears more than onc
 | **Switch** | Binary toggles | `checked`, `onChange`, `label` |
 | **EntityLink** | Internal entity refs | `kind`, `id`. Always wrapped with hover tooltip. Font size `0.82rem`. |
 | **ExternalLink** | URL links | `href`. Auto `↗` suffix. |
+| **InfoIcon** | Claim-to-audit quick action | `claimId`, `title?`. Navigates to `/audit?claimId=...`; stop-propagates row click. |
 | **EntityHoverCard** | Hover tooltip popups | `kind`, `id`. Portal-based smart positioning. `EntityHoverWrap` for wrapper pattern. |
 | **EntityHeader** | Entity summary block | `kind`, `id`, `showAllFields?`, `currentPage?`, `hideExternalLink?`, `onSelectEntity?`. Shows CrossPageNav when `currentPage` set. |
 | **FootprintCard** | Place presence card | `footprint`, `showEntity`, `showPlace`, `onSelectEntity`. Derivation tooltip shows only when `!hasEvidence`. |
@@ -371,3 +372,41 @@ Page components are layout shells. **All** business logic lives in hooks under `
 - [x] MapPage marker colors extracted to named `ACCENT`/`ACCENT_CONNECTED` constants (Leaflet requires hex, not CSS vars)
 - [x] Removed unused imports: `PassageReference`+`useRef` from EntityDetail, `STANCE_LABELS` from MapPage
 - [x] Fixed pre-existing `pathFinder.ts` TS strictness lint errors (possibly-undefined array element guards)
+- [x] Passages tab cleanup — removed static inline styles from `EntityDetail` Passages tab; moved to `EntityDetail.module.css` classes and standardized linked-claim cards with shared `InfoIcon`
+- [x] Passages tab UX polish — linked-claim sentence now emphasizes entities with hoverable entity links, keeps predicate non-bold, and includes per-evidence verse/reference external links
+- [x] Map place-kind markers — city markers remain circle markers; non-city place kinds now render distinct symbols (site/monastery/region/province/route) while preserving selection/connection highlighting
+
+- [x] Emoji purge — all remaining emoji in UI replaced with Lucide icons: `FILTER_OPTIONS` in `useGraphPageState` (👤📜📝⚡🏛✦ removed), `filterBanner` (🗺 → `MapIcon`), dominant-polity chip (⚔ → `Sword`), AuditPage source link (📄 → `FileText`)
+- [x] Hover delay — `EntityHoverWrap` now waits 500ms (`HOVER_DELAY_MS` constant) before showing tooltip; `useCallback`+`clearTimeout` on mouse-leave prevent flicker
+- [x] Chip alignment — `.tag` changed from `display:inline-block` to `display:inline-flex; align-items:center; gap:var(--space-1)` so icon+text chips stay vertically aligned
+- [x] Passage card font — `.passageTitle` reduced from `font-size-md / fw600` to `font-size-sm / fw500` to match other relation-card titles
+- [x] ClaimsPanel collapsible sections — editor notes and derived places both start collapsed; toggle header uses `Title (count)` format with `StickyNote`/`MapPin` icon; `sectionToggleBtn` CSS class added to `Wiki.module.css`
+- [x] EntityDetail sub-tabs with icons — `TAB_ICONS` map added; each sub-tab renders icon + label (counts already in label text); `.detailSubTab` uses `display:inline-flex; align-items:center; gap:var(--space-1)`
+- [x] Essay white background — `WikiPage.module.css .detailBodyStyle` gains `background: var(--bg-surface)` so essay markdown reads on white, not parchment
+- [x] Essay back header alignment — `RightPanel.module.css .backBtn` now uses same style as `EntityDetail.module.css .backBtn` (accent-bright, underline-hover, no border-radius box)
+- [x] Back-bar crumb shows entity name — `EntityDetail` crumb changed from `kindLabel(kind)` to `getEntityLabel(kind, id)`; `.crumb` gains `overflow:hidden; text-overflow:ellipsis; white-space:nowrap`
+- [x] Essay entities hover — wiki essay entities tab items wrapped with `EntityHoverWrap` (both `WikiPage.tsx` and `RightPanel.tsx`)
+- [x] Global search derivative map highlight — `searchHighlightPlaceIds` in `MapPage` includes footprints of all matched non-place entities, not just direct place matches
+- [x] Dark mode toggle — Moon/Sun button in NavBar toggles `data-theme="dark"` on `<html>`; `.themeToggle` CSS class in `NavBar.module.css`; state initializes from current attribute
+- [x] Wiki kind-tab count badges — each vertical kind tab label includes total entity count: `People (42)`, `Works (18)`, etc.; uses cached `getAllEntities(kind).length`
+- [x] Map place kind legend — collapsible `PlaceLegend` component bottom-left of map; shows SVG icon + label for each place kind (City/Site/Monastery/Region/Province/Route)
+- [x] Graph path start/end buttons — replaced `○→Start` / `○→End` text with `→ Start` / `→ End`
+- [x] Wiki entity list hover — `EntityList` items in wiki left panel now wrapped with `EntityHoverWrap` for instant hover cards
+
+- [x] Map icon centralization — `PLACE_KIND_SVG_PATHS` + `buildPlaceKindIconSvg()` + `PLACE_KIND_LABELS` added to `icons.tsx`; `MapPage.tsx` `renderIconSvg()` removed and replaced with `buildPlaceKindIconSvg()`; `PlaceLegend` updated to use `PlaceKindIcon` React components; map markers and right panel now share the exact same Lucide SVG paths (Building2/Mountain/Church/Landmark/MapPinned/Route)
+- [x] Section header format — all ClaimsPanel section headers now use `{count} Title` format: "3 authored by", "5 Notes", "12 Derived Places". Previous `(N) predicate` → `N predicate`, `Notes (N)` → `N Notes`, `Derived Places (N)` → `N Derived Places`.
+- [x] Deprecated emoji APIs removed — `KIND_ICONS` emoji map and `kindIcon()` function removed from `entityConstants.ts`; `DEFAULT_ICON_PROPS` unused import removed
+- [x] Graph left panel icons — `nodeBadge` colored dots replaced with `KindIcon` components colored via `KIND_COLORS`; each type row shows `.nodeKindIcon` (icon) + `.typeLabel` (text) + `.typeCount` (visible node count); search suggestion dots also replaced with `KindIcon`; GraphPage.module.css updated: `.nodeBadge` removed, `.nodeKindIcon` / `.typeLabel` / `.typeCount` added
+- [x] "/" keyboard shortcut — `GlobalSearchOverlay` gains `enableSlashShortcut` prop; when true adds a global `keydown` listener that focuses its input when "/" is pressed outside any text field; only the NavBar instance has this enabled; placeholder updated to "Search all entities… (press / to focus)"
+- [x] Entity kind accent bar — `EntityDetail` panel renders `borderTop: 3px solid KIND_COLORS[kind]` so each entity type has a distinctive color indicator at the top of the panel
+- [x] Copy entity ID button — small `Copy`/`Check` icon button in `EntityDetail` back bar copies `id` to clipboard via `navigator.clipboard.writeText`; shows confirmation checkmark for 1.5 s; `.copyIdBtn` CSS class added to `EntityDetail.module.css`
+- [x] Place kind icon in wiki entity list — when `kind === "place"`, wiki EntityList items show `PlaceKindIcon` sized at 12px before the label (looks up `dataStore.places.getById(e.id)?.place_kind`)
+- [x] Dark mode toggle — Moon/Sun button in NavBar (from previous session, logged here for completeness)
+- [x] docs updated — `docs/features.md`, `docs/user-guide.md`, `.windsurf/workflows/ui-edit.md` all rewritten to reflect current app state, remove all emoji descriptions, document new icon system rules and section header format requirements
+- [x] Passages tab icon — changed from `BookOpen` to `Quote` icon in EntityDetail sub-tabs
+- [x] Sub-tab display — EntityDetail sub-tabs now show only icon + count (no label text); label appears in tooltip on hover
+- [x] Wiki row alignment — PlaceKindIcon in wiki entity list rows now vertically centered via `.entityItemIcon { height: 100%; }` CSS
+- [x] User guide padding — added extra bottom padding to GuidePage content (`padding-bottom: calc(var(--space-6) * 2)`)
+- [x] Global search isolation — NavBar global search now uses URL params for wiki/graph (`/wiki?kind=X&id=Y`) and app store selection only for map; eliminates cross-contamination between pages
+- [x] Graph URL params — GraphPage now handles URL params to select and zoom to nodes from global search navigation
+- [x] Claim row review badge alignment — `.reviewBadge` now uses `display: inline-flex; align-items: center; justify-content: center;` for proper vertical centering of checkmark icons

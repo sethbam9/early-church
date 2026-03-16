@@ -20,9 +20,11 @@ Complete listing of every feature and expected behavior across all pages and sha
 
 ## Global Navigation
 
-- **Top navigation bar** shows the app title ("Early Christianity Atlas · AD 33 – 800") and four page links: 🗺 Map, 🕸️ Graph, 📖 Wiki, 🔍 Audit.
-- Active page link is highlighted.
-- All three pages mount simultaneously; switching pages uses CSS `display` toggling (no remounts, state is preserved).
+- **Top navigation bar** shows the app title ("Early Christianity Atlas · AD 33 – 800") and five page links: Map, Graph, Wiki, Audit, Guide — each with a Lucide icon.
+- Active page link is highlighted with an accent background.
+- **Dark mode toggle** — Moon/Sun button at the far right of the nav bar toggles `data-theme="dark"` on `<html>`. Dark theme tokens are defined in `tokens.css`.
+- **"/" keyboard shortcut** — pressing `/` from any non-input element focuses the nav bar search overlay.
+- Nav bar search placeholder reads "Search all entities… (press / to focus)" as a discoverable hint.
 - **CrossPageNav** buttons appear in entity detail headers, providing one-click navigation to view the same entity on any other page.
 
 ---
@@ -52,15 +54,21 @@ Complete listing of every feature and expected behavior across all pages and sha
 - Results are paginated (20 per page) with Prev/Next controls.
 - Clicking a result selects that entity and opens the right panel.
 - An ✕ button clears the search.
+- **Derivative place highlight** — when a non-place entity is in the search results, all places in its footprint are also highlighted on the map.
 
 ### Map Markers
 
-- **Colored circle markers** — color indicates presence status (attested, probable, claimed, suppressed) or, when a proposition is selected/filtered, the doctrinal stance (affirms=green, opposes=red, mixed=yellow).
-- **Selected place** — dashed amber ring + larger filled marker.
+- **Colored icon markers** — color indicates presence status (attested, probable, claimed, suppressed) or, when a proposition is selected/filtered, the doctrinal stance (affirms=green, opposes=red, mixed=yellow).
+- **Place kind icons** — each marker uses the Lucide-derived SVG icon for its place kind (Building2=city, Mountain=site, Church=monastery, Landmark=region, MapPinned=province, Route=route). Icons are identical to those shown in the right panel — defined once in `icons.tsx → PLACE_KIND_SVG_PATHS`.
+- **Selected place** — dashed amber ring + larger marker.
 - **Connected places** — solid amber ring when a non-place entity is selected, showing all places associated with that entity. Non-connected places are dimmed to 22% opacity.
-- **Ghost marker** — when a selected place falls outside the current decade's visible set, a semi-transparent ghost ring appears at that location with a "(not in this decade)" tooltip.
 - **Tooltip** — hovering a marker shows `Place Name (Modern Name), Country [kind]`.
 - **Click** — selects the place and opens the right panel on the Places tab.
+
+### Place Kind Legend
+
+- Collapsible **Legend** button at the bottom-left of the map shows the place-kind icon and label for each kind (City, Site, Monastery, Region, Province, Route).
+- Uses `PlaceKindIcon` React components — same icons as the map markers.
 
 ### Arcs Overlay
 
@@ -86,8 +94,8 @@ Complete listing of every feature and expected behavior across all pages and sha
 
 ### Panel Visibility
 
-- **◀ Controls** button — shown in the map center when the left panel is hidden; click to restore it.
-- **Panel ▶** button — shown in the map center when the right panel is hidden; click to restore it.
+- **Controls** button — shown in the map center when the left panel is hidden; click to restore it.
+- **Panel** button — shown in the map center when the right panel is hidden; click to restore it.
 - Left panel has an ✕ close button.
 - Right panel has an ✕ close button (via PanelShell).
 
@@ -138,15 +146,17 @@ Complete listing of every feature and expected behavior across all pages and sha
 
 ### Filters (Left Panel)
 
-- **Entity type filter** — multi-select chips for each entity kind. Deselecting all shows all types.
+- **Entity type filter** — multi-select rows for each entity kind. Each row shows the `KindIcon` in the kind's color, the entity type label, and the visible node count for that kind. Deselecting all shows all types.
 - **Min connections slider** — hides nodes with fewer connections than the threshold.
 - **Filter hint** — shows how many nodes are currently visible.
+- Search suggestions also show `KindIcon` colored by kind.
+- "→ Start" / "→ End" quick-assign buttons set the currently selected node as path start or end.
 
 ### Path Finder
 
 - **Start / End pickers** — type-ahead autocomplete inputs (`PathPickerInput`) for selecting source and target entities.
 - **Swap (⇄) button** — swaps start and end.
-- **"Use selected" helpers** — one-click buttons to set the currently selected node as start or end.
+- **"→ Start" / "→ End" helpers** — one-click buttons to set the currently selected node as start or end.
 - **Find Path** button — runs Dijkstra / BFS shortest path.
 - When a path is found: path edges turn green, non-path edges are dimmed, path nodes remain fully visible, and a summary shows hop count and intermediary count.
 - **Clear** button — resets path mode.
@@ -190,7 +200,7 @@ Three-column claim quality workbench for reviewing evidence, derivation chains, 
 
 - **Claim identity card**: rendered sentence, certainty badge, claim_status chip, date span, context place, and monospace claim_id.
 - **Claim structure grid**: full field-by-field display of all claim columns — subject (clickable entity), predicate (with ID), object (clickable entity or scalar), certainty, date range, context place, status, created_by, updated_at.
-- **Evidence section**: lists all `claim_evidence` rows with `EvidenceCard` plus per-row detail grid showing role (color-coded badge: green=supports, red=opposes, gray=other), support_aspect, assertion_mode, evidence_weight, passage excerpt, and notes.
+- **Evidence section**: lists all `claim_evidence` rows with `EvidenceCard` plus per-row detail grid showing role (color-coded badge: green=supports, red=opposes, gray=other), support_aspect, assertion_mode, evidence_weight, passage excerpt, and notes. Source link uses `FileText` icon (not emoji).
 - **Entity navigation**: clicking any entity reference in the claim structure navigates to the Wiki page and opens that entity.
 - Empty state: "No evidence linked to this claim."
 
@@ -204,19 +214,14 @@ Three-column claim quality workbench for reviewing evidence, derivation chains, 
 
 ## Wiki Page
 
-### Proposition Derived Places
-
-- When viewing a proposition in Claims mode, a **Derived Places** section appears above the claim list.
-- Each row shows: place (clickable EntityLink), stance, supporting/opposing counts, year range, and derivation count.
-- Expanding a row reveals the `DerivationChain` components showing how the proposition’s presence at that place was derived.
-- Uses the same `claimRow` CSS styling as regular claim rows for visual consistency.
-
 ### Browse Mode
 
 - **Mode toggle** (Browse / Audit) in the left panel header.
-- **Vertical tab strip** — entity kinds listed with icon + label (People, Places, Groups, Works, Events, Propositions, Topics, Sources, Editor Notes, Essays). Active kind is highlighted with accent border-left.
+- **Vertical tab strip** — entity kinds listed with Lucide icon + label + total count badge (e.g., "People (42)"). Active kind is highlighted with accent border-left.
 - **Filter search** — a `SearchInput` below the tabs filters the entity list by label or ID.
 - **Entity list** — sorted by linkage count descending (most-connected entities first), paginated at 40 per page. Matching text is highlighted.
+- **Place kind icon** — when browsing Places, each list item shows the `PlaceKindIcon` for its specific kind (city, site, monastery, etc.).
+- **Hover tooltips** — all entity list items are wrapped with `EntityHoverWrap` for instant hover cards on every entity.
 - **Clicking an entity** pushes it into the selection history and opens it in the center pane.
 - **← Back** button — navigates through the selection history.
 - **✕ Exit** button — always visible in the entity detail top bar; returns to the list view.
@@ -224,7 +229,7 @@ Three-column claim quality workbench for reviewing evidence, derivation chains, 
 ### Center Pane — Topbar
 
 - Shows **← Back** (when history exists), **CrossPageNav** links (map/graph), and the **Relations / Claims toggle**.
-- For essay selections: shows **🗺️ Open in map** button instead of CrossPageNav.
+- For essay selections: shows **Open in map** button instead of CrossPageNav.
 
 ### Center Pane — Relations View
 
@@ -232,26 +237,36 @@ Three-column claim quality workbench for reviewing evidence, derivation chains, 
 
 ### Center Pane — Claims View (`ClaimsPanel`)
 
-- Lists all claims for the selected entity grouped or sorted.
+- Lists all claims for the selected entity grouped by predicate.
+- **Section headers** use `{count} predicate_name` format (e.g., "3 authored by").
 - **Evidence role filter** — dropdown: all / supports / opposes / contextualizes / mentions.
 - **Certainty filter** — dropdown: all / attested / probable / possible / uncertain.
 - **Review status filter** — dropdown: all / approved / pending / disputed.
-- Expanding a claim row shows full **EvidenceCard** details (passage ref, excerpt, role, weight, notes, source link).
-- Clicking a claim opens the **ClaimDetailPanel** (full evidence + review info).
+- **Audit summary row** — shows total claim count and colored chips for no-evidence, unreviewed, disputed, and approved counts.
+- **Editor notes section** — collapsible (collapsed by default), header: "{N} Notes" with StickyNote icon.
+- **Derived Places section** (propositions only) — collapsible (collapsed by default), header: "{N} Derived Places" with MapPin icon.
+- Expanding a claim row shows full **EvidenceCard** details.
+- Clicking a claim opens the **ClaimDetailPanel**.
+
+### Proposition Derived Places
+
+- When viewing a proposition in Claims mode, a collapsible **Derived Places** section appears.
+- Each row shows: place (clickable EntityLink), stance, supporting/opposing counts, year range, and derivation count badge.
+- Expanding a row reveals `DerivationChain` components.
 
 ### Audit Mode
 
 - **Claim Audit** view — shows all claims across all entities.
 - **Color key**: red dot = no evidence or disputed, orange = unreviewed, green = approved.
-- **Filters**: status chip (all/no-evidence/unreviewed/approved/disputed), entity type dropdown, certainty dropdown, predicate search input — all in a single filter row.
+- **Filters**: status chip, entity type dropdown, certainty dropdown, predicate search input — all in a single filter row.
 - **Sortable columns** — click column headers to sort asc/desc/default.
 - Clicking a row opens the **ClaimDetailPanel**.
 
 ### Essay View (Wiki)
 
 - Essays shown in a two-tab view: **Content** and **Entities**.
-- Content tab renders the essay Markdown with `[[kind:id|label]]` wiki links as interactive entity buttons with hover tooltips.
-- Entities tab lists all referenced entities grouped by kind.
+- Content tab renders the essay Markdown with `[[kind:id|label]]` wiki links as interactive entity buttons with hover tooltips. Background uses `var(--bg-surface)` for a clean reading surface.
+- Entities tab lists all referenced entities grouped by kind. Each item has `EntityHoverWrap` for hover previews.
 - Scroll position is saved per essay and restored on re-open.
 - **"Open in map"** button navigates to the Map page and opens the essay in the right panel.
 
@@ -265,10 +280,15 @@ Three-column claim quality workbench for reviewing evidence, derivation chains, 
 
 Used in the Map right panel, Graph right panel, and Wiki center pane.
 
+### Kind Accent Bar
+
+- A **3px colored border-top** matching `KIND_COLORS[kind]` is rendered at the top of the panel, providing instant visual kind identification (amber=person, blue=work, purple=proposition, etc.).
+
 ### Back Bar
 
 - **← Back** — shown only when selection history exists.
-- **Entity kind** breadcrumb label.
+- **Entity name** breadcrumb — shows the current entity's label (truncated with ellipsis if too long).
+- **Copy ID button** — small clipboard icon; clicking it copies the entity's ID to the clipboard (shows a checkmark for 1.5 seconds to confirm).
 - **✕ Exit** — always shown; closes the panel or returns to the list.
 
 ### Header (EntityHeader)
@@ -279,13 +299,14 @@ Used in the Map right panel, Graph right panel, and Wiki center pane.
 
 ### Map Filter Banner
 
-- For entities of kind person, group, proposition, event, or work: a banner with a **"Filter map to this [kind]"** toggle button.
+- For entities of kind person, group, proposition, event, or work: a banner with a map icon and a **"Filter map to this [kind]"** toggle button.
 - When active ("On"), the map dims all unconnected places and highlights connected ones.
 
 ### Sub-Tabs
 
 - Only tabs with at least one item are shown.
-- Available tabs: **Info**, **Timeline**, **People**, **Groups**, **Works**, **Events**, **Beliefs** (propositions), **Topics**, **Places**, **Notes**, **Mentions**.
+- Each tab shows its **Lucide icon** + label + count in parentheses (e.g., "⏱ Timeline (12)").
+- Available tabs: **Info**, **Timeline**, **Passages**, **People**, **Groups**, **Works**, **Events**, **Beliefs** (propositions), **Topics**, **Places**, **Notes**, **Mentions**.
 
 ### Info Tab
 
@@ -296,28 +317,26 @@ Used in the Map right panel, Graph right panel, and Wiki center pane.
 
 ### Timeline Tab
 
-- **Places** (kind=place): decade-grouped rows showing all entities present at the place, their predicate, certainty badge, and year range. Grouped by the `PlaceStateByDecade` data.
+- **Places** (kind=place): decade-grouped rows showing all entities present at the place, their predicate, certainty badge, and year range.
 - **All other entities**: decade-grouped rows of dated claims. Shows year badge, predicate label, linked entity (with hover tooltip), and certainty badge.
 - **Timeline component** auto-scrolls to the active decade.
 
 ### Relation Tabs (People / Groups / Works / Events / Beliefs / Topics)
 
 - Lists each connected entity with: kind icon, name, predicate label(s), certainty badge.
-- Hovering a row highlights the corresponding node on the Graph page (via `onHoverEntity` callback).
+- Hovering a row highlights the corresponding node on the Graph page.
 - Expanding a row reveals **EvidenceCard** entries for all supporting passages.
-- EvidenceCard shows: role badge, passage reference (book/chapter/verse), excerpt, evidence weight, notes, "open in source" external link.
-- "Open work" link in EvidenceCard is hidden when the focus entity is already a work.
 - Paginated at PAGE_SIZE per page.
 
 ### Places Tab (Footprints)
 
 - **FootprintCard** for each place where the entity has a presence footprint.
 - Shows place name, predicate (reason for presence), year range, certainty.
-- When no direct evidence exists, a derivation tooltip explains the inference chain (e.g., "bishop_of → place").
+- When no direct evidence exists, a derivation tooltip explains the inference chain.
 
 ### Notes Tab
 
-- Editor notes (`NoteCard`) attached directly to the entity, with Markdown rendered content and year label.
+- Editor notes (`NoteCard`) attached directly to the entity.
 
 ### Mentions Tab
 
@@ -325,8 +344,8 @@ Used in the Map right panel, Graph right panel, and Wiki center pane.
 
 ### Place-Specific Extras
 
-- **Presence status chips** — colored chips for dominant polity and presence status at the current decade.
-- **Timeline** shows per-decade footprint data (entities present at the place, their predicate, year range).
+- **Presence status chips** — colored chips for dominant polity (Sword icon) and presence status at the current decade.
+- **Timeline** shows per-decade footprint data.
 
 ### Certainty Badges
 
@@ -383,8 +402,9 @@ Five curated editorial essays are bundled with the app:
 
 ## Global Search Overlay
 
-- **Accessible from**: Wiki left panel, Map left panel, Graph left panel.
-- Keyboard navigation: **↑/↓ arrow keys** cycle through results; **Enter** selects.
+- **Accessible from**: NavBar (all pages), Wiki left panel, Graph left panel.
+- **"/" keyboard shortcut** — pressing `/` from any non-input element focuses the NavBar search overlay globally (via `enableSlashShortcut` prop).
+- Keyboard navigation: **↑/↓ arrow keys** cycle through results; **Enter** selects; **Escape** closes.
 - Searches across: people, places, groups, works, events, propositions, sources.
 - Results capped at 40, returned from `globalSearch()` utility.
 - Selecting a result pushes it into the page's selection state and opens entity detail.

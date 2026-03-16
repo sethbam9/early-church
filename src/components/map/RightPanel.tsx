@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";
+import type { ReactNode } from "react";
 import type { PlaceKind } from "../../data/dataStore";
 import s from "./RightPanel.module.css";
 import { useAppStore } from "../../stores/appStore";
@@ -10,7 +11,9 @@ import { SearchInput } from "../shared/SearchInput";
 import { Tabs } from "../shared/Tabs";
 import { ESSAYS, type Essay } from "../../data/essays";
 import { extractEssayEntities, groupByKind } from "../../utils/extractEssayEntities";
-import { kindIcon, kindLabel } from "../shared/entityConstants";
+import { KindIcon, kindLabel } from "../shared/entityConstants";
+import { EntityHoverWrap } from "../shared/EntityHoverCard";
+import { ChevronLeft } from "lucide-react";
 
 // ── Extracted modules ────────────────────────────────────────────────────────
 import { PanelShell } from "../panel/PanelShell";
@@ -22,14 +25,14 @@ import {
 
 // ─── Tab definitions ──────────────────────────────────────────────────────────
 
-const TABS: { id: PanelTab; icon: string; label: string }[] = [
-  { id: "places",       icon: "🏛",  label: "Places" },
-  { id: "groups",       icon: "✦",  label: "Groups" },
-  { id: "people",       icon: "👤", label: "People" },
-  { id: "propositions", icon: "📝", label: "Propositions" },
-  { id: "events",       icon: "⚡",  label: "Events" },
-  { id: "works",        icon: "📜", label: "Works" },
-  { id: "essays",       icon: "✍",  label: "Essays" },
+const TABS: { id: PanelTab; icon: ReactNode; label: string }[] = [
+  { id: "places",       icon: <KindIcon kind="place"       size={13} />, label: "Places" },
+  { id: "groups",       icon: <KindIcon kind="group"       size={13} />, label: "Groups" },
+  { id: "people",       icon: <KindIcon kind="person"      size={13} />, label: "People" },
+  { id: "propositions", icon: <KindIcon kind="proposition" size={13} />, label: "Propositions" },
+  { id: "events",       icon: <KindIcon kind="event"       size={13} />, label: "Events" },
+  { id: "works",        icon: <KindIcon kind="work"        size={13} />, label: "Works" },
+  { id: "essays",       icon: <KindIcon kind="essay" size={13} />,         label: "Essays" },
 ];
 
 // ─── RightPanel ──────────────────────────────────────────────────────────────
@@ -227,7 +230,7 @@ function NoteDetail({ noteId, onBack, onSelectEntity }: {
   const note = dataStore.editorNotes.getById(noteId);
   if (!note) return (
     <div className={s.panel}>
-      <div className={s.backBar}><button type="button" className={s.backBtn} onClick={onBack}>← Back</button></div>
+      <div className={s.backBar}><button type="button" className={s.backBtn} onClick={onBack}><ChevronLeft size={13} /> Back</button></div>
       <div className={s.emptyState}>Note not found.</div>
     </div>
   );
@@ -239,11 +242,11 @@ function NoteDetail({ noteId, onBack, onSelectEntity }: {
   return (
     <div className={s.panel}>
       <div className={s.backBar}>
-        <button type="button" className={s.backBtn} onClick={onBack}>← Back</button>
+        <button type="button" className={s.backBtn} onClick={onBack}><ChevronLeft size={13} /> Back</button>
         <span className={s.crumb}>Note</span>
       </div>
       <div className={s.header}>
-        <div className={s.kindBadge}>📋 Editor Note</div>
+        <div className={s.kindBadge}><KindIcon kind="editor_note" size={12} /> Editor Note</div>
         <div className={s.subtitle}>{note.note_kind}</div>
       </div>
       <div className={`${s.body} ${s.bodyGap12}`}>
@@ -302,11 +305,11 @@ function EssayView({ essay, onBack, onSelectEntity }: {
   return (
     <div className={s.panel}>
       <div className={s.backBar}>
-        <button type="button" className={s.backBtn} onClick={onBack}>← Back</button>
+        <button type="button" className={s.backBtn} onClick={onBack}><ChevronLeft size={13} /> Back</button>
         <span className={s.crumb}>Essays</span>
       </div>
       <div className={s.header}>
-        <div className={s.kindBadge}>✍ Essay</div>
+        <div className={s.kindBadge}><KindIcon kind="essay" size={12} /> Essay</div>
         <div className={s.title}>{essay.title}</div>
       </div>
       <div className={s.essayTabBar}>
@@ -330,11 +333,13 @@ function EssayView({ essay, onBack, onSelectEntity }: {
             <div key={kind}>
               <div className={s.entityGroupLabel}>{kindLabel(kind)} ({refs.length})</div>
               {refs.map((r) => (
-                <button key={`${r.kind}:${r.id}`} type="button" className={s.entityItem}
-                  onClick={() => onSelectEntity(r.kind, r.id)}>
-                  <span className={s.entityItemIcon}>{kindIcon(r.kind)}</span>
-                  <span className={s.entityItemLabel}>{r.label}</span>
-                </button>
+                <EntityHoverWrap key={`${r.kind}:${r.id}`} kind={r.kind} id={r.id}>
+                  <button type="button" className={s.entityItem}
+                    onClick={() => onSelectEntity(r.kind, r.id)}>
+                    <span className={s.entityItemIcon}><KindIcon kind={r.kind} size={14} /></span>
+                    <span className={s.entityItemLabel}>{r.label}</span>
+                  </button>
+                </EntityHoverWrap>
               ))}
             </div>
           ))}

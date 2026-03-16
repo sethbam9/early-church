@@ -1,9 +1,10 @@
+import type { ReactNode } from 'react';
 import s from './Tabs.module.css';
 
 interface Tab {
   id: string;
   label: string;
-  icon?: string;
+  icon?: ReactNode;
 }
 
 interface TabsProps {

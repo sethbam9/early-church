@@ -66,6 +66,13 @@
 }
 .entityItem:hover { background: var(--surface-2); color: var(--text); border-left-color: var(--accent-bright); }
 .entityItemActive { background: var(--accent-dim); color: var(--accent-bright); font-weight: 600; }
+.entityItemIcon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 .entityItemLabel { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .entityItemCount {
   flex-shrink: 0;
@@ -172,8 +179,21 @@
   background: none; border: none; cursor: pointer; font-size: 0.8rem;
   padding: 3px 8px; border-radius: var(--radius-sm);
   color: var(--text-muted); transition: background 0.12s;
-  font-family: inherit;
+  font-family: inherit; display: inline-flex; align-items: center; gap: var(--space-1);
 }
+.noteEntityRef {
+  font-size: var(--font-size-xs); color: var(--text-muted);
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex; align-items: center; gap: var(--space-1);
+}
+.noteEntityBtn {
+  background: none; border: none; font: inherit; font-size: var(--font-size-xs);
+  color: var(--accent-bright); cursor: pointer; padding: 0;
+  border-bottom: 1px dashed var(--border-default);
+  transition: background 0.12s;
+}
+.noteEntityBtn:hover { background: var(--accent-dim); }
 .essayNavBtn:hover { background: var(--surface-2); color: var(--text); }
 
 /* Essay Content / Entities tab bar */
@@ -202,7 +222,7 @@
 
 /* Claims header wrap */
 .claimsHeaderWrap { padding: 8px 12px 4px; border-bottom: 1px solid var(--border-subtle); flex-shrink: 0; }
-.detailBodyStyle { padding: 12px 12px; overflow-y: auto; flex: 1; min-height: 0; }
+.detailBodyStyle { padding: 12px 12px; overflow-y: auto; flex: 1; min-height: 0; background: var(--bg-surface); }
 
 /* Utility */
 .faint { color: var(--text-faint); }

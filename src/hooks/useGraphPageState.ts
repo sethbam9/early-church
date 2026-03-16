@@ -71,12 +71,12 @@ function buildGraph(filters: string[]) {
 // === Filter options ===
 
 export const FILTER_OPTIONS = [
-  { value: "person",      label: "👤 People" },
-  { value: "work",        label: "📜 Works" },
-  { value: "proposition", label: "📝 Propositions" },
-  { value: "event",       label: "⚡ Events" },
-  { value: "place",       label: "🏛 Places" },
-  { value: "group",       label: "✦ Groups" },
+  { value: "person",      label: "People" },
+  { value: "work",        label: "Works" },
+  { value: "proposition", label: "Propositions" },
+  { value: "event",       label: "Events" },
+  { value: "place",       label: "Places" },
+  { value: "group",       label: "Groups" },
 ];
 
 // === Hook ===
@@ -88,6 +88,7 @@ export function useGraphPageState(svgRef: React.RefObject<SVGSVGElement | null>)
   const svgSizeRef = useRef({ width: 800, height: 600 });
   const panRef = useRef({ lastX: 0, lastY: 0, active: false, didDrag: false });
   const zoomRef = useRef(1.0);
+  const lastHandledParam = useRef("");
 
   const [filters, setFilters] = useState<string[]>(["all"]);
   const [minConnections, setMinConnections] = useState(1);
@@ -164,6 +165,23 @@ export function useGraphPageState(svgRef: React.RefObject<SVGSVGElement | null>)
     setPan({ x: width / 2 - cx * newZoom, y: height / 2 - cy * newZoom });
   }, [svgRef]);
 
+  // Handle URL params for global search navigation
+  useEffect(() => {
+    const kind = searchParams.get("kind");
+    const id = searchParams.get("id");
+    if (!kind || !id) return;
+    const paramKey = `${kind}:${id}`;
+    if (paramKey === lastHandledParam.current) return;
+    lastHandledParam.current = paramKey;
+    const nodeKey = `${kind}:${id}`;
+    const node = nodesRef.current.find((n) => n.id === nodeKey);
+    if (node) {
+      setSelectedKey(nodeKey);
+      setSelectionHistory([]);
+      zoomToNodeConnections(nodeKey);
+    }
+  }, [searchParams, zoomToNodeConnections]);
+
   // Build graph on filter change
   useEffect(() => {
     const { nodes, edges } = buildGraph(filters);
@@ -211,8 +229,7 @@ export function useGraphPageState(svgRef: React.RefObject<SVGSVGElement | null>)
     forceRender((n) => n + 1);
   }, [filters, svgRef]);
 
-  // Handle deep-link from URL params
-  const lastHandledParam = useRef("");
+  // Handle deep-link from URL params (legacy - kept for backward compatibility)
   useEffect(() => {
     const kind = searchParams.get("kind");
     const id = searchParams.get("id");

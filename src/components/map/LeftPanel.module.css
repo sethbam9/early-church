@@ -17,7 +17,7 @@
 /* Timeline */
 .timelineSection { padding: var(--space-2) var(--space-3); }
 .controls { display: flex; align-items: center; gap: var(--space-1); margin-top: var(--space-1); }
-.ctrlBtn { background: var(--bg-surface-2); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 3px var(--space-2); font-size: var(--font-size-xs); color: var(--text-secondary); cursor: pointer; font-family: inherit; }
+.ctrlBtn { background: var(--bg-surface-2); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 3px var(--space-2); font-size: var(--font-size-xs); color: var(--text-secondary); cursor: pointer; font-family: inherit; display: inline-flex; align-items: center; gap: var(--space-1); }
 .ctrlBtn:hover { background: var(--bg-surface-3); }
 .cumulWrap { margin-top: 7px; }
 .cumulLabel { font-size: var(--font-size-xs); display: flex; align-items: center; gap: var(--space-1); color: var(--text-secondary); cursor: pointer; }
@@ -42,7 +42,10 @@
 .contextBanner { padding: var(--space-2) var(--space-3); background: var(--accent-dim); border-bottom: 1px solid var(--border-subtle); flex-shrink: 0; }
 .contextLabel { display: flex; align-items: center; justify-content: space-between; }
 .contextName { font-size: var(--font-size-sm); font-weight: 600; color: var(--accent); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.contextStats { font-size: var(--font-size-xs); color: var(--text-muted); margin-top: 2px; }
+.contextStats { font-size: var(--font-size-xs); color: var(--text-muted); margin-top: 2px; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.statAffirm { color: var(--color-success); }
+.statOppose { color: var(--color-danger); }
+.statMixed  { color: var(--color-warning); }
 .closeBtn {
   background: none; border: 1px solid var(--border-default); border-radius: var(--radius-sm);
   width: 22px; height: 22px; display: flex; align-items: center; justify-content: center;

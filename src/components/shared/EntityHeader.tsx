@@ -1,6 +1,6 @@
 import React from "react";
 import { dataStore } from "../../data/dataStore";
-import { kindIcon, kindLabel } from "./entityConstants";
+import { KindIcon, kindLabel } from "./entityConstants";
 import { MarkdownRenderer } from "./MarkdownRenderer";
 import { CrossPageNav } from "./CrossPageNav";
 import { ExternalLink } from "./ExternalLink";
@@ -196,7 +196,7 @@ export function EntityHeader({ kind, id, showAllFields = false, onSelectEntity, 
   return (
     <div className={s.block}>
       <div className={s.topRow}>
-        <div className={s.kindBadge}>{kindIcon(kind)} {kindLabel(kind)}</div>
+        <div className={s.kindBadge}><KindIcon kind={kind} size={14} /> {kindLabel(kind)}</div>
         {currentPage && <CrossPageNav kind={kind} id={id} current={currentPage} />}
       </div>
       <div className={s.title}>{data.title}</div>

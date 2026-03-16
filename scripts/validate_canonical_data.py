@@ -1468,6 +1468,14 @@ class Validator:
                     f"claim={row['claim_id']} passage={row['passage_id']}. "
                     f"Use evidence_role=contextualizes for background passages."
                 )
+            weight_str = norm(row.get("evidence_weight"))
+            if weight_str:
+                try:
+                    weight_val = float(weight_str)
+                    if weight_val < 0.0 or weight_val > 1.0:
+                        self.error(f"claim_evidence.tsv:{idx} evidence_weight={weight_str} out of range 0.0–1.0")
+                except ValueError:
+                    self.error(f"claim_evidence.tsv:{idx} evidence_weight={weight_str} is not a valid number")
             key = (row["claim_id"], row["passage_id"], row["evidence_role"])
             if key in seen_evidence:
                 self.error(f"claim_evidence.tsv:{idx} duplicate composite key {key}")
@@ -1576,6 +1584,16 @@ class Validator:
         self.compare_rows("proposition_place_presence.tsv", proposition_presence)
         self.compare_rows("entity_place_footprints.tsv", self.derive_expected_entity_place_footprints(edges, proposition_presence))
         self.compare_rows("place_state_by_decade.tsv", self.derive_expected_place_state_by_decade())
+
+        for idx, row in enumerate(self.tables.get("derived_edges.tsv", []), start=2):
+            if row["from_type"] not in ENTITY_TYPES:
+                self.error(f"derived_edges.tsv:{idx} invalid from_type={row['from_type']}")
+            elif not self.subject_fk_exists(row["from_type"], row["from_id"]):
+                self.error(f"derived_edges.tsv:{idx} broken from ref {row['from_type']}:{row['from_id']}")
+            if row["to_type"] not in ENTITY_TYPES:
+                self.error(f"derived_edges.tsv:{idx} invalid to_type={row['to_type']}")
+            elif not self.subject_fk_exists(row["to_type"], row["to_id"]):
+                self.error(f"derived_edges.tsv:{idx} broken to ref {row['to_type']}:{row['to_id']}")
 
         for idx, row in enumerate(self.tables.get("note_mentions.tsv", []), start=2):
             if row["mention_source_type"] not in MENTION_SOURCE_TYPES:

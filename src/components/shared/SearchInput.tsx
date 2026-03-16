@@ -1,3 +1,4 @@
+import { Search, X } from 'lucide-react';
 import s from './SearchInput.module.css';
 
 interface SearchInputProps {
@@ -11,7 +12,7 @@ interface SearchInputProps {
 export function SearchInput({ value, onChange, onClear, placeholder = 'Search…', className }: SearchInputProps) {
   return (
     <div className={`${s.wrap} ${className ?? ''}`}>
-      <span className={s.icon}>🔍</span>
+      <Search size={14} className={s.icon} />
       <input
         type="text"
         className={s.input}
@@ -20,7 +21,9 @@ export function SearchInput({ value, onChange, onClear, placeholder = 'Search…
         onChange={(e) => onChange(e.target.value)}
       />
       {value && (
-        <button type="button" className={s.clear} onClick={() => { onChange(''); onClear?.(); }}>✕</button>
+        <button type="button" className={s.clear} onClick={() => { onChange(''); onClear?.(); }}>
+          <X size={12} />
+        </button>
       )}
     </div>
   );

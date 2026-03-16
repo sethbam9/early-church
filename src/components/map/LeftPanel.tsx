@@ -3,11 +3,12 @@ import { useAppStore } from "../../stores/appStore";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import type { PresenceStatus, PlaceKind } from "../../data/dataStore";
 import type { Stance } from "../../data/types";
-import { PRESENCE_LABELS, PRESENCE_COLORS, STANCE_COLORS, STANCE_LABELS, KIND_ICONS } from "../shared/entityConstants";
+import { PRESENCE_LABELS, PRESENCE_COLORS, STANCE_COLORS, STANCE_LABELS, KindIcon } from "../shared/entityConstants";
 import { Chip } from "../shared/Chip";
 import { Slider } from "../shared/Slider";
 import { DropdownSelect } from "../shared/Dropdown";
 import { GlobalSearchOverlay } from "../shared/GlobalSearchOverlay";
+import { Landmark, Play, Pause, SkipBack, SkipForward, X, Check } from "lucide-react";
 import lp from "./LeftPanel.module.css";
 
 
@@ -63,26 +64,29 @@ function EntityContextBanner() {
   if (!activeKind || !activeId || !stats) return null;
 
   const label = getEntityLabel(activeKind, activeId);
-  const icon = KIND_ICONS[activeKind] ?? "•";
   const isProp = activeKind === "proposition" && "affirm" in stats;
 
   return (
     <div className={lp.contextBanner}>
       <div className={lp.contextLabel}>
-        <span className={lp.contextName} title={label}>{icon} {label}</span>
-        <button type="button" className={lp.closeBtn} onClick={() => setSelection(null)} title="Dismiss">✕</button>
+        <span className={lp.contextName} title={label}>
+          <KindIcon kind={activeKind} size={13} /> {label}
+        </span>
+        <button type="button" className={lp.closeBtn} onClick={() => setSelection(null)} title="Dismiss">
+          <X size={12} />
+        </button>
       </div>
       {isProp && (
         <div className={lp.contextStats}>
-          <span style={{ color: "var(--color-success)" }}>✓ {(stats as any).affirm} affirm</span>
+          <span className={lp.statAffirm}><Check size={11} /> {(stats as any).affirm} affirm</span>
           {" · "}
-          <span style={{ color: "var(--color-danger)" }}>✗ {(stats as any).oppose} condemn</span>
+          <span className={lp.statOppose}><X size={11} /> {(stats as any).oppose} condemn</span>
           {" · "}
-          <span style={{ color: "var(--color-warning)" }}>~ {(stats as any).mixed} mixed</span>
+          <span className={lp.statMixed}>~ {(stats as any).mixed} mixed</span>
         </div>
       )}
       <div className={lp.contextStats}>
-        🏛 {stats.places} place{stats.places === 1 ? "" : "s"}
+        <Landmark size={12} /> {stats.places} place{stats.places === 1 ? "" : "s"}
       </div>
     </div>
   );
@@ -109,7 +113,7 @@ export function LeftPanel({
   const isPlaying         = useAppStore((s) => s.isPlaying);
   const playbackSpeed     = useAppStore((s) => s.playbackSpeed);
   const includeCumulative = useAppStore((s) => s.includeCumulative);
-  const searchQuery       = useAppStore((s) => s.searchQuery);
+
   const showArcs          = useAppStore((s) => s.showArcs);
   const selection         = useAppStore((s) => s.selection);
   const activeFilters     = useAppStore((s) => s.activePresenceFilters);
@@ -125,7 +129,7 @@ export function LeftPanel({
   const setIsPlaying         = useAppStore((s) => s.setIsPlaying);
   const setPlaybackSpeed     = useAppStore((s) => s.setPlaybackSpeed);
   const setIncludeCumulative = useAppStore((s) => s.setIncludeCumulative);
-  const setSearchQuery       = useAppStore((s) => s.setSearchQuery);
+
   const toggleShowArcs       = useAppStore((s) => s.toggleShowArcs);
   const toggleFilter         = useAppStore((s) => s.togglePresenceFilter);
   const setAllFilters        = useAppStore((s) => s.setAllPresenceFilters);
@@ -182,13 +186,13 @@ export function LeftPanel({
           onClick={toggleLeftPanel}
           title="Hide controls"
         >
-          ✕
+          <X size={14} />
         </button>
       </div>
 
       {/* Global entity search */}
       <div className={lp.searchWrap}>
-        <GlobalSearchOverlay onSelect={handleGlobalSelect} onQueryChange={setSearchQuery} placeholder="Search entities…" />
+        <GlobalSearchOverlay onSelect={handleGlobalSelect} placeholder="Search entities…" />
       </div>
 
       {/* Scrollable body */}
@@ -209,7 +213,7 @@ export function LeftPanel({
           />
           <div className={lp.controls}>
             <button type="button" className={lp.ctrlBtn} title="Previous decade"
-              onClick={() => handlePlayStep(-1)}>◀</button>
+              onClick={() => handlePlayStep(-1)}><SkipBack size={13} /></button>
 
             <button
               type="button"
@@ -217,11 +221,11 @@ export function LeftPanel({
               onClick={togglePlayback}
               title={isPlaying ? "Pause" : "Play"}
             >
-              {isPlaying ? "⏸ Pause" : "▶ Play"}
+              {isPlaying ? <><Pause size={13} /> Pause</> : <><Play size={13} /> Play</>}
             </button>
 
             <button type="button" className={lp.ctrlBtn} title="Next decade"
-              onClick={() => handlePlayStep(1)}>▶▶</button>
+              onClick={() => handlePlayStep(1)}><SkipForward size={13} /></button>
 
             <DropdownSelect
               value={String(playbackSpeed)}

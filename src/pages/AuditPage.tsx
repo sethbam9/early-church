@@ -1,14 +1,16 @@
-import { useState, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useMemo, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { dataStore, getEntityLabel } from "../data/dataStore";
 import type { Claim, ClaimEvidence } from "../data/types";
 import { getPredicateLabel } from "../domain/relationLabels";
 import { CertaintyBadge } from "../components/shared/CertaintyBadge";
 import { DerivationChain } from "../components/shared/DerivationChain";
+import { PassageReference } from "../components/shared/PassageReference";
 import { SearchInput } from "../components/shared/SearchInput";
 import { EntityHoverWrap } from "../components/shared/EntityHoverCard";
-import { kindIcon } from "../components/shared/entityConstants";
+import { KindIcon } from "../components/shared/entityConstants";
 import { formatYearRange } from "../utils/formatYear";
+import { BookOpen, FileText } from "lucide-react";
 import s from "./AuditPage.module.css";
 
 type QueueFilter = "all" | "flagged" | "no_evidence" | "no_supports" | "unreviewed" | "approved" | "disputed";
@@ -82,7 +84,7 @@ function EntityRef({ type, id, onSelect }: { type: string; id: string; onSelect:
   return (
     <EntityHoverWrap kind={type} id={id}>
       <button type="button" className={s.entityBtn} onClick={() => onSelect(type, id)}>
-        {kindIcon(type)} {label}
+        <KindIcon kind={type} size={14} /> {label}
       </button>
     </EntityHoverWrap>
   );
@@ -92,12 +94,31 @@ const PAGE_SIZE = 50;
 
 export function AuditPage() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [filter, setFilter] = useState<QueueFilter>("all");
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(0);
 
   const allFlags = useMemo(() => buildClaimFlags(), []);
+
+  // Handle claimId from URL parameter
+  useEffect(() => {
+    const claimId = searchParams.get('claimId');
+    if (claimId) {
+      setSelectedId(claimId);
+      
+      // Find the claim in the filtered list and navigate to its page
+      const claimIndex = allFlags.findIndex((f) => f.claim.claim_id === claimId);
+      if (claimIndex !== -1) {
+        const targetPage = Math.floor(claimIndex / PAGE_SIZE);
+        setPage(targetPage);
+        
+        // Set filter to "all" to ensure the claim is visible
+        setFilter("all");
+      }
+    }
+  }, [searchParams, allFlags]);
 
   const filtered = useMemo(() => {
     let list = allFlags;
@@ -136,14 +157,28 @@ export function AuditPage() {
     navigate(`/wiki?kind=${encodeURIComponent(kind)}&id=${encodeURIComponent(id)}`);
   };
 
+  // Calculate filter counts
+  const filterCounts = useMemo(() => {
+    const counts: Record<QueueFilter, number> = {
+      all: allFlags.length,
+      flagged: allFlags.filter((f) => f.flags.length > 0).length,
+      no_evidence: allFlags.filter((f) => f.flags.includes("no_evidence")).length,
+      no_supports: allFlags.filter((f) => f.flags.includes("no_supports")).length,
+      unreviewed: allFlags.filter((f) => f.reviewStatus === "unreviewed").length,
+      approved: allFlags.filter((f) => f.reviewStatus === "approved").length,
+      disputed: allFlags.filter((f) => f.flags.includes("disputed")).length,
+    };
+    return counts;
+  }, [allFlags]);
+
   const filters: { key: QueueFilter; label: string }[] = [
-    { key: "all", label: "All" },
-    { key: "flagged", label: "Flagged" },
-    { key: "no_evidence", label: "No Evidence" },
-    { key: "no_supports", label: "No Supports" },
-    { key: "unreviewed", label: "Unreviewed" },
-    { key: "approved", label: "Approved" },
-    { key: "disputed", label: "Disputed" },
+    { key: "all", label: `All (${filterCounts.all})` },
+    { key: "flagged", label: `Flagged (${filterCounts.flagged})` },
+    { key: "no_evidence", label: `No Evidence (${filterCounts.no_evidence})` },
+    { key: "no_supports", label: `No Supports (${filterCounts.no_supports})` },
+    { key: "unreviewed", label: `Unreviewed (${filterCounts.unreviewed})` },
+    { key: "approved", label: `Approved (${filterCounts.approved})` },
+    { key: "disputed", label: `Disputed (${filterCounts.disputed})` },
   ];
 
   return (
@@ -262,24 +297,149 @@ export function AuditPage() {
                     const source = passage ? dataStore.sources.getById(passage.source_id) : undefined;
                     return (
                       <div key={`${ev.claim_id}-${ev.passage_id}`} className={s.evRow}>
-                        <div className={s.evFields}>
-                          <span className={s.evFieldLabel}>Passage</span>
-                          <span className={s.fieldValue}>
-                            {passage ? (
-                              <button type="button" className={s.entityBtn} onClick={() => onSelectEntity("passage", ev.passage_id)}>
-                                📖 {passage.locator}
-                              </button>
-                            ) : ev.passage_id}
-                            {source && <span className={s.faint}> — {source.title}</span>}
-                          </span>
-                          <span className={s.evFieldLabel}>Role</span>
-                          <span className={`${s.evRoleBadge} ${ev.evidence_role === "supports" ? s.evRoleSupports : ev.evidence_role === "opposes" ? s.evRoleOpposes : s.evRoleOther}`}>{ev.evidence_role}</span>
-                          {ev.evidence_weight != null && <><span className={s.evFieldLabel}>Weight</span><span className={s.evMetaChip}>{ev.evidence_weight}</span></>}
-                          {ev.support_aspect && <><span className={s.evFieldLabel}>Aspect</span><span className={s.evMetaChip}>{ev.support_aspect}</span></>}
-                          {ev.assertion_mode && <><span className={s.evFieldLabel}>Mode</span><span className={s.evMetaChip}>{ev.assertion_mode}</span></>}
-                          {(passage?.excerpt || ev.excerpt_override) && <><span className={s.evFieldLabel}>Excerpt</span><span className={s.evExcerpt}>"{ev.excerpt_override || passage?.excerpt}"</span></>}
-                          {ev.notes && <><span className={s.evFieldLabel}>Notes</span><span className={s.fieldValue}>{ev.notes}</span></>}
+                        {/* Evidence Fields */}
+                        <div className={s.evSection}>
+                          <div className={s.evSectionTitle}>Evidence Fields</div>
+                          <div className={s.evFields}>
+                            <span className={s.evFieldLabel}>Claim ID</span>
+                            <span className={s.fieldValue}>
+                              <EntityHoverWrap kind="claim" id={ev.claim_id}>
+                                <button type="button" className={s.entityBtn} onClick={() => onSelectEntity("claim", ev.claim_id)}>
+                                  {ev.claim_id}
+                                </button>
+                              </EntityHoverWrap>
+                            </span>
+                            
+                            <span className={s.evFieldLabel}>Passage ID</span>
+                            <span className={s.fieldValue}>
+                              {passage ? (
+                                <EntityHoverWrap kind="passage" id={ev.passage_id}>
+                                  <button type="button" className={s.entityBtn} onClick={() => onSelectEntity("passage", ev.passage_id)}>
+                                    <BookOpen size={13} /> {ev.passage_id}
+                                  </button>
+                                </EntityHoverWrap>
+                              ) : ev.passage_id}
+                            </span>
+
+                            <span className={s.evFieldLabel}>Evidence Role</span>
+                            <span className={`${s.evRoleBadge} ${ev.evidence_role === "supports" ? s.evRoleSupports : ev.evidence_role === "opposes" ? s.evRoleOpposes : s.evRoleOther}`}>{ev.evidence_role}</span>
+
+                            {ev.support_aspect && (
+                              <>
+                                <span className={s.evFieldLabel}>Support Aspect</span>
+                                <span className={s.evMetaChip}>{ev.support_aspect}</span>
+                              </>
+                            )}
+
+                            {ev.assertion_mode && (
+                              <>
+                                <span className={s.evFieldLabel}>Assertion Mode</span>
+                                <span className={s.evMetaChip}>{ev.assertion_mode}</span>
+                              </>
+                            )}
+
+                            {ev.excerpt_override && (
+                              <>
+                                <span className={s.evFieldLabel}>Excerpt Override</span>
+                                <span className={s.evExcerpt}>"{ev.excerpt_override}"</span>
+                              </>
+                            )}
+
+                            {ev.evidence_weight != null && (
+                              <>
+                                <span className={s.evFieldLabel}>Evidence Weight</span>
+                                <span className={s.evMetaChip}>{ev.evidence_weight}</span>
+                              </>
+                            )}
+
+                            {ev.notes && (
+                              <>
+                                <span className={s.evFieldLabel}>Evidence Notes</span>
+                                <span className={s.fieldValue}>{ev.notes}</span>
+                              </>
+                            )}
+                          </div>
                         </div>
+
+                        {/* Passage Fields */}
+                        {passage && (
+                          <div className={s.evSection}>
+                            <div className={s.evSectionTitle}>Passage Fields</div>
+                            <div className={s.evFields}>
+                              <span className={s.evFieldLabel}>Source ID</span>
+                              <span className={s.fieldValue}>
+                                {source ? (
+                                  <EntityHoverWrap kind="source" id={source.source_id}>
+                                    <button type="button" className={s.entityBtn} onClick={() => onSelectEntity("source", source.source_id)}>
+                                      <FileText size={12} /> {source.source_id}
+                                    </button>
+                                  </EntityHoverWrap>
+                                ) : passage.source_id}
+                              </span>
+
+                              <span className={s.evFieldLabel}>Locator Type</span>
+                              <span className={s.fieldValue}>{passage.locator_type}</span>
+
+                              <span className={s.evFieldLabel}>Locator</span>
+                              <span className={s.fieldValue}>
+                                <PassageReference passage={passage} source={source} />
+                              </span>
+
+                              {passage.excerpt && (
+                                <>
+                                  <span className={s.evFieldLabel}>Passage Excerpt</span>
+                                  <span className={s.evExcerpt}>"{passage.excerpt}"</span>
+                                </>
+                              )}
+
+                              <span className={s.evFieldLabel}>Language</span>
+                              <span className={s.fieldValue}>{passage.language}</span>
+
+                              {passage.passage_year != null && (
+                                <>
+                                  <span className={s.evFieldLabel}>Passage Year</span>
+                                  <span className={s.fieldValue}>{passage.passage_year}</span>
+                                </>
+                              )}
+
+                              {passage.url_override && (
+                                <>
+                                  <span className={s.evFieldLabel}>URL Override</span>
+                                  <span className={s.fieldValue}>
+                                    <a href={passage.url_override} target="_blank" rel="noopener noreferrer" className={s.extLink}>
+                                      {passage.url_override}
+                                    </a>
+                                  </span>
+                                </>
+                              )}
+
+                              {passage.notes && (
+                                <>
+                                  <span className={s.evFieldLabel}>Passage Notes</span>
+                                  <span className={s.fieldValue}>{passage.notes}</span>
+                                </>
+                              )}
+
+                              {source && (
+                                <>
+                                  <span className={s.evFieldLabel}>Source Title</span>
+                                  <span className={s.fieldValue}>{source.title}</span>
+                                </>
+                              )}
+
+                              {source?.url && (
+                                <>
+                                  <span className={s.evFieldLabel}>Source URL</span>
+                                  <span className={s.fieldValue}>
+                                    <a href={source.url} target="_blank" rel="noopener noreferrer" className={s.extLink}>
+                                      ↗ Open Source
+                                    </a>
+                                  </span>
+                                </>
+                              )}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     );
                   })

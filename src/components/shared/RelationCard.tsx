@@ -2,10 +2,11 @@ import { useState } from "react";
 import type { Claim } from "../../data/types";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { getPredicateLabel } from "../../domain/relationLabels";
-import { kindIcon } from "./entityConstants";
+import { KindIcon } from "./entityConstants";
 import { CertaintyBadge } from "./CertaintyBadge";
 import { EvidenceCard } from "./EvidenceCard";
 import { EntityLink } from "./EntityLink";
+import { ChevronUp, ChevronDown } from "lucide-react";
 import rc from "./RelationCard.module.css";
 
 interface ClaimCardProps {
@@ -37,7 +38,7 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
   return (
     <div className={rc.card}>
       <div className={rc.main} onClick={() => othId && onSelectEntity(othKind, othId)}>
-        <span className={rc.icon}>{kindIcon(othKind)}</span>
+        <span className={rc.icon}><KindIcon kind={othKind} size={15} /></span>
         <div className={rc.body}>
           <div className={rc.name}>{othLabel}</div>
           <div className={rc.rel}>
@@ -51,7 +52,7 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
             <button type="button" className={rc.expandBtn}
               onClick={(e) => { e.stopPropagation(); setShowEvidence((v) => !v); }}
               title={showEvidence ? "Hide evidence" : "Show evidence"}>
-              {showEvidence ? "▲" : "▼"}
+              {showEvidence ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
             </button>
           )}
         </div>

@@ -193,6 +193,32 @@ Avoid mixing schema migration, row additions, and unrelated copy edits in one co
 5. Link them in `data/sheets/claim_evidence.tsv`
 6. Run validation
 
+### Review a claim
+
+Reviewing a claim requires two writes and genuine evaluation — never bulk-approve without reading evidence.
+
+1. **Read the claim** in `data/sheets/claims.tsv` — check subject, predicate, object, certainty, date range.
+2. **Read every linked passage** in `data/sheets/claim_evidence.tsv` + `data/sheets/passages.tsv` — verify the excerpt actually says what the claim asserts.
+3. **Assess evidence quality**:
+   - Is `evidence_role` correct? (`supports` = passage directly attests the claim; `contextualizes` = passage provides background only)
+   - For any `supports` row, set `support_aspect` (one of: `whole_claim`, `subject`, `predicate`, `object`, `date`, `place`, `context`, `attribution`) and `assertion_mode` (one of: `explicit`, `strong_inference`, `weak_inference`).
+   - Add `excerpt_override` if the relevant quote is a sub-range of the passage.
+   - Add `notes` on any tension, anachronism, scholarly dispute, or alternative reading.
+4. **Upsert `claim_reviews.tsv`** — one row per claim, current state snapshot:
+   - `review_status`: `reviewed` | `approved` | `disputed` | `needs_revision`
+   - `confidence`: `low` | `medium` | `high`
+   - `note`: specific reason for the assessment (not a generic placeholder)
+5. **Append `claim_review_events.tsv`** — one row per review action (append-only history):
+   - `claim_id`, `event_type` (reviewed / approved / disputed / needs_revision), `actor_id`, `event_at` (ISO 8601), `note`
+6. Run validation.
+
+**Agent constraints for reviews:**
+- Never set `review_status=reviewed` or `review_status=approved` without having read the claim's evidence passages.
+- Never bulk-generate reviews from claim IDs alone without passage text.
+- If a claim has only `contextualizes` evidence and `certainty=attested`, either upgrade the evidence role (if warranted) or flag as `needs_revision`.
+- Use `disputed` when scholarly consensus contradicts the claim.
+- Use `needs_revision` when the claim is structurally sound but evidence linking or metadata needs fixing.
+
 ### Add an editorial note or article mention
 
 1. Put markdown in `data/sheets/editor_notes.tsv` or in a project `.md` file

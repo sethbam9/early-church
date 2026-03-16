@@ -2,10 +2,10 @@
  * Universal entity hover card — shows entity details on hover.
  * Extracted from WikiPage's EntityTooltipContent + FixedTooltip for use everywhere.
  */
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
-import { kindIcon, kindLabel } from "./entityConstants";
+import { KindIcon, kindLabel } from "./entityConstants";
 import s from "./EntityHoverCard.module.css";
 
 function getEntityFacts(kind: string, id: string): [string, string][] {
@@ -70,11 +70,20 @@ function HoverCardPortal({ kind, id, anchorEl }: EntityHoverCardProps) {
     const rect = anchorEl.getBoundingClientRect();
     const tooltipW = 280;
     const tooltipH = 180;
-    let top = rect.bottom + 4;
-    let left = rect.left;
-    if (top + tooltipH > window.innerHeight) top = rect.top - tooltipH - 4;
-    if (left + tooltipW > window.innerWidth) left = window.innerWidth - tooltipW - 8;
-    if (left < 4) left = 4;
+    const isRightSide = rect.left > window.innerWidth * 0.55;
+    let top = rect.top;
+    let left: number;
+    if (isRightSide) {
+      // Position to the left of the panel, outside the right side
+      left = rect.left - tooltipW - 12;
+      if (left < 4) left = 4;
+    } else {
+      left = rect.left;
+      if (left + tooltipW > window.innerWidth) left = window.innerWidth - tooltipW - 8;
+      if (left < 4) left = 4;
+    }
+    if (top + tooltipH > window.innerHeight) top = window.innerHeight - tooltipH - 8;
+    if (top < 4) top = 4;
     setPos({ top, left });
   }, [anchorEl]);
 
@@ -85,7 +94,7 @@ function HoverCardPortal({ kind, id, anchorEl }: EntityHoverCardProps) {
 
   return createPortal(
     <div className={s.tooltip} style={{ top: pos.top, left: pos.left }}>
-      <div className={s.kind}>{kindIcon(kind)} {kindLabel(kind)}</div>
+      <div className={s.kind}><KindIcon kind={kind} size={13} /> {kindLabel(kind)}</div>
       <div className={s.title}>{label}</div>
       {facts.length > 0 && (
         <dl className={s.facts}>
@@ -106,15 +115,27 @@ function HoverCardPortal({ kind, id, anchorEl }: EntityHoverCardProps) {
  * Wrap any element to show a hover card for an entity.
  * Usage: <EntityHoverWrap kind="person" id="paul"><button>Paul</button></EntityHoverWrap>
  */
+const HOVER_DELAY_MS = 500;
+
 export function EntityHoverWrap({ kind, id, children }: { kind: string; id: string; children: React.ReactNode }) {
   const [hovered, setHovered] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = useCallback(() => {
+    timerRef.current = setTimeout(() => setHovered(true), HOVER_DELAY_MS);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
+    setHovered(false);
+  }, []);
 
   return (
     <span
       ref={ref}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className={s.wrap}
     >
       {children}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChevronUp, ChevronDown } from "lucide-react";
 import s from "./Wiki.module.css";
 import { dataStore } from "../../data/dataStore";
 import type { Claim } from "../../data/types";
@@ -7,8 +8,10 @@ import { EntityLink } from "../shared/EntityLink";
 import { EvidenceCard } from "../shared/EvidenceCard";
 import { getClaimAuditStatus, getClaimBorderClass } from "../../utils/claimAudit";
 import { REVIEW_META } from "../../utils/entityListHelpers";
+import { ReviewStatusIcon } from "../shared/entityConstants";
 import { formatYearRange, formatReviewDate } from "../../utils/formatYear";
 import { CertaintyBadge } from "../shared/CertaintyBadge";
+import { InfoIcon } from "../shared/InfoIcon";
 
 interface ClaimRowProps {
   claim: Claim;
@@ -58,13 +61,14 @@ export function ClaimRow({ claim, focusKind, focusId, onSelectEntity, onSelectCl
           {reviews.map((r, i) => {
             const m = REVIEW_META[r.review_status] ?? { icon: "?", cls: "" };
             const timestamp = formatReviewDate(r.reviewed_at);
-            return <span key={i} className={`${s.reviewBadge} ${s[m.cls] ?? ""}`} title={`${r.review_status} · ${r.confidence} · ${r.reviewer_id}${timestamp ? ` · ${timestamp}` : ''}`}>{m.icon}</span>;
+            return <span key={i} className={`${s.reviewBadge} ${s[m.cls] ?? ""}`} title={`${r.review_status} · ${r.confidence} · ${r.reviewer_id}${timestamp ? ` · ${timestamp}` : ''}`}><ReviewStatusIcon status={r.review_status} size={11} /></span>;
           })}
           <span className={s.evCount} title={`${evidence.length} evidence link(s)`}>
             {evidence.length}ev
           </span>
+          <InfoIcon claimId={claim.claim_id} />
           <button type="button" className={s.expandBtn} onClick={(e) => { e.stopPropagation(); setExpanded((x) => !x); }}>
-            {expanded ? "▲" : "▼"}
+            {expanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
           </button>
         </div>
       </div>

@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { EntityHoverWrap } from "./EntityHoverCard";
+import { BibleOverlay } from "./BibleOverlay";
+import { dataStore } from "../../data/dataStore";
 import ms from "./MarkdownRenderer.module.css";
 
 interface Props {
@@ -22,6 +24,7 @@ interface Props {
  */
 export function MarkdownRenderer({ children, onSelectEntity, searchQuery, className }: Props) {
   const q = searchQuery?.trim() ?? "";
+  const [bibleLocator, setBibleLocator] = useState<string | null>(null);
 
   const lines = children
     .replace(/\\n/g, "\n")   // handle literal \n sequences from TSV
@@ -36,7 +39,7 @@ export function MarkdownRenderer({ children, onSelectEntity, searchQuery, classN
     if (text) {
       blocks.push(
         <p key={key++} className={ms.p}>
-          {renderInline(text, onSelectEntity, key, q)}
+          {renderInline(text, onSelectEntity, setBibleLocator, key, q)}
         </p>
       );
     }
@@ -56,7 +59,7 @@ export function MarkdownRenderer({ children, onSelectEntity, searchQuery, classN
       const Tag = `h${level}` as "h1" | "h2" | "h3";
       blocks.push(
         <Tag key={key++} className={level === 1 ? ms.h1 : level === 2 ? ms.h2 : ms.h3}>
-          {renderInline(text || '', onSelectEntity, key, q)}
+          {renderInline(text || '', onSelectEntity, setBibleLocator, key, q)}
         </Tag>
       );
       continue;
@@ -67,7 +70,7 @@ export function MarkdownRenderer({ children, onSelectEntity, searchQuery, classN
       flushPara();
       blocks.push(
         <blockquote key={key++} className={ms.blockquote}>
-          {renderInline(bq[1] || '', onSelectEntity, key, q)}
+          {renderInline(bq[1] || '', onSelectEntity, setBibleLocator, key, q)}
         </blockquote>
       );
       continue;
@@ -82,7 +85,12 @@ export function MarkdownRenderer({ children, onSelectEntity, searchQuery, classN
   }
   flushPara();
 
-  return <div className={`${ms.root} ${className ?? ""}`}>{blocks}</div>;
+  return (
+    <div className={`${ms.root} ${className ?? ""}`}>
+      {blocks}
+      {bibleLocator && <BibleOverlay locator={bibleLocator} onClose={() => setBibleLocator(null)} />}
+    </div>
+  );
 }
 
 // ─── Search highlight helper ──────────────────────────────────────────────────
@@ -117,6 +125,7 @@ function highlightText(text: string, query: string, baseKey: string): React.Reac
 function renderInline(
   text: string,
   onSelectEntity: ((kind: string, id: string) => void) | undefined,
+  onOpenBible: (locator: string) => void,
   baseKey: number,
   searchQuery: string,
 ): React.ReactNode[] {
@@ -127,13 +136,16 @@ function renderInline(
     const withLabel = part.match(/^\[\[([^:]+):([^|\]]+)\|([^\]]+)\]\]$/);
     if (withLabel) {
       const [, kind, id, label] = withLabel;
+      const handleClick = kind === "passage"
+        ? () => {
+            const p = id ? dataStore.passages.getById(id) : null;
+            if (p?.locator_type === "bible_osis") onOpenBible(p.locator);
+            else onSelectEntity?.(kind || '', id || '');
+          }
+        : () => onSelectEntity?.(kind || '', id || '');
       nodes.push(
         <EntityHoverWrap key={`${baseKey}-m-${i}`} kind={kind || ''} id={id || ''}>
-          <button
-            type="button"
-            className={ms.mention}
-            onClick={() => onSelectEntity?.(kind || '', id || '')}
-          >
+          <button type="button" className={ms.mention} onClick={handleClick}>
             {searchQuery ? highlightText(label || '', searchQuery, `${baseKey}-m-${i}`) : label}
           </button>
         </EntityHoverWrap>
@@ -146,13 +158,16 @@ function renderInline(
       const [, kind, id] = bare;
       if (!kind || !id) return;
       const label = id.replace(/-/g, " ");
+      const handleClick = kind === "passage"
+        ? () => {
+            const p = dataStore.passages.getById(id);
+            if (p?.locator_type === "bible_osis") onOpenBible(p.locator);
+            else onSelectEntity?.(kind, id);
+          }
+        : () => onSelectEntity?.(kind, id);
       nodes.push(
         <EntityHoverWrap key={`${baseKey}-m-${i}`} kind={kind} id={id}>
-          <button
-            type="button"
-            className={ms.mention}
-            onClick={() => onSelectEntity?.(kind, id)}
-          >
+          <button type="button" className={ms.mention} onClick={handleClick}>
             {searchQuery ? highlightText(label, searchQuery, `${baseKey}-m-${i}`) : label}
           </button>
         </EntityHoverWrap>

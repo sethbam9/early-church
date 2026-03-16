@@ -21,19 +21,19 @@
 /* ── NoteDetail / EssayView panel styles ───────────────────────────────────── */
 .panel { display: flex; flex-direction: column; height: 100%; overflow: hidden; position: relative; }
 .backBar {
-  display: flex; align-items: center; gap: 8px;
-  padding: 8px 14px;
+  display: flex; align-items: center; gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
   border-bottom: 1px solid var(--border-subtle);
-  flex-shrink: 0; background: var(--surface);
+  flex-shrink: 0;
 }
 .backBtn {
-  background: none; border: none; color: var(--text-faint);
-  cursor: pointer; font-size: 0.82rem; font-family: inherit;
-  padding: 4px 8px; border-radius: var(--radius-sm);
-  transition: background 0.12s, color 0.12s;
+  background: none; border: none; font: inherit; color: var(--accent-bright);
+  cursor: pointer; font-size: var(--font-size-sm); padding: 0;
+  display: inline-flex; align-items: center; gap: 2px;
+  transition: text-decoration 0.12s;
 }
-.backBtn:hover { background: var(--surface-2); color: var(--text); }
-.crumb { font-size: 0.76rem; color: var(--text-faint); }
+.backBtn:hover { text-decoration: underline; }
+.crumb { font-size: var(--font-size-xs); color: var(--text-muted); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .header {
   padding: 12px 14px 8px;

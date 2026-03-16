@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import s from "./WikiPage.module.css";
 import { useAppStore } from "../stores/appStore";
 import { dataStore } from "../data/dataStore";
-import { kindIcon, kindLabel, KIND_ICONS, ENTITY_TABS } from "../components/shared/entityConstants";
+import { KindIcon, kindLabel, ENTITY_TABS } from "../components/shared/entityConstants";
 import { GlobalSearchOverlay } from "../components/shared/GlobalSearchOverlay";
 import { ESSAYS } from "../data/essays";
 import { MarkdownRenderer } from "../components/shared/MarkdownRenderer";
@@ -19,10 +19,14 @@ import { SearchInput } from "../components/shared/SearchInput";
 import { Hl } from "../components/shared/Hl";
 import { EntityDetail } from "../components/panel/EntityDetail";
 import { getAllEntities } from "../utils/entityListHelpers";
+import { PlaceKindIcon } from "../components/shared/entityConstants";
 import { ClaimsPanel } from "../components/wiki/ClaimsPanel";
 import { ClaimDetailPanel } from "../components/wiki/ClaimDetailPanel";
 import { AuditView } from "../components/wiki/AuditView";
 import { extractEssayEntities, groupByKind } from "../utils/extractEssayEntities";
+import { Map as MapIcon } from "lucide-react";
+import { EntityHoverWrap } from "../components/shared/EntityHoverCard";
+import { getEntityLabel } from "../data/dataStore";
 
 // ─── Entity list (left panel) ─────────────────────────────────────────────────
 
@@ -41,12 +45,19 @@ function EntityList({ kind, search, selectedId, onSelect }: {
   return (
     <div className={s.entityList}>
       {pageItems.map((e) => (
-        <button key={e.id} type="button"
-          className={`${s.entityItem}${selectedId === e.id ? ` ${s.entityItemActive}` : ""}`}
-          onClick={() => onSelect(e.id)}>
-          <span className={s.entityItemLabel}><Hl text={e.label} query={search} /></span>
-          {e.count > 0 && <span className={s.entityItemCount} title={e.countLabel}>{e.count}</span>}
-        </button>
+        <EntityHoverWrap key={e.id} kind={kind} id={e.id}>
+          <button type="button"
+            className={`${s.entityItem}${selectedId === e.id ? ` ${s.entityItemActive}` : ""}`}
+            onClick={() => onSelect(e.id)}>
+            {kind === "place" && (
+              <span className={s.entityItemIcon}>
+                <PlaceKindIcon kind={dataStore.places.getById(e.id)?.place_kind ?? "unknown"} size={12} />
+              </span>
+            )}
+            <span className={s.entityItemLabel}><Hl text={e.label} query={search} /></span>
+            {e.count > 0 && <span className={s.entityItemCount} title={e.countLabel}>{e.count}</span>}
+          </button>
+        </EntityHoverWrap>
       ))}
       <Pagination page={page} total={total} pageSize={pageSize} onChange={setPage} />
     </div>
@@ -110,7 +121,7 @@ export function WikiPage() {
         {mode === "browse" && (
           <>
             <Tabs
-              tabs={ENTITY_TABS.map((t) => ({ id: t.kind, label: t.label, icon: KIND_ICONS[t.kind] ?? "•" }))}
+              tabs={ENTITY_TABS.map((t) => ({ id: t.kind, label: `${t.label} (${getAllEntities(t.kind).length})`, icon: <KindIcon kind={t.kind} size={14} /> }))}
               active={entityKind}
               onChange={selectEntityKind}
               vertical
@@ -161,7 +172,7 @@ export function WikiPage() {
                     useAppStore.getState().setPanelTab("essays");
                     if (!useAppStore.getState().rightPanelVisible) useAppStore.getState().toggleRightPanel();
                     navigate("/");
-                  }} title="Open in map">🗺️ Open in map</button>
+                  }} title="Open in map"><MapIcon size={13} /> Open in map</button>
                 )}
               </div>
               {selection.kind !== "essay" && selection.kind !== "editor_note" && (
@@ -197,11 +208,13 @@ export function WikiPage() {
                         <div key={kind}>
                           <div className={s.entityGroupLabel}>{kindLabel(kind)} ({refs.length})</div>
                           {refs.map((r) => (
-                            <button key={`${r.kind}:${r.id}`} type="button" className={s.entityItem}
-                              onClick={() => handleSelectEntity(r.kind, r.id)}>
-                              <span className={s.entityItemIcon}>{kindIcon(r.kind)}</span>
-                              <span className={s.entityItemLabel}>{r.label}</span>
-                            </button>
+                            <EntityHoverWrap key={`${r.kind}:${r.id}`} kind={r.kind} id={r.id}>
+                              <button type="button" className={s.entityItem}
+                                onClick={() => handleSelectEntity(r.kind, r.id)}>
+                                <span className={s.entityItemIcon}><KindIcon kind={r.kind} size={14} /></span>
+                                <span className={s.entityItemLabel}>{r.label}</span>
+                              </button>
+                            </EntityHoverWrap>
                           ))}
                         </div>
                       ))}
@@ -214,6 +227,17 @@ export function WikiPage() {
               if (!note) return <div className={s.emptyState}>Note not found.</div>;
               return (
                 <div className={s.detailBodyStyle}>
+                  {note.entity_id && note.entity_type && (
+                    <div className={s.noteEntityRef}>
+                      <span className={s.faint}>Linked to: </span>
+                      <EntityHoverWrap kind={note.entity_type} id={note.entity_id}>
+                        <button type="button" className={s.noteEntityBtn}
+                          onClick={() => handleSelectEntity(note.entity_type!, note.entity_id!)}>
+                          {getEntityLabel(note.entity_type, note.entity_id)}
+                        </button>
+                      </EntityHoverWrap>
+                    </div>
+                  )}
                   <NoteCard note={note} onSelectEntity={handleSelectEntity} yearLabel={note.note_kind} />
                 </div>
               );

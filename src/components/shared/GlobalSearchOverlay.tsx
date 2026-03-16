@@ -5,8 +5,10 @@
  */
 import { useState, useRef, useEffect, useCallback } from "react";
 import { globalSearch, type GlobalSearchResult } from "../../data/dataStore";
-import { kindIcon, kindLabel } from "./entityConstants";
+import { kindLabel } from "./entityConstants";
+import { KindIcon } from "./entityConstants";
 import { SearchInput } from "./SearchInput";
+import { Hl } from "./Hl";
 import s from "./GlobalSearchOverlay.module.css";
 
 interface GlobalSearchOverlayProps {
@@ -16,13 +18,29 @@ interface GlobalSearchOverlayProps {
   onQueryChange?: (query: string) => void;
   placeholder?: string;
   className?: string;
+  /** If true, pressing "/" on non-input elements focuses this search overlay */
+  enableSlashShortcut?: boolean;
 }
 
-export function GlobalSearchOverlay({ onSelect, onQueryChange, placeholder = "Search all entities…", className }: GlobalSearchOverlayProps) {
+export function GlobalSearchOverlay({ onSelect, onQueryChange, placeholder = "Search all entities…", className, enableSlashShortcut }: GlobalSearchOverlayProps) {
   const [query, setQuery] = useState("");
   const [showResults, setShowResults] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
   const wrapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!enableSlashShortcut) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key !== "/") return;
+      const tag = (e.target as HTMLElement)?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || (e.target as HTMLElement)?.isContentEditable) return;
+      e.preventDefault();
+      const input = wrapRef.current?.querySelector("input");
+      if (input) { input.focus(); input.select(); }
+    }
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [enableSlashShortcut]);
 
   const results = globalSearch(query);
 
@@ -80,8 +98,8 @@ export function GlobalSearchOverlay({ onSelect, onQueryChange, placeholder = "Se
               className={`${s.result}${i === activeIndex ? ` ${s.resultActive}` : ""}`}
               onClick={() => handleSelect(r)}
             >
-              <span className={s.resultIcon}>{kindIcon(r.kind)}</span>
-              <span className={s.resultLabel}>{r.label}</span>
+              <span className={s.resultIcon}><KindIcon kind={r.kind} size={14} /></span>
+              <span className={s.resultLabel}><Hl text={r.label} query={query} /></span>
               <span className={s.resultKind}>{kindLabel(r.kind)}</span>
             </button>
           ))}

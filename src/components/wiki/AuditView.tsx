@@ -1,3 +1,4 @@
+import { ArrowUp, ArrowDown, Flag } from "lucide-react";
 import s from "./Wiki.module.css";
 import { useAuditData, AUDIT_EVIDENCE_ROLES } from "../../hooks/useAuditData";
 import type { AuditSortCol, AuditFilter } from "../../hooks/useAuditData";
@@ -109,10 +110,12 @@ export function AuditView({ onSelectEntity, onSelectClaim, selectedClaimId }: Au
       <div className={s.auditResults}>
         <div className={s.auditTableHeader}>
           {([["subject", "Subject"], ["predicate", "Predicate"], ["object", "Object"], ["year", "Year"], ["certainty", "Cert"], ["ev", "Ev"], ["rev", "Rev"], ["status", "Status"]] as [AuditSortCol, string][]).map(([col, label]) => {
-            const arrow = sortCol === col ? (sortDir === "asc" ? " ▲" : sortDir === "desc" ? " ▼" : "") : "";
+            const sortIcon = sortCol === col
+              ? (sortDir === "asc" ? <ArrowUp size={10} /> : sortDir === "desc" ? <ArrowDown size={10} /> : null)
+              : null;
             const colCls = COL_CLS[col] ?? "";
             const cls = `${s.auditCol} ${colCls} ${s.auditSortHdr}${sortCol === col ? ` ${s.auditSortHdrActive}` : ""}`;
-            return <button key={col} type="button" className={cls} onClick={() => toggleSort(col)}>{label}{arrow}</button>;
+            return <button key={col} type="button" className={cls} onClick={() => toggleSort(col)}>{label}{sortIcon && <span style={{ marginLeft: 2, verticalAlign: "middle" }}>{sortIcon}</span>}</button>;
           })}
         </div>
         {pageItems.map((row) => {
@@ -136,7 +139,7 @@ export function AuditView({ onSelectEntity, onSelectClaim, selectedClaimId }: Au
               <span className={`${s.auditCol} ${s.auditColEv}`}>{row.evidenceCount}</span>
               <span className={`${s.auditCol} ${s.auditColRev}`}>{row.reviewCount}</span>
               <span className={`${s.auditCol} ${s.auditColStatus} ${STATUS_CLS[row.status] ?? ""}`}>
-                {row.status.replace("-", " ")}{row.isDuplicate ? " ⚑" : ""}
+                {row.status.replace("-", " ")}{row.isDuplicate ? <span style={{ marginLeft: 4 }}><Flag size={10} /></span> : ""}
               </span>
             </div>
           );

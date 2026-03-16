@@ -3,13 +3,16 @@
  * with a compact colored icon + hover tooltip.
  * "attested" is the default/norm and renders nothing.
  */
+import { CircleDashed, CircleDot, AlertCircle } from "lucide-react";
+import type { LucideProps } from "lucide-react";
+import type { ComponentType } from "react";
 import s from "./CertaintyBadge.module.css";
 import { CERTAINTY_COLORS } from "./entityConstants";
 
-const CERTAINTY_ICONS: Record<string, string> = {
-  probable:  "◐",
-  possible:  "○",
-  uncertain: "△",
+const CERTAINTY_ICON_COMPONENTS: Record<string, ComponentType<LucideProps>> = {
+  probable:  CircleDot,
+  possible:  CircleDashed,
+  uncertain: AlertCircle,
 };
 
 const CERTAINTY_TIPS: Record<string, string> = {
@@ -26,7 +29,7 @@ interface CertaintyBadgeProps {
 
 export function CertaintyBadge({ value, className }: CertaintyBadgeProps) {
   if (!value || value === "attested") return null;
-  const icon = CERTAINTY_ICONS[value] ?? "?";
+  const IconComponent = CERTAINTY_ICON_COMPONENTS[value];
   const color = CERTAINTY_COLORS[value] ?? "var(--text-muted)";
   const tip = CERTAINTY_TIPS[value] ?? value;
   return (
@@ -36,7 +39,7 @@ export function CertaintyBadge({ value, className }: CertaintyBadgeProps) {
       title={tip}
       aria-label={tip}
     >
-      {icon}
+      {IconComponent ? <IconComponent size={12} strokeWidth={2} /> : "?"}
     </span>
   );
 }

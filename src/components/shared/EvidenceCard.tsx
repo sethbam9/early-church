@@ -2,6 +2,7 @@ import type { ClaimEvidence } from "../../data/types";
 import { dataStore } from "../../data/dataStore";
 import { PassageReference } from "./PassageReference";
 import { getSourceExternalUrl, getSourceAccessTitle } from "../../utils/sourceLinks";
+import { InfoIcon } from "./InfoIcon";
 import s from "./EvidenceCard.module.css";
 
 const ROLE_CLS: Record<string, string> = {
@@ -24,10 +25,13 @@ export function EvidenceCard({ ev, onSelectEntity, hideWorkLink }: EvidenceCardP
 
   return (
     <div className={s.card}>
+      <div className={s.infoIconWrap}>
+        <InfoIcon claimId={ev.claim_id} />
+      </div>
       <div className={s.meta}>
         <span className={`${s.role} ${ROLE_CLS[ev.evidence_role] ?? ""}`}>{ev.evidence_role}</span>
         {ev.evidence_weight != null && (
-          <span className={s.weight} title="Evidence weight">⚖ {ev.evidence_weight}</span>
+          <span className={s.weight} title="Evidence weight">{ev.evidence_weight}</span>
         )}
       </div>
       {passage && <PassageReference passage={passage} source={source} />}

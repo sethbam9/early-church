@@ -1,8 +1,10 @@
+import { Link2, X, AlertCircle, Circle } from "lucide-react";
 import s from "./Wiki.module.css";
 import { dataStore } from "../../data/dataStore";
 import { EntityLink } from "../shared/EntityLink";
 import { EvidenceCard } from "../shared/EvidenceCard";
 import { REVIEW_META } from "../../utils/entityListHelpers";
+import { ReviewStatusIcon } from "../shared/entityConstants";
 import { formatReviewDate } from "../../utils/formatYear";
 
 interface ClaimDetailPanelProps {
@@ -36,8 +38,8 @@ export function ClaimDetailPanel({ claimId, onSelectEntity, onClose, focusKind }
   return (
     <div className={s.detailPanel}>
       <div className={s.detailHeader}>
-        <span className={s.detailTitle}>🔗 Claim Detail</span>
-        <button type="button" className={s.closeBtn} onClick={onClose}>✕</button>
+        <span className={s.detailTitle}><Link2 size={14} /> Claim Detail</span>
+        <button type="button" className={s.closeBtn} onClick={onClose}><X size={14} /></button>
       </div>
       <div className={s.detailBody}>
         <div className={s.detailSection}>
@@ -62,7 +64,7 @@ export function ClaimDetailPanel({ claimId, onSelectEntity, onClose, focusKind }
         </div>
         <div className={s.detailSection}>
           <div className={s.detailSectionTitle}>Evidence ({evidence.length})</div>
-          {evidence.length === 0 ? <div className={s.emptySub}>⚠ No evidence linked.</div> : (
+          {evidence.length === 0 ? <div className={s.emptySub}><AlertCircle size={12} /> No evidence linked.</div> : (
             <div className={s.flexCol8}>
               {evidence.map((ev) => (
                 <EvidenceCard key={ev.passage_id} ev={ev} onSelectEntity={onSelectEntity} hideWorkLink={focusKind === "work"} />
@@ -72,7 +74,7 @@ export function ClaimDetailPanel({ claimId, onSelectEntity, onClose, focusKind }
         </div>
         <div className={s.detailSection}>
           <div className={s.detailSectionTitle}>Reviews ({reviews.length})</div>
-          {reviews.length === 0 ? <div className={s.emptySub}>○ Not reviewed.</div> : (
+          {reviews.length === 0 ? <div className={s.emptySub}><Circle size={12} /> Not reviewed.</div> : (
             <div className={s.flexCol8}>
               {reviews.map((r, i) => {
                 const m = REVIEW_META[r.review_status] ?? { icon: "?", cls: "" };
@@ -80,7 +82,7 @@ export function ClaimDetailPanel({ claimId, onSelectEntity, onClose, focusKind }
                 return (
                   <div key={i} className={s.reviewDetail}>
                     <div className={s.reviewDetailHead}>
-                      <span className={`${s.reviewBadge} ${s[m.cls] ?? ""}`}>{m.icon} {r.review_status}</span>
+                      <span className={`${s.reviewBadge} ${s[m.cls] ?? ""}`}><ReviewStatusIcon status={r.review_status} size={11} /> {r.review_status}</span>
                       <span className={s.faint}>{r.confidence}</span>
                       {r.reviewer_id && <span className={s.faint}>by {r.reviewer_id}</span>}
                       {timestamp && <span className={s.faint}>{timestamp}</span>}

@@ -5,9 +5,22 @@
   display: flex;
   align-items: center;
   padding: 0 var(--space-4);
+  gap: var(--space-3);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1100;
+}
+.branding {
+  display: flex;
+  align-items: center;
   gap: var(--space-2);
   flex-shrink: 0;
-  z-index: 1000;
+}
+.brandIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
 }
 .logo {
   font-size: var(--font-size-md);
@@ -27,9 +40,21 @@
   color: var(--text-muted);
   margin-top: 1px;
 }
+.searchContainer {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+  flex-shrink: 0;
+}
+.navSearch {
+  width: 220px;
+}
 .spacer { flex: 1; }
 .link {
-  padding: 5px var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px var(--space-2);
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
   font-size: var(--font-size-sm);
@@ -45,3 +70,11 @@
   color: var(--accent-bright);
   border-color: rgba(196,124,58,0.3);
 }
+.themeToggle {
+  display: flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; flex-shrink: 0;
+  background: none; border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm); cursor: pointer;
+  color: var(--text-muted); transition: background 0.13s, color 0.13s;
+}
+.themeToggle:hover { background: var(--bg-surface-2); color: var(--text-primary); }

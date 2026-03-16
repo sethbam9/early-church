@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ChevronUp, ChevronDown } from 'lucide-react';
 import s from './Card.module.css';
 
 interface CardProps {
@@ -33,7 +34,7 @@ export function Card({ children, icon, title, subtitle, actions, expandContent, 
               <button type="button" className={s.expandBtn}
                 onClick={(e) => { e.stopPropagation(); setExpanded((v) => !v); }}
                 title={expanded ? 'Collapse' : 'Expand'}>
-                {expanded ? '▲' : '▼'}
+                {expanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
               </button>
             )}
           </div>

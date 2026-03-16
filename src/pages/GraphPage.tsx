@@ -1,7 +1,8 @@
 import { useRef, useMemo } from "react";
+import { ChevronLeft, ChevronRight, X, ArrowLeftRight } from "lucide-react";
 import s from "./GraphPage.module.css";
 import type { GraphNode } from "../utils/forceLayout";
-import { KIND_COLORS, kindIcon } from "../components/shared/entityConstants";
+import { KIND_COLORS, KindIcon } from "../components/shared/entityConstants";
 import { truncateLabel } from "../utils/formatYear";
 import { EntityDetail } from "../components/panel/EntityDetail";
 import { SearchInput } from "../components/shared/SearchInput";
@@ -55,7 +56,7 @@ export function GraphPage() {
         {/* Node types (multi-select filter + legend combined) */}
         <div className={s.section}>
           <div className={s.filterLabelRow}>
-            Node types (multi-select)
+            Node types
             {!filters.includes("all") && (
               <button type="button" className={s.showAll} onClick={() => setFilters(["all"])}>show all</button>
             )}
@@ -63,6 +64,7 @@ export function GraphPage() {
           <div className={s.typeList}>
             {FILTER_OPTIONS.map(({ value, label }) => {
               const isActive = filters.includes("all") || filters.includes(value);
+              const visibleCount = nodes.filter((n) => n.kind === value).length;
               return (
                 <button key={value} type="button"
                   className={`${s.typeRow}${isActive ? ` ${s.typeRowActive}` : ""}`}
@@ -74,8 +76,11 @@ export function GraphPage() {
                       return [...without, value];
                     });
                   }}>
-                  <span className={s.nodeBadge} style={{ background: KIND_COLORS[value] ?? "#666" }} />
-                  <span>{label}</span>
+                  <span className={s.nodeKindIcon} style={{ color: KIND_COLORS[value] ?? "#666" }}>
+                    <KindIcon kind={value} size={13} />
+                  </span>
+                  <span className={s.typeLabel}>{label}</span>
+                  {visibleCount > 0 && <span className={`${s.faint} ${s.typeCount}`}>{visibleCount}</span>}
                 </button>
               );
             })}
@@ -96,9 +101,11 @@ export function GraphPage() {
             <div className={s.searchDropdown}>
               {searchSuggestions.map((n) => (
                 <button key={n.id} type="button" className={s.suggestion} onMouseDown={() => handleSearchDropdownSelect(n.id)}>
-                  <span className={s.nodeBadge} style={{ background: KIND_COLORS[n.kind] ?? "#666" }} />
+                  <span className={s.nodeKindIcon} style={{ color: KIND_COLORS[n.kind] ?? "#666" }}>
+                    <KindIcon kind={n.kind} size={12} />
+                  </span>
                   <span className={s.suggestionLabel}>{n.label}</span>
-                  <span className={`${s.faint} ${s.suggestionConn}`}>{n.connections} conn</span>
+                  <span className={`${s.faint} ${s.suggestionConn}`}>{n.connections}</span>
                 </button>
               ))}
             </div>
@@ -148,16 +155,16 @@ export function GraphPage() {
               <button type="button" className={s.pathMiniBtn}
                 disabled={!pathStartId && !pathEndId}
                 onClick={swapPathEndpoints} title="Swap start ↔ end"
-              >⇄</button>
+              ><ArrowLeftRight size={12} /></button>
               {selectedKey && !pathStartId && (
                 <button type="button" className={s.pathMiniBtn}
                   onClick={useSelectedAsPathStart} title="Use selected as start"
-                >○→Start</button>
+                >→ Start</button>
               )}
               {selectedKey && pathStartId && !pathEndId && (
                 <button type="button" className={s.pathMiniBtn}
                   onClick={useSelectedAsPathEnd} title="Use selected as end"
-                >○→End</button>
+                >→ End</button>
               )}
             </div>
             {pathResult && (
@@ -169,9 +176,9 @@ export function GraphPage() {
                       <span className={s.faint}> · {pathResult.intermediaries} intermediar{pathResult.intermediaries === 1 ? "y" : "ies"}</span>
                       {pathTotal > 1 && (
                         <span className={s.pathNav}>
-                          <button type="button" className={s.pathNavBtn} disabled={pathIndex <= 0} onClick={prevPath}>◀</button>
+                          <button type="button" className={s.pathNavBtn} disabled={pathIndex <= 0} onClick={prevPath}><ChevronLeft size={12} /></button>
                           <span className={s.pathNavLabel}>Path {pathIndex + 1}/{pathTotal}</span>
-                          <button type="button" className={s.pathNavBtn} disabled={pathIndex >= pathTotal - 1} onClick={nextPath}>▶</button>
+                          <button type="button" className={s.pathNavBtn} disabled={pathIndex >= pathTotal - 1} onClick={nextPath}><ChevronRight size={12} /></button>
                         </span>
                       )}
                     </div>
@@ -183,7 +190,7 @@ export function GraphPage() {
                             {i > 0 && <span className={s.pathEdgeLabel}>{step.edgeLabel}</span>}
                             <button type="button" className={s.pathNodeBtn} onClick={() => pushGraphSelection(step.nodeId)}
                               style={{ borderLeft: `3px solid ${KIND_COLORS[node?.kind ?? ""] ?? "#666"}` }}>
-                              {kindIcon(node?.kind ?? "")} {node?.label ?? step.nodeId}
+                              <KindIcon kind={node?.kind ?? ""} size={14} /> {node?.label ?? step.nodeId}
                             </button>
                           </div>
                         );
@@ -372,7 +379,7 @@ export function GraphPage() {
               {hoverEdgeDetails.map((d, i) => (
                 <div key={i} className={s.hoverClaim}>
                   <span style={{ color: d.isOpposes ? "#e74c3c" : "var(--accent)" }}>{d.label}</span>
-                  {d.isOpposes && <span className={s.hoverClaimOpposes}> ✗</span>}
+                  {d.isOpposes && <span className={s.hoverClaimOpposes}><X size={11} /></span>}
                   {d.certainty && <span className={s.faint}> · {d.certainty}</span>}
                   {d.yearStart != null && (
                     <span className={s.faint}> · AD {d.yearStart}{d.yearEnd != null && d.yearEnd !== d.yearStart ? `–${d.yearEnd}` : ""}</span>

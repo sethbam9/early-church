@@ -13,6 +13,7 @@
   width: 260px;
   flex-shrink: 0;
   background: var(--surface);
+  cursor: default;
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
@@ -62,10 +63,12 @@
 .typeRowActive { color: var(--text); font-weight: 600; }
 .typeRow:not(.typeRowActive) { opacity: 0.45; }
 
-.nodeBadge {
-  width: 8px; height: 8px; border-radius: 50%;
-  flex-shrink: 0; display: inline-block;
+.nodeKindIcon {
+  flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center;
+  width: 16px;
 }
+.typeLabel { flex: 1; min-width: 0; }
+.typeCount { font-size: 0.68rem; margin-left: auto; }
 
 /* Show-all hint */
 .showAll {

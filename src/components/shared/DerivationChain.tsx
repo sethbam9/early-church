@@ -1,6 +1,7 @@
 import type { DerivedEdge } from "../../data/types";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
-import { kindIcon } from "./entityConstants";
+import { KindIcon } from "./entityConstants";
+import { EntityHoverWrap } from "./EntityHoverCard";
 import { getPredicateLabel } from "../../domain/relationLabels";
 import s from "./DerivationChain.module.css";
 
@@ -14,12 +15,18 @@ function StepLink({ type, id, onSelect }: { type: string; id: string; onSelect?:
   const label = getEntityLabel(type, id);
   if (onSelect) {
     return (
-      <button type="button" className={s.stepLink} onClick={(e) => { e.stopPropagation(); onSelect(type, id); }}>
-        {kindIcon(type)} {label}
-      </button>
+      <EntityHoverWrap kind={type} id={id}>
+        <button type="button" className={s.stepLink} onClick={(e) => { e.stopPropagation(); onSelect(type, id); }}>
+          <KindIcon kind={type} size={13} /> {label}
+        </button>
+      </EntityHoverWrap>
     );
   }
-  return <span className={s.step}>{kindIcon(type)} {label}</span>;
+  return (
+    <EntityHoverWrap kind={type} id={id}>
+      <span className={s.step}><KindIcon kind={type} size={13} /> {label}</span>
+    </EntityHoverWrap>
+  );
 }
 
 export function DerivationChain({ edgeId, onSelectEntity, compact }: DerivationChainProps) {
@@ -63,11 +70,11 @@ export function DerivationChain({ edgeId, onSelectEntity, compact }: DerivationC
               <div key={cid} className={s.claimStep}>
                 <span className={s.stepNum}>{i + 1}</span>
                 <span className={s.stepEntity}>
-                  {kindIcon(claim.subject_type)} {subLabel}
+                  <KindIcon kind={claim.subject_type} size={12} /> {subLabel}
                 </span>
                 <span className={s.stepPred}>{predLabel}</span>
                 <span className={s.stepEntity}>
-                  {claim.object_type && kindIcon(claim.object_type)} {objLabel}
+                  {claim.object_type && <KindIcon kind={claim.object_type} size={12} />} {objLabel}
                 </span>
               </div>
             );

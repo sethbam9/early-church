@@ -2,11 +2,12 @@ import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 import type { EntityPlaceFootprint } from "../../data/types";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
-import { kindIcon } from "./entityConstants";
+import { KindIcon } from "./entityConstants";
 import { EvidenceCard } from "./EvidenceCard";
 import { DerivationChain } from "./DerivationChain";
 import { getPredicateLabel } from "../../domain/relationLabels";
 import ehc from "./EntityHoverCard.module.css";
+import { ChevronUp, ChevronDown } from "lucide-react";
 import fc from "./FootprintCard.module.css";
 
 function claimLine(c: { subject_type: string; subject_id: string; predicate_id: string; object_mode: string; object_type: string; object_id: string; value_text?: string; value_year?: number | null; claim_id: string }) {
@@ -17,9 +18,9 @@ function claimLine(c: { subject_type: string; subject_id: string; predicate_id: 
     : (c.value_text || c.value_year?.toString() || "");
   return (
     <div key={c.claim_id} className={`${fc.textMuted} ${fc.claimLine}`}>
-      {kindIcon(c.subject_type)} <strong>{subLabel}</strong>
+      <KindIcon kind={c.subject_type} size={12} /> <strong>{subLabel}</strong>
       <span className={fc.textMuted}> {predLabel} </span>
-      {kindIcon(c.object_type || "")} <strong>{objLabel}</strong>
+      <KindIcon kind={c.object_type || ""} size={12} /> <strong>{objLabel}</strong>
     </div>
   );
 }
@@ -97,7 +98,7 @@ export function FootprintCard({ footprint: f, showEntity = true, showPlace = fal
   const primaryLabel = showPlace
     ? getEntityLabel("place", f.place_id)
     : getEntityLabel(f.entity_type, f.entity_id);
-  const primaryIcon = showPlace ? kindIcon("place") : kindIcon(f.entity_type);
+  const primaryKind = showPlace ? "place" : f.entity_type;
 
   const backingClaims = dataStore.claims.getBackingForFootprint(f);
   const hasEvidence = backingClaims.some((c) => dataStore.claimEvidence.getForClaim(c.claim_id).length > 0);
@@ -107,7 +108,7 @@ export function FootprintCard({ footprint: f, showEntity = true, showPlace = fal
       onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       {hovered && !hasEvidence && <DerivationTooltip anchorRef={cardRef} footprint={f} />}
       <div className={fc.row} onClick={() => onSelectEntity(clickTarget.kind, clickTarget.id)}>
-        <span className={fc.icon}>{primaryIcon}</span>
+        <span className={fc.icon}><KindIcon kind={primaryKind} size={15} /></span>
         <div className={fc.body}>
           <div className={fc.name}>{primaryLabel}</div>
           <div className={fc.rel}>
@@ -121,7 +122,7 @@ export function FootprintCard({ footprint: f, showEntity = true, showPlace = fal
           <button type="button" className={fc.expandBtn}
             onClick={(e) => { e.stopPropagation(); setExpanded((s) => !s); }}
             title={expanded ? "Hide evidence" : "Show evidence"}>
-            {expanded ? "▲" : "▼"}
+            {expanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
           </button>
         )}
       </div>

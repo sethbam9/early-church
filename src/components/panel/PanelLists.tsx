@@ -5,10 +5,12 @@ import type { PlaceKind } from "../../data/dataStore";
 import { Hl } from "../shared/Hl";
 import { Pagination, PAGE_SIZE } from "../shared/Pagination";
 import { usePaginatedList } from "../../hooks/usePaginatedList";
-import { presenceColor } from "../shared/entityConstants";
+import { KindIcon, PlaceKindIcon, presenceColor } from "../shared/entityConstants";
+import { EntityHoverWrap } from "../shared/EntityHoverCard";
 import { FilterChips } from "../shared/FilterChips";
 import { Switch } from "../shared/Switch";
 import type { Essay } from "../../data/essays";
+import { ChevronUp, ChevronDown, Crosshair, Globe, Map as MapToggleIcon } from "lucide-react";
 import s from "./PanelLists.module.css";
 
 // ─── Places list (unified — replaces CitiesList + ArchaeologyList) ───────────
@@ -102,7 +104,7 @@ export function PlacesList({ search, currentDecade, onSelectPlace, onFlyToPlace,
             onClick={() => setMapVisibleOnly((v) => !v)}
             title={mapVisibleOnly ? "Showing map-visible only — click for all" : "Showing all places — click to filter to map-visible"}
           >
-            {mapVisibleOnly ? "🌍 Show all" : "🗺 Map only"}
+            {mapVisibleOnly ? <><Globe size={11} /> Show all</> : <><MapToggleIcon size={11} /> Map only</>}
           </button>
         </div>
       </div>
@@ -111,30 +113,34 @@ export function PlacesList({ search, currentDecade, onSelectPlace, onFlyToPlace,
         ? <div className={s.emptyState}>No places found.</div>
         : <>
             {pageItems.map((p) => (
-              <div key={p.place_id} className={s.listItem} onClick={() => onSelectPlace(p.place_id)}>
-                <span className={s.dot} style={{ background: presenceColor((p as any).presence_status ?? "unknown") }} />
-                <div className={s.main}>
-                  <div className={s.name}><Hl text={p.place_label} query={search} /></div>
-                  <div className={s.meta}>
-                    {p.place_label_modern && p.place_label_modern !== p.place_label ? `${p.place_label_modern} · ` : ""}
-                    {p.modern_country_label}
-                    <span className={`${s.faint} ${s.placeKindTag}`}>{p.place_kind}</span>
-                    {!mapVisibleOnly && decadePresence.has(p.place_id) && (
-                      <span className={s.onMapTag}>on map</span>
-                    )}
+              <EntityHoverWrap key={p.place_id} kind="place" id={p.place_id}>
+                <div className={s.listItem} onClick={() => onSelectPlace(p.place_id)}>
+                  <span className={s.icon} style={{ color: presenceColor((p as any).presence_status ?? "unknown") }}>
+                    <PlaceKindIcon kind={p.place_kind} size={14} />
+                  </span>
+                  <div className={s.main}>
+                    <div className={s.name}><Hl text={p.place_label} query={search} /></div>
+                    <div className={s.meta}>
+                      {p.place_label_modern && p.place_label_modern !== p.place_label ? `${p.place_label_modern} · ` : ""}
+                      {p.modern_country_label}
+                      <span className={`${s.faint} ${s.placeKindTag}`}>{p.place_kind}</span>
+                      {!mapVisibleOnly && decadePresence.has(p.place_id) && (
+                        <span className={s.onMapTag}>on map</span>
+                      )}
+                    </div>
                   </div>
+                  {p.lat != null && p.lon != null && (
+                    <button
+                      type="button"
+                      className={s.flyBtn}
+                      title="Fly to"
+                      onClick={(e) => { e.stopPropagation(); onFlyToPlace(p.place_id); }}
+                    >
+                      <Crosshair size={13} />
+                    </button>
+                  )}
                 </div>
-                {p.lat != null && p.lon != null && (
-                  <button
-                    type="button"
-                    className={s.flyBtn}
-                    title="Fly to"
-                    onClick={(e) => { e.stopPropagation(); onFlyToPlace(p.place_id); }}
-                  >
-                    ⌖
-                  </button>
-                )}
-              </div>
+              </EntityHoverWrap>
             ))}
             <Pagination page={page} total={places.length} pageSize={PAGE_SIZE} onChange={setPage} />
           </>
@@ -192,17 +198,12 @@ export function GroupsList({ search, currentDecade, onSelect, mapFilterId, mapFi
       {rows.length === 0
         ? <div className={s.emptyState}>No groups match this filter.</div>
         : null}
-      {pageItems.map((g) => {
-        const isFiltered = mapFilterType === "group" && mapFilterId === g.group_id;
-        return (
-          <div
-            key={g.group_id}
-            className={s.listItem}
-            onClick={() => onSelect(g.group_id)}
-          >
-            <span className={s.icon}>✦</span>
+      {pageItems.map((g) => (
+        <EntityHoverWrap key={g.group_id} kind="group" id={g.group_id}>
+          <div className={s.listItem} onClick={() => onSelect(g.group_id)}>
+            <span className={s.icon}><KindIcon kind="group" size={14} /></span>
             <div className={s.main}>
-              <div className={s.name}>{g.group_label}</div>
+              <div className={s.name}><Hl text={g.group_label} query={search} /></div>
               <div className={s.meta}>
                 {g.group_kind}
                 {g.count > 0 && ` · ${g.count} places at AD ${currentDecade}`}
@@ -210,8 +211,8 @@ export function GroupsList({ search, currentDecade, onSelect, mapFilterId, mapFi
             </div>
             {g.count > 0 && <span className={s.badge}>{g.count}</span>}
           </div>
-        );
-      })}
+        </EntityHoverWrap>
+      ))}
       <Pagination page={page} total={rows.length} pageSize={PAGE_SIZE} onChange={setPage} />
     </>
   );
@@ -234,7 +235,7 @@ export function PeopleList({ search, onSelect }: { search: string; onSelect: (id
     let all = dataStore.people.getAll();
     if (kindFilter) all = all.filter((p) => p.person_kind === kindFilter);
     if (!q) return all;
-    return all.filter((p) => `${p.person_label} ${p.name_alt.join(" ")} ${p.notes}`.toLowerCase().includes(q));
+    return all.filter((p) => p.person_label.toLowerCase().includes(q) || p.name_alt.some((n) => n.toLowerCase().includes(q)));
   }, [search, kindFilter]);
 
   const { page, setPage, pageItems } = usePaginatedList(people, PAGE_SIZE);
@@ -246,17 +247,19 @@ export function PeopleList({ search, onSelect }: { search: string; onSelect: (id
       <FilterChips label="Filter by kind" options={PERSON_KIND_OPTIONS} active={kindFilter} onChange={setKindFilter} />
       {people.length === 0 ? <div className={s.emptyState}>No people match this filter.</div> : null}
       {pageItems.map((p) => (
-        <div key={p.person_id} className={s.listItem} onClick={() => onSelect(p.person_id)}>
-          <span className={s.icon}>👤</span>
-          <div className={s.main}>
-            <div className={s.name}>{p.person_label}</div>
+        <EntityHoverWrap key={p.person_id} kind="person" id={p.person_id}>
+          <div className={s.listItem} onClick={() => onSelect(p.person_id)}>
+            <span className={s.icon}><KindIcon kind="person" size={14} /></span>
+            <div className={s.main}>
+              <div className={s.name}><Hl text={p.person_label} query={search} /></div>
             <div className={s.meta}>
               {p.person_kind !== "individual" ? p.person_kind : ""}
               {p.birth_year_display ? ` ${p.birth_year_display}` : ""}
               {p.death_year_display ? ` – ${p.death_year_display}` : ""}
             </div>
+            </div>
           </div>
-        </div>
+        </EntityHoverWrap>
       ))}
       <Pagination page={page} total={people.length} pageSize={PAGE_SIZE} onChange={setPage} />
     </>
@@ -281,9 +284,7 @@ export function PropositionsList({ search, onSelect }: {
     let all = dataStore.propositions.getAll();
     if (topicFilter) all = all.filter((p) => p.topic_id === topicFilter);
     if (!q) return all;
-    return all.filter((p) =>
-      `${p.proposition_label} ${p.description} ${p.polarity_family}`.toLowerCase().includes(q),
-    );
+    return all.filter((p) => p.proposition_label.toLowerCase().includes(q));
   }, [search, topicFilter]);
 
   const { page, setPage, pageItems } = usePaginatedList(propositions, PAGE_SIZE);
@@ -297,15 +298,17 @@ export function PropositionsList({ search, onSelect }: {
       {pageItems.map((p) => {
         const topic = dataStore.topics.getById(p.topic_id);
         return (
-          <div key={p.proposition_id} className={s.listItem} onClick={() => onSelect(p.proposition_id)}>
-            <span className={s.icon}>📝</span>
+          <EntityHoverWrap key={p.proposition_id} kind="proposition" id={p.proposition_id}>
+            <div className={s.listItem} onClick={() => onSelect(p.proposition_id)}>
+            <span className={s.icon}><KindIcon kind="proposition" size={14} /></span>
             <div className={s.main}>
               <div className={s.name}><Hl text={p.proposition_label} query={search} /></div>
               <div className={s.meta}>
                 {topic?.topic_label ?? p.topic_id}
               </div>
             </div>
-          </div>
+            </div>
+          </EntityHoverWrap>
         );
       })}
       <Pagination page={page} total={propositions.length} pageSize={PAGE_SIZE} onChange={setPage} />
@@ -335,7 +338,7 @@ export function EventsList({ search, onSelect }: {
     let all = dataStore.events.getAll();
     if (typeFilter) all = all.filter((e) => e.event_type === typeFilter);
     if (!q) return all;
-    return all.filter((e) => `${e.event_label} ${e.event_type} ${e.notes}`.toLowerCase().includes(q));
+    return all.filter((e) => e.event_label.toLowerCase().includes(q));
   }, [search, typeFilter]);
 
   const { page, setPage, pageItems } = usePaginatedList(events, PAGE_SIZE);
@@ -347,13 +350,15 @@ export function EventsList({ search, onSelect }: {
       <FilterChips label="Filter by type" options={EVENT_TYPE_OPTIONS} active={typeFilter} onChange={setTypeFilter} />
       {events.length === 0 ? <div className={s.emptyState}>No events match this filter.</div> : null}
       {pageItems.map((e) => (
-        <div key={e.event_id} className={s.listItem} onClick={() => onSelect(e.event_id)}>
-          <span className={s.icon}>⚡</span>
-          <div className={s.main}>
-            <div className={s.name}>{e.event_label}</div>
-            <div className={s.meta}>{e.event_type}</div>
+        <EntityHoverWrap key={e.event_id} kind="event" id={e.event_id}>
+          <div className={s.listItem} onClick={() => onSelect(e.event_id)}>
+            <span className={s.icon}><KindIcon kind="event" size={14} /></span>
+            <div className={s.main}>
+              <div className={s.name}><Hl text={e.event_label} query={search} /></div>
+              <div className={s.meta}>{e.event_type}</div>
+            </div>
           </div>
-        </div>
+        </EntityHoverWrap>
       ))}
       <Pagination page={page} total={events.length} pageSize={PAGE_SIZE} onChange={setPage} />
     </>
@@ -377,9 +382,7 @@ export function WorksList({ search, onSelect }: { search: string; onSelect: (id:
     let all = dataStore.works.getAll();
     if (typeFilter) all = all.filter((w) => w.work_type === typeFilter);
     if (!q) return all;
-    return all.filter((w) =>
-      `${w.title_display} ${w.title_original} ${w.work_type} ${w.notes}`.toLowerCase().includes(q),
-    );
+    return all.filter((w) => w.title_display.toLowerCase().includes(q) || (w.title_original || "").toLowerCase().includes(q));
   }, [search, typeFilter]);
 
   const { page, setPage, pageItems } = usePaginatedList(works, PAGE_SIZE);
@@ -391,16 +394,18 @@ export function WorksList({ search, onSelect }: { search: string; onSelect: (id:
       <FilterChips label="Filter by type" options={WORK_TYPE_OPTIONS} active={typeFilter} onChange={setTypeFilter} />
       {works.length === 0 ? <div className={s.emptyState}>No works match this filter.</div> : null}
       {pageItems.map((w) => (
-        <div key={w.work_id} className={s.listItem} onClick={() => onSelect(w.work_id)}>
-          <span className={s.icon}>📜</span>
-          <div className={s.main}>
-            <div className={s.name}>{w.title_display}</div>
-            <div className={s.meta}>
-              {w.work_type}
-              {w.language_original ? ` · ${w.language_original}` : ""}
+        <EntityHoverWrap key={w.work_id} kind="work" id={w.work_id}>
+          <div className={s.listItem} onClick={() => onSelect(w.work_id)}>
+            <span className={s.icon}><KindIcon kind="work" size={14} /></span>
+            <div className={s.main}>
+              <div className={s.name}><Hl text={w.title_display} query={search} /></div>
+              <div className={s.meta}>
+                {w.work_type}
+                {w.language_original ? ` · ${w.language_original}` : ""}
+              </div>
             </div>
           </div>
-        </div>
+        </EntityHoverWrap>
       ))}
       <Pagination page={page} total={works.length} pageSize={PAGE_SIZE} onChange={setPage} />
     </>
@@ -420,9 +425,7 @@ export function EssaysList({ search, essays, loading, onSelect }: {
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     if (!q) return essays;
-    return essays.filter((e) =>
-      `${e.title} ${e.summary} ${e.body}`.toLowerCase().includes(q),
-    );
+    return essays.filter((e) => e.title.toLowerCase().includes(q));
   }, [search, essays]);
 
   if (loading) return <div className={s.emptyState}>Loading essays…</div>;
@@ -436,9 +439,9 @@ export function EssaysList({ search, essays, loading, onSelect }: {
             className={`${s.listItem} ${s.listItemCenter}`}
             onClick={() => onSelect(e)}
           >
-            <span className={s.icon}>✍</span>
+            <span className={s.icon}><KindIcon kind="essay" size={14} /></span>
             <div className={s.main}>
-              <div className={s.name}>{e.title}</div>
+              <div className={s.name}><Hl text={e.title} query={search} /></div>
             </div>
             {e.summary && (
               <button
@@ -450,7 +453,7 @@ export function EssaysList({ search, essays, loading, onSelect }: {
                 }}
                 title={expandedId === e.id ? "Hide summary" : "Show summary"}
               >
-                {expandedId === e.id ? "▲" : "▼"}
+                {expandedId === e.id ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
               </button>
             )}
           </div>
