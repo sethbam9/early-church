@@ -51,7 +51,7 @@ function getEntityFacts(kind: string, id: string): [string, string][] {
     if (e) {
       rows.push(["Kind", e.source_kind]);
       if (e.author) rows.push(["Author", e.author]);
-      if (e.year) rows.push(["Year", e.year]);
+      if (e.year_display) rows.push(["Year", e.year_display]);
     }
   }
   return rows;
