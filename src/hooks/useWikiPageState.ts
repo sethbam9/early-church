@@ -35,6 +35,16 @@ export function useWikiPageState() {
     setSelectedClaimId(null);
   }, [searchParams]);
 
+  // Sync selection to URL so ShareButton captures current entity
+  useEffect(() => {
+    if (!selection) return;
+    const paramKey = `${selection.kind}:${selection.id}`;
+    lastHandledParam.current = paramKey; // prevent read-effect loop
+    const params: Record<string, string> = { kind: selection.kind, id: selection.id };
+    if (mode !== "browse") params.mode = mode;
+    window.history.replaceState(null, "", `/wiki?${new URLSearchParams(params).toString()}`);
+  }, [selection, mode]);
+
   const pushSelection = useCallback((sel: BrowseSelection) => {
     setSelection((prev) => {
       if (prev) setHistory((h) => [...h, prev]);

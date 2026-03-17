@@ -1,6 +1,10 @@
 import { ArrowUp, ArrowDown, Flag } from "lucide-react";
+import { InfoIcon } from "../shared/InfoIcon";
 import s from "./Wiki.module.css";
-import { useAuditData, AUDIT_EVIDENCE_ROLES } from "../../hooks/useAuditData";
+import {
+  useAuditData, AUDIT_EVIDENCE_ROLES,
+  ASSERTION_MODE_OPTIONS, WEIGHT_FILTER_OPTIONS, FLAG_FILTER_OPTIONS,
+} from "../../hooks/useAuditData";
 import type { AuditSortCol, AuditFilter } from "../../hooks/useAuditData";
 import { ENTITY_TABS, CERTAINTY_OPTIONS } from "../shared/entityConstants";
 import { Chip } from "../shared/Chip";
@@ -12,7 +16,8 @@ import { getClaimBorderClass } from "../../utils/claimAudit";
 
 const COL_CLS: Record<string, string> = {
   subject: s.auditColSubject || '', predicate: s.auditColPred || '', object: s.auditColObject || '',
-  year: s.auditColYear || '', certainty: s.auditColCert || '', ev: s.auditColEv || '', rev: s.auditColRev || '', status: s.auditColStatus || '',
+  year: s.auditColYear || '', certainty: s.auditColCert || '', ev: s.auditColEv || '', rev: s.auditColRev || '',
+  weight: s.auditColWeight || '', status: s.auditColStatus || '',
 };
 
 const SORT_OPTIONS: { value: string; label: string }[] = [
@@ -23,7 +28,17 @@ const SORT_OPTIONS: { value: string; label: string }[] = [
   { value: "reviewed-desc", label: "Sign-off date ↓" },
   { value: "year-asc", label: "Year ↑" },
   { value: "year-desc", label: "Year ↓" },
+  { value: "weight-asc", label: "Evidence weight ↑" },
+  { value: "weight-desc", label: "Evidence weight ↓" },
+  { value: "ev-desc", label: "Evidence count ↓" },
+  { value: "ev-asc", label: "Evidence count ↑" },
 ];
+
+function WeightCell({ weight, unscored }: { weight: number | null; unscored: boolean }) {
+  if (weight === null) return <span className={unscored ? s.weightUnscored : s.weightNone}>—</span>;
+  const cls = weight >= 0.7 ? s.wtHigh : weight >= 0.4 ? s.wtMid : s.wtLow;
+  return <span className={`${s.weightCellNum} ${cls}`}>{weight.toFixed(2)}</span>;
+}
 const STATUS_CLS: Record<string, string> = {
   "no-evidence": s.statusNoEvidence || '', unreviewed: s.statusUnreviewed || '',
   disputed: s.statusDisputed || '', "needs-revision": s.statusNeedsRevision || '',
@@ -90,6 +105,23 @@ export function AuditView({ onSelectEntity, onSelectClaim, selectedClaimId }: Au
             onChange={(v) => setFilters((f) => ({ ...f, roleFilter: v as AuditFilter["roleFilter"] }))}
             options={AUDIT_EVIDENCE_ROLES.map((r) => ({ value: r.key, label: r.label }))}
           />
+          <DropdownSelect
+            value={filters.assertionModeFilter}
+            onChange={(v) => setFilters((f) => ({ ...f, assertionModeFilter: v as AuditFilter["assertionModeFilter"] }))}
+            options={ASSERTION_MODE_OPTIONS}
+          />
+          <DropdownSelect
+            value={filters.weightFilter}
+            onChange={(v) => setFilters((f) => ({ ...f, weightFilter: v as AuditFilter["weightFilter"] }))}
+            options={WEIGHT_FILTER_OPTIONS}
+          />
+          <DropdownSelect
+            value={filters.flagFilter}
+            onChange={(v) => setFilters((f) => ({ ...f, flagFilter: v as AuditFilter["flagFilter"] }))}
+            options={FLAG_FILTER_OPTIONS}
+          />
+        </div>
+        <div className={s.auditFilterRow}>
           <SearchInput value={filters.predicateFilter} onChange={(v) => setFilters((f) => ({ ...f, predicateFilter: v }))} placeholder="Filter predicate…" />
           <SearchInput value={filters.searchFilter} onChange={(v) => setFilters((f) => ({ ...f, searchFilter: v }))} placeholder="Search entities…" />
           <DropdownSelect
@@ -97,7 +129,9 @@ export function AuditView({ onSelectEntity, onSelectClaim, selectedClaimId }: Au
             onChange={(v) => {
               if (v === "default") { setSortColDir(null, "default"); }
               else {
-                const [col, dir] = v.split("-") as [AuditSortCol, "asc" | "desc"];
+                const lastDash = v.lastIndexOf("-");
+                const col = v.slice(0, lastDash) as AuditSortCol;
+                const dir = v.slice(lastDash + 1) as "asc" | "desc";
                 setSortColDir(col, dir);
               }
             }}
@@ -109,7 +143,7 @@ export function AuditView({ onSelectEntity, onSelectClaim, selectedClaimId }: Au
       {/* Results */}
       <div className={s.auditResults}>
         <div className={s.auditTableHeader}>
-          {([["subject", "Subject"], ["predicate", "Predicate"], ["object", "Object"], ["year", "Year"], ["certainty", "Cert"], ["ev", "Ev"], ["rev", "Rev"], ["status", "Status"]] as [AuditSortCol, string][]).map(([col, label]) => {
+          {([["subject", "Subject"], ["predicate", "Predicate"], ["object", "Object"], ["year", "Year"], ["certainty", "Cert"], ["ev", "Ev"], ["rev", "Rev"], ["weight", "Wt"], ["status", "Status"]] as [AuditSortCol, string][]).map(([col, label]) => {
             const sortIcon = sortCol === col
               ? (sortDir === "asc" ? <ArrowUp size={10} /> : sortDir === "desc" ? <ArrowDown size={10} /> : null)
               : null;
@@ -127,6 +161,7 @@ export function AuditView({ onSelectEntity, onSelectClaim, selectedClaimId }: Au
               onClick={() => onSelectClaim(row.claim.claim_id)}>
               <span className={`${s.auditCol} ${s.auditColSubject}`} onClick={(e) => e.stopPropagation()}>
                 <EntityLink kind={row.claim.subject_type} id={row.claim.subject_id} onClick={() => onSelectEntity(row.claim.subject_type, row.claim.subject_id)} />
+                <InfoIcon claimId={row.claim.claim_id} />
               </span>
               <span className={`${s.auditCol} ${s.auditColPred}`}>{row.claim.predicate_id.replace(/_/g, " ")}</span>
               <span className={`${s.auditCol} ${s.auditColObject}`} onClick={(e) => e.stopPropagation()}>
@@ -138,6 +173,9 @@ export function AuditView({ onSelectEntity, onSelectClaim, selectedClaimId }: Au
               <span className={`${s.auditCol} ${s.auditColCert} ${CERT_CLS[row.claim.certainty] ?? ""}`}>{row.claim.certainty}</span>
               <span className={`${s.auditCol} ${s.auditColEv}`}>{row.evidenceCount}</span>
               <span className={`${s.auditCol} ${s.auditColRev}`}>{row.reviewCount}</span>
+              <span className={`${s.auditCol} ${s.auditColWeight}`}>
+                <WeightCell weight={row.avgWeight} unscored={row.hasUnscoredSupports} />
+              </span>
               <span className={`${s.auditCol} ${s.auditColStatus} ${STATUS_CLS[row.status] ?? ""}`}>
                 {row.status.replace("-", " ")}{row.isDuplicate ? <span style={{ marginLeft: 4 }}><Flag size={10} /></span> : ""}
               </span>

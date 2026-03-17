@@ -6,6 +6,8 @@ import { DropdownSelect } from "../shared/Dropdown";
 import { useAppStore } from "../../stores/appStore";
 import type { SelectionKind } from "../../data/types";
 import { Moon, Sun } from "lucide-react";
+import { ShareButton } from "../shared/ShareButton";
+import brandIcon from "/android-chrome-192x192.png";
 import s from "./NavBar.module.css";
 
 const PAGE_OPTIONS = [
@@ -39,7 +41,7 @@ export function NavBar() {
   return (
     <nav className={s.bar}>
       <div className={s.branding}>
-        <img src="/android-chrome-192x192.png" alt="" className={s.brandIcon} />
+        <img src={brandIcon} alt="" className={s.brandIcon} />
         <div className={s.logo}>
           Early Christianity Atlas
           <span className={s.logoSub}>AD 33 – 800</span>
@@ -82,6 +84,7 @@ export function NavBar() {
         <GuideNavIcon size={16} />
         <span>Guide</span>
       </NavLink>
+      <ShareButton />
       <button type="button" className={s.themeToggle} onClick={() => setDark((v) => !v)} title={dark ? "Switch to light mode" : "Switch to dark mode"}>
         {dark ? <Sun size={15} /> : <Moon size={15} />}
       </button>

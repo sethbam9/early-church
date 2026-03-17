@@ -54,12 +54,37 @@ export function MapPage() {
   const leftPanelVisible  = useAppStore((s) => s.leftPanelVisible);
   const rightPanelVisible = useAppStore((s) => s.rightPanelVisible);
 
+  const panelTab          = useAppStore((s) => s.panelTab);
   const setDecade         = useAppStore((s) => s.setDecade);
   const setIsPlaying      = useAppStore((s) => s.setIsPlaying);
   const setSelection      = useAppStore((s) => s.setSelection);
-  const setPanelTab     = useAppStore((s) => s.setPanelTab);
+  const setPanelTab       = useAppStore((s) => s.setPanelTab);
   const toggleLeftPanel   = useAppStore((s) => s.toggleLeftPanel);
   const toggleRightPanel  = useAppStore((s) => s.toggleRightPanel);
+
+  // ── URL hydration (on mount) + URL sync (on state change) ────────────────
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
+    const d = p.get("d");
+    if (d) { const n = parseInt(d, 10); if (!isNaN(n)) setDecade(n); }
+    const kind = p.get("kind");
+    const id   = p.get("id");
+    if (kind && id) {
+      setSelection({ kind: kind as import("../data/types").SelectionKind, id });
+      if (!rightPanelVisible) toggleRightPanel();
+    }
+    const tab = p.get("tab");
+    if (tab) setPanelTab(tab as import("../stores/appStore").PanelTab);
+  }, []); // mount-only
+
+  useEffect(() => {
+    const p = new URLSearchParams();
+    p.set("d", String(activeDecade));
+    if (selection) { p.set("kind", selection.kind); p.set("id", selection.id); }
+    if (panelTab !== "places") p.set("tab", panelTab);
+    window.history.replaceState(null, "", `?${p.toString()}`);
+  }, [activeDecade, selection, panelTab]);
 
   // ── Search-based place highlight set (from NavBar global query) ──────────
   const searchHighlightPlaceIds = useMemo(() => {

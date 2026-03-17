@@ -101,27 +101,6 @@
 .flagGray { background: var(--surface-2); color: var(--text-muted); }
 .flagGreen { background: rgba(26, 122, 92, 0.12); color: var(--color-success); }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-2);
-  padding: var(--space-2);
-  font-size: var(--font-size-xs);
-  color: var(--text-secondary);
-  border-top: 1px solid var(--border-subtle);
-}
-.pagination button {
-  padding: 2px var(--space-2);
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  background: var(--surface);
-  cursor: pointer;
-  font-size: var(--font-size-xs);
-}
-.pagination button:disabled {
-  opacity: 0.4;
-  cursor: default;
-}
 
 /* ── Center: Assertion Panel ── */
 .center {
@@ -142,7 +121,7 @@
   font-size: var(--font-size-md);
   gap: var(--space-2);
 }
-.emptyIcon { font-size: 2rem; opacity: 0.5; }
+.emptyIcon { color: var(--text-muted); opacity: 0.5; }
 
 .claimCard {
   background: var(--surface);
@@ -384,3 +363,113 @@
   color: var(--text-muted);
   font-size: var(--font-size-sm);
 }
+
+/* ── Flag variants ── */
+.flagOrange { background: rgba(192, 100, 10, 0.12); color: #b85c00; }
+
+/* ── Queue title / meta extras ── */
+.queueTitle { font-size: var(--font-size-sm); font-weight: 600; color: var(--text-primary); }
+.queueMetaNum { font-size: var(--font-size-xs); color: var(--text-muted); }
+.queueMetaFaint { font-size: var(--font-size-xs); color: var(--text-muted); }
+.filterChipFlag {
+  border-style: dashed;
+  opacity: 0.85;
+}
+
+/* ── Status progress bar ── */
+.progressBar {
+  display: flex;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--surface-2);
+  gap: 1px;
+}
+.progressSeg { height: 100%; transition: width 0.3s; }
+.segApproved   { background: var(--color-success); }
+.segOk         { background: #4caf89; }
+.segNeedsRev   { background: var(--color-warning); }
+.segDisputed   { background: var(--color-danger); }
+.segUnreviewed { background: var(--border-subtle); }
+.segNoEv       { background: #c0392b; }
+
+/* ── Evidence weight bar ── */
+.weightBarWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+  justify-self: start;
+  width: fit-content;
+}
+.weightBarFill {
+  display: inline-block;
+  height: 6px;
+  border-radius: 3px;
+  min-width: 2px;
+  flex-shrink: 0;
+}
+.weightHigh { background: var(--color-success); }
+.weightMid  { background: var(--color-warning); }
+.weightLow  { background: var(--color-danger); }
+.weightNum  { font-size: var(--font-size-xs); color: var(--text-muted); font-variant-numeric: tabular-nums; flex-shrink: 0; }
+.weightUnscored { font-size: var(--font-size-xs); color: var(--text-muted); font-style: italic; justify-self: start; }
+
+/* ── Avg weight in claim card header ── */
+.claimAvgWeight {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+/* ── Source tier badge ── */
+.tierBadge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.tier1 { background: rgba(26, 122, 92, 0.14); color: var(--color-success); }
+.tier2 { background: rgba(45, 110, 170, 0.14); color: #2d6eaa; }
+.tier3 { background: rgba(140, 60, 0, 0.12); color: #7a3c00; }
+
+/* ── Assertion mode badge ── */
+.assertBadge {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 10px;
+  justify-self: start;
+  width: fit-content;
+}
+.assertExplicit { background: rgba(26, 122, 92, 0.12); color: var(--color-success); }
+.assertStrong   { background: rgba(45, 110, 170, 0.12); color: #2d6eaa; }
+.assertWeak     { background: rgba(176, 126, 16, 0.12); color: var(--color-warning); }
+.assertBg       { background: var(--surface-2); color: var(--text-muted); }
+
+/* ── Evidence source row (source link + tier badge inline) ── */
+.evSourceRow { display: inline-flex; align-items: center; gap: 6px; }
+
+/* dead rule removed */
+
+/* ── Computed flags panel (right sidebar) ── */
+.computedFlagList { display: flex; flex-direction: column; gap: 4px; }
+.computedFlagItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 5px 8px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid;
+}
+.computedFlagCode  { font-size: var(--font-size-xs); font-weight: 700; font-family: var(--font-mono, monospace); letter-spacing: 0.03em; }
+.computedFlagLabel { font-size: var(--font-size-xs); color: var(--text-muted); }
+.computedFlagRed    { background: rgba(192, 57, 43, 0.08); border-color: var(--color-danger); }
+.computedFlagOrange { background: rgba(192, 100, 10, 0.08); border-color: #b85c00; }
+.computedFlagYellow { background: rgba(176, 126, 16, 0.08); border-color: var(--color-warning); }

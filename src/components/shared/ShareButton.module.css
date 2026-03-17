@@ -1,0 +1,25 @@
+.shareBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px var(--space-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-default);
+  background: none;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.13s, color 0.13s, border-color 0.13s;
+}
+
+.shareBtn:hover {
+  background: var(--bg-surface-2);
+  color: var(--text-primary);
+}
+
+.label {
+  font-size: var(--font-size-sm);
+}

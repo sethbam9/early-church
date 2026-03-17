@@ -1,7 +1,56 @@
 import { dataStore, getEntityLabel } from "../data/dataStore";
-import type { Claim } from "../data/types";
+import type { Claim, ClaimEvidence } from "../data/types";
 
 export type ClaimAuditStatus = "no-evidence" | "unreviewed" | "disputed" | "needs-revision" | "approved" | "ok";
+
+export function getSourceTier(sourceKind: string): "tier_1" | "tier_2" | "tier_3" {
+  if (["primary_text", "inscription"].includes(sourceKind)) return "tier_1";
+  if (["modern_book", "journal_article", "reference_work"].includes(sourceKind)) return "tier_2";
+  return "tier_3";
+}
+
+export function computeAvgWeight(evidence: ClaimEvidence[]): number | null {
+  const scored = evidence.filter((e) => e.evidence_role === "supports" && e.evidence_weight != null);
+  if (scored.length === 0) return null;
+  return scored.reduce((s, e) => s + (e.evidence_weight ?? 0), 0) / scored.length;
+}
+
+export const COMPUTED_FLAG_INFO: Record<string, { label: string; severity: "red" | "orange" | "yellow" }> = {
+  PARAPHRASE_RISK: { label: "Paraphrase risk", severity: "orange" },
+  UNSCORED_WEIGHT: { label: "Unscored weight", severity: "yellow" },
+  TERTIARY_ONLY:   { label: "Tertiary sources only", severity: "orange" },
+  WEIGHT_TENSION:  { label: "Weight vs certainty tension", severity: "red" },
+  NO_SUPPORTS:     { label: "No supports evidence", severity: "red" },
+};
+
+export function getComputedFlags(claim: Claim, evidence: ClaimEvidence[]): string[] {
+  const flags: string[] = [];
+  const supports = evidence.filter((e) => e.evidence_role === "supports");
+  if (evidence.length === 0) return flags;
+  if (supports.length === 0) { flags.push("NO_SUPPORTS"); return flags; }
+  if (supports.some((e) => e.evidence_weight == null)) flags.push("UNSCORED_WEIGHT");
+  for (const ev of supports) {
+    const passage = dataStore.passages.getById(ev.passage_id);
+    if (passage?.excerpt?.startsWith("Paraphrase:") && ev.support_aspect === "whole_claim" && ev.assertion_mode === "explicit") {
+      flags.push("PARAPHRASE_RISK");
+      break;
+    }
+  }
+  if (supports.length > 0) {
+    const allTertiary = supports.every((ev) => {
+      const passage = dataStore.passages.getById(ev.passage_id);
+      const source = passage ? dataStore.sources.getById(passage.source_id) : null;
+      return !source || getSourceTier(source.source_kind) === "tier_3";
+    });
+    if (allTertiary) flags.push("TERTIARY_ONLY");
+  }
+  const avg = computeAvgWeight(evidence);
+  if (avg !== null) {
+    if (avg < 0.5 && claim.certainty === "attested") flags.push("WEIGHT_TENSION");
+    else if (avg >= 0.9 && claim.certainty === "possible") flags.push("WEIGHT_TENSION");
+  }
+  return flags;
+}
 
 export function getClaimAuditStatus(claim: Claim): ClaimAuditStatus {
   const evidence = dataStore.claimEvidence.getForClaim(claim.claim_id);
@@ -36,6 +85,9 @@ export interface ClaimAuditRow {
   yearLabel: string;
   yearSort: number | null;
   latestReviewAt: string;
+  avgWeight: number | null;
+  hasUnscoredSupports: boolean;
+  computedFlags: string[];
 }
 
 let _auditCache: ClaimAuditRow[] | null = null;
@@ -64,6 +116,7 @@ export function getAuditRows(): ClaimAuditRow[] {
     const latestReviewAt = rv.length > 0
       ? rv.reduce((best, r) => r.reviewed_at > best ? r.reviewed_at : best, "")
       : "";
+    const supportEvidence = ev.filter((e) => e.evidence_role === "supports");
     return {
       claim: c,
       status: getClaimAuditStatus(c),
@@ -78,6 +131,9 @@ export function getAuditRows(): ClaimAuditRow[] {
       yearLabel,
       yearSort,
       latestReviewAt,
+      avgWeight: computeAvgWeight(ev),
+      hasUnscoredSupports: supportEvidence.some((e) => e.evidence_weight == null),
+      computedFlags: getComputedFlags(c, ev),
     };
   });
   return _auditCache;

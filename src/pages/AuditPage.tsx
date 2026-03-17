@@ -1,58 +1,27 @@
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { dataStore, getEntityLabel } from "../data/dataStore";
-import type { Claim, ClaimEvidence } from "../data/types";
+import type { ClaimEvidence } from "../data/types";
+import {
+  getAuditRows, getComputedFlags, getSourceTier,
+  COMPUTED_FLAG_INFO, type ClaimAuditRow,
+} from "../utils/claimAudit";
 import { getPredicateLabel } from "../domain/relationLabels";
 import { CertaintyBadge } from "../components/shared/CertaintyBadge";
 import { DerivationChain } from "../components/shared/DerivationChain";
 import { PassageReference } from "../components/shared/PassageReference";
 import { SearchInput } from "../components/shared/SearchInput";
+import { Pagination } from "../components/shared/Pagination";
 import { EntityHoverWrap } from "../components/shared/EntityHoverCard";
 import { KindIcon } from "../components/shared/entityConstants";
 import { formatYearRange } from "../utils/formatYear";
-import { BookOpen, FileText } from "lucide-react";
+import { BookOpen, FileText, Search } from "lucide-react";
 import s from "./AuditPage.module.css";
 
-type QueueFilter = "all" | "flagged" | "no_evidence" | "no_supports" | "unreviewed" | "approved" | "disputed";
+type QueueFilter = "all" | "flagged" | "no-evidence" | "needs-revision" | "unreviewed" | "approved" | "disputed" | "PARAPHRASE_RISK" | "UNSCORED_WEIGHT" | "TERTIARY_ONLY";
 
-interface ClaimFlags {
-  claim: Claim;
-  flags: string[];
-  evidenceCount: number;
-  reviewStatus: string;
-}
-
-function buildClaimFlags(): ClaimFlags[] {
-  const allClaims = dataStore.claims.getAll().filter((c: Claim) => c.claim_status === "active");
-  const out: ClaimFlags[] = [];
-  for (const claim of allClaims) {
-    const evidence = dataStore.claimEvidence.getForClaim(claim.claim_id);
-    const reviews = dataStore.claimReviews.getForClaim(claim.claim_id);
-    const reviewStatus = reviews.length > 0 ? (reviews[0]?.review_status ?? "unreviewed") : "unreviewed";
-    const flags: string[] = [];
-    if (evidence.length === 0) flags.push("no_evidence");
-    else {
-      const roles = new Set(evidence.map((e) => e.evidence_role));
-      if (!roles.has("supports")) flags.push("no_supports");
-    }
-    if (reviewStatus === "disputed") flags.push("disputed");
-    if (reviewStatus === "unreviewed") flags.push("unreviewed");
-    out.push({ claim, flags, evidenceCount: evidence.length, reviewStatus });
-  }
-  out.sort((a, b) => {
-    const rank = (f: ClaimFlags) => {
-      if (f.flags.includes("disputed")) return 0;
-      if (f.flags.includes("no_evidence")) return 1;
-      if (f.flags.includes("no_supports")) return 2;
-      if (f.flags.includes("unreviewed")) return 3;
-      return 4;
-    };
-    return rank(a) - rank(b);
-  });
-  return out;
-}
-
-function claimSentence(c: Claim): string {
+function claimSentence(row: ClaimAuditRow): string {
+  const c = row.claim;
   const sub = getEntityLabel(c.subject_type ?? "", c.subject_id ?? "");
   const pred = getPredicateLabel(c.predicate_id ?? "", true);
   const obj = c.object_mode === "entity" && c.object_id
@@ -61,14 +30,11 @@ function claimSentence(c: Claim): string {
   return `${sub} ${pred} ${obj}`;
 }
 
-function flagInfo(flag: string): { text: string; cls: string } {
-  switch (flag) {
-    case "no_evidence": return { text: "No evidence", cls: s.flagRed ?? "" };
-    case "no_supports": return { text: "No supports", cls: s.flagYellow ?? "" };
-    case "disputed": return { text: "Disputed", cls: s.flagRed ?? "" };
-    case "unreviewed": return { text: "Unreviewed", cls: s.flagGray ?? "" };
-    default: return { text: flag, cls: s.flagGray ?? "" };
-  }
+function statusChipCls(status: string): string {
+  if (status === "approved") return s.flagGreen ?? "";
+  if (status === "disputed" || status === "no-evidence") return s.flagRed ?? "";
+  if (status === "needs-revision") return s.flagYellow ?? "";
+  return s.flagGray ?? "";
 }
 
 function reviewBadgeCls(status: string): string {
@@ -76,6 +42,62 @@ function reviewBadgeCls(status: string): string {
   if (status === "reviewed") return s.reviewReviewed ?? "";
   if (status === "disputed") return s.reviewDisputed ?? "";
   return s.reviewDefault ?? "";
+}
+
+function WeightBar({ weight, unscored }: { weight: number | null; unscored?: boolean }) {
+  if (weight === null) return <span className={s.weightUnscored}>{unscored ? "unscored" : "—"}</span>;
+  const fillPx = Math.round(weight * 32);
+  const cls = weight >= 0.7 ? s.weightHigh : weight >= 0.4 ? s.weightMid : s.weightLow;
+  return (
+    <span className={s.weightBarWrap}>
+      <span className={`${s.weightBarFill} ${cls}`} style={{ width: `${fillPx}px` }} />
+      <span className={s.weightNum}>{weight.toFixed(2)}</span>
+    </span>
+  );
+}
+
+function SourceTierBadge({ sourceKind }: { sourceKind: string }) {
+  const tier = getSourceTier(sourceKind);
+  const cls = tier === "tier_1" ? s.tier1 : tier === "tier_2" ? s.tier2 : s.tier3;
+  const title = tier === "tier_1" ? "Primary source" : tier === "tier_2" ? "Secondary source" : "Tertiary source (web/wiki)";
+  const label = tier === "tier_1" ? "T1" : tier === "tier_2" ? "T2" : "T3";
+  return <span className={`${s.tierBadge} ${cls}`} title={title}>{label}</span>;
+}
+
+function AssertionBadge({ mode }: { mode: string }) {
+  const cls = mode === "explicit" ? s.assertExplicit
+    : mode === "strong_inference" ? s.assertStrong
+    : mode === "weak_inference" ? s.assertWeak
+    : s.assertBg;
+  const label = mode === "explicit" ? "explicit"
+    : mode === "strong_inference" ? "strong inf."
+    : mode === "weak_inference" ? "weak inf."
+    : mode || "—";
+  return <span className={`${s.assertBadge} ${cls}`}>{label}</span>;
+}
+
+function StatusProgressBar({ rows }: { rows: ClaimAuditRow[] }) {
+  const total = rows.length;
+  if (total === 0) return null;
+  const counts: Record<string, number> = {};
+  for (const r of rows) counts[r.status] = (counts[r.status] ?? 0) + 1;
+  const segs = [
+    { key: "approved", cls: s.segApproved, label: "Approved" },
+    { key: "ok",       cls: s.segOk,       label: "Reviewed" },
+    { key: "needs-revision", cls: s.segNeedsRev, label: "Needs revision" },
+    { key: "disputed", cls: s.segDisputed, label: "Disputed" },
+    { key: "unreviewed", cls: s.segUnreviewed, label: "Unreviewed" },
+    { key: "no-evidence", cls: s.segNoEv, label: "No evidence" },
+  ];
+  return (
+    <div className={s.progressBar} title={segs.map((seg) => `${seg.label}: ${counts[seg.key] ?? 0}`).join(" | ")}>
+      {segs.map((seg) => {
+        const pct = ((counts[seg.key] ?? 0) / total) * 100;
+        if (pct === 0) return null;
+        return <div key={seg.key} className={`${s.progressSeg} ${seg.cls}`} style={{ width: `${pct}%` }} />;
+      })}
+    </div>
+  );
 }
 
 // ── Clickable entity reference ──
@@ -95,50 +117,56 @@ const PAGE_SIZE = 50;
 export function AuditPage() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [filter, setFilter] = useState<QueueFilter>("all");
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(0);
 
-  const allFlags = useMemo(() => buildClaimFlags(), []);
+  const allRows = useMemo(() => getAuditRows(), []);
 
-  // Handle claimId from URL parameter
+  // Sync selectedId + filter to URL so ShareButton captures full state
   useEffect(() => {
-    const claimId = searchParams.get('claimId');
+    const params = new URLSearchParams();
+    if (selectedId) params.set("claimId", selectedId);
+    if (filter !== "all") params.set("filter", filter);
+    const q = params.toString();
+    window.history.replaceState(null, "", q ? `?${q}` : window.location.pathname);
+  }, [selectedId, filter]);
+
+  useEffect(() => {
+    const claimId = searchParams.get("claimId");
     if (claimId) {
       setSelectedId(claimId);
-      
-      // Find the claim in the filtered list and navigate to its page
-      const claimIndex = allFlags.findIndex((f) => f.claim.claim_id === claimId);
-      if (claimIndex !== -1) {
-        const targetPage = Math.floor(claimIndex / PAGE_SIZE);
-        setPage(targetPage);
-        
-        // Set filter to "all" to ensure the claim is visible
-        setFilter("all");
-      }
+      const idx = allRows.findIndex((r) => r.claim.claim_id === claimId);
+      if (idx !== -1) { setPage(Math.floor(idx / PAGE_SIZE)); setFilter("all"); }
+    } else {
+      const f = searchParams.get("filter") as QueueFilter | null;
+      if (f) setFilter(f);
     }
-  }, [searchParams, allFlags]);
+  }, [searchParams, allRows]);
 
   const filtered = useMemo(() => {
-    let list = allFlags;
-    if (filter === "flagged") list = list.filter((f) => f.flags.length > 0);
-    else if (filter === "no_evidence") list = list.filter((f) => f.flags.includes("no_evidence"));
-    else if (filter === "no_supports") list = list.filter((f) => f.flags.includes("no_supports"));
-    else if (filter === "unreviewed") list = list.filter((f) => f.reviewStatus === "unreviewed");
-    else if (filter === "approved") list = list.filter((f) => f.reviewStatus === "approved");
-    else if (filter === "disputed") list = list.filter((f) => f.flags.includes("disputed"));
+    let list = allRows;
+    if (filter === "flagged") list = list.filter((r) => r.status !== "approved" && r.status !== "ok");
+    else if (filter === "no-evidence") list = list.filter((r) => r.status === "no-evidence");
+    else if (filter === "needs-revision") list = list.filter((r) => r.status === "needs-revision");
+    else if (filter === "unreviewed") list = list.filter((r) => r.status === "unreviewed");
+    else if (filter === "approved") list = list.filter((r) => r.status === "approved");
+    else if (filter === "disputed") list = list.filter((r) => r.status === "disputed");
+    else if (filter === "PARAPHRASE_RISK") list = list.filter((r) => r.computedFlags.includes("PARAPHRASE_RISK"));
+    else if (filter === "UNSCORED_WEIGHT") list = list.filter((r) => r.hasUnscoredSupports);
+    else if (filter === "TERTIARY_ONLY") list = list.filter((r) => r.computedFlags.includes("TERTIARY_ONLY"));
     if (search) {
       const q = search.toLowerCase();
-      list = list.filter((f) => claimSentence(f.claim).toLowerCase().includes(q) || f.claim.claim_id.toLowerCase().includes(q));
+      list = list.filter((r) => claimSentence(r).toLowerCase().includes(q) || r.claim.claim_id.toLowerCase().includes(q));
     }
     return list;
-  }, [allFlags, filter, search]);
+  }, [allRows, filter, search]);
 
   const pageItems = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
-  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
 
-  const selected = selectedId ? allFlags.find((f) => f.claim.claim_id === selectedId) : null;
+  const selected = selectedId ? allRows.find((r) => r.claim.claim_id === selectedId) : null;
   const selectedClaim = selected?.claim ?? null;
   const selectedEvidence: ClaimEvidence[] = selectedClaim ? dataStore.claimEvidence.getForClaim(selectedClaim.claim_id) : [];
   const selectedReviews = selectedClaim ? dataStore.claimReviews.getForClaim(selectedClaim.claim_id) : [];
@@ -151,34 +179,39 @@ export function AuditPage() {
     );
   }, [selectedClaim]);
 
+  const selectedComputedFlags = useMemo(() =>
+    selectedClaim ? getComputedFlags(selectedClaim, selectedEvidence) : [],
+  [selectedClaim, selectedEvidence]);
+
   const onSelectEntity = (kind: string, id: string) => {
     if (kind === "claim") { setSelectedId(id); return; }
-    // Navigate to Wiki with URL params so useWikiPageState picks up the deep link
     navigate(`/wiki?kind=${encodeURIComponent(kind)}&id=${encodeURIComponent(id)}`);
   };
 
-  // Calculate filter counts
-  const filterCounts = useMemo(() => {
-    const counts: Record<QueueFilter, number> = {
-      all: allFlags.length,
-      flagged: allFlags.filter((f) => f.flags.length > 0).length,
-      no_evidence: allFlags.filter((f) => f.flags.includes("no_evidence")).length,
-      no_supports: allFlags.filter((f) => f.flags.includes("no_supports")).length,
-      unreviewed: allFlags.filter((f) => f.reviewStatus === "unreviewed").length,
-      approved: allFlags.filter((f) => f.reviewStatus === "approved").length,
-      disputed: allFlags.filter((f) => f.flags.includes("disputed")).length,
-    };
-    return counts;
-  }, [allFlags]);
+  const filterCounts = useMemo(() => ({
+    all: allRows.length,
+    flagged: allRows.filter((r) => r.status !== "approved" && r.status !== "ok").length,
+    "no-evidence": allRows.filter((r) => r.status === "no-evidence").length,
+    "needs-revision": allRows.filter((r) => r.status === "needs-revision").length,
+    unreviewed: allRows.filter((r) => r.status === "unreviewed").length,
+    approved: allRows.filter((r) => r.status === "approved").length,
+    disputed: allRows.filter((r) => r.status === "disputed").length,
+    PARAPHRASE_RISK: allRows.filter((r) => r.computedFlags.includes("PARAPHRASE_RISK")).length,
+    UNSCORED_WEIGHT: allRows.filter((r) => r.hasUnscoredSupports).length,
+    TERTIARY_ONLY: allRows.filter((r) => r.computedFlags.includes("TERTIARY_ONLY")).length,
+  }), [allRows]);
 
-  const filters: { key: QueueFilter; label: string }[] = [
+  const queueFilters: { key: QueueFilter; label: string; variant?: "flag" }[] = [
     { key: "all", label: `All (${filterCounts.all})` },
     { key: "flagged", label: `Flagged (${filterCounts.flagged})` },
-    { key: "no_evidence", label: `No Evidence (${filterCounts.no_evidence})` },
-    { key: "no_supports", label: `No Supports (${filterCounts.no_supports})` },
+    { key: "no-evidence", label: `No Evidence (${filterCounts["no-evidence"]})` },
+    { key: "needs-revision", label: `Needs Revision (${filterCounts["needs-revision"]})` },
     { key: "unreviewed", label: `Unreviewed (${filterCounts.unreviewed})` },
     { key: "approved", label: `Approved (${filterCounts.approved})` },
     { key: "disputed", label: `Disputed (${filterCounts.disputed})` },
+    { key: "PARAPHRASE_RISK", label: `Paraphrase Risk (${filterCounts.PARAPHRASE_RISK})`, variant: "flag" },
+    { key: "UNSCORED_WEIGHT", label: `Unscored (${filterCounts.UNSCORED_WEIGHT})`, variant: "flag" },
+    { key: "TERTIARY_ONLY", label: `Tertiary Only (${filterCounts.TERTIARY_ONLY})`, variant: "flag" },
   ];
 
   return (
@@ -186,12 +219,13 @@ export function AuditPage() {
       {/* ── Left: Claim Queue ── */}
       <div className={s.queue}>
         <div className={s.queueHeader}>
-          <div>Claim Queue <span className={s.queueCount}>{filtered.length} claims</span></div>
+          <div className={s.queueTitle}>Claim Queue <span className={s.queueCount}>{filtered.length} of {allRows.length}</span></div>
+          <StatusProgressBar rows={allRows} />
           <SearchInput value={search} onChange={setSearch} placeholder="Search claims..." />
           <div className={s.queueFilters}>
-            {filters.map((f) => (
+            {queueFilters.map((f) => (
               <button key={f.key}
-                className={`${s.filterChip}${filter === f.key ? ` ${s.filterChipActive}` : ""}`}
+                className={`${s.filterChip}${filter === f.key ? ` ${s.filterChipActive}` : ""}${f.variant === "flag" ? ` ${s.filterChipFlag}` : ""}`}
                 onClick={() => { setFilter(f.key); setPage(0); }}>
                 {f.label}
               </button>
@@ -203,24 +237,19 @@ export function AuditPage() {
             <div key={item.claim.claim_id}
               className={`${s.queueItem}${selectedId === item.claim.claim_id ? ` ${s.queueItemActive}` : ""}`}
               onClick={() => setSelectedId(item.claim.claim_id)}>
-              <div className={s.queueSentence}>{claimSentence(item.claim)}</div>
+              <div className={s.queueSentence}>{claimSentence(item)}</div>
               <div className={s.queueMeta}>
-                {item.flags.map((f) => {
-                  const fl = flagInfo(f);
-                  return <span key={f} className={`${s.flag} ${fl.cls}`}>{fl.text}</span>;
-                })}
-                <span>ev:{item.evidenceCount}</span>
-                <span>{item.claim.certainty}</span>
+                <span className={`${s.flag} ${statusChipCls(item.status)}`}>{item.status.replace("-", " ")}</span>
+                {item.computedFlags.map((f) => (
+                  <span key={f} className={`${s.flag} ${s.flagOrange}`}>{f.replace(/_/g, " ").toLowerCase()}</span>
+                ))}
+                <span className={s.queueMetaNum}>ev:{item.evidenceCount}</span>
+                {item.avgWeight !== null && <WeightBar weight={item.avgWeight} />}
+                <span className={s.queueMetaFaint}>{item.claim.certainty}</span>
               </div>
             </div>
           ))}
-          {totalPages > 1 && (
-            <div className={s.pagination}>
-              <button disabled={page === 0} onClick={() => setPage(page - 1)}>&larr; Prev</button>
-              <span>{page + 1} / {totalPages}</span>
-              <button disabled={page >= totalPages - 1} onClick={() => setPage(page + 1)}>Next &rarr;</button>
-            </div>
-          )}
+          <Pagination page={page} total={filtered.length} pageSize={PAGE_SIZE} onChange={setPage} />
         </div>
       </div>
 
@@ -228,14 +257,14 @@ export function AuditPage() {
       <div className={s.center}>
         {!selectedClaim ? (
           <div className={s.emptyCenter}>
-            <span className={s.emptyIcon}>🔍</span>
+            <Search size={28} className={s.emptyIcon} />
             <span>Select a claim from the queue to inspect</span>
           </div>
         ) : (
           <>
             {/* ── Claim Identity ── */}
             <div className={s.claimCard}>
-              <div className={s.claimSentence}>{claimSentence(selectedClaim)}</div>
+              <div className={s.claimSentence}>{claimSentence(selected!)}</div>
               <div className={s.claimDetails}>
                 <CertaintyBadge value={selectedClaim.certainty} />
                 <span className={s.detailChip}>{selectedClaim.claim_status}</span>
@@ -244,6 +273,11 @@ export function AuditPage() {
                 )}
                 {selectedClaim.context_place_id && (
                   <span className={s.detailChip}>@ {getEntityLabel("place", selectedClaim.context_place_id)}</span>
+                )}
+                {selected?.avgWeight !== undefined && (
+                  <span className={s.claimAvgWeight}>
+                    avg wt: <WeightBar weight={selected.avgWeight} unscored={selected.hasUnscoredSupports} />
+                  </span>
                 )}
                 <span className={s.claimId}>{selectedClaim.claim_id}</span>
               </div>
@@ -334,7 +368,7 @@ export function AuditPage() {
                             {ev.assertion_mode && (
                               <>
                                 <span className={s.evFieldLabel}>Assertion Mode</span>
-                                <span className={s.evMetaChip}>{ev.assertion_mode}</span>
+                                <AssertionBadge mode={ev.assertion_mode} />
                               </>
                             )}
 
@@ -345,12 +379,8 @@ export function AuditPage() {
                               </>
                             )}
 
-                            {ev.evidence_weight != null && (
-                              <>
-                                <span className={s.evFieldLabel}>Evidence Weight</span>
-                                <span className={s.evMetaChip}>{ev.evidence_weight}</span>
-                              </>
-                            )}
+                            <span className={s.evFieldLabel}>Evidence Weight</span>
+                            <WeightBar weight={ev.evidence_weight} unscored={ev.evidence_role === "supports" && ev.evidence_weight == null} />
 
                             {ev.notes && (
                               <>
@@ -366,14 +396,17 @@ export function AuditPage() {
                           <div className={s.evSection}>
                             <div className={s.evSectionTitle}>Passage Fields</div>
                             <div className={s.evFields}>
-                              <span className={s.evFieldLabel}>Source ID</span>
+                              <span className={s.evFieldLabel}>Source</span>
                               <span className={s.fieldValue}>
                                 {source ? (
-                                  <EntityHoverWrap kind="source" id={source.source_id}>
-                                    <button type="button" className={s.entityBtn} onClick={() => onSelectEntity("source", source.source_id)}>
-                                      <FileText size={12} /> {source.source_id}
-                                    </button>
-                                  </EntityHoverWrap>
+                                  <span className={s.evSourceRow}>
+                                    <EntityHoverWrap kind="source" id={source.source_id}>
+                                      <button type="button" className={s.entityBtn} onClick={() => onSelectEntity("source", source.source_id)}>
+                                        <FileText size={12} /> {source.source_id}
+                                      </button>
+                                    </EntityHoverWrap>
+                                    <SourceTierBadge sourceKind={source.source_kind} />
+                                  </span>
                                 ) : passage.source_id}
                               </span>
 
@@ -456,6 +489,26 @@ export function AuditPage() {
           <div className={s.emptyRight}>No claim selected</div>
         ) : (
           <>
+            {selectedComputedFlags.length > 0 && (
+              <div className={s.rightSection}>
+                <div className={s.rightTitle}>Audit Flags ({selectedComputedFlags.length})</div>
+                <div className={s.computedFlagList}>
+                  {selectedComputedFlags.map((flag) => {
+                    const info = COMPUTED_FLAG_INFO[flag];
+                    const cls = info?.severity === "red" ? s.computedFlagRed
+                      : info?.severity === "orange" ? s.computedFlagOrange
+                      : s.computedFlagYellow;
+                    return (
+                      <div key={flag} className={`${s.computedFlagItem} ${cls}`}>
+                        <span className={s.computedFlagCode}>{flag}</span>
+                        {info && <span className={s.computedFlagLabel}>{info.label}</span>}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
             <div className={s.rightSection}>
               <div className={s.rightTitle}>Review Status</div>
               {selectedReviews.length === 0 ? (

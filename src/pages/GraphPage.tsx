@@ -1,4 +1,5 @@
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { ChevronLeft, ChevronRight, X, ArrowLeftRight } from "lucide-react";
 import s from "./GraphPage.module.css";
 import type { GraphNode } from "../utils/forceLayout";
@@ -18,6 +19,35 @@ import { useGraphPageState, FILTER_OPTIONS } from "../hooks/useGraphPageState";
 export function GraphPage() {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const g = useGraphPageState(svgRef);
+  const [searchParams] = useSearchParams();
+  const didHandleUrlRef = useRef(false);
+
+  // Hydrate selected node from URL params once nodes are laid out
+  useEffect(() => {
+    if (didHandleUrlRef.current || g.allNodes.length === 0) return;
+    const kind = searchParams.get("kind");
+    const id   = searchParams.get("id");
+    didHandleUrlRef.current = true;
+    if (kind && id) {
+      const nodeKey = `${kind}:${id}`;
+      const node = g.allNodes.find((n) => n.id === nodeKey);
+      if (node) g.pushGraphSelection(nodeKey);
+    }
+  }, [g.allNodes.length]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Sync selected node to URL so ShareButton captures current selection
+  useEffect(() => {
+    if (!g.selectedKey) {
+      window.history.replaceState(null, "", window.location.pathname);
+      return;
+    }
+    const colon = g.selectedKey.indexOf(":");
+    if (colon < 0) return;
+    const p = new URLSearchParams();
+    p.set("kind", g.selectedKey.slice(0, colon));
+    p.set("id",   g.selectedKey.slice(colon + 1));
+    window.history.replaceState(null, "", `/graph?${p.toString()}`);
+  }, [g.selectedKey]);
   const {
     filters, setFilters, minConnections, setMinConnections,
     searchQuery, setSearchQuery, showDropdown, setShowDropdown,
