@@ -35,9 +35,9 @@ clm-2john-by-john	psg-irenaeus-ah-3-1-1	contextualizes				1.0	2 Jn 1:1 'the Elde
 clm-2peter-by-peter	psg-irenaeus-ah-3-1-1	contextualizes				1.0	2 Pet 1:1 claims Peter authorship; widely regarded as the latest NT writing (c. 100-150 CE) and pseudonymous; dependent on Jude; not attested before Origen.
 clm-2thessalonians-by-paul	psg-irenaeus-ah-3-1-1	contextualizes				0.5	AH 3.1.1 discusses Gospels, not 2 Thessalonians. Loose contextualizer. NO_SUPPORTS: claim lacks supporting evidence. Weight capped.
 clm-2timothy-by-paul	psg-irenaeus-ah-3-1-1	contextualizes				0.3	MISLINK: AH 3.1.1 discusses only the four Gospels (Matthew, Mark, Luke, John). Does NOT mention 2 Timothy or Pastoral Epistles. Downgraded to weak contextualizer for patristic authorship tradition awareness. 2 Tim 1:1 self-identifies as Paul.
-clm-3john-authored-by-john-son-of-zebedee	psg-3john-1	supports	predicate	strong_inference		1.0	3 John 1:1 self-identifies as from 'the elder'; traditional attribution to John the Apostle.
-clm-abgar-in-conversion-edessa	psg-eusebius-he-1-13	supports	whole_claim	explicit		0.7	King Abgar writes to Jesus and receives healing.
-clm-abgar-member-edessa-church	psg-wikipedia-early-church-geography	supports	whole_claim	explicit			Passage contextualizes abgar-viii-of-edessa's membership in edessa-church.
+clm-3john-authored-by-john-son-of-zebedee	psg-3john-1	supports	predicate	strong_inference		0.7	3 John 1:1: 'the elder' — traditional attribution to John son of Zebedee. strong_inference correct. Weight lowered from 1.0 to 0.7 to resolve WEIGHT_CERTAINTY_TENSION (certainty=possible).
+clm-abgar-in-conversion-edessa	psg-eusebius-he-1-13	supports	whole_claim	weak_inference		0.5	HE 1.13 describes the legendary Abgar V-Jesus correspondence (1st century), NOT the historical Abgar VIII conversion (c. 200). Entity notes acknowledge distinction. Evidence retained as weak contextualizer for the Edessa conversion tradition. Web verified.
+clm-abgar-member-edessa-church	psg-wikipedia-early-church-geography	contextualizes				0.3	Tertiary Wikipedia source. Mentions Edessa as early Christian center but does not attest Abgar VIII's membership specifically. Downgraded to contextualizes. Web verified.
 clm-abgar-viii-active-edessa	psg-wikipedia-early-church-geography	supports	whole_claim	explicit			Passage attests abgar-viii-of-edessa's activity in or near edessa.
 clm-acts-affirms-baptism-regen	psg-acts-1-21-26	contextualizes				0.2	MISLINK: Acts 1:21-26 Matthias election — nothing to do with baptismal regeneration. Needs Acts 2:38.
 clm-acts-affirms-baptism-regen	psg-acts-2-1-4	contextualizes				0.4	WEAK LINK: Acts 2:1-4 Pentecost Spirit filling, not baptism/regeneration. Acts 2:38 would be the correct passage.
@@ -113,7 +113,7 @@ clm-adv-prax-affirms-trinity	psg-tertullian-adv-prax-25	supports	predicate	expli
 clm-adv-prax-affirms-trinity	psg-tertullian-adv-prax-9	supports	predicate	explicit		0.9	Distinct persons but inseparable; anti-modalist trinitarian distinctions
 clm-adv-prax-by-tertullian	psg-tertullian-adv-prax-2	supports	whole_claim	explicit		0.9	
 clm-adv-prax-written-carthage	psg-tertullian-adv-prax-2	supports	whole_claim	strong_inference		0.55	Adv. Prax. 2 is a theological credal statement — says nothing about Carthage as place of writing. Place inferred from Tertullian's known career in Carthage. Weight scored at 0.55 for strong_inference place claim. UNSCORED fixed.
-clm-aeneas-active-lydda	psg-acts-9-32-35	supports	whole_claim	explicit		1.0	
+clm-aeneas-active-lydda	psg-acts-9-32-35	supports	whole_claim	explicit		1.0	Acts 9:32 'he came down also to the saints who lived at Lydda.' v33 'There he found a man named Aeneas.' Both Lydda and Aeneas explicit. Paraphrase accurate. Web verified at STEP Bible.
 clm-agabus-active-antioch	psg-acts-11-25-26	contextualizes				0.3	WRONG_LOCATOR: Acts 11:25-26 is Barnabas/Saul at Antioch. Agabus appears in v27-28. Downgraded; replaced by psg-acts-11-27-28.
 clm-agabus-active-antioch	psg-acts-11-27-28	supports	whole_claim	explicit		0.9	Verified: Acts 11:27-28 explicitly names Agabus among prophets who came to Antioch. Capped for paraphrase.
 clm-agabus-active-judea	psg-acts-21-10-11	supports	whole_claim	explicit		0.9	Verified: Acts 21:10 'a prophet named Agabus came down from Judea.' Explicit subject+object. Capped for paraphrase.
@@ -124,7 +124,7 @@ clm-agabus-member-disciples	psg-acts-11-25-26	contextualizes				0.3	WRONG_LOCATO
 clm-agabus-member-disciples	psg-acts-11-27-28	supports	whole_claim	strong_inference		0.6	Acts 11:27-28 — Agabus is a prophet in the early church. Discipleship inferred from prophetic role among believers.
 clm-against-heresies-by-irenaeus	psg-irenaeus-ah-3-3-4	supports	attribution	strong_inference		0.7	AH 3.3.4 paraphrase: Irenaeus not named in 3.3.4 excerpt; authorship established by whole-corpus attribution. mode explicit->strong_inference, wt 0.9->0.7.
 clm-against-heresies-written-lyons	psg-irenaeus-ah-3-3-1	supports	place	weak_inference		0.5	AH 3.3.1 paraphrase: Lyons not named in excerpt; inferred from Irenaeus's biographical context. mode explicit->weak_inference, wt 0.7->0.5.
-clm-agrippa-ii-active-caesarea	psg-acts-25-13-23	supports	whole_claim	explicit		1.0	
+clm-agrippa-ii-active-caesarea	psg-acts-25-13-23	supports	whole_claim	explicit		1.0	Acts 25:13 'Agrippa the king and Bernice arrived at Caesarea.' Agrippa and Caesarea both explicit. Paraphrase accurate. Verified.
 clm-ah-affirms-baptismal-anointing	psg-irenaeus-ah-3-17-2	supports	predicate	weak_inference		0.4	AH 3.17.2 paraphrase: 'same Spirit descended when we were baptized' — Spirit at baptism stated; oil anointing not named. mode explicit->weak_inference, wt 0.6->0.4.
 clm-ah-affirms-catechumenate	psg-irenaeus-ah-1-10-1	contextualizes				0.2	Passage does not address this specific proposition. Downgraded to contextualizes.
 clm-ah-affirms-military-refusal	psg-irenaeus-ah-3-4-1	contextualizes				0.2	Passage does not address this specific proposition. Downgraded to contextualizes.
@@ -140,22 +140,22 @@ clm-aksumite-church-controls-aksum	psg-rufinus-he-1-9	supports	whole_claim	expli
 clm-aksumite-church-controls-tyre	psg-wikipedia-aksumite-control	contextualizes				0.0	WRONG CLAIM: Aksumite Empire controlled Horn of Africa and parts of the Arabian Peninsula, NOT Tyre (Phoenicia/ Lebanon). Tyre was firmly in the Roman Empire. The Tyre connection is only that Meropius was FROM Tyre (Rufinus HE 1.9). Passage provides zero support. Claim should be rejected.
 clm-aksumite-church-group-schism-alexandrian	psg-rufinus-he-1-9	contextualizes				0.1	WRONG PREDICATE: Rufinus HE 1.9 shows Athanasius consecrating Frumentius as bishop of Aksum. This is AFFILIATION/DEPENDENCY, not schism. The Aksumite Church schismed from Chalcedonian orthodoxy post-451, not from Alexandria in 328-380. Predicate 'group_schismed_from' is incorrect for this period. Claim needs revision.
 clm-alban-active-britannia	psg-gildas-de-excidio-10	supports	place	explicit		0.6	Gildas De Excidio 10 explicitly places Alban's martyrdom in Verulamium, Britannia.
-clm-alban-participant-martyrdom	psg-gildas-de-excidio-10	supports	predicate	explicit		0.6	Gildas De Excidio 10 explicitly describes Alban's martyrdom — primary source.
-clm-alexander-ephesus-riot-active-ephesus	psg-acts-19-33-34	supports	whole_claim	explicit		1.0	
+clm-alban-participant-martyrdom	psg-gildas-de-excidio-10	supports	predicate	strong_inference		0.5	SOURCE MISLINK: passage assigned to src-rufinus-he but content is from Gildas De Excidio Britanniae. Excerpt ('these islands received the beams of light...Tiberius') describes Christianity reaching Britain, NOT Alban's martyrdom specifically. Gildas does describe Alban's martyrdom in De Excidio 10-11, but this excerpt misses it. Web verified.
+clm-alexander-ephesus-riot-active-ephesus	psg-acts-19-33-34	supports	whole_claim	explicit		1.0	Acts 19:33 'the Jews put forward Alexander' in the Ephesus theater riot. Alexander and Ephesus both explicit. Paraphrase accurate. Verified.
 clm-alexander-jerusalem-active-caesarea	psg-eusebius-he-6-19	supports	whole_claim	strong_inference		0.55	HE 6.19.17: Alexander defended Origen's preaching at Caesarea, showing cooperation with the Caesarean church. But 'active in Caesarea' is inference — Alexander was bishop of Jerusalem. Downgraded from explicit. Capped.
 clm-alexander-jerusalem-bishop-of	psg-eusebius-he-6-19	supports	whole_claim	strong_inference		0.7	HE 6.19.17 names 'Alexander, bishop of Jerusalem' in context of defending Origen's preaching. Passage is primarily about Origen, not Alexander's episcopacy. Downgraded from explicit. Capped for paraphrase.
 clm-alexander-jerusalem-member-alexandrian	psg-eusebius-he-6-19	supports	whole_claim	weak_inference		0.35	WEAK: HE 6.19.17 shows Alexander cooperating with Theoctistus of Caesarea in defending Origen. But Alexander was bishop of Jerusalem, not a member of the Caesarean church. Inter-episcopal cooperation != group membership. Downgraded from explicit to weak_inference.
 clm-alexander-jerusalem-participant-decian	psg-eusebius-he-6-19	contextualizes				0.1	MISLINK: HE 6.19 is about Origen's fame, Porphyry's testimony, and ordination controversy. The Decian persecution and Alexander's death in prison are in HE 6.39. Passage is contextual background only. Need psg-eusebius-he-6-39 for this claim.
 clm-alexander-jerusalem-teacher-of-origen	psg-eusebius-he-6-19	supports	whole_claim	strong_inference		0.7	HE 6.19.17: Alexander co-signed letter defending Origen's preaching at Caesarea. Shows episcopal cooperation and patronage. 'Coworker' is reasonable strong_inference. Downgraded from explicit. Capped for paraphrase.
-clm-alexandrian-church-at-egypt	psg-acts-18-24-28	supports	place	explicit			Acts 18:24 identifies Apollos as 'a native of Alexandria' who knew Christian teaching, directly attesting an Alexandrian Christian community.
-clm-alexandrian-church-present	psg-acts-18-24-28	supports	whole_claim	explicit			Acts 18:24 attests Apollos as an Alexandrian, evidencing the Alexandrian church.
+clm-alexandrian-church-at-egypt	psg-acts-18-24-28	supports	place	strong_inference		0.7	Acts 18:24 attests Apollos as 'from Alexandria' who knew Christian teaching, implying but not explicitly attesting an organized Alexandrian church. Web verified Acts 18:24-28.
+clm-alexandrian-church-present	psg-acts-18-24-28	supports	whole_claim	strong_inference		0.7	Acts 18:24 attests Apollos as Alexandrian with Christian instruction, implying community at Alexandria. Assertion downgraded from explicit to strong_inference.
 clm-ambrose-alex-active-alexandria	psg-eusebius-he-6-19	contextualizes				0.2	MISLINK: HE 6.19 paraphrase discusses Origen's fame, Beryllus, Alexander of Jerusalem, ordination at Caesarea. Ambrose NOT mentioned. Ambrose appears in HE 6.18 and 6.23. Downgraded.
 clm-ambrose-alex-active-rome	psg-eusebius-he-6-19	contextualizes				0.2	MISLINK: HE 6.19 paraphrase does NOT mention Ambrose or Rome (in Ambrose's context). Auto-upgrade note was incorrect. Downgraded.
 clm-ambrose-alex-member-alexandrian	psg-eusebius-he-6-3	contextualizes				0.2	MISLINK: HE 6.3 paraphrase discusses Origen succeeding Clement at catechetical school. Ambrose NOT mentioned in this passage. Need HE 6.18 for Ambrose. Downgraded.
-clm-ananias-high-priest-active-caesarea	psg-acts-24-1-9	supports	whole_claim	explicit		1.0	
+clm-ananias-high-priest-active-caesarea	psg-acts-24-1-9	supports	whole_claim	explicit		1.0	Acts 24:1 'the high priest Ananias came down with some elders and a spokesman, one Tertullus.' PARAPHRASE_OMISSION:subject — excerpt names Tertullus but omits Ananias. Passage confirms Ananias at Caesarea. Web verified at STEP Bible.
 clm-ananias-of-damascus-active-damascus	psg-acts-9-10-19	supports	whole_claim	explicit		1.0	
 clm-ananias-of-damascus-disciple	psg-acts-9-10-19	supports	whole_claim	explicit		1.0	
-clm-ananus-ii-in-james-just-martyrdom	psg-josephus-ant-20-200	supports	whole_claim	explicit		0.8	Josephus explicitly names Ananus, while the ordinal identification Ananus II is the standard historical contextualization.
+clm-ananus-ii-in-james-just-martyrdom	psg-josephus-ant-20-200	supports	whole_claim	explicit		0.8	Josephus Ant 20.200: 'the high priest Ananus assembled the Sanhedrin, accused James the brother of Jesus called Christ.' Ananus explicit; 'Ananus II' is standard historical identification. Paraphrase accurate. Verified.
 clm-andrew-active-galilee	psg-mark-1-16-20	supports	whole_claim	explicit		0.85	Mark 1:16-20 (paraphrase): Jesus calls Andrew at Sea of Galilee. Galilee implied by context. Capped per paraphrase.
 clm-andrew-active-jerusalem	psg-acts-1-13-14	supports	whole_claim	explicit		0.8	
 clm-andrew-coworker-peter	psg-john-1-35-42	supports	whole_claim	explicit		0.8	John 1:35-42 (paraphrase): 'Andrew brings his brother Simon Peter.' Direct co-worker evidence. Capped per paraphrase.
@@ -169,10 +169,10 @@ clm-andronicus-roman-church	psg-rom-16-7	supports	whole_claim	explicit		1.0
 clm-anicetus-bishop-rome	psg-eusebius-he-5-24	supports	whole_claim	explicit		0.8	HE 5.24: Polycarp's visit to Anicetus cited as precedent. Cap for paraphrase. Already 0.8.
 clm-anicetus-bishop-rome	psg-irenaeus-ah-3-3-4	supports	whole_claim	explicit		0.9	AH 3.3.3-4: Anicetus in Roman succession context. Polycarp visited Rome 'in the time of Anicetus.' Cap for paraphrase.
 clm-anicetus-member-roman-church	psg-irenaeus-ah-3-3-4	supports	whole_claim	explicit		0.8	AH 3.3.4: Anicetus named in Roman context. Church membership follows from episcopal role. Cap for paraphrase.
-clm-annals-by-tacitus	psg-tacitus-ann-15-44	supports	whole_claim	explicit		1.0	Tacitus names himself implicitly through his distinctive authorial voice; style universally identified as Tacitean.
+clm-annals-by-tacitus	psg-tacitus-ann-15-44	supports	whole_claim	explicit		1.0	Tacitus Annals 15.44 verbatim excerpt. Authorship universally attributed to Tacitus. Verified.
 clm-antipas-in-martyrdom	psg-rev-2-13	supports	whole_claim	explicit		1.0	
 clm-antipas-martyrdom-at-pergamum	psg-rev-2-13	supports	whole_claim	explicit		1.0	
-clm-antipas-martyrdom-year	psg-mark-6-17-29	supports	date	explicit			Year derived from associated narrative account.
+clm-antipas-martyrdom-year	psg-rev-2-13	supports	date	strong_inference		0.8	Repointed from Mark 6:17-29 (John the Baptist's death by Herod — MISLINK) to Rev 2:13 which names Antipas as 'killed among you' at Pergamum. Year 95 CE inferred from Revelation's Domitianic dating. Web verified Rev 2:12-13.
 clm-antipas-pergamum-church	psg-rev-2-13	supports	whole_claim	explicit		1.0	
 clm-antiquities-by-josephus	psg-josephus-ant-20-200	supports	whole_claim	explicit		1.0	Ant. 20.200 contains Josephus's self-identifying narration; preface explicitly names him as author.
 clm-antiquities-repentance	psg-josephus-ant-18-116-119	supports	predicate	explicit		1.0	
@@ -209,7 +209,7 @@ clm-aphrahat-affirms-trinitarian-baptism	psg-aphrahat-dem-1	contextualizes					D
 clm-aphrahat-affirms-virginity	psg-aphrahat-dem-18	supports	predicate	strong_inference		0.85	Dem.18 On Virginity: virginity as higher calling, consecrated become temples of Holy Spirit. Paraphrase cap: mode explicit->strong_inference, wt 1.0->0.85.
 clm-aphrahat-affirms-virginity	psg-aphrahat-dem-6	supports	predicate	strong_inference		0.8	Dem.6 On Members of Covenant: bnay qyama celibacy and renunciation as higher calling. Paraphrase cap: mode explicit->strong_inference, wt 0.9->0.8.
 clm-aphrahat-in-persecution	psg-aphrahat-dem-21	supports	whole_claim	explicit		0.8	Aphrahat addresses Christians under Shapur II's persecution.
-clm-aphrahat-member-church-east	psg-aphrahat-dem-1	supports	subject	strong_inference			Aphrahat's Demonstrations were written in Syriac from within the Persian church context.
+clm-aphrahat-member-church-east	psg-aphrahat-dem-1	supports	subject	strong_inference		0.6	Dem 1 (On Faith) doesn't name Church of the East explicitly. Aphrahat's Syriac language and Persian church context make membership a strong inference. Assertion correctly strong_inference. Web verified.
 clm-aphrahat-mentions-eucharist	psg-aphrahat-dem-4	contextualizes					Dem.4 On Prayer has no eucharistic body/blood content. Role downgraded to contextualizes; needs passage from Aphrahat specifically addressing the Eucharist as Christ's body and blood.
 clm-apol-affirms-martyrdom	psg-tertullian-apol-50	supports	predicate	explicit		0.95	Semen est sanguis Christianorum — martyrdom as witness and engine of church growth
 clm-apol-aristides-by-aristides	psg-aristides-apol-1-2	supports	attribution	explicit		0.85	Aristides Apol 1-2 verified: opening of the apology, self-attribution. Explicit authorship. Cap for paraphrase.
@@ -252,8 +252,8 @@ clm-aristarchus-coworker-paul	psg-phlm-23-24	supports	whole_claim	strong_inferen
 clm-aristarchus-coworker-tychicus	psg-col-4-7-9	contextualizes					MISLINK: Col 4:7-9 covers Tychicus+Onesimus. Aristarchus is in v.10 (verified via BibleGateway NIV). Downgraded to contextualizes. Needs fresh passage for Col 4:10.
 clm-aristarchus-member-roman-church	psg-phlm-23-24	supports	whole_claim	weak_inference		0.4	Phlm 24 (paraphrase): Aristarchus named. Rome not in text. Church membership inferred from prison epistle provenance.
 clm-aristarchus-member-thessalonian	psg-acts-20-4	supports	whole_claim	strong_inference		0.6	Acts 20:4 (paraphrase): 'of Thessalonica.' Church membership inferred from origin. Capped per paraphrase.
-clm-aristides-active-athens	psg-aristides-apol-1-2	supports	whole_claim	explicit		0.7	
-clm-aristides-active-rome	psg-aristides-apol-1-2	supports	whole_claim	explicit		0.6	Apology addressed to emperor in Rome.
+clm-aristides-active-athens	psg-aristides-apol-1-2	supports	whole_claim	strong_inference		0.7	Aristides self-identifies as 'an Athenian philosopher' in the Apology header. Excerpt (Apol 1-2) is doctrinal content, not location. Athens inferred from self-identification. Web verified.
+clm-aristides-active-rome	psg-aristides-apol-1-2	supports	whole_claim	weak_inference		0.6	Apology addressed to Emperor Hadrian, implying delivery at Rome. But text doesn't name Rome. Weak inference only. Web verified.
 clm-aristides-apol-addressed-rome	psg-aristides-apol-16	contextualizes				0.3	MISLINK: Apol 16 describes Christian ethical life (fasting, commandments). Does NOT mention Rome or the emperor. Rome addressing is known from the work's opening dedication to Hadrian, not from ch.16. Downgraded.
 clm-aristides-apol-affirms-logos	psg-aristides-apol-1-2	supports	predicate	explicit		0.85	Aristides Apol 1-2 verified: 'Jesus the Messiah Son of God Most High who came down from heaven.' Explicit Logos/pre-existence. Cap for paraphrase.
 clm-aristides-apol-affirms-logos	psg-aristides-apol-15	contextualizes				0.3	Apol 15 describes Christian ethical practices. No Logos theology content. Weak contextualization only.
@@ -380,10 +380,10 @@ clm-basilides-opposes-ot-scripture	psg-irenaeus-ah-1-24-1-2	supports	whole_claim
 clm-basilides-opposes-passion	psg-irenaeus-ah-1-24-1-2	supports	whole_claim	strong_inference		0.95	AH 1.24.1-2 (verbatim): 'Jesus did not suffer death; Simon of Cyrene was crucified in his stead.' Explicit denial of Christ's passion.
 clm-basilides-opposes-resurrection	psg-irenaeus-ah-1-24-1-2	supports	whole_claim	strong_inference		0.8	AH 1.24.1-2 (verbatim): Basilidean anthropology (soul as divine spark) precludes bodily resurrection. Strong inference.
 clm-basilides-opposes-virgin-birth	psg-irenaeus-ah-1-24-1-2	supports	predicate	strong_inference		0.7	AH 1.24.1-2 (verbatim): Passage doesn't directly address virgin birth. Basilidean Christology (phantom/substitution) implies denial. Strong inference only.
-clm-battle-milvian-bridge-year	psg-lactantius-de-mort-44	supports	whole_claim	explicit		1.0	Battle of Milvian Bridge fought 28 October 312 CE.
-clm-bernice-active-caesarea	psg-acts-25-13-23	supports	whole_claim	explicit		1.0	
-clm-beryllus-bishop-of-bostra	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.9	Eusebius names Beryllus of Bostra as bishop who invited Origen.
-clm-beryllus-participant-synod-bostra	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.9	Eusebius records the synod at Bostra where Origen corrected Beryllus.
+clm-battle-milvian-bridge-year	psg-lactantius-de-mort-44	supports	whole_claim	explicit		1.0	Lactantius De Mort. Pers. 44: Constantine directed in dream before battle. Explicit attestation of the battle. Verified.
+clm-bernice-active-caesarea	psg-acts-25-13-23	supports	whole_claim	explicit		1.0	Acts 25:13 'Agrippa the king and Bernice arrived at Caesarea.' Bernice and Caesarea both explicit. Paraphrase accurate. Verified.
+clm-beryllus-bishop-of-bostra	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.9	Passage locator 'HE 6.19' is inaccurate — HE 6.19 discusses Porphyry/Origen. The 'Beryllus...bishop of Bostra' text is in HE 6.20 and HE 6.33. Passage excerpt is a composite paraphrase. Claim content confirmed. Web verified.
+clm-beryllus-participant-synod-bostra	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.9	Passage locator 'HE 6.19' is inaccurate — synod of Bostra is in HE 6.33: 'Beryllus...bishop of Bostra in Arabia, turned aside from the ecclesiastical standard...Origen having been invited...brought him back.' Passage excerpt is a composite paraphrase. Claim content confirmed. Web verified.
 clm-british-church-at-britannia	psg-council-arles-subscriptions	supports	whole_claim	explicit		1.0	Three British bishops at Arles 314 confirm organized church.
 clm-british-church-at-britannia	psg-tertullian-adv-jud-7	supports	whole_claim	explicit		0.7	Tertullian's rhetorical attestation of British Christianity.
 clm-british-church-at-londinium	psg-council-arles-subscriptions	supports	whole_claim	explicit		1.0	Restitutus bishop of London attested in subscriptions.
@@ -398,9 +398,9 @@ clm-ca-affirms-ot-scripture	psg-hippolytus-ca-2-3	supports	predicate	explicit		0
 clm-ca-affirms-resurrection	psg-hippolytus-ca-61-64	supports	predicate	explicit		0.85	CA 61-64 (paraphrase): 'the dead shall be raised.' Directly supports bodily resurrection. Capped for paraphrase.
 clm-ca-by-hippolytus	psg-hippolytus-ca-2-3	supports	whole_claim	explicit		0.75	CA 2-3 (paraphrase): Prophetic inspiration from the Word. Internal evidence of authorship. Capped for paraphrase.
 clm-ca-written-rome	psg-hippolytus-ca-2-3	supports	place	strong_inference		0.5	CA 2-3 (paraphrase): Prophetic inspiration. Says nothing about Rome. Roman provenance inferred from Hippolytus's known location, not from passage content.
-clm-caesarean-church-at-caesarea	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.7	Eusebius attests the Caesarean church community.
+clm-caesarean-church-at-caesarea	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.7	HE 6.19: 'in Caesarea he was ordained presbyter by the bishops of Palestine.' Caesarea explicit. PARAPHRASE_OMISSION:subject — 'Caesarean church' as institution not named; inferred from ordination context. Verified.
 clm-caiaphas-active-jerusalem	psg-john-18-1-11	supports	whole_claim	explicit		0.8	
-clm-caiaphas-in-temple-era	psg-john-18-1-11	supports	whole_claim	explicit		0.7	
+clm-caiaphas-in-temple-era	psg-john-18-1-11	supports	whole_claim	weak_inference		0.3	MISLINK: John 18:1-11 = arrest in the garden, NOT temple cleansing. Caiaphas NOT named in vv1-11 (appears in 18:13-14). Event is temple-cleansing but passage describes arrest. Double mislink. Downgraded to weak_inference. Web verified.
 clm-calling-at-capernaum	psg-mark-1-16-20	supports	place	explicit		1.0	
 clm-calling-year	psg-mark-1-16-20	supports	date	explicit		0.7	Mark 1:16-20: Jesus calls Simon, Andrew, James, John. Year 28 derived from Galilean ministry timeline. Paraphrase valid.
 clm-callistus-bishop-rome	psg-hippolytus-ref-9-7	supports	whole_claim	strong_inference		0.8	Paraphrase says 'appointed over the cemetery by Zephyrinus' and 'brought many into his following.' Bishopric inferred from administrative role under Zephyrinus (bishop of Rome). Passage does not say 'bishop' explicitly. Cap for paraphrase + inference.
@@ -409,7 +409,7 @@ clm-callistus-member-roman-church	psg-hippolytus-ref-9-7	supports	whole_claim	ex
 clm-callistus-person-affirms-penance	psg-hippolytus-ref-9-11-12	supports	predicate	explicit		0.85	Paraphrase of Ref. 9.11-12: Callistus uses parables of tares and Noah's ark to defend keeping sinners. Directly relevant to penance. Cap for paraphrase form.
 clm-carpus-active-troas	psg-2tim-4-13	supports	whole_claim	explicit		0.9	2 Tim 4:13: 'the cloak left with Carpus at Troas.' Directly names Carpus at Troas. Cap for paraphrase.
 clm-carpus-disciple	psg-2tim-4-13	supports	whole_claim	strong_inference		0.7	2 Tim 4:13: Carpus is a host in Troas. Discipleship inferred from association with Paul; not explicitly called disciple.
-clm-carthage-church-at-carthage	psg-tertullian-apol-39	supports	whole_claim	explicit		0.8	Describes organized church community at Carthage with regular meetings and common fund
+clm-carthage-church-at-carthage	psg-tertullian-apol-39	supports	whole_claim	explicit		0.8	Apol. 39 describes organized Christian assembly. Carthage not named in passage text; inferred from Tertullian's known Carthaginian authorship. assertion_mode explicit is generous but defensible given the universally accepted provenance. Verified.
 clm-cda-affirms-incarnation	psg-hippolytus-cda-4-23	supports	predicate	explicit		0.8	Verified: 'first advent of our Lord in the flesh' — explicit incarnation language. Paraphrase capped at 0.8.
 clm-cda-affirms-judgment	psg-hippolytus-cda-4-23	supports	predicate	strong_inference		0.8	CDA 4.23 discusses 'second coming' and eschatological chronology. 'Judgment' is closely associated with second coming in the Commentary on Daniel but the specific excerpt says 'second coming,' not 'judgment.' Downgraded from explicit to strong_inference.
 clm-cda-affirms-resurrection	psg-hippolytus-cda-4-23	supports	predicate	weak_inference		0.45	WEAK: CDA 4.23 excerpt mentions first advent, suffering, and second coming but does NOT explicitly mention bodily resurrection. Resurrection is part of the broader eschatological framework but not in this excerpt. Downgraded from explicit to weak_inference.
@@ -418,7 +418,7 @@ clm-cda-written-rome	psg-hippolytus-cda-4-23	supports	place	strong_inference		0.
 clm-celerinus-active-carthage	psg-cyprian-lapsis-15-16	supports	whole_claim	explicit		0.7	
 clm-celerinus-in-decian-persecution	psg-eusebius-he-6-43	supports	subject	explicit		0.9	HE 6.43: Cornelius names Celerinus explicitly ('Celerinus, a man who by the grace of God most heroically endured all kinds of torture'). Paraphrase excerpt incomplete but source text is explicit.
 clm-celerinus-member-carthage-church	psg-cyprian-lapsis-15-16	supports	whole_claim	strong_inference		0.7	De Laps. 15-16: Cyprian presupposes confessor community. Celerinus not named in this passage but known from Ep. 39. Paraphrase omission valid, weight reduced.
-clm-cerinthians-at-ephesus	psg-irenaeus-ah-3-3-4	supports	whole_claim	explicit		0.8	
+clm-cerinthians-at-ephesus	psg-irenaeus-ah-1-26-1	supports	whole_claim	strong_inference		0.8	Repointed from AH 3.3.4 (Polycarp/Marcion, no Cerinthus mention) to AH 1.26.1 which explicitly names 'Cerinthus in Asia'. AH 3.11.1 also confirms John wrote against Cerinthus. Web verified.
 clm-cerinthians-schismed-from-ephesian	psg-irenaeus-ah-1-26-1	supports	whole_claim	explicit		0.7	
 clm-cerinthus-active-ephesus	psg-eusebius-he-3-28-1-2	supports	whole_claim	strong_inference		0.8	HE 3.28.1-2 (verbatim): John's bathhouse anecdote — implies Ephesus setting. Weight capped for strong_inference.
 clm-cerinthus-active-ephesus	psg-irenaeus-ah-1-26-1	supports	whole_claim	explicit		0.9	AH 1.26.1 (verbatim): 'A certain Cerinthus in Asia' — Ephesus is the primary Cerinthian location per bathhouse tradition.
@@ -430,7 +430,7 @@ clm-cerinthus-opposes-ot-scripture	psg-irenaeus-ah-1-26-1	supports	whole_claim	s
 clm-cerinthus-opposes-passion	psg-irenaeus-ah-1-26-1	supports	predicate	explicit		0.7	AH 1.26.1 (verbatim): 'Christ departed from Jesus, and then Jesus suffered' — Christ didn't suffer, only the man Jesus did.
 clm-cerinthus-opposes-virgin-birth	psg-irenaeus-ah-1-26-1	supports	predicate	explicit		0.7	AH 1.26.1 (verbatim): 'Jesus was not born of a virgin, but was the son of Joseph and Mary according to the ordinary course of human generation.' Explicit denial.
 clm-christianization-aksum-at-aksum	psg-rufinus-he-1-9	supports	whole_claim	explicit		1.0	Rufinus locates the event at Aksum.
-clm-christianization-aksum-year	psg-ezana-inscription-ge-ez	supports	date	explicit		0.9	Ezana's inscription shift from pagan to Christian confirms approximate date.
+clm-christianization-aksum-year	psg-ezana-inscription-ge-ez	supports	date	explicit		0.9	SOURCE MISLINK: Ezana Ge'ez inscription (RIE 271) is an archaeological inscription, not part of src-vita-constantini (Life of Constantine). Passage correctly describes Ezana's Christian formulae replacing pagan invocations. Source assignment needs correction but content is valid. Web verified.
 clm-christianization-aksum-year	psg-rufinus-he-1-9	supports	date	explicit		0.8	Rufinus's chronology implies c. 330.
 clm-church-east-at-arbela	psg-wikipedia-church-of-east-spread	contextualizes				0.4	TERTIARY: Wikipedia summary names Arbela as Church of East center. Tertiary only — needs primary source upgrade. Downgraded to contextualizes.
 clm-church-east-at-edessa	psg-wikipedia-church-of-east-spread	contextualizes				0.4	TERTIARY: Wikipedia summary names Edessa. Tertiary only — needs primary source upgrade. Downgraded to contextualizes.
@@ -498,7 +498,7 @@ clm-commatt-affirms-trinity	psg-origen-commatt-11-14	contextualizes					Passage 
 clm-commatt-affirms-virginity-honored	psg-origen-commatt-14-25	contextualizes				0.2	Comm. Matt. 14.25 is about episcopal duties; virginity not stated in this passage. Downgraded to contextualizes.
 clm-commatt-by-origen	psg-origen-commatt-11-14	supports	whole_claim	strong_inference		0.85	Comm. Matt. 11.14 paraphrase: content of Origen's Commentary on Matthew — authorship established by whole-work attestation. mode explicit->strong_inference, wt 1.0->0.85.
 clm-commatt-written-at-caesarea	psg-eusebius-he-6-19	supports	place	strong_inference		0.6	Eusebius HE 6.19 paraphrase: Origen moved to Caesarea after Alexandria conflict; Commentary on Matthew is a Caesarean work by scholarly consensus. mode explicit->strong_inference, wt 0.7->0.6.
-clm-community-rule-repentance	psg-community-rule-5-7-13	supports	predicate	explicit		1.0	
+clm-community-rule-repentance	psg-community-rule-5-7-13	supports	predicate	explicit		1.0	1QS 5.7-13 verified: 'Entrants to the community turn from evil and bind themselves to the covenant.' Directly supports repentance proposition. Web verified.
 clm-comrom-affirms-allegorical	psg-origen-comrom-3-8	supports	predicate	strong_inference		0.5	Comm. Rom. 3.8 paraphrase: justification by faith — Origen's allegorical exegesis method implied by commentary genre but not demonstrated in this excerpt. mode explicit->strong_inference, wt 0.7->0.5.
 clm-comrom-affirms-baptism-regeneration	psg-origen-comrom-6-7	supports	predicate	strong_inference		0.85	Comm. Rom. 6.7 paraphrase: baptism as death and burial with Christ; rising = new life — regeneration directly stated. mode explicit->strong_inference, wt 1.0->0.85.
 clm-comrom-affirms-baptism-trinitarian	psg-origen-comrom-5-9	supports	predicate	strong_inference		0.5	Comm. Rom. 5.9 direct quote: apostolic tradition of baptism; trinitarian formula implied by 'from the apostles' tradition but not stated in this excerpt. mode explicit->strong_inference, wt 0.6->0.5.
@@ -513,7 +513,7 @@ clm-comrom-affirms-penance	psg-origen-comrom-6-7	contextualizes				0.2	Comm. Rom
 clm-comrom-affirms-rule-of-faith	psg-origen-comrom-5-9	supports	predicate	strong_inference		0.6	Comm. Rom. 5.9 direct quote: 'Church received from the apostles the tradition' — apostolic tradition as rule of faith content. mode explicit->strong_inference, wt 0.7->0.6.
 clm-comrom-by-origen	psg-origen-comrom-5-9	supports	whole_claim	strong_inference		0.85	Comm. Rom. 5.9 direct quote: whole-work attestation; authorship by Origen established by tradition, not stated in this excerpt. mode explicit->strong_inference, wt 1.0->0.85.
 clm-comrom-written-at-caesarea	psg-eusebius-he-6-19	supports	place	strong_inference		0.6	Eusebius HE 6.19 paraphrase: Origen at Caesarea; Comm. Romans composed there by scholarly consensus. mode explicit->strong_inference, wt 0.7->0.6.
-clm-const381-event-year	psg-socrates-he-5-8	supports	date	explicit		1.0	Socrates HE 5.8 explicitly dates the Council of Constantinople to 381 CE.
+clm-const381-event-year	psg-socrates-he-5-8	supports	date	explicit		1.0	Socrates HE 5.8: council at Constantinople in 381. Explicit. Verified.
 clm-const381-event-year	psg-wikipedia-early-church-geography	contextualizes	date	explicit		1.0	Council of Constantinople 381 CE: widely attested date.
 clm-constantine-convenes-nicaea	psg-eusebius-vita-const-3-6	supports	whole_claim	explicit		1.0	Constantine convened and presided over the Council of Nicaea 325 CE; Vita Constantini 3.6-14 describes his role.
 clm-constantine-issues-edict-milan	psg-eusebius-he-10-5	supports	whole_claim	explicit		1.0	Constantine co-issued the Edict of Milan with Licinius at Milan 313 CE; Eusebius HE 10.5 preserves the text.
@@ -539,7 +539,7 @@ clm-contra-celsum-by-origen	psg-origen-contra-celsum-1-32	supports	attribution	s
 clm-contra-celsum-written-at-caesarea	psg-eusebius-he-6-19	supports	place	weak_inference		0.5	HE 6.19 paraphrase: Origen's fame and correspondents — Caesarea not named in excerpt; C. Cels. written in Caesarea is a biographical inference (Origen moved to Caesarea ~231 CE, wrote C. Cels. ~248 CE). mode explicit->weak_inference, wt 0.7->0.5.
 clm-conversion-at-damascus	psg-acts-9-1-19	supports	whole_claim	explicit		1.0	
 clm-conversion-edessa-at-edessa	psg-eusebius-he-1-13	supports	whole_claim	explicit		0.8	Conversion narrative set in Edessa.
-clm-conversion-edessa-year	psg-eusebius-he-1-13	supports	whole_claim	explicit		0.6	Eusebius dates the correspondence to Jesus's lifetime; historical conversion c. 200.
+clm-conversion-edessa-year	psg-eusebius-he-1-13	supports	whole_claim	weak_inference		0.4	HE 1.13 dates the Abgar-Jesus correspondence to Jesus's lifetime (c. 30 AD), not c. 200 AD. Year 200 for Abgar VIII's conversion is a modern scholarly inference, not from this passage. Assertion downgraded to weak_inference. Web verified.
 clm-conversion-year	psg-acts-9-1-19	supports	date	explicit		0.7	Acts 9:1-19: Damascus road conversion. Year 34 from early apostolic chronology. Paraphrase valid.
 clm-cornelius-active-caesarea	psg-acts-10-1-48	supports	whole_claim	explicit		0.9	Acts 10:1-48: 'Cornelius of Caesarea sends for Peter.' Direct. Cap for paraphrase form.
 clm-cornelius-disciple	psg-acts-10-1-48	supports	whole_claim	explicit		0.9	Acts 10:1-48: Holy Spirit falls on Cornelius's household, baptized. Direct discipleship. Cap for paraphrase form.
@@ -555,14 +555,14 @@ clm-cornelius-pope-person-affirms-penance	psg-eusebius-he-6-20-43	supports	whole
 clm-council-arles-at-arles	psg-council-arles-subscriptions	supports	whole_claim	explicit		1.0	Council subscription list from Arles.
 clm-council-arles-year	psg-council-arles-subscriptions	supports	whole_claim	explicit		1.0	Council dated 314 in subscriptions.
 clm-council-at-jerusalem	psg-acts-15-1-29	supports	whole_claim	explicit		1.0	
-clm-council-carthage-251-at-carthage	psg-cyprian-lapsis-15-16	supports	whole_claim	explicit		0.8	De Lapsis reflects the council's policy on readmission of the lapsed at Carthage.
-clm-council-carthage-251-year	psg-cyprian-lapsis-15-16	supports	whole_claim	explicit		0.8	De Lapsis written c. 251 in connection with the council.
-clm-council-carthage-252-at-carthage	psg-cyprian-ep64-2	supports	whole_claim	explicit		1.0	Ep. 64 explicitly reports the council's ruling at Carthage.
-clm-council-carthage-252-year	psg-cyprian-ep64-2	supports	whole_claim	explicit		1.0	Ep. 64 dates from the council of c. 252.
-clm-council-carthage-256-at-carthage	psg-cyprian-sent-proem	supports	whole_claim	explicit		1.0	The Sententiae proem opens the council session at Carthage.
-clm-council-carthage-256-year	psg-cyprian-sent-proem	supports	whole_claim	explicit		1.0	Council held September 1, 256 as recorded in the Sententiae.
-clm-council-ephesus-431-year	psg-wikipedia-council-ephesus-431	supports	whole_claim	explicit			Year derived from associated narrative account.
-clm-council-ephesus-at-ephesus	psg-wikipedia-council-ephesus-431	supports	whole_claim	explicit			Passage contextualizes the location of council-of-ephesus-431.
+clm-council-carthage-251-at-carthage	psg-cyprian-lapsis-15-16	supports	whole_claim	strong_inference		0.8	De Lapsis 15-16 verified: discusses graded penance under episcopal authority. Carthage not explicitly named — inferred from Cyprian's bishopric. Downgraded to strong_inference. Web verified at newadvent.org/fathers/050703.htm.
+clm-council-carthage-251-year	psg-cyprian-lapsis-15-16	supports	whole_claim	explicit		0.8	De Lapsis 15-16 verified: content matches paraphrase about graded penance. Written c. 251 in connection with council. Web verified.
+clm-council-carthage-252-at-carthage	psg-cyprian-ep64-2	supports	whole_claim	strong_inference		1.0	Ep. 58 ANF (=modern Ep. 64) verified: 'we all thought very differently in our council.' Carthage inferred from Cyprian's see, not explicit. SOURCE URL FIXED: 050664.htm→050658.htm. Web verified.
+clm-council-carthage-252-year	psg-cyprian-ep64-2	supports	whole_claim	explicit		1.0	Ep. 58 ANF (=modern Ep. 64) verified: infant baptism letter to Fidus. Dated c. 252. SOURCE URL FIXED. Web verified.
+clm-council-carthage-256-at-carthage	psg-cyprian-sent-proem	supports	whole_claim	strong_inference		1.0	Sententiae proem verified at newadvent.org/fathers/0508.htm: 'bishops from Africa, Numidia, and Mauritania had met together at Carthage.' Carthage IS explicit in the proem header. SOURCE URL FIXED: 050607.htm→0508.htm. Web verified.
+clm-council-carthage-256-year	psg-cyprian-sent-proem	supports	whole_claim	explicit		1.0	Sententiae verified: 'Kalends of September, a.d. 258' in header (ANF dating; standard dating is 256). SOURCE URL FIXED. Web verified.
+clm-council-ephesus-431-year	psg-wikipedia-council-ephesus-431	contextualizes				0.3	Tertiary Wikipedia source. Year 431 is universally attested but needs primary evidence. Downgraded to contextualizes. Web verified.
+clm-council-ephesus-at-ephesus	psg-wikipedia-council-ephesus-431	contextualizes				0.3	Tertiary Wikipedia source. Ephesus location undisputed but needs primary evidence. Downgraded to contextualizes. Web verified.
 clm-council-year	psg-acts-15-1-29	supports	date	explicit		0.7	Acts 15:1-29: Jerusalem council. Year 49 from early mission chronology. Paraphrase valid.
 clm-crescens-active-galatia	psg-2tim-4-10-12	supports	whole_claim	explicit		0.9	2 Tim 4:10: 'Crescens to Galatia.' Directly stated. Cap for paraphrase form.
 clm-crescens-disciple	psg-2tim-4-10-12	supports	whole_claim	strong_inference		0.7	2 Tim 4:10: Crescens sent by Paul. Discipleship inferred from being dispatched; not explicitly called disciple.
@@ -580,13 +580,13 @@ clm-cyprian-in-cyprians-martyrdom	psg-eusebius-he-7-9	supports	whole_claim	expli
 clm-cyprian-in-decian-persecution	psg-eusebius-he-6-20-43	contextualizes				0.3	HE 6.43 on Novatian schism mentions Cyprian's letters in context of lapsed controversy. Paraphrase excerpt doesn't state Cyprian's involvement in Decian persecution.
 clm-cyprian-member-carthage-church	psg-eusebius-he-6-20-43	contextualizes				0.3	HE 6.43 on Novatian schism mentions Cyprian in passing. Paraphrase excerpt about Hippolytus/Novatian, not Cyprian's church membership.
 clm-cyprian-teacher-of-pontius	psg-cyprian-lapsis-15-16	supports	predicate	strong_inference		0.5	Cyprian De Laps. reflects the Carthaginian church where Pontius served as Cyprian's deacon.
-clm-cyprians-martyrdom-at-carthage	psg-eusebius-he-7-9	supports	whole_claim	explicit		0.8	Eusebius places Cyprian's martyrdom in his North African bishopric.
-clm-cyprians-martyrdom-year	psg-eusebius-he-7-9	supports	whole_claim	explicit		0.9	Eusebius dates Cyprian's death to the Valerianic persecution c. 258.
-clm-cyril-participant-ephesus-431	psg-socrates-he-7-34	supports	predicate	explicit		1.0	Socrates HE 7.34 explicitly identifies Cyril as presiding at the Council of Ephesus 431.
+clm-cyprians-martyrdom-at-carthage	psg-eusebius-he-7-9	supports	whole_claim	explicit		0.8	LOCATOR ERROR: HE 7.9 is 'The Ungodly Baptism of the Heretics' (Dionysius to Xystus). Cyprian's exile and martyrdom are described in HE 7.10-11 (Valerian persecution). Excerpt is a composite paraphrase not matching HE 7.9 content. Web verified at newadvent.org.
+clm-cyprians-martyrdom-year	psg-eusebius-he-7-9	supports	whole_claim	explicit		0.9	LOCATOR ERROR: HE 7.9 = heretical baptism. Cyprian's martyrdom under Valerian (258) is from HE 7.10-11. Excerpt composite. Web verified.
+clm-cyril-participant-ephesus-431	psg-socrates-he-7-34	supports	predicate	explicit		1.0	Socrates HE 7.34: 'Cyril presided over the council at Ephesus.' Explicit. Verified.
 clm-cyril-participant-ephesus-431	psg-wikipedia-early-church-geography	contextualizes	predicate	strong_inference		1.0	Cyril's presidency at Ephesus 431 is universally attested in the tradition.
 clm-damaris-active-athens	psg-acts-17-34	supports	whole_claim	explicit		1.0	
 clm-damaris-disciple	psg-acts-17-32-34	supports	whole_claim	explicit		1.0	
-clm-damascus-document-repentance	psg-damascus-document-2-7-10	supports	predicate	explicit		1.0	
+clm-damascus-document-repentance	psg-damascus-document-2-7-10	supports	predicate	explicit		1.0	CD 2.7-10 verified at UPenn Schechter edition: exhortation to those 'who entered into the covenant' — God's knowledge, forgiveness, and call to return. Paraphrase accurate. Web verified.
 clm-de-bapt-affirms-anointing	psg-tertullian-de-bapt-1	contextualizes				0.3	WEAK LINK: De Bapt. 1 (verbatim) about water baptism generally. Anointing is described in De Bapt. 7. Needs correct passage.
 clm-de-bapt-affirms-catechumenate	psg-tertullian-de-bapt-1	contextualizes				0.3	WEAK LINK: De Bapt. 1 (verbatim) about water baptism generally. Catechumenate is in De Bapt. 18-20. Needs correct passage.
 clm-de-bapt-affirms-regeneration	psg-tertullian-de-bapt-1	supports	predicate	explicit		0.95	De Bapt. 1 (verbatim): 'washing away the sins of our early blindness, we are set free and admitted into eternal life.' Explicitly supports baptismal regeneration.
@@ -642,7 +642,7 @@ clm-de-lapsis-by-cyprian	psg-cyprian-lapsis-6	supports	attribution	strong_infere
 clm-de-lapsis-mentions-almsgiving	psg-cyprian-laps-2	supports	subject	weak_inference		0.4	De Lapsis 2 mentions eucharistic body and blood; §35 urges works of satisfaction. Almsgiving inferred from Cyprian's wider penitential theology but not explicit in De Lapsis.
 clm-de-lapsis-written-carthage	psg-cyprian-lapsis-6	supports	place	weak_inference		0.5	De Laps. 6 paraphrase: Carthage not named in excerpt; inferred from Cyprian's known location as bishop of Carthage c.251 CE. mode explicit->weak_inference, wt 0.7->0.5.
 clm-de-orat-by-tertullian	psg-tertullian-de-orat-1	supports	whole_claim	explicit		0.9	
-clm-de-orat-written-carthage	psg-tertullian-de-orat-1	supports	whole_claim	strong_inference			Passage from de-oratione contextualizes its composition at carthage.
+clm-de-orat-written-carthage	psg-tertullian-de-orat-1	supports	whole_claim	strong_inference		0.6	De Orat. 1 does not mention Carthage. Carthage inferred from Tertullian's known base of operations. Assertion correctly strong_inference. Web verified.
 clm-de-paen-affirms-penance	psg-tertullian-de-paen-7-9	supports	predicate	explicit		0.9	De Paen. 7-9: exomologesis — one post-baptismal repentance. Direct support. Cap 0.95→0.9 for paraphrase.
 clm-de-paen-by-tertullian	psg-tertullian-de-paen-7-9	supports	whole_claim	explicit		0.9	
 clm-de-paen-written-carthage	psg-tertullian-de-paen-7-9	supports	whole_claim	strong_inference		0.7	De Paen. 7-9: excerpt doesn't name Carthage. Location inferred from Tertullian's base. Scored. Already strong_inference.
@@ -683,7 +683,7 @@ clm-demas-active-thessalonica-late	psg-2tim-4-10-12	supports	whole_claim	explici
 clm-demas-coworker-paul	psg-phlm-23-24	supports	whole_claim	explicit		0.9	Verified: Phlm 24 'Demas...my fellow workers.' Explicit coworker relationship. Capped for paraphrase.
 clm-demas-disciple	psg-phlm-23-24	supports	whole_claim	strong_inference		0.7	Phlm 24 'my fellow workers' implies Christian discipleship but 'member of disciples-of-jesus' group is inferred from coworker status.
 clm-demas-member-roman-church	psg-phlm-23-24	supports	whole_claim	weak_inference		0.5	Phlm 24 does not mention Rome or Roman church. Rome inferred from captivity context. Church membership doubly inferred.
-clm-demetrius-active-ephesus	psg-acts-19-24-27	supports	whole_claim	explicit		1.0	
+clm-demetrius-active-ephesus	psg-acts-19-24-27	supports	whole_claim	explicit		1.0	Acts 19:24 'a silversmith named Demetrius, who made silver shrines of Artemis.' Demetrius and Ephesus both explicit. Paraphrase accurate. Verified.
 clm-demetrius-bishop-of-alexandria	psg-eusebius-he-6-3	supports	whole_claim	explicit		0.85	Verified after excerpt update: HE 6.3.8 'Demetrius, bishop of Alexandria, entrusted Origen.' Explicit identification. Capped for paraphrase.
 clm-demetrius-coworker-origen	psg-eusebius-he-6-3	supports	whole_claim	strong_inference		0.65	HE 6.3 (updated): Demetrius entrusted Origen with catechetical school. Bishop-appointee relationship implies coworker status but 'coworker' is inference from hierarchical relationship.
 clm-demetrius-member-alexandrian	psg-eusebius-he-6-3	supports	whole_claim	strong_inference		0.75	HE 6.3 (updated) names Demetrius as bishop of Alexandria. Church membership inferred from episcopate. Capped for paraphrase + inference.
@@ -771,8 +771,8 @@ clm-didascalia-affirms-threefold-ministry	psg-didascalia-2-4	supports	predicate	
 clm-didascalia-affirms-trinitarian-baptism	psg-didascalia-9-16	supports	predicate	strong_inference		0.75	Didascalia 9 paraphrase: baptism administered with invocation (Trinitarian formula implied in ch.9 rite). Paraphrase cap: mode explicit->strong_inference, wt 0.9->0.75.
 clm-didascalia-affirms-virginity	psg-didascalia-14-16	supports	predicate	strong_inference		0.65	Didascalia 14-16 paraphrase: widows and deaconesses devoted to prayer and chastity — virginity/celibacy honored but not named explicitly. Paraphrase cap: mode explicit->strong_inference, wt 0.8->0.65.
 clm-didascalia-written-syria	psg-didascalia-12-21	supports	whole_claim	strong_inference		0.65	Didascalia 12/21 paraphrase: liturgical practices and church-building references reflect Syrian context. Syrian provenance is a scholarly inference from the whole work; Ch.12 and 21 provide contextual (not definitive) evidence. mode=strong_inference retained, wt 0.8->0.65.
-clm-diognetus-affirms-logos	psg-diognetus-5-6	contextualizes				1.0	Diognetus 5-6 sojourner theology provides context for the Logos-driven Christian identity.
-clm-diognetus-affirms-logos	psg-diognetus-7	supports	predicate	explicit		1.0	
+clm-diognetus-affirms-logos	psg-diognetus-5-6	contextualizes				1.0	Diogn. 5-6 describes Christians as sojourners. Contextualizes the Logos-driven identity but does not directly assert Logos pre-existence. Role correctly set to contextualizes.
+clm-diognetus-affirms-logos	psg-diognetus-7	supports	predicate	explicit		1.0	Diogn. 7.2-4: 'He sent the very Creator and Fashioner of all things.' Logos as Creator sent by God — explicit high Christology. Verified.
 clm-dionysius-active-athens	psg-acts-17-34	supports	whole_claim	explicit		1.0	
 clm-dionysius-alex-active-rome-exile	psg-eusebius-he-6-43	contextualizes					HE 6.43 preserves Cornelius' letter about Novatian; does not directly place Dionysius of Alexandria in Rome
 clm-dionysius-alex-affirms-logos	psg-eusebius-he-6-43	contextualizes					MISLINK: HE 6.43 is Cornelius on Novatian's ordination + Roman clergy list. No Logos theology or Dionysius content. Needs Athanasius De Sent. Dionysii or HE 7.26.
@@ -809,12 +809,12 @@ clm-docetists-at-phrygia	psg-wikipedia-gnostic-spread	contextualizes				0.3	Wiki
 clm-docetists-at-rome	psg-ignatius-smyrn-1	supports	subject	strong_inference		0.4	Smyrn. 1 (paraphrase): Ignatius's anti-docetist confession. Passage addresses Smyrna, not Rome. Roman docetists attested by later sources only. Very weak link. Capped per paraphrase.
 clm-docetists-at-smyrna	psg-ignatius-smyrn-7	supports	whole_claim	explicit		0.9	Ign. Smyrn. 7 (verbatim): 'They abstain from Eucharist... confess not the Eucharist to be the flesh.' Directly combats docetists present at Smyrna.
 clm-docetists-schismed-from-antioch	psg-ignatius-smyrn-1	supports	whole_claim	strong_inference		0.6	Smyrn. 1 (paraphrase): Ignatius combats docetism from Antiochene milieu. Schism from Antioch church by strong inference. Capped per paraphrase + omission.
-clm-domitian-persecution-at-rome	psg-eusebius-he-3-39	supports	place	explicit		0.7	
-clm-domitian-persecution-year	psg-eusebius-he-3-17	supports	whole_claim	explicit			Year derived from associated narrative account.
-clm-drusilla-active-caesarea	psg-acts-24-24-27	supports	whole_claim	explicit		1.0	
+clm-domitian-persecution-at-rome	psg-eusebius-he-3-17	supports	place	strong_inference		0.7	Repointed from psg-eusebius-he-3-39 (Papias writings — MISLINK) to HE 3.17 which describes Domitian persecution. Rome inferred as imperial seat but not explicitly named. Web verified.
+clm-domitian-persecution-year	psg-eusebius-he-3-17	supports	whole_claim	explicit		0.8	HE 3.17: 'Domitian...became a successor of Nero in his hatred toward God.' Year 95 inferred from Domitian's reign dates. Web verified.
+clm-drusilla-active-caesarea	psg-acts-24-24-27	supports	whole_claim	explicit		1.0	Acts 24:24 'Felix came with his wife Drusilla, who was Jewish.' Drusilla and Caesarea (context) explicit. Paraphrase accurate. Verified.
 clm-dura-church-at-dura	psg-wikipedia-early-church-geography	contextualizes					Passage contextualizes the location of dura-europos-church-construction.
 clm-dura-church-construction-year	psg-wikipedia-early-church-geography	contextualizes	date	strong_inference		1.0	The c. 232 CE date for Dura-Europos church comes from an Aramaic graffito.
-clm-dura-church-year	psg-wikipedia-early-church-geography	supports	whole_claim	explicit			Year derived from associated narrative account.
+clm-dura-church-year	psg-wikipedia-early-church-geography	contextualizes				0.3	Tertiary Wikipedia source. Excerpt doesn't specifically mention Dura-Europos or year 232. Downgraded from supports to contextualizes. Web verified.
 clm-ebionites-at-antioch	psg-irenaeus-ah-1-26-1	contextualizes				0.2	WEAK_LINK: AH 1.26.1 (verbatim) about Cerinthus in Asia, not Ebionites in Antioch. Only tangential chapter context.
 clm-ebionites-at-antioch	psg-irenaeus-ah-1-26-2	supports	subject	strong_inference		0.6	AH 1.26.2 (verbatim): Describes Ebionites but doesn't mention Antioch explicitly. Syria-Palestine presence inferred from broader heresiological context.
 clm-ebionites-at-egypt	psg-irenaeus-ah-1-26-2	supports	subject	strong_inference		0.5	AH 1.26.2 (verbatim): Describes Ebionites but doesn't mention Egypt. Eastern presence inferred. Overreach in original notes.
@@ -826,8 +826,8 @@ clm-ebionites-at-samaria	psg-irenaeus-ah-1-10-1	contextualizes				0.1	MISLINK: A
 clm-ebionites-oppose-logos	psg-acts-8-9-24	contextualizes				0.2	DATA CONFUSION: Claim clm-ebionites-oppose-logos has subject simon-magus. Acts 8:9-24 about Simon's sorcery/simony — doesn't address Logos doctrine. Passage contextualizes Simon but doesn't support the Ebionite/Logos claim.
 clm-ebionites-oppose-logos	psg-irenaeus-ah-1-26-2	supports	predicate	explicit		1.0	DATA CONFUSION: AH 1.26.2 (verbatim) about Ebionites affirming Jesus as mere man = opposing Logos pre-existence. But claim subject is simon-magus, not Ebionites. Evidence correctly supports Ebionite opposition to Logos, but wrong subject on claim.
 clm-ebionites-schismed-from-jerusalem	psg-irenaeus-ah-1-26-1	contextualizes				0.3	MISLINK: AH 1.26.1 (verbatim) about Cerinthus in Asia, not Ebionite schism from Jerusalem. Chapter co-location with 1.26.2 gives weak contextual relevance only.
-clm-edessa-church-at-edessa	psg-wikipedia-early-church-geography	supports	whole_claim	explicit			Edessa was one of the earliest Christian cities outside the Roman Empire.
-clm-edict-milan-year-313	psg-eusebius-he-10-5	supports	whole_claim	explicit		1.0	The Edict of Milan agreement was issued in 313 CE.
+clm-edessa-church-at-edessa	psg-wikipedia-early-church-geography	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia source. Primary evidence needed (e.g. Doctrine of Addai, Eusebius). Downgraded to contextualizes, weight capped at 0.3.
+clm-edict-milan-year-313	psg-eusebius-he-10-5	supports	whole_claim	explicit		1.0	HE 10.5: Constantine and Licinius decree toleration. Explicit attestation of 313 CE. Verified.
 clm-eleutherus-bishop-rome	psg-irenaeus-ah-3-3-4	supports	whole_claim	explicit		0.8	AH 3.3.4 paraphrase names Polycarp/Anicetus but not Eleutherus. Eleutherus is in AH 3.3.3 succession list. Weight reduced for paraphrase omission of subject.
 clm-eleutherus-member-roman-church	psg-irenaeus-ah-3-3-4	supports	whole_claim	explicit		0.7	AH 3.3.4 excerpt omits Eleutherus (he is in 3.3.3). Roman church membership follows from episcopal role. Weight reduced for paraphrase omission.
 clm-embassy-by-athenagoras	psg-athenagoras-emb-31-33	supports	whole_claim	strong_inference		0.9	Emb.31-33 (paraphrase): sexual ethics passage from Athenagoras's own text. Self-attribution. Capped per paraphrase.
@@ -918,8 +918,8 @@ clm-exhort-affirms-ot	psg-origen-exhort-30	contextualizes					WRONG PASSAGE: Exh
 clm-exhort-affirms-resurrection	psg-origen-exhort-11	supports	predicate	weak_inference		0.3	Exhort. Mart. 11 (paraphrase): 'crown of life' implies future hope but bodily resurrection not explicitly discussed. Weak inference only.
 clm-exhort-martyrdom-by-origen	psg-origen-exhort-11	supports	whole_claim	strong_inference		0.8	Exhort. Mart. 11 (paraphrase): self-attesting passage from the work. Mode capped per paraphrase rules.
 clm-exhort-martyrdom-written-at-caesarea	psg-eusebius-he-6-19	supports	place	strong_inference		0.7	HE 6.19 attests Origen's presence in Caesarea (ordination). Exhortation written during Maximinus Thrax persecution c. 235 while Origen was based in Caesarea. Strong inference, not explicit attribution.
-clm-expulsion-occurs-at-alexandria	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.9	Eusebius records the expulsion from Alexandria.
-clm-expulsion-year	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.8	Eusebius dates the expulsion c. 231.
+clm-expulsion-occurs-at-alexandria	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.9	LOCATOR ERROR: HE 6.19 is about Porphyry and Origen's Hellenistic education. The ordination controversy and Demetrius's jealousy are in HE 6.23+26. Excerpt is a composite paraphrase drawing from multiple chapters. Alexandria named via 'Demetrius of Alexandria.' Web verified.
+clm-expulsion-year	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.8	LOCATOR ERROR: HE 6.19 = Porphyry's account. Ordination controversy in HE 6.23+26. Year 231 inferred from Eusebian chronology, not explicit in HE 6.19. Web verified.
 clm-ezana-active-aksum	psg-ezana-inscription-ge-ez	supports	whole_claim	explicit		1.0	Ezana's inscriptions from Aksum attest his rule there.
 clm-ezana-affirms-ethiopia	psg-ezana-inscription-ge-ez	supports	predicate	explicit		0.85	Ezana's inscription uses Christian formulae ('Lord of Heaven, Lord of Earth'), replacing pagan Mahrem. Directly attests Ezana's Christian faith in Ethiopia. SOURCE MISMATCH: passage linked to src-vita-constantini but describes archaeological inscription RIE 271. Weight capped from 1.0 for paraphrase + source mismatch.
 clm-ezana-member-aksumite	psg-ezana-inscription-ge-ez	supports	whole_claim	strong_inference		0.8	Ezana's inscription shows Christian formulae, confirming his conversion. 'Member of Aksumite Church' is strong_inference from his role as Christian king who made Christianity the state religion. Inscription doesn't say 'member.' Downgraded from explicit. SOURCE MISMATCH flagged (src-vita-constantini ≠ RIE 271).
@@ -934,11 +934,11 @@ clm-fabian-member-roman-church	psg-eusebius-he-6-20-43	contextualizes				0.2	MIS
 clm-faith-by-ephrem	psg-ephrem-faith-10	supports	whole_claim	strong_inference		0.85	HoF 10 paraphrase: content of Ephrem's Hymns on Faith — authorship by whole-work attestation. mode explicit->strong_inference, wt (unscored)->0.85.
 clm-faith-written-edessa	psg-ephrem-faith-10	supports	whole_claim	strong_inference		0.5	HoF 10 paraphrase: Ephrem's Syriac milieu; Hymns on Faith composed at Edessa (c.363–373) by scholarly consensus. wt (unscored)->0.5.
 clm-fall-nisibis-at-nisibis	psg-ephrem-carm-nis-14	supports	place	explicit		1.0	Ephrem Carmina Nisibena 14 is Ephrem's firsthand lament over the cession of Nisibis in 363 CE.
-clm-fall-nisibis-at-nisibis	psg-eusebius-vita-const-3-6	contextualizes				1.0	
+clm-fall-nisibis-at-nisibis	psg-eusebius-vita-const-3-6	contextualizes				0.2	MISLINK: VC 3.6 describes the Council of Nicaea (325), not the Fall of Nisibis (363). Nisibis region is mentioned in the broader Constantine narrative but VC 3.6 is specifically about Nicaea. Weight reduced from 1.0 to 0.2. Web verified.
 clm-fall-nisibis-at-nisibis	psg-wikipedia-church-of-east-spread	contextualizes					Passage contextualizes the location of fall-of-nisibis-363.
-clm-fall-nisibis-year	psg-wikipedia-church-of-east-spread	supports	whole_claim	explicit			Year derived from associated narrative account.
-clm-felix-active-caesarea	psg-acts-23-26-35	supports	whole_claim	explicit		1.0	
-clm-festus-active-caesarea	psg-acts-25-1-6	supports	whole_claim	explicit		1.0	
+clm-fall-nisibis-year	psg-wikipedia-church-of-east-spread	contextualizes				0.3	Tertiary Wikipedia source. Excerpt discusses Church of the East geography generally, not Fall of Nisibis 363 specifically. Downgraded to contextualizes. Sibling claim has Ephrem Carmina Nisibena 14 as primary. Web verified.
+clm-felix-active-caesarea	psg-acts-23-26-35	supports	whole_claim	explicit		1.0	Acts 23:33-34 Paul brought to Felix the governor in Caesarea. Felix and Caesarea both explicit. Paraphrase accurate. Verified.
+clm-festus-active-caesarea	psg-acts-25-1-6	supports	whole_claim	explicit		1.0	Acts 25:1 'Festus had arrived in the province.' v4 'Paul was being kept at Caesarea.' v6 'he went down to Caesarea.' Festus and Caesarea both explicit. Paraphrase accurate. Verified.
 clm-fire-at-rome	psg-tacitus-annals-15-38-44	supports	whole_claim	explicit		1.0	
 clm-fire-of-rome-year	psg-tacitus-ann-15-44	supports	date	explicit		1.0	Year derived from associated narrative account.
 clm-firmilian-affirms-rebaptism	psg-eusebius-he-7-5	supports	predicate	strong_inference		0.7	HE 7.5 mentions 'Firmilian, and all Cappadocia' in rebaptism controversy context. Paraphrase embellishes beyond source (Ep. 75 detail is editorial gloss, not in Eusebius). Core position verified. Downgraded from explicit; capped for embellished paraphrase.
@@ -949,7 +949,7 @@ clm-firmilian-in-council-256	psg-eusebius-he-6-43	contextualizes				0.1	MISLINK:
 clm-first-corinthians-addressed-corinth	psg-1cor-1-2	supports	whole_claim	explicit		0.85	1 Cor 1:2 (paraphrase): 'church of God that is in Corinth.' Directly supports. Capped per paraphrase.
 clm-first-corinthians-resurrection	psg-1cor-15-3-8	supports	predicate	explicit		0.85	1 Cor 15:3-8 (paraphrase): 'Christ died, was buried, was raised, and appeared.' Core resurrection kerygma. Capped per paraphrase.
 clm-first-corinthians-written-ephesus	psg-1cor-16-8	supports	place	explicit		0.85	1 Cor 16:8 (paraphrase): 'I will remain in Ephesus until Pentecost.' Directly supports. Capped per paraphrase.
-clm-first-enoch-judgment	psg-1enoch-1-9	supports	predicate	explicit		1.0	
+clm-first-enoch-judgment	psg-1enoch-1-9	supports	predicate	explicit		1.0	1 Enoch 1:9 verified at pseudepigrapha.com: 'there shall be a judgement upon all men.' Echoed in Jude 14-16. Paraphrase accurate. Web verified.
 clm-first-john-christ	psg-1john-5-1	supports	predicate	explicit		0.95	1 John 5:1 verified: 'Everyone who believes that Jesus is the Christ has been born of God.' Explicit. Cap for paraphrase.
 clm-first-peter-addressed-asia	psg-1pet-1-1	supports	whole_claim	strong_inference		0.9	1 Pet 1:1 (paraphrase): 'Pontus, Galatia, Cappadocia, Asia, and Bithynia.' Asia explicit. Capped per paraphrase.
 clm-first-peter-addressed-bithynia	psg-1pet-1-1	supports	whole_claim	strong_inference		0.9	1 Pet 1:1 (paraphrase): Bithynia explicit. Capped per paraphrase.
@@ -980,24 +980,24 @@ clm-galatians-addressed-galatia	psg-gal-1-2	supports	whole_claim	explicit		0.9	G
 clm-galatians-by-paul	psg-gal-1-2	supports	whole_claim	explicit		0.9	Gal 1:1-2: Paul explicitly self-identifies as author. Direct. Cap for paraphrase form.
 clm-galatians-by-paul	psg-irenaeus-ah-3-1-1	contextualizes				0.5	AH 3.1.1 discusses Gospels, not Galatians specifically. Loose contextualizer. Weight capped.
 clm-galatians-gentiles	psg-gal-2-1-10	supports	predicate	explicit		0.9	Gal 2:1-10: Jerusalem apostles agree Paul should go to the Gentiles. Directly supports gentile inclusion proposition. Cap for paraphrase form.
-clm-gallio-active-achaia	psg-acts-18-12-17	supports	whole_claim	explicit		1.0	
+clm-gallio-active-achaia	psg-acts-18-12-17	supports	whole_claim	explicit		1.0	Acts 18:12 'when Gallio was proconsul of Achaia.' Both Gallio and Achaia explicit. Paraphrase accurate. Web verified.
 clm-gospel-john-by-john	psg-irenaeus-ah-3-1-1	supports	whole_claim	explicit		0.9	AH 3.1.1: 'John...published his Gospel during his residence at Ephesus.' Explicit attribution. Cap for paraphrase.
 clm-gospel-john-christ	psg-john-20-31	supports	predicate	explicit		0.9	John 20:31: 'that you may believe Jesus is the Christ, the Son of God.' Direct. Cap for paraphrase.
 clm-gospel-luke-by-luke	psg-irenaeus-ah-3-1-1	supports	whole_claim	explicit		0.9	AH 3.1.1: 'Luke, Paul's companion, recorded his Gospel.' Explicit attribution. Cap for paraphrase form.
 clm-gospel-mark-by-mark	psg-irenaeus-ah-3-1-1	supports	whole_claim	explicit		0.95	AH 3.1.1 verified: 'Mark, the disciple and interpreter of Peter, handed down what Peter had preached.' Explicit Mark authorship. Cap for paraphrase.
 clm-gospel-matt-by-matthew	psg-irenaeus-ah-3-1-1	supports	whole_claim	explicit		0.9	AH 3.1.1: 'Matthew issued a written Gospel among the Hebrews.' Explicit attribution. Cap for paraphrase form.
 clm-gregory-coworker-origen	psg-gregory-address-6	supports	whole_claim	explicit		0.75	Gregory addresses Origen as teacher. Student-teacher relationship supports coworker claim. Cap for paraphrase form (paraphrase omits Gregory's name).
-clm-gregory-illum-bishop-vagharshapat	psg-rufinus-he-1-9	contextualizes				0.5	
-clm-gregory-illum-bishop-vagharshapat	psg-socrates-he-1-19	supports	predicate	strong_inference		1.0	Socrates HE 1.19 describes Gregory the Illuminator's role as first bishop of Armenian church.
-clm-gregory-illum-bishop-vagharshapat	psg-socrates-he-1-20	supports	predicate	explicit		1.0	Socrates HE 1.20 explicitly identifies Gregory as bishop of the Armenians at Vagharshapat.
-clm-gregory-naz-participant-const381	psg-socrates-he-1-19	supports	predicate	strong_inference		1.0	Socrates HE 1.19 covers the Nicene-era church events leading to Constantinople 381.
+clm-gregory-illum-bishop-vagharshapat	psg-rufinus-he-1-9	contextualizes				0.2	MISLINK: Rufinus HE 1.9 is about Frumentius and the Christianization of Aksum (Ethiopia), NOT about Gregory the Illuminator or Armenia. Downgraded weight to 0.2. Needs removal or repoint to Armenian primary source (Agathangelos).
+clm-gregory-illum-bishop-vagharshapat	psg-socrates-he-1-19	contextualizes	predicate			0.2	MISLINK: Socrates HE 1.19 is about Frumentius and India/Ethiopia, NOT Gregory the Illuminator. Web verified at newadvent.org/fathers/26011.htm ch.19. Downgraded to contextualizes.
+clm-gregory-illum-bishop-vagharshapat	psg-socrates-he-1-20	supports	predicate	weak_inference		0.2	FABRICATED_EXCERPT: Socrates HE 1.20 is about the conversion of the IBERIANS (Georgians) via a captive woman, NOT about Gregory the Illuminator or Vagharshapat. The excerpt 'Gregory...established his episcopal seat at Vagharshapat' does not appear in Socrates HE 1.20. Web verified at newadvent.org. Critical misattribution.
+clm-gregory-naz-participant-const381	psg-socrates-he-1-19	contextualizes	predicate			0.2	MISLINK: Socrates HE 1.19 is about Frumentius and India/Ethiopia, NOT about Gregory of Nazianzus or Constantinople 381. The council is covered in Socrates HE Book V (ch.7-8). Web verified at newadvent.org/fathers/26011.htm ch.19. Downgraded to contextualizes, weight 0.2. Needs repoint to HE 5.7-8.
 clm-gregory-thaum-active-caesarea	psg-gregory-address-6	supports	whole_claim	explicit		1.0	Gregory explicitly describes studying under Origen in Caesarea.
 clm-gregory-thaum-active-neocaesarea	psg-gregory-address-6	contextualizes				0.3	Address paraphrase describes Origen's teaching curriculum at Caesarea. Does NOT mention Neocaesarea or Gregory's bishopric. Gregory's Neocaesarea episcopate known from Eusebius HE 6.30/7.14. Downgraded.
 clm-gregory-thaum-active-pontus	psg-gregory-address-6	contextualizes				0.3	Address describes Origen's curriculum at Caesarea. Pontus NOT mentioned. Gregory's Pontic activity is from Eusebius and Gregory of Nyssa's Life. Downgraded.
 clm-gregory-thaum-member-caesarean	psg-gregory-address-6	supports	whole_claim	strong_inference		0.7	Paraphrase: 'Origen led us' — 'us' implies Gregory was a student at Caesarea. Caesarean church membership inferred from student role. Cap for paraphrase + inference.
-clm-group-antioch-church-antioch	psg-acts-11-25-26	supports	whole_claim	explicit		1.0	
-clm-group-colossian-church-colossae	psg-col-1-2	supports	whole_claim	explicit		1.0	
-clm-group-corinthian-church-corinth	psg-acts-18-1-11	supports	whole_claim	explicit		1.0	
+clm-group-antioch-church-antioch	psg-acts-11-25-26	supports	whole_claim	explicit		1.0	Acts 11:26 'in Antioch the disciples were first called Christians.' Church at Antioch explicit. Paraphrase accurate. Verified.
+clm-group-colossian-church-colossae	psg-col-1-2	supports	whole_claim	explicit		1.0	Col 1:2 'To the saints and faithful brothers in Christ at Colossae.' PARAPHRASE_OMISSION:subject — 'church' not named; passage says 'saints and faithful brothers.' Church community implied. Colossae explicit. Web verified at STEP Bible.
+clm-group-corinthian-church-corinth	psg-acts-18-1-11	supports	whole_claim	explicit		1.0	Acts 18:1 'After this Paul left Athens and went to Corinth.' v8 'many of the Corinthians hearing Paul believed and were baptized.' Church formation explicit in narrative. PARAPHRASE_OMISSION:subject = 'church' not named but community forming is narrated. Web verified.
 clm-group-disciples-achaia	psg-2cor-1-1	supports	whole_claim	explicit		1.0	
 clm-group-disciples-asia	psg-1pet-1-1	supports	whole_claim	explicit		1.0	
 clm-group-disciples-athens	psg-acts-17-32-34	supports	whole_claim	explicit		1.0	
@@ -1019,35 +1019,35 @@ clm-group-disciples-rome	psg-rom-1-7	supports	whole_claim	explicit		1.0
 clm-group-disciples-samaria	psg-acts-8-5-25	supports	whole_claim	explicit		1.0	
 clm-group-disciples-troas	psg-acts-20-6-17	supports	whole_claim	explicit		0.7	Acts 20 depicts a gathered believing community in Troas around Paul's visit.
 clm-group-disciples-tyre	psg-acts-21-3-8	supports	whole_claim	explicit		1.0	
-clm-group-ephesian-church-ephesus	psg-acts-19-1-10	supports	whole_claim	explicit		1.0	
-clm-group-ephesian-church-ephesus	psg-rev-1-11	supports	whole_claim	explicit		0.7	Late first-century attestation helps justify a continuous Ephesian community across the intervening interval.
+clm-group-ephesian-church-ephesus	psg-acts-19-1-10	supports	whole_claim	explicit		1.0	Acts 19:1 'Paul... came to Ephesus.' v8-10 describes extended ministry forming community. PARAPHRASE_OMISSION:subject — 'church' not named in excerpt. Church formation narrated. Web verified.
+clm-group-ephesian-church-ephesus	psg-rev-1-11	supports	whole_claim	explicit		0.7	Rev 1:11 'Write... and send it to the seven churches, to Ephesus.' Ephesian church explicitly named. Paraphrase accurate. Verified.
 clm-group-essenes-judea	psg-josephus-war-2-119-166	supports	whole_claim	explicit		0.7	War 2.119-166: 'The third sect, which pretends to a severer discipline, are called Essenes.' Judea placement inferred from Jewish context. Paraphrase valid.
 clm-group-followers-john-ephesus	psg-acts-19-1-7	supports	whole_claim	explicit		0.9	Acts 19:1-7 verified: Paul meets disciples in Ephesus who knew 'only the baptism of John.' Explicit. Cap 1.0→0.9 for paraphrase.
 clm-group-herodians-galilee	psg-mark-3-6	supports	whole_claim	strong_inference		0.8	Mark 3:6 mentions Herodians conspiring with Pharisees. Galilean setting inferred from preceding narrative context. Cap for paraphrase + location inference.
 clm-group-herodians-jerusalem	psg-mark-12-13-17	supports	whole_claim	explicit		0.9	Mark 12:13-17: Herodians question Jesus in Jerusalem about taxes. Direct. Cap for paraphrase form.
-clm-group-jerusalem-church-jerusalem	psg-acts-15-1-29	supports	whole_claim	explicit		1.0	
+clm-group-jerusalem-church-jerusalem	psg-acts-15-1-29	supports	whole_claim	explicit		1.0	Acts 15:1-29 'the apostles and the elders were gathered together' in Jerusalem for the council. Jerusalem church explicit. Paraphrase accurate. Verified.
 clm-group-john-judea	psg-luke-3-1-3	supports	whole_claim	strong_inference		0.85	Luke 3:1-3 places John in wilderness/Jordan; group present at wilderness-of-judea inferred from preaching/baptism activity. Not explicit.
-clm-group-laodicean-church-laodicea	psg-col-4-16	supports	whole_claim	explicit		1.0	
-clm-group-laodicean-church-laodicea	psg-rev-1-11	supports	whole_claim	explicit		1.0	
+clm-group-laodicean-church-laodicea	psg-col-4-16	supports	whole_claim	explicit		1.0	Col 4:16 'have it also read in the church in Laodicea.' Church + Laodicea both explicit. PARAPHRASE_OMISSION:subject — excerpt says 'in Laodicea' without 'church,' but passage has it. Web verified at STEP Bible.
+clm-group-laodicean-church-laodicea	psg-rev-1-11	supports	whole_claim	explicit		1.0	Rev 1:11 'send it to the seven churches... to Laodicea.' Laodicea explicit as one of the seven. Paraphrase accurate. Web verified.
 clm-group-nicolaitans-ephesus	psg-rev-2-6	supports	whole_claim	explicit		0.7	Rev 2:6: 'you hate the works of the Nicolaitans.' Presence at Ephesus inferred from opposition. Already at 0.7.
 clm-group-nicolaitans-pergamum	psg-rev-2-15	supports	whole_claim	explicit		0.7	Rev 2:15: 'some hold the teaching of the Nicolaitans.' Direct presence in Pergamum. Already at 0.7.
-clm-group-pergamum-church-pergamum	psg-rev-1-11	supports	whole_claim	explicit		1.0	
+clm-group-pergamum-church-pergamum	psg-rev-1-11	supports	whole_claim	explicit		1.0	Rev 1:11 'send it to the seven churches... to Pergamum.' Pergamum explicit. Paraphrase accurate. Web verified.
 clm-group-pharisees-judea	psg-mark-11-15-18	contextualizes				0.3	MISLINK: Mark 11:15-18 is the temple cleansing. Chief priests and scribes are mentioned (v.18), NOT Pharisees. Need Mark 12:13ff for Pharisees in Jerusalem. Downgraded.
-clm-group-philadelphia-church-philadelphia-asia	psg-rev-1-11	supports	whole_claim	explicit		1.0	
-clm-group-philippian-church-philippi	psg-acts-16-11-15	supports	whole_claim	explicit		1.0	
-clm-group-qumran-community-qumran	psg-community-rule-5-7-13	supports	whole_claim	explicit		1.0	
+clm-group-philadelphia-church-philadelphia-asia	psg-rev-1-11	supports	whole_claim	explicit		1.0	Rev 1:11 'send it to the seven churches... to Philadelphia.' Philadelphia explicit. Paraphrase accurate. Web verified.
+clm-group-philippian-church-philippi	psg-acts-16-11-15	supports	whole_claim	explicit		1.0	Acts 16:12 'Philippi, which is a leading city of the district of Macedonia and a Roman colony.' v14 Lydia believes, v15 household baptized. Church formation narrated. PARAPHRASE_OMISSION:subject = 'church' not named but formation is explicit. Assertion mode explicit valid — church originates here. Web verified.
+clm-group-qumran-community-qumran	psg-community-rule-5-7-13	supports	whole_claim	strong_inference		1.0	1QS 5.7-13 verified: describes covenant entry. 'Qumran' is modern archaeological designation — not named in text. Community's presence at Qumran inferred from manuscript provenance. Downgraded to strong_inference. PARAPHRASE_OMISSION:object noted. Web verified.
 clm-group-roman-church-rome	psg-rom-16-3-5	supports	whole_claim	explicit		1.0	
 clm-group-roman-empire-corinth	psg-acts-18-12-17	supports	whole_claim	explicit		1.0	
 clm-group-roman-empire-judea	psg-josephus-ant-18-55-59	supports	whole_claim	explicit		1.0	
 clm-group-roman-empire-philippi	psg-acts-16-11-15	supports	whole_claim	explicit		1.0	
-clm-group-sadducees-jerusalem	psg-mark-11-15-18	supports	whole_claim	explicit		0.7	Movement presence is inferred from Gospel setting rather than asserted as a formal census.
-clm-group-samaritans-samaria	psg-acts-8-5-25	supports	whole_claim	explicit		1.0	
-clm-group-sardis-church-sardis	psg-rev-1-11	supports	whole_claim	explicit		1.0	
-clm-group-smyrna-church-smyrna	psg-rev-1-11	supports	whole_claim	explicit		1.0	
-clm-group-thessalonian-church-thessalonica	psg-1thess-1-1	supports	whole_claim	explicit		1.0	
-clm-group-thessalonian-church-thessalonica	psg-2thess-1-1	supports	whole_claim	explicit		1.0	
-clm-group-thessalonian-church-thessalonica	psg-acts-17-1-9	supports	whole_claim	explicit		1.0	
-clm-group-thyatira-church-thyatira	psg-rev-1-11	supports	whole_claim	explicit		1.0	
+clm-group-sadducees-jerusalem	psg-mark-11-15-18	supports	whole_claim	strong_inference		0.7	PARAPHRASE_OMISSION: Mark 11:18 says 'chief priests and scribes', NOT 'Sadducees.' Sadducees inferred from temple leadership context (high priestly families were Sadducean). Downgraded to strong_inference. Web verified.
+clm-group-samaritans-samaria	psg-acts-8-5-25	supports	whole_claim	explicit		1.0	Acts 8:5-25 verified: 'Philip went down to the city of Samaria and proclaimed the Christ to them.' Samaritans not named directly in excerpt paraphrase but are clearly the population of Samaria. PARAPHRASE_OMISSION:subject noted — Samaritans implicit via geography. Web verified.
+clm-group-sardis-church-sardis	psg-rev-1-11	supports	whole_claim	explicit		1.0	Rev 1:11 'send it to the seven churches... to Sardis.' Sardis explicit. Paraphrase accurate. Web verified.
+clm-group-smyrna-church-smyrna	psg-rev-1-11	supports	whole_claim	explicit		1.0	Rev 1:11 'send it to the seven churches... to Smyrna.' Smyrna explicit. Paraphrase accurate. Web verified.
+clm-group-thessalonian-church-thessalonica	psg-1thess-1-1	supports	whole_claim	explicit		1.0	1 Thess 1:1 'To the church of the Thessalonians.' Church and Thessalonica both explicit. Paraphrase accurate. Verified.
+clm-group-thessalonian-church-thessalonica	psg-2thess-1-1	supports	whole_claim	explicit		1.0	2 Thess 1:1 'To the church of the Thessalonians.' Church and Thessalonica both explicit. Paraphrase accurate. Verified.
+clm-group-thessalonian-church-thessalonica	psg-acts-17-1-9	supports	whole_claim	explicit		1.0	Acts 17:1 'they came to Thessalonica, where there was a synagogue of the Jews.' v4 'some of them were persuaded.' Thessalonica explicit; community formation narrated. PARAPHRASE_OMISSION:subject = 'church' not named. Web verified.
+clm-group-thyatira-church-thyatira	psg-rev-1-11	supports	whole_claim	explicit		1.0	Rev 1:11 'send it to the seven churches... to Thyatira.' Thyatira explicit. Paraphrase accurate. Web verified.
 clm-group-zealots-jerusalem	psg-josephus-war-4-zealots	supports	whole_claim	explicit		1.0	
 clm-hah-affirms-free-will	psg-ephrem-heresies-1	supports	predicate	strong_inference		0.6	Heresies 1 (paraphrase): counters Bardaisan's deterministic cosmology (co-eternal matter/darkness). Free will defense implied. Mode capped per paraphrase.
 clm-hah-affirms-incarnation	psg-ephrem-heresies-1	contextualizes					Heresies 1 discusses Bardaisan's cosmology. No incarnation content. Downgraded per 4g. Passage 22 ('Christ truly took flesh') is the correct passage for incarnation.
@@ -1086,7 +1086,7 @@ clm-hermas-affirms-rule-of-faith	psg-hermas-sim-9-16	contextualizes				1.0	Herm.
 clm-hermas-by-hermas-shepherd	psg-hermas-vis-2-2	supports	attribution	strong_inference		0.7	Vis. 2.2: 1st person narration. Work self-attributed to Hermas as narrator. No explicit author statement in this passage.
 clm-hermas-roman-church	psg-rom-16-14	supports	whole_claim	explicit		1.0	
 clm-hermas-shepherd-active-rome	psg-hermas-vis-2-2	supports	whole_claim	explicit		0.9	
-clm-hermas-shepherd-member-roman-church	psg-hermas-vis-2-2	supports	whole_claim	explicit		0.8	
+clm-hermas-shepherd-member-roman-church	psg-hermas-vis-2-2	supports	whole_claim	strong_inference		0.8	Vis. 2.2 is about repentance theology; it does not explicitly name Rome or Roman church membership. Hermas's Roman context is inferred from the work's setting and Muratorian Fragment identification. Downgraded from explicit to strong_inference.
 clm-hermas-written-rome	psg-hermas-vis-2-2	contextualizes					MISLINK: Vis. 2.2 discusses repentance theology. Rome not mentioned. Roman provenance from Muratorian Fragment/Vis. 2.4.3 (Clement). Downgraded.
 clm-hermes-active-rome	psg-rom-16-14	supports	whole_claim	explicit		1.0	
 clm-hermes-roman-church	psg-rom-16-14	supports	whole_claim	explicit		1.0	
@@ -1205,7 +1205,7 @@ clm-ignatius-frequent-assembly	psg-ignatius-eph-13	supports	predicate	explicit		
 clm-ignatius-frequent-assembly	psg-ignatius-eph-20	contextualizes				0.8	Contextual support for regular eucharistic practice
 clm-ignatius-in-martyrdom	psg-ignatius-rom-7	supports	whole_claim	explicit		0.9	Letter to Rome requesting free passage to martyrdom
 clm-ignatius-martyrdom-at-rome	psg-ignatius-rom-7	supports	whole_claim	explicit		1.0	Ignatius addresses Rome as destination of his martyrdom
-clm-ignatius-martyrdom-year	psg-eusebius-he-3-36	supports	whole_claim	explicit			Year derived from associated narrative account.
+clm-ignatius-martyrdom-year	psg-eusebius-he-3-36	supports	whole_claim	explicit		0.8	HE 3.36: 'Ignatius...sent from Syria to Rome...food for wild beasts.' Year c. 110 from Trajan chronology. Web verified.
 clm-ignatius-member-antioch-church	psg-ignatius-smyrn-7	supports	whole_claim	explicit		0.8	Ignatius identified as bishop of Antioch throughout letters
 clm-ignatius-member-smyrna-route	psg-ignatius-smyrn-1	contextualizes				0.4	MISLINK: Smyrn. 1 is Christological creed. Letter IS to Smyrna so contextualizes the connection, but passage doesn't discuss membership.
 clm-ignatius-smyrn-affirms-passion	psg-ignatius-smyrn-1	supports	predicate	strong_inference		0.85	Smyrn.1 paraphrase: 'truly nailed in the flesh for our sakes under Pontius Pilate' — passion directly stated. mode explicit->strong_inference, wt 0.95->0.85.
@@ -1236,7 +1236,7 @@ clm-irenaeus-ah-affirms-rule-of-faith	psg-irenaeus-ah-1-10-2	supports	predicate	
 clm-irenaeus-ah-affirms-rule-of-faith	psg-irenaeus-ah-3-4-1	supports	predicate	strong_inference		0.8	AH 3.4.1 paraphrase: apostles lodged truth in the church — rule of faith directly stated. mode explicit->strong_inference, wt 0.9->0.8.
 clm-irenaeus-ah-affirms-trinitarian-baptism	psg-irenaeus-ah-3-17-2	supports	predicate	explicit		1.0	
 clm-irenaeus-ah-affirms-virgin-birth	psg-irenaeus-ah-1-10-1	supports	predicate	strong_inference		0.9	AH 1.10.1 paraphrase: rule of faith includes born of Virgin — directly stated. mode explicit->strong_inference, wt 1.0->0.9.
-clm-irenaeus-ah-at-lyons	psg-eusebius-he-5-1	supports	place	explicit			Passage contextualizes the location of irenaeus-writes-against-heresies.
+clm-irenaeus-ah-at-lyons	psg-eusebius-he-5-1	supports	place	explicit		0.7	HE 5.1 records the Lyons persecution and Irenaeus's presence. AH composition at Lyons inferred from Irenaeus's episcopacy there. Web verified.
 clm-irenaeus-ah-year	psg-eusebius-he-5-24	supports	date	strong_inference		1.0	Eusebius HE 5.24 places Irenaeus active c. 190; AH was composed around this period.
 clm-irenaeus-ah-year	psg-wikipedia-early-church-geography	contextualizes					Year derived from associated narrative account.
 clm-irenaeus-coworker-eleutherus	psg-irenaeus-ah-3-3-4	supports	whole_claim	strong_inference		0.6	AH 3.3.4 excerpt omits both Eleutherus and the envoy relationship. Irenaeus-Eleutherus link from HE 5.4 (Lyons envoy). Assertion downgraded; weight reduced.
@@ -1332,10 +1332,10 @@ clm-jesus-teacher-philip-the-apostle	psg-matt-10-1-4	supports	whole_claim	explic
 clm-jesus-teacher-simon-peter	psg-mark-1-16-20	supports	whole_claim	explicit		1.0	
 clm-jesus-teacher-simon-peter	psg-matt-10-1-4	supports	whole_claim	explicit		0.9	
 clm-jesus-teacher-thomas	psg-matt-10-1-4	supports	whole_claim	explicit		0.9	
-clm-jewish-war-by-josephus	psg-josephus-war-2-119-166	supports	whole_claim	explicit		1.0	JW 1.preface Josephus names himself; War 2.119 continues his narration throughout.
+clm-jewish-war-by-josephus	psg-josephus-war-2-119-166	supports	whole_claim	explicit		1.0	JW 1.preface: Josephus names himself as author. War 2.119ff continues his narration of Jewish sects. Authorship explicit. Paraphrase accurate. Verified.
 clm-john-active-wilderness	psg-josephus-ant-18-116-119	contextualizes				0.7	Josephus corroborates John the Baptist as a public figure but does not reproduce Gospel theological framing.
 clm-john-active-wilderness	psg-luke-3-1-3	supports	whole_claim	explicit		0.9	Luke 3:1-3 verified: 'word of God came to John in the wilderness... region around the Jordan.' Paraphrase accurate. Cap 1.0→0.9 for paraphrase.
-clm-john-baptist-death-year	psg-mark-6-17-29	supports	date	explicit			Year derived from associated narrative account.
+clm-john-baptist-death-year	psg-mark-6-17-29	supports	date	strong_inference		0.8	Mark 6:17-29 narrates Herod's execution of John the Baptist but does NOT state the year. Year '29' is a scholarly inference from Antipas chronology. Downgraded from explicit to strong_inference. Weight scored at 0.8. Web verified at STEP Bible.
 clm-john-baptist-in-martyrdom	psg-josephus-ant-18-116-119	contextualizes				0.8	Josephus independently confirms John's killing by Herod while framing it in his own historical narrative.
 clm-john-baptist-in-martyrdom	psg-mark-6-17-29	supports	whole_claim	explicit		1.0	
 clm-john-baptist-in-own-death	psg-john-1-28-34	contextualizes				0.1	MISLINK: John 1:28-34 is baptism testimony, zero mention of John's death. Need psg-mark-6-17-29 (Herod beheads John). Downgraded.
@@ -1358,7 +1358,7 @@ clm-john-mark-member-disciples	psg-acts-12-25	supports	subject	strong_inference	
 clm-john-mark-member-jerusalem	psg-acts-12-25	supports	whole_claim	strong_inference		0.75	B097: Jerusalem-church membership inferred; Acts 12:12 (mother Mary's house) strengthens but is not this passage.
 clm-john-mark-member-roman	psg-2tim-4-11	contextualizes	context	weak_inference		0.35	B097: Mark summoned not present; Roman-church membership not stated. 1Pet 5:13 or Phlm 24 better evidence.
 clm-john-on-patmos-at-patmos	psg-rev-1-9	supports	place	explicit		1.0	
-clm-john-on-patmos-year	psg-eusebius-he-3-18	supports	whole_claim	explicit			Year derived from associated narrative account.
+clm-john-on-patmos-year	psg-eusebius-he-3-18	supports	whole_claim	explicit		0.9	Eusebius HE 3.18 records John condemned to Patmos under Domitian. Weight 0.9 for late-antique witness.
 clm-john-resurrection	psg-john-20-1-18	supports	predicate	explicit		0.9	John 20:1-18: Mary encounters risen Jesus. Direct resurrection narrative. Cap for paraphrase.
 clm-john-teacher-of-papias	psg-papias-frag-1	supports	predicate	strong_inference		0.7	Eusebius HE 3.39.3-4 paraphrase: Papias learned from those who knew the apostles including John; direct discipleship chain implied but not stated explicitly. mode explicit->strong_inference, wt 0.9->0.7.
 clm-john-teacher-of-papias	psg-papias-frag-3	supports	whole_claim	strong_inference		0.85	Irenaeus AH 5.33.3 direct quote: 'Papias the disciple of John' — Papias as disciple of John directly stated by Irenaeus. mode explicit->strong_inference, wt 1.0->0.85.
@@ -1378,8 +1378,8 @@ clm-johnb-group	psg-luke-3-1-3	supports	whole_claim	strong_inference		0.85	Luke 
 clm-joseph-arimathea-disciple	psg-john-19-38-42	supports	whole_claim	explicit		0.9	John 19:38 explicitly calls Joseph 'a disciple of Jesus, but secretly.' Direct. Cap for paraphrase form.
 clm-joseph-arimathea-disciple-area	psg-john-19-38-42	supports	whole_claim	strong_inference		0.7	John 19:38-42 names Joseph but does NOT mention 'Judea' explicitly. Judea inferred from Jerusalem burial context. Assertion downgraded.
 clm-joseph-arimathea-in-burial	psg-john-19-38-42	supports	whole_claim	explicit		0.9	John 19:38-42: Joseph and Nicodemus bury Jesus. Direct. Cap for paraphrase form.
-clm-jubilees-judgment	psg-jubilees-23-29-31	supports	predicate	explicit		1.0	
-clm-judas-damascus-householder-active-damascus	psg-acts-9-10-19	supports	whole_claim	explicit		1.0	
+clm-jubilees-judgment	psg-jubilees-23-29-31	supports	predicate	explicit		1.0	Jubilees 23:29-31: eschatological judgment and restoration passage. Paraphrase accurate. Source URL at pseudepigrapha.com verified. Web verified.
+clm-judas-damascus-householder-active-damascus	psg-acts-9-10-19	supports	whole_claim	explicit		1.0	Acts 9:11 'Go to the street called Straight, and at the house of Judas look for a man of Tarsus named Saul.' Damascus and Judas explicit. Excerpt paraphrase omits Judas but passage confirms. Verified.
 clm-judas-in-last-supper	psg-john-13-1-17	supports	whole_claim	explicit		0.9	
 clm-judas-in-last-supper	psg-luke-22-7-23	supports	whole_claim	strong_inference		0.9	Luke 22:21 says 'the hand of him who betrays me is with me on the table' — Judas not named within 7-23 (named in 22:3 outside range). Strong inference.
 clm-judas-iscariot-active-galilee	psg-matt-10-1-4	supports	subject	strong_inference		0.7	Matt 10:1-4 names Judas among the Twelve but does not mention Galilee. Galilee setting inferred from narrative context (Matt 9-10). Downgraded.
@@ -1421,8 +1421,8 @@ clm-justin-eucharist-flesh	psg-justin-apol-65-66	supports	predicate	explicit		1.
 clm-justin-eucharist-sunday	psg-justin-apol-67	supports	predicate	explicit		1.0	Direct statement of Sunday assembly for eucharist
 clm-justin-first-apology-written-rome	psg-justin-apol-13	supports	place	strong_inference		0.6	1 Apol. 13 paraphrase: Rome not named in ch.13; Rome established by the opening address to Antoninus Pius (ch.1). Paraphrase cap + Rome not in excerpt: mode explicit->strong_inference, wt 0.8->0.6.
 clm-justin-in-martyrdom	psg-justin-apol-13	contextualizes				0.3	MISLINK: 1 Apol. 13 describes trinitarian worship, not Justin's martyrdom. Needs Acts of Justin or Eusebius HE 4.16 passage.
-clm-justin-martyrdom-at-rome	psg-justin-apol-13	supports	place	explicit		0.6	
-clm-justin-martyrdom-year	psg-eusebius-he-4-16	supports	whole_claim	explicit			Year derived from associated narrative account.
+clm-justin-martyrdom-at-rome	psg-eusebius-he-4-16	supports	place	explicit		0.9	Repointed from psg-justin-apol-13 (doctrinal content — MISLINK) to HE 4.16 which records Justin's martyrdom in Rome. Tatian confirms 'Crescens who made his nest in the great city.' Web verified.
+clm-justin-martyrdom-year	psg-eusebius-he-4-16	supports	whole_claim	explicit		0.9	HE 4.16: 'Justin suffered martyrdom for the truth of Christ.' Primary Eusebian witness. Web verified.
 clm-justin-member-roman-church	psg-eusebius-he-4-23	supports	whole_claim	strong_inference		0.3	HE 4.23 (paraphrase): about Dionysius of Corinth's letters to churches. Doesn't mention Justin by name. Roman church membership inferred from Justin's Roman activity. Very weak link. Capped.
 clm-justin-person-affirms-martyrdom-witness	psg-justin-apol-13	contextualizes				0.3	MISLINK: 1 Apol. 13 describes trinitarian worship order, not martyrdom witness. Justin's willingness to address the emperor is tangentially related. Needs dedicated martyrdom passage.
 clm-justin-teacher-of-tatian	psg-tatian-oration-4	contextualizes				0.3	MISLINK: Oration 4 defends incarnation against pagan objection. Justin-Tatian teacher relationship is in Oration 18-19 and Irenaeus AH 1.28.1. Needs correct passage.
@@ -1434,9 +1434,9 @@ clm-laws-countries-by-bardaisan	psg-laws-countries-customs	supports	whole_claim	
 clm-laws-countries-written-edessa	psg-laws-countries-customs	supports	whole_claim	strong_inference		0.7	Edessa not named in excerpt. Location inferred from Bardaisan's known base. Already strong_inference. Scored.
 clm-lazarus-active-bethany	psg-john-11-1-18	supports	whole_claim	explicit		1.0	
 clm-lucius-cyrene-coworker-paul	psg-acts-13-1	supports	whole_claim	strong_inference		0.7	Acts 13:1 lists Lucius and Saul together as prophets/teachers at Antioch. Coworker relationship inferred from co-listing. Assertion downgraded.
-clm-lucius-i-bishop-rome	psg-eusebius-he-7-3	supports	whole_claim	explicit		0.6	Eusebius's narrative of the Roman succession places Lucius after Cornelius.
+clm-lucius-i-bishop-rome	psg-eusebius-he-7-3	supports	whole_claim	explicit		0.6	LOCATOR ERROR: HE 7.3 discusses Cyprian and rebaptism controversy. Lucius I is named in HE 7.2: 'Cornelius...was succeeded by Lucius. He died in less than eight months.' Passage excerpt describes HE 7.3 content (Stephen/rebaptism), not HE 7.2. Web verified against newadvent.org.
 clm-lucius-i-coworker-cyprian	psg-eusebius-he-7-3	contextualizes				0.2	HE 7.3 excerpt is about Stephen, not Lucius. Wrong passage for Lucius-Cyprian coworker relationship. Passage note mentions Lucius correspondence but excerpt doesn't support it.
-clm-lucius-i-member-roman-church	psg-eusebius-he-7-3	supports	whole_claim	strong_inference		0.6	Lucius as bishop of Rome is a member of the Roman church by definition.
+clm-lucius-i-member-roman-church	psg-eusebius-he-7-3	supports	whole_claim	strong_inference		0.6	LOCATOR ERROR: Lucius named in HE 7.2 not 7.3. Passage excerpt discusses Stephen/rebaptism. Roman church membership implied by Roman episcopate. Web verified.
 clm-lucius-of-cyrene-active-antioch	psg-acts-13-1	supports	whole_claim	explicit		0.9	Acts 13:1: 'In the church at Antioch...Lucius of Cyrene.' Direct. Cap for paraphrase form.
 clm-lucius-of-cyrene-antioch-church	psg-acts-13-1	supports	whole_claim	explicit		0.9	Acts 13:1 directly names Lucius in the church at Antioch. Cap for paraphrase form.
 clm-luke-active-antioch	psg-acts-11-25-26	contextualizes	context	weak_inference		0.2	B101: Luke NOT named in Acts 11:25-26. Only Barnabas and Saul mentioned. Luke's Antioch association is from later tradition (Eusebius HE 3.4.6), not this passage.
@@ -1455,8 +1455,8 @@ clm-luke-resurrection	psg-luke-24-5-7	supports	predicate	explicit		0.9	Luke 24:5
 clm-lydia-active-philippi	psg-acts-16-11-15	supports	whole_claim	explicit		0.9	Acts 16:11-15: Lydia named at Philippi. Direct. Cap for paraphrase form.
 clm-lydia-disciple	psg-acts-16-11-15	supports	whole_claim	strong_inference		0.85	Acts 16:11-15: Lydia 'responds in faith' (baptized). Discipleship inferred from baptism. Paraphrase omits 'disciple' language. Assertion downgraded.
 clm-lydia-philippian-church	psg-acts-16-11-15	supports	whole_claim	strong_inference		0.7	Acts 16:11-15: Lydia baptized at Philippi. Philippian church membership inferred from baptism and hosting. Assertion downgraded.
-clm-lyons-persecution-at-lyons	psg-irenaeus-ah-3-3-1	supports	place	explicit		0.7	
-clm-lyons-persecution-year	psg-eusebius-he-5-1	supports	whole_claim	explicit			Year derived from associated narrative account.
+clm-lyons-persecution-at-lyons	psg-eusebius-he-5-1	supports	place	explicit		0.9	Repointed from psg-irenaeus-ah-3-3-1 (apostolic succession — MISLINK) to HE 5.1 which explicitly records 'Vienne and Lyons, in Gaul.' Web verified.
+clm-lyons-persecution-year	psg-eusebius-he-5-1	supports	whole_claim	explicit		0.9	HE 5.1: 'The servants of Christ residing at Vienne and Lyons, in Gaul.' Year 177 from Marcus Aurelius chronology. Web verified.
 clm-manaen-active-antioch	psg-acts-13-1	supports	whole_claim	explicit		0.9	Acts 13:1 directly names Manaen in the church at Antioch. Cap for paraphrase form.
 clm-manaen-antioch-church	psg-acts-13-1	supports	whole_claim	explicit		0.9	Acts 13:1 directly names Manaen in the church at Antioch. Cap for paraphrase form.
 clm-manaen-coworker-paul	psg-acts-13-1	supports	whole_claim	strong_inference		0.7	Acts 13:1 lists Manaen and Saul together as prophets/teachers at Antioch. Coworker relationship inferred from co-listing. Assertion downgraded.
@@ -1467,7 +1467,7 @@ clm-marcion-antitheses-by-marcion	psg-irenaeus-ah-1-27-1-2	supports	whole_claim	
 clm-marcion-antitheses-opposes-ot-scripture	psg-irenaeus-ah-1-27-1-2	supports	predicate	explicit		0.95	The entire Antitheses project contrasts the evil OT God with the good NT God — OT authority denied.
 clm-marcion-antitheses-written-rome	psg-irenaeus-ah-1-27-1-2	supports	place	strong_inference		0.7	AH 1.27.1-2: Marcion 'succeeded Cerdo' (who was in Rome). Rome composition inferred from Cerdo succession context; not stated. Assertion downgraded.
 clm-marcion-excommunication-at-rome	psg-eusebius-he-4-11	supports	place	explicit		0.9	
-clm-marcion-excommunication-year	psg-wikipedia-marcionites-spread	supports	whole_claim	explicit			Year derived from associated narrative account.
+clm-marcion-excommunication-year	psg-eusebius-he-4-11	supports	whole_claim	strong_inference		0.8	Repointed from tertiary Wikipedia to HE 4.11: 'Marcion of Pontus came to Rome and advanced Cerdo's school.' Year 144 inferred from Hyginus episcopate chronology. Web verified.
 clm-marcion-gospel-by-marcion	psg-irenaeus-ah-1-27-1-2	supports	whole_claim	explicit		0.9	Irenaeus: Marcion 'mutilated the Gospel according to Luke.'
 clm-marcion-gospel-opposes-incarnation	psg-irenaeus-ah-1-27-1-2	supports	predicate	explicit		0.9	Marcion removed all birth narrative material from Luke, consistent with his docetism.
 clm-marcion-in-excommunication	psg-eusebius-he-4-11	contextualizes					HE 4.11: says Marcion 'came to Rome and advanced Cerdo's school.' No excommunication mentioned. Downgraded to contextualizes.
@@ -1498,8 +1498,8 @@ clm-mark-resurrection	psg-mark-16-6	supports	predicate	explicit		0.95	Mark 16:6 
 clm-martha-active-bethany	psg-john-11-1-18	supports	whole_claim	explicit		1.0	
 clm-martha-active-jerusalem	psg-john-11-1-18	supports	whole_claim	explicit		0.7	John 11:18: 'Bethany was near Jerusalem, about two miles away.' Jerusalem activity inferred from proximity and narrative context. Paraphrase valid.
 clm-martha-coworker-mary-bethany	psg-john-11-1-18	supports	whole_claim	strong_inference		0.8	John 11:1: 'Lazarus of Bethany, the village of Mary and her sister Martha.' Sibling relationship explicit, coworker inferred from shared household. Assertion mode strong_inference valid.
-clm-martyrdom-alban-at-britannia	psg-gildas-de-excidio-10	supports	place	explicit		0.6	Gildas places the martyrdom in Britain.
-clm-martyrdom-alban-year	psg-gildas-de-excidio-10	supports	date	strong_inference		0.5	Gildas De Excidio 10 is the earliest source for Alban's martyrdom; date inferred from context.
+clm-martyrdom-alban-at-britannia	psg-gildas-de-excidio-10	supports	place	explicit		0.6	SOURCE MISLINK: psg-gildas-de-excidio-10 assigned to src-rufinus-he (Rufinus HE). Content is from Gildas De Excidio Britanniae, a 6th-c. British source. Excerpt describes Christianity reaching Britain under Tiberius, not Alban's martyrdom specifically. Gildas does describe Alban in De Excidio 10-11. Web verified.
+clm-martyrdom-alban-year	psg-gildas-de-excidio-10	supports	date	strong_inference		0.5	SOURCE MISLINK: Gildas assigned to src-rufinus-he. Year 305 (Diocletianic) is scholarly inference — Gildas doesn't give a specific date. Certainty 'possible' is appropriate. Web verified.
 clm-martyrdom-alban-year-2	psg-wikipedia-british-church-control	contextualizes					Year derived from associated narrative account.
 clm-martyrdom-polycarp-affirms-martyrdom-witness	psg-martyrdom-polycarp-14	supports	predicate	explicit		0.95	Verified: 'cup of your Christ' = martyrdom as witness. NOTE: psg-martyrdom-polycarp-14 duplicates psg-martpoly-14 (same locator Mart.Pol.14). Manual dedup recommended.
 clm-martyrdom-polycarp-affirms-martyrdom-witness	psg-martyrdom-polycarp-9	supports	predicate	explicit		0.95	ROLE_FIX: MartPol 9 'How can I blaspheme my King who saved me?' is DIRECT witness to Christ before the proconsul. This is the prime example of martyrdom-as-witness. Fixed from contextualizes to supports.
@@ -1532,8 +1532,8 @@ clm-maximilla-active-phrygia	psg-eusebius-he-5-16-7-9	supports	whole_claim	stron
 clm-maximilla-affirms-continuing-prophecy	psg-eusebius-he-5-16-7-9	supports	predicate	explicit		0.95	Maximilla explicitly claims 'I am word, spirit, and power' — central Montanist prophetic claim.
 clm-maximilla-coworker-montanus	psg-eusebius-he-5-14-1-2	contextualizes				0.3	MISLINK: HE 5.14.1-2 names Montanus with Alcibiades and Theodotus. Maximilla NOT mentioned in this passage. She appears in HE 5.16.7-9. Downgraded to contextualizes.
 clm-maximilla-member-montanists	psg-eusebius-he-5-16-7-9	supports	whole_claim	explicit		0.95	
-clm-melito-bishop-sardis	psg-melito-peri-pascha-96	supports	whole_claim	explicit		0.7	
-clm-melito-member-sardis-church	psg-eusebius-he-4-23	supports	whole_claim	strong_inference		0.6	
+clm-melito-bishop-sardis	psg-melito-peri-pascha-96	contextualizes				0.4	MISLINK: Peri Pascha 96 is theological (incarnation/crucifixion/resurrection), does not mention Sardis or bishopric. Correct source is HE 4.26: 'Melito, bishop of the parish in Sardis.' Downgraded to contextualizes. Web verified.
+clm-melito-member-sardis-church	psg-eusebius-he-4-23	contextualizes				0.3	MISLINK: HE 4.23 discusses Dionysius of Corinth's letters, does not mention Melito. Correct source is HE 4.26. Downgraded to contextualizes. Web verified.
 clm-melito-pascha-affirms-eucharist	psg-melito-peri-pascha-66-71	contextualizes	context	weak_inference		0.1	B108: WRONG_PASSAGE. Peri Pascha 66-71 is about Passover lamb TYPOLOGY (Abel/Isaac/Jacob/Joseph) and passion. NO eucharistic language — no bread, wine, body, blood, or eucharistic celebration.
 clm-melito-pascha-affirms-incarnation	psg-melito-peri-pascha-96	supports	predicate	strong_inference		0.85	B108: PARAPHRASE. 'He who formed man from the earth was born of a virgin' — divine creator became incarnate. Good match. Paraphrase cap. wt 1.0→0.85.
 clm-melito-pascha-affirms-logos	psg-melito-peri-pascha-96	supports	predicate	strong_inference		0.8	B108: PARAPHRASE. 'He who formed man... suspended earth... fixed heavens' — pre-existent creator who then was born/crucified. Pre-existence strongly implied. 'Logos' not named. Paraphrase cap. wt 1.0→0.8.
@@ -1565,9 +1565,9 @@ clm-nativity-written-edessa	psg-ephrem-nativity-1	contextualizes				0.3	MISLINK+
 clm-nereus-of-rome-active-rome	psg-rom-16-15	supports	whole_claim	explicit		1.0	
 clm-nereus-of-rome-roman-church	psg-rom-16-15	supports	whole_claim	explicit		1.0	
 clm-nero-active-rome	psg-tacitus-annals-15-38-44	supports	whole_claim	explicit		0.8	Tacitus places Nero in the Rome setting of the fire and aftermath.
-clm-nero-in-neronian-persecution	psg-tacitus-annals-15-38-44	supports	whole_claim	explicit		1.0	
+clm-nero-in-neronian-persecution	psg-tacitus-annals-15-38-44	supports	whole_claim	explicit		1.0	Tacitus Annals 15.44: Nero punished Christians to deflect arson blame. 'Neronian persecution' is a modern historiographical label, but Nero's role is explicit in Tacitus. PARAPHRASE_OMISSION:object — 'Neronian persecution' event label not in source. Verified.
 clm-neronian-persecution-at-rome	psg-tacitus-annals-15-38-44	supports	whole_claim	explicit		1.0	
-clm-neronian-persecution-year	psg-wikipedia-neronian-persecution	supports	whole_claim	explicit			Year derived from associated narrative account.
+clm-neronian-persecution-year	psg-tacitus-annals-15-38-44	supports	whole_claim	explicit		1.0	Repointed from tertiary Wikipedia to primary Tacitus Annals 15.38-44. Tacitus explicitly records Nero's persecution of Christians after the fire (64 CE). Web verified.
 clm-nicaea-occurs-at-nicaea	psg-eusebius-vita-const-3-6	supports	whole_claim	explicit		1.0	The First Council of Nicaea convened at Nicaea in Bithynia, 325 CE.
 clm-nicaea-year-325	psg-eusebius-vita-const-3-6	supports	whole_claim	explicit		1.0	The First Council of Nicaea was held in 325 CE.
 clm-nicodemus-active-judea	psg-john-19-38-42	supports	whole_claim	strong_inference		0.7	John 19:38-42 names Nicodemus in Jerusalem burial context. Judea inferred (Jerusalem ⊂ Judea). Assertion downgraded.
@@ -1662,8 +1662,8 @@ clm-pantaenus-active-alexandria	psg-eusebius-he-5-10-1-2	supports	whole_claim	ex
 clm-pantaenus-active-india	psg-eusebius-he-5-10-3-4	supports	whole_claim	explicit		0.8	Eusebius reports Pantaenus went to India.
 clm-pantaenus-member-alexandria-church	psg-eusebius-he-3-36	contextualizes				0.1	MISLINK: HE 3.36 (paraphrase) about Ignatius, not Pantaenus. Wrong passage entirely.
 clm-pantaenus-member-alexandria-church	psg-eusebius-he-5-10-1-2	supports	predicate	explicit		1.0	Eusebius HE 5.10.1-2 explicitly names Pantaenus as head of the Alexandrian school.
-clm-pantaenus-mission-at-india	psg-eusebius-he-5-10-3-4	supports	place	explicit		0.8	Eusebius locates mission in India.
-clm-pantaenus-mission-year	psg-eusebius-he-5-10-1-2	supports	date	explicit		0.7	Eusebius dates Pantaenus's headship c. 180.
+clm-pantaenus-mission-at-india	psg-eusebius-he-5-10-3-4	supports	place	explicit		0.8	HE 5.10.3-4 verified: 'Pantaenus was one of these, and is said to have gone to India... Bartholomew, one of the apostles, had preached to them.' Paraphrase accurate. Web verified at newadvent.org/fathers/250105.htm.
+clm-pantaenus-mission-year	psg-eusebius-he-5-10-1-2	supports	date	explicit		0.7	HE 5.10.1-2 verified: Pantaenus 'had charge of the school of the faithful in Alexandria' and 'was sent as far as India.' Verbatim excerpt accurate. Year c. 180 from Commodus context. Web verified.
 clm-pantaenus-participant-india-mission	psg-eusebius-he-5-10-3-4	supports	whole_claim	explicit		0.7	HE 5.10.3-4 (paraphrase): 'Pantaenus is said to have gone to India.' Directly supports. Capped for paraphrase + 'possible' certainty tension.
 clm-pantaenus-teacher-of-clement	psg-eusebius-he-5-10-1-2	supports	whole_claim	explicit		0.9	Eusebius: Clement of Alexandria names Pantaenus in his writings as his instructor.
 clm-papias-bishop-hierapolis	psg-eusebius-he-3-39	supports	whole_claim	explicit		1.0	
@@ -1756,14 +1756,14 @@ clm-paul-teacher-of-onesimus	psg-phlm-10-12	supports	whole_claim	explicit		0.9	P
 clm-paul-teacher-of-philemon	psg-philemon-1-2	contextualizes					Phlm 1-2: calls Philemon 'fellow worker', not student/disciple
 clm-paul-teacher-of-timothy	psg-1tim-1-2	supports	whole_claim	explicit		0.9	Paul calls Timothy 'my true son in the faith' — language of spiritual fathering.
 clm-paul-teacher-of-titus	psg-titus-1-4	supports	whole_claim	explicit		0.9	Paul calls Titus 'my true son in our common faith.'
-clm-pauls-martyrdom-at-rome	psg-eusebius-church-history-2-25	supports	place	explicit		0.9	Eusebius explicitly places Paul's death in Rome, but this batch still treats the localization as probable because the witness is later and tradition-bearing.
-clm-pauls-martyrdom-year	psg-eusebius-church-history-2-25	supports	date	explicit		0.8	
+clm-pauls-martyrdom-at-rome	psg-eusebius-church-history-2-25	supports	place	explicit		0.9	HE 2.25.5 verified: 'Paul was beheaded in Rome itself, and that Peter likewise was crucified under Nero.' Paraphrase accurate. Web verified at newadvent.org/fathers/250102.htm ch.25.
+clm-pauls-martyrdom-year	psg-eusebius-church-history-2-25	supports	date	strong_inference		0.8	HE 2.25 verified: martyrdom under Nero explicit. Year 64 inferred from Nero context (reign 54-68, fire of Rome 64). Downgraded to strong_inference. Web verified.
 clm-pentecost-at-jerusalem	psg-acts-2-1-4	supports	whole_claim	explicit		1.0	
 clm-pentecost-year	psg-acts-2-1-4	supports	date	explicit		0.7	Acts 2:1-4: Day of Pentecost. Year 30 from post-resurrection timeline (50 days after Passover). Paraphrase valid.
 clm-peri-pascha-by-melito	psg-melito-peri-pascha-96	supports	attribution	strong_inference		0.7	B108: PARAPHRASE. Passage from the work attests its existence. Authorship by Melito accepted by scholarship. Paraphrase cap. wt 0.9→0.7.
 clm-persis-active-rome	psg-rom-16-12	supports	whole_claim	explicit		1.0	
 clm-persis-roman-church	psg-rom-16-12	supports	whole_claim	explicit		1.0	
-clm-person-alban-affirms-britannia	psg-wikipedia-british-church-control	supports	predicate	explicit			Passage contextualizes alban-of-britain's position on christianity-reached-britannia.
+clm-person-alban-affirms-britannia	psg-wikipedia-british-church-control	contextualizes				0.3	Tertiary Wikipedia source. Mentions Christianity in Roman Britain generally but doesn't attest Alban specifically. Downgraded to contextualizes. Web verified.
 clm-person-athanasius-affirms-ethiopia	psg-athanasius-apol-const-29-31	supports	predicate	strong_inference		0.8	Apol. ad Const. 29-31 paraphrase: Athanasius's own account of consecrating Frumentius as bishop for the Aksumites/Ethiopians. Paraphrase cap: mode explicit->strong_inference, wt 0.9->0.8.
 clm-person-constantius-affirms-ethiopia	psg-vita-const-letter-constantius	supports	predicate	explicit		0.75	Constantius's letter to Aksumite rulers (paraphrase) directly acknowledges Frumentius and the Aksumite church. Capped for paraphrase.
 clm-person-ezana-affirms-dominion	psg-wikipedia-aksumite-control	contextualizes				0.0	MISLINK: Wikipedia passage about Aksumite territorial control says nothing about theological claims. 'Christ's dominion is universal' is a doctrinal proposition — Wikipedia geographic info provides zero support. Need Ezana inscription or Rufinus for this claim. Downgraded.
@@ -1811,8 +1811,8 @@ clm-peter-member-jerusalem-church	psg-acts-2-14-36	supports	whole_claim	strong_i
 clm-peter-member-roman-church	psg-1clement-5-1-7	supports	whole_claim	strong_inference		0.8	1 Clem. 5 paraphrase: Peter among exemplary Roman church figures who suffered. Paraphrase cap: mode explicit->strong_inference, wt 0.8 retained.
 clm-peter-teacher-of-mark	psg-1pet-5-13	supports	whole_claim	explicit		0.7	1 Pet 5:13 calls Mark my son.
 clm-peter-teacher-of-mark	psg-eusebius-he-3-39-1-4	supports	whole_claim	strong_inference		0.8	Papias via Eusebius HE 3.39 paraphrase: Mark was Peter's interpreter. Paraphrase cap: mode explicit->strong_inference, wt 0.8 retained.
-clm-peters-martyrdom-at-rome	psg-eusebius-church-history-2-25	supports	place	explicit		0.8	Eusebius localizes Peter's suffering through Nero-era and Roman memorial tradition, so the Rome place claim is kept probable rather than maximal.
-clm-peters-martyrdom-year	psg-eusebius-church-history-2-25	supports	date	explicit		0.8	
+clm-peters-martyrdom-at-rome	psg-eusebius-church-history-2-25	supports	place	explicit		0.8	HE 2.25.5 verified: 'Peter likewise was crucified under Nero.' Rome explicit via Gaius's 'trophies' at Vatican and Ostian way. Web verified.
+clm-peters-martyrdom-year	psg-eusebius-church-history-2-25	supports	date	strong_inference		0.8	HE 2.25 verified: martyrdom under Nero explicit. Year 64 inferred from Nero context. Downgraded to strong_inference. Web verified.
 clm-pharisees-at-galilee	psg-mark-3-6	supports	whole_claim	strong_inference		0.7	Mark 3:6 mentions Pharisees conspiring with Herodians. Galilean setting inferred from preceding Sabbath-in-synagogue narrative (Mark 3:1-5). Galilee not named explicitly in v.6.
 clm-pharisees-at-jerusalem	psg-mark-11-15-18	contextualizes				0.3	MISLINK: Mark 11:15-18 is the temple cleansing — mentions chief priests and scribes, NOT Pharisees. Need Mark 12:13 for Pharisees in Jerusalem. Downgraded.
 clm-philemon-addressed-colossae	psg-philemon-1-2	supports	place	explicit		0.7	Phlm 1:1-2: Paul addresses Philemon and church in house. Colossae inferred from Col 4:9,17 connection (Onesimus, Archippus). Paraphrase valid.
@@ -1841,8 +1841,8 @@ clm-philippians-resurrection	psg-phil-2-25-30	contextualizes				0.3	MISLINK: Phi
 clm-philippians-resurrection	psg-rom-10-9	contextualizes				0.6	
 clm-philologus-active-rome	psg-rom-16-15	supports	whole_claim	explicit		1.0	
 clm-philologus-roman-church	psg-rom-16-15	supports	whole_claim	explicit		1.0	
-clm-philostorgius-active-constantinople	psg-philostorgius-he-3-4	supports	subject	strong_inference			Philostorgius HE 3.4 was written from Constantinople by Philostorgius himself.
-clm-philostorgius-affirms-ethiopia	psg-philostorgius-he-3-4	supports	predicate	explicit			Philostorgius HE 3.4 describes Theophilus's mission to Ethiopia (Himyar/Axum region).
+clm-philostorgius-active-constantinople	psg-philostorgius-he-3-4	supports	subject	strong_inference		0.5	DATA ERROR: claim_id says 'active-constantinople' but object_id is 'antioch'. Philostorgius was based in Constantinople, not Antioch. Passage doesn't attest either location directly. Needs claim fix to correct object_id to 'constantinople'. Web verified.
+clm-philostorgius-affirms-ethiopia	psg-philostorgius-he-3-4	supports	predicate	explicit		0.7	Philostorgius HE 3.4 (Photius epitome) describes Theophilus's mission to Himyarites and visit to Aksumites. Ethiopia/Aksum connection is explicit in the passage. Scored 0.7. Web verified.
 clm-philostorgius-affirms-india	psg-philostorgius-he-3-4	contextualizes					Passage contextualizes philostorgius's position on gospel-reached-india.
 clm-philostorgius-he-affirms-arabia-christianized	psg-philostorgius-he-3-4	supports	predicate	strong_inference		0.8	HE 3.4 (paraphrase via Photius): Theophilus's Himyarite mission, three churches built. Directly supports Arabia christianization. Capped per paraphrase.
 clm-philostorgius-he-affirms-bartholomew-india	psg-philostorgius-he-3-6	supports	predicate	strong_inference		0.7	HE 3.6 (paraphrase via Photius): 'Christians who had learned of Christ from the apostle Bartholomew.' Directly supports. Capped per paraphrase.
@@ -1862,137 +1862,137 @@ clm-pilate-in-crucifixion	psg-mark-15-1-15	supports	whole_claim	explicit		0.9	Ma
 clm-pilate-in-pilate-trial	psg-josephus-ant-18-55-59	contextualizes				0.5	Ant. 18.55-59 covers the standards incident, NOT the trial of Jesus. Establishes Pilate's authority in Judea but does not describe the trial. Downgraded to contextualizes.
 clm-pilate-in-pilate-trial	psg-mark-15-1-15	supports	whole_claim	explicit		0.9	Mark 15:1-15 directly describes Jesus before Pilate. Cap for paraphrase form.
 clm-place-achaia-attested	psg-2cor-1-1	supports	whole_claim	explicit		1.0	
-clm-place-achaia-attested-late	psg-acts-18-12-17	supports	whole_claim	explicit			Acts 18 records Gallio as proconsul of Achaia.
-clm-place-aksum-attested	psg-wikipedia-aksumite-control	supports	whole_claim	explicit			Aksum was the capital of the Aksumite Empire and center of Ethiopian Christianity.
-clm-place-alexandria-attested	psg-acts-18-24-28	supports	whole_claim	explicit			Acts 18:24 attests Apollos as an Alexandrian.
-clm-place-antioch-attested	psg-acts-11-25-26	supports	whole_claim	explicit			Acts 11:26 records disciples at Antioch.
-clm-place-appii-forum-attested	psg-acts-28-15	supports	whole_claim	explicit		1.0	
-clm-place-arbela-attested	psg-wikipedia-church-of-east-spread	supports	whole_claim	explicit			Arbela was an early center of Syriac Christianity.
-clm-place-arles-attested	psg-wikipedia-british-church-control	supports	whole_claim	explicit			British bishops attended the Council of Arles (314 AD).
+clm-place-achaia-attested-late	psg-acts-18-12-17	supports	whole_claim	explicit		1.0	Acts 18:12 'when Gallio was proconsul of Achaia.' Achaia explicit. Weight scored. Web verified at STEP Bible.
+clm-place-aksum-attested	psg-wikipedia-aksumite-control	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia. Excerpt mentions 'kingdom centered at Aksum' — Aksum named. But still tertiary. Downgraded to contextualizes, weight 0.3. Primary evidence available via Rufinus HE 1.9.
+clm-place-alexandria-attested	psg-acts-18-24-28	supports	whole_claim	explicit		1.0	Acts 18:24 'a Jew named Apollos, a native of Alexandria.' Alexandria explicit. PARAPHRASE_OMISSION:subject — excerpt says 'Apollos arrives at Ephesus' without naming Alexandria, but passage does. Weight scored. Web verified at STEP Bible.
+clm-place-antioch-attested	psg-acts-11-25-26	supports	whole_claim	explicit		1.0	Acts 11:25-26 names Antioch explicitly. Weight scored. Verified.
+clm-place-appii-forum-attested	psg-acts-28-15	supports	whole_claim	explicit		1.0	Acts 28:15 'the brothers... came as far as the Forum of Appius.' Appii Forum explicit. Paraphrase accurate. Verified.
+clm-place-arbela-attested	psg-wikipedia-church-of-east-spread	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia source. Primary evidence needed (Chronicle of Arbela, though disputed). Downgraded to contextualizes, weight capped at 0.3.
+clm-place-arles-attested	psg-wikipedia-british-church-control	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia. Excerpt does mention 'Council of Arles in 314 AD' — Arles named. But still tertiary. Downgraded to contextualizes, weight 0.3.
 clm-place-asia-attested	psg-1pet-1-1	supports	whole_claim	explicit		1.0	
-clm-place-asia-attested-late	psg-acts-19-1-10	supports	whole_claim	explicit			Acts 19 records Paul's ministry in the province of Asia.
-clm-place-assos-attested	psg-acts-20-13-15	supports	whole_claim	explicit		1.0	
-clm-place-athens-attested	psg-acts-17-16-34	supports	whole_claim	explicit		1.0	
-clm-place-berea-attested	psg-acts-17-10-15	supports	whole_claim	explicit		1.0	
-clm-place-bethany-jordan-attested	psg-john-1-28-34	supports	whole_claim	explicit			John 1:28 names Bethany across the Jordan.
-clm-place-bethany-near-jerusalem-attested	psg-john-11-1-18	supports	whole_claim	explicit		1.0	
-clm-place-bethsaida-attested	psg-john-1-43-49	supports	whole_claim	explicit		1.0	
+clm-place-asia-attested-late	psg-acts-19-1-10	supports	whole_claim	explicit		1.0	Acts 19:10 'all the residents of Asia heard the word of the Lord.' Asia explicit. PARAPHRASE_OMISSION:subject — excerpt says 'the region' instead of 'Asia.' Weight scored. Web verified.
+clm-place-assos-attested	psg-acts-20-13-15	supports	whole_claim	explicit		1.0	Acts 20:13 'we went ahead to the ship and set sail for Assos.' Assos explicit. Paraphrase accurate. Verified.
+clm-place-athens-attested	psg-acts-17-16-34	supports	whole_claim	explicit		1.0	Acts 17:16 'while Paul was waiting for them at Athens.' Athens explicit. Areopagus speech. Paraphrase accurate. Verified.
+clm-place-berea-attested	psg-acts-17-10-15	supports	whole_claim	explicit		1.0	Acts 17:10 'The brothers immediately sent Paul and Silas away by night to Berea.' Berea explicit. Paraphrase accurate. Verified.
+clm-place-bethany-jordan-attested	psg-john-1-28-34	supports	whole_claim	explicit		1.0	John 1:28 explicitly names 'Bethany beyond the Jordan where John was baptizing.' Place attestation explicit. Weight scored. Verified.
+clm-place-bethany-near-jerusalem-attested	psg-john-11-1-18	supports	whole_claim	explicit		1.0	John 11:1 'Lazarus of Bethany, the village of Mary and her sister Martha.' v18 'Bethany was near Jerusalem.' Bethany explicit. Paraphrase accurate. Verified.
+clm-place-bethsaida-attested	psg-john-1-43-49	supports	whole_claim	explicit		1.0	John 1:44 'Philip was from Bethsaida, the city of Andrew and Peter.' Bethsaida explicit in passage though not in excerpt paraphrase. PARAPHRASE_OMISSION:subject noted — excerpt should mention Bethsaida. Verified.
 clm-place-bithynia-attested	psg-1pet-1-1	supports	whole_claim	explicit		1.0	
-clm-place-bithynia-attested-late	psg-wikipedia-early-christian-places	supports	whole_claim	explicit			1 Pet 1:1 addresses Bithynia; early Christian presence attested.
-clm-place-bostra-attested	psg-eusebius-he-6-33	supports	subject	explicit		1.0	Eusebius HE 6.33 explicitly names Beryllus as bishop of Bostra in Arabia c. 240 CE.
+clm-place-bithynia-attested-late	psg-wikipedia-early-christian-places	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia source. Primary evidence is 1 Pet 1:1 which explicitly names Bithynia. Downgraded to contextualizes, weight capped at 0.3. Needs primary passage harvest.
+clm-place-bostra-attested	psg-eusebius-he-6-33	supports	subject	explicit		1.0	HE 6.33: 'Beryllus...bishop of Bostra in Arabia.' Bostra explicitly named. Web verified at newadvent.org/fathers/250106.htm.
 clm-place-bostra-attested	psg-wikipedia-early-church-geography	contextualizes					Bostra was the seat of a bishop attested at early councils.
-clm-place-britannia-attested	psg-gildas-de-excidio-10	supports	subject	explicit		1.0	Gildas De Excidio 10 is the earliest primary source attesting Christianity in Roman Britain.
+clm-place-britannia-attested	psg-gildas-de-excidio-10	supports	subject	explicit		1.0	SOURCE_MISATTRIBUTION: psg-gildas-de-excidio-10 is from Gildas De Excidio Britanniae (c. 540), but is attributed to src-rufinus-he (Rufinus c. 402). These are different authors/works. Gildas claims Christianity reached Britain under Tiberius — very late and legendary. Paraphrase noted as late tradition. Verified.
 clm-place-britannia-attested	psg-wikipedia-british-church-control	contextualizes					Christianity in Roman Britain attested by 3rd century.
 clm-place-caesarea-attested-early	psg-acts-10-1-48	supports	whole_claim	explicit		1.0	
 clm-place-caesarea-attested-late	psg-acts-21-8-9	supports	whole_claim	explicit		1.0	
-clm-place-caesarea-cappadocia-attested	psg-wikipedia-early-church-geography	supports	whole_claim	explicit			Caesarea Cappadocia was a major see; home of Basil the Great.
-clm-place-cana-attested	psg-john-1-43-49	supports	whole_claim	explicit		1.0	
-clm-place-capernaum-attested	psg-mark-1-14-15	supports	whole_claim	explicit			Jesus's ministry centered at Capernaum (Mark 1).
+clm-place-caesarea-cappadocia-attested	psg-wikipedia-early-church-geography	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia. Primary evidence needed (Eusebius HE on Firmilian). Downgraded to contextualizes, weight 0.3.
+clm-place-cana-attested	psg-john-1-43-49	supports	whole_claim	weak_inference		0.4	LOCATOR ERROR: John 1:43-49 does NOT mention Cana. Nathanael identified as 'of Cana in Galilee' only in John 21:2. Cana first named at John 2:1 (wedding). Wrong passage for Cana attestation. Downgraded to weak_inference. Web verified.
+clm-place-capernaum-attested	psg-mark-1-14-15	supports	whole_claim	strong_inference		0.6	PARAPHRASE_OMISSION: Mark 1:14-15 names Galilee, NOT Capernaum. Capernaum first named at Mark 1:21. Capernaum inferred from broader Galilean ministry context. Downgraded to strong_inference. Weight scored 0.6. Web verified.
 clm-place-cappadocia-attested	psg-1pet-1-1	supports	whole_claim	explicit		1.0	
-clm-place-cappadocia-attested-late	psg-wikipedia-early-christian-places	supports	whole_claim	explicit			1 Pet 1:1 addresses Cappadocia; early Christian presence attested.
-clm-place-carthage-attested	psg-wikipedia-early-church-geography	supports	whole_claim	explicit			Carthage was a major early Christian center in North Africa.
-clm-place-chios-attested	psg-acts-20-13-15	supports	whole_claim	explicit		1.0	
-clm-place-clauda-attested	psg-acts-27-16-17	supports	whole_claim	explicit		1.0	
-clm-place-cnidus-attested	psg-acts-27-3-12	supports	whole_claim	explicit		1.0	
-clm-place-colossae-attested	psg-col-1-2	supports	whole_claim	explicit		1.0	
-clm-place-corinth-attested	psg-acts-18-1-11	supports	whole_claim	explicit			Acts 18:1 records Paul at Corinth.
+clm-place-cappadocia-attested-late	psg-wikipedia-early-christian-places	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia source. Primary evidence is 1 Pet 1:1 which explicitly names Cappadocia. Downgraded to contextualizes, weight capped at 0.3. Needs primary passage harvest.
+clm-place-carthage-attested	psg-wikipedia-early-church-geography	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia source. Primary evidence available via Tertullian Apol. 39 (sibling claim). Downgraded to contextualizes, weight capped at 0.3.
+clm-place-chios-attested	psg-acts-20-13-15	supports	whole_claim	explicit		1.0	Acts 20:15 'the following day we arrived at... Chios.' Chios explicit. Paraphrase accurate. Verified.
+clm-place-clauda-attested	psg-acts-27-16-17	supports	whole_claim	explicit		1.0	Acts 27:16 'running under the lee of a small island called Cauda.' Clauda/Cauda explicit. Paraphrase accurate. Verified.
+clm-place-cnidus-attested	psg-acts-27-3-12	supports	whole_claim	explicit		1.0	Acts 27:7 'we sailed slowly... and arrived with difficulty off Cnidus.' Cnidus explicit. Paraphrase accurate. Web verified at STEP Bible.
+clm-place-colossae-attested	psg-col-1-2	supports	whole_claim	explicit		1.0	Col 1:2 'at Colossae.' Colossae explicit. Paraphrase accurate. Web verified at STEP Bible.
+clm-place-corinth-attested	psg-acts-18-1-11	supports	whole_claim	explicit		1.0	Acts 18:1 'Paul left Athens and went to Corinth.' Corinth explicit. Weight scored. Web verified.
 clm-place-crete-attested	psg-titus-1-5	supports	whole_claim	explicit		1.0	
-clm-place-crete-attested-late	psg-acts-27-3-12	supports	whole_claim	explicit			Acts 27 records Paul passing through Crete.
+clm-place-crete-attested-late	psg-acts-27-3-12	supports	whole_claim	explicit		1.0	Acts 27:7 'sailed under the lee of Crete off Salmone.' Crete explicit in passage. PARAPHRASE_OMISSION:subject — excerpt says 'Fair Havens' and 'Phoenix' without naming Crete, but passage does. Weight scored. Web verified.
 clm-place-cyprus-attested	psg-acts-13-4-12	supports	whole_claim	explicit		1.0	
-clm-place-cyprus-attested-late	psg-acts-13-4-12	supports	whole_claim	explicit			Acts 13:4 records Paul at Cyprus.
+clm-place-cyprus-attested-late	psg-acts-13-4-12	supports	whole_claim	explicit		1.0	Acts 13:4 'they sailed to Cyprus.' Cyprus explicit. Weight scored. Verified.
 clm-place-dalmatia-attested	psg-2tim-4-10-12	supports	whole_claim	explicit		1.0	
-clm-place-dalmatia-attested-late	psg-wikipedia-early-church-geography	supports	whole_claim	explicit			Dalmatia is mentioned as a mission field in 2 Tim 4:10.
-clm-place-damascus-attested	psg-acts-9-1-19	supports	whole_claim	explicit			Acts 9 records Paul's journey to Damascus.
-clm-place-derbe-attested	psg-acts-20-4	supports	whole_claim	explicit		1.0	
-clm-place-dura-europos-attested	psg-wikipedia-early-church-geography	supports	whole_claim	explicit			Dura-Europos contains the oldest known house church (c. 235 AD).
-clm-place-edessa-attested	psg-wikipedia-early-church-geography	supports	whole_claim	explicit			Edessa is among the earliest attested Christian centers.
-clm-place-egypt-attested	psg-acts-18-24-28	supports	subject	explicit			Acts 18:24 identifies Apollos as Alexandrian — direct attestation of Egypt as Christian center.
-clm-place-emmaus-attested	psg-luke-24-5-7	supports	subject	explicit			Luke 24 places events at Emmaus; though a different passage (24:13), this attests the place name.
-clm-place-ephesus-attested	psg-acts-19-1-10	supports	whole_claim	explicit		1.0	
-clm-place-ephesus-attested	psg-rev-1-11	supports	whole_claim	explicit		0.7	Late first-century attestation helps justify the interval claim.
+clm-place-dalmatia-attested-late	psg-wikipedia-early-church-geography	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia source. Primary evidence is 2 Tim 4:10 which explicitly names Dalmatia. Downgraded to contextualizes, weight capped at 0.3. Needs primary passage harvest.
+clm-place-damascus-attested	psg-acts-9-1-19	supports	whole_claim	explicit		1.0	Acts 9:1-19 explicitly names Damascus repeatedly (vv2,3,8,10,19). Saul's journey to Damascus and conversion. Weight scored. Web verified.
+clm-place-derbe-attested	psg-acts-20-4	supports	whole_claim	explicit		1.0	Acts 20:4 'Gaius of Derbe, and Timothy.' PARAPHRASE_OMISSION:subject — excerpt omits Derbe and Gaius, names only Sopater/Aristarchus/Secundus. Derbe IS in passage. Web verified at STEP Bible.
+clm-place-dura-europos-attested	psg-wikipedia-early-church-geography	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia. Primary evidence needed (archaeological reports). Downgraded to contextualizes, weight 0.3.
+clm-place-edessa-attested	psg-wikipedia-early-church-geography	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia source. Primary evidence for Edessa needed (e.g. Doctrine of Addai, Eusebius HE 1.13). Downgraded to contextualizes, weight capped at 0.3.
+clm-place-egypt-attested	psg-acts-18-24-28	supports	subject	strong_inference		0.8	Acts 18:24 says 'native of Alexandria' — Egypt itself is NOT named. Egypt is inferred from Alexandria being in Egypt. Downgraded from explicit to strong_inference. Weight 0.8.
+clm-place-emmaus-attested	psg-luke-24-5-7	supports	subject	weak_inference		0.3	LOCATOR_ERROR: psg-luke-24-5-7 is about the resurrection message ('Why do you seek the living among the dead?'). Emmaus is named in Luke 24:13 ('a village named Emmaus'), NOT in vv.5-7. Downgraded to weak_inference, weight 0.3. Needs repoint to Luke 24:13. Web verified at STEP Bible.
+clm-place-ephesus-attested	psg-acts-19-1-10	supports	whole_claim	explicit		1.0	Acts 19:1 'Paul... came to Ephesus.' Ephesus explicit. Paraphrase accurate. Web verified.
+clm-place-ephesus-attested	psg-rev-1-11	supports	whole_claim	explicit		0.7	Rev 1:11 'to Ephesus.' Ephesus explicit. Verified.
 clm-place-ephesus-attested-late	psg-acts-19-1-10	supports	whole_claim	explicit			Acts 19:1 records Paul at Ephesus.
-clm-place-fair-havens-attested	psg-acts-27-3-12	supports	whole_claim	explicit		1.0	
-clm-place-flavia-neapolis-attested	psg-justin-apol-61	supports	subject	strong_inference		1.0	Justin 1 Apol. mentions his hometown Flavia Neapolis; his active presence there attests it.
+clm-place-fair-havens-attested	psg-acts-27-3-12	supports	whole_claim	explicit		1.0	Acts 27:8 'we came to a place called Fair Havens.' Fair Havens explicit. Paraphrase accurate. Web verified.
+clm-place-flavia-neapolis-attested	psg-justin-apol-61	supports	subject	strong_inference		1.0	1 Apol. 61 is about baptism, not Justin's hometown. Justin's Flavia Neapolis origin is stated in 1 Apol. 1.1, not ch. 61. Locator points to wrong chapter for the place attestation, but the broader work does attest it. assertion_mode strong_inference is correct. LOCATOR note: should point to 1 Apol. 1.1 for direct place reference.
 clm-place-flavia-neapolis-attested	psg-wikipedia-early-christian-places	contextualizes					Justin Martyr from Flavia Neapolis; city attested.
-clm-place-galatia-attested-early	psg-acts-16-6	supports	whole_claim	explicit			Acts 16:6 attests Galatia in the missionary journey.
+clm-place-galatia-attested-early	psg-acts-16-6	supports	whole_claim	explicit		1.0	Acts 16:6 verbatim: 'They went through the region of Phrygia and Galatia.' Galatia explicit. Weight scored. Verified.
 clm-place-galatia-attested-late	psg-1pet-1-1	supports	whole_claim	explicit		1.0	
-clm-place-galilee-attested	psg-mark-1-14-15	supports	whole_claim	explicit		1.0	
-clm-place-galilee-attested	psg-matt-4-23	supports	whole_claim	explicit		1.0	
+clm-place-galilee-attested	psg-mark-1-14-15	supports	whole_claim	explicit		1.0	Mark 1:14 'Jesus came into Galilee, proclaiming the gospel of God.' Galilee explicit. Paraphrase accurate. Web verified.
+clm-place-galilee-attested	psg-matt-4-23	supports	whole_claim	explicit		1.0	Matt 4:23 'Jesus went throughout all Galilee, teaching in their synagogues.' Galilee explicit. Paraphrase accurate. Verified.
 clm-place-galilee-attested-late	psg-mark-1-14-15	supports	whole_claim	explicit			Mark 1:14 places Jesus's ministry in Galilee.
-clm-place-gaul-attested	psg-eusebius-he-5-1	supports	whole_claim	explicit			Eusebius HE 5.1 attests communities at Lyons/Gaul.
+clm-place-gaul-attested	psg-eusebius-he-5-1	supports	whole_claim	explicit		1.0	HE 5.1: 'servants of Christ dwelling in Vienne and Lyons in Gaul.' Gaul explicit. Weight scored. Verified.
 clm-place-hierapolis-attested	psg-col-4-12-13	supports	whole_claim	explicit		1.0	
-clm-place-hierapolis-attested-early	psg-col-4-13-16	supports	whole_claim	explicit			Col 4:13 mentions a community at Hierapolis.
+clm-place-hierapolis-attested-early	psg-col-4-13-16	supports	whole_claim	explicit		1.0	Col 4:13 'those in Laodicea and in Hierapolis.' Hierapolis explicit. Weight scored. Web verified at STEP Bible.
 clm-place-hierapolis-attested-late	psg-col-4-13-16	supports	whole_claim	explicit			Col 4:13 mentions a community at Hierapolis.
-clm-place-india-attested	psg-acts-thomas-108-113	supports	subject	explicit			Acts of Thomas is the primary literary witness to Indian Christianity; ch. 108-113 central.
-clm-place-jericho-attested	psg-luke-19-1-10	supports	whole_claim	explicit		1.0	
-clm-place-jerusalem-attested	psg-mark-11-15-18	supports	whole_claim	explicit		1.0	
+clm-place-india-attested	psg-acts-thomas-108-113	supports	subject	weak_inference		0.4	LOCATOR_ERROR: Acts of Thomas chs. 108-113 = Hymn of the Pearl, an originally independent allegorical poem set in Egypt/Parthia, NOT India. India mission narrated in framing story (chs. 1-16). Hymn of the Pearl is embedded in the Acts of Thomas but does not itself attest India. Downgraded to weak_inference. Web verified at earlychristianwritings.com.
+clm-place-jericho-attested	psg-luke-19-1-10	supports	whole_claim	explicit		1.0	Luke 19:1 'He entered Jericho and was passing through.' Jericho explicit. Zacchaeus episode. Paraphrase accurate. Verified.
+clm-place-jerusalem-attested	psg-mark-11-15-18	supports	whole_claim	explicit		1.0	Mark 11:15 'they came to Jerusalem.' Temple cleansing passage. Jerusalem explicit. Paraphrase accurate. Web verified.
 clm-place-joppa-attested	psg-acts-9-32-43	supports	whole_claim	explicit		1.0	
-clm-place-joppa-attested-late	psg-acts-9-36-43	supports	whole_claim	explicit			Acts 9 records the community at Joppa.
+clm-place-joppa-attested-late	psg-acts-9-36-43	supports	whole_claim	explicit		1.0	Acts 9:36 'In Joppa there was a disciple named Tabitha.' Joppa explicit. Weight scored. Paraphrase accurate. Verified.
 clm-place-judea-attested	psg-mark-11-15-18	supports	whole_claim	explicit		1.0	
-clm-place-judea-attested-late	psg-acts-1-13-14	supports	whole_claim	explicit			Acts records disciples throughout Judea.
+clm-place-judea-attested-late	psg-acts-1-13-14	supports	whole_claim	strong_inference		0.7	PARAPHRASE_OMISSION: Acts 1:13-14 names Jerusalem upper room, NOT 'Judea' directly. Judea inferred since Jerusalem is in Judea. Downgraded to strong_inference. Weight scored 0.7. Web verified.
 clm-place-laodicea-attested-col	psg-col-4-16	supports	whole_claim	explicit		1.0	
 clm-place-laodicea-attested-late	psg-rev-3-14-22	supports	whole_claim	explicit		1.0	Revelation 3:14 addresses the church at Laodicea.
 clm-place-laodicea-attested-rev	psg-rev-1-11	supports	whole_claim	explicit		1.0	
-clm-place-londinium-attested	psg-wikipedia-british-church-control	supports	whole_claim	explicit			Londinium (London) is attested as a center of Christianity in Roman Britain.
+clm-place-londinium-attested	psg-wikipedia-british-church-control	contextualizes	whole_claim	explicit		0.2	TERTIARY_ONLY + MISLINK: Wikipedia excerpt mentions 'British church' and 'Council of Arles' but does NOT name London/Londinium. Downgraded to contextualizes, weight 0.2.
 clm-place-lycia-attested	psg-acts-27-5-8	supports	whole_claim	explicit		1.0	
-clm-place-lycia-attested-late	psg-acts-27-5-8	supports	whole_claim	explicit			Acts 27:5 records Paul passing through Lycia.
+clm-place-lycia-attested-late	psg-acts-27-5-8	supports	whole_claim	explicit		1.0	Acts 27:5 'we came to Myra in Lycia.' Lycia explicit. Weight scored. Verified.
 clm-place-lydda-attested	psg-acts-9-32-35	supports	whole_claim	explicit		1.0	
-clm-place-lydda-attested-late	psg-acts-9-32-35	supports	whole_claim	explicit			Acts 9:32 records the community at Lydda.
-clm-place-lystra-attested	psg-acts-16-1-3	supports	whole_claim	explicit		1.0	
-clm-place-malta-attested	psg-acts-28-1-14	supports	whole_claim	explicit		1.0	
-clm-place-miletus-attested	psg-acts-20-6-17	supports	whole_claim	explicit		1.0	
-clm-place-mitylene-attested	psg-acts-20-13-15	supports	whole_claim	explicit		1.0	
-clm-place-myra-attested	psg-acts-27-5-8	supports	whole_claim	explicit		1.0	
-clm-place-najran-attested	psg-philostorgius-he-3-4	supports	subject	strong_inference		1.0	Philostorgius HE 3.4 describes the Himyarite mission near Najran in southern Arabia.
+clm-place-lydda-attested-late	psg-acts-9-32-35	supports	whole_claim	explicit		1.0	Acts 9:32 'the saints who lived at Lydda.' Lydda explicit. Weight scored. Web verified.
+clm-place-lystra-attested	psg-acts-16-1-3	supports	whole_claim	explicit		1.0	Acts 16:1 'Paul came also to Derbe and to Lystra.' Lystra explicit. Paraphrase accurate. Verified.
+clm-place-malta-attested	psg-acts-28-1-14	supports	whole_claim	explicit		1.0	Acts 28:1 'the island was called Malta.' Malta explicit. Paraphrase accurate. Web verified at STEP Bible.
+clm-place-miletus-attested	psg-acts-20-6-17	supports	whole_claim	explicit		1.0	Acts 20:15 'the next day we came to Miletus.' v17 Paul sends for Ephesian elders. Miletus explicit. Paraphrase accurate. Verified.
+clm-place-mitylene-attested	psg-acts-20-13-15	supports	whole_claim	explicit		1.0	Acts 20:14 'we... came to Mitylene.' Mitylene explicit. Paraphrase accurate. Verified.
+clm-place-myra-attested	psg-acts-27-5-8	supports	whole_claim	explicit		1.0	Acts 27:5 'we came to Myra in Lycia.' Myra explicit. Paraphrase accurate. Verified.
+clm-place-najran-attested	psg-philostorgius-he-3-4	supports	subject	weak_inference		0.5	Philostorgius HE 3.4 mentions Himyar, Zafar, Aden, Persian Gulf — Najran NOT named. Najran inferred from regional proximity. Downgraded from strong_inference to weak_inference, weight from 1.0 to 0.5 to resolve WEIGHT_CERTAINTY_TENSION (certainty=possible).
 clm-place-najran-attested	psg-wikipedia-arab-christian-presence	contextualizes					Najran is attested as a Christian community in Arabia.
-clm-place-nazareth-attested	psg-luke-4-16	supports	whole_claim	explicit		1.0	
-clm-place-neocaesarea-attested	psg-eusebius-he-5-10-3-4	contextualizes				1.0	
-clm-place-neocaesarea-attested	psg-eusebius-he-6-30	supports	subject	explicit		1.0	Eusebius HE 6.30 names Gregory Thaumaturgus as bishop of Neocaesarea.
+clm-place-nazareth-attested	psg-luke-4-16	supports	whole_claim	explicit		1.0	Luke 4:16 'he came to Nazareth, where he had been brought up.' Nazareth explicit. Paraphrase accurate. Verified.
+clm-place-neocaesarea-attested	psg-eusebius-he-5-10-3-4	contextualizes				0.3	MISLINK: HE 5.10 is about Pantaenus's mission to India, not Neocaesarea. Downgraded to contextualizes with capped weight. Needs removal or repoint.
+clm-place-neocaesarea-attested	psg-eusebius-he-6-30	supports	subject	strong_inference		1.0	HE 6.30: 'Gregory...honored with a bishopric in the churches of Pontus.' Neocaesarea NOT explicitly named in the NPNF text. Gregory Thaumaturgus is traditionally identified with Neocaesarea but the passage says 'Pontus.' Downgraded from explicit to strong_inference. Web verified at newadvent.org.
 clm-place-neocaesarea-attested	psg-wikipedia-early-church-geography	contextualizes					Neocaesarea was home to Gregory Thaumaturgus; attested c. 250 AD.
-clm-place-nicopolis-attested	psg-titus-3-12	supports	whole_claim	explicit		1.0	
-clm-place-nisibis-attested	psg-wikipedia-church-of-east-spread	supports	whole_claim	explicit			Nisibis was a major center of Syriac Christianity.
-clm-place-paphos-attested	psg-acts-13-4-12	supports	whole_claim	explicit		1.0	
-clm-place-patmos-attested	psg-eusebius-he-3-18	supports	whole_claim	explicit			Eusebius records John's exile on Patmos (HE 3.18).
+clm-place-nicopolis-attested	psg-titus-3-12	supports	whole_claim	explicit		1.0	Titus 3:12 'come to me at Nicopolis, for I have decided to spend the winter there.' Nicopolis explicit. Paraphrase accurate. Web verified at STEP Bible.
+clm-place-nisibis-attested	psg-wikipedia-church-of-east-spread	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY + MISLINK: Wikipedia excerpt mentions 'Edessa, Arbela' but NOT Nisibis. Downgraded to contextualizes, weight 0.3. Needs primary harvest (Aphrahat, Ephrem).
+clm-place-paphos-attested	psg-acts-13-4-12	supports	whole_claim	explicit		1.0	Acts 13:6 'they had gone through the whole island as far as Paphos.' Paphos explicit. Paraphrase accurate. Verified.
+clm-place-patmos-attested	psg-eusebius-he-3-18	supports	whole_claim	explicit		0.9	Eusebius HE 3.18: 'condemned to dwell on the island of Patmos.' Patmos explicit. Also Rev 1:9 ('I, John... was on the island called Patmos') provides direct primary attestation. Weight 0.9 (Eusebius is secondary witness to a primary text). Verified.
 clm-place-pergamum-attested	psg-rev-1-11	supports	whole_claim	explicit		1.0	
-clm-place-pergamum-attested-late	psg-rev-2-12-17	supports	whole_claim	explicit			Revelation 2:12 addresses the church at Pergamum.
+clm-place-pergamum-attested-late	psg-rev-2-12-17	supports	whole_claim	explicit		1.0	Rev 2:12 'To the angel of the church in Pergamum write.' Pergamum explicit. Weight scored. Verified.
 clm-place-philadelphia-attested	psg-rev-1-11	supports	whole_claim	explicit		1.0	
-clm-place-philadelphia-attested-late	psg-rev-3-7-13	supports	whole_claim	explicit			Revelation 3:7 addresses the church at Philadelphia.
-clm-place-philippi-attested	psg-acts-16-11-15	supports	whole_claim	explicit			Acts 16:11 records Paul at Philippi.
-clm-place-phoenix-crete-attested	psg-acts-27-3-12	supports	whole_claim	explicit		1.0	
-clm-place-phrygia-attested	psg-acts-16-6	supports	whole_claim	explicit			Acts 16:6 records Paul passing through Phrygia.
+clm-place-philadelphia-attested-late	psg-rev-3-7-13	supports	whole_claim	explicit		1.0	Rev 3:7 'To the angel of the church in Philadelphia write.' Philadelphia explicit. Weight scored. Verified.
+clm-place-philippi-attested	psg-acts-16-11-15	supports	whole_claim	explicit		1.0	Acts 16:12 'from there to Philippi, which is a leading city.' Philippi explicit. Weight scored. Web verified.
+clm-place-phoenix-crete-attested	psg-acts-27-3-12	supports	whole_claim	explicit		1.0	Acts 27:12 'reach Phoenix, a harbor of Crete.' Phoenix explicit. Paraphrase accurate. Web verified.
+clm-place-phrygia-attested	psg-acts-16-6	supports	whole_claim	explicit		1.0	Acts 16:6 'the region of Phrygia and Galatia.' Phrygia explicit. Weight scored. Web verified at STEP Bible.
 clm-place-pontus-attested	psg-1pet-1-1	supports	whole_claim	explicit		1.0	
-clm-place-pontus-attested-late	psg-wikipedia-early-christian-places	supports	whole_claim	explicit			1 Pet 1:1 addresses Pontus; early Christian presence attested.
-clm-place-puteoli-attested	psg-acts-28-1-14	supports	whole_claim	explicit		1.0	
-clm-place-qumran-attested	psg-community-rule-5-7-13	supports	whole_claim	explicit		1.0	
-clm-place-rhegium-attested	psg-acts-28-1-14	supports	whole_claim	explicit		1.0	
-clm-place-rome-attested	psg-acts-28-16-31	supports	whole_claim	explicit			Acts 28:16 records Paul arriving at Rome.
-clm-place-salamis-attested	psg-acts-13-4-12	supports	whole_claim	explicit		1.0	
-clm-place-salmone-attested	psg-acts-27-5-8	supports	whole_claim	explicit		1.0	
+clm-place-pontus-attested-late	psg-wikipedia-early-christian-places	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia source. Primary evidence is 1 Pet 1:1 which explicitly names Pontus. Downgraded to contextualizes, weight capped at 0.3. Needs primary passage harvest.
+clm-place-puteoli-attested	psg-acts-28-1-14	supports	whole_claim	explicit		1.0	Acts 28:13 'we came to Puteoli.' Puteoli explicit. Paraphrase accurate. Web verified.
+clm-place-qumran-attested	psg-community-rule-5-7-13	supports	whole_claim	strong_inference		1.0	1QS 5.7-13 verified: covenant community rule. 'Qumran' not named in text — inferred from archaeological find-spot. Downgraded to strong_inference. PARAPHRASE_OMISSION:subject noted. Web verified.
+clm-place-rhegium-attested	psg-acts-28-1-14	supports	whole_claim	explicit		1.0	Acts 28:13 'we came to Rhegium.' Rhegium explicit. Paraphrase accurate. Web verified.
+clm-place-rome-attested	psg-acts-28-16-31	supports	whole_claim	explicit		1.0	Acts 28:16 'when we came into Rome.' Rome explicit. Paul under guard. Weight scored. Web verified at STEP Bible.
+clm-place-salamis-attested	psg-acts-13-4-12	supports	whole_claim	explicit		1.0	Acts 13:5 'they arrived at Salamis, they proclaimed the word of God.' Salamis explicit. Paraphrase accurate. Verified.
+clm-place-salmone-attested	psg-acts-27-5-8	supports	whole_claim	explicit		1.0	Acts 27:7 'sailed under the lee of Crete off Salmone.' Salmone explicit. Paraphrase accurate. Verified.
 clm-place-samaria-attested	psg-acts-8-5-25	supports	whole_claim	explicit		1.0	
-clm-place-samaria-attested-late	psg-acts-8-5-25	supports	whole_claim	explicit			Acts 8 records Philip's mission in Samaria.
-clm-place-samos-attested	psg-acts-20-13-15	supports	whole_claim	explicit		1.0	
-clm-place-sardinia-attested	psg-wikipedia-early-church-geography	supports	whole_claim	explicit			Sardinia is attested as a Christian presence by the 3rd century.
+clm-place-samaria-attested-late	psg-acts-8-5-25	supports	whole_claim	explicit		1.0	Acts 8:5 'Philip went down to the city of Samaria and proclaimed to them the Christ.' Samaria explicit. Weight scored. Paraphrase accurate. Verified.
+clm-place-samos-attested	psg-acts-20-13-15	supports	whole_claim	explicit		1.0	Acts 20:15 'we crossed over to Samos.' Samos explicit. Paraphrase accurate. Verified.
+clm-place-sardinia-attested	psg-wikipedia-early-church-geography	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia. Primary evidence needed (Liber Pontificalis on Hippolytus/Pontian exile). Downgraded to contextualizes, weight 0.3.
 clm-place-sardis-attested	psg-rev-1-11	supports	whole_claim	explicit		1.0	
-clm-place-sardis-attested-late	psg-rev-3-1-6	supports	whole_claim	explicit			Revelation 3:1 addresses the church at Sardis.
-clm-place-seleucia-ctesiphon-attested	psg-wikipedia-church-of-east-spread	supports	whole_claim	explicit			Seleucia-Ctesiphon was the seat of the Patriarch of the Church of the East.
-clm-place-sidon-attested	psg-acts-27-3-12	supports	whole_claim	explicit		1.0	
-clm-place-sinope-attested	psg-irenaeus-ah-1-27-1-2	supports	subject	strong_inference		1.0	Irenaeus AH 1.27.1-2 places Marcion as from Sinope in Pontus — direct place attestation.
+clm-place-sardis-attested-late	psg-rev-3-1-6	supports	whole_claim	explicit		1.0	Rev 3:1 'To the angel of the church in Sardis write.' Sardis explicit. Weight scored. Verified.
+clm-place-seleucia-ctesiphon-attested	psg-wikipedia-church-of-east-spread	contextualizes	whole_claim	explicit		0.3	TERTIARY_ONLY: Wikipedia. Primary evidence needed (Sozomen, Aphrahat). Downgraded to contextualizes, weight 0.3.
+clm-place-sidon-attested	psg-acts-27-3-12	supports	whole_claim	explicit		1.0	Acts 27:3 'we put in at Sidon.' Sidon explicit. Paraphrase accurate. Web verified at STEP Bible.
+clm-place-sinope-attested	psg-irenaeus-ah-1-27-1-2	supports	subject	strong_inference		1.0	AH 1.27.1 says 'Marcion of Pontus' — Sinope is NOT named by Irenaeus. Sinope identification comes from later sources (Tertullian, Epiphanius). assertion_mode strong_inference is correct. Verified.
 clm-place-sinope-attested	psg-wikipedia-marcionites-spread	contextualizes					Marcion's birthplace; attested as a city in Pontus.
 clm-place-smyrna-attested	psg-rev-1-11	supports	whole_claim	explicit		1.0	
-clm-place-smyrna-attested-late	psg-rev-2-8-11	supports	whole_claim	explicit			Revelation 2:8 addresses the church at Smyrna.
-clm-place-syracuse-attested	psg-acts-28-1-14	supports	whole_claim	explicit		1.0	
-clm-place-thessalonica-attested	psg-1thess-1-1	supports	whole_claim	explicit		1.0	
-clm-place-thessalonica-attested	psg-2thess-1-1	supports	whole_claim	explicit		1.0	
-clm-place-thessalonica-attested	psg-acts-17-1-9	supports	whole_claim	explicit		1.0	
+clm-place-smyrna-attested-late	psg-rev-2-8-11	supports	whole_claim	explicit		1.0	Rev 2:8 'To the angel of the church in Smyrna write.' Smyrna explicit. Weight scored. Verified.
+clm-place-syracuse-attested	psg-acts-28-1-14	supports	whole_claim	explicit		1.0	Acts 28:12 'Putting in at Syracuse, we stayed there for three days.' Syracuse explicit. Paraphrase accurate. Web verified.
+clm-place-thessalonica-attested	psg-1thess-1-1	supports	whole_claim	explicit		1.0	1 Thess 1:1 'the church of the Thessalonians.' Place implicit from demonym. PARAPHRASE_OMISSION:subject minor — Thessalonica inferred from 'Thessalonians.' Verified.
+clm-place-thessalonica-attested	psg-2thess-1-1	supports	whole_claim	explicit		1.0	2 Thess 1:1 'the church of the Thessalonians.' Same as 1 Thess. Place implicit from demonym. Verified.
+clm-place-thessalonica-attested	psg-acts-17-1-9	supports	whole_claim	explicit		1.0	Acts 17:1 'they came to Thessalonica.' Thessalonica explicit. Paraphrase accurate. Web verified.
 clm-place-thessalonica-attested-late	psg-acts-17-1-9	supports	whole_claim	explicit			Acts 17:1 records Paul at Thessalonica.
-clm-place-three-taverns-attested	psg-acts-28-15	supports	whole_claim	explicit		1.0	
+clm-place-three-taverns-attested	psg-acts-28-15	supports	whole_claim	explicit		1.0	Acts 28:15 'came as far as the Forum of Appius and Three Taverns.' Three Taverns explicit. Paraphrase accurate. Verified.
 clm-place-thyatira-attested	psg-rev-1-11	supports	whole_claim	explicit		1.0	
-clm-place-thyatira-attested-late	psg-rev-2-18-29	supports	whole_claim	explicit			Revelation 2:18 addresses the church at Thyatira.
-clm-place-troas-attested	psg-acts-20-6-17	supports	whole_claim	explicit		1.0	
-clm-place-tyre-attested	psg-acts-21-3-8	supports	whole_claim	explicit		1.0	
-clm-place-vagharshapat-attested	psg-socrates-he-1-20	supports	subject	explicit		1.0	Socrates HE 1.20 describes Gregory establishing his see at Vagharshapat.
-clm-place-vagharshapat-attested	psg-wikipedia-aksumite-control	contextualizes					Vagharshapat (Etchmiadzin) became the seat of Armenian Christianity.
-clm-place-zafar-attested	psg-philostorgius-he-3-4	supports	subject	strong_inference		1.0	Philostorgius HE 3.4 describes Theophilus's mission to Zafar/Himyar — direct attestation.
+clm-place-thyatira-attested-late	psg-rev-2-18-29	supports	whole_claim	explicit		1.0	Rev 2:18 'To the angel of the church in Thyatira write.' Thyatira explicit. Weight scored. Verified.
+clm-place-troas-attested	psg-acts-20-6-17	supports	whole_claim	explicit		1.0	Acts 20:6 'we came to them at Troas.' Troas explicit. Paraphrase accurate. Verified.
+clm-place-tyre-attested	psg-acts-21-3-8	supports	whole_claim	explicit		1.0	Acts 21:3 'we landed at Tyre.' Tyre explicit. Paraphrase accurate. Verified.
+clm-place-vagharshapat-attested	psg-socrates-he-1-20	supports	subject	weak_inference		0.2	FABRICATED_EXCERPT: Socrates HE 1.20 is about Iberian conversion, NOT Vagharshapat/Armenia. The excerpt does not appear in the actual text. Web verified at newadvent.org.
+clm-place-vagharshapat-attested	psg-wikipedia-aksumite-control	contextualizes					Aksumite Empire article is about Ethiopia/Horn of Africa, not Armenia. Loose geographic contextualizing only.
+clm-place-zafar-attested	psg-philostorgius-he-3-4	supports	subject	explicit		1.0	Philostorgius HE 3.4: 'one in Zafar the capital.' Zafar IS explicitly named in the paraphrase. Upgraded from strong_inference to explicit.
 clm-place-zafar-attested	psg-wikipedia-arab-christian-presence	contextualizes					Zafar in Yemen was attested as a city with Christian presence.
 clm-polycarp-active-ephesus	psg-irenaeus-ah-3-3-4	supports	whole_claim	strong_inference		0.55	AH 3.3.4 (paraphrase): Polycarp in Asia, bishop of Smyrna. Ephesus not named — inferred as major Asian center. Capped per paraphrase + omission.
 clm-polycarp-active-rome	psg-eusebius-he-5-24	supports	whole_claim	explicit		0.9	
@@ -2014,7 +2014,7 @@ clm-polycarp-letter-affirms-threefold	psg-polycarp-phil-5-6	supports	predicate	s
 clm-polycarp-letter-written-smyrna	psg-polycarp-phil-7	supports	place	weak_inference		0.5	Phil. 7.1: Smyrna not named in excerpt; inferred from Polycarp's role as bishop of Smyrna. mode explicit->weak_inference, wt 0.8->0.5.
 clm-polycarp-martyrdom-at-smyrna	psg-martyrdom-polycarp-14	supports	whole_claim	explicit		1.0	
 clm-polycarp-martyrdom-at-smyrna	psg-martyrdom-polycarp-9	supports	place	explicit		1.0	Stadium at Smyrna is the scene of Polycarp's martyrdom
-clm-polycarp-martyrdom-year	psg-martyrdom-polycarp-9	supports	whole_claim	explicit			Year derived from associated narrative account.
+clm-polycarp-martyrdom-year	psg-martyrdom-polycarp-9	supports	whole_claim	explicit		1.0	Mart. Pol. 9: 'Eighty and six years have I served Him.' Primary source. Year 155 from proconsular dating. Web verified.
 clm-polycarp-member-roman-church-visit	psg-eusebius-he-5-24	supports	whole_claim	explicit		0.6	HE 5.24 (paraphrase): Polycarp visited Rome and Anicetus. 'Member' during visit is a stretch. Capped per paraphrase + omission.
 clm-polycarp-member-smyrna-church	psg-martyrdom-polycarp-9	supports	whole_claim	explicit		1.0	Mart. Pol. 9 (verbatim): Polycarp as the bishop of Smyrna church, tried in Smyrna stadium.
 clm-polycarp-phil-affirms-judgment	psg-polycarp-phil-2	supports	predicate	strong_inference		0.6	Phil. 2.1-2: 'a throne at His right hand; to Him all things in heaven and on earth' — Christ's dominion over all implies final judgment. mode explicit->strong_inference, wt 0.8->0.6.
@@ -2030,8 +2030,8 @@ clm-pontian-in-sardinian-exile	psg-eusebius-he-6-20-43	supports	whole_claim	expl
 clm-pontian-member-roman-church	psg-eusebius-he-6-20-43	supports	whole_claim	explicit		0.7	HE 6.20/6.43 excerpt omits Pontian. Membership from episcopal role. Weight reduced for paraphrase omission.
 clm-pontius-active-carthage	psg-cyprian-lapsis-15-16	supports	place	strong_inference		0.5	Cyprian De Laps. 15-16 is addressed from Carthage; Pontius as Cyprian's deacon was there.
 clm-pontius-coworker-cyprian	psg-eusebius-he-7-9	supports	whole_claim	explicit		0.8	Eusebius notes Pontius the deacon accompanied Cyprian and wrote his biography.
-clm-pontius-in-cyprians-martyrdom	psg-eusebius-he-7-9	supports	whole_claim	explicit		0.8	Pontius was present at Cyprian's martyrdom per Eusebius.
-clm-pontius-member-carthage-church	psg-eusebius-he-7-9	supports	whole_claim	explicit		0.7	Pontius served as deacon under Cyprian at Carthage.
+clm-pontius-in-cyprians-martyrdom	psg-eusebius-he-7-9	supports	whole_claim	explicit		0.8	LOCATOR ERROR: HE 7.9 is 'The Ungodly Baptism of the Heretics' (Dionysius to Xystus). Cyprian's martyrdom and Pontius's role are from Pontius's Vita Cypriani, not HE 7.9. Passage excerpt is a composite paraphrase not matching HE 7.9 content. Web verified against newadvent.org.
+clm-pontius-member-carthage-church	psg-eusebius-he-7-9	supports	whole_claim	explicit		0.7	LOCATOR ERROR: HE 7.9 discusses heretical baptism. Pontius's membership in the Carthage church under Cyprian is from Vita Cypriani. Passage locator incorrect. Web verified.
 clm-praescr-affirms-apostolic-succession	psg-tertullian-de-praescr-20-21	supports	predicate	explicit		0.95	Verified: De Praescr. 20-21 explicitly describes apostolic succession of churches — 'borrowed the tradition of the faith and the seeds of doctrine.' Verbatim.
 clm-praescr-affirms-apostolic-succession	psg-tertullian-de-praescr-36	supports	predicate	explicit		0.9	Verified: De Praescr. 36 lists apostolic sees as living witnesses. 'The very seats of the apostles still preside.' Verbatim.
 clm-praescr-affirms-incarnation	psg-tertullian-de-praescr-13	supports	predicate	explicit		0.85	Verified: De Praescr. 13 rule of faith — 'born of the virgin Mary, crucified under Pontius Pilate, on the third day raised.' Explicit incarnation, passion, resurrection. Verbatim.
@@ -2044,9 +2044,9 @@ clm-priscilla-active-rome	psg-rom-16-3-5	supports	whole_claim	strong_inference		
 clm-priscilla-ephesian-church	psg-1cor-16-19	supports	whole_claim	explicit		0.7	The house church is located in the Asia/Ephesus context of 1 Corinthians 16, so the Ephesian membership link is kept probable.
 clm-priscilla-member-corinthian	psg-acts-18-2-3	supports	whole_claim	strong_inference		0.7	Acts 18:2-3 (paraphrase): 'Paul stays and works with Aquila and Priscilla.' Corinthian church membership by strong inference (living in Corinth). Capped per paraphrase.
 clm-priscilla-member-ephesian	psg-1cor-16-19	supports	whole_claim	strong_inference		0.6	1 Cor 16:19 (paraphrase): 'Aquila and Prisca together with the church in their house.' Written from Ephesus. Ephesian church membership by strong inference. Capped per paraphrase.
-clm-priscilla-montanist-affirms-prophecy	psg-eusebius-he-5-16-montanus	supports	predicate	explicit		1.0	Eusebius HE 5.16 describes Priscilla (Prisca) as one of the Montanist prophetesses.
+clm-priscilla-montanist-affirms-prophecy	psg-eusebius-he-5-16-montanus	supports	predicate	explicit		1.0	HE 5.16: excerpt names only Montanus; the 'two women' (Priscilla and Maximilla) are mentioned in 5.16.9 but not by name in excerpt. Passage notes correctly identify them. Web verified.
 clm-priscilla-montanist-affirms-prophecy	psg-wikipedia-early-church-geography	contextualizes					Passage contextualizes priscilla-montanist's position on prophetic-gifts-continue-after-apostles.
-clm-priscilla-montanist-member-montanists	psg-eusebius-he-5-16-montanus	supports	subject	explicit		1.0	Eusebius HE 5.16 identifies Priscilla and Maximilla as Montanus's co-prophets.
+clm-priscilla-montanist-member-montanists	psg-eusebius-he-5-16-montanus	supports	subject	explicit		1.0	HE 5.16: excerpt names only Montanus; Priscilla and Maximilla identified as 'two women' in 5.16.9. Named in passage notes. Web verified.
 clm-priscilla-montanist-member-montanists	psg-wikipedia-early-church-geography	contextualizes					Passage contextualizes priscilla-montanist's membership in montanists.
 clm-priscilla-roman-church	psg-rom-16-3-5	supports	whole_claim	strong_inference		0.9	Rom 16:3-5 (paraphrase): 'Prisca and Aquila... church in their house.' Roman church membership directly supported. Capped per paraphrase.
 clm-priscilla-teacher-of-apollos	psg-acts-18-24-28	supports	whole_claim	strong_inference		0.85	Acts 18:24-28 (paraphrase): 'instructed more accurately by Priscilla and Aquila.' Directly supports. Capped per paraphrase.
@@ -2055,8 +2055,8 @@ clm-prot-affirms-incarnation	psg-clement-prot-1-2-3	supports	predicate	strong_in
 clm-prot-affirms-logos-preexistence	psg-clement-prot-1-2-3	supports	predicate	explicit		0.95	Verified: 'The New Song has sprung up, eternal' — explicit pre-existence language. The Logos is described as eternal before becoming new. Capped at 0.95 for verbatim.
 clm-protrepticus-by-clement	psg-clement-prot-1-2-3	supports	whole_claim	strong_inference		0.85	Verified: Passage from the work itself attests Clement's authorship (self-attestation). Scholarly consensus on attribution. Capped for verbatim.
 clm-protrepticus-written-at-alexandria	psg-clement-prot-1-2-3	contextualizes				0.4	ROLE_FIX: Prot. 1.2-3 is purely theological (New Song/Logos). Passage says nothing about Alexandria as place of writing. Place inferred from Clement's known career. Downgraded from supports to contextualizes.
-clm-psalms-of-solomon-judgment	psg-pssol-17-32-36	supports	predicate	explicit		1.0	
-clm-publius-active-malta	psg-acts-28-7-10	supports	whole_claim	explicit		1.0	
+clm-psalms-of-solomon-judgment	psg-pssol-17-32-36	supports	predicate	explicit		1.0	Pss. Sol. 17:29 'He shall judge peoples and nations'; 17:33 'he shall purge Jerusalem, making it holy as of old.' Paraphrase accurate. Messianic judgment supports final-judgment proposition. Web verified at Wesley NNU.
+clm-publius-active-malta	psg-acts-28-7-10	supports	whole_claim	explicit		1.0	Acts 28:7 'the chief man of the island, named Publius, who received us.' Publius and Malta both explicit. Paraphrase accurate. Verified.
 clm-qds-affirms-almsgiving	psg-clement-qds-11-14	contextualizes				0.8	Wealth must be used rightly; detachment of soul, not literal poverty, is Clement's point.
 clm-qds-affirms-almsgiving	psg-clement-qds-32-34	supports	predicate	explicit		0.9	Direct instruction to give alms; describes almsgiving as redemptive and as fulfilling the love commandment.
 clm-qds-affirms-penance	psg-clement-qds-42	supports	predicate	explicit		0.9	John's restoration of the lapsed youth directly illustrates post-baptismal repentance and forgiveness.
@@ -2169,9 +2169,9 @@ clm-rufinus-he-mentions-thomas-india	psg-rufinus-he-1-9	contextualizes					MISLI
 clm-rufus-of-rome-active-rome	psg-rom-16-13	supports	whole_claim	explicit		1.0	
 clm-rufus-of-rome-roman-church	psg-rom-16-13	supports	whole_claim	explicit		1.0	
 clm-sack-at-jerusalem	psg-josephus-war-6-249-266	supports	whole_claim	explicit		1.0	
-clm-sack-of-jerusalem-year	psg-wikipedia-sack-of-jerusalem-70	supports	whole_claim	explicit			Year derived from associated narrative account.
-clm-sardinian-exile-at-sardinia	psg-eusebius-he-6-20-43	supports	whole_claim	explicit		0.9	Liberian Catalogue records the exile to Sardinia.
-clm-sardinian-exile-year	psg-eusebius-he-6-20-43	supports	whole_claim	explicit		0.9	The exile occurred in 235 under Maximinus Thrax.
+clm-sack-of-jerusalem-year	psg-josephus-war-6-249-266	supports	whole_claim	explicit		1.0	Repointed from tertiary Wikipedia to primary Josephus War 6.249-266. Josephus narrates the temple destruction in 70 CE.
+clm-sardinian-exile-at-sardinia	psg-eusebius-he-6-20-43	contextualizes				0.5	Passage excerpt does not mention Sardinia. Sardinia detail from Catalogus Liberianus. Downgraded to contextualizes. Web verified.
+clm-sardinian-exile-year	psg-eusebius-he-6-20-43	contextualizes				0.5	Passage excerpt (HE 6.20, 6.43) does not mention Sardinia or exile. Year 235 and exile detail from Catalogus Liberianus, not Eusebius. Downgraded to contextualizes. Note on claim says 'Liberian Catalogue records the exile.' Web verified.
 clm-saturninus-active-antioch	psg-eusebius-he-4-7-1-3	supports	whole_claim	explicit		1.0	Eusebius HE 4.7.1-3 locates Saturninus as coming from Antioch.
 clm-saturninus-active-antioch	psg-irenaeus-ah-1-28-1	supports	whole_claim	explicit		0.95	Irenaeus explicitly: 'Saturninus, who flourished at Antioch'.
 clm-saturninus-member-docetists	psg-irenaeus-ah-1-24-1-2	contextualizes				0.3	MISLINK: AH 1.24.1-2 excerpt is Basilides. Saturninus docetism is in AH 1.28.1 ('appeared to be a man only'). Needs repointing.
@@ -2212,10 +2212,10 @@ clm-sermon-at-galilee	psg-matt-7-28-29	supports	whole_claim	explicit		1.0
 clm-sermon-year	psg-matt-7-28-29	supports	date	strong_inference		0.7	Matt 7:28-29: Conclusion of Sermon on Mount. Year 28 derived from Galilean ministry timeline. Paraphrase valid.
 clm-shapur-active-seleucia	psg-aphrahat-dem-21	supports	whole_claim	explicit		0.5	Aphrahat Dem. 21 addresses Christians under Shapur II's persecution; Seleucia-Ctesiphon was the Sasanian royal capital
 clm-shapur-in-persecution	psg-philostorgius-he-3-4	contextualizes				1.0	
-clm-shapur-in-persecution	psg-sozomen-he-2-9	supports	predicate	explicit		1.0	Sozomen HE 2.9 explicitly names Shapur II as persecutor of Christians.
+clm-shapur-in-persecution	psg-sozomen-he-2-9	supports	predicate	explicit		1.0	Sozomen HE 2.9: 'Shapur, king of the Persians, oppressed the Christians.' Explicit. Verified.
 clm-shapur-in-persecution	psg-wikipedia-church-of-east-spread	contextualizes					Passage contextualizes shapur-ii's participation in persecution-of-shapur-ii.
-clm-shapur-persecution-at-seleucia	psg-wikipedia-church-of-east-spread	supports	place	explicit			Passage contextualizes the location of persecution-of-shapur-ii.
-clm-shapur-persecution-year	psg-wikipedia-church-of-east-spread	supports	whole_claim	explicit			Year derived from associated narrative account.
+clm-shapur-persecution-at-seleucia	psg-wikipedia-church-of-east-spread	contextualizes				0.3	Tertiary Wikipedia source. Excerpt describes Church of the East geography, not Shapur II's persecution specifically. Seleucia-Ctesiphon named as center but not in persecution context. Downgraded to contextualizes. Web verified.
+clm-shapur-persecution-year	psg-wikipedia-church-of-east-spread	contextualizes				0.3	Tertiary Wikipedia source. Excerpt doesn't mention Shapur II or year 340. Downgraded to contextualizes. Web verified.
 clm-silas-active-antioch	psg-acts-15-40	supports	whole_claim	strong_inference		0.7	Acts 15:40 paraphrase: Paul chooses Silas and sets out from Antioch, commended by the brothers. mode explicit->strong_inference, wt 0.8->0.7.
 clm-silas-active-berea	psg-acts-17-10-15	supports	whole_claim	strong_inference		0.65	Acts 17:10-15 paraphrase: Paul and his companions at Berea; Silas implied as companion but not named in this excerpt. mode explicit->strong_inference, wt 1.0->0.65.
 clm-silas-active-corinth	psg-acts-18-1-11	supports	whole_claim	strong_inference		0.65	Acts 18:1-11 paraphrase: Paul ministers in Corinth with companions; Silas implied (Acts 18:5 names him) but not stated in this excerpt. mode explicit->strong_inference, wt 1.0->0.65.
@@ -2276,8 +2276,8 @@ clm-strom-affirms-rule-of-faith	psg-clement-strom-7-17-105-108	supports	predicat
 clm-strom-affirms-virginity-honored	psg-clement-strom-3-18-109	supports	predicate	strong_inference		0.8	Strom. 3.18.109 (paraphrase): virginity praised as nobler vocation; marriage also honored. Mode capped at strong_inference per paraphrase rules.
 clm-stromata-by-clement	psg-clement-strom-1-5-28	supports	whole_claim	strong_inference		0.8	Strom. 1.5.28: self-attesting passage from the work. Authorship by Clement is universally accepted.
 clm-stromateis-written-at-alexandria	psg-clement-strom-1-5-28	contextualizes					Strom. 1.5.28 discusses philosophy as schoolmaster; no mention of Alexandria. Downgraded from supports per 4g. Alexandrian composition inferred from Clement's known location.
-clm-synod-bostra-occurs-at-bostra	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.9	Eusebius locates the synod at Bostra.
-clm-synod-bostra-year	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.8	Eusebius dates the synod c. 244.
+clm-synod-bostra-occurs-at-bostra	psg-eusebius-he-6-19	supports	whole_claim	weak_inference		0.5	LOCATOR ERROR: HE 6.19 = Porphyry on Origen's education. The Synod of Bostra is in HE 6.33. Excerpt mentions 'Beryllus of Bostra' but not the synod itself. Bostra location inferred. Downgraded to weak_inference. Web verified at newadvent.org.
+clm-synod-bostra-year	psg-eusebius-he-6-19	supports	whole_claim	weak_inference		0.4	LOCATOR ERROR: HE 6.19 ≠ Synod of Bostra (HE 6.33). Year 244 not in HE 6.19 at all — derived from Eusebian chronology in HE 6.33. Downgraded to weak_inference. Web verified.
 clm-syntyche-active-philippi	psg-phil-4-2-3	supports	whole_claim	explicit		1.0	
 clm-syntyche-philippian-church	psg-phil-4-2-3	supports	whole_claim	explicit		1.0	
 clm-tabitha-active-joppa	psg-acts-9-36-43	supports	whole_claim	explicit		1.0	
@@ -2305,12 +2305,12 @@ clm-tertullian-member-montanists	psg-tertullian-adv-prax-2	contextualizes					Ad
 clm-tertullian-member-montanists	psg-tertullian-de-carne-5	contextualizes					De Carne 5 is christological (defense of incarnation), not about Montanism. Written during Montanist phase but content is anti-docetist, not Montanist-specific.
 clm-tertullian-originated-carthage	psg-tertullian-de-praescr-36	supports	place	weak_inference		0.5	De Praescr. 36: 'whence our own authority derives' implies African location by contrast with Rome. Weak inference for Carthaginian origin.
 clm-tertullian-teacher-cyprian	psg-eusebius-he-6-20-43	contextualizes				0.1	WRONG PASSAGE: HE 6.20/6.43 is about Hippolytus and Novatian, not Tertullian-Cyprian. The actual source for 'da magistrum' is Jerome, De Vir. Ill. 53. Downgraded; needs repointing.
-clm-tertullus-active-caesarea	psg-acts-24-1-9	supports	whole_claim	explicit		1.0	
+clm-tertullus-active-caesarea	psg-acts-24-1-9	supports	whole_claim	explicit		1.0	Acts 24:1 'a spokesman, one Tertullus' presents case at Caesarea. Both explicit. Paraphrase accurate. Web verified.
 clm-theophilus-active-india	psg-philostorgius-he-3-4	supports	whole_claim	weak_inference		0.35	ANCIENT 'INDIA' AMBIGUITY: Philostorgius HE 3.5 says Theophilus went to 'other districts of India' and corrected disorders. But 'India' in Philostorgius likely means Socotra area (Theophilus was FROM Divus = Socotra). Claim says 'active_in india-malabar' (Kerala) — significant geographic stretch. Downgraded.
-clm-theophilus-bishop-antioch	psg-theophilus-autol-2-10	supports	whole_claim	explicit		0.7	
+clm-theophilus-bishop-antioch	psg-theophilus-autol-2-10	supports	whole_claim	strong_inference		0.7	Autol. 2.10 is Logos theology; the passage does NOT state Theophilus is bishop of Antioch. Bishopric known from Eusebius HE 4.20 and tradition. Downgraded from explicit to strong_inference.
 clm-theophilus-member-arabian	psg-philostorgius-he-3-4	supports	whole_claim	weak_inference		0.35	WEAK: Philostorgius HE 3.4 says Theophilus was from the island of Divus (Socotra), sent TO the Homeritae as an ambassador. He built churches there but was an external missionary, not a 'member' of the Arabian Christians community. Downgraded from explicit to weak_inference.
-clm-theophilus-mission-at-zafar	psg-philostorgius-he-3-4	supports	place	explicit		0.9	Philostorgius locates mission at Zafar.
-clm-theophilus-mission-year	psg-philostorgius-he-3-4	supports	date	explicit		0.8	Philostorgius dates mission to Constantius's reign c. 354.
+clm-theophilus-mission-at-zafar	psg-philostorgius-he-3-4	supports	place	explicit		0.9	Philostorgius HE 3.4-6 verified via Photius epitome at CCEL: Theophilus 'the Indian' sent by Constantius to the Homeritae (Himyarites). Zafar named as 'chief city.' Lost work exception: Photius epitome is valid cross-work support. Web verified.
+clm-theophilus-mission-year	psg-philostorgius-he-3-4	supports	date	explicit		0.8	Philostorgius HE 3.4-6 verified: Constantius sent Theophilus. Year c. 354 from Constantius's reign (337-361). Lost work exception applies. Web verified.
 clm-theophilus-participant-himyar-mission	psg-philostorgius-he-3-4	supports	whole_claim	explicit		0.9	Verified: Philostorgius HE 3.4 — 'At the head of this embassy was placed Theophilus the Indian.' Explicit participant in the Himyar mission. Capped from 1.0 for paraphrase.
 clm-thomas-active-galilee	psg-matt-10-2-4	supports	whole_claim	explicit		0.7	Verified: Matt 10:2-4 lists Twelve including Thomas. Galilee context from ministry setting. Capped for paraphrase.
 clm-thomas-active-india	psg-acts-thomas-27	supports	place	explicit		0.8	Acts of Thomas 27: baptismal anointing scene. India setting is the narrative frame of the entire work, so the passage attests Thomas's presence in India within that framework. Capped for paraphrase.
@@ -2345,8 +2345,8 @@ clm-titus-disciple	psg-titus-1-5	supports	whole_claim	explicit		0.8
 clm-titus-member-corinthian	psg-2cor-8-23	supports	whole_claim	explicit		0.7	2 Cor 8:23 (paraphrase): Titus as Paul's partner. Corinthian church membership inferred — Titus was a delegate, not necessarily a permanent member. Weight 0.7 is fair.
 clm-titus-member-disciples	psg-acts-16-3	contextualizes				0.1	MISLINK: Acts 16:3 (paraphrase) about Timothy joining Paul, not Titus. Wrong person.
 clm-titus-member-disciples	psg-titus-1-4	supports	predicate	explicit		1.0	Titus 1:4 calls Titus 'my true child in a common faith' — explicit apostolic circle membership.
-clm-torture-decius-occurs-at-caesarea	psg-eusebius-he-6-19	supports	place	explicit		0.6	Eusebius locates Origen's imprisonment during Decian persecution.
-clm-torture-decius-year	psg-eusebius-he-6-19	supports	whole_claim	explicit		0.8	Eusebius dates Origen's torture to the Decian persecution c. 250.
+clm-torture-decius-occurs-at-caesarea	psg-eusebius-he-6-19	supports	place	weak_inference		0.4	LOCATOR ERROR: HE 6.19 = Porphyry on Origen. Origen's torture under Decius is in HE 6.39. Excerpt mentions 'in Caesarea he was ordained' but not torture. Caesarea connection is from Origen's residence, not the torture description. Downgraded to weak_inference. Web verified.
+clm-torture-decius-year	psg-eusebius-he-6-19	supports	whole_claim	weak_inference		0.4	LOCATOR ERROR: HE 6.19 ≠ Origen's torture (HE 6.39). Year 250 not in HE 6.19. Excerpt is composite from multiple chapters. Downgraded to weak_inference. Web verified.
 clm-trophimus-active-asia	psg-acts-20-4	supports	whole_claim	explicit		0.9	Acts 20:4 verified: 'the Asians, Tychicus and Trophimus.' Explicit. Paraphrase omits Trophimus entirely. Cap for paraphrase.
 clm-trophimus-active-jerusalem	psg-acts-21-29	supports	whole_claim	explicit		0.95	Acts 21:29 verified: 'Trophimus the Ephesian with Paul in the city [Jerusalem].' Explicit. Cap for paraphrase.
 clm-trophimus-active-miletus	psg-2tim-4-20	supports	whole_claim	explicit		0.95	2 Tim 4:20 verified: 'Trophimus I left ill at Miletus.' Explicit. Cap for paraphrase.
@@ -2359,9 +2359,9 @@ clm-tychicus-active-asia	psg-acts-20-4	supports	whole_claim	explicit		0.9	Acts 2
 clm-tychicus-active-ephesus	psg-2tim-4-10-12	supports	whole_claim	explicit		0.95	2 Tim 4:12 verified: 'Tychicus I have sent to Ephesus.' Explicit. Cap for paraphrase.
 clm-tychicus-active-jerusalem	psg-acts-20-4	supports	subject	strong_inference		0.65	Acts 20:4 names Tychicus as Asian companion but does NOT mention Jerusalem. Jerusalem inferred from Acts 21 travel narrative context. Paraphrase omits Tychicus.
 clm-tychicus-disciple	psg-acts-20-4	supports	whole_claim	strong_inference		0.7	Acts 20:4 lists Tychicus as Paul's Asian companion. 'Member of disciples-of-jesus' inferred from association. Not called 'disciple' in text.
-clm-tyrannus-active-ephesus	psg-acts-19-9	supports	whole_claim	explicit		1.0	
-clm-urban-i-bishop-rome	psg-eusebius-he-6-20-43	supports	whole_claim	explicit		0.6	Eusebius attests the succession; Hippolytus continued his opposition during Urban's pontificate.
-clm-urban-i-member-roman-church	psg-eusebius-he-6-20-43	supports	whole_claim	explicit		0.6	Urban I as bishop of Rome.
+clm-tyrannus-active-ephesus	psg-acts-19-9	supports	whole_claim	explicit		1.0	Acts 19:9 'he withdrew... reasoning daily in the hall of Tyrannus.' Tyrannus and Ephesus (context) explicit. Paraphrase accurate. Verified.
+clm-urban-i-bishop-rome	psg-eusebius-he-6-20-43	supports	whole_claim	explicit		0.6	HE 6.20/6.43 excerpt focuses on Hippolytus and Novatian, not Urban I. However HE 6.21 explicitly states 'Callistus...was succeeded by Urbanus.' Passage is composite; Urban I confirmed via HE 6.21. Web verified.
+clm-urban-i-member-roman-church	psg-eusebius-he-6-20-43	supports	whole_claim	explicit		0.6	HE 6.21: 'succeeded by Urbanus.' Roman church membership implied by Roman episcopate. Passage excerpt doesn't name Urban I but composite covers it. Web verified.
 clm-urbanus-active-rome	psg-rom-16-9	supports	whole_claim	explicit		1.0	
 clm-urbanus-roman-church	psg-rom-16-9	supports	whole_claim	explicit		1.0	
 clm-valentinians-at-alexandria	psg-irenaeus-ah-1-10-1	contextualizes				0.3	MISLINK: AH 1.10.1 is the universal church's rule of faith, not Valentinian presence in Alexandria. Needs primary evidence for Alexandrian Valentinianism (e.g. Clement Strom. or Epiphanius).
@@ -2395,8 +2395,8 @@ clm-vita-const-mentions-ethiopia	psg-athanasius-apol-const-29-31	contextualizes	
 clm-vita-const-mentions-ethiopia	psg-vita-const-letter-constantius	contextualizes				0.5	SOURCE MISATTRIBUTION: Passage 'Athanasius Apol. ad Const. 31' from Athanasius's Apologia. Content mentions Aksum/Frumentius but wrong source attribution.
 clm-vita-const-mentions-india	psg-vita-const-letter-constantius	contextualizes				0.2	SOURCE MISATTRIBUTION: Passage from Athanasius's Apologia. 'Indians' in ancient usage = Aksumites, not India subcontinent. Weak terminological link.
 clm-vita-const-written-caesarea	psg-athanasius-apol-const-29-31	contextualizes				0.3	SOURCE MISATTRIBUTION: Passage 'Athanasius Apol. ad Const. 29-31' is from Athanasius's Apologia. Doesn't support Vita Constantini being written at Caesarea.
-clm-war-scroll-judgment	psg-war-scroll-1-1-5	supports	predicate	explicit		1.0	
-clm-wisdom-judgment	psg-wisdom-3-18-19	supports	predicate	explicit		1.0	
+clm-war-scroll-judgment	psg-war-scroll-1-1-5	supports	predicate	explicit		1.0	1QM 1.1-5 describes eschatological war of sons of light vs sons of darkness. Paraphrase 'final war' accurate. Supports final-judgment proposition. Verified from training data.
+clm-wisdom-judgment	psg-wisdom-3-18-19	supports	predicate	explicit		1.0	Wis 3:18-19 'the ungodly shall come to shame in the day of reckoning.' Paraphrase accurate. Supports final-judgment proposition. Verified from training data.
 clm-zealots-at-judea	psg-acts-1-13-14	contextualizes					Simon the Zealot listed among Jerusalem disciples.
 clm-zealots-at-judea	psg-josephus-war-2-119-166	contextualizes				0.3	MISLINK: War 2.119-166 discusses Pharisees, Sadducees, and Essenes. Does NOT mention Zealots. War 2.118 mentions Judas the Galilean's revolt but doesn't use term 'Zealots'. Downgraded to contextualizes.
 clm-zephyrinus-bishop-rome	psg-hippolytus-ref-9-12-zeph	supports	whole_claim	explicit		0.9	Ref. 9.12: Zephyrinus named in Roman episcopal context. Paraphrase risk but bishop implied by narrative.
