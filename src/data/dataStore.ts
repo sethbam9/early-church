@@ -489,10 +489,6 @@ for (const fa of firstAttestations) {
   firstAttestBySubject.set(key, arr);
 }
 
-// ─── Infrastructure predicates (hidden from UI, drive derivations only) ───────
-
-const INFRA_PREDICATES = new Set(["place_presence_status", "event_has_year"]);
-
 // ─── Facets ───────────────────────────────────────────────────────────────────
 
 const allPresenceStatuses = Array.from(new Set(placeStates.map((ps) => ps.presence_status))).sort();
@@ -886,8 +882,7 @@ export const dataStore = {
     getVisibleForEntity: (type: string, id: string) => [
       ...(claimsBySubject.get(`${type}:${id}`) ?? []),
       ...(claimsByObject.get(`${type}:${id}`) ?? []),
-    ].filter((c) => !INFRA_PREDICATES.has(c.predicate_id)),
-    isInfraPredicate: (predicateId: string) => INFRA_PREDICATES.has(predicateId),
+    ],
     getBackingForFootprint: (fp: EntityPlaceFootprint) => getBackingClaimsForFootprint(fp),
     getTraceForFootprint: (fp: EntityPlaceFootprint) => getTraceForFootprint(fp),
     getPeopleForWork: (workId: string) => getPeopleForWork(workId),
@@ -899,7 +894,7 @@ export const dataStore = {
       const allForEntity = [
         ...(claimsBySubject.get(`${type}:${id}`) ?? []),
         ...(claimsByObject.get(`${type}:${id}`) ?? []),
-      ].filter((c) => c.claim_status === "active" && !INFRA_PREDICATES.has(c.predicate_id));
+      ].filter((c) => c.claim_status === "active");
       const grouped = new Map<string, Claim[]>();
       for (const c of allForEntity) {
         const isSubject = c.subject_type === type && c.subject_id === id;
@@ -922,7 +917,7 @@ export const dataStore = {
       ...(claimsBySubject.get(`${type}:${id}`) ?? []),
       ...(claimsByObject.get(`${type}:${id}`) ?? []),
     ]
-      .filter((c) => !INFRA_PREDICATES.has(c.predicate_id) && c.year_start != null)
+      .filter((c) => c.year_start != null)
       .sort((a, b) => (a.year_start ?? 0) - (b.year_start ?? 0)),
   },
 

@@ -121,6 +121,10 @@ export function useGraphPageState(svgRef: React.RefObject<SVGSVGElement | null>)
   const [degreesResult, setDegreesResult] = useState<DegreesResult | null>(null);
   const [degreesSourceId, setDegreesSourceId] = useState<string | null>(null);
 
+  // Graph interaction mode: mutual exclusion between pathFinder and degrees
+  type GraphMode = "explore" | "pathFinder" | "degrees";
+  const graphMode: GraphMode = multiPathResult ? "pathFinder" : degreesResult ? "degrees" : "explore";
+
   // Auto-zoom to show a node and all its connections
   const zoomToNodeConnections = useCallback((nodeId: string) => {
     const nodes = nodesRef.current;
@@ -394,9 +398,8 @@ export function useGraphPageState(svgRef: React.RefObject<SVGSVGElement | null>)
   const centerOnSelected = useCallback(() => {
     const key = selectedKeyRef.current;
     if (!key) return;
-    const node = nodesRef.current.find((n) => n.id === key);
-    if (node) panToNode(node);
-  }, [panToNode]);
+    zoomToNodeConnections(key);
+  }, [zoomToNodeConnections]);
 
   function handleSearchDropdownSelect(nodeId: string) {
     setSelectedKey(nodeId);
@@ -538,6 +541,9 @@ export function useGraphPageState(svgRef: React.RefObject<SVGSVGElement | null>)
 
   function runPathFinder() {
     if (!pathStartId || !pathEndId) return;
+    // Clear degrees mode when entering path finder
+    setDegreesResult(null);
+    setDegreesSourceId(null);
     const result = findKShortestPaths(allEdges, pathStartId, pathEndId, 8);
     setMultiPathResult(result);
     setPathIndex(0);
@@ -588,6 +594,11 @@ export function useGraphPageState(svgRef: React.RefObject<SVGSVGElement | null>)
   }
 
   function runDegrees(sourceId: string) {
+    // Clear path finder mode when entering degrees
+    setMultiPathResult(null);
+    setPathIndex(0);
+    setPathNodeIds(new Set());
+    setPathEdgePairs(new Set());
     const allIds = allNodes.map((n) => n.id);
     const result = computeDegrees(allEdges, sourceId, allIds);
     setDegreesResult(result);
@@ -624,5 +635,6 @@ export function useGraphPageState(svgRef: React.RefObject<SVGSVGElement | null>)
     runPathFinder, clearPathFinder, nextPath, prevPath,
     swapPathEndpoints, useSelectedAsPathStart, useSelectedAsPathEnd,
     degreesResult, degreesSourceId, runDegrees, clearDegrees,
+    graphMode,
   };
 }

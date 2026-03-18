@@ -66,6 +66,7 @@ export function GraphPage() {
     runPathFinder, clearPathFinder, nextPath, prevPath,
     swapPathEndpoints, useSelectedAsPathStart, useSelectedAsPathEnd,
     degreesResult, degreesSourceId, runDegrees, clearDegrees,
+    graphMode,
   } = g;
 
   return (
@@ -215,9 +216,12 @@ export function GraphPage() {
                     <div className={s.pathChain}>
                       {pathResult.steps.map((step, i) => {
                         const node = allNodes.find((n) => n.id === step.nodeId);
+                        const isOpposes = step.predicate?.includes("opposes") ?? false;
                         return (
                           <div key={i} className={s.pathStep}>
-                            {i > 0 && <span className={s.pathEdgeLabel}>{step.edgeLabel}</span>}
+                            {i > 0 && (
+                              <span className={`${s.pathEdgeLabel}${isOpposes ? ` ${s.pathEdgeLabelOpposes}` : ""}`}>{step.edgeLabel}</span>
+                            )}
                             <button type="button" className={s.pathNodeBtn} onClick={() => pushGraphSelection(step.nodeId)}
                               style={{ borderLeft: `3px solid ${KIND_COLORS[node?.kind ?? ""] ?? "#666"}` }}>
                               <KindIcon kind={node?.kind ?? ""} size={14} /> {node?.label ?? step.nodeId}
@@ -279,6 +283,18 @@ export function GraphPage() {
       <div className={s.canvasArea}>
         <MapGraphOverlay onZoomIn={zoomIn} onZoomOut={zoomOut} onFitVisible={resetView}
           onCenterSelected={centerOnSelected} showCenter={hasSelection} />
+        {graphMode === "pathFinder" && (
+          <div className={`${s.modeBanner} ${s.modeBannerPath}`}>
+            Path Finder · {pathResult?.found ? `${pathResult.steps.length - 1} hops` : "No path"}
+            <button type="button" className={s.modeBannerDismiss} onClick={clearPathFinder} title="Exit path finder"><X size={12} /></button>
+          </div>
+        )}
+        {graphMode === "degrees" && (
+          <div className={`${s.modeBanner} ${s.modeBannerDegrees}`}>
+            Degrees · {degreesResult?.reachable ?? 0} reachable
+            <button type="button" className={s.modeBannerDismiss} onClick={clearDegrees} title="Exit degrees mode"><X size={12} /></button>
+          </div>
+        )}
         <div className={s.hint}>Scroll to zoom · Drag to pan · Click node to explore</div>
 
         <svg
@@ -290,8 +306,20 @@ export function GraphPage() {
           onMouseDown={handleSvgMouseDown}
           onClick={handleSvgClick}
         >
+          {/* Arrowhead markers — fixed size, open chevron, subtle */}
+          <defs>
+            <marker id="arrow-active" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+              <path d="M0.5,0.5 L5,3 L0.5,5.5" fill="none" stroke="var(--accent-bright)" strokeWidth="1.2" strokeLinecap="round" />
+            </marker>
+            <marker id="arrow-path" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+              <path d="M0.5,0.5 L7,4 L0.5,7.5" fill="none" stroke="#2ecc71" strokeWidth="1.5" strokeLinecap="round" />
+            </marker>
+            <marker id="arrow-opposes" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+              <path d="M0.5,0.5 L5,3 L0.5,5.5" fill="none" stroke="#e74c3c" strokeWidth="1.2" strokeLinecap="round" />
+            </marker>
+          </defs>
           <g transform={`translate(${pan.x},${pan.y}) scale(${zoom})`}>
-            {/* Edges — visual only, no interaction */}
+            {/* Edges — directed, arrowheads only on active/path/hover edges */}
             {(() => {
               const nodeMap = new Map<string, GraphNode>();
               for (const n of nodes) nodeMap.set(n.id, n);
@@ -313,11 +341,24 @@ export function GraphPage() {
                 const activeStroke = isOpposes ? "#e74c3c" : "var(--accent-bright)";
                 const pathStroke = "#2ecc71";
                 const strokeColor = isPathEdge ? pathStroke : isHoverEdge ? activeStroke : isNodeSelected ? activeStroke : baseStroke;
-                const strokeW = isPathEdge ? 3 : isHoverEdge ? 2.5 : isNodeSelected ? (isOpposes ? 2 : 1.5) : (isOpposes ? 1.2 : 0.8);
+                const strokeW = isPathEdge ? 2.2 : isHoverEdge ? 2 : isNodeSelected ? (isOpposes ? 1.8 : 1.3) : (isOpposes ? 1.0 : 0.7);
                 const strokeOp = isPathEdge ? 0.9 : isHoverEdge ? 0.95 : isNodeSelected ? 0.75 : (inPathMode && !isPathEdge) ? 0.04 : isDimmed ? 0.06 : (isOpposes ? 0.45 : 0.28);
+                // Only show arrowheads on active edges (selected, hovered, path)
+                const showArrow = isPathEdge || isHoverEdge || isNodeSelected;
+                // Shorten line to stop at target node edge
+                const dx = tgt.x - src.x;
+                const dy = tgt.y - src.y;
+                const len = Math.sqrt(dx * dx + dy * dy);
+                const tgtR = tgt.r ?? 5;
+                const shortenBy = showArrow ? tgtR + 3 : tgtR + 1;
+                const ratio = len > shortenBy ? (len - shortenBy) / len : 0.5;
+                const x2 = src.x + dx * ratio;
+                const y2 = src.y + dy * ratio;
+                const markerId = isPathEdge ? "arrow-path" : isOpposes ? "arrow-opposes" : "arrow-active";
                 return (
-                  <line key={i} x1={src.x} y1={src.y} x2={tgt.x} y2={tgt.y}
+                  <line key={i} x1={src.x} y1={src.y} x2={x2} y2={y2}
                     stroke={strokeColor} strokeWidth={strokeW} strokeOpacity={strokeOp}
+                    markerEnd={showArrow ? `url(#${markerId})` : undefined}
                     className={s.svgNoPointer} />
                 );
               });

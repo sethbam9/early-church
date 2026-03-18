@@ -96,7 +96,7 @@ export function getAuditRows(): ClaimAuditRow[] {
   if (_auditCache) return _auditCache;
   const all = dataStore.claims
     .getAll()
-    .filter((c) => c.claim_status === "active" && !dataStore.claims.isInfraPredicate(c.predicate_id));
+    .filter((c) => c.claim_status === "active");
   const dupeMap = new Map<string, number>();
   for (const c of all) {
     const key = `${c.subject_type}:${c.subject_id}|${c.predicate_id}|${c.object_type}:${c.object_id}`;

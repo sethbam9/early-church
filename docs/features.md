@@ -20,11 +20,10 @@ Complete listing of every feature and expected behavior across all pages and sha
 
 ## Global Navigation
 
-- **Top navigation bar** shows the app title ("Early Christianity Atlas · AD 33 – 800") and five page links: Map, Graph, Wiki, Audit, Guide — each with a Lucide icon.
-- Active page link is highlighted with an accent background.
+- **Top navigation bar** shows the site icon (favicon) and four page links: Map, Graph, Wiki, Essays — each with a Lucide icon. Active page link is highlighted with an accent background.
+- **Global search** — search bar with page selector dropdown (Map/Graph/Wiki) opens the Global Search Overlay. Results navigate to the selected page with that entity.
 - **Dark mode toggle** — Moon/Sun button at the far right of the nav bar toggles `data-theme="dark"` on `<html>`. Dark theme tokens are defined in `tokens.css`.
-- **"/" keyboard shortcut** — pressing `/` from any non-input element focuses the nav bar search overlay.
-- Nav bar search placeholder reads "Search all entities… (press / to focus)" as a discoverable hint.
+- **"/" keyboard shortcut** — pressing `/` from any non-input element focuses the global search overlay.
 - **CrossPageNav** buttons appear in entity detail headers, providing one-click navigation to view the same entity on any other page.
 
 ---
@@ -46,6 +45,7 @@ Complete listing of every feature and expected behavior across all pages and sha
 - **Place kind chips** — single-select filter: city, region, site, province, monastery, route.
 - **Christian places only** toggle — hides places with no historical Christian presence.
 - **Show arcs** toggle — renders correspondence arcs (written_at → addressed_to_place) for the selected work. Auto-resets to "on" whenever selection changes. Only shown when a work is selected.
+- **Browse doctrines** — collapsible section at the bottom of the left panel (collapsed by default). Expands to show topics with expandable sub-lists of propositions that have map presence data. Clicking a proposition selects it and opens the right panel.
 
 ### Global Search
 
@@ -133,12 +133,14 @@ Complete listing of every feature and expected behavior across all pages and sha
 
 ### Edges
 
-- **Default** — thin, low-opacity lines.
-- **Selected** — edges connected to the selected node are highlighted in accent color.
-- **Hover** — when hovering a connected node, that edge brightens further.
-- **Opposes-proposition** edges — rendered in red (dark/bright variants).
-- **Path edges** — rendered green at 3 px / 0.9 opacity when a path is active.
+- **Directed** — all edges have a subject→object direction.
+- **Default** — thin, low-opacity lines with no arrowheads (to reduce visual noise).
+- **Selected** — edges connected to the selected node are highlighted in accent color with a subtle open-chevron arrowhead.
+- **Hover** — when hovering a connected node, that edge brightens further with an arrowhead.
+- **Opposes-proposition** edges — rendered in red with red arrowheads when active.
+- **Path edges** — rendered green at 2.2 px / 0.9 opacity with a slightly larger green chevron arrowhead.
 - **Non-path edges** — dimmed to 4% opacity when path mode is active.
+- **Arrowhead design** — open chevron strokes (not filled triangles), fixed size via `userSpaceOnUse`, only shown on active/selected/path/hover edges.
 
 ### Hover Overlay
 
@@ -159,6 +161,7 @@ Complete listing of every feature and expected behavior across all pages and sha
 - **"→ Start" / "→ End" helpers** — one-click buttons to set the currently selected node as start or end.
 - **Find Path** button — runs Dijkstra / BFS shortest path.
 - When a path is found: path edges turn green, non-path edges are dimmed, path nodes remain fully visible, and a summary shows hop count and intermediary count.
+- **Opposes coloring** — path edge labels containing "opposes" predicates are rendered in red.
 - **Clear** button — resets path mode.
 - **Not found** message — shown when no path exists.
 
@@ -177,9 +180,16 @@ Complete listing of every feature and expected behavior across all pages and sha
 - The right panel's **← Back** button navigates through that history.
 - Clearing selection resets the history.
 
+### Mode Management
+
+- **Mutual exclusion** — Path Finder and Degrees of Separation are mutually exclusive modes. Starting one auto-clears the other.
+- **Mode indicator banner** — a colored pill banner at the top center of the canvas shows the current mode (green for Path Finder, blue for Degrees) with a dismiss button.
+- Both modes' "Clear" buttons return to the default explore mode.
+
 ### Map/Graph Overlay
 
 - Zoom In/Out, Fit Visible, Center Selected buttons — same as Map Page.
+- **Center Selected** — zooms to fit the selected node and all its direct connections in view, rather than just panning.
 - Center Selected only shown when a node is selected.
 
 ---
@@ -187,6 +197,11 @@ Complete listing of every feature and expected behavior across all pages and sha
 ## Audit Page
 
 Three-column claim quality workbench for reviewing evidence, derivation chains, and review status.
+
+### Direct Claim Navigation
+
+- **URL parameter** — `/audit?claimId=<claim_id>` opens the audit page with that specific claim selected and focused.
+- **InfoIcon component** — appears throughout the app in timeline rows, relation cards, and footprint cards. Clicking it navigates to the audit page with that claim pre-selected.
 
 ### Left Column: Claim Queue
 
@@ -310,6 +325,12 @@ Used in the Map right panel, Graph right panel, and Wiki center pane.
 
 ### Info Tab
 
+- **First mentioned** — shows the earliest dated attestation for the entity (year, source title, audit link). For entities with derived `first_attestations` data, uses that; for propositions and others, falls back to the earliest dated claim where the entity is the object.
+- **Doctrine stats** (propositions only) — interactive stance exploration panel:
+  - **Stance breakdown bar** — horizontal stacked bar showing relative proportions of affirm/oppose/develop/mention claims, color-coded (green/red/blue/purple).
+  - **Stats row** — colored dot + count for each stance bucket (e.g., "12 affirms · 3 opposes · 2 develops").
+  - **Interactive sections** — collapsible lists for each stance ("Affirmed by", "Opposed by", "Developed by", "Mentioned by"). Each entry shows the subject entity (work or person) with kind icon, label, year range, and certainty badge. Clicking an entry navigates to that entity in the right panel for drill-down exploration.
+  - **Place presence summary** — count of places with presence data, broken down by stance with colored dots.
 - **Scalar claims** — value claims (text, number, year, boolean) for the entity.
 - **Notes** — editor notes attached directly to the entity.
 - For works: shows translation notes, work type, language.
@@ -317,13 +338,13 @@ Used in the Map right panel, Graph right panel, and Wiki center pane.
 
 ### Timeline Tab
 
-- **Places** (kind=place): decade-grouped rows showing all entities present at the place, their predicate, certainty badge, and year range.
-- **All other entities**: decade-grouped rows of dated claims. Shows year badge, predicate label, linked entity (with hover tooltip), and certainty badge.
+- **Places** (kind=place): decade-grouped rows showing all entities present at the place, their predicate, certainty badge, and year range. Each row includes an **info icon** (to the left of the predicate) that opens the claim in the Audit page.
+- **All other entities**: decade-grouped rows of dated claims. Shows year badge, **info icon**, predicate label, linked entity (with hover tooltip), and certainty badge. The info icon opens the claim in the Audit page for detailed inspection.
 - **Timeline component** auto-scrolls to the active decade.
 
 ### Relation Tabs (People / Groups / Works / Events / Beliefs / Topics)
 
-- Lists each connected entity with: kind icon, name, predicate label(s), certainty badge.
+- Lists each connected entity with: **info icon**, kind icon, name, predicate label(s), certainty badge. The info icon (left of the kind icon) opens the claim in the Audit page.
 - Hovering a row highlights the corresponding node on the Graph page.
 - Expanding a row reveals **EvidenceCard** entries for all supporting passages.
 - Paginated at PAGE_SIZE per page.
@@ -331,7 +352,7 @@ Used in the Map right panel, Graph right panel, and Wiki center pane.
 ### Places Tab (Footprints)
 
 - **FootprintCard** for each place where the entity has a presence footprint.
-- Shows place name, predicate (reason for presence), year range, certainty.
+- Shows **info icon**, place kind icon, place name, predicate (reason for presence), year range, certainty. The info icon (when available) opens the first backing claim in the Audit page.
 - When no direct evidence exists, a derivation tooltip explains the inference chain.
 
 ### Notes Tab

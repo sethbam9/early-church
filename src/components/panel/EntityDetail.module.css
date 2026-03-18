@@ -101,6 +101,73 @@
 .tagClickable:hover { background: var(--accent-dim); border-color: var(--accent); }
 .tagAccent { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
 
+/* First attestation row (Info tab) */
+.firstAttestRow {
+  display: flex; align-items: center; gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  background: var(--accent-dim); border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+}
+.firstAttestLabel {
+  font-weight: 600; color: var(--text-secondary); white-space: nowrap;
+}
+.firstAttestValue {
+  flex: 1; color: var(--text-primary);
+}
+
+/* Doctrine stats (proposition Info tab) */
+.doctrineStats {
+  display: flex; flex-direction: column; gap: var(--space-2);
+  font-size: var(--font-size-xs);
+}
+.stanceBar {
+  display: flex; height: 6px; border-radius: 3px; overflow: hidden;
+  background: var(--bg-surface-2);
+}
+.stanceBarSeg { min-width: 2px; transition: flex 0.2s; }
+.stanceRow {
+  display: flex; flex-wrap: wrap; gap: var(--space-2);
+  color: var(--text-muted);
+}
+.stanceStat {
+  display: flex; align-items: center; gap: 3px;
+}
+.stanceDot {
+  width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+}
+.stanceCount { font-weight: 600; color: var(--text-primary); }
+.stanceSection {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.stanceSectionToggle {
+  display: flex; align-items: center; gap: var(--space-1);
+  background: none; border: none; cursor: pointer; padding: var(--space-1) 0;
+  font-size: var(--font-size-xs); font-family: inherit; color: var(--text-secondary);
+  transition: color 0.12s; text-align: left;
+}
+.stanceSectionToggle:hover { color: var(--text-primary); }
+.stanceSectionLabel { font-weight: 600; }
+.stanceSectionCount { color: var(--text-muted); }
+.stanceEntityList {
+  display: flex; flex-direction: column; gap: 1px;
+  padding-left: var(--space-2);
+  border-left: 2px solid var(--border-subtle);
+}
+.stanceEntity {
+  display: flex; align-items: center; gap: var(--space-1);
+  background: none; border: none; cursor: pointer; padding: 2px var(--space-1);
+  font-size: var(--font-size-xs); font-family: inherit; color: var(--text-primary);
+  border-radius: var(--radius-sm); transition: background 0.12s; text-align: left;
+}
+.stanceEntity:hover { background: var(--bg-surface-2); }
+.stanceEntityYear { color: var(--text-muted); font-size: 0.65rem; }
+.stanceEntityCert { font-size: 0.6rem; }
+.stancePlaceCount {
+  display: flex; align-items: center; gap: var(--space-1);
+  color: var(--text-muted); padding-top: var(--space-1);
+  border-top: 1px solid var(--border-subtle);
+}
+
 /* Fact grid (Info tab) */
 .factGrid {
   display: grid; grid-template-columns: auto 1fr; gap: 2px var(--space-3);

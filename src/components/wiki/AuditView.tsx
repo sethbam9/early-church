@@ -122,8 +122,8 @@ export function AuditView({ onSelectEntity, onSelectClaim, selectedClaimId }: Au
           />
         </div>
         <div className={s.auditFilterRow}>
-          <SearchInput value={filters.predicateFilter} onChange={(v) => setFilters((f) => ({ ...f, predicateFilter: v }))} placeholder="Filter predicate…" />
           <SearchInput value={filters.searchFilter} onChange={(v) => setFilters((f) => ({ ...f, searchFilter: v }))} placeholder="Search entities…" />
+          <SearchInput value={filters.predicateFilter} onChange={(v) => setFilters((f) => ({ ...f, predicateFilter: v }))} placeholder="Filter predicate…" />
           <DropdownSelect
             value={sortDropdownValue}
             onChange={(v) => {

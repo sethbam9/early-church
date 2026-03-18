@@ -5,6 +5,8 @@ import { dataStore, getEntityLabel } from "../../data/dataStore";
 import { KindIcon } from "./entityConstants";
 import { EvidenceCard } from "./EvidenceCard";
 import { DerivationChain } from "./DerivationChain";
+import { InfoIcon } from "./InfoIcon";
+import { DerivationIcon } from "./DerivationIcon";
 import { getPredicateLabel } from "../../domain/relationLabels";
 import ehc from "./EntityHoverCard.module.css";
 import { ChevronUp, ChevronDown } from "lucide-react";
@@ -102,6 +104,11 @@ export function FootprintCard({ footprint: f, showEntity = true, showPlace = fal
 
   const backingClaims = dataStore.claims.getBackingForFootprint(f);
   const hasEvidence = backingClaims.some((c) => dataStore.claimEvidence.getForClaim(c.claim_id).length > 0);
+  const firstClaimId = backingClaims[0]?.claim_id;
+
+  // Show DerivationIcon for derived edges, InfoIcon for direct claims — never both
+  const derivedEdge = f.derived_edge_id ? dataStore.derivedEdges.getById(f.derived_edge_id) : undefined;
+  const isDerived = derivedEdge?.directness === "derived";
 
   return (
     <div className={fc.card} ref={cardRef}
@@ -118,6 +125,11 @@ export function FootprintCard({ footprint: f, showEntity = true, showPlace = fal
             {f.stance ? ` · ${f.stance}` : ""}
           </div>
         </div>
+        {isDerived && f.derived_edge_id ? (
+          <DerivationIcon edgeId={f.derived_edge_id} />
+        ) : firstClaimId ? (
+          <InfoIcon claimId={firstClaimId} />
+        ) : null}
         {hasEvidence && (
           <button type="button" className={fc.expandBtn}
             onClick={(e) => { e.stopPropagation(); setExpanded((s) => !s); }}

@@ -16,9 +16,10 @@ import { EvidenceCard } from "../shared/EvidenceCard";
 import { EntityHoverWrap } from "../shared/EntityHoverCard";
 import { ExternalLink } from "../shared/ExternalLink";
 import { InfoIcon } from "../shared/InfoIcon";
+import { DerivationIcon } from "../shared/DerivationIcon";
 import { getSourceExternalUrl } from "../../utils/sourceLinks";
 import { getPredicateLabel } from "../../domain/relationLabels";
-import type { Claim, Passage, EntityPlaceFootprint, PlaceStateByDecade } from "../../data/types";
+import type { Claim, Passage, EntityPlaceFootprint, PlaceStateByDecade, FirstAttestation } from "../../data/types";
 import { truncateLabel, formatYearRange, formatDecadeLabel } from "../../utils/formatYear";
 import ed from "./EntityDetail.module.css";
 
@@ -246,18 +247,66 @@ export function EntityDetail({
       </div>
 
       {/* Map filter banner */}
-      {canFilter && setMapFilter && (
-        <div className={ed.filterBanner}>
-          <span className={ed.filterBannerLabel}><MapIcon size={13} /> Filter map to this {kindLabel(kind).toLowerCase()}</span>
-          <button
-            type="button"
-            className={`${ed.filterToggleBtn}${isFiltered ? ` ${ed.filterToggleBtnOn}` : ""}`}
-            onClick={toggleFilter}
-          >
-            {isFiltered ? "On" : "Off"}
-          </button>
-        </div>
-      )}
+      {canFilter && setMapFilter && (() => {
+        let labelContent: React.ReactNode = null;
+        
+        if (kind === "proposition" && currentDecade !== undefined) {
+          // Propositions: show stance breakdown
+          const ppp = dataStore.propositionPlacePresence.getForProposition(id);
+          const decadeEnd = currentDecade + 9;
+          const filtered = ppp.filter((pp) => {
+            const s = pp.year_start ?? -9999;
+            const e = pp.year_end ?? 9999;
+            return s <= decadeEnd && e >= currentDecade;
+          });
+          let affirm = 0, oppose = 0, mixed = 0;
+          for (const entry of filtered) {
+            if (entry.stance === "affirms") affirm++;
+            else if (entry.stance === "opposes") oppose++;
+            else mixed++;
+          }
+          labelContent = (
+            <>
+              <MapIcon size={13} /> {filtered.length} {filtered.length === 1 ? "place" : "places"}
+              <span className={ed.faint}> · {affirm} affirm · {oppose} oppose · {mixed} mixed</span>
+            </>
+          );
+        } else if (kind === "group" && currentDecade !== undefined) {
+          // Groups: count from cumulative places
+          const count = dataStore.map.getCumulativePlacesAtDecade(currentDecade)
+            .filter((p) => p.group_presence_summary.includes(id)).length;
+          labelContent = (
+            <>
+              <MapIcon size={13} /> {count} {count === 1 ? "place" : "places"} on map
+            </>
+          );
+        } else {
+          // Person, work, event: count from footprints
+          const fps = dataStore.footprints.getForEntity(kind, id);
+          const placeIds = new Set(fps.map((f) => f.place_id));
+          labelContent = (
+            <>
+              <MapIcon size={13} /> {placeIds.size} {placeIds.size === 1 ? "place" : "places"} on map
+            </>
+          );
+        }
+
+        return (
+          <div className={ed.filterBanner}>
+            <span className={ed.filterBannerLabel} title="Filter map to this entity">
+              {labelContent}
+            </span>
+            <button
+              type="button"
+              className={`${ed.filterToggleBtn}${isFiltered ? ` ${ed.filterToggleBtnOn}` : ""}`}
+              onClick={toggleFilter}
+              title={isFiltered ? "Stop filtering map" : "Filter map to this entity"}
+            >
+              {isFiltered ? "On" : "Off"}
+            </button>
+          </div>
+        );
+      })()}
 
       {/* Sub-tabs */}
       {availableTabs.length > 1 && (
@@ -280,7 +329,7 @@ export function EntityDetail({
       {/* Tab body */}
       <div className={ed.body}>
         {activeTab === "info" && (
-          <InfoTab kind={kind} id={id} editorNotes={editorNotes} onSelectEntity={onSelectEntity}
+          <InfoTab kind={kind} id={id} editorNotes={editorNotes} firstAttests={firstAttests} onSelectEntity={onSelectEntity}
             hideExternalLink={currentPage === "wiki" && (kind === "work" || kind === "source")} searchQuery={resolvedSearchQuery} />
         )}
         {activeTab === "timeline" && kind === "place" && (
@@ -334,8 +383,8 @@ function PlacePresenceChips({ currentState, activeDecade, onSelectEntity }: {
           const group = dataStore.groups.getById(gid);
           if (!group) return null;
           return (
-            <EntityHoverWrap kind="group" id={gid}>
-              <button key={gid} type="button" className={`${ed.tag} ${ed.tagClickable}`} onClick={() => onSelectEntity("group", gid)}>
+            <EntityHoverWrap key={gid} kind="group" id={gid}>
+              <button type="button" className={`${ed.tag} ${ed.tagClickable}`} onClick={() => onSelectEntity("group", gid)}>
                 {group.group_label}
               </button>
             </EntityHoverWrap>
@@ -368,16 +417,59 @@ function EditorNotesSectionCollapsed({ notes, onSelectEntity, searchQuery = "" }
 
 // ─── Info tab ─────────────────────────────────────────────────────────────────
 
-function InfoTab({ kind, id, editorNotes, onSelectEntity, hideExternalLink, searchQuery = "" }: {
+function InfoTab({ kind, id, editorNotes, firstAttests = [], onSelectEntity, hideExternalLink, searchQuery = "" }: {
   kind: string; id: string;
   editorNotes: ReturnType<typeof dataStore.editorNotes.getForEntity>;
+  firstAttests?: FirstAttestation[];
   onSelectEntity: (kind: string, id: string) => void;
   hideExternalLink?: boolean;
   searchQuery?: string;
 }) {
   const data = getEntityHeaderData(kind, id);
+
+  // Pick the earliest first attestation to display
+  const earliest = useMemo(() => {
+    // Try derived first_attestations first
+    if (firstAttests.length > 0) {
+      return firstAttests.reduce((best, fa) => {
+        if (fa.first_year == null) return best;
+        if (!best || best.first_year == null || fa.first_year < best.first_year) return fa;
+        return best;
+      }, null as FirstAttestation | null);
+    }
+    // For propositions (and others), find earliest dated claim where this entity is the object
+    const objectClaims = dataStore.claims.getAll().filter(
+      (c) => c.object_type === kind && c.object_id === id && c.year_start != null
+    );
+    if (objectClaims.length === 0) return null;
+    const sorted = objectClaims.sort((a, b) => (a.year_start ?? 9999) - (b.year_start ?? 9999));
+    const c = sorted[0]!;
+    const ev = dataStore.claimEvidence.getForClaim(c.claim_id);
+    return {
+      subject_type: c.subject_type,
+      subject_id: c.subject_id,
+      predicate_id: c.predicate_id,
+      first_year: c.year_start,
+      first_claim_id: c.claim_id,
+      first_passage_id: ev[0]?.passage_id ?? "",
+    } as FirstAttestation;
+  }, [firstAttests, kind, id]);
+  const earliestPassage = earliest?.first_passage_id ? dataStore.passages.getById(earliest.first_passage_id) : null;
+  const earliestSource = earliestPassage ? dataStore.sources.getById(earliestPassage.source_id) : null;
+
   return (
     <div className={ed.flexCol12}>
+      {earliest && earliest.first_year != null && (
+        <div className={ed.firstAttestRow}>
+          <span className={ed.firstAttestLabel}>First mentioned</span>
+          <span className={ed.firstAttestValue}>
+            AD {earliest.first_year}
+            {earliestSource && <span className={ed.faint}> in {earliestSource.title}</span>}
+          </span>
+          <InfoIcon claimId={earliest.first_claim_id} title="View first attestation claim" />
+        </div>
+      )}
+      {kind === "proposition" && <DoctrineStats propositionId={id} onSelectEntity={onSelectEntity} />}
       {data.rows.length > 0 && (
         <div className={ed.factGrid}>
           {data.rows.map(({ label, value, linkKind, linkId }) => (
@@ -397,15 +489,150 @@ function InfoTab({ kind, id, editorNotes, onSelectEntity, hideExternalLink, sear
         </div>
       )}
       {data.notes && (
-        <p className={ed.desc}>
+        <div className={ed.desc}>
           <MarkdownRenderer onSelectEntity={onSelectEntity}>{data.notes}</MarkdownRenderer>
-        </p>
+        </div>
       )}
       {data.url && !hideExternalLink && (
         <ExternalLink href={data.url}>Read online</ExternalLink>
       )}
       {editorNotes.length > 0 && (
         <EditorNotesSectionCollapsed notes={editorNotes} onSelectEntity={onSelectEntity} searchQuery={searchQuery} />
+      )}
+    </div>
+  );
+}
+
+// ─── Doctrine stats (proposition Info tab) ──────────────────────────────────
+
+const STANCE_COLORS: Record<string, string> = {
+  affirms: "#27ae60", opposes: "#c0392b", develops: "#2980b9", mentions: "#8e44ad",
+};
+const STANCE_LABELS: Record<string, string> = {
+  affirms: "Affirmed by", opposes: "Opposed by", develops: "Developed by", mentions: "Mentioned by",
+};
+
+interface StanceEntry { subjectKind: string; subjectId: string; label: string; yearStart?: number | null; yearEnd?: number | null; certainty: string; claimId: string; }
+
+function DoctrineStats({ propositionId, onSelectEntity }: { propositionId: string; onSelectEntity: (kind: string, id: string) => void }) {
+  const [openSection, setOpenSection] = useState<string | null>(null);
+
+  const stanceData = useMemo(() => {
+    const claims = dataStore.claims.getAll().filter(
+      (c) => c.object_type === "proposition" && c.object_id === propositionId && c.claim_status === "active"
+    );
+    const buckets: Record<string, StanceEntry[]> = { affirms: [], opposes: [], develops: [], mentions: [] };
+    for (const c of claims) {
+      let bucket: string | null = null;
+      if (c.predicate_id.includes("affirms")) bucket = "affirms";
+      else if (c.predicate_id.includes("opposes")) bucket = "opposes";
+      else if (c.predicate_id.includes("develops")) bucket = "develops";
+      else if (c.predicate_id.includes("mentions")) bucket = "mentions";
+      if (!bucket) continue;
+      const label = getEntityLabel(c.subject_type, c.subject_id);
+      buckets[bucket]!.push({
+        subjectKind: c.subject_type, subjectId: c.subject_id, label,
+        yearStart: c.year_start, yearEnd: c.year_end, certainty: c.certainty ?? "",
+        claimId: c.claim_id,
+      });
+    }
+    // Sort each bucket by year
+    for (const arr of Object.values(buckets)) {
+      arr.sort((a, b) => (a.yearStart ?? 9999) - (b.yearStart ?? 9999));
+    }
+    return buckets;
+  }, [propositionId]);
+
+  const placePresence = useMemo(
+    () => dataStore.propositionPlacePresence.getForProposition(propositionId),
+    [propositionId],
+  );
+  const placeStanceCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const pp of placePresence) {
+      const s = pp.stance || "unknown";
+      counts[s] = (counts[s] ?? 0) + 1;
+    }
+    return counts;
+  }, [placePresence]);
+
+  const aff = stanceData.affirms ?? [];
+  const opp = stanceData.opposes ?? [];
+  const dev = stanceData.develops ?? [];
+  const mnt = stanceData.mentions ?? [];
+  const total = aff.length + opp.length + dev.length + mnt.length;
+  if (total === 0 && placePresence.length === 0) return null;
+
+  const segments = [
+    { key: "affirms", count: aff.length },
+    { key: "opposes", count: opp.length },
+    { key: "develops", count: dev.length },
+    { key: "mentions", count: mnt.length },
+  ].filter((s) => s.count > 0);
+
+  return (
+    <div className={ed.doctrineStats}>
+      {total > 0 && (
+        <>
+          <div className={ed.stanceBar}>
+            {segments.map((seg) => (
+              <div key={seg.key} className={ed.stanceBarSeg}
+                style={{ flex: seg.count, background: STANCE_COLORS[seg.key] }} />
+            ))}
+          </div>
+          <div className={ed.stanceRow}>
+            {segments.map((seg) => (
+              <span key={seg.key} className={ed.stanceStat}>
+                <span className={ed.stanceDot} style={{ background: STANCE_COLORS[seg.key] }} />
+                <span className={ed.stanceCount}>{seg.count}</span> {seg.key}
+              </span>
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* Interactive stance sections */}
+      {(["affirms", "opposes", "develops", "mentions"] as const).map((stance) => {
+        const entries = stanceData[stance];
+        if (!entries || entries.length === 0) return null;
+        const isOpen = openSection === stance;
+        return (
+          <div key={stance} className={ed.stanceSection}>
+            <button type="button" className={ed.stanceSectionToggle} onClick={() => setOpenSection(isOpen ? null : stance)}>
+              <span className={ed.stanceDot} style={{ background: STANCE_COLORS[stance] }} />
+              <span className={ed.stanceSectionLabel}>{STANCE_LABELS[stance]}</span>
+              <span className={ed.stanceSectionCount}>({entries.length})</span>
+              {isOpen ? <ChevronUp size={10} /> : <ChevronDown size={10} />}
+            </button>
+            {isOpen && (
+              <div className={ed.stanceEntityList} style={{ borderColor: STANCE_COLORS[stance] }}>
+                {entries.map((e) => (
+                  <button key={e.claimId} type="button" className={ed.stanceEntity}
+                    onClick={() => onSelectEntity(e.subjectKind, e.subjectId)}>
+                    <KindIcon kind={e.subjectKind} size={11} />
+                    <span>{truncateLabel(e.label, 35)}</span>
+                    {e.yearStart != null && <span className={ed.stanceEntityYear}>AD {e.yearStart}{e.yearEnd && e.yearEnd !== e.yearStart ? `–${e.yearEnd}` : ""}</span>}
+                    {e.certainty && <CertaintyBadge value={e.certainty} />}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      })}
+
+      {/* Place presence summary */}
+      {placePresence.length > 0 && (
+        <div className={ed.stancePlaceCount}>
+          <MapIcon size={11} />
+          <span>{placePresence.length} place{placePresence.length !== 1 ? "s" : ""}</span>
+          {Object.entries(placeStanceCounts).map(([stance, count]) => (
+            <span key={stance} className={ed.stanceStat}>
+              <span className={ed.stanceDot} style={{ background: STANCE_COLORS[stance] ?? "#8e8070" }} />
+              {count}
+            </span>
+          ))}
+        </div>
       )}
     </div>
   );
@@ -475,6 +702,10 @@ function PlaceTimelineTab({ placeStates, placeId, activeDecade, onSelectEntity, 
               const entLabel = truncateLabel(getEntityLabel(fp.entity_type, fp.entity_id));
               const predLabel = getPredicateLabel(fp.reason_predicate_id, false);
               const yrBadge = formatYearRange(fp.year_start, fp.year_end) || `AD ${ps.decade}`;
+              const backingClaims = dataStore.claims.getBackingForFootprint(fp);
+              const firstClaimId = backingClaims[0]?.claim_id;
+              const fpEdge = fp.derived_edge_id ? dataStore.derivedEdges.getById(fp.derived_edge_id) : undefined;
+              const fpIsDerived = fpEdge?.directness === "derived";
               return (
                 <div key={`${fp.entity_type}:${fp.entity_id}:${fp.reason_predicate_id}:${i}`} className={ed.tlClaimRow}
                   onMouseEnter={() => onHoverEntity?.(fp.entity_type, fp.entity_id)}
@@ -487,6 +718,11 @@ function PlaceTimelineTab({ placeStates, placeId, activeDecade, onSelectEntity, 
                       <KindIcon kind={fp.entity_type} size={13} /> {entLabel}
                     </button>
                   </EntityHoverWrap>
+                  {fpIsDerived && fp.derived_edge_id ? (
+                    <DerivationIcon edgeId={fp.derived_edge_id} />
+                  ) : firstClaimId ? (
+                    <InfoIcon claimId={firstClaimId} />
+                  ) : null}
                   <CertaintyBadge value={fp.stance ?? ""} />
                 </div>
               );
@@ -558,6 +794,7 @@ function EntityTimelineTab({ claims, entityKind, entityId, onSelectEntity, onHov
                       </button>
                     </EntityHoverWrap>
                   ) : <span className={ed.faint}>{othLabel}</span>}
+                  <InfoIcon claimId={c.claim_id} />
                   <CertaintyBadge value={c.certainty ?? ""} />
                 </div>
               );

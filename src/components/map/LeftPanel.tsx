@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { useAppStore } from "../../stores/appStore";
 import { dataStore, getEntityLabel } from "../../data/dataStore";
 import type { PresenceStatus, PlaceKind } from "../../data/dataStore";
@@ -8,88 +8,13 @@ import { Chip } from "../shared/Chip";
 import { Slider } from "../shared/Slider";
 import { DropdownSelect } from "../shared/Dropdown";
 import { GlobalSearchOverlay } from "../shared/GlobalSearchOverlay";
-import { Landmark, Play, Pause, SkipBack, SkipForward, X, Check } from "lucide-react";
+import { Play, Pause, SkipBack, SkipForward, X, ChevronDown, ChevronUp } from "lucide-react";
 import lp from "./LeftPanel.module.css";
 
 
 interface LeftPanelProps {
   visiblePlaceCount: number;
   onRandomPlace: () => void;
-}
-
-// ─── Entity context banner ────────────────────────────────────────────────────
-
-function EntityContextBanner() {
-  const selection    = useAppStore((s) => s.selection);
-  const setSelection = useAppStore((s) => s.setSelection);
-  const activeDecade = useAppStore((s) => s.activeDecade);
-
-  const activeKind = selection?.kind ?? null;
-  const activeId   = selection?.id   ?? null;
-
-  const stats = useMemo(() => {
-    if (!activeKind || !activeId) return null;
-
-    if (activeKind === "proposition") {
-      const ppp = dataStore.propositionPlacePresence.getForProposition(activeId);
-      if (ppp.length === 0) return null;
-      // Year-filter: only count places whose attestation overlaps the active decade
-      const decadeEnd = activeDecade + 9;
-      const filtered = ppp.filter((pp) => {
-        const s = pp.year_start ?? -9999;
-        const e = pp.year_end ?? 9999;
-        return s <= decadeEnd && e >= activeDecade;
-      });
-      let affirm = 0, oppose = 0, mixed = 0;
-      for (const entry of filtered) {
-        if (entry.stance === "affirms") affirm++;
-        else if (entry.stance === "opposes") oppose++;
-        else mixed++;
-      }
-      return { places: filtered.length, affirm, oppose, mixed };
-    }
-
-    if (activeKind === "group") {
-      const count = dataStore.map.getCumulativePlacesAtDecade(activeDecade)
-        .filter((p) => p.group_presence_summary.includes(activeId)).length;
-      return count > 0 ? { places: count } : null;
-    }
-
-    // person, work, event — use footprints
-    const fps = dataStore.footprints.getForEntity(activeKind, activeId);
-    const placeIds = new Set(fps.map((f) => f.place_id));
-    return placeIds.size > 0 ? { places: placeIds.size } : null;
-  }, [activeKind, activeId, activeDecade]);
-
-  if (!activeKind || !activeId || !stats) return null;
-
-  const label = getEntityLabel(activeKind, activeId);
-  const isProp = activeKind === "proposition" && "affirm" in stats;
-
-  return (
-    <div className={lp.contextBanner}>
-      <div className={lp.contextLabel}>
-        <span className={lp.contextName} title={label}>
-          <KindIcon kind={activeKind} size={13} /> {label}
-        </span>
-        <button type="button" className={lp.closeBtn} onClick={() => setSelection(null)} title="Dismiss">
-          <X size={12} />
-        </button>
-      </div>
-      {isProp && (
-        <div className={lp.contextStats}>
-          <span className={lp.statAffirm}><Check size={11} /> {(stats as any).affirm} affirm</span>
-          {" · "}
-          <span className={lp.statOppose}><X size={11} /> {(stats as any).oppose} condemn</span>
-          {" · "}
-          <span className={lp.statMixed}>~ {(stats as any).mixed} mixed</span>
-        </div>
-      )}
-      <div className={lp.contextStats}>
-        <Landmark size={12} /> {stats.places} place{stats.places === 1 ? "" : "s"}
-      </div>
-    </div>
-  );
 }
 
 // ─── Place kind chips ─────────────────────────────────────────────────────────
@@ -102,6 +27,73 @@ const STANCE_VARIANT: Record<Stance, "success" | "danger" | "warning" | "unknown
   neutral: "unknown",
   unknown: "unknown",
 };
+
+// ─── Proposition browser (grouped by topic) ──────────────────────────────────
+
+function PropositionBrowser({ onSelect }: { onSelect: (kind: string, id: string) => void }) {
+  const [expanded, setExpanded] = useState(false);
+  const [openTopicId, setOpenTopicId] = useState<string | null>(null);
+  const selection = useAppStore((s) => s.selection);
+
+  const topics = useMemo(() => {
+    const allTopics = dataStore.topics.getAll();
+    return allTopics.filter((t) => {
+      const props = dataStore.propositions.getByTopic(t.topic_id);
+      return props.some((p) => dataStore.propositionPlacePresence.getForProposition(p.proposition_id).length > 0);
+    });
+  }, []);
+
+  if (topics.length === 0) return null;
+
+  return (
+    <div className={lp.section}>
+      <button type="button" className={lp.sectionToggle} onClick={() => setExpanded((v) => !v)}>
+        <span className={lp.sectionLabel} style={{ marginBottom: 0 }}>Browse doctrines</span>
+        {expanded ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
+      </button>
+      {expanded && (
+        <div className={lp.topicList}>
+          {topics.map((t) => {
+            const isOpen = openTopicId === t.topic_id;
+            const props = dataStore.propositions.getByTopic(t.topic_id);
+            const withPresence = props.filter((p) =>
+              dataStore.propositionPlacePresence.getForProposition(p.proposition_id).length > 0
+            );
+            return (
+              <div key={t.topic_id} className={lp.topicGroup}>
+                <button
+                  type="button"
+                  className={`${lp.topicToggle}${isOpen ? ` ${lp.topicToggleOpen}` : ""}`}
+                  onClick={() => setOpenTopicId(isOpen ? null : t.topic_id)}
+                >
+                  <span>{t.topic_label}</span>
+                  <span className={lp.topicCount}>{withPresence.length}</span>
+                  {isOpen ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
+                </button>
+                {isOpen && (
+                  <div className={lp.topicProps}>
+                    {withPresence.map((p) => {
+                      const isActive = selection?.kind === "proposition" && selection.id === p.proposition_id;
+                      return (
+                        <Chip
+                          key={p.proposition_id}
+                          active={isActive}
+                          onClick={() => onSelect("proposition", p.proposition_id)}
+                        >
+                          {p.proposition_label}
+                        </Chip>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
 
 // ─── LeftPanel ────────────────────────────────────────────────────────────────
 
@@ -197,9 +189,6 @@ export function LeftPanel({
 
       {/* Scrollable body */}
       <div className={lp.body}>
-
-        {/* Entity context — shown when an entity selection/filter is active */}
-        <EntityContextBanner />
 
         {/* Timeline slider */}
         <div className={lp.timelineSection}>
@@ -359,6 +348,9 @@ export function LeftPanel({
             ))}
           </div>
         </div>
+
+        {/* Proposition browser — collapsed at bottom */}
+        <PropositionBrowser onSelect={handleGlobalSelect} />
 
       </div>
     </>

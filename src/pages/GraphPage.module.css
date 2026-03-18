@@ -132,6 +132,8 @@
   font-size: 0.66rem; color: var(--text-faint);
   padding-left: 12px; font-style: italic;
 }
+.pathEdgeLabelOpposes { color: #c0392b; }
+.pathNodeYear { font-size: 0.6rem; color: var(--text-faint); margin-left: auto; font-style: normal; }
 .pathNodeBtn {
   background: var(--surface-2); border: none;
   border-radius: var(--radius-sm);
@@ -143,6 +145,25 @@
 
 /* Canvas area */
 .canvasArea { flex: 1; position: relative; overflow: hidden; }
+
+/* Mode indicator banner */
+.modeBanner {
+  position: absolute; top: 8px; left: 50%;
+  transform: translateX(-50%); z-index: 12;
+  display: flex; align-items: center; gap: var(--space-2);
+  padding: 4px 12px; border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs); font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  pointer-events: auto;
+}
+.modeBannerPath { background: #27ae60; color: #fff; }
+.modeBannerDegrees { background: #2980b9; color: #fff; }
+.modeBannerDismiss {
+  background: none; border: none; color: rgba(255,255,255,.7);
+  cursor: pointer; padding: 0; display: inline-flex;
+  transition: color 0.12s;
+}
+.modeBannerDismiss:hover { color: #fff; }
 
 /* Zoom controls now in shared MapGraphOverlay */
 

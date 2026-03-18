@@ -119,6 +119,7 @@ export function AuditPage() {
   const [searchParams] = useSearchParams();
 
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [derivationEdgeId, setDerivationEdgeId] = useState<string | null>(null);
   const [filter, setFilter] = useState<QueueFilter>("all");
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(0);
@@ -136,8 +137,20 @@ export function AuditPage() {
 
   useEffect(() => {
     const claimId = searchParams.get("claimId");
-    if (claimId) {
+    const edgeId = searchParams.get("edgeId");
+    if (edgeId) {
+      setDerivationEdgeId(edgeId);
+      // Auto-select the first supporting claim from the edge
+      const edge = dataStore.derivedEdges.getById(edgeId);
+      if (edge && edge.supporting_claim_ids.length > 0) {
+        const firstClaim = edge.supporting_claim_ids[0]!;
+        setSelectedId(firstClaim);
+        const idx = allRows.findIndex((r) => r.claim.claim_id === firstClaim);
+        if (idx !== -1) { setPage(Math.floor(idx / PAGE_SIZE)); setFilter("all"); }
+      }
+    } else if (claimId) {
       setSelectedId(claimId);
+      setDerivationEdgeId(null);
       const idx = allRows.findIndex((r) => r.claim.claim_id === claimId);
       if (idx !== -1) { setPage(Math.floor(idx / PAGE_SIZE)); setFilter("all"); }
     } else {
@@ -175,7 +188,7 @@ export function AuditPage() {
   const selectedEdges = useMemo(() => {
     if (!selectedClaim) return [];
     return dataStore.derivedEdges.getAll().filter((e) =>
-      e.supporting_claim_ids.includes(selectedClaim.claim_id)
+      e.directness === "derived" && e.supporting_claim_ids.includes(selectedClaim.claim_id)
     );
   }, [selectedClaim]);
 
@@ -539,6 +552,30 @@ export function AuditPage() {
                 ))}
               </div>
             )}
+
+            {derivationEdgeId && (() => {
+              const focusEdge = dataStore.derivedEdges.getById(derivationEdgeId);
+              if (!focusEdge) return null;
+              return (
+                <div className={s.rightSection}>
+                  <div className={s.rightTitle}>Focused Derivation Trail</div>
+                  <div className={s.derivationRow}>
+                    <DerivationChain edgeId={derivationEdgeId} onSelectEntity={onSelectEntity} />
+                  </div>
+                  {focusEdge.supporting_claim_ids.length > 1 && (
+                    <div className={s.derivClaimLinks}>
+                      {focusEdge.supporting_claim_ids.map((cid) => (
+                        <button key={cid} type="button"
+                          className={`${s.derivClaimLink}${selectedId === cid ? ` ${s.derivClaimLinkActive}` : ""}`}
+                          onClick={() => setSelectedId(cid)}>
+                          {claimSentence(allRows.find((r) => r.claim.claim_id === cid) ?? { claim: dataStore.claims.getById(cid)! } as ClaimAuditRow)}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
 
             {selectedEdges.length > 0 && (
               <div className={s.rightSection}>

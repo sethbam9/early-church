@@ -6,6 +6,7 @@ import { KindIcon } from "./entityConstants";
 import { CertaintyBadge } from "./CertaintyBadge";
 import { EvidenceCard } from "./EvidenceCard";
 import { EntityLink } from "./EntityLink";
+import { InfoIcon } from "./InfoIcon";
 import { ChevronUp, ChevronDown } from "lucide-react";
 import rc from "./RelationCard.module.css";
 
@@ -38,6 +39,7 @@ export function ClaimCard({ claim, entityId, entityType, onSelectEntity, searchQ
   return (
     <div className={rc.card}>
       <div className={rc.main} onClick={() => othId && onSelectEntity(othKind, othId)}>
+        <InfoIcon claimId={claim.claim_id} />
         <span className={rc.icon}><KindIcon kind={othKind} size={15} /></span>
         <div className={rc.body}>
           <div className={rc.name}>{othLabel}</div>
