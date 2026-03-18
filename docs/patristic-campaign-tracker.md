@@ -818,3 +818,60 @@ All expansion and geography claims linked to specific passage evidence with cali
 **Campaign 9:** ✅ Eastern Christian presence (Edessa, Nisibis, Mesopotamia, Persia) is visible on the map. Syriac doctrinal distinctives represented.
 
 **Campaign 10:** ✅ The map shows credible outer-range spread (Aksum, India, Britannia, Arabia) with honest certainty levels. No claim overstates the evidence; traditions labeled claimed_tradition or possible as appropriate. Ethiopia/Aksum has the strongest attestation chain (Rufinus + Athanasius + Ezana inscription + Socrates); Britannia confirmed by Council of Arles 314; India and Arabia rely on later historians with appropriate uncertainty.
+
+---
+
+## Mid-Audit Review Findings (2026-03-17)
+
+A comprehensive claim audit was conducted across all data ingested by Campaigns 1–10.
+
+### Audit progress
+
+| Metric | Value |
+|--------|-------|
+| Total audit batches | 176 |
+| Batches completed | 108 |
+| Batches remaining | 68 |
+| Claims reviewed | 887 (Queue 1 semantic review) |
+| Approval rate | ~68.8% approved |
+| Needs revision rate | ~30.1% |
+| Rejected | 2 claims |
+
+### Top systemic issues found
+
+| Issue | Batches Affected | Description |
+|-------|-----------------|-------------|
+| WRONG_PASSAGE_FOR_CLAIM | 34 | Passage from correct work but wrong section; caused by work-level association instead of passage-level citation |
+| PARAPHRASE_CAP_APPLIED | 22+ | Paraphrase excerpts had `assertion_mode=explicit`; capped to `strong_inference` |
+| TERTIARY_ONLY_SUPPORT | 8 | Claims backed only by Wikipedia; needs primary evidence |
+| GARBAGE_WEIGHT_FIELD | 6 | Auto-generated boilerplate in evidence_weight or notes fields |
+| WRONG_SOURCE_URL | 3 | Source URL pointed to wrong work or wrong section |
+
+### Remediation applied (batches 1–108)
+
+- 677 evidence rows fixed (role, aspect, mode, weight corrections)
+- 185 evidence rows deleted (unsupported links)
+- 638 claims fixed (certainty, predicate, field corrections)
+- 267 claims flagged `needs_revision` for further work
+
+### New safeguards deployed
+
+1. **Validator rules P6 and P7** added to `validate_canonical_data.py`:
+   - P6 warns when a passage supports 3+ distinct proposition claims (passage doctrine fan-out)
+   - P7 warns when evidence notes contain known AI-boilerplate patterns
+2. **Passage discipline rules** added to `data-edit.md` and `patristic-batch-collection-plan.md`:
+   - Minimize passage fan-out for doctrine claims
+   - One fresh quote per doctrine claim
+   - Fan-out limit of 3 propositions per passage without justification
+3. **Pre-audit checks** added to `claim-audit.md` (Step 0):
+   - Source URL verification before each batch
+   - Garbage field scan
+   - Passage fan-out scan
+4. **Evidence quality gate** added to campaign sign-off checklist in `patristic-batch-collection-plan.md`
+
+### Reference documents
+
+- Full mid-audit review: `data/audit/mid-audit-review.md`
+- Audit plan with remediation phases: `data/audit/audit-plan.md`
+- Audit progress log: `data/audit/progress.tsv`
+- Detailed findings: `data/audit/findings.ndjson`

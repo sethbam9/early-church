@@ -14,6 +14,32 @@ Invoke with: `/claim-audit batch-NNN`
 
 ---
 
+## Step 0 — Pre-audit checks (run before loading batch)
+
+### 0a. Source URL verification
+For every source referenced by the batch's evidence rows:
+1. Open the source URL.
+2. Confirm it points to the correct work and edition.
+3. If wrong, fix it in `sources.tsv` before proceeding. Log to `findings.ndjson` with code `WRONG_SOURCE_URL`.
+
+Known traps:
+- New Advent ANF numbering vs CSEL numbering for Cyprian's letters
+- New Advent numbering for Origen's works
+- Multiple translations of the same work at different URLs
+
+### 0b. Garbage field scan
+For every evidence row in the batch:
+1. Check `evidence_weight` is a valid decimal or blank (not prose text).
+2. Check `notes` for AI-boilerplate patterns (e.g., "is a primary text directly relevant to", "directly supports the claim"). Replace with substantive assessments.
+
+### 0c. Passage fan-out scan
+For every passage referenced by the batch:
+1. Count how many distinct proposition claims it supports across the dataset.
+2. If a passage supports 3+ different propositions, flag it for closer inspection during Step 4.
+3. For each flagged passage, verify that the passage text actually supports every linked claim.
+
+---
+
 ## Step 1 — Load batch
 
 1. Read `data/audit/batches/batch-NNN.json`.
@@ -106,6 +132,63 @@ For accessible source URLs:
 For works tagged as lost/fragmentary (papias-fragments, marcion-antitheses, marcion-gospel, diatessaron, philostorgius-ecclesiastical-history):
 - Cross-work support is valid if the later source explicitly attributes content to the lost work.
 - Do NOT flag P1 source mismatch in these cases.
+
+### 4f. Passage fan-out discipline
+For each evidence row where `evidence_role=supports`:
+1. Check how many other proposition claims this passage already supports (from Step 0c scan).
+2. If the passage supports 2+ other proposition claims, **stop and verify** it genuinely supports this claim too.
+3. If it doesn't, find a fresh passage from the same work that directly discusses the specific proposition.
+4. Prefer one dedicated passage per doctrine claim over reusing a shared passage.
+
+### 4g. Fresh quote preference
+For doctrine claims (`work_affirms_proposition`, `person_affirms_proposition`):
+1. Read the passage excerpt. Does it mention the claimed proposition by name or clear description?
+2. If the passage only loosely relates (same work, different topic), the evidence_role should be `contextualizes`, not `supports`.
+3. If the only evidence is a shared passage that discusses a different topic, seek a better passage from the same work.
+4. A passage that incidentally touches on the proposition is weaker than one that directly discusses it — adjust `evidence_weight` accordingly.
+
+### 4h. Active source verification
+When `PARAPHRASE_RISK` is flagged on any evidence row:
+1. **Fetch the source URL** using the `mcp0_fetch` tool or `read_url_content`.
+2. Navigate to the cited locator (chapter, section, paragraph).
+3. Compare the paraphrase excerpt against the actual source text.
+4. If the paraphrase overstates, omits key qualifiers, or attributes content from a different section:
+   - Fix the excerpt or add an `excerpt_override` with the actual text.
+   - Downgrade `assertion_mode` and/or `support_aspect` as warranted.
+   - Log the discrepancy to `findings.ndjson` with code `PARAPHRASE_VERIFIED` or `PARAPHRASE_OVERSTATEMENT`.
+5. Do not blindly trust paraphrase excerpts — always verify against the source when the URL is accessible.
+
+### 4i. Broader source search
+When evidence is weak, tertiary-only, or the source URL is inaccessible:
+1. Search beyond the current source using the **source ladder** from `patristic-data-harvest-workflow.md`:
+   - **Tier 1**: Patristic Text Archive (PTA), Scaife Viewer, BKV, Corpus Corporum
+   - **Tier 2**: Early Christian Writings, New Advent, CCEL
+   - **Tier 3**: Internet Archive, HathiTrust, Gallica
+2. Use `search_web` to find alternative public editions of the same work.
+3. Prefer primary-text URLs over tertiary summaries (e.g., Wikipedia).
+4. When a better source is found, update or create a `sources.tsv` row and repoint passages to it.
+5. This is especially important for claims flagged `TERTIARY_ONLY_SUPPORT` — actively seek a primary passage.
+
+### 4j. Fresh passage search and creation
+When existing evidence is mislinked, weak, or a shared passage doesn't support the specific claim:
+1. **Search the actual source text** at the source URL for content that directly discusses the claimed proposition.
+   - Use keyword search (doctrinal terms, names, places) in the source text.
+   - Check the table of contents or chapter headings for relevant sections.
+2. If a better passage is found in the same work:
+   - Create a new passage row in `passages.tsv` with accurate locator, excerpt, and notes.
+   - Create a new `claim_evidence.tsv` row linking the claim to the new passage.
+   - The old weak evidence row can be downgraded to `contextualizes` or deleted.
+3. Prefer one dedicated passage per doctrine claim over reusing a shared passage that discusses a different topic.
+4. Follow the `/data-edit` workflow for all new rows.
+
+### 4k. Passage repointing
+When a passage genuinely supports a *different* claim better than the one it is currently linked to:
+1. Check if the passage is already linked to the better-matching claim. If not, create a new `claim_evidence.tsv` row linking it there.
+2. For the original (weaker) link:
+   - If the passage still provides some context, downgrade `evidence_role` to `contextualizes` and clear `support_aspect`, `assertion_mode`, `evidence_weight`.
+   - If the passage provides no value to the original claim, delete the evidence row.
+3. Log the repoint to `findings.ndjson` with code `EVIDENCE_REPOINTED`.
+4. Do not delete evidence without considering whether it belongs elsewhere first.
 
 ---
 

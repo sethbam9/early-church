@@ -35,6 +35,7 @@ import hashlib
 import re
 import sys
 from collections import defaultdict
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 
@@ -137,6 +138,10 @@ SKIP_DIR_NAMES = {".git", ".hg", ".svn", "node_modules", "dist", "build", "cover
 WIKILINK_RE = re.compile(r"\[\[([a-z_]+):([^\]|]+)(?:\|([^\]]+))?\]\]")
 OSIS_RE = re.compile(r"^(?:[1-3]?[A-Za-z][A-Za-z0-9]*)\.\d+\.\d+(?:-(?:(?:[1-3]?[A-Za-z][A-Za-z0-9]*)\.\d+\.\d+|\d+))?$")
 CERTAINTY_RANK = {"attested": 0, "probable": 1, "possible": 2, "claimed_tradition": 3, "legendary": 4, "unknown": 5}
+RFC3339_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$")
+ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+INDIRECT_TESTIMONIUM_NOTE_MARKERS = {"indirect_testimonium", "indirect testimonium", "testimonium", "hostile witness", "later witness", "preserved in", "reported by"}
+INDIRECT_WORK_KEYWORDS = {"lost work", "fragments", "fragment", "preserved in fragments", "known through", "survives only", "survives mostly", "reconstructed", "through refutations", "lost work by"}
 
 # Maps predicate_id to a human-readable relation_kind for derived edges
 RELATION_KIND_MAP: Dict[str, str] = {
@@ -207,6 +212,28 @@ def parse_mentions(text: str) -> List[Tuple[str, str, Optional[str]]]:
 
 def is_osis_ref(value: str) -> bool:
     return bool(OSIS_RE.fullmatch(norm(value)))
+
+
+def is_iso_date(value: str) -> bool:
+    value = norm(value)
+    if not value or not ISO_DATE_RE.fullmatch(value):
+        return False
+    try:
+        datetime.strptime(value, "%Y-%m-%d")
+        return True
+    except ValueError:
+        return False
+
+
+def is_rfc3339_timestamp(value: str) -> bool:
+    value = norm(value)
+    if not value or not RFC3339_RE.fullmatch(value):
+        return False
+    try:
+        datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return True
+    except ValueError:
+        return False
 
 
 def read_tsv(path: Path) -> List[Dict[str, str]]:
@@ -764,6 +791,32 @@ class Validator:
         }
         return file_map.get(entity_type)
 
+    def work_allows_indirect_testimonium(self, work_id: str, evidence_rows: Optional[List[Dict[str, str]]] = None) -> bool:
+        works_by_id = {row["work_id"]: row for row in self.tables.get("works.tsv", []) if row.get("work_id")}
+        work = works_by_id.get(work_id, {})
+        haystack = " ".join([norm(work.get("title_display")), norm(work.get("notes")), norm(work.get("work_kind"))]).lower()
+        if any(marker in haystack for marker in INDIRECT_WORK_KEYWORDS):
+            return True
+        for ev in evidence_rows or []:
+            notes = norm(ev.get("notes")).lower()
+            if any(marker in notes for marker in INDIRECT_TESTIMONIUM_NOTE_MARKERS):
+                return True
+        return False
+
+    def quality_support_aspects_for_claim(self, claim_row: Dict[str, str]) -> set[str]:
+        predicate_id = claim_row.get("predicate_id", "")
+        if predicate_id in {"authored_by"}:
+            return {"whole_claim", "attribution", "object", "subject"}
+        if predicate_id in {"event_has_year", "work_year_start", "work_year_end"}:
+            return {"whole_claim", "date"}
+        if predicate_id in {"written_at", "addressed_to_place", "event_occurs_at", "active_in", "originated_in", "bishop_of", "group_present_at", "controls_place"}:
+            return {"whole_claim", "predicate", "object", "place", "date", "attribution"}
+        if predicate_id in {"participant_in", "member_of_group", "teacher_of", "coworker_of", "group_schismed_from"}:
+            return {"whole_claim", "predicate", "object", "subject", "date", "attribution"}
+        if predicate_id.endswith("_proposition"):
+            return {"whole_claim", "predicate", "object", "attribution"}
+        return {"whole_claim", "predicate", "object", "date", "place", "subject", "attribution"}
+
     def subject_fk_exists(self, entity_type: str, entity_id: str) -> bool:
         filename = self.file_for_entity_type(entity_type)
         return bool(filename and entity_id in self.by_id.get(filename, set()))
@@ -771,8 +824,10 @@ class Validator:
     # ── Loading ────────────────────────────────────────────────────────────
 
     def load(self) -> None:
-        sheets_dir = self.data_dir / "sheets"
+        sheets_dir = self.data_dir / "sheets" if (self.data_dir / "sheets").exists() else self.data_dir
         derived_dir = self.data_dir / "derived"
+        self.sheets_dir = sheets_dir
+        self.derived_dir = derived_dir
 
         for filename, headers in SOURCE_HEADERS.items():
             path = sheets_dir / filename
@@ -873,6 +928,8 @@ class Validator:
         for idx, row in enumerate(self.tables.get("groups.tsv", []), start=2):
             if row["group_kind"] not in GROUP_KIND:
                 self.error(f"groups.tsv:{idx} invalid group_kind={row['group_kind']}")
+            if norm(row.get("is_christian")) not in {"true", "false"}:
+                self.error(f"groups.tsv:{idx} invalid boolean is_christian={row.get('is_christian', '')}")
 
         topic_ids = self.by_id.get("topics.tsv", set())
         for idx, row in enumerate(self.tables.get("topics.tsv", []), start=2):
@@ -904,7 +961,14 @@ class Validator:
                 self.error(f"predicate_types.tsv:{idx} invalid canonical_sort_rule={row['canonical_sort_rule']}")
             if row["object_mode"] == "entity" and not row.get("object_type"):
                 self.error(f"predicate_types.tsv:{idx} object_mode=entity requires object_type")
+            if norm(row.get("is_symmetric")) not in {"true", "false"}:
+                self.error(f"predicate_types.tsv:{idx} invalid boolean is_symmetric={row.get('is_symmetric', '')}")
+            if norm(row.get("allows_date_range")) not in {"true", "false"}:
+                self.error(f"predicate_types.tsv:{idx} invalid boolean allows_date_range={row.get('allows_date_range', '')}")
+            if norm(row.get("allows_context_place")) not in {"true", "false"}:
+                self.error(f"predicate_types.tsv:{idx} invalid boolean allows_context_place={row.get('allows_context_place', '')}")
 
+        source_natural_seen: Dict[Tuple[str, str, str, str], List[str]] = defaultdict(list)
         for idx, row in enumerate(self.tables.get("sources.tsv", []), start=2):
             if row["source_kind"] not in SOURCE_KIND:
                 self.error(f"sources.tsv:{idx} invalid source_kind={row['source_kind']}")
@@ -914,7 +978,20 @@ class Validator:
             src_ye = parse_int(row.get("year_end"))
             if src_ys is not None and src_ye is not None and src_ye < src_ys:
                 self.error(f"sources.tsv:{idx} year_end < year_start ({src_ye} < {src_ys})")
+            if row.get("accessed_on") and not is_iso_date(row["accessed_on"]):
+                self.error(f"sources.tsv:{idx} accessed_on is not valid ISO date={row['accessed_on']}")
+            title_key = norm(row.get("title")).lower()
+            url_key = norm(row.get("url")).lower()
+            author_key = norm(row.get("author")).lower()
+            if title_key or url_key:
+                natural_key = (norm(row.get("work_id")), norm(row.get("source_kind")), title_key, url_key or author_key)
+                source_natural_seen[natural_key].append(row["source_id"])
 
+        for natural_key, source_ids in source_natural_seen.items():
+            if len(source_ids) > 1:
+                self.warn(f"sources.tsv potential natural duplicate sources={source_ids} key={natural_key}")
+
+        passage_natural_seen: Dict[Tuple[str, str, str], List[str]] = defaultdict(list)
         for idx, row in enumerate(self.tables.get("passages.tsv", []), start=2):
             if row["source_id"] not in self.by_id.get("sources.tsv", set()):
                 self.error(f"passages.tsv:{idx} broken FK source_id={row['source_id']}")
@@ -925,6 +1002,13 @@ class Validator:
                 self.error(f"passages.tsv:{idx} missing locator")
             if row.get("locator_type") == "bible_osis" and locator and not is_osis_ref(locator):
                 self.error(f"passages.tsv:{idx} locator is not valid OSIS={locator}")
+            if row.get("passage_year") and parse_int(row.get("passage_year")) is None:
+                self.error(f"passages.tsv:{idx} passage_year is not a valid integer={row.get('passage_year', '')}")
+            passage_natural_seen[(row["source_id"], norm(row.get("locator_type")), locator)].append(row["passage_id"])
+
+        for natural_key, passage_ids in passage_natural_seen.items():
+            if len(passage_ids) > 1:
+                self.error(f"passages.tsv duplicate natural locator {natural_key} across passage_ids={passage_ids}; use one passage row per source+locator and move excerpt differences to claim_evidence.excerpt_override")
 
     # ── Claim structure validation ────────────────────────────────────────
 
@@ -980,6 +1064,8 @@ class Validator:
                 self.error(f"claims.tsv:{idx} year_end < year_start ({year_end} < {year_start})")
             if row.get("context_place_id") and row["context_place_id"] not in self.by_id.get("places.tsv", set()):
                 self.error(f"claims.tsv:{idx} broken FK context_place_id={row['context_place_id']}")
+            if row.get("updated_at") and not (is_rfc3339_timestamp(row["updated_at"]) or is_iso_date(row["updated_at"])):
+                self.error(f"claims.tsv:{idx} updated_at must be ISO date or RFC3339 timestamp={row['updated_at']}")
 
             normalized_object = (
                 f"entity:{row['object_type']}:{row['object_id']}" if row["object_mode"] == "entity"
@@ -1012,6 +1098,8 @@ class Validator:
         self.validate_participant_place_redundancy()
         self.validate_controls_group_present_redundancy()
         self.validate_evidence_role_semantics()
+        self.validate_passage_doctrine_fanout()
+        self.validate_garbage_notes()
 
     # ── Redundancy rules (R1–R8) ───────────────────────────────────────────
 
@@ -1345,7 +1433,7 @@ class Validator:
                     )
                     break
 
-    # ── Evidence quality rules (P1–P5) ──────────────────────────────────────
+    # ── Evidence quality rules (P1–P7) ──────────────────────────────────────
 
     def validate_evidence_role_semantics(self) -> None:
         """Validate evidence role quality rules P1–P5 and basic evidence semantics."""
@@ -1369,8 +1457,6 @@ class Validator:
                 wid = source_by_id.get(sid, {}).get("work_id", "")
                 if wid:
                     passage_to_work[pid] = wid
-
-        P3_QUALITY_ASPECTS = {"whole_claim", "predicate", "object"}
 
         for idx, row in enumerate(self.tables.get("claims.tsv", []), start=2):
             if row.get("claim_status") != "active":
@@ -1404,33 +1490,36 @@ class Validator:
                     f"Add a direct 'supports' link, change to a contextualizes-only note, or remove the evidence."
                 )
 
-            # P1: work_* claims should have evidence from the same work
+            # P1: work_* claims should usually draw support from the same work,
+            # unless the work is lost / fragmentary and survives by testimonia.
             if row["subject_type"] == "work" and row["predicate_id"].startswith("work_"):
                 work_subject = row["subject_id"]
+                allows_indirect = self.work_allows_indirect_testimonium(work_subject, ev_rows)
                 for ev in ev_rows:
                     if ev.get("evidence_role") != "supports":
                         continue
                     ev_work = passage_to_work.get(ev["passage_id"], "")
-                    if ev_work and ev_work != work_subject:
+                    if ev_work and ev_work != work_subject and not allows_indirect:
                         self.warn(
                             f"claims.tsv:{idx} P1 source mismatch: work claim subject={work_subject} "
                             f"but supports evidence passage={ev['passage_id']} comes from work={ev_work}. "
-                            f"claim_id={claim_id}"
+                            f"claim_id={claim_id}. If this is a lost/fragmentary/testimonia case, mark claim_evidence.notes with indirect_testimonium."
                         )
 
-            # P3: attested claims need quality support_aspect (only enforce when populated)
+            # P3: attested claims need a predicate-appropriate support_aspect.
             if certainty == "attested" and ev_rows:
                 supports_rows = [e for e in ev_rows if e.get("evidence_role") == "supports"]
+                quality_aspects = self.quality_support_aspects_for_claim(row)
                 has_any_aspect = any(e.get("support_aspect") for e in supports_rows)
                 if has_any_aspect:
                     has_quality = any(
-                        e.get("support_aspect") in P3_QUALITY_ASPECTS
+                        e.get("support_aspect") in quality_aspects
                         for e in supports_rows
                     )
                     if not has_quality:
                         self.warn(
                             f"claims.tsv:{idx} P3 attested claim has no supports evidence with "
-                            f"support_aspect in {{whole_claim, predicate, object}}: "
+                            f"predicate-appropriate support_aspect in {sorted(quality_aspects)}: "
                             f"claim_id={claim_id}. Consider adding a direct aspect reference."
                         )
 
@@ -1446,10 +1535,80 @@ class Validator:
                         f"Add an excerpt to the passage or an excerpt_override to the evidence."
                     )
 
+    def validate_passage_doctrine_fanout(self) -> None:
+        """P6: Warn when a single passage supports 3+ distinct proposition claims.
+
+        A passage listing names or places (e.g., Acts 15, a creed, a geographic catalog)
+        may legitimately fan out. But a passage about Topic A cited as 'supports' for
+        Topics B, C, D is the #1 source of WRONG_PASSAGE_FOR_CLAIM findings.
+        """
+        PROPOSITION_PREDS = {
+            "work_affirms_proposition", "person_affirms_proposition",
+            "work_opposes_proposition", "person_opposes_proposition",
+            "work_develops_proposition", "person_develops_proposition",
+        }
+        # passage_id → set of distinct proposition object_ids it supports
+        passage_propositions: Dict[str, set[str]] = defaultdict(set)
+        # passage_id → list of (claim_id, proposition_id) for reporting
+        passage_claim_props: Dict[str, List[Tuple[str, str]]] = defaultdict(list)
+
+        for row in self.tables.get("claim_evidence.tsv", []):
+            if row.get("evidence_role") != "supports":
+                continue
+            claim = self.claim_by_id.get(row["claim_id"])
+            if not claim:
+                continue
+            if claim.get("claim_status") != "active":
+                continue
+            if claim.get("predicate_id") not in PROPOSITION_PREDS:
+                continue
+            if claim.get("object_mode") != "entity" or claim.get("object_type") != "proposition":
+                continue
+            prop_id = claim["object_id"]
+            passage_propositions[row["passage_id"]].add(prop_id)
+            passage_claim_props[row["passage_id"]].append((row["claim_id"], prop_id))
+
+        for passage_id, props in passage_propositions.items():
+            if len(props) >= 3:
+                sample_claims = passage_claim_props[passage_id][:5]
+                sample_str = ", ".join(f"{cid}→{pid}" for cid, pid in sample_claims)
+                self.warn(
+                    f"claim_evidence P6 passage doctrine fan-out: "
+                    f"passage={passage_id} supports {len(props)} distinct propositions. "
+                    f"Verify each link is genuine, not work-level association. "
+                    f"Sample: {sample_str}"
+                )
+
+    def validate_garbage_notes(self) -> None:
+        """P7: Warn when evidence notes contain known AI-boilerplate patterns.
+
+        These indicate auto-generated notes that were never human-reviewed.
+        """
+        GARBAGE_PATTERNS = [
+            "is a primary text directly relevant to",
+            "upgraded from contextualizes",
+            "passage explicitly mentions",
+            "directly supports the claim",
+            "is directly relevant to",
+            "primary text that directly",
+        ]
+        for idx, row in enumerate(self.tables.get("claim_evidence.tsv", []), start=2):
+            notes = norm(row.get("notes")).lower()
+            if not notes:
+                continue
+            for pattern in GARBAGE_PATTERNS:
+                if pattern in notes:
+                    self.warn(
+                        f"claim_evidence.tsv:{idx} P7 suspected auto-generated note: "
+                        f"claim={row['claim_id']} passage={row['passage_id']} "
+                        f"matched pattern '{pattern}'. Replace with a substantive assessment."
+                    )
+                    break
+
     # ── Evidence, review & note FK validation ──────────────────────────────
 
     def validate_evidence_reviews_notes(self) -> None:
-        seen_evidence: set[Tuple[str, str, str]] = set()
+        seen_evidence: set[Tuple[str, str]] = set()
         for idx, row in enumerate(self.tables.get("claim_evidence.tsv", []), start=2):
             if row["claim_id"] not in self.by_id.get("claims.tsv", set()):
                 self.error(f"claim_evidence.tsv:{idx} broken FK claim_id={row['claim_id']}")
@@ -1461,6 +1620,14 @@ class Validator:
                 self.error(f"claim_evidence.tsv:{idx} invalid support_aspect={row['support_aspect']}")
             if row.get("assertion_mode") and row["assertion_mode"] not in ASSERTION_MODE:
                 self.error(f"claim_evidence.tsv:{idx} invalid assertion_mode={row['assertion_mode']}")
+            if row["evidence_role"] == "supports" and not row.get("support_aspect"):
+                self.error(f"claim_evidence.tsv:{idx} supports evidence requires support_aspect")
+            if row["evidence_role"] == "supports" and not row.get("assertion_mode"):
+                self.error(f"claim_evidence.tsv:{idx} supports evidence requires assertion_mode")
+            if row["evidence_role"] != "supports" and row.get("support_aspect"):
+                self.warn(f"claim_evidence.tsv:{idx} non-support evidence should usually leave support_aspect blank")
+            if row["evidence_role"] != "supports" and row.get("assertion_mode"):
+                self.warn(f"claim_evidence.tsv:{idx} non-support evidence should usually leave assertion_mode blank")
             # P4: supports + background_only is contradictory
             if row["evidence_role"] == "supports" and row.get("assertion_mode") == "background_only":
                 self.error(
@@ -1468,7 +1635,10 @@ class Validator:
                     f"claim={row['claim_id']} passage={row['passage_id']}. "
                     f"Use evidence_role=contextualizes for background passages."
                 )
+            if row.get("assertion_mode") == "weak_inference" and not norm(row.get("notes")):
+                self.warn(f"claim_evidence.tsv:{idx} weak_inference should include notes explaining the inference")
             weight_str = norm(row.get("evidence_weight"))
+            weight_val = None
             if weight_str:
                 try:
                     weight_val = float(weight_str)
@@ -1476,13 +1646,20 @@ class Validator:
                         self.error(f"claim_evidence.tsv:{idx} evidence_weight={weight_str} out of range 0.0–1.0")
                 except ValueError:
                     self.error(f"claim_evidence.tsv:{idx} evidence_weight={weight_str} is not a valid number")
-            key = (row["claim_id"], row["passage_id"], row["evidence_role"])
+            if row["evidence_role"] != "supports" and weight_str:
+                self.warn(f"claim_evidence.tsv:{idx} non-support evidence should usually leave evidence_weight blank")
+            if weight_val is not None and row.get("assertion_mode") == "weak_inference" and weight_val > 0.8:
+                self.warn(f"claim_evidence.tsv:{idx} weak_inference with evidence_weight>0.8 looks overstated")
+            if weight_val is not None and row.get("evidence_role") == "supports" and row.get("support_aspect") == "whole_claim" and row.get("assertion_mode") == "explicit" and weight_val < 0.5:
+                self.warn(f"claim_evidence.tsv:{idx} whole_claim explicit support with evidence_weight<0.5 looks under-scored")
+            key = (row["claim_id"], row["passage_id"])
             if key in seen_evidence:
-                self.error(f"claim_evidence.tsv:{idx} duplicate composite key {key}")
+                self.error(f"claim_evidence.tsv:{idx} duplicate claim/passage pair {key}; use one evidence row per claim+passage")
             seen_evidence.add(key)
 
         # Check for duplicate reviews - only one review per claim allowed
         seen_claim_ids: set[str] = set()
+        review_by_claim: Dict[str, Dict[str, str]] = {}
         for idx, row in enumerate(self.tables.get("claim_reviews.tsv", []), start=2):
             if row["claim_id"] not in self.by_id.get("claims.tsv", set()):
                 self.error(f"claim_reviews.tsv:{idx} broken FK claim_id={row['claim_id']}")
@@ -1490,11 +1667,18 @@ class Validator:
                 self.error(f"claim_reviews.tsv:{idx} invalid review_status={row['review_status']}")
             if row.get("confidence") and row["confidence"] not in REVIEW_CONFIDENCE:
                 self.error(f"claim_reviews.tsv:{idx} invalid confidence={row['confidence']}")
-            
-            # Check for duplicate reviews of the same claim
+            if row.get("reviewed_at") and not (is_rfc3339_timestamp(row["reviewed_at"]) or is_iso_date(row["reviewed_at"])):
+                self.error(f"claim_reviews.tsv:{idx} reviewed_at must be ISO date or RFC3339 timestamp={row['reviewed_at']}")
+            if row["review_status"] != "unreviewed" and not norm(row.get("note")):
+                self.warn(f"claim_reviews.tsv:{idx} reviewed claim should include a short rationale note")
             if row["claim_id"] in seen_claim_ids:
                 self.error(f"claim_reviews.tsv:{idx} duplicate review for claim_id={row['claim_id']}. Only one review per claim is allowed. Update the existing review timestamp instead.")
             seen_claim_ids.add(row["claim_id"])
+            review_by_claim[row["claim_id"]] = row
+
+        active_claim_ids = {row["claim_id"] for row in self.tables.get("claims.tsv", []) if row.get("claim_status") == "active"}
+        for claim_id in sorted(active_claim_ids - set(review_by_claim)):
+            self.warn(f"claim_reviews.tsv missing current review row for active claim_id={claim_id}")
 
         for idx, row in enumerate(self.tables.get("editor_notes.tsv", []), start=2):
             if row["note_kind"] not in EDITOR_NOTE_KIND:
@@ -1507,11 +1691,26 @@ class Validator:
             if row.get("claim_id") and row["claim_id"] not in self.by_id.get("claims.tsv", set()):
                 self.error(f"editor_notes.tsv:{idx} broken FK claim_id={row['claim_id']}")
 
+        review_events_by_claim: Dict[str, List[Dict[str, str]]] = defaultdict(list)
         for idx, row in enumerate(self.tables.get("claim_review_events.tsv", []), start=2):
             if row["claim_id"] not in self.by_id.get("claims.tsv", set()):
                 self.error(f"claim_review_events.tsv:{idx} broken FK claim_id={row['claim_id']}")
             if row["event_type"] not in REVIEW_EVENT_TYPE:
                 self.error(f"claim_review_events.tsv:{idx} invalid event_type={row['event_type']}")
+            if row.get("event_at") and not (is_rfc3339_timestamp(row["event_at"]) or is_iso_date(row["event_at"])):
+                self.error(f"claim_review_events.tsv:{idx} event_at must be ISO date or RFC3339 timestamp={row['event_at']}")
+            review_events_by_claim[row["claim_id"]].append(row)
+
+        for claim_id, review_row in review_by_claim.items():
+            events = review_events_by_claim.get(claim_id, [])
+            if not events:
+                self.warn(f"claim_review_events.tsv missing event history for reviewed claim_id={claim_id}")
+                continue
+            events_sorted = sorted(events, key=lambda r: norm(r.get("event_at")))
+            latest = events_sorted[-1].get("event_type", "")
+            current = review_row.get("review_status", "")
+            if latest != current:
+                self.warn(f"claim_review_events.tsv latest event_type={latest} does not match claim_reviews.review_status={current} for claim_id={claim_id}")
 
     # ── Markdown & OSIS validation ──────────────────────────────────────────
 

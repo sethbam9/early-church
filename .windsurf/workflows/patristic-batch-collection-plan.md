@@ -669,6 +669,37 @@ That path alone will already reveal a great deal about doctrine, place, and cont
 
 ---
 
+## Passage discipline and evidence quality gate
+
+These rules were added after the mid-audit review (2026-03-17) and apply to all future campaigns.
+
+### Passage reuse limits
+
+- A passage may support **at most 3 distinct proposition claims** without triggering a review.
+- For doctrine claims (`work_affirms_proposition`, `person_affirms_proposition`), **prefer a fresh, dedicated passage quote** per claim. Do not reuse a generic passage from Topic A as evidence for Topic B.
+- **Exceptions:** Creedal passages, name catalogs, and geographic lists that genuinely cover multiple propositions may fan out with justification in evidence notes.
+
+### Evidence quality gate (run before campaign sign-off)
+
+Before signing off any campaign, verify:
+
+1. **Passage fan-out:** No passage supports 4+ unrelated proposition claims without justification.
+2. **Source URLs:** All source URLs verified against actual content (especially New Advent ANF/CSEL numbering traps).
+3. **Paraphrase excerpts:** All paraphrase excerpts verified against source text; `assertion_mode` capped at `strong_inference` for paraphrases.
+4. **No garbage notes:** No evidence rows contain auto-generated boilerplate in the `notes` field.
+5. **Validator P6/P7 clean:** `python3 scripts/validate_canonical_data.py --data-dir data` produces no P6 (passage doctrine fan-out) or P7 (garbage notes) warnings for the campaign's data.
+
+### Fresh quote preference
+
+When adding a `work_affirms_proposition` claim:
+
+1. Find a passage where the work **directly and specifically** discusses that proposition.
+2. Read the excerpt — if it doesn't mention the proposition, it does not support the claim.
+3. Do not link by work-level association ("Origen discusses baptism, so this Origen passage supports the baptism claim").
+4. If the passage only loosely relates, use `evidence_role=contextualizes` instead of `supports`.
+
+---
+
 ## End state
 
 The project is in a strong phase-1 state when:

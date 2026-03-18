@@ -1,328 +1,482 @@
 ---
-description: Windsurf workflow for AI-assisted editing of canonical TSV data and markdown-linked content
+description: Workflow for AI-assisted editing of canonical TSV data and markdown-linked content
 ---
 
-# Windsurf Canonical Data Workflow
+# Canonical Data Editing Workflow
 
-Use this workflow whenever adding, updating, or removing canonical records or markdown cross-references.
+Use this workflow whenever adding, revising, splitting, superseding, or rejecting canonical rows.
 
-This workflow assumes the canonical schema documented in `docs/app-data.md` and `docs/domain-models.md`.
-
----
-
-## The current source tables
-
-Edit only these source tables directly:
-
-| File | What it contains |
-|---|---|
-| `data/sheets/places.tsv` | Canonical places with historical/canonical label and optional modern label |
-| `data/sheets/people.tsv` | Canonical people |
-| `data/sheets/works.tsv` | Canonical works |
-| `data/sheets/events.tsv` | Canonical events |
-| `data/sheets/groups.tsv` | Canonical groups, including polities |
-| `data/sheets/topics.tsv` | High-level doctrinal topics |
-| `data/sheets/dimensions.tsv` | Topic axes |
-| `data/sheets/propositions.tsv` | Precise proposition rows |
-| `data/sheets/predicate_types.tsv` | Predicate catalog and canonical direction |
-| `data/sheets/sources.tsv` | Source bibliography/web identities |
-| `data/sheets/passages.tsv` | Citable source passages |
-| `data/sheets/claims.tsv` | Atomic historical assertions |
-| `data/sheets/claim_evidence.tsv` | Claim ↔ passage links |
-| `data/sheets/claim_reviews.tsv` | Claim review status |
-| `data/sheets/claim_review_events.tsv` | Append-only review history |
-| `data/sheets/editor_notes.tsv` | Editorial markdown notes |
-
-## Derived files
-
-Never edit these manually. They are rewritten by validation.
-
-| File | Produced by |
-|---|---|
-| `data/derived/entity_place_footprints.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
-| `data/derived/place_state_by_decade.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
-| `data/derived/first_attestations.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
-| `data/derived/proposition_place_presence.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
-| `data/derived/derived_edges.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
-| `data/derived/note_mentions.tsv` | `python3 scripts/validate_canonical_data.py --data-dir data` |
+This workflow assumes the schema documented in `docs/app-data.md` and validated by `scripts/validate_canonical_data.py`.
 
 ---
 
-## Windsurf working rules
+## Operating posture
 
-1. **Edit only canonical source rows.** Never patch derived tables by hand.
-2. **Use groups instead of separate polity or persuasion files.**
-   - political control = `group_kind=polity` + `controls_place`
-   - ecclesial or theological belonging = `group_present_at`, `member_of_group`, `split_from_group`, etc.
-3. **Use change-based time ranges.**
-   - if Rome controls a place continuously for 300 years, keep one uninterrupted claim interval
-   - only add another claim when control or presence actually changes
-4. **Place rows must preserve both names when relevant.**
-   - `place_label` = historical/canonical display name
-   - `place_label_modern` = modern name when different
-5. **Bible references must be OSIS.**
-   - use `[[bible:1Cor.11.23|1 Corinthians 11:23]]`
-   - do not store `1 Cor 11:23` as the identifier
-6. **Markdown links are part of referential integrity.**
-   - `[[type:id|label]]` links in `notes`, `body_md`, and markdown articles are validated
-7. **Validation rewrites sorting automatically.**
-   - if a table has `year_start`, rows are sorted by `year_start` first
-   - otherwise rows are sorted by ID/composite key
+Work in **small subject-predicate clusters**, not random row order.
+
+Best default batch shapes:
+
+- one subject across one predicate family
+- one work and its doctrinal claims
+- one place and its presence/control claims
+- one source and all passages/evidence rows attached to it
+
+This catches duplication early and keeps edits coherent.
 
 ---
 
-## Canonical wiki-link rules
+## What may be edited directly
 
-Use this exact link shape in markdown-capable fields and markdown files:
+Edit only these source tables:
 
-```text
-[[type:id|Label]]
-```
+- `data/sheets/places.tsv`
+- `data/sheets/people.tsv`
+- `data/sheets/works.tsv`
+- `data/sheets/events.tsv`
+- `data/sheets/groups.tsv`
+- `data/sheets/topics.tsv`
+- `data/sheets/dimensions.tsv`
+- `data/sheets/propositions.tsv`
+- `data/sheets/predicate_types.tsv`
+- `data/sheets/sources.tsv`
+- `data/sheets/passages.tsv`
+- `data/sheets/claims.tsv`
+- `data/sheets/claim_evidence.tsv`
+- `data/sheets/claim_reviews.tsv`
+- `data/sheets/claim_review_events.tsv`
+- `data/sheets/editor_notes.tsv`
 
-Examples:
+Never hand-edit:
 
-- `[[person:paul|Paul]]`
-- `[[work:nt-1cor|1 Corinthians]]`
-- `[[place:jerusalem-jerusalem|Jerusalem]]`
-- `[[group:roman-empire|Roman Empire]]`
-- `[[bible:Gal.1.18-Gal.1.19|Galatians 1:18–19]]`
-
-The label is optional. The ID is not.
+- `data/derived/*.tsv`
 
 ---
 
-## Standard Windsurf edit loop
+## Non-negotiable editing rules
 
-### 1. Identify the exact change
+1. **Search before insert.** Never add a row until you have searched for an existing semantic equivalent.
+2. **Reuse sources and passages aggressively.** Duplicate witness rows are one of the easiest ways to pollute the dataset.
+3. **One passage row per source+locator.** If two claims need different quote slices from that locator, use `excerpt_override` on `claim_evidence.tsv`.
+4. **One claim row per atomic assertion.** Do not pack multiple assertions into one row.
+5. **Prefer status transitions over destructive deletion.** Use `superseded` or `rejected` unless the row is obvious junk created in error.
+6. **Do not restate uninterrupted continuity.** For `controls_place` and `group_present_at`, add a new row only when the state changes.
+7. **Do not create derivable claims just because they are convenient for the UI.** Let derivations and rollups do their job.
+8. **Do not approve what you have not read.** Reviews require actual passage inspection.
 
-Frame the batch narrowly.
+### Passage reuse discipline
 
-Examples:
+9. **Minimize passage fan-out for doctrine claims.** A single passage should NOT support many unrelated proposition claims. If a work discusses Topic A in one section and Topic B in another, cite the specific section for each claim — do not reuse a generic passage from Topic A as evidence for Topic B.
+10. **One fresh quote per doctrine claim.** When adding `work_affirms_proposition` or `person_affirms_proposition`, find a passage where the work *directly and specifically* discusses that proposition. Read the excerpt — if it doesn't mention the proposition, it does not support the claim.
+11. **Fan-out limit.** A passage may support at most 3 distinct proposition claims without triggering review. If a passage supports 4+, each link must be individually justified in evidence notes. Exceptions: creedal passages, name catalogs, geographic lists.
+12. **Do not link by work-level association.** The fact that Origen discusses baptism somewhere does not mean every Origen passage supports every baptism claim. Link by passage content, not author topic.
 
-- add 6 new claims about Antioch
-- rename one place ID and repair all references
-- add one polity group and one `controls_place` claim
-- convert a doctrine note to proposition-linked editor notes
+---
 
-### 2. Search before editing
+## Preflight search checklist
 
-Before creating any new row, search for semantic duplicates.
+Before creating anything new, search these in order.
 
-Recommended searches inside Windsurf:
+### If adding or editing an entity
 
 - `places.tsv` by label and modern label
-- `groups.tsv` by label and kind
-- `claims.tsv` by predicate + subject + object
-- markdown files for `[[type:id]]` or title keywords
+- `people.tsv` by display label and alternates
+- `works.tsv` by title and notes keywords
+- `groups.tsv` by label and `group_kind`
+- `events.tsv` by label
 
-### 3. Edit source rows only
+### If adding a source or passage
 
-When changing an entity ID, update every direct reference:
+Search for:
 
-- all source TSV foreign keys
-- all `[[type:id]]` references in markdown-capable TSV fields
-- all `[[type:id]]` references in markdown files
+- same `work_id`
+- same title / author / URL
+- same `source_id`
+- same `source_id + locator`
+- nearby or equivalent locators already present
 
-Do not touch derived files.
+### If adding a claim
 
-### 4. Run validation
+Search `claims.tsv` for the same:
 
-Use the canonical validator after every batch:
+- `subject_type`
+- `subject_id`
+- `predicate_id`
+- object/value
+- overlapping date range
+- same `context_place_id`
+
+Also search for likely **redundant** claims already derivable from stronger rows.
+
+### If adding markdown references
+
+Search for existing IDs and fix all broken references in the same batch.
+
+---
+
+## Canonical insertion order
+
+Use this order unless there is a strong reason not to:
+
+1. entity row
+2. source row
+3. passage row
+4. claim row
+5. evidence row
+6. current review row
+7. review history event row
+8. validation run
+
+---
+
+## Workflow by row type
+
+### A. Add or revise an entity row
+
+Use entity tables only for identity and stable editorial metadata.
+
+Do:
+
+- stable slug ID
+- display label
+- optional alternate/native label
+- light identity notes
+
+Do not:
+
+- store first-attestation summaries
+- store doctrine rollups
+- store place-control summaries
+- store historical timelines in notes when those should be claims
+
+### B. Add or revise a source row
+
+A source row is the citable witness you are actually using.
+
+Do:
+
+- reuse a source row when the witness is already present
+- fill `work_id` when the source directly represents that canonical work
+- keep `source_kind` honest
+- keep `url` and `accessed_on` current when applicable
+
+Do not:
+
+- create multiple source rows for the same witness just because you need multiple passages
+- confuse canonical work identity with a particular edition or witness
+
+### C. Add or revise a passage row
+
+Before creating a passage row, search for the same `source_id + locator_type + locator`.
+
+If it already exists:
+
+- reuse it
+- put claim-specific wording in `claim_evidence.excerpt_override` if needed
+
+If creating a new passage row:
+
+- keep one row per cited locator
+- store a short excerpt when possible
+- prefix non-verbatim wording with `Paraphrase:` or `Summary:`
+- keep `locator` exact
+- use `locator_type=bible_osis` only with OSIS locators
+
+### D. Add or revise a claim row
+
+A claim row must be one atomic assertion.
+
+Do:
+
+- use one predicate
+- populate exactly one object/value branch
+- add dates only when they belong on the claim
+- use `context_place_id` only when it materially clarifies the claim
+- choose `certainty` conservatively
+
+Do not:
+
+- create near-duplicate claims with slightly different phrasing
+- create a weaker duplicate when a stronger claim already covers it
+- store continuity restatements
+- create claims that should be represented by derived relationships
+
+### E. Add or revise an evidence row
+
+Treat `claim_evidence.tsv` as a judgment table, not a citation dump.
+
+For each evidence row, decide:
+
+1. does this passage **support**, **oppose**, **contextualize**, or merely **mention** the claim?
+2. if it supports, which **aspect** does it actually ground?
+3. if it supports, is the relation **explicit**, **strong_inference**, or **weak_inference**?
+4. if it is indirect, paraphrastic, or fragmentary, does the note explain that?
+
+Rules:
+
+- one row per `claim_id + passage_id`
+- `support_aspect` and `assertion_mode` belong only on `supports` rows
+- `supports + background_only` is invalid; use `contextualizes`
+- `weak_inference` should have a note
+- leave `evidence_weight` blank during drafting if necessary, but fill it for mature rows when possible
+
+### F. Add or revise a review
+
+Current review state:
+
+- upsert `claim_reviews.tsv`
+- exactly one row per claim
+
+Review history:
+
+- append one row to `claim_review_events.tsv`
+- do not overwrite history
+
+---
+
+## Claim review procedure
+
+Never review from claim row alone.
+
+### Step 1. Read the claim
+
+Check:
+
+- subject
+- predicate
+- object/value
+- dates
+- context place
+- certainty
+- status
+
+### Step 2. Read every linked passage
+
+For every linked evidence row, inspect:
+
+- `passages.excerpt`
+- `claim_evidence.excerpt_override`
+- `passages.locator`
+- `sources.tsv` metadata
+- linked URL when needed
+
+### Step 3. Evaluate at three levels
+
+For each evidence row, judge three things separately.
+
+#### 1. Excerpt-only
+
+Does the stored excerpt itself support the claim?
+
+#### 2. Locator-context
+
+Does the broader cited section support the claim even if the excerpt is too narrow?
+
+#### 3. Source/link correctness
+
+Does the source and locator actually point to the right work and section?
+
+### Step 4. Decompose the claim
+
+When needed, split the judgment into components:
+
+- subject
+- predicate
+- object
+- date
+- place
+- whole claim
+- attribution
+
+Assign `support_aspect` accordingly.
+
+### Step 5. Set review state honestly
+
+Recommended meanings:
+
+- `approved` — fielding is sound and evidence mapping is materially correct
+- `reviewed` — acceptable but not fully sign-off quality
+- `needs_revision` — claim may survive, but fields/evidence need repair
+- `disputed` — real scholarly dispute or serious contradiction to the present form
+- `unreviewed` — draft or untouched
+
+### Step 6. Record why
+
+Every non-`unreviewed` review should have a concrete note.
+
+Bad note:
+
+- `Reviewed.`
+
+Good note:
+
+- `Support is indirect via Eusebius; certainty kept probable.`
+- `Whole-claim support removed; passage only supports attribution.`
+- `Merged duplicate continuity row into earlier control interval.`
+
+---
+
+## Duplicate and redundancy discipline
+
+### Exact duplicate
+
+Same subject, predicate, object/value, time, context.
+
+Action:
+
+- keep one
+- mark the other `superseded` or remove if it was obvious junk
+
+### Near duplicate
+
+Same semantic assertion with only cosmetic differences.
+
+Action:
+
+- normalize into one stronger row
+- preserve audit history through status changes rather than silent loss
+
+### Derivable redundancy
+
+Check these before adding an `active_in` row or a second doctrinal row.
+
+- `bishop_of` already covers the same person/place
+- `controls_place` already covers the same group/place
+- `authored_by + written_at` already imply presence
+- `participant_in + event_occurs_at` already imply presence
+- the person claim is already covered by work-level proposition claims from the person's own authored works
+
+If yes, do not add the redundant row.
+
+---
+
+## Special cases
+
+### Lost or fragmentary works
+
+If a work survives only through later witnesses:
+
+- the **claim subject** may still be the lost work
+- the **source/passage** will often belong to a later witness
+- the evidence note should explicitly say this is indirect testimonium
+
+Recommended note marker:
+
+```text
+indirect_testimonium — later witness preserving/reporting the target work
+```
+
+Do not treat every cross-work evidence row as an error. Treat unexplained cross-work evidence as suspicious.
+
+### Paraphrased excerpts
+
+If the excerpt is a paraphrase:
+
+- label it `Paraphrase:`
+- do not overstate the source
+- lower weight when needed
+- prefer narrower `support_aspect` if the paraphrase compresses multiple ideas
+
+### Sole contextual evidence
+
+If a claim has only `contextualizes` evidence:
+
+- do not mark it `attested`
+- consider `probable`, `possible`, or `needs_revision`
+- add direct support before approval
+
+### Authorship claims
+
+Authorship claims often use `support_aspect=attribution`, not `predicate`.
+
+Do not force everything into `whole_claim`.
+
+### Place-control and presence claims
+
+Before inserting `controls_place` or `group_present_at`, inspect earlier and later rows for the same subject/place pair.
+
+If the state is uninterrupted:
+
+- extend/merge
+- do not append a new restatement row
+
+---
+
+## Status transitions and deletion policy
+
+Use these defaults:
+
+- claim no longer canonical because merged into stronger row → `superseded`
+- claim unsupported after audit → `rejected`
+- claim retained only for migration compatibility → `deprecated`
+- incomplete new insertion → `draft`
+
+Hard-delete only when the row is plainly accidental and preserving it adds no audit value.
+
+For evidence rows and duplicate passage rows, hard deletion is usually fine once the surviving canonical row is clear.
+
+---
+
+## Markdown reference discipline
+
+Canonical markdown references use this escaped shape in documentation examples:
+
+```text
+\[\[type:id|Label\]\]
+```
+
+When editing real markdown-capable content, use live canonical IDs.
+
+Rules:
+
+- repair references when renaming IDs
+- do not leave stale references behind
+- Bible references must use OSIS inside the stored identifier
+
+---
+
+## Validation loop
+
+Run the validator after every coherent batch.
+
+Standard command:
 
 ```bash
 python3 scripts/validate_canonical_data.py --data-dir data
 ```
 
-If you want to include project markdown files such as `data/essays/` and `docs/` in the mention/link scan, use:
+When you want markdown scanning outside TSV fields as well:
 
 ```bash
 python3 scripts/validate_canonical_data.py --data-dir data --check-markdown --scan-root .
 ```
 
-This does all of the following:
+What validation is expected to do:
 
-- validates headers and enums
-- validates foreign keys
-- validates wiki-links in TSV markdown fields and, when enabled, markdown files under the scan root
-- validates OSIS Bible references
-- rewrites tables into canonical sorted order
-- regenerates stale derived files
+- check headers and enums
+- check foreign keys
+- enforce claim structure
+- catch duplicate logical active claims
+- catch duplicate passage locator rows
+- warn on redundancy and weak evidence patterns
+- validate wiki-links and OSIS Bible references
+- rewrite canonical sort order
+- regenerate derived tables
 
-### 5. Inspect rewritten files
-
-Because validation rewrites sort order and derived tables, always review the diff after running it.
-
-### 6. Commit small, coherent batches
-
-Keep each commit reviewable.
-Avoid mixing schema migration, row additions, and unrelated copy edits in one commit.
+Always inspect the diff after validation.
 
 ---
 
-## Common edit recipes
+## Done checklist for every batch
 
-### Add a new place
+Before closing a batch, verify all of these:
 
-1. Add a row to `data/sheets/places.tsv`
-2. Set `place_label`
-3. Set `place_label_modern` when the modern name differs
-4. Add any relevant claims in `data/sheets/claims.tsv`
-5. Run validation
+- no new duplicate entity/source/passage/claim rows were introduced
+- no continuity restatement rows were introduced
+- every new claim has appropriate evidence mapping
+- every reviewed claim has one current review row
+- every review action has a history event row
+- markdown references resolve
+- derived tables were left untouched by hand
+- validator output is understood and accepted
 
-### Add a polity
-
-1. Add a row to `data/sheets/groups.tsv` with `group_kind=polity`
-2. Add `controls_place` claims in `data/sheets/claims.tsv`
-3. Use one uninterrupted date range per continuous control span
-4. Run validation
-
-### Record a schism or split
-
-1. Keep both bodies in `data/sheets/groups.tsv`
-2. Add the relationship claim such as `split_from_group`
-3. Add `group_present_at` claims only where presence actually needs to be asserted
-4. Do not create repetitive continuity rows just because time passes
-5. Run validation
-
-### Add doctrinal evidence
-
-1. Create or reuse a proposition in `data/sheets/propositions.tsv`
-2. Prefer `work_affirms_proposition` or `work_opposes_proposition` — the predicate name carries the doctrinal direction
-3. Only use `person_affirms_proposition` / `person_opposes_proposition` when evidence comes from a **third-party source** (e.g. Eusebius reporting someone's beliefs), NOT from the person's own authored works
-4. Add supporting passage rows in `data/sheets/passages.tsv` if needed
-5. Link them in `data/sheets/claim_evidence.tsv`
-6. Run validation
-
-### Review a claim
-
-Reviewing a claim requires two writes and genuine evaluation — never bulk-approve without reading evidence.
-
-1. **Read the claim** in `data/sheets/claims.tsv` — check subject, predicate, object, certainty, date range.
-2. **Read every linked passage** in `data/sheets/claim_evidence.tsv` + `data/sheets/passages.tsv` — verify the excerpt actually says what the claim asserts.
-3. **Assess evidence quality**:
-   - Is `evidence_role` correct? (`supports` = passage directly attests the claim; `contextualizes` = passage provides background only)
-   - For any `supports` row, set `support_aspect` (one of: `whole_claim`, `subject`, `predicate`, `object`, `date`, `place`, `context`, `attribution`) and `assertion_mode` (one of: `explicit`, `strong_inference`, `weak_inference`).
-   - Add `excerpt_override` if the relevant quote is a sub-range of the passage.
-   - Add `notes` on any tension, anachronism, scholarly dispute, or alternative reading.
-4. **Upsert `claim_reviews.tsv`** — one row per claim, current state snapshot:
-   - `review_status`: `reviewed` | `approved` | `disputed` | `needs_revision`
-   - `confidence`: `low` | `medium` | `high`
-   - `note`: specific reason for the assessment (not a generic placeholder)
-5. **Append `claim_review_events.tsv`** — one row per review action (append-only history):
-   - `claim_id`, `event_type` (reviewed / approved / disputed / needs_revision), `actor_id`, `event_at` (ISO 8601), `note`
-6. Run validation.
-
-**Agent constraints for reviews:**
-- Never set `review_status=reviewed` or `review_status=approved` without having read the claim's evidence passages.
-- Never bulk-generate reviews from claim IDs alone without passage text.
-- If a claim has only `contextualizes` evidence and `certainty=attested`, either upgrade the evidence role (if warranted) or flag as `needs_revision`.
-- Use `disputed` when scholarly consensus contradicts the claim.
-- Use `needs_revision` when the claim is structurally sound but evidence linking or metadata needs fixing.
-
-### Add an editorial note or article mention
-
-1. Put markdown in `data/sheets/editor_notes.tsv` or in a project `.md` file
-2. Use canonical links such as `[[person:paul|Paul]]`
-3. Use `[[bible:...]]` with OSIS
-4. Run validation so `data/derived/note_mentions.tsv` is regenerated
-
----
-
-## ID renaming checklist
-
-When renaming any primary key:
-
-- update the row in its own TSV file
-- update all source TSV foreign keys
-- update all `[[type:id]]` references in TSV markdown fields
-- update all `[[type:id]]` references in markdown files
-- run validation
-- review the regenerated `data/derived/note_mentions.tsv` and other derived tables
-
----
-
-## Contribution standards for Windsurf agents
-
-Every Windsurf agent or scripted assistant should follow these constraints:
-
-1. Never invent unsupported enums.
-2. Never store historical summary fields on identity rows.
-3. Never create duplicate uninterrupted group/place continuity claims.
-4. Never use non-OSIS Bible identifiers.
-5. Never leave unresolved `[[type:id]]` references behind.
-6. Never manually reorder tables; let validation rewrite canonical order.
-7. Never edit derived tables directly.
-8. Never store `person_affirms/opposes_proposition` when the person's own authored works already carry the equivalent `work_affirms/opposes_proposition` — the work claim covers it.
-9. Never store `active_in` when `bishop_of` already covers the same person-place — bishop implies active.
-10. Prefer letting `authored_by` + `written_at` and `participant_in` + `event_occurs_at` derive person-place presence instead of adding redundant `active_in` claims.
-11. Never store `group_present_at` when `controls_place` already covers the same group-place with overlapping dates — control implies presence (R5).
-12. When adding `evidence_role=supports` evidence, always set `support_aspect` (whole_claim, subject, predicate, object, date, place, context, attribution) and `assertion_mode` (explicit, strong_inference, weak_inference). Never combine `evidence_role=supports` with `assertion_mode=background_only` (P4).
-13. For `work_*` claims, ensure supports evidence comes from passages of the same work as `claim.subject_id` — cross-work evidence triggers a source-mismatch warning (P1).
-14. For `certainty=attested` claims, ensure at least one supports row has `support_aspect` in {whole_claim, predicate, object} (P3).
-
----
-
-## Recommended command sequence
-
-```bash
-python3 scripts/validate_canonical_data.py --data-dir data
-```
-
-For source-table-only validation while ignoring unresolved essay links:
-
-```bash
-python3 scripts/validate_canonical_data.py --data-dir data
-```
-
-Optional sparse-connectivity report:
-
-```bash
-python3 scripts/validate_canonical_data.py --data-dir data --check-sparse
-```
-
-Detailed evidence quality report:
-
-```bash
-python3 scripts/validate_canonical_data.py --data-dir data --check-evidence
-```
-
-Machine-readable JSON output (for AI feedback loops):
-
-```bash
-python3 scripts/validate_canonical_data.py --data-dir data --json
-```
-
-To scan a different directory for markdown mentions:
-
-```bash
-python3 scripts/validate_canonical_data.py --data-dir data --check-markdown --scan-root data/essays
-```
-
-Normal practice:
-
-- edit source rows
-- run validator
-- inspect diff
-- commit
-
----
-
-## What changed from the old workflow
-
-Old workflow assumptions removed:
-
-- separate `polities.tsv`
-- separate `persuasions.tsv`
-- inline city planting metadata
-- flat doctrine rows as the canonical doctrinal unit
-- editor-note-only mention derivation
-- permissive Bible reference formats
-
-Current workflow assumptions:
-
-- one canonical `groups.tsv`
-- proposition-based doctrine model
-- project-wide markdown link derivation
-- OSIS Bible references
-- change-based continuity claims
-- validator-driven canonical sorting and derived regeneration
+If one of those is false, the batch is not done.
