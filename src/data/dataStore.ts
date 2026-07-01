@@ -55,7 +55,7 @@ import noteMentionsRaw    from "../../data/derived/note_mentions.tsv?raw";
 // ─── Parsing helpers ──────────────────────────────────────────────────────────
 
 function parsePresence(v: string): PresenceStatus {
-  const allowed: PresenceStatus[] = ["attested", "probable", "claimed_tradition", "not_attested", "suppressed", "unknown"];
+  const allowed: PresenceStatus[] = ["attested", "probable", "possible", "claimed_tradition", "not_attested", "suppressed", "unknown"];
   return allowed.includes(v as PresenceStatus) ? (v as PresenceStatus) : "unknown";
 }
 

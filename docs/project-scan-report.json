@@ -1,0 +1,50 @@
+{
+  "workflow_version": "1.2.0",
+  "timestamps": {"started": "2026-07-01T21:34:45+00:00", "last_updated": "2026-07-01T22:05:00+00:00", "completed": "2026-07-01T22:05:00+00:00"},
+  "mode": "initial_scan",
+  "scan_level": "deep",
+  "project_root": "/workspaces/early-church",
+  "project_knowledge": "/workspaces/early-church/docs",
+  "repository_type": "monolith",
+  "project_types": [
+    {"part_id": "app", "project_type_id": "web", "display_name": "Web Application (React SPA + static data pipeline)"}
+  ],
+  "completed_steps": [
+    {"step": "step_0.6", "status": "completed", "timestamp": "2026-07-01T21:34:45+00:00", "summary": "Initialized initial_scan at deep level; loaded documentation-requirements.csv; user directive: parallel subagents, augment existing docs/ without clobbering"},
+    {"step": "step_1", "status": "completed", "timestamp": "2026-07-01T21:34:45+00:00", "summary": "Classified as monolith, 1 part: React 18 + TS 5 + Vite 5 SPA (Leaflet, Zustand) with Python TSV data pipeline; no backend; project_type_id=web"},
+    {"step": "step_2", "status": "completed", "timestamp": "2026-07-01T21:34:45+00:00", "summary": "Found 13+ existing docs: README, 11 hand-written docs/ files, design-artifacts A-E (all empty), scripts/todo.md"},
+    {"step": "step_3", "status": "completed", "timestamp": "2026-07-01T21:34:45+00:00", "summary": "Tech stack: React 18.3/TS 5.6/Vite 5.4, Router 7 HashRouter, Zustand 5, Leaflet 1.9, CSS Modules + tokens, Python 3.9+ stdlib validator, Husky, GH Actions to Pages"},
+    {"step": "step_4", "status": "completed", "timestamp": "2026-07-01T21:57:00+00:00", "summary": "Deep conditional analysis via 4 parallel subagent scans batched by subsystem: data-pipeline (16 sheets/6 derived/validator ~30 checks/176-batch audit), frontend-ui (5 pages, ~40 shared components, raw Leaflet, custom MarkdownRenderer), domain-state (types.ts 22 tables, single Zustand store, hooks/utils, flow traces), devops-docs (scripts, husky pre-commit=validate, deploy.yml to gh-pages, no tests, docs inventory). devops agent needed one re-run (first attempt returned no work)"},
+    {"step": "step_5", "status": "completed", "timestamp": "2026-07-01T22:00:00+00:00", "summary": "source-tree-analysis.md written (annotated tree, critical folders, entry points, org patterns)"},
+    {"step": "step_6", "status": "completed", "timestamp": "2026-07-01T22:02:00+00:00", "summary": "Dev/ops info extracted into development-guide.md and deployment-guide.md (no CONTRIBUTING.md exists; conventions live in hand-written ui_rules/ai-batch-checklist, linked)"},
+    {"step": "step_7", "status": "skipped", "timestamp": "2026-07-01T22:02:00+00:00", "summary": "Single-part project: integration-architecture.md and project-parts.json not applicable"},
+    {"step": "step_8", "status": "completed", "timestamp": "2026-07-01T22:01:00+00:00", "summary": "architecture.md written (exec summary, stack table, data flow, routing/state, integrations, map/graph subsystems, testing strategy=none, AI invariants, 7 known issues incl. parsePresence bug dataStore.ts:58)"},
+    {"step": "step_9", "status": "completed", "timestamp": "2026-07-01T22:03:00+00:00", "summary": "Supporting docs written: project-overview.md, data-models.md (as-built reference deferring to hand-written app-data.md as normative), component-inventory.md (incl. FilterChips missed by scan, verified by direct read). api-contracts.md intentionally N/A (no API server) — documented in index instead of '(To be generated)' marker"},
+    {"step": "step_10", "status": "completed", "timestamp": "2026-07-01T22:04:00+00:00", "summary": "index.md master index written: quick reference, generated + existing doc tables, N/A rationale, getting started, brownfield PRD pointer"},
+    {"step": "step_11", "status": "completed", "timestamp": "2026-07-01T22:05:00+00:00", "summary": "Validated: 8 docs / 739 lines; grep found 0 incomplete markers (strict+fuzzy); all relative links + anchors verified existing; checklist critical sections satisfied; autonomous run per user directive so finalized without interactive review menu"},
+    {"step": "step_12", "status": "completed", "timestamp": "2026-07-01T22:05:00+00:00", "summary": "Workflow complete; on_complete customization empty (no-op)"}
+  ],
+  "current_step": "completed",
+  "findings": {
+    "project_classification": "monolith, 1 part (web SPA + offline Python data pipeline), React/TypeScript/Vite",
+    "existing_docs_count": 13,
+    "technology_stack": "React 18 SPA on Vite, Zustand, Leaflet, TSV static data (build-time ?raw imports) validated/derived by Python",
+    "user_context": "Parallel subagents requested; augment hand-written docs, never overwrite",
+    "scan_batches": [
+      {"path": "data/ + scripts/", "agent": "data-pipeline", "summary": "16 sheets (2153 claims), 6 derived tables, validator catalog, 176-batch audit campaign, essays, data/old baseline"},
+      {"path": "src/pages + src/components + src/styles", "agent": "frontend-ui", "summary": "5 display-toggled pages, ~40 shared components, raw Leaflet, custom MarkdownRenderer, tokens + dark theme"},
+      {"path": "src/data + src/stores + src/hooks + src/utils + src/domain", "agent": "domain-state", "summary": "types.ts single source of truth, dataStore singleton with ~20 indexes, one Zustand store, 6 hooks, 10 utils; parsePresence bug found"},
+      {"path": "configs + .github + .husky + docs inventory", "agent": "devops-docs", "summary": "dev script gates on validator, pre-commit=data:validate, deploy.yml to gh-pages, no tests, no LICENSE, docs inventory with line counts"}
+    ],
+    "notable_issues": ["parsePresence omits 'possible' (src/data/dataStore.ts:58)", "no automated code tests", "no LICENSE", "README dir-name drift (apostolic_church)", "note_mentions.tsv benign +170-row regen uncommitted", "orphaned generate_derived_tables .pyc", "progress.tsv 142/176 rows"]
+  },
+  "outputs_generated": ["project-scan-report.json", "index.md", "project-overview.md", "architecture.md", "data-models.md", "component-inventory.md", "source-tree-analysis.md", "development-guide.md", "deployment-guide.md", "deep-dive-audit-claim-verifier.md"],
+  "deep_dive_targets": [
+    {"target_name": "Audit / Claim-Verifier Subsystem", "target_path": "src/pages/AuditPage.tsx + src/components/wiki/{AuditView,ClaimDetailPanel}.tsx + src/hooks/useAuditData.ts + src/utils/claimAudit.ts (+2 CSS modules)", "files_analyzed": 7, "loc": 2193, "output_file": "deep-dive-audit-claim-verifier.md", "timestamp": "2026-07-01T22:20:00+00:00", "notes": "Exhaustive full-line read of all 5 TS files; dependents mapped (App, WikiPage, useClaimsData, ClaimRow); consolidation map for master-claim-verifier goal; gotcha found at AuditPage.tsx:571 (non-null assertion on stale derived edges)"}
+  ],
+  "post_scan_fixes": [
+    {"fix": "parsePresence allow-list now includes 'possible'", "file": "src/data/dataStore.ts:58", "verified": "npm run build exit 0 (tsc -b + vite build)"},
+    {"fix": "CI now validates canonical data before build", "file": ".github/workflows/deploy.yml", "verified": "YAML edit; runs npm run data:validate before npm run build"}
+  ],
+  "resume_instructions": "Full scan + audit deep-dive completed 2026-07-01. For updates run full_rescan; for other areas run deep_dive mode."
+}

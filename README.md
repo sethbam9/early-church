@@ -43,7 +43,7 @@ An interactive research tool for exploring the geographic spread, relationships,
 
 ```bash
 git clone <repository-url>
-cd apostolic_church
+cd early-church
 ```
 
 ### 2. Install dependencies
@@ -91,7 +91,7 @@ The app will be available at `http://localhost:5173` (or the next available port
 ## Project Structure
 
 ```
-apostolic_church/
+early-church/
 ├── data/
 │   ├── sheets/          # Canonical TSV source tables (edit these)
 │   │   ├── claims.tsv

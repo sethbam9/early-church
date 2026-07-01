@@ -18,13 +18,14 @@ const PAGE_OPTIONS = [
 
 export function NavBar() {
   const [searchTarget, setSearchTarget] = useState("wiki");
-  const [dark, setDark] = useState(() => document.documentElement.getAttribute("data-theme") === "dark");
+  const [dark, setDark] = useState(() => localStorage.getItem("theme") === "dark");
   const navigate = useNavigate();
   const setSelection = useAppStore((st) => st.setSelection);
   const setSearchQuery = useAppStore((st) => st.setSearchQuery);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", dark ? "dark" : "");
+    localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark]);
 
   const handleSearchSelect = (kind: string, id: string) => {

@@ -564,13 +564,24 @@ export function AuditPage() {
                   </div>
                   {focusEdge.supporting_claim_ids.length > 1 && (
                     <div className={s.derivClaimLinks}>
-                      {focusEdge.supporting_claim_ids.map((cid) => (
-                        <button key={cid} type="button"
-                          className={`${s.derivClaimLink}${selectedId === cid ? ` ${s.derivClaimLinkActive}` : ""}`}
-                          onClick={() => setSelectedId(cid)}>
-                          {claimSentence(allRows.find((r) => r.claim.claim_id === cid) ?? { claim: dataStore.claims.getById(cid)! } as ClaimAuditRow)}
-                        </button>
-                      ))}
+                      {focusEdge.supporting_claim_ids.map((cid) => {
+                        const row = allRows.find((r) => r.claim.claim_id === cid);
+                        const claim = row?.claim ?? dataStore.claims.getById(cid);
+                        if (!claim) {
+                          return (
+                            <span key={cid} className={s.faint} title="Claim not found — regenerate derived tables (npm run data:validate)">
+                              {cid} (not found)
+                            </span>
+                          );
+                        }
+                        return (
+                          <button key={cid} type="button"
+                            className={`${s.derivClaimLink}${selectedId === cid ? ` ${s.derivClaimLinkActive}` : ""}`}
+                            onClick={() => setSelectedId(cid)}>
+                            {claimSentence(row ?? ({ claim } as ClaimAuditRow))}
+                          </button>
+                        );
+                      })}
                     </div>
                   )}
                 </div>
